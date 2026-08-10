@@ -1,0 +1,39 @@
+---
+sidebar_position: 1
+title: Add QDay2 to your wallet
+---
+
+import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
+import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
+
+# Add QDay2 to your wallet
+
+Connect MetaMask to QDay2 in one click. This is a **live** button — the kind of interactive element a
+Markdown-only wiki can't do:
+
+<AddNetworkButton network="qday2" />
+
+Once added, you'll see the network is live right here in the docs:
+
+<LiveChainStatus network="qday2" />
+
+:::tip[One-way vs manual]
+The button uses EIP-3085 (`wallet_addEthereumChain`) — your wallet shows a confirmation with the exact
+parameters before adding. Nothing is added without your approval.
+:::
+
+## Manual parameters
+
+If you prefer to add it by hand (MetaMask → Networks → Add a network manually):
+
+| Field | Value |
+|---|---|
+| Network name | QDay2 |
+| Chain ID | `44005` |
+| RPC URL | `https://rpc-test.qday.io` |
+| Explorer | `https://explorer-test.qday.io` |
+| Currency | QDAY |
+
+:::warning[Testnet]
+These are the current **testnet** endpoints — mainnet values will be published at launch.
+:::

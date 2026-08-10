@@ -1,0 +1,31 @@
+---
+sidebar_position: 2
+title: Get testnet tokens
+---
+
+import FaucetWidget from '@site/src/components/QDay/FaucetWidget';
+import BalancePanel from '@site/src/components/QDay/BalancePanel';
+
+# Get testnet tokens
+
+Claim testnet **QDAY** for gas — right here, no separate faucet site needed. This widget connects your
+wallet, switches to QDay2, and calls the real faucet contract.
+
+<FaucetWidget />
+
+:::info[One claim per cooldown]
+The faucet enforces a per-address cooldown on-chain. If you claimed recently, it'll tell you when you
+can claim again.
+:::
+
+## Check your assets
+
+Connect to see your live balances on QDay (native QDAY + the migratable ERC-20s), read straight from
+the chain:
+
+<BalancePanel />
+
+:::tip[This is "embedding a dApp"]
+The button above isn't a link to another site — it's a live contract call from inside the docs. The
+same pattern can embed wrap, migrate, or staking flows on their own guide pages.
+:::

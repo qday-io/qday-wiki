@@ -1,0 +1,29 @@
+---
+sidebar_position: 3
+---
+
+import AddressLink from '@site/src/components/QDay/AddressLink';
+
+# Official contract addresses
+
+Always verify you're interacting with these addresses — click to open the explorer, or copy. Never
+migrate through an untrusted link.
+
+## Migration (QDay → QDay2)
+
+| Contract | Chain | Purpose |
+|---|---|---|
+| MigrationLockbox | QDay | Lock assets (one-way) |
+| MigrationDistributor | QDay2 | Allocate 1:1 from the pre-funded pool |
+| MigrationClaim | QDay2 | End-of-window backstop claim |
+
+:::info[Addresses at launch]
+The deployed migration contract addresses will be listed here and shown on the official portal for
+anti-phishing verification.
+:::
+
+## Faucet (QDay2 testnet)
+
+| Contract | Address |
+|---|---|
+| QDayFaucet (native QDAY) | <AddressLink chain="qday2" address="0x73bd8b412744386DFf7f5651e9765BCcee546C81" /> |

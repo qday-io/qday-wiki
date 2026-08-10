@@ -1,0 +1,331 @@
+---
+sidebar_position: 6
+---
+
+import NextSteps from "@site/src/components/QDay/NextSteps";
+
+﻿---
+outline: deep
+---
+
+# Abelian Bridge Ver 3.0 User Guide
+
+This guide explains how to use the **Abelian Bridge** to transfer assets between the Abelian and QDay networks.
+
+Supported bridge directions:
+
+- **ABEL → WABEL**
+- **WABEL → ABEL**
+
+## Tutorial
+
+Follow these steps to complete a bridge transaction.
+
+[**End User portal URL**](https://portal.qday.io/en/abel-conversion)
+
+### Step 1: Connect Your Wallet and Authorize the Bridge
+
+Before starting a bridge transaction, connect your wallet to the Abelian Bridge.
+
+After the wallet is connected:
+
+1. Click **Authorize**.
+2. Review the signature request in MetaMask.
+3. Click **Confirm** to continue.
+
+The authorization allows your wallet to interact with the bridge.
+
+:::tip[Note]
+This step does not transfer tokens or require a network transaction fee.
+:::
+
+![MetaMask Wallet Authorization](/abel-bridge-v3/01-authorize-wallet.png)
+
+*Confirm the bridge authorization request in MetaMask to continue.*
+
+### Step 2: Enter Bridge Details
+
+#### Low-Amount Transaction
+
+Enter the details for the bridge transaction.
+
+To continue:
+
+1. Select the source **Network** and **Token**.
+2. Enter the amount you want to bridge in the **Amount** field.
+3. Enter the destination wallet address in the **Wallet Address** field.
+4. Review the destination network, token, and receiving amount.
+5. Enter a note in the **Note** field, if needed.
+6. Click **Generate QR Code**.
+
+:::tip[Note]
+Make sure the destination wallet address is correct before continuing. The **Note** field is optional.
+:::
+
+![Enter Low-Amount Bridge Details](/abel-bridge-v3/02-low-amount-details.png)
+
+*Enter bridge transaction details such as Network, Token, Amount, and Wallet Address.*
+
+#### Change the Bridge Direction
+
+Click the **switch icon** between the **From** and **To** sections to change the bridge direction:
+
+- **ABEL → WABEL**
+- **WABEL → ABEL**
+
+The source and destination network, token, and wallet information are updated automatically.
+
+#### Use the Maximum Balance
+
+Click **MAX** to automatically enter your full available token balance in the **Amount** field.
+
+Review the receiving amount and destination wallet address before continuing.
+
+After entering the required information, click **Generate New Order**.
+
+:::warning[Important]
+Make sure the selected bridge direction and destination wallet address are correct before generating the order.
+:::
+
+![Bridge Direction and Max Balance Options](/abel-bridge-v3/03-direction-and-max.png)
+
+*Switch bridge direction or click MAX to use available token balance.*
+
+#### Large-Amount Transaction
+
+A bridge transaction is considered a large-value transaction when the entered amount is:
+
+- **10,000 ABEL or more** for an **ABEL → WABEL** transaction
+- **10,000 WABEL or more** for a **WABEL → ABEL** transaction
+
+When the entered amount is equal to or greater than the configured **Multi Threshold**, a **Large conversion request** warning is displayed.
+
+Large-value transactions require manual review and approval before they can be processed. As a result, processing may take **up to 24 hours**.
+
+To continue:
+
+1. Review the warning message carefully.
+2. Enter the destination address in the **Wallet Address** field.
+3. Complete the remaining bridge details.
+4. Click **Generate New Order**.
+
+:::warning[Important]
+Large-value transactions are not processed automatically and may remain pending until the required admin approval is completed.
+:::
+
+![Large-Amount Transaction Warning](/abel-bridge-v3/04-large-amount-warning.png)
+
+*Warning message displayed for large-amount conversion requests requiring manual review.*
+
+#### Confirm the Transaction
+
+After clicking **Generate QR Code** or **Generate New Order**, the **Confirm Transaction** pop-up is displayed.
+
+Review the following information carefully:
+
+- Amount to be converted
+- Transaction fee
+- Total amount to send or receive
+- Estimated bridge gas fee
+- Estimated order completion time
+
+Read the deposit notice, then click **Confirm & Submit** to continue.
+
+:::warning[Important]
+Send the tokens from the same wallet address entered in the bridge details. Deposits from a different or unrecognized address may not be detected automatically and could result in processing delays.
+:::
+
+![Confirmation Pop-up for ABEL to WABEL](/abel-bridge-v3/05-confirm-abel-to-wabel.png)
+
+*Confirmation pop-up for ABEL -> WABEL bridge.*
+
+![Confirmation Pop-up for WABEL to ABEL](/abel-bridge-v3/06-confirm-wabel-to-abel.png)
+
+*Confirmation pop-up for WABEL -> ABEL bridge.*
+
+### Step 3: Complete the Token Transfer
+
+The transfer method depends on the selected bridge direction:
+
+- **ABEL → WABEL:** Scan the QR code using the Abelian mobile app and complete the ABEL transfer.
+- **WABEL → ABEL:** Click **Transfer WABEL** and confirm the transaction in the connected wallet.
+
+#### Low-Amount ABEL → WABEL Transaction
+
+After confirming the transaction details, the **Scan QR Code** pop-up is displayed.
+
+To complete the transfer:
+
+1. Open the **Abelian mobile app**.
+2. Select the **Abelian** account.
+3. Tap **Send**, then select **(W)ABEL Conversion**.
+4. Scan the QR code displayed on the bridge page.
+5. Review the transfer details in the app and confirm the transaction.
+
+The pop-up displays the sender address, recipient address, transfer amount, and remaining time to complete the deposit.
+
+:::warning[Important]
+Complete the transfer before the QR code expires. The network fee is calculated in the Abelian mobile app during the transfer.
+:::
+
+![Scan QR Code for ABEL to WABEL Deposit](/abel-bridge-v3/07-scan-qr-code.png)
+
+*Scan QR Code using the Abelian mobile app to complete the deposit.*
+
+#### Bridge Successful (ABEL → WABEL)
+
+For a low-value transaction, the system automatically detects the completed deposit and processes the bridge request.
+
+When the transaction is completed successfully, the **Bridge Successful** screen displays:
+
+- The amount received
+- Transaction hash
+- Sender and recipient addresses
+- Amount sent
+- Transaction fee
+- Previous balance
+- New balance
+
+Click **Start New Conversion** to create another bridge transaction.
+
+:::tip[Note]
+Processing may take a few minutes after the deposit is completed.
+:::
+
+![Bridge Successful for ABEL to WABEL](/abel-bridge-v3/08-bridge-success-abel-to-wabel.png)
+
+*Bridge Successful screen showing transaction details and updated balance.*
+
+#### WABEL → ABEL Transaction
+
+For a **WABEL → ABEL** transaction, send WABEL from the connected wallet to the bridge deposit address.
+
+To complete the transfer:
+
+1. Review the bridge deposit address and transfer amount.
+2. Click **Transfer WABEL**.
+3. Review the transaction details in the connected wallet.
+4. Confirm the transaction.
+
+The system automatically sends the WABEL from your connected wallet to the displayed bridge deposit address.
+
+:::warning[Important]
+Complete the transfer before the deposit request expires. Do not close the wallet confirmation until the transaction has been submitted.
+:::
+
+![Transfer WABEL Deposit Screen](/abel-bridge-v3/09-transfer-wabel.png)
+
+*Review deposit details and click Transfer WABEL to initiate transaction.*
+
+#### Bridge Successful (WABEL → ABEL)
+
+For a low-value **WABEL → ABEL** transaction, the system automatically detects the completed deposit and processes the bridge request.
+
+When the transaction is completed successfully, the **Bridge Successful** screen displays:
+
+- The amount of ABEL received
+- Transaction hash
+- Sender and recipient addresses
+- Amount of WABEL sent
+- Transaction fee
+
+Click **Start New Conversion** to create another bridge transaction.
+
+:::tip[Note]
+Processing may take a few minutes after the wallet transaction is confirmed.
+:::
+
+![Bridge Successful for WABEL to ABEL](/abel-bridge-v3/10-bridge-success-wabel-to-abel.png)
+
+*Bridge Successful screen showing ABEL received and transaction details.*
+
+#### Large-Value Transaction
+
+Large-value bridge transactions require manual review after the token transfer is completed.
+
+The result depends on the admin review:
+
+- If the request is approved, the transaction is processed and the status changes to **Bridge Successful**.
+- If the request is rejected, the status changes to **Bridge Failed** and a refund can be requested.
+
+##### Request a Refund
+
+When the **Bridge Failed** screen is displayed:
+
+1. Review the rejection reason.
+2. Click **Refund**.
+3. Follow the on-screen instructions to submit the refund request.
+
+Click **Start New Conversion** to create another bridge transaction.
+
+:::tip[Note]
+Large-value transactions may remain pending until the required number of admin approvals or rejections is reached.
+:::
+
+![Large-Value Transaction Failed Screen](/abel-bridge-v3/11-large-transaction-failed.png)
+
+*Bridge Failed screen for rejected or failed transactions with option to request a refund.*
+
+##### Requesting a Refund
+
+When a conversion is rejected, fails, or expires, the **Refund** option may become available.
+
+To request a refund:
+
+1. Click **Refund** on the **Bridge Detail** screen.
+2. Review the refund amount displayed in the pop-up.
+3. Click **Confirm** to submit the refund request.
+
+The refund includes the original amount and the applicable transaction fee.
+
+:::tip[Note]
+Refund processing time depends on network conditions.
+:::
+
+![Request a Refund Confirmation Pop-up](/abel-bridge-v3/12-request-refund.png)
+
+*Refund confirmation pop-up displaying the total refund amount.*
+
+#### Refund Completed
+
+When the refund is processed successfully, the status changes to **Refund Completed**.
+
+The **Refund Completed** screen displays:
+
+- The refunded amount
+- Refund transaction hash
+- Destination wallet address
+
+Click **Start New Conversion** to create another bridge transaction.
+
+:::tip[Note]
+The refunded tokens are returned to the wallet address shown in the **Refunded to** field.
+:::
+
+![Refund Completed Screen](/abel-bridge-v3/13-refund-completed.png)
+
+*Refund Completed screen displaying refunded amount and transaction hash.*
+
+## Recent Transactions
+
+The **Recent Transactions** section displays your bridge transaction history.
+
+Each transaction shows:
+
+- Bridge direction
+- Current status
+- Last updated time
+- Transaction amount
+- Estimated completion time, when available
+
+Hover over a transaction and click **View** to open its details.
+
+Use **Previous** and **Next** to navigate between pages.
+
+![Recent Transactions List](/abel-bridge-v3/14-recent-transactions.png)
+
+*Recent Transactions history section displaying past bridge activity.*
+
+## What's next
+
+<NextSteps steps={[{ title: "Swap tokens", to: "/docs/guide/swap" },{ title: "Migrate to QDay2", desc: "One-way asset migration", to: "/docs/migration/overview" }]} />

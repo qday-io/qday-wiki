@@ -1,0 +1,40 @@
+---
+sidebar_position: 1
+---
+
+import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
+
+# Chain parameters
+
+The single source of truth for connecting to QDay and QDay2. Add either network to your wallet with
+one click, or copy the values below.
+
+<div style={{display: 'flex', gap: '0.75rem', flexWrap: 'wrap', margin: '1rem 0 1.5rem'}}>
+  <AddNetworkButton network="qday" />
+  <AddNetworkButton network="qday2" />
+</div>
+
+| | QDay (source) | QDay2 (destination) |
+|---|---|---|
+| Chain ID | `44003` | `44005` |
+| RPC URL | `https://rpc.qday.info` | `https://rpc-test.qday.io` |
+| Explorer | `https://explorer.qday.io` | `https://explorer-test.qday.io` |
+| Currency symbol | QDAY | QDAY |
+| Decimals | 18 | 18 |
+
+:::warning
+Current **testnet** values — mainnet published at launch. Always verify against this page and the
+[official contract addresses](contracts).
+:::
+
+## Manual setup
+
+```json title="QDay2 network config"
+{
+  "chainId": "0xABE5",
+  "chainName": "QDay2",
+  "rpcUrls": ["https://rpc-test.qday.io"],
+  "blockExplorerUrls": ["https://explorer-test.qday.io"],
+  "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
+}
+```

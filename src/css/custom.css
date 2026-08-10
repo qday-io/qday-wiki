@@ -1,0 +1,34 @@
+/* QDay brand — aligned to the original community site (VitePress indigo). */
+:root {
+  --ifm-color-primary: #3e63dd;         /* VitePress indigo-3 (buttons/links) */
+  --ifm-color-primary-dark: #2f52c9;
+  --ifm-color-primary-darker: #2b4cbd;
+  --ifm-color-primary-darkest: #233e9b;
+  --ifm-color-primary-light: #5c73e7;   /* indigo-2 */
+  --ifm-color-primary-lighter: #6b81ec;
+  --ifm-color-primary-lightest: #8b9df1;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] {
+  --ifm-color-primary: #a8b1ff;         /* indigo-1: bright on dark, matches the hero heading */
+  --ifm-color-primary-dark: #8b9df1;
+  --ifm-color-primary-darker: #7c8ff0;
+  --ifm-color-primary-darkest: #5c73e7;
+  --ifm-color-primary-light: #bcc3ff;
+  --ifm-color-primary-lighter: #cdd2ff;
+  --ifm-color-primary-lightest: #e5e8ff;
+  --ifm-background-color: #1b1b1f;       /* VitePress dark bg */
+  --ifm-background-surface-color: #202127;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Polish content images: rounded corners, subtle border + shadow. */
+.markdown img {
+  border-radius: 10px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+}
+[data-theme='dark'] .markdown img { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4); }
+.markdown .qday-widget img { border: 0; box-shadow: none; }

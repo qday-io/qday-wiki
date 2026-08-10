@@ -1,0 +1,54 @@
+{
+  "title": {
+    "message": "QDay Wiki",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "文件",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Mainnet": {
+    "message": "主網",
+    "description": "Navbar item with label Mainnet"
+  },
+  "item.label.Testnet": {
+    "message": "測試網",
+    "description": "Navbar item with label Testnet"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Explorer": {
+    "message": "Explorer",
+    "description": "Navbar item with label Explorer"
+  },
+  "item.label.Portal": {
+    "message": "Portal",
+    "description": "Navbar item with label Portal"
+  },
+  "item.label.Swap": {
+    "message": "Swap",
+    "description": "Navbar item with label Swap"
+  },
+  "item.label.Staking": {
+    "message": "Staking",
+    "description": "Navbar item with label Staking"
+  },
+  "item.label.Bridge": {
+    "message": "Bridge",
+    "description": "Navbar item with label Bridge"
+  },
+  "item.label.Faucet": {
+    "message": "Faucet",
+    "description": "Navbar item with label Faucet"
+  },
+  "logo.alt": {
+    "message": "QDay",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
+  }
+}

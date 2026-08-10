@@ -1,0 +1,17 @@
+# Server preview deploy for the QDay Wiki (static site behind nginx).
+#
+#   docker compose -f deploy/compose.yml up -d --build
+#   → open http://<server>:${WIKI_PORT:-8088}
+#
+# This is the "show the boss on a server first" path. Production is Cloudflare
+# Pages via .github/workflows/deploy.yml — same build, different edge.
+
+services:
+  wiki:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: qday-community-wiki:local
+    restart: unless-stopped
+    ports:
+      - "${WIKI_PORT:-8088}:80"

@@ -1,0 +1,36 @@
+---
+sidebar_position: 1
+title: Migration overview
+---
+import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
+
+# Migrating from QDay to QDay2
+
+You lock an asset **once** on QDay; the equivalent amount is released to you 1:1 on QDay2.
+
+:::danger[Migration is one-way and permanent]
+Locking is irreversible. Double-check the amount and recipient before you sign.
+:::
+
+## How it works
+
+```mermaid
+flowchart LR
+    A[Lock asset on QDay] --> B[Wait for confirmations]
+    B --> C[Relayer allocates 1:1 on QDay2]
+    C --> D[Tokens received on QDay2]
+```
+
+You only sign **one transaction** (the lock, on QDay). The relayer pays the gas on QDay2.
+
+Live status of both chains:
+
+<LiveChainStatus network="qday" />
+<LiveChainStatus network="qday2" />
+
+## What can migrate
+
+| Asset | How |
+|---|---|
+| USD8 / WABEL / WQDAY | Migrate directly |
+| Native QDAY | Wrap to WQDAY first, then migrate |
