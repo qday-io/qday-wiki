@@ -1,9 +1,13 @@
 name: Deploy to Cloudflare Pages
 
+# Manual-only until Cloudflare is set up. To enable auto-deploy later:
+#   1. add repo secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID
+#   2. set the real projectName below
+#   3. uncomment the push trigger
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: {}
+  # push:
+  #   branches: [main]
 
 jobs:
   build-and-deploy:
@@ -16,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
 
       - name: Install dependencies
