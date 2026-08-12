@@ -1,0 +1,26 @@
+{
+  "_comment": "最新動態公告。PM 直接改這個檔就能發佈。每則一個 { }，用逗號分隔，最新的放最上面。tag 可用: launch / upgrade / guide / notice。date 自由文字。to 是點擊後前往的站內連結。改完 commit 就會上線。",
+  "items": [
+    {
+      "tag": "launch",
+      "date": "2026-08",
+      "title": "QDay2 testnet is live — add it to your wallet",
+      "title_zh": "QDay2 測試網已上線 — 加入你的錢包",
+      "to": "/docs/start/add-network"
+    },
+    {
+      "tag": "guide",
+      "date": "2026-08",
+      "title": "How to migrate your assets from QDay to QDay2",
+      "title_zh": "如何把資產從 QDay 遷移到 QDay2",
+      "to": "/docs/migration/overview"
+    },
+    {
+      "tag": "guide",
+      "date": "2026-08",
+      "title": "Build a dApp on QDay — wagmi / viem quickstart",
+      "title_zh": "在 QDay 上開發 dApp — wagmi / viem 快速上手",
+      "to": "/docs/dev/build"
+    }
+  ]
+}

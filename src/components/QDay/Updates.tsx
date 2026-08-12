@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import {translate} from '@docusaurus/Translate';
+import {useLocation} from '@docusaurus/router';
+import updatesData from '@site/data/updates.json';
 
-// "Latest updates" strip — the announcements block mature chain docs use to
-// surface launches, upgrades, and changes. Edit UPDATES to publish a new item.
+// "Latest updates" strip. Announcements are edited by PMs in data/updates.json —
+// no code change needed. This component just renders that file.
 
 type Tag = 'launch' | 'upgrade' | 'guide' | 'notice';
 
@@ -14,36 +15,20 @@ const TAG_STYLE: Record<Tag, {bg: string; fg: string; label: string}> = {
   notice:  {bg: 'var(--ifm-color-emphasis-200)', fg: 'var(--ifm-color-emphasis-700)', label: 'Notice'},
 };
 
-type Item = {tag: Tag; date: string; title: string; to: string};
-
-const UPDATES: Item[] = [
-  {
-    tag: 'launch',
-    date: '2026-08',
-    title: translate({id: 'updates.qday2', message: 'QDay2 testnet is live — add it to your wallet'}),
-    to: '/docs/start/add-network',
-  },
-  {
-    tag: 'guide',
-    date: '2026-08',
-    title: translate({id: 'updates.migration', message: 'How to migrate your assets from QDay to QDay2'}),
-    to: '/docs/migration/overview',
-  },
-  {
-    tag: 'guide',
-    date: '2026-08',
-    title: translate({id: 'updates.dev', message: 'Build a dApp on QDay — wagmi / viem quickstart'}),
-    to: '/docs/dev/build',
-  },
-];
+type Item = {tag: string; date: string; title: string; title_zh?: string; to: string};
 
 export default function Updates() {
+  const {pathname} = useLocation();
+  const isZh = pathname.startsWith('/zh-Hant');
+  const items = (updatesData.items ?? []) as Item[];
+
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 760, margin: '0 auto'}}>
-      {UPDATES.map((u) => {
-        const t = TAG_STYLE[u.tag];
+      {items.map((u, i) => {
+        const t = TAG_STYLE[(u.tag as Tag)] ?? TAG_STYLE.notice;
+        const title = isZh && u.title_zh ? u.title_zh : u.title;
         return (
-          <Link key={u.title} to={u.to} style={{
+          <Link key={i} to={u.to} style={{
             display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none', color: 'inherit',
             padding: '14px 18px', borderRadius: 12,
             border: '1px solid var(--ifm-color-emphasis-200)',
@@ -58,7 +43,7 @@ export default function Updates() {
               background: t.bg, color: t.fg, textTransform: 'uppercase', letterSpacing: '.04em',
               whiteSpace: 'nowrap',
             }}>{t.label}</span>
-            <span style={{flex: 1, fontWeight: 550}}>{u.title}</span>
+            <span style={{flex: 1, fontWeight: 550}}>{title}</span>
             <span style={{
               fontSize: 12.5, color: 'var(--ifm-color-emphasis-500)',
               fontFamily: 'var(--ifm-font-family-monospace)', whiteSpace: 'nowrap',
