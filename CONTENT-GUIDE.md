@@ -95,19 +95,27 @@ type 可用 `tip` / `note` / `info` / `warning` / `danger`。
 
 ## E. 發佈一則「最新動態」公告（首頁）
 
-首頁的「最新動態」由一個資料檔驅動，PM 可直接改：****
+首頁的「最新動態」由一個資料檔驅動，PM 可直接改：**`data/updates.json`**
 
-1. GitHub 上打開 ，點鉛筆編輯
-2. 在  最上面加一則（複製一段 { } 改內容）：
-   
-   - ：（發佈）/ （升級）/ （教學）/ （一般）
-   - Thu Aug 13 05:33:22 CST 2026：自由文字，例如 
-   -  / ：英文 / 中文標題（沒填中文就顯示英文）
-   - ：點擊前往的站內連結
+1. GitHub 上打開 `data/updates.json`，點鉛筆編輯
+2. 在 `items` 最上面加一則（複製一段 `{ }` 改內容）：
+   ```json
+   {
+     "tag": "launch",
+     "date": "2026-08",
+     "title": "English title here",
+     "title_zh": "中文標題",
+     "to": "/docs/start/add-network"
+   },
+   ```
+   - `tag`：`launch`（發佈）/ `upgrade`（升級）/ `guide`（教學）/ `notice`（一般）
+   - `date`：自由文字，例如 `2026-08`
+   - `title` / `title_zh`：英文 / 中文標題（沒填中文就顯示英文）
+   - `to`：點擊前往的站內連結
    - 注意每則之間要有逗號、最後一則沒有逗號
 3. Commit → 首頁自動更新 ✅
 
-> 小技巧：改前先複製整段內容備份，若 JSON 格式打錯（少逗號/引號）網站會 build 失敗；用 GitHub 的 Preview 或先開 PR 給工程師看過最保險。
+> 小技巧：改前先複製整段內容備份。若 JSON 格式打錯（少逗號/引號）網站會 build 失敗；用 GitHub 的 Preview 或先開 PR 給工程師看過最保險。
 
 ---
 
