@@ -1,7 +1,7 @@
 # Server deploy for the QDay Wiki (static site behind nginx).
 #
 #   1. Copy deploy/ to the server (compose.yml + redeploy.sh + .env.example).
-#   2. cp .env.example .env   # set WIKI_PORT if 8088 is taken
+#   2. cp .env.example .env   # set WIKI_PORT if 8091 is taken
 #   3. docker compose pull && docker compose up -d
 #   4. Put it behind a reverse proxy / domain (serves plain HTTP on WIKI_PORT).
 #
@@ -17,4 +17,4 @@ services:
     container_name: qday-wiki
     restart: unless-stopped
     ports:
-      - "${WIKI_PORT:-8088}:80"
+      - "${WIKI_PORT:-8091}:80"
