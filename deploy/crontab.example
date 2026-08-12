@@ -1,0 +1,5 @@
+# QDay Wiki — auto re-up on new image.
+#   crontab -e   (paste the line below, fix the path)
+# Every 5 minutes: pull latest image, recreate only if the digest changed.
+
+*/5 * * * * /home/USER/deploy/qday-wiki/redeploy.sh >/dev/null 2>&1

@@ -1,17 +1,20 @@
-# Server preview deploy for the QDay Wiki (static site behind nginx).
+# Server deploy for the QDay Wiki (static site behind nginx).
 #
-#   docker compose -f deploy/compose.yml up -d --build
-#   → open http://<server>:${WIKI_PORT:-8088}
+#   1. Copy deploy/ to the server (compose.yml + redeploy.sh + .env.example).
+#   2. cp .env.example .env   # set WIKI_PORT if 8088 is taken
+#   3. docker compose pull && docker compose up -d
+#   4. Put it behind a reverse proxy / domain (serves plain HTTP on WIKI_PORT).
 #
-# This is the "show the boss on a server first" path. Production is Cloudflare
-# Pages via .github/workflows/deploy.yml — same build, different edge.
+# The image is built + pushed by .github/workflows/publish-image.yml on every
+# push to main. redeploy.sh (cron) re-ups when a new image digest appears.
+#
+# GHCR image is public? no auth. If private, log in once on the server:
+#   echo "$GHCR_PAT" | docker login ghcr.io -u <user> --password-stdin
 
 services:
   wiki:
-    build:
-      context: ..
-      dockerfile: Dockerfile
-    image: qday-community-wiki:local
+    image: ghcr.io/qday-io/qday-wiki:latest
+    container_name: qday-wiki
     restart: unless-stopped
     ports:
       - "${WIKI_PORT:-8088}:80"
