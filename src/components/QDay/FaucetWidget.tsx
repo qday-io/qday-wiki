@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { connect, ensureQday2, getProvider } from './wallet';
+import { ensureQday2, getProvider } from './wallet';
+import ConnectButtons from './ConnectButtons';
 
 // Real testnet faucet embedded in the docs: connect wallet → claim QDAY on QDay2.
 // Calls the deployed QDayFaucet.claim(address) — selector 0x1e83409a.
@@ -15,14 +16,12 @@ export default function FaucetWidget() {
   const [state, setState] = useState<'idle' | 'busy' | 'ok' | 'err'>('idle');
   const [msg, setMsg] = useState('');
 
-  async function go() {
+  async function claim() {
+    const account = addr;
     const eth = getProvider();
-    if (!eth) { setState('err'); setMsg('No wallet found — install MetaMask.'); return; }
+    if (!account || !eth) { setState('err'); setMsg('Connect a wallet first.'); return; }
     try {
       setState('busy'); setMsg('');
-      const account = addr ?? (await connect());
-      if (!account) throw new Error('Wallet connection rejected.');
-      setAddr(account);
       await ensureQday2();
       const tx = await eth.request({
         method: 'eth_sendTransaction',
@@ -43,13 +42,22 @@ export default function FaucetWidget() {
       <div style={{ fontSize: 14, color: 'var(--ifm-color-emphasis-700)', marginBottom: 12 }}>
         {addr ? <>Connected <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code></> : 'Connect your wallet to claim gas on QDay2.'}
       </div>
-      <button onClick={go} disabled={state === 'busy'} style={{
-        background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
-        padding: '9px 16px', fontWeight: 600, fontSize: 14.5,
-        cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
-      }}>
-        {state === 'busy' ? 'Check your wallet…' : addr ? 'Claim testnet QDAY' : 'Connect & claim'}
-      </button>
+      {addr ? (
+        <button onClick={claim} disabled={state === 'busy'} style={{
+          background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
+          padding: '9px 16px', fontWeight: 600, fontSize: 14.5,
+          cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
+        }}>
+          {state === 'busy' ? 'Check your wallet…' : 'Claim testnet QDAY'}
+        </button>
+      ) : (
+        <ConnectButtons
+          onAccount={(a) => { setAddr(a); setState('idle'); setMsg(''); }}
+          onError={(m) => { setState('err'); setMsg(m); }}
+          busy={state === 'busy'}
+          setBusy={(b) => setState(b ? 'busy' : 'idle')}
+        />
+      )}
       {msg && <p style={{ marginTop: 10, marginBottom: 0, fontSize: 13.5,
         color: state === 'err' ? 'var(--ifm-color-danger)' : 'var(--ifm-color-success)' }}>
         {state === 'ok' ? '✓ ' : ''}{msg}</p>}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { connect, rpcCall, fmtEther } from './wallet';
+import { fmtEther } from './wallet';
+import ConnectButtons from './ConnectButtons';
 
 // Real asset balances embedded in the docs: connect wallet → read native QDAY
 // plus the QDay ERC-20s straight from the QDay chain via balanceOf(address).
@@ -34,12 +35,9 @@ export default function BalancePanel() {
   const [state, setState] = useState<'idle' | 'busy' | 'err'>('idle');
   const [msg, setMsg] = useState('');
 
-  async function load() {
+  async function load(account: string) {
     try {
       setState('busy'); setMsg('');
-      const account = addr ?? (await connect());
-      if (!account) throw new Error('Wallet connection rejected.');
-      setAddr(account);
       const native = await rpc(QDAY_RPC, 'eth_getBalance', [account, 'latest']);
       const out = [{ sym: 'QDAY (native)', bal: fmtEther(BigInt(native ?? '0x0')) }];
       for (const t of TOKENS) {
@@ -59,13 +57,22 @@ export default function BalancePanel() {
     }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
         <div style={{ fontWeight: 650 }}>Your QDay assets</div>
-        <button onClick={load} disabled={state === 'busy'} style={{
-          background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
-          padding: '8px 14px', fontWeight: 600, fontSize: 14,
-          cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
-        }}>
-          {state === 'busy' ? 'Reading…' : addr ? 'Refresh' : 'Connect & show balances'}
-        </button>
+        {addr ? (
+          <button onClick={() => load(addr)} disabled={state === 'busy'} style={{
+            background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
+            padding: '8px 14px', fontWeight: 600, fontSize: 14,
+            cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
+          }}>
+            {state === 'busy' ? 'Reading…' : 'Refresh'}
+          </button>
+        ) : (
+          <ConnectButtons
+            onAccount={(a) => { setAddr(a); load(a); }}
+            onError={(m) => { setState('err'); setMsg(m); }}
+            busy={state === 'busy'}
+            setBusy={(b) => setState(b ? 'busy' : 'idle')}
+          />
+        )}
       </div>
       {addr && <div style={{ fontSize: 13, color: 'var(--ifm-color-emphasis-600)', marginTop: 4 }}>
         <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code> on QDay</div>}

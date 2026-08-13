@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// Interactive doc component: one-click "Add QDay2 to MetaMask" via EIP-3085.
+// Interactive doc component: one-click "Add QDay2 to Wallet" via EIP-3085.
 // This is the kind of live element MDX/Docusaurus enables inside docs — a plain
 // Markdown site (MkDocs) can only show the params in a table.
 
@@ -30,7 +30,7 @@ export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qda
     const eth = (globalThis as any).ethereum;
     if (!eth) {
       setState('err');
-      setMsg('No wallet found — install MetaMask first.');
+      setMsg('No wallet found — install a wallet extension first.');
       return;
     }
     setState('busy');
@@ -70,7 +70,7 @@ export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qda
           opacity: state === 'busy' ? 0.6 : 1,
         }}
       >
-        {state === 'busy' ? 'Check your wallet…' : `Add ${net.chainName} to MetaMask`}
+        {state === 'busy' ? 'Check your wallet…' : `Add ${net.chainName} to Wallet`}
       </button>
       {msg && (
         <p style={{ marginTop: 8, fontSize: 14, color: state === 'err' ? 'var(--ifm-color-danger)' : 'var(--ifm-color-success)' }}>

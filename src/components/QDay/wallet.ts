@@ -8,15 +8,59 @@ export const QDAY2 = {
   rpc: 'https://rpc-test.qday.io',
 };
 
+export const QDAY = {
+  chainIdHex: '0xABE3', // 44003
+  chainIdNum: 44003,
+  rpc: 'https://rpc.qday.info',
+};
+
+// Shared WalletConnect v2 project (same one QDay Portal uses).
+export const WALLETCONNECT_PROJECT_ID = '997747885b3c0af7c6faa74f4e2fc5d1';
+
+// Active EIP-1193 provider for this session: an injected wallet (window.ethereum)
+// OR a WalletConnect provider (Abelian Wallet Pro). Widgets read/send through
+// getProvider() so both paths work transparently.
+let active: any = null;
+
 export function getProvider(): any {
-  return (globalThis as any).ethereum ?? null;
+  return active ?? (globalThis as any).ethereum ?? null;
 }
 
-export async function connect(): Promise<string | null> {
-  const eth = getProvider();
+// Generic "Wallet" button: any injected EIP-1193 wallet (MetaMask, OKX, Rabby…).
+export async function connectInjected(): Promise<string | null> {
+  const eth = (globalThis as any).ethereum ?? null;
   if (!eth) return null;
+  active = eth;
   const accounts = await eth.request({ method: 'eth_requestAccounts' });
   return accounts?.[0] ?? null;
+}
+
+// Back-compat alias.
+export const connect = connectInjected;
+
+// "Abelian Wallet Pro" button: mobile wallet that connects over WalletConnect v2
+// (QR on desktop, `abelian://` deep link on mobile) — same integration as QDay Portal.
+export async function connectAbelian(): Promise<string | null> {
+  const { EthereumProvider } = await import('@walletconnect/ethereum-provider');
+  const provider = await EthereumProvider.init({
+    projectId: WALLETCONNECT_PROJECT_ID,
+    chains: [QDAY2.chainIdNum],
+    optionalChains: [QDAY.chainIdNum],
+    showQrModal: true,
+    rpcMap: {
+      [QDAY2.chainIdNum]: QDAY2.rpc,
+      [QDAY.chainIdNum]: QDAY.rpc,
+    },
+    metadata: {
+      name: 'QDay Community',
+      description: 'QDay Community Wiki',
+      url: 'https://community.qday.io',
+      icons: ['https://community.qday.io/logo.svg'],
+    },
+  });
+  await provider.connect();
+  active = provider;
+  return provider.accounts?.[0] ?? null;
 }
 
 export async function ensureQday2(): Promise<void> {

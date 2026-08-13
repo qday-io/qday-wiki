@@ -20,7 +20,7 @@ export default function AddTokenButton({
 
   async function add() {
     const eth = getProvider();
-    if (!eth) { setState('err'); setMsg('No wallet found — install MetaMask.'); return; }
+    if (!eth) { setState('err'); setMsg('No wallet found — install a wallet extension.'); return; }
     setState('busy'); setMsg('');
     try {
       const added = await eth.request({

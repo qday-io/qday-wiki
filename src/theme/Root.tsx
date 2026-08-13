@@ -1,14 +1,8 @@
 import React from 'react';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-import AskAI from '@site/src/components/QDay/AskAI';
 
-// Root wraps the entire app on every page. We mount the floating "Ask AI" widget
-// here (browser-only, so SSR is unaffected).
+// Root wraps the entire app on every page.
+// NOTE: the floating "Ask AI" widget is disabled for now (backend not ready).
+// To re-enable: restore the BrowserOnly<AskAI/> mount below.
 export default function Root({ children }: { children: React.ReactNode }): React.ReactElement {
-  return (
-    <>
-      {children}
-      <BrowserOnly>{() => <AskAI />}</BrowserOnly>
-    </>
-  );
+  return <>{children}</>;
 }
