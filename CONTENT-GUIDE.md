@@ -1,104 +1,107 @@
-# 內容維護指南（給 PM / 營運）
+# Content Editing Guide (for PMs / Ops)
 
-不用工程師、不用裝任何工具。全程在 GitHub 網頁上完成，存檔後網站自動更新。
-
----
-
-## 開始前你需要
-- 一個 **GitHub 帳號**，且被加入 `qday-io` 組織（找工程師加）
-- 會打字。Markdown 語法只要記幾個（下面有表）
+No engineer, no tooling needed. Everything is done in the GitHub web UI; after you
+save, the site rebuilds and updates automatically.
 
 ---
 
-## A. 改一頁現有內容（最常用）
-
-1. 到網站上要改的那一頁，滑到最底，點 **「Edit this page」**
-2. 跳到 GitHub 網頁編輯器，直接改文字
-3. 上方切到 **「Preview」** 分頁可以先看效果
-4. 改好後，最下面 **「Commit changes」**：
-   - 填一句說明（例如：`更新 MetaMask 教學`）
-   - 選 **「Commit directly to the main branch」**
-   - 按綠色 **Commit changes**
-5. 幾分鐘後網站自動更新 ✅
+## Before you start
+- A **GitHub account** added to the `qday-io` org (ask an engineer to add you).
+- You can type. You only need a handful of Markdown symbols (cheatsheet below).
 
 ---
 
-## B. 新增一頁
+## A. Edit an existing page (most common)
 
-1. GitHub 上進 `docs/` 底下對應資料夾（例如 `docs/guide/`）
-2. 右上 **Add file → Create new file**
-3. 檔名用小寫加連字號，結尾 `.md`，例如 `docs/guide/my-new-page.md`
-4. 檔案開頭一定要放這段（frontmatter），再寫內容：
+1. On the site, open the page you want to change, scroll to the bottom, and click
+   **"Edit this page"**.
+2. You land in the GitHub web editor — edit the text directly.
+3. Switch to the **"Preview"** tab to see how it looks.
+4. When done, at the bottom under **"Commit changes"**:
+   - Write a short message (e.g. `Update MetaMask guide`)
+   - Choose **"Commit directly to the main branch"**
+   - Click the green **Commit changes**
+5. The site updates automatically in a few minutes. ✅
+
+---
+
+## B. Add a new page
+
+1. In GitHub, go into the right folder under `docs/` (e.g. `docs/guide/`).
+2. Top right: **Add file → Create new file**.
+3. Name it lowercase-with-hyphens, ending in `.md`, e.g. `docs/guide/my-new-page.md`.
+4. The file must start with this header (frontmatter), then your content:
    ```markdown
    ---
    sidebar_position: 5
-   title: 我的新頁面標題
+   title: My New Page Title
    ---
 
-   # 我的新頁面標題
+   # My New Page Title
 
-   這裡開始寫內容…
+   Start writing here…
    ```
-5. Commit → 側邊欄自動出現這一頁 ✅
+5. Commit → the page appears in the sidebar automatically. ✅
 
-`sidebar_position` 是排序（數字小的在上面）。
+`sidebar_position` controls ordering (smaller numbers appear higher).
 
 ---
 
-## C. 中文 / 英文是「不同的檔案」
+## C. English and Chinese are SEPARATE files
 
-| 語言 | 檔案位置 |
+| Language | File location |
 |---|---|
 | **English** | `docs/guide/xxx.md` |
-| **繁體中文** | `i18n/zh-Hant/docusaurus-plugin-content-docs/current/guide/xxx.md` |
+| **繁體中文 (Traditional Chinese)** | `i18n/zh-Hant/docusaurus-plugin-content-docs/current/guide/xxx.md` |
 
-- 同名檔、不同資料夾。**改英文改上面那個、改中文改下面那個。**
-- 兩個各自獨立 —— 改了英文，中文不會自動變，要另外改中文檔。
-- 新增頁面：若要雙語，兩個位置都放一份（檔名相同）。
-- 沒放中文檔的頁，中文站會 fallback 顯示英文（不會壞）。
+- Same filename, different folder. **Edit the English one for English, the Chinese one for Chinese.**
+- They are independent — editing English does NOT change Chinese; edit the Chinese file separately.
+- To add a bilingual page, put a copy in both locations (same filename).
+- A page with no Chinese file falls back to English on the Chinese site (nothing breaks).
 
-其他 section 同理，把 `guide` 換成 `migration` / `reference` / `dev` 等。
+Same idea for other sections — replace `guide` with `migration` / `reference` / `dev`, etc.
 
 ---
 
-## D. Markdown 速查（記這幾個就夠）
+## D. Markdown cheatsheet (these are enough)
 
-| 想要 | 這樣打 |
+| You want | Type this |
 |---|---|
-| 標題 | `# 大標題` `## 中標題` `### 小標題` |
-| **粗體** | `**粗體**` |
-| *斜體* | `*斜體*` |
-| 連結 | `[顯示文字](https://網址)` |
-| 站內連結 | `[遷移指南](/docs/migration/overview)` |
-| 清單 | 每行開頭 `- 項目` |
-| 編號清單 | 每行開頭 `1. 項目` |
-| 圖片 | `![說明](/img/圖檔.png)`（圖先上傳到 `static/img/`） |
-| 提示框 | 見下方 |
+| Headings | `# H1` `## H2` `### H3` |
+| **Bold** | `**bold**` |
+| *Italic* | `*italic*` |
+| Link | `[text](https://url)` |
+| Internal link | `[Migration guide](/docs/migration/overview)` |
+| Bullet list | start each line with `- item` |
+| Numbered list | start each line with `1. item` |
+| Image | `![alt](/img/file.png)` (upload the image to `static/img/` first) |
+| Callout | see below |
 
-### 提示框（callout）
+### Callouts
 ```markdown
-:::tip[小提示]
-這是提示內容。
+:::tip[Tip]
+Helpful tip here.
 :::
 
-:::warning[注意]
-這是警告內容。
+:::warning[Caution]
+Warning content here.
 :::
 
-:::danger[危險]
-不可逆的操作提醒。
+:::danger[Danger]
+Irreversible-action warning.
 :::
 ```
-type 可用 `tip` / `note` / `info` / `warning` / `danger`。
+Types: `tip` / `note` / `info` / `warning` / `danger`.
 
 ---
 
-## E. 發佈一則「最新動態」公告（首頁）
+## E. Publish a homepage "Latest updates" announcement
 
-首頁的「最新動態」由一個資料檔驅動，PM 可直接改：**`data/updates.json`**
+The homepage "Latest updates" strip is driven by a data file PMs can edit directly:
+**`data/updates.json`**
 
-1. GitHub 上打開 `data/updates.json`，點鉛筆編輯
-2. 在 `items` 最上面加一則（複製一段 `{ }` 改內容）：
+1. Open `data/updates.json` on GitHub and click the pencil to edit.
+2. Add an entry at the top of `items` (copy an existing `{ }` block and change it):
    ```json
    {
      "tag": "launch",
@@ -108,20 +111,22 @@ type 可用 `tip` / `note` / `info` / `warning` / `danger`。
      "to": "/docs/start/add-network"
    },
    ```
-   - `tag`：`launch`（發佈）/ `upgrade`（升級）/ `guide`（教學）/ `notice`（一般）
-   - `date`：自由文字，例如 `2026-08`
-   - `title` / `title_zh`：英文 / 中文標題（沒填中文就顯示英文）
-   - `to`：點擊前往的站內連結
-   - 注意每則之間要有逗號、最後一則沒有逗號
-3. Commit → 首頁自動更新 ✅
+   - `tag`: `launch` / `upgrade` / `guide` / `notice`
+   - `date`: free text, e.g. `2026-08`
+   - `title` / `title_zh`: English / Chinese title (Chinese falls back to English if empty)
+   - `to`: internal link to open on click
+   - Note: put a comma between entries; the last entry has no trailing comma
+3. Commit → the homepage updates automatically. ✅
 
-> 小技巧：改前先複製整段內容備份。若 JSON 格式打錯（少逗號/引號）網站會 build 失敗；用 GitHub 的 Preview 或先開 PR 給工程師看過最保險。
+> Tip: copy the whole block before editing as a backup. If the JSON is malformed
+> (missing comma/quote) the build fails — use GitHub's preview or open a PR for an
+> engineer to review to be safe.
 
 ---
 
-## 常見問題
+## FAQ
 
-- **改完多久生效？** push 後自動 build，約 2–5 分鐘。
-- **改壞了怎麼辦？** GitHub 有版本紀錄，工程師可以還原任何一次修改。
-- **不確定語法對不對？** 用編輯器的 Preview 分頁先看，或先 commit 到一個分支開 PR 給工程師看過。
-- **圖片怎麼加？** 先把圖上傳到 `static/img/`（Add file → Upload files），再用 `![說明](/img/檔名)` 引用。
+- **How long until changes go live?** After you commit, the site rebuilds — about 2–5 minutes.
+- **I broke something — now what?** GitHub keeps full history; an engineer can revert any change.
+- **Not sure my syntax is right?** Use the editor's Preview tab, or commit to a branch and open a PR for review.
+- **How do I add images?** Upload to `static/img/` (Add file → Upload files), then reference with `![alt](/img/filename)`.
