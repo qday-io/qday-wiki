@@ -51,7 +51,6 @@
   transition: border-color .15s, transform .15s;
 }
 .ghostBtn:hover { border-color: var(--ifm-color-primary); transform: translateY(-1px); text-decoration: none; }
-.heroConnect { display: flex; justify-content: center; margin-bottom: 1.5rem; }
 .liveRow { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 .paths {

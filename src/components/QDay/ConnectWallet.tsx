@@ -1,47 +1,53 @@
 import React, { useState } from 'react';
-import ConnectButtons from './ConnectButtons';
+import { connectAbelian, ensureQday2 } from './wallet';
 
-// Self-contained connect widget for the homepage hero: shows the two connect
-// options ("Connect Wallet" + "Abelian Wallet Pro"); once connected, shows the
-// address with a Disconnect reset.
+// Homepage-hero button, parallel to <AddNetworkButton> ("Add QDay2 to Wallet").
+// Connects Abelian Wallet Pro over WalletConnect, then adds/switches to QDay2 —
+// so both hero buttons read "Add QDay2 to <wallet>".
 
 export default function ConnectWallet() {
   const [addr, setAddr] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
-  const [err, setErr] = useState('');
+  const [state, setState] = useState<'idle' | 'busy' | 'err'>('idle');
+  const [msg, setMsg] = useState('');
+
+  async function go() {
+    try {
+      setState('busy'); setMsg('');
+      const account = await connectAbelian();
+      if (!account) throw new Error('Abelian Wallet Pro connection cancelled.');
+      setAddr(account);
+      await ensureQday2();
+      setState('idle');
+    } catch (e: any) {
+      setState('err'); setMsg(e?.shortMessage ?? e?.message ?? 'Connection failed.');
+    }
+  }
 
   if (addr) {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-        <span style={{
-          display: 'inline-flex', alignItems: 'center', gap: 8,
-          padding: '9px 14px', borderRadius: 8, fontSize: 14.5, fontWeight: 600,
-          background: 'rgba(31,157,77,.14)', color: '#1f9d4d',
-        }}>
-          <span style={{ width: 8, height: 8, borderRadius: 999, background: '#1f9d4d' }} />
-          Connected <code style={{ color: 'inherit' }}>{addr.slice(0, 6)}…{addr.slice(-4)}</code>
-        </span>
-        <button onClick={() => { setAddr(null); setErr(''); }} style={{
-          background: 'transparent', color: 'var(--ifm-color-emphasis-700)',
-          border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 8,
-          padding: '9px 14px', fontWeight: 600, fontSize: 14, cursor: 'pointer',
-        }}>
-          Disconnect
-        </button>
-      </div>
+      <span style={{
+        display: 'inline-flex', alignItems: 'center', gap: 8,
+        padding: '10px 16px', borderRadius: 8, fontSize: 15, fontWeight: 600,
+        background: 'rgba(31,157,77,.14)', color: '#1f9d4d',
+      }}>
+        <span style={{ width: 8, height: 8, borderRadius: 999, background: '#1f9d4d' }} />
+        Abelian Wallet Pro <code style={{ color: 'inherit' }}>{addr.slice(0, 6)}…{addr.slice(-4)}</code>
+        <button onClick={() => { setAddr(null); setMsg(''); }} style={{
+          marginLeft: 4, background: 'transparent', border: 'none', color: 'inherit',
+          fontWeight: 700, cursor: 'pointer', fontSize: 16, lineHeight: 1,
+        }} aria-label="Disconnect">×</button>
+      </span>
     );
   }
 
   return (
-    <div>
-      <ConnectButtons
-        onAccount={(a) => { setAddr(a); setErr(''); }}
-        onError={setErr}
-        busy={busy}
-        setBusy={setBusy}
-        showInjected={false}
-      />
-      {err && <p style={{ marginTop: 8, marginBottom: 0, fontSize: 13.5, color: 'var(--ifm-color-danger)' }}>{err}</p>}
-    </div>
+    <button onClick={go} disabled={state === 'busy'} style={{
+      background: 'transparent', color: 'var(--ifm-color-primary)',
+      border: '1px solid var(--ifm-color-primary)', borderRadius: 8,
+      padding: '10px 18px', fontWeight: 600, fontSize: 15,
+      cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
+    }} title={msg || undefined}>
+      {state === 'busy' ? 'Check your wallet…' : 'Add QDay2 to Abelian Wallet Pro'}
+    </button>
   );
 }

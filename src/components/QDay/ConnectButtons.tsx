@@ -11,15 +11,11 @@ export default function ConnectButtons({
   onError,
   busy,
   setBusy,
-  showInjected = true,
 }: {
   onAccount: (addr: string) => void;
   onError: (msg: string) => void;
   busy: boolean;
   setBusy: (b: boolean) => void;
-  // Hide the generic "Connect Wallet" button where an injected-wallet action
-  // already exists nearby (e.g. the homepage "Add QDay2 to Wallet" button).
-  showInjected?: boolean;
 }) {
   async function run(fn: () => Promise<string | null>, notInstalled: string) {
     try {
@@ -37,19 +33,17 @@ export default function ConnectButtons({
 
   return (
     <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-      {showInjected && (
-        <button
-          onClick={() => run(connectInjected, 'No wallet found — install a wallet extension.')}
-          disabled={busy}
-          style={{
-            background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
-            padding: '9px 16px', fontWeight: 600, fontSize: 14.5,
-            cursor: busy ? 'default' : 'pointer', opacity: busy ? 0.6 : 1,
-          }}
-        >
-          {busy ? 'Check your wallet…' : 'Connect Wallet'}
-        </button>
-      )}
+      <button
+        onClick={() => run(connectInjected, 'No wallet found — install a wallet extension.')}
+        disabled={busy}
+        style={{
+          background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
+          padding: '9px 16px', fontWeight: 600, fontSize: 14.5,
+          cursor: busy ? 'default' : 'pointer', opacity: busy ? 0.6 : 1,
+        }}
+      >
+        {busy ? 'Check your wallet…' : 'Connect Wallet'}
+      </button>
       <button
         onClick={() => run(connectAbelian, 'Abelian Wallet Pro connection cancelled.')}
         disabled={busy}

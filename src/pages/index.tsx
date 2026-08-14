@@ -53,12 +53,10 @@ export default function Home(): ReactNode {
           </p>
           <div className={styles.heroActions}>
             <AddNetworkButton network="qday2" />
+            <ConnectWallet />
             <Link className={styles.ghostBtn} to="/docs/intro">
               <Translate id="home.browseDocs">Browse the docs →</Translate>
             </Link>
-          </div>
-          <div className={styles.heroConnect}>
-            <ConnectWallet />
           </div>
           <div className={styles.liveRow}>
             <LiveChainStatus network="qday" />
