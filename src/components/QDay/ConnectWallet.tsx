@@ -39,6 +39,7 @@ export default function ConnectWallet() {
         onError={setErr}
         busy={busy}
         setBusy={setBusy}
+        showInjected={false}
       />
       {err && <p style={{ marginTop: 8, marginBottom: 0, fontSize: 13.5, color: 'var(--ifm-color-danger)' }}>{err}</p>}
     </div>
