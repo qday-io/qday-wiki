@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 const EXPLORER: Record<string, string> = {
   qday: 'https://explorer.qday.io',
-  qday2: 'https://explorer-test.qday.io',
+  qday2: 'https://explorer.qday.info',
 };
 
 export default function AddressLink({

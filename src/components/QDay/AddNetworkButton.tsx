@@ -10,8 +10,8 @@ const NETWORKS: Record<string, Net> = {
   qday2: {
     chainIdHex: '0xABE5', // 44005
     chainName: 'QDay2',
-    rpc: 'https://rpc-test.qday.io',
-    explorer: 'https://explorer-test.qday.io',
+    rpc: 'https://rpc-test.qday.info',
+    explorer: 'https://explorer.qday.info',
   },
   qday: {
     chainIdHex: '0xABE3', // 44003

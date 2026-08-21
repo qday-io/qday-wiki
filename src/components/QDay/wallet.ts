@@ -5,7 +5,7 @@
 export const QDAY2 = {
   chainIdHex: '0xABE5', // 44005
   chainIdNum: 44005,
-  rpc: 'https://rpc-test.qday.io',
+  rpc: 'https://rpc-test.qday.info',
 };
 
 export const QDAY = {
@@ -75,7 +75,7 @@ export async function ensureQday2(): Promise<void> {
       method: 'wallet_addEthereumChain',
       params: [{
         chainId: QDAY2.chainIdHex, chainName: 'QDay2',
-        rpcUrls: [QDAY2.rpc], blockExplorerUrls: ['https://explorer-test.qday.io'],
+        rpcUrls: [QDAY2.rpc], blockExplorerUrls: ['https://explorer.qday.info'],
         nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
       }],
     });

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 // an interval. Shows what MDX enables — a doc page that reflects real chain state.
 
 const RPC: Record<string, string> = {
-  qday2: 'https://rpc-test.qday.io',
+  qday2: 'https://rpc-test.qday.info',
   qday: 'https://rpc.qday.info',
 };
 

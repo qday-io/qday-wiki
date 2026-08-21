@@ -22,8 +22,8 @@ export const qday2 = defineChain({
   id: 44005,
   name: 'QDay2',
   nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
-  rpcUrls: { default: { http: ['https://rpc-test.qday.io'] } },
-  blockExplorers: { default: { name: 'QDay2', url: 'https://explorer-test.qday.io' } },
+  rpcUrls: { default: { http: ['https://rpc-test.qday.info'] } },
+  blockExplorers: { default: { name: 'QDay2', url: 'https://explorer.qday.info' } },
 });
 ```
 
@@ -33,7 +33,7 @@ export const qday2 = defineChain({
 ```ts title="provider.ts"
 import { JsonRpcProvider } from 'ethers';
 
-export const provider = new JsonRpcProvider('https://rpc-test.qday.io', {
+export const provider = new JsonRpcProvider('https://rpc-test.qday.info', {
   chainId: 44005,
   name: 'QDay2',
 });
