@@ -13,7 +13,7 @@ For the GitHub web-UI workflow aimed at PMs / ops, see [CONTENT-GUIDE.md](./CONT
 | `docs/` | **English** source (default locale) |
 | `i18n/zh-Hant/docusaurus-plugin-content-docs/current/` | **Traditional Chinese** source; folder layout must match `docs/` |
 | `docs/<section>/_category_.json` | Sidebar label, order, and collapsed state for that folder |
-| `static/img/` | Images; reference them as `/img/xxx.png` |
+| `static/` | Static files copied to the site root. `static/qday/foo.png` is served at `/qday/foo.png` |
 | `data/updates.json` | Homepage “Latest updates” strip |
 | `src/components/QDay/` | Interactive widgets you can embed in docs (add-network, faucet, etc.) |
 
@@ -362,7 +362,9 @@ Widgets live in `src/components/QDay/`. If the Chinese page needs the same butto
 
 ## 7. Links, images, and callouts
 
-**Internal links** should use the docs route, not a repo-relative path:
+### 7.1 Internal links
+
+Use the docs route, not a repo-relative path:
 
 ```markdown
 [Migration guide](/docs/migration/overview)
@@ -371,14 +373,85 @@ Widgets live in `src/components/QDay/`. If the Chinese page needs the same butto
 
 Same-folder relative links also work: `[MetaMask](metamask)`.
 
-**Images:** upload to `static/img/` (or `static/qday/...`), then reference from the site root:
+### 7.2 Static assets (images and other files)
+
+Docusaurus copies everything under `static/` to the **site root**. The URL is the path after `static/`, starting with `/`.
+
+| File on disk | URL in Markdown / the browser |
+|---|---|
+| `static/qday/metamask/chrome-metamask-install-en.png` | `/qday/metamask/chrome-metamask-install-en.png` |
+| `static/abelian/welcome.png` | `/abelian/welcome.png` |
+| `static/abel-bridge-v3/01-authorize-wallet.png` | `/abel-bridge-v3/01-authorize-wallet.png` |
+| `static/img/logo.svg` | `/img/logo.svg` |
+| `static/files/whitepaper.pdf` | `/files/whitepaper.pdf` |
+
+**Where to put new files**
+
+| Kind | Put it here | Example URL |
+|---|---|---|
+| Guide screenshots | `static/qday/<topic>/` | `/qday/metamask/foo.png` |
+| Abelian Wallet screenshots | `static/abelian/` | `/abelian/welcome.png` |
+| Bridge screenshots | `static/abel-bridge-v3/` | `/abel-bridge-v3/01-authorize-wallet.png` |
+| Site chrome (logo, favicon) | `static/img/` | `/img/logo.svg` |
+| Other downloads (PDF, zip) | `static/files/` (create if needed) | `/files/name.pdf` |
+
+Do **not** put images next to the `.md` file under `docs/`. English and Chinese pages would each need a copy, and existing docs all use `static/`.
+
+**Markdown**
 
 ```markdown
-![alt](/img/filename.png)
 ![Install MetaMask](/qday/metamask/chrome-metamask-install-en.png)
 ```
 
-**Callouts:**
+Optional size (HTML is allowed in Markdown):
+
+```html
+<img src="/qday/swap/swap_en.png" alt="QDAY Swap" width="720" />
+```
+
+**MDX / React** uses the same public URL:
+
+```jsx
+<img src="/qday/metamask/import-tokens1.png" alt="Import USD8" />
+```
+
+To import a file as a module (SVGs in components, etc.):
+
+```tsx
+import Logo from '@site/static/img/logo.svg';
+```
+
+**English vs Chinese screenshots**
+
+Assets are **not** translated by locale folder. Both languages share `static/`. Use different filenames when the UI is localized:
+
+```markdown
+<!-- docs/guide/swap.mdx -->
+![QDAY Swap](/qday/swap/swap_en.png)
+
+<!-- i18n/.../guide/swap.md -->
+![QDAY Swap 兌換](/qday/swap/swap.png)
+```
+
+Existing pattern: English often has an `_en` suffix (`swap_en.png`, `chrome-metamask-install-en.png`); Chinese uses the unsuffixed name or `_zh` (`portal-2-zh.png`). If the screenshot is language-neutral, both pages can point at the same file.
+
+**Other static files**
+
+```markdown
+[Download the whitepaper](/files/whitepaper.pdf)
+[Open the diagram](/qday/QDay_1.4_PSQ_Plan.png)
+```
+
+Any file type works (`.png` `.jpg` `.svg` `.gif` `.webp` `.pdf` `.mp4` …) as long as it lives under `static/`.
+
+**Naming and size**
+
+- Lowercase kebab-case or the existing numbered style (`01-authorize-wallet.png`).
+- Keep screenshots reasonably small (compress PNGs; prefer WebP for large UI captures if needed).
+- After adding files, `npm start` and open the `/...` URL directly to confirm they load.
+
+### 7.3 Callouts
+
 
 ```markdown
 :::tip[Tip]
@@ -408,6 +481,9 @@ Irreversible action
 
 **The sidebar shows a folder name (`user`, `guide`) instead of a proper title.**  
 That folder is missing `_category_.json`, or `label` is not set.
+
+**The image is broken (404).**  
+The Markdown URL must match the path after `static/`. `static/qday/foo.png` is `/qday/foo.png`, not `/img/foo.png` and not `qday/foo.png` (missing the leading `/`). Do not put screenshots under `docs/`.
 
 **I added a Chinese file but the Chinese site still shows English.**  
 The path does not match `docs/`, or the filename differs. The Chinese root must be `i18n/zh-Hant/docusaurus-plugin-content-docs/current/`.
