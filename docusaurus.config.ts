@@ -51,6 +51,16 @@ const config: Config = {
 
   themeConfig: {
     colorMode: { respectPrefersColorScheme: true },
+    // Dismissible top banner for docs-status notices. Bump `id` to
+    // re-show it to users who dismissed a previous message.
+    announcementBar: {
+      id: 'wip-2026-08',
+      content:
+        'Documentation revision underway: please report issues on <a target="_blank" rel="noopener" href="https://discord.gg/Rrb33mC3Kc">Discord</a> or via <a target="_blank" rel="noopener" href="https://github.com/qday-io/qday-wiki/issues">GitHub</a>.',
+      backgroundColor: '#3e2f00',
+      textColor: '#f5d76e',
+      isCloseable: true,
+    },
     navbar: {
       title: '',
       logo: {
@@ -78,8 +88,28 @@ const config: Config = {
             { label: 'Faucet', href: 'https://fi.qday.info/en/dapps/faucet' },
           ],
         },
-        { href: 'https://discord.gg/Rrb33mC3Kc', label: 'Discord', position: 'right' },
-        { href: 'https://github.com/qday-io', label: 'GitHub', position: 'right' },
+        // Community icon buttons (GitHub / Discord / X), styled in custom.css.
+        {
+          href: 'https://github.com/qday-io',
+          position: 'right',
+          className: 'header-icon-link header-github-link',
+          'aria-label': 'GitHub',
+          title: 'GitHub',
+        },
+        {
+          href: 'https://discord.gg/Rrb33mC3Kc',
+          position: 'right',
+          className: 'header-icon-link header-discord-link',
+          'aria-label': 'Discord',
+          title: 'Discord',
+        },
+        {
+          href: 'https://x.com/PQabelian',
+          position: 'right',
+          className: 'header-icon-link header-x-link',
+          'aria-label': 'X',
+          title: 'X',
+        },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
