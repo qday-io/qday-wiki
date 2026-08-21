@@ -390,6 +390,7 @@ Docusaurus copies everything under `static/` to the **site root**. The URL is th
 | Kind | Put it here | Example URL |
 |---|---|---|
 | Guide screenshots | `static/qday/<topic>/` | `/qday/metamask/foo.png` |
+| **User documentation screenshots** (`docs/user/`) | `static/qday/user/` | `/qday/user/01-connect-wallet.png` |
 | Abelian Wallet screenshots | `static/abelian/` | `/abelian/welcome.png` |
 | Bridge screenshots | `static/abel-bridge-v3/` | `/abel-bridge-v3/01-authorize-wallet.png` |
 | Site chrome (logo, favicon) | `static/img/` | `/img/logo.svg` |
