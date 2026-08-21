@@ -3,34 +3,41 @@ sidebar_position: 1
 sidebar_label: QDay Basics
 ---
 
-# QDay Basics
+## **Getting Started**
 
-Welcome to the comprehensive guide for QDay!
+### **1\. Add Network**
 
-This document serves as your essential starting point for understanding and using the QDay ecosystem.
-Whether you're a new user, developer, or miner, this guide will help you choose the right tools and get started quickly.
+QDay works with MetaMask and any WalletConnect-compatible wallet. Add the network manually with:
 
-## Overview
+|  | Mainnet | Testnet |
+| :---- | :---- | :---- |
+| Network Name | QDay Mainnet | Aevum |
+| RPC URL | rpc-main.qday.io | rpc-test.qday.info |
+| Chain ID | 44001 | 44005 |
+| Currency Symbol | QDAY | tQDAY |
+| Block Explorer | explorer-main.qday.io | explorer-test.qday.info |
 
-| No. | Project       | Contents                          |
-| --- | ------------- | --------------------------------- |
-| 0   | Preparation   | Wallet                            |
-|     |               | Deposit: QDAY, USDT               |
-|     |               | Backup private keys and mnemonics |
-| 1   | QDay Chain    | Add network                       |
-| 2   | QDay Explorer |                                   |
-| 3   | QDay Faucet   |                                   |
-| 4   | QDay Swap     | USD8 Contract                     |
-|     |               | ABEL Contract (including WABEL)   |
-| 5   | QDay Staking  | Contract                          |
-| 6   | Abel Staking  | Contract                          |
+### **2\. Faucet**
 
+On testnet, connect your wallet to QDay’s faucet to receive tokens for testing. Please access to 
+[**QDay Portal**](https://faucet.qday.info) 
+![][image1]![][image2]
+
+### **3\. First Transaction**
+
+With a funded wallet, choose a recipient or dApp, review the fee (paid in QDAY, or in USD8 if the transaction is an agentic  payment), and confirm.
+
+### **4\. Deploy your first SmartContracts**
+
+QDay supports the standard Ethereum toolchain — Remix, Hardhat, or Foundry all work without modification. Point your tooling at QDay’s network details and deploy as you would on any EVM chain.
+
+---
 ## Next Steps
 
 Now that you understand the QDay ecosystem, choose your path:
 
 - [**New to QDay?**](/docs/guide/metamask)
 - [**New to ABEL?**](/docs/guide/abelian-mobile-wallet)
-- [**QDay Portal**](https://portal.qday.io) `Through the asset QDay Portal, you can quickly access the services 
+- [**QDay Portal**](https://portal-test.qday.info) `Through the asset QDay Portal, you can quickly access the services 
 
 Welcome to the QDay community! 🚀
