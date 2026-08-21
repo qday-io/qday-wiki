@@ -8,7 +8,7 @@ sidebar_position: 2
 | Chain | Chain ID | RPC | WebSocket |
 |---|---|---|---|
 | QDay | 44003 | `https://rpc.qday.info` | `wss://rpc.qday.info` |
-| QDay2 | 44005 | `https://rpc-test.qday.io` | `wss://rpc-test.qday.io` |
+| QDay2 | 44005 | `https://rpc-test.qday.info` | `wss://rpc-test.qday.info` |
 
 ## Quick check
 
@@ -26,8 +26,8 @@ await window.ethereum.request({
   params: [{
     chainId: '0xABE5',            // 44005
     chainName: 'QDay2',
-    rpcUrls: ['https://rpc-test.qday.io'],
-    blockExplorerUrls: ['https://explorer-test.qday.io'],
+    rpcUrls: ['https://rpc-test.qday.info'],
+    blockExplorerUrls: ['https://explorer.qday.info'],
     nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
   }],
 });
