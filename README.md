@@ -33,6 +33,8 @@ widget use **`.mdx`** (Markdown + a React component import). Search is local/off
 
 ## Content authoring
 
+How to add pages, nested sidebar categories, `_category_.json`, and English / 繁體中文: **[AUTHORING.md](./AUTHORING.md)**. PM / Ops GitHub-web editing: **[CONTENT-GUIDE.md](./CONTENT-GUIDE.md)**.
+
 - Add a page: drop a `.md` file under `docs/<section>/` - it appears in the sidebar automatically.
 - Add an interactive widget: name the file `.mdx`, `import` the component, drop `<Component />` in.
 - Images: put them under `static/` and reference with an absolute path (`/qday/...`).

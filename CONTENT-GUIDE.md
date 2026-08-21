@@ -3,6 +3,9 @@
 No engineer, no tooling needed. Everything is done in the GitHub web UI; after you
 save, the site rebuilds and updates automatically.
 
+For nested sidebar folders, `_category_.json`, and bilingual file layout, see
+**[AUTHORING.md](./AUTHORING.md)**.
+
 ---
 
 ## Before you start
