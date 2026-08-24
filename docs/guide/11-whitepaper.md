@@ -1,25 +1,23 @@
 ---
-sidebar_position: 1
-title: Introduction
-draft: false
+id: whitepaper
+title: 11. Whitepaper
+sidebar_position: 11
 ---
 
-# Introduction
-
-What QDAY is and why it exists.
+# 11. Whitepaper
 
 :::info Draft
 This page is scaffolded — the structure is in place and the content is being written.
 :::
 
-## What is QDAY
+## Download
 
 _Coming soon._
 
-## Vision
+## Versions
 
 _Coming soon._
 
-## Why QDAY
+## Version History
 
 _Coming soon._

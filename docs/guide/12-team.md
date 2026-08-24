@@ -1,25 +1,27 @@
 ---
-sidebar_position: 11
-title: Whitepaper
-draft: false
+id: team
+title: 12. Team
+sidebar_position: 12
 ---
 
-# Whitepaper
-
-Whitepaper downloads and version history.
+# 12. Team
 
 :::info Draft
 This page is scaffolded — the structure is in place and the content is being written.
 :::
 
-## Download
+## Team
 
 _Coming soon._
 
-## Versions
+## Advisors
 
 _Coming soon._
 
-## Version History
+## Partners
+
+_Coming soon._
+
+## Investors
 
 _Coming soon._

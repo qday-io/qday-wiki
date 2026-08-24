@@ -1,22 +1,16 @@
 ---
-sidebar_position: 15
-title: FAQ
-draft: false
+id: roadmap
+title: 10. Roadmap
+sidebar_position: 10
 ---
 
-# FAQ
-
-Common questions.
+# 10. Roadmap
 
 :::info Draft
 This page is scaffolded — the structure is in place and the content is being written.
 :::
 
-## Wallet issues
-
-_Coming soon._
-
-## Gas
+## Mainnet
 
 _Coming soon._
 
@@ -24,18 +18,18 @@ _Coming soon._
 
 _Coming soon._
 
-## Failed transactions
+## Account Abstraction
 
 _Coming soon._
 
-## RPC
+## Payment
 
 _Coming soon._
 
-## Security
+## AI
 
 _Coming soon._
 
-## Wallet recovery
+## Post-Quantum
 
 _Coming soon._
