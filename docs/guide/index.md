@@ -1,6 +1,7 @@
 ---
 sidebar_position: 0
 title: User Guide
+sidebar_label: Handbook
 ---
 
 # User Guide
