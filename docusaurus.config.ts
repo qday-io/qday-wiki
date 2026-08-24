@@ -88,7 +88,7 @@ const config: Config = {
             { label: 'Faucet', href: 'https://fi.qday.info/en/dapps/faucet' },
           ],
         },
-        // Community icon buttons (GitHub / Discord / X), styled in custom.css.
+        // Community icon buttons (GitHub / Discord / X / LinkedIn), styled in custom.css.
         {
           href: 'https://github.com/qday-io',
           position: 'right',
@@ -104,11 +104,18 @@ const config: Config = {
           title: 'Discord',
         },
         {
-          href: 'https://x.com/PQabelian',
+          href: 'https://x.com/QDayOfficial',
           position: 'right',
           className: 'header-icon-link header-x-link',
           'aria-label': 'X',
-          title: 'X',
+          title: 'X (@QDayOfficial)',
+        },
+        {
+          href: 'https://www.linkedin.com/company/qday-network/',
+          position: 'right',
+          className: 'header-icon-link header-linkedin-link',
+          'aria-label': 'LinkedIn',
+          title: 'LinkedIn',
         },
         { type: 'localeDropdown', position: 'right' },
       ],
@@ -125,7 +132,9 @@ const config: Config = {
           { label: 'Portal', href: 'https://portal.qday.io' },
           { label: 'Explorer', href: 'https://explorer.qday.io' },
         ]},
-        { title: 'More', items: [
+        { title: 'Community', items: [
+          { label: 'X', href: 'https://x.com/QDayOfficial' },
+          { label: 'LinkedIn', href: 'https://www.linkedin.com/company/qday-network/' },
           { label: 'Discord', href: 'https://discord.gg/Rrb33mC3Kc' },
           { label: 'GitHub', href: 'https://github.com/qday-io' },
         ]},
