@@ -1,37 +1,31 @@
 ---
-sidebar_position: 5
-title: User Guide
-draft: false
+id: community
+title: 14. Community
+sidebar_position: 14
 ---
 
-# User Guide
-
-Everyday actions on QDAY.
+# 14. Community
 
 :::info Draft
 This page is scaffolded — the structure is in place and the content is being written.
 :::
 
-## Wallet
+## Discord
 
 _Coming soon._
 
-## Swap
+## Telegram
 
 _Coming soon._
 
-## Stake
+## X
 
 _Coming soon._
 
-## Bridge
+## Medium
 
 _Coming soon._
 
-## Gasless Transactions
-
-_Coming soon._
-
-## Explorer
+## GitHub
 
 _Coming soon._

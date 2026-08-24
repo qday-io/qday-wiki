@@ -1,45 +1,39 @@
 ---
-sidebar_position: 9
-title: Tokenomics
-draft: false
+id: faq
+title: 15. FAQ
+sidebar_position: 15
 ---
 
-# Tokenomics
-
-Token supply, allocation, unlocks, and utility.
+# 15. FAQ
 
 :::info Draft
 This page is scaffolded — the structure is in place and the content is being written.
 :::
 
-## Token
+## Wallet
 
 _Coming soon._
 
-## Supply
+## Gas
 
 _Coming soon._
 
-## Allocation
+## Bridge
 
 _Coming soon._
 
-## Unlock Schedule
+## Failed transactions
 
 _Coming soon._
 
-## Utility
+## RPC
 
 _Coming soon._
 
-## Burn
+## Security
 
 _Coming soon._
 
-## Rewards
-
-_Coming soon._
-
-## Treasury
+## Recovering a wallet
 
 _Coming soon._
