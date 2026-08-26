@@ -93,3 +93,19 @@ div[class^='announcementBar_'] a {
   text-underline-offset: 2px;
   font-weight: 600;
 }
+
+/* ── Wider right-hand "On this page" TOC ───────────────────────────────
+   Default is col--3 (25%), which clips long entry titles. Give the TOC
+   column ~30% and shrink the content column to match (both only exist on
+   doc pages that have a TOC, so this is scoped there). */
+@media (min-width: 997px) {
+  .col--3:has(.theme-doc-toc-desktop) {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  /* docItemCol is applied to the content column only when a TOC is present;
+     the hashed suffix varies, so match by prefix. Override its 75% cap. */
+  .row > [class*='docItemCol'] {
+    max-width: 70% !important;
+  }
+}
