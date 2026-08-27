@@ -77,7 +77,7 @@ Same idea for other sections — replace `guide` with `migration` / `reference` 
 | Internal link | `[Migration guide](/docs/migration/overview)` |
 | Bullet list | start each line with `- item` |
 | Numbered list | start each line with `1. item` |
-| Image | `![alt](/img/file.png)` (upload the image to `static/img/` first) |
+| Image | `![alt](/img/file.png)` — see **section E** for uploading + the path rule |
 | Callout | see below |
 
 ### Callouts
@@ -98,7 +98,39 @@ Types: `tip` / `note` / `info` / `warning` / `danger`.
 
 ---
 
-## E. Publish a homepage "Latest updates" announcement
+## E. Add an image (screenshots)
+
+Two steps: **upload the image file**, then **reference it** in your page.
+
+### 1. Upload the image (GitHub web)
+
+1. In GitHub, open the folder **`static/qday/user/`** (for User Documentation
+   screenshots) — or `static/img/` for general images.
+2. Top right: **Add file → Upload files**.
+3. Drag your image into the page (or click "choose your files"). Use a simple
+   **lowercase name with no spaces** — e.g. `01-connect-wallet.png`.
+4. At the bottom under **Commit changes**, choose **"Commit directly to the main
+   branch"**, then click **Commit changes**. ✅
+
+### 2. Use it in a page
+
+Reference it with a path from the **site root** — **drop `static`, keep the leading `/`**:
+
+| The file you uploaded | Write this in the page |
+|---|---|
+| `static/qday/user/01-connect-wallet.png` | `![Connect wallet](/qday/user/01-connect-wallet.png)` |
+| `static/img/logo.png` | `![Logo](/img/logo.png)` |
+
+> **Most common mistake:** do **not** write `../static/img/...` or `static/img/...`.
+> The word `static` never appears in the path. The site serves the `static/`
+> folder from the root, so `static/qday/user/x.png` is used as `/qday/user/x.png`.
+
+Tip: English and Chinese pages **share the same image** — upload it once and use
+the same `/qday/user/x.png` path in both files.
+
+---
+
+## F. Publish a homepage "Latest updates" announcement
 
 The homepage "Latest updates" strip is driven by a data file PMs can edit directly:
 **`data/updates.json`**
@@ -132,4 +164,4 @@ The homepage "Latest updates" strip is driven by a data file PMs can edit direct
 - **How long until changes go live?** After you commit, the site rebuilds — about 2–5 minutes.
 - **I broke something — now what?** GitHub keeps full history; an engineer can revert any change.
 - **Not sure my syntax is right?** Use the editor's Preview tab, or commit to a branch and open a PR for review.
-- **How do I add images?** Upload to `static/img/` (Add file → Upload files), then reference with `![alt](/img/filename)`.
+- **How do I add images?** See **section E** — upload to `static/qday/user/` (or `static/img/`), then reference with `![alt](/qday/user/filename.png)`. Remember: the path drops `static` and keeps the leading `/`.

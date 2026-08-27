@@ -1,4 +1,3 @@
-
 ---
 id: why-qday
 title: 2. Why QDay
