@@ -80,21 +80,26 @@
 
 /* ── Announcement bar: taller + larger text so it's actually noticeable ── */
 :root {
-  /* The bar's height comes from this Docusaurus var (padding won't grow it);
-     set on :root so the navbar's offset uses the same value → no overlap. */
-  --docusaurus-announcement-bar-height: 56px;
+  /* Bar height comes from this Docusaurus var. Docusaurus declares it too
+     (auto, and 30px at >=997px) — !important so ours wins regardless of the
+     stylesheet load order. */
+  --docusaurus-announcement-bar-height: 56px !important;
 }
-div[class^='announcementBar_'] {
+/* NOTE: the bar's class is "theme-announcement-bar announcementBar_XXXX", so it
+   does NOT start with "announcementBar_" — must match with *= (contains), not ^=. */
+div[class*='announcementBar_'] {
   align-items: center;
-  font-size: 1.4rem;
-  font-weight: 600;
   line-height: 1.4;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
-div[class^='announcementBar_'] [class*='announcementBarContent_'] {
+/* Larger text. The higher specificity (bar + content) beats the theme's
+   .content_XXXX { font-size: 85% } without needing !important. */
+div[class*='announcementBar_'] [class*='announcementBarContent_'] {
+  font-size: 1.4rem;
+  font-weight: 600;
   padding: 0 24px;
 }
-div[class^='announcementBar_'] a {
+div[class*='announcementBar_'] a {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
