@@ -11,9 +11,9 @@ Everyday tasks on QDay — wallets, staking, swap, and the bridge. New here? Sta
 
 ## In this section
 
-- **[MetaMask Wallet](metamask)** — set up MetaMask for QDay
-- **[Abelian Mobile Wallet](abelian-mobile-wallet)** — the mobile wallet
-- **[QDAY Staking](qday-staking)** · **[ABEL Staking](abel-staking)** — earn yield
-- **[Swap](swap)** — the QDay DEX
-- **[Abelian Bridge v3](abelian-bridge-v3)** — move assets across networks
+- **[MetaMask Wallet](user-guide/metamask)** — set up MetaMask for QDay
+- **[Abelian Mobile Wallet](user-guide/abelian-mobile-wallet)** — the mobile wallet
+- **[QDAY Staking](user-guide/qday-staking)** · **[ABEL Staking](user-guide/abel-staking)** — earn yield
+- **[Swap](user-guide/swap)** — the QDay DEX
+- **[Abelian Bridge v3](user-guide/abelian-bridge-v3)** — move assets across networks
 - **[Whitepaper](qday-whitepaper)** — the quantum-resistant Layer2 design

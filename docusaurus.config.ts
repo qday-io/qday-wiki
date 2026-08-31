@@ -61,16 +61,34 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath: string) {
+          const redirects: string[] = [];
+          const userGuidePages = [
+            'metamask',
+            'abelian-mobile-wallet',
+            'swap',
+            'qday-staking',
+            'abel-staking',
+            'abelian-bridge-v3',
+          ];
+          for (const page of userGuidePages) {
+            const current = `/guide/handbook/user-guide/${page}`;
+            if (existingPath === current || existingPath === `${current}/`) {
+              redirects.push(
+                `/guide/handbook/${page}`,
+                `/guide/handbook/${page}/`,
+                `/docs/guide/${page}`,
+                `/docs/guide/${page}/`,
+              );
+            }
+          }
           if (existingPath.startsWith('/guide/handbook')) {
-            return [existingPath.replace('/guide/handbook', '/docs/guide')];
+            redirects.push(existingPath.replace('/guide/handbook', '/docs/guide'));
+          } else if (existingPath.startsWith('/guide/')) {
+            redirects.push(existingPath.replace('/guide/', '/docs/'));
+          } else if (existingPath.startsWith('/Knowledge/')) {
+            redirects.push(existingPath.replace('/Knowledge/', '/docs/'));
           }
-          if (existingPath.startsWith('/guide/')) {
-            return [existingPath.replace('/guide/', '/docs/')];
-          }
-          if (existingPath.startsWith('/Knowledge/')) {
-            return [existingPath.replace('/Knowledge/', '/docs/')];
-          }
-          return undefined;
+          return redirects.length ? redirects : undefined;
         },
       },
     ],

@@ -28,8 +28,8 @@ sidebar_position: 1
 
 現在您已經了解了 QDay 生態系統，請選擇您的路徑：
 
-- [**QDay 新手？**](/guide/handbook/metamask)
-- [**ABEL 新手？**](/guide/handbook/abelian-mobile-wallet)
+- [**QDay 新手？**](/guide/handbook/user-guide/metamask)
+- [**ABEL 新手？**](/guide/handbook/user-guide/abelian-mobile-wallet)
 - [**QDay 資產組合**](https://portal.qday.io) `通過資產組合，您可以快速訪問 QDay 生態系統的服務和工具。`
 
 
