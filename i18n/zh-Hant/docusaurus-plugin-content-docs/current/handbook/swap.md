@@ -7,7 +7,7 @@ sidebar_position: 3
 QDay Swap 是基於 QDay 區塊鏈的去中心化交易平台，讓您可以快速兌換各種代幣，並通過提供流動性賺取收益。
 
 :::tip[準備工作]
-使用前，請確保您已安裝並設定好 [MetaMask 錢包](/docs/guide/metamask) 並 [新增 QDAY 網路](/docs/guide/metamask#新增-qday-網路到-metamask)。
+使用前，請確保您已安裝並設定好 [MetaMask 錢包](/guide/handbook/metamask) 並 [新增 QDAY 網路](/guide/handbook/metamask#新增-qday-網路到-metamask)。
 :::
 
 ## 1. 代幣兌換 (Swap)

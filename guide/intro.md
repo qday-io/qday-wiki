@@ -13,8 +13,8 @@ QDay2 upgrade and how to migrate.
 <div className="grid cards" markdown>
 
 - **New to QDay2?** → [Add it to your wallet](start/add-network)
-- **Moving from QDay?** → [Migration guide](migration/overview)
-- **Building?** → [Developer docs](dev/)
+- **Moving from QDay?** → [Migration guide](/Knowledge/migration/overview)
+- **Building?** → [Developer docs](/Knowledge/dev/)
 
 </div>
 

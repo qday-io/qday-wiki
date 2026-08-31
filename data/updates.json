@@ -6,21 +6,21 @@
       "date": "2026-08",
       "title": "QDay2 testnet is live — add it to your wallet",
       "title_zh": "QDay2 測試網已上線 — 加入你的錢包",
-      "to": "/docs/start/add-network"
+      "to": "/guide/start/add-network"
     },
     {
       "tag": "guide",
       "date": "2026-08",
       "title": "How to migrate your assets from QDay to QDay2",
       "title_zh": "如何把資產從 QDay 遷移到 QDay2",
-      "to": "/docs/migration/overview"
+      "to": "/Knowledge/migration/overview"
     },
     {
       "tag": "guide",
       "date": "2026-08",
       "title": "Build a dApp on QDay — wagmi / viem quickstart",
       "title_zh": "在 QDay 上開發 dApp — wagmi / viem 快速上手",
-      "to": "/docs/dev/build"
+      "to": "/Knowledge/dev/build"
     }
   ]
 }

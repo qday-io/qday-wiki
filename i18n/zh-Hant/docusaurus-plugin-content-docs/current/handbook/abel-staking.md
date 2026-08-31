@@ -36,7 +36,7 @@ sidebar_position: 5
 
 ### 步驟 1: 設定錢包
 
-登入您的 EVM 錢包（例如 MetaMask）並新增 QDay 主網為自訂網路。詳細步驟請參考 [MetaMask 錢包帳戶用戶指引 - 新增 QDay 網路](/docs/guide/metamask#新增-qday-網路到-metamask)。
+登入您的 EVM 錢包（例如 MetaMask）並新增 QDay 主網為自訂網路。詳細步驟請參考 [MetaMask 錢包帳戶用戶指引 - 新增 QDay 網路](/guide/handbook/metamask#新增-qday-網路到-metamask)。
 
 ### 步驟 2: 訪問質押頁面
 
@@ -104,7 +104,7 @@ WABEL 質押根據您的鎖定期限提供不同的獎勵倍數——年化率�
 Abelian 是一個獨立的後量子區塊鏈網路,使用與 EVM 不同的技術架構。MetaMask 是專為以太坊虛擬機(EVM)相容鏈設計的錢包,因此無法支援 Abelian 網路。
 
 :::warning[注意]
-如果您需要使用 Abelian 網路（例如持有 ABEL 來進行跨鏈轉換）,請使用 [Abelian 行動錢包應用程式](/docs/guide/abelian-mobile-wallet)。
+如果您需要使用 Abelian 網路（例如持有 ABEL 來進行跨鏈轉換）,請使用 [Abelian 行動錢包應用程式](/guide/handbook/abelian-mobile-wallet)。
 :::
 
 ### Q2: 質押 WABEL 的最低數量是多少?

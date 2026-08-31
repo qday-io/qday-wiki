@@ -17,21 +17,21 @@ export default function Home(): ReactNode {
       icon: '⛓️',
       title: translate({id: 'home.card.user.title', message: 'I’m a user'}),
       body: translate({id: 'home.card.user.body', message: 'Add QDay2 to your wallet, swap, stake, and use dApps.'}),
-      to: '/docs/start/add-network',
+      to: '/guide/start/add-network',
       cta: translate({id: 'home.card.user.cta', message: 'Get started'}),
     },
     {
       icon: '↔️',
       title: translate({id: 'home.card.migrate.title', message: 'I’m migrating'}),
       body: translate({id: 'home.card.migrate.body', message: 'Move USD8 / WABEL / WQDAY and native QDAY from QDay to QDay2.'}),
-      to: '/docs/migration/overview',
+      to: '/Knowledge/migration/overview',
       cta: translate({id: 'home.card.migrate.cta', message: 'Migration guide'}),
     },
     {
       icon: '⚡',
       title: translate({id: 'home.card.dev.title', message: 'I’m a developer'}),
       body: translate({id: 'home.card.dev.body', message: 'Chain params, RPC endpoints, contracts, and a dApp quickstart.'}),
-      to: '/docs/reference/chains',
+      to: '/Knowledge/reference/chains',
       cta: translate({id: 'home.card.dev.cta', message: 'Developer docs'}),
     },
   ];
@@ -54,7 +54,7 @@ export default function Home(): ReactNode {
           <div className={styles.heroActions}>
             <AddNetworkButton network="qday2" />
             <ConnectWallet />
-            <Link className={styles.ghostBtn} to="/docs/intro">
+            <Link className={styles.ghostBtn} to="/guide/intro">
               <Translate id="home.browseDocs">Browse the docs →</Translate>
             </Link>
           </div>
