@@ -7,7 +7,7 @@ sidebar_label: Handbook
 # User Guide
 
 Everyday tasks on QDay — wallets, staking, swap, and the bridge. New here? Start with
-[QDay Basics](#) or jump straight to [adding QDay2 to your wallet](/docs/start/add-network).
+[QDay Basics](#) or jump straight to [adding QDay2 to your wallet](/guide/start/add-network).
 
 ## In this section
 

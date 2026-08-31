@@ -31,14 +31,48 @@ const config: Config = {
     [
       'classic',
       {
+        // Default docs instance = User Guide, served at /guide.
         docs: {
-          sidebarPath: './sidebars.ts',
-          routeBasePath: '/docs', // docs under /docs; / is a branded landing
+          path: 'guide',
+          routeBasePath: 'guide',
+          sidebarPath: './sidebars-guide.ts',
           editUrl: 'https://github.com/qday-io/qday-wiki/tree/main/',
         },
         blog: false, // pure wiki; enable later for announcements
         theme: { customCss: './src/css/custom.css' },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  // Second docs instance = Technical / Knowledge, served at /Knowledge.
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'knowledge',
+        path: 'knowledge',
+        routeBasePath: 'Knowledge',
+        sidebarPath: './sidebars-knowledge.ts',
+        editUrl: 'https://github.com/qday-io/qday-wiki/tree/main/',
+      },
+    ],
+    // Keep old /docs/* URLs working after the split into /guide + /Knowledge.
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath: string) {
+          if (existingPath.startsWith('/guide/handbook')) {
+            return [existingPath.replace('/guide/handbook', '/docs/guide')];
+          }
+          if (existingPath.startsWith('/guide/')) {
+            return [existingPath.replace('/guide/', '/docs/')];
+          }
+          if (existingPath.startsWith('/Knowledge/')) {
+            return [existingPath.replace('/Knowledge/', '/docs/')];
+          }
+          return undefined;
+        },
+      },
     ],
   ],
 
@@ -69,7 +103,13 @@ const config: Config = {
         srcDark: 'img/logo.svg',      // dark mode
       },
       items: [
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
+        {
+          type: 'dropdown', label: 'Docs', position: 'left',
+          items: [
+            { type: 'docSidebar', sidebarId: 'guideSidebar', label: 'User Guide' },
+            { type: 'docSidebar', sidebarId: 'knowledgeSidebar', docsPluginId: 'knowledge', label: 'Technical' },
+          ],
+        },
         {
           label: 'Mainnet', position: 'right',
           items: [
@@ -124,9 +164,9 @@ const config: Config = {
       style: 'dark',
       links: [
         { title: 'Docs', items: [
-          { label: 'Get Started', to: '/docs/start/add-network' },
-          { label: 'Migration', to: '/docs/migration/overview' },
-          { label: 'Chain params', to: '/docs/reference/chains' },
+          { label: 'Get Started', to: '/guide/start/add-network' },
+          { label: 'Migration', to: '/Knowledge/migration/overview' },
+          { label: 'Chain params', to: '/Knowledge/reference/chains' },
         ]},
         { title: 'Network', items: [
           { label: 'Portal', href: 'https://portal.qday.io' },

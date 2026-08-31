@@ -26,11 +26,11 @@ sidebar_position: 4
 
 - **方法 1：質押 ABEL 賺取 QDAY**
   1. 首先需要購買 ABEL，您可以透過 MEXC、BitMart 交易所，或使用 Abelian 行動錢包（Abelian Mobile Wallet）的應用程式內購（In-app purchase）功能來取得。
-  2. 將 ABEL 質押即可獲得 QDAY 獎勵。詳細教學請參考 [ABEL 質押用戶指引](/docs/guide/abel-staking)。
+  2. 將 ABEL 質押即可獲得 QDAY 獎勵。詳細教學請參考 [ABEL 質押用戶指引](/guide/handbook/abel-staking)。
 
 - **方法 2：使用 USD8 兌換 QDAY**
   1. 透過 **[QDay Bridge](https://portal.qday.io/zh-HK/bridge)**：使用 USDT (ETH) 購買 USD8；或者使用 Abelian 行動錢包的應用程式內購功能購買 USD8。
-  2. 透過 **[QDay 兌換 (Swap)](https://portal.qday.io/zh-HK/qday-swap)** 或 Abelian 行動錢包內的兌換功能：將 USD8 兌換為 QDAY。詳細教學請參考 [QDay Swap 用戶指引](/docs/guide/swap)。
+  2. 透過 **[QDay 兌換 (Swap)](https://portal.qday.io/zh-HK/qday-swap)** 或 Abelian 行動錢包內的兌換功能：將 USD8 兌換為 QDAY。詳細教學請參考 [QDay Swap 用戶指引](/guide/handbook/swap)。
 
 ### 質押機制說明
 
@@ -44,7 +44,7 @@ sidebar_position: 4
 
 ### 步驟 1: 設定錢包
 
-登入您的 EVM 錢包（例如 MetaMask）並新增 QDay 主網為自訂網路。詳細步驟請參考 [MetaMask 錢包帳戶用戶指引 - 新增 QDay 網路](/docs/guide/metamask#新增-qday-網路到-metamask)。
+登入您的 EVM 錢包（例如 MetaMask）並新增 QDay 主網為自訂網路。詳細步驟請參考 [MetaMask 錢包帳戶用戶指引 - 新增 QDay 網路](/guide/handbook/metamask#新增-qday-網路到-metamask)。
 
 ### 步驟 2: 訪問質押頁面
 

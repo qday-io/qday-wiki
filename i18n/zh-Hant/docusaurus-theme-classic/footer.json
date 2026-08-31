@@ -13,15 +13,15 @@
   },
   "link.item.label.Get Started": {
     "message": "Get Started",
-    "description": "The label of footer link with label=Get Started linking to /docs/start/add-network"
+    "description": "The label of footer link with label=Get Started linking to /guide/start/add-network"
   },
   "link.item.label.Migration": {
     "message": "Migration",
-    "description": "The label of footer link with label=Migration linking to /docs/migration/overview"
+    "description": "The label of footer link with label=Migration linking to /Knowledge/migration/overview"
   },
   "link.item.label.Chain params": {
     "message": "Chain params",
-    "description": "The label of footer link with label=Chain params linking to /docs/reference/chains"
+    "description": "The label of footer link with label=Chain params linking to /Knowledge/reference/chains"
   },
   "link.item.label.Portal": {
     "message": "Portal",

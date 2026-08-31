@@ -22,8 +22,8 @@ export default function NotFound(): React.ReactElement {
         </p>
         <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link className="button button--primary button--lg" to="/">Home</Link>
-          <Link className="button button--secondary button--lg" to="/docs/start/add-network">Get Started</Link>
-          <Link className="button button--secondary button--lg" to="/docs/migration/overview">Migration</Link>
+          <Link className="button button--secondary button--lg" to="/guide/start/add-network">Get Started</Link>
+          <Link className="button button--secondary button--lg" to="/Knowledge/migration/overview">Migration</Link>
         </div>
       </main>
     </Layout>
