@@ -61,6 +61,9 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath: string) {
+          // One from-path only: `/foo` and `/foo/` both write foo/index.html
+          // and the plugin errors with EEXIST if both are returned.
+          const path = existingPath.replace(/\/$/, '') || '/';
           const redirects: string[] = [];
           const userGuidePages = [
             'metamask',
@@ -71,24 +74,21 @@ const config: Config = {
             'abelian-bridge-v3',
           ];
           for (const page of userGuidePages) {
-            const current = `/guide/handbook/user-guide/${page}`;
-            if (existingPath === current || existingPath === `${current}/`) {
+            if (path === `/guide/handbook/user-guide/${page}`) {
               redirects.push(
                 `/guide/handbook/${page}`,
-                `/guide/handbook/${page}/`,
                 `/docs/guide/${page}`,
-                `/docs/guide/${page}/`,
               );
             }
           }
-          if (existingPath.startsWith('/guide/handbook')) {
-            redirects.push(existingPath.replace('/guide/handbook', '/docs/guide'));
-          } else if (existingPath.startsWith('/guide/')) {
-            redirects.push(existingPath.replace('/guide/', '/docs/'));
-          } else if (existingPath.startsWith('/Knowledge/')) {
-            redirects.push(existingPath.replace('/Knowledge/', '/docs/'));
+          if (path.startsWith('/guide/handbook')) {
+            redirects.push(path.replace('/guide/handbook', '/docs/guide'));
+          } else if (path.startsWith('/guide/')) {
+            redirects.push(path.replace('/guide/', '/docs/'));
+          } else if (path.startsWith('/Knowledge/')) {
+            redirects.push(path.replace('/Knowledge/', '/docs/'));
           }
-          return redirects.length ? redirects : undefined;
+          return redirects.length ? [...new Set(redirects)] : undefined;
         },
       },
     ],
