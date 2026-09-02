@@ -1,8 +1,5 @@
 {
   "label": "Developer Guide",
   "position": 4,
-  "link": {
-    "type": "doc",
-    "id": "technical/developer-guide/getting-started"
-  }
+  "collapsed": true
 }

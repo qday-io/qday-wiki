@@ -21,10 +21,10 @@ Start with [Add QDay to your wallet](/guide/start/add-network) and [deploy a fir
 
 Do not scrape every block yourself. QDay’s shared infrastructure is meant for production apps: RPC, explorer, **indexer**, **price oracle**, faucet, and related APIs. How to connect and query them is documented with the ecosystem.
 
-- **RPC & explorer** — JSON-RPC and Blockscout-style explorer ([Infrastructure](/Knowledge/technical/ecosystem#infrastructure))
-- **Indexer** — token transfers, DEX trades, payment and agent events over GraphQL, so you do not replay chain history ([Indexer](/Knowledge/technical/ecosystem#infrastructure))
-- **Price oracle** — on-chain feeds compatible with Chainlink’s Aggregator interface ([Oracle & Data](/Knowledge/technical/ecosystem#oracle--data))
-- **Connect / RPC** — endpoints and `wallet_addEthereumChain` ([Connect](/Knowledge/technical/developer-guide/connect))
+- **RPC & explorer** — JSON-RPC and Blockscout-style explorer ([Infrastructure](/Knowledge/technical/ecosystem/infrastructure))
+- **Indexer** — token transfers, DEX trades, payment and agent events over GraphQL, so you do not replay chain history ([Indexer](/Knowledge/technical/ecosystem/infrastructure))
+- **Price oracle** — on-chain feeds compatible with Chainlink’s Aggregator interface ([Oracle & Data](/Knowledge/technical/ecosystem/oracle-data))
+- **Connect / RPC** — endpoints and `wallet_addEthereumChain` ([Network Configuration](/Knowledge/technical/developer-guide/network-configuration), [Wallet Integration](/Knowledge/technical/developer-guide/wallet-integration))
 
 Operator-facing runbooks live in the [Operator Guide](/Knowledge/technical/operator-guide). Endpoint URLs and API shapes will be filled in on those pages as services go live.
 
@@ -40,4 +40,4 @@ Application-level SDKs wrap Smart Accounts, agents, and **payments** so you can 
 | `@qday-io/sdk/agent` | On-chain AI agents (MCP + intent registry) |
 | `@qday-io/cli` | CLI for the same surface (`npm install -g @qday-io/cli`) |
 
-Install and examples: [Developer Guide — Payment SDK](/Knowledge/technical/developer-guide/getting-started#payment-sdk) and [SDK & code examples](/Knowledge/technical/developer-guide/getting-started#sdk--code-examples). Ecosystem overview of the payment gateway: [Payment Ecosystem](/Knowledge/technical/ecosystem#payment-ecosystem). API tables (when published): [Technical Reference](/Knowledge/technical/reference).
+Install and examples: [Developer Guide — Payment SDK](/Knowledge/technical/developer-guide/payment-development) and [SDK & code examples](/Knowledge/technical/developer-guide/sdk-code-examples). Ecosystem overview of the payment gateway: [Payment Ecosystem](/Knowledge/technical/ecosystem/payment-ecosystem). API tables (when published): [Technical Reference](/Knowledge/technical/reference).
