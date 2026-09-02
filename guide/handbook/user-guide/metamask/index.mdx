@@ -59,17 +59,15 @@ Before sending or receiving funds, always double-check the pasted address. Some 
 
 ## Add QDAY Network to MetaMask
 
-### Automatically Add QDAY Network
-
-1. Visit [QDay Explorer](https://explorer.qday.io).
-2. Click **"Add QDay Mainnet"** in the upper right corner to add QDAY to MetaMask automatically.
+1. Visit [QDay Explorer](https://explorer-test.qday.info).
+2. Click **"Add QDay Aevum"** (or the equivalent network button) in the upper right corner to add QDay to MetaMask automatically.
 3. If MetaMask opens a network approval prompt, carefully review the network details before approving.
    Verify the following before confirming:
-   - Network Name: QDAY
-   - RPC URL: https://rpc.qday.io
-   - Chain ID: 44001
-   - Currency Symbol: QDAY
-   - Block Explorer URL: https://explorer.qday.io
+   - Network Name: QDay Aevum
+   - RPC URL: https://rpc-test.qday.info
+   - Chain ID: 44005
+   - Currency Symbol: tQDAY
+   - Block Explorer URL: https://explorer-test.qday.info
 
 ### Manually Add QDAY Network
 
@@ -77,15 +75,19 @@ If automatic addition fails, you can add the network manually:
 
 1. Open MetaMask, click the "☰" menu at the top right, and select **"Networks"**.
 2. Click **"Add a custom network"** and fill in the following details:
-   - **Network Name**: QDAY
-   - **Default RPC URL**: `https://rpc.qday.io`
-   - **Chain ID**: 44001
-   - **Currency Symbol**: QDAY
-   - **Block Explorer**: `https://explorer.qday.io`
+   - **Network Name**: QDay Aevum
+   - **Default RPC URL**: `https://rpc-test.qday.info`
+   - **Chain ID**: 44005
+   - **Currency Symbol**: tQDAY
+   - **Block Explorer**: `https://explorer-test.qday.info`
 
-   ![Manually Add QDAY Network](/qday/metamask/add-metamask-network-en.png)
+   ![Manually Add QDay Network](/qday/metamask/add-metamask-network-en.png)
 
-3. Click **"Save"** to jump to the QDAY network.
+3. Click **"Save"** to jump to the QDay Aevum network.
+
+:::info[Mainnet]
+QDay mainnet is coming soon. Mainnet network parameters will be published here at launch.
+:::
 
 ## Import QDAY Wallet
 
@@ -132,5 +134,5 @@ Tip: Follow the same steps above to add WQDAY and WABEL tokens to MetaMask.
 <NextSteps steps={[
   { title: "Get testnet tokens", desc: "Claim QDAY to pay for gas", to: "/guide/start/faucet" },
   { title: "Swap tokens", desc: "Trade WABEL / QDAY / USD8", to: "/guide/handbook/user-guide/swap" },
-  { title: "Migrate to QDay2", desc: "Move your assets one-way", to: "/Knowledge/migration/overview" },
+  { title: "Migrate to QDay", desc: "Move your assets one-way", to: "/Knowledge/migration/overview" },
 ]} />
