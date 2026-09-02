@@ -9,13 +9,13 @@ sidebar_position: 4
 
 QDay works with MetaMask and any WalletConnect-compatible wallet. Add the network manually with:
 
-| | Mainnet | Testnet |
+| | Testnet | Mainnet |
 |---|---|---|
-| Network Name | QDay Mainnet | QDay Aevum |
-| RPC URL | rpc-main.qday.io | rpc-test.qday.info |
-| Chain ID | 44001 | 44005 |
-| Currency Symbol | QDAY | tQDAY |
-| Block Explorer | explorer-main.qday.io | explorer-test.qday.info |
+| Network Name | QDay Aevum | Coming soon |
+| RPC URL | rpc-test.qday.info | Coming soon |
+| Chain ID | 44005 | Coming soon |
+| Currency Symbol | tQDAY | Coming soon |
+| Block Explorer | explorer-test.qday.info | Coming soon |
 
 ## Faucet
 
@@ -31,7 +31,7 @@ To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/u
 
 ## First Transaction
 
-This walkthrough sends **1 QDAY** with MetaMask. Use **testnet** the first time — [add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. On mainnet the steps are the same; you pay real QDAY.
+This walkthrough sends **1 QDAY** with MetaMask on **QDay Aevum** (testnet) — the only network live today. [Add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
 
 ### Prerequisites
 
@@ -41,7 +41,7 @@ This walkthrough sends **1 QDAY** with MetaMask. Use **testnet** the first time 
 
 ### Send 1 QDAY in MetaMask
 
-1. Open the MetaMask extension and switch the network to **QDay Mainnet** or **QDay Aevum** (testnet). Confirm the native token shows as QDAY (or tQDAY on testnet).
+1. Open the MetaMask extension and switch the network to **QDay Aevum** (testnet). Confirm the native token shows as tQDAY.
 2. Click **Send**.
 3. Paste the recipient address into the **To** field. Check it character by character — a wrong address cannot be reversed, and some malware silently replaces an address copied to the clipboard.
 4. Enter **1** in the amount field and make sure the asset is **QDAY**, not an ERC-20 such as USD8 or WABEL.
@@ -51,7 +51,7 @@ This walkthrough sends **1 QDAY** with MetaMask. Use **testnet** the first time 
    - Amount: 1 QDAY
    - Estimated gas fee (paid in QDAY; it should be a fraction of a cent to a few cents)
 6. Click **Confirm**. MetaMask broadcasts the transaction.
-7. Open the **Activity** tab. When the status is **Confirmed**, click the transaction to view it on the block explorer ([explorer-main.qday.io](https://explorer-main.qday.io) on mainnet, [explorer-test.qday.info](https://explorer-test.qday.info) on testnet).
+7. Open the **Activity** tab. When the status is **Confirmed**, click the transaction to view it on the [block explorer](https://explorer-test.qday.info) (testnet; the mainnet explorer will be published at launch).
 
 :::tip[Practice on testnet]
 Send 1 QDAY to a second MetaMask account you control, then send it back. That confirms you can sign, pay gas, and read the explorer before you move mainnet funds.
@@ -100,7 +100,7 @@ contract HelloQDay {
 
 1. Open the **Deploy & Run Transactions** plugin.
 2. Set **Environment** to **Injected Provider - MetaMask** (not Remix VM). Remix asks MetaMask to connect — approve it.
-3. In MetaMask, confirm the selected network is QDay (Chain ID `44001` mainnet or `44005` testnet) and that the account shown in Remix is the one you want to deploy from.
+3. In MetaMask, confirm the selected network is QDay Aevum (Chain ID `44005`) and that the account shown in Remix is the one you want to deploy from.
 
 :::danger[Do not deploy to Ethereum by mistake]
 If Environment is Injected Provider but MetaMask is still on Ethereum, the contract deploys there and you pay ETH. Always check the network name in MetaMask before clicking Deploy.
@@ -118,8 +118,6 @@ If Environment is Injected Provider but MetaMask is still on Ethereum, the contr
 1. In Remix, expand the deployed **HelloQDay** instance.
 2. Click **greeting** — it should return `Hello, QDay`.
 3. Enter a new string in **setGreeting**, click the button, and confirm in MetaMask. Call **greeting** again to see the update.
-4. Paste the contract address into the explorer to see the deploy transaction and later calls:
-   - Mainnet: [explorer-main.qday.io](https://explorer-main.qday.io)
-   - Testnet: [explorer-test.qday.info](https://explorer-test.qday.info)
+4. Paste the contract address into the [testnet explorer](https://explorer-test.qday.info) to see the deploy transaction and later calls. (The mainnet explorer will be published at launch.)
 
 For Hardhat or Foundry, and for quantum-resistant method conventions, see [Build on QDay](/guide/handbook/build-on-qday) and the [Developer docs](/Knowledge/technical/developer-guide/getting-started).

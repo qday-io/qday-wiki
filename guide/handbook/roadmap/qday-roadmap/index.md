@@ -18,11 +18,11 @@ How the stages fit together: [Introduction](/guide/handbook/introduction). PQC d
 
 ## Networks today
 
-| | QDAY V1 (Origin) | QDAY V2 (Aevum) |
-|---|---|---|
-| Status | Live | Testnet live; mainnet coming |
-| Mainnet Chain ID | `44001` | `44002` (coming soon) |
-| Testnet Chain ID | `44003` | `44005` |
+| | QDay |
+|---|---|
+| Status | Testnet live; mainnet coming soon |
+| Mainnet Chain ID | Coming soon |
+| Testnet Chain ID | `44005` |
 
 Add a network: [Get Started](/guide/start/add-network). Parameters: [Chain params](/Knowledge/reference/chains).
 
