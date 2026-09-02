@@ -9,13 +9,13 @@ sidebar_position: 4
 
 QDay works with MetaMask and any WalletConnect-compatible wallet. Add the network manually with:
 
-| | Mainnet | Testnet |
+| | Testnet | Mainnet |
 |---|---|---|
-| Network Name | QDay Mainnet | QDay Aevum |
-| RPC URL | rpc-main.qday.io | rpc-test.qday.info |
-| Chain ID | 44001 | 44005 |
-| Currency Symbol | QDAY | tQDAY |
-| Block Explorer | explorer-main.qday.io | explorer-test.qday.info |
+| Network Name | QDay Aevum | Coming soon |
+| RPC URL | rpc-test.qday.info | Coming soon |
+| Chain ID | 44005 | Coming soon |
+| Currency Symbol | tQDAY | Coming soon |
+| Block Explorer | explorer-test.qday.info | Coming soon |
 
 ## Faucet
 
