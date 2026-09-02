@@ -13,17 +13,10 @@ QDay Aevum upgrade and how to migrate.
 <div className="grid cards" markdown>
 
 - **New to QDay Aevum?** → [Add it to your wallet](start/add-network)
-- **Moving from QDay?** → [Migration guide](/Knowledge/migration/overview)
 - **Building?** → [Developer docs](/Knowledge/dev/)
 
 </div>
 
-## Major versions
-
-| Version | Networks | Codename |
-|---|---|---|
-| QDAY V1 | Mainnet, Testnet | Origin |
-| QDAY V2 | Testnet | Aevum |
 
 ## Which is which
 
