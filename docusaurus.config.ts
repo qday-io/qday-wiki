@@ -88,6 +88,19 @@ const config: Config = {
           } else if (path.startsWith('/Knowledge/')) {
             redirects.push(path.replace('/Knowledge/', '/docs/'));
           }
+          if (path === '/Knowledge/technical/developer-guide/getting-started') {
+            redirects.push(
+              '/Knowledge/dev',
+              '/Knowledge/technical/developer-guide',
+            );
+          } else if (path.startsWith('/Knowledge/technical/developer-guide/')) {
+            redirects.push(
+              path.replace(
+                '/Knowledge/technical/developer-guide',
+                '/Knowledge/dev',
+              ),
+            );
+          }
           return redirects.length ? [...new Set(redirects)] : undefined;
         },
       },

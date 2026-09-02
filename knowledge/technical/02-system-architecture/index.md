@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 title: System Architecture
 draft: false
 ---
@@ -198,7 +197,7 @@ Cross-chain asset transfers between QDAY2 and external chains use the **PolygonZ
 
 ## Deployment Architecture
 
-Components are deployed in dependency order. See [Operator Guide](./06-operator-guide.md) for detailed configuration per phase.
+Components are deployed in dependency order. See [Operator Guide](/Knowledge/technical/operator-guide) for detailed configuration per phase.
 
 ```
 Infrastructure (Docker / K8s / PostgreSQL / Redis / Monitoring)

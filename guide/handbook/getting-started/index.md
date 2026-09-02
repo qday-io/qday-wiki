@@ -122,4 +122,4 @@ If Environment is Injected Provider but MetaMask is still on Ethereum, the contr
    - Mainnet: [explorer-main.qday.io](https://explorer-main.qday.io)
    - Testnet: [explorer-test.qday.info](https://explorer-test.qday.info)
 
-For Hardhat or Foundry, and for quantum-resistant method conventions, see [Build on QDay](/guide/handbook/build-on-qday) and the [Developer docs](/Knowledge/dev/).
+For Hardhat or Foundry, and for quantum-resistant method conventions, see [Build on QDay](/guide/handbook/build-on-qday) and the [Developer docs](/Knowledge/technical/developer-guide/getting-started).

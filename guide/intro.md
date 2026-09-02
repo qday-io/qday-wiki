@@ -14,7 +14,7 @@ QDay Aevum upgrade and how to migrate.
 
 - **New to QDay Aevum?** → [Add it to your wallet](start/add-network)
 - **Moving from QDay?** → [Migration guide](/Knowledge/migration/overview)
-- **Building?** → [Developer docs](/Knowledge/dev/)
+- **Building?** → [Developer docs](/Knowledge/technical/developer-guide/getting-started)
 
 </div>
 

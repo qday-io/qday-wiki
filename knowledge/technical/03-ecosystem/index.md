@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: Ecosystem
 draft: false
 ---
@@ -43,7 +42,7 @@ Every ecosystem component is designed to be backward-compatible with existing Et
 
 **Foundry** — Full Foundry compatibility. Use `forge`, `cast`, and `anvil` with the `--rpc-url https://rpc.qday.io` flag.
 
-**Hardhat** — Add QDAY2 as a network in `hardhat.config.js` (see [Developer Guide](./04-developer-guide.md)). All Hardhat plugins that work with Ethereum mainnet work on QDAY2.
+**Hardhat** — Add QDAY2 as a network in `hardhat.config.js` (see [Developer Guide](/Knowledge/technical/developer-guide/getting-started)). All Hardhat plugins that work with Ethereum mainnet work on QDAY2.
 
 **Remix** — Connect Remix IDE to QDAY2 via the "External HTTP Provider" option with the QDAY2 RPC URL.
 
@@ -87,7 +86,7 @@ Real-time price feeds and on-chain data are available to smart contracts through
 |----------|---------|
 | PQUSD Token (proxy) | `0x6e0144b9351d261C57be5fe4E3d65a8EC105Db72` |
 
-**Payment Gateway** — A developer API and SDK for creating invoices, managing subscriptions, streaming payments, and receiving webhooks. See [Developer Guide](./04-developer-guide.md) for integration examples.
+**Payment Gateway** — A developer API and SDK for creating invoices, managing subscriptions, streaming payments, and receiving webhooks. See [Developer Guide](/Knowledge/technical/developer-guide/getting-started) for integration examples.
 
 **Agent Payments** — AI agents can autonomously pay for API calls, data feeds, compute, and other services using session-key-bounded PQUSD payments. This enables a new class of autonomous, machine-to-machine commerce without human sign-off on each transaction.
 

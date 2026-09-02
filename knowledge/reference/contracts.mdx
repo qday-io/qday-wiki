@@ -1,29 +1,32 @@
 ---
 sidebar_position: 3
+title: Official contract addresses
 ---
 
 import AddressLink from '@site/src/components/QDay/AddressLink';
 
 # Official contract addresses
 
-Always verify you're interacting with these addresses — click to open the explorer, or copy. Never
-migrate through an untrusted link.
+Verify you are calling these contracts — open the explorer link, or copy. Never migrate or approve through an untrusted URL.
 
-## Migration (QDay → QDay2)
+Network parameters: [Chain parameters](chains). Token ERC-20s: [Token list](tokens).
 
-| Contract | Chain | Purpose |
-|---|---|---|
-| MigrationLockbox | QDay | Lock assets (one-way) |
-| MigrationDistributor | QDay2 | Allocate 1:1 from the pre-funded pool |
-| MigrationClaim | QDay2 | End-of-window backstop claim |
+## Faucet (QDay Aevum / 44005)
 
-:::info[Addresses at launch]
-The deployed migration contract addresses will be listed here and shown on the official portal for
-anti-phishing verification.
-:::
-
-## Faucet (QDay2 testnet)
+Used by the in-docs [testnet faucet](/guide/start/faucet).
 
 | Contract | Address |
 |---|---|
 | QDayFaucet (native QDAY) | <AddressLink chain="qday2" address="0x73bd8b412744386DFf7f5651e9765BCcee546C81" /> |
+
+## Migration (QDay 44003 → QDay2 44005)
+
+| Contract | Chain | Purpose |
+|---|---|---|
+| MigrationLockbox | QDay (44003) | Lock assets (one-way) |
+| MigrationDistributor | QDay2 (44005) | Allocate 1:1 from the pre-funded pool |
+| MigrationClaim | QDay2 (44005) | End-of-window backstop claim |
+
+:::info[Addresses at launch]
+Deployed migration addresses will be listed here and on the official portal for anti-phishing checks.
+:::

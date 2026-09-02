@@ -1,14 +1,18 @@
 ---
-sidebar_position: 4
-title: Developer Guide
+sidebar_position: 0
+title: Getting Started
 draft: false
 ---
 
-# Developer Guide
+# Getting Started
 
 Build applications on QDAY2 — from connecting your first wallet to deploying quantum-resistant smart accounts and AI payment agents.
 
-## Getting Started
+## Start here
+
+- **[Network overview](./network)** — how QDay and QDay2 fit together
+- **[Connect / RPC](./connect)** — endpoints, chain IDs, adding the network programmatically
+- **[Build a dApp](./build)** — connect a wallet and call a contract with wagmi/viem
 
 QDAY2 is EVM-compatible. Any Ethereum developer tool you already use — Foundry, Hardhat, Remix, ethers.js, viem, wagmi — works without modification. The only change is pointing your tools at the QDAY2 RPC endpoint.
 
@@ -170,7 +174,7 @@ Verifies a hybrid ML-DSA-65 + ECDSA signature during the Phase 1 → Phase 2 tra
 address constant HYBRID_VERIFY = address(0x101);
 ```
 
-*Precompile addresses are confirmed at Phase 2 launch. Check the [Reference](./08-reference.md) page for current addresses.*
+*Precompile addresses are confirmed at Phase 2 launch. Check the [Reference](/Knowledge/technical/reference) page for current addresses.*
 
 ## ERC-4337 Development
 
@@ -184,7 +188,7 @@ import "@account-abstraction/contracts/interfaces/IEntryPoint.sol";
 IEntryPoint constant ENTRY_POINT = IEntryPoint(ENTRY_POINT_ADDRESS);
 ```
 
-Use the EntryPoint address from the [Reference](./08-reference.md) page.
+Use the EntryPoint address from the [Reference](/Knowledge/technical/reference) page.
 
 ### Bundler Integration (Alto)
 
