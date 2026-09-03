@@ -41,9 +41,54 @@ How to add pages, nested sidebar categories, `_category_.json`, and English / �
 
 ## Deploy
 
-Auto-deploys to **Cloudflare Pages** (project `qday-community`) on push to `main` via
-`.github/workflows/deploy.yml`. Requires repo secrets `CLOUDFLARE_API_TOKEN` and
-`CLOUDFLARE_ACCOUNT_ID`. `ci.yml` build-checks every PR.
+Hosted on **Cloudflare Pages** (project `qday-community`). GitHub Actions builds the
+Docusaurus site and publishes it via `cloudflare/pages-action`
+(`.github/workflows/deploy.yml`); `ci.yml` build-checks every PR and push to `main`.
+
+> The Docker / GHCR image under `deploy/` is a temporary bridge and retires once
+> Pages is the sole host. Prefer Pages.
+
+### One-time setup (ops)
+
+1. **Create the Pages project** — Cloudflare dashboard → Workers & Pages → Create →
+   Pages → **Direct Upload**, name it exactly **`qday-community`** (must match
+   `projectName` in `deploy.yml`).
+2. **Create an API token** — My Profile → API Tokens → Create Token → template
+   *Edit Cloudflare Workers*, or a custom token with **Account → Cloudflare Pages →
+   Edit**. Copy it.
+3. **Get the Account ID** — any account/domain overview page → Account ID.
+4. **Add both as GitHub repo secrets** — Settings → Secrets and variables → Actions:
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID`
+
+### Turn on automatic deploys
+
+Once the secrets exist, uncomment the push trigger in
+`.github/workflows/deploy.yml`:
+
+```yaml
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+```
+
+After that, **every push / merge to `main` builds and deploys automatically** — no
+server, no Docker, no manual step, and it never goes stale.
+
+### Deploy manually (before auto-deploy is on, or to re-publish)
+
+GitHub → **Actions** → *Deploy to Cloudflare Pages* → **Run workflow** (branch
+`main`). Uses `workflow_dispatch`; needs the two secrets above.
+
+### Build settings (already wired — FYI)
+
+`npm ci && npm run build` → output dir **`build`** → Node **20+** (CI uses 24).
+
+### Custom domain + DNS
+
+Pages project → **Custom domains** → add the wiki hostname (e.g. `community.qday.io`),
+then point that hostname's DNS (CNAME) at the Pages project in Cloudflare DNS.
 
 ## Interactive widgets
 
