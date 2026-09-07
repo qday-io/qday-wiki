@@ -88,6 +88,32 @@ const config: Config = {
           } else if (path.startsWith('/Knowledge/')) {
             redirects.push(path.replace('/Knowledge/', '/docs/'));
           }
+          if (path === '/Knowledge/technical/developer-guide') {
+            redirects.push('/Knowledge/dev');
+          } else if (path === '/Knowledge/technical/developer-guide/network-configuration') {
+            redirects.push(
+              '/Knowledge/technical/developer-guide/network',
+              '/Knowledge/dev/network',
+            );
+          } else if (path === '/Knowledge/technical/developer-guide/wallet-integration') {
+            redirects.push(
+              '/Knowledge/technical/developer-guide/connect',
+              '/Knowledge/dev/connect',
+            );
+          } else if (path === '/Knowledge/technical/developer-guide/smart-contract-development') {
+            redirects.push(
+              '/Knowledge/technical/developer-guide/build',
+              '/Knowledge/dev/build',
+            );
+          }
+          if (path.startsWith('/Knowledge/technical/developer-guide/')) {
+            redirects.push(
+              path.replace(
+                '/Knowledge/technical/developer-guide',
+                '/Knowledge/dev',
+              ),
+            );
+          }
           return redirects.length ? [...new Set(redirects)] : undefined;
         },
       },

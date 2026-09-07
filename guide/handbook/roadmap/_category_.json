@@ -1,7 +1,7 @@
 {
   "label": "Roadmap",
   "position": 10,
-  "collapsed": false,
+  "collapsed": true,
   "link": {
     "type": "doc",
     "id": "handbook/roadmap/index"

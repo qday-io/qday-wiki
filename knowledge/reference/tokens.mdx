@@ -9,28 +9,34 @@ import BalancePanel from '@site/src/components/QDay/BalancePanel';
 
 # Token list
 
-Verified token contracts on QDay. Add any of them to your wallet with one click — no copy-pasting
-addresses.
+Verified contracts on **QDay Origin testnet (chain ID 44003)**. They are not deployed on Origin mainnet (`44001`) or Aevum (`44005`). Switch the wallet to `44003` before using **+ Add**.
 
-## QDay (source · chainId 44003)
+## Native
+
+| Token | Chain | Notes |
+|---|---|---|
+| QDAY | 44001 Origin mainnet | Native gas — not an ERC-20 |
+| QDAY | 44003 Origin testnet | Native gas — not an ERC-20 |
+| QDAY | 44005 Aevum testnet | Native gas; claim from the [faucet](/guide/start/faucet) |
+
+## QDay Origin testnet (chain ID 44003)
 
 | Token | Address | Decimals | |
 |---|---|---|---|
-| USD8 | <AddressLink address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" /> | 6 | <AddTokenButton symbol="USD8" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" decimals={6} /> |
-| WABEL | <AddressLink address="0x699f540c974430781c618fb8033a1e3ff75c43d2" /> | 18 | <AddTokenButton symbol="WABEL" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" decimals={18} /> |
-| WQDAY | <AddressLink address="0x31ff878190Cf74E37d963F77599abB674d27A787" /> | 18 | <AddTokenButton symbol="WQDAY" address="0x31ff878190Cf74E37d963F77599abB674d27A787" decimals={18} /> |
+| USD8 | <AddressLink chain="qday" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" /> | 6 | <AddTokenButton symbol="USD8" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" decimals={6} /> |
+| WABEL | <AddressLink chain="qday" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" /> | 18 | <AddTokenButton symbol="WABEL" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" decimals={18} /> |
+| WQDAY | <AddressLink chain="qday" address="0x31ff878190Cf74E37d963F77599abB674d27A787" /> | 18 | <AddTokenButton symbol="WQDAY" address="0x31ff878190Cf74E37d963F77599abB674d27A787" decimals={18} /> |
 
 :::tip[Add the token to whichever chain your wallet is on]
-The button uses EIP-747 (`wallet_watchAsset`) — your wallet shows a confirmation before adding.
+The button uses EIP-747 (`wallet_watchAsset`). Your wallet shows a confirmation before adding. RPC and explorers: [Chain parameters](chains).
 :::
 
 ## Your balances
 
-Connect to read your live balances on QDay:
+Connect to read live balances on **Origin testnet (44003)** — native QDAY plus the ERC-20s above:
 
 <BalancePanel />
 
-:::warning[Testnet]
-Current testnet values. QDay2 token addresses are published at launch — the same buttons will let you
-add the QDay2 tokens too.
+:::warning[Aevum / QDay2 tokens]
+ERC-20 addresses on 44005 are not published yet. Do not reuse the 44003 addresses on Aevum. This page will list QDay2 tokens when they are deployed.
 :::

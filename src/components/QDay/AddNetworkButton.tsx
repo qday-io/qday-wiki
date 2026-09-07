@@ -14,9 +14,9 @@ const NETWORKS: Record<string, Net> = {
     explorer: 'https://explorer.qday.info',
   },
   qday: {
-    chainIdHex: '0xABE3', // 44003
+    chainIdHex: '0xABE1', // 44001 Origin mainnet
     chainName: 'QDay',
-    rpc: 'https://rpc.qday.info',
+    rpc: 'https://rpc.qday.io',
     explorer: 'https://explorer.qday.io',
   },
 };

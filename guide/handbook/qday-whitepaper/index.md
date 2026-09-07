@@ -551,7 +551,7 @@ Except for the first category, all dApps deployed in Phase 1 will function simil
 
 - **QDay Swap** - QDay Swap is a decentralized exchange (DEX) dApp to provide the token swap functions. To ensure QDay navigates the cold start period as smoothly as possible, the initial liquidity of QDAY, wABEL and the corresponding stable coins will be provided from the treasury of QDay and Abelian.
 
-- **QDay Staking** - QDay Staking is a dApp to provide staking functions for QDAY. Similar to Lido, staked QDAY will be used for the consensus mechanism of validators, and the rewards will be derived from validator rewards(see [Tokenomics](#_3-tokenomics) for more details).
+- **QDay Staking** - QDay Staking is a dApp to provide staking functions for QDAY. Similar to Lido, staked QDAY will be used for the consensus mechanism of validators, and the rewards will be derived from validator rewards(see [Tokenomics](#tokenomics) for more details).
 
 - **QDay Lending** - QDay Lending is a dApp to provide lending and borrowing functions for QRC20 tokens. It\'s similar to the lending protocols on the existing EVM-compatible chains such as Aave and Compound.
 

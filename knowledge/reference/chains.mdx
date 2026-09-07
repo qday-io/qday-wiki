@@ -1,40 +1,67 @@
 ---
 sidebar_position: 1
+title: Chain parameters
 ---
 
 import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
 
 # Chain parameters
 
-The single source of truth for connecting to QDay and QDay2. Add either network to your wallet with
-one click, or copy the values below.
+Live endpoints for connecting a wallet or dApp.
 
 <div style={{display: 'flex', gap: '0.75rem', flexWrap: 'wrap', margin: '1rem 0 1.5rem'}}>
   <AddNetworkButton network="qday" />
   <AddNetworkButton network="qday2" />
 </div>
 
-| | QDay (source) | QDay2 (destination) |
-|---|---|---|
-| Chain ID | `44003` | `44005` |
-| RPC URL | `https://rpc.qday.info` | `https://rpc-test.qday.info` |
-| Explorer | `https://explorer.qday.io` | `https://explorer.qday.info` |
-| Currency symbol | QDAY | QDAY |
-| Decimals | 18 | 18 |
+| | QDay Origin (mainnet) | QDay Origin (testnet) | QDay Aevum (testnet) |
+|---|---|---|---|
+| Role | Production Origin | Origin testnet | Aevum destination (1:1 allocate) |
+| Chain ID | `44001` (`0xABE1`) | `44003` (`0xABE3`) | `44005` (`0xABE5`) |
+| RPC | `https://rpc.qday.io` | `https://rpc.qday.info` | `https://rpc-test.qday.info` |
+| WebSocket | `wss://rpc.qday.io` | `wss://rpc.qday.info` | `wss://rpc-test.qday.info` |
+| Explorer | `https://explorer.qday.io` | `https://explorer.qday.info` | `https://explorer-test.qday.info` |
+| Native symbol | QDAY | QDAY | QDAY |
+| Decimals | 18 | 18 | 18 |
 
-:::warning
-Current **testnet** values — mainnet published at launch. Always verify against this page and the
-[official contract addresses](contracts).
+The **Add QDay to Wallet** button adds Origin mainnet (`44001`). **Add QDay2** adds Aevum testnet (`44005`).
+
+:::warning[Testnet vs mainnet]
+**44001 is Origin mainnet.** **44005 is the current public Aevum testnet.** Always verify RPC, chain ID, and addresses against this page — not against a chat message or a random dApp banner.
 :::
 
-## Manual setup
+Add via wallet UI: [Add QDay to your wallet](/guide/start/add-network). Programmatic connect: [Wallet Integration](/Knowledge/technical/developer-guide/wallet-integration). Tokens: [Token list](tokens). Contracts: [Official addresses](contracts).
 
-```json title="QDay2 network config"
+## Manual setup (EIP-3085)
+
+```json title="QDay Origin mainnet (44001)"
 {
-  "chainId": "0xABE5",
-  "chainName": "QDay2",
-  "rpcUrls": ["https://rpc-test.qday.info"],
+  "chainId": "0xABE1",
+  "chainName": "QDay",
+  "rpcUrls": ["https://rpc.qday.io"],
+  "blockExplorerUrls": ["https://explorer.qday.io"],
+  "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
+}
+```
+
+```json title="QDay Origin testnet (44003)"
+{
+  "chainId": "0xABE3",
+  "chainName": "QDay",
+  "rpcUrls": ["https://rpc.qday.info"],
   "blockExplorerUrls": ["https://explorer.qday.info"],
   "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
 }
 ```
+
+```json title="QDay Aevum / QDay2 (44005)"
+{
+  "chainId": "0xABE5",
+  "chainName": "QDay2",
+  "rpcUrls": ["https://rpc-test.qday.info"],
+  "blockExplorerUrls": ["https://explorer-test.qday.info"],
+  "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
+}
+```
+
+`chainName` `QDay2` matches the in-docs **Add QDay2** button. User-facing copy often says **QDay Aevum**.

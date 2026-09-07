@@ -546,7 +546,7 @@ QDay 第 2 階段的設計遵循以下核心原則：
 
 - **QDay Swap** - QDay Swap 是一個去中心化交易所 (DEX) dApp，用於提供代幣兌換功能。為了確保 QDay 盡快順利地度過冷啟動期，QDAY、wABEL 和相應穩定幣的初始流動性將由 QDay 和 Abelian 的金庫提供。
 
-- **QDay Staking** - QDay Staking 是一個為 QDAY 提供質押功能的 dApp。與 Lido 類似，質押的 QDAY 將用於驗證者的共識機制，獎勵將來自驗證節點獎勵（有關更多詳細信息，請參閱 [代幣經濟學](#_3-代幣經濟學) ）。
+- **QDay Staking** - QDay Staking 是一個為 QDAY 提供質押功能的 dApp。與 Lido 類似，質押的 QDAY 將用於驗證者的共識機制，獎勵將來自驗證節點獎勵（有關更多詳細信息，請參閱 [代幣經濟學](#3-代幣經濟學) ）。
 
 - **QDay Lending** - QDay Lending 是一款 dApp，提供QRC20 代幣的借貸功能。它類似於現有 EVM 兼容鏈（如 Aave 和 Compound）上的借貸協議。
 

@@ -120,4 +120,4 @@ If Environment is Injected Provider but MetaMask is still on Ethereum, the contr
 3. Enter a new string in **setGreeting**, click the button, and confirm in MetaMask. Call **greeting** again to see the update.
 4. Paste the contract address into the [testnet explorer](https://explorer-test.qday.info) to see the deploy transaction and later calls. (The mainnet explorer will be published at launch.)
 
-For Hardhat or Foundry, and for quantum-resistant method conventions, see [Build on QDay](/guide/handbook/build-on-qday) and the [Developer docs](/Knowledge/dev/).
+For Hardhat or Foundry, and for quantum-resistant method conventions, see [Build on QDay](/guide/handbook/build-on-qday) and the [Developer docs](/Knowledge/technical/developer-guide/getting-started).

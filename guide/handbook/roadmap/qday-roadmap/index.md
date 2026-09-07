@@ -47,4 +47,4 @@ Add a network: [Get Started](/guide/start/add-network). Parameters: [Chain param
 - ZK rollups to Abelian and a quantum-resistant halt if the ledger is attacked
 - Explorer, faucet (testnet), [Swap](/guide/handbook/user-guide/swap), [staking](/guide/handbook/user-guide/qday-staking), [bridges](/guide/handbook/user-guide#qday-bridge)
 
-Builders: [Build on QDay](/guide/handbook/build-on-qday) and the [Technical knowledge base](/Knowledge/dev/).
+Builders: [Build on QDay](/guide/handbook/build-on-qday) and the [Technical knowledge base](/Knowledge/technical/developer-guide/getting-started).

@@ -13,7 +13,7 @@ QDay Aevum upgrade and how to migrate.
 <div className="grid cards" markdown>
 
 - **New to QDay Aevum?** → [Add it to your wallet](start/add-network)
-- **Building?** → [Developer docs](/Knowledge/dev/)
+- **Building?** → [Developer docs](/Knowledge/technical/developer-guide/getting-started)
 
 </div>
 

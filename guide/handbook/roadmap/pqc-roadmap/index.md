@@ -1,12 +1,12 @@
 ---
-title: QDAY PQC Roadmap
+title: QDay PQC Roadmap
 ---
 
-# QDAY PQC Roadmap
+# QDay PQC Roadmap
 
 ## 1. Overall Strategy
 
-QDAY’s PQC strategy should evolve from a simple “PQC-enabled EVM chain” into a:
+QDay’s PQC strategy should evolve from a simple “PQC-enabled EVM chain” into a:
 
 > **Quantum-Ready EVM Network with Account-Level Migration**
 
@@ -15,7 +15,7 @@ The core principle is not to determine when ECDSA must be removed, but to establ
 The recommended migration model is:
 
 ```
-Existing QDAY Account
+Existing QDay Account
         │
         │ Upgrade
         ↓
@@ -34,28 +34,33 @@ This approach addresses three objectives:
 
 1. Preserve today’s EVM compatibility.
 2. Provide a practical migration path to PQC.
-3. Enable QDAY to eventually become a quantum-resistant network.
+3. Enable QDay to eventually become a quantum-resistant network.
 
 ---
 
-## 2. QDAY PQC Roadmap
 
-The roadmap is divided into five phases:
 
-| Phase | Target | Core Objective | Key Deliverables |
-| --- | --- | --- | --- |
-| **Phase 0** | 2026 H2 | PQC Foundation | Crypto Agility, ML-DSA-65, PQC SDK |
-| **Phase 1** | 2026 H2 – 2027 H1 | PQC Execution Foundation | AA Smart Account, PQC Precompile, PQC Verification |
-| **Phase 2** | 2027 H1 – H2 | Hybrid Security | ECDSA + ML-DSA, Hybrid Transaction, Hybrid AA |
-| **Phase 3** | 2027 H2 – 2028 | PQC Migration & Infrastructure | PQC Credential, Account Migration, Bridge, Oracle, Governance |
-| **Phase 4** | 2028+ | PQC-Native Network | PQC-Native Account, Validator, Sequencer, Full Migration |
+## 2. QDay PQC Roadmap
+
+The roadmap is divided into six phases:
+
+
+| Phase       | Target            | Core Objective                 | Key Deliverables                                                                  |
+| ----------- | ----------------- | ------------------------------ | --------------------------------------------------------------------------------- |
+| **Phase 0** | Existing          | Abelian Provides PQC           | L1 settlement & security anchor, quantum-resistant finality for state commitments |
+| **Phase 1** | 2026 H2           | PQC Foundation                 | Crypto Agility, ML-DSA-65, PQC SDK                                                |
+| **Phase 2** | 2026 H2 – 2027 H1 | PQC Execution Foundation       | AA Smart Account, PQC Precompile, PQC Verification                                |
+| **Phase 3** | 2027 H1 – H2      | Hybrid Security                | ECDSA + PQC, Hybrid Transaction, Hybrid AA                                        |
+| **Phase 4** | 2027 H2 – 2028    | PQC Migration & Infrastructure | PQC Credential, Account Migration, Bridge, Oracle, Governance                     |
+| **Phase 5** | 2028+             | Full PQC-Native Network        | PQC-Native Account, Validator, Sequencer, Full Migration                          |
+
 
 The most important transition is:
 
 ```
 ECDSA
    ↓
-ECDSA + ML-DSA Hybrid
+ECDSA + PQC Hybrid
    ↓
 PQC Native
 ```
@@ -63,27 +68,88 @@ PQC Native
 The technical evolution is:
 
 ```
-AA Smart Wallet
+Abelian L1 PQC
        ↓
-PQC Credential Layer
+PQC Foundation
+       ↓
+AA Smart Wallet
        ↓
 PQC Precompile
        ↓
+Hybrid Security
+       ↓
+PQC Credential
+       ↓
 PQC Infrastructure
        ↓
-PQC-Native QDAY
+PQC-Native
 ```
 
 ---
 
-## 3. Phase 0 — PQC Foundation
+
+
+## 3. Phase 0 — Abelian Provides PQC
+
+
 
 ### Objective
 
-Build the cryptographic foundation before changing QDAY’s user-facing transaction model.
+Abelian serves as the L1 settlement and security anchor for QDay, providing a quantum-resistant finality layer for QDay state commitments.
+
+Once a QDay state commitment is finalized on Abelian, the corresponding QDay history is cryptographically anchored to the L1 and cannot be altered without breaking the underlying cryptographic guarantees.
+
+Abelian is the prerequisite for every later phase. Before QDay introduces EVM-layer PQC, confirmed state is already protected by this L1 finality path.
 
 ```
-                    QDAY PQC Foundation
+                    Abelian L1
+                         │
+            ┌────────────┼────────────┐
+            │            │            │
+     Settlement      Security     Quantum-resistant
+       Anchor         Anchor         finality
+            │            │            │
+            └────────────┼────────────┘
+                         │
+              QDay State Commitment
+                         │
+              Cryptographically Anchored History
+```
+
+
+
+### 3.1 What Abelian Provides
+
+- L1 settlement and security anchoring for QDay.
+- A quantum-resistant finality layer for QDay state commitments.
+- Cryptographic anchoring of QDay history after L1 finalization.
+- Integrity of confirmed history: it cannot be altered without breaking the L1 cryptographic guarantees.
+- The PQC primitives and operational experience that later QDay phases reuse.
+
+
+
+### 3.2 Why This Is Phase 0
+
+QDay should not treat PQC as an EVM-only upgrade. Even before accounts, precompiles, and credentials migrate, Abelian already gives QDay a quantum-resistant finality layer for state commitments.
+
+The target is:
+
+> **Abelian is QDay’s L1 settlement and security anchor. Finalized state commitments cannot be altered without breaking the underlying cryptographic guarantees.**
+
+---
+
+
+
+## 4. Phase 1 — PQC Foundation
+
+
+
+### Objective
+
+Build the cryptographic foundation before changing QDay’s user-facing transaction model.
+
+```
+                    QDay PQC Foundation
                            │
             ┌──────────────┼──────────────┐
             │              │              │
@@ -94,14 +160,16 @@ Build the cryptographic foundation before changing QDAY’s user-facing transact
                      PQC Framework
 ```
 
-### 3.1 ML-DSA-65
 
-ML-DSA-65 should be the primary PQC signature scheme for the first QDAY implementation.
+
+### 4.1 ML-DSA-65
+
+ML-DSA-65 should be the primary PQC signature scheme for the first QDay implementation.
 
 Key requirements:
 
 - Standardized PQC signature algorithm.
-- Native support in the QDAY cryptographic layer.
+- Native support in the QDay cryptographic layer.
 - Support for wallet signing and verification.
 - Support for Smart Account verification.
 - Support for future hybrid signatures.
@@ -117,9 +185,11 @@ SignatureScheme
     └── Future-PQC
 ```
 
-### 3.2 Crypto Agility
 
-QDAY should **not** hard-code ML-DSA-65 into the protocol architecture.
+
+### 4.2 Crypto Agility
+
+QDay should **not** hard-code ML-DSA-65 into the protocol architecture.
 
 The design should allow future algorithms to be introduced without redesigning the account, transaction, or infrastructure model.
 
@@ -129,27 +199,28 @@ Recommended abstraction:
 SignatureScheme
 
 - ECDSA
-- ML-DSA-65
+- ML-DSA-65/SLH-DSA/FN-DSA
 - Hybrid
 - Future-PQC
 ```
 
 The strategic objective is:
 
-> **QDAY should be PQC-ready, not ML-DSA-locked.**
+> **QDay should be PQC-ready, not ML-DSA-locked.**
 
-### 3.3 PQC SDK
 
-Provide a unified developer-facing PQC SDK for:
+
+### 4.3 PQC SDK
+
+Provide a unified developer-facing PQC SDK for cryptographic primitives:
 
 - Key generation
 - Signing
 - Verification
 - Hybrid signing
 - Hybrid verification
-- PQC account creation
-- Account upgrade
-- Credential management
+
+PQC account creation, account upgrade, and credential management are **Phase 4** APIs. The Phase 1 SDK should expose the cryptographic primitives those later APIs will call, but it should not ship account-migration workflows yet.
 
 Example:
 
@@ -159,21 +230,24 @@ createHybridWallet()
 signWithMLDSA()
 verifyMLDSA()
 createHybridSignature()
-upgradeToPQCAccount()
 ```
 
 ---
 
-## 4. Phase 1 — PQC Execution Foundation
+
+
+## 5. Phase 2 — PQC Execution Foundation
+
+
 
 ### Objective
 
-Build and validate the core execution capabilities required for QDAY to support PQC verification before introducing account-level migration.
+Build and validate the core execution capabilities required for QDay to support PQC verification before introducing account-level migration.
 
-The priority is to prove that QDAY can reliably execute PQC verification through AA Smart Accounts and the PQC Precompile.
+The priority is to prove that QDay can reliably execute PQC verification through AA Smart Accounts and the PQC Precompile.
 
 ```
-                     QDAY PQC Execution
+                     QDay PQC Execution
                            │
               ┌────────────┼────────────┐
               │            │            │
@@ -185,7 +259,9 @@ The priority is to prove that QDAY can reliably execute PQC verification through
                     PQC Execution Layer
 ```
 
-### 4.1 AA Smart Account Foundation
+
+
+### 5.1 AA Smart Account Foundation
 
 Account Abstraction should be introduced as the programmable account layer that can support multiple authentication mechanisms.
 
@@ -198,9 +274,9 @@ Smart Account
       └── Future PQC
 ```
 
-At this stage, the objective is to establish the account architecture and verification interfaces. Full PQC account migration is intentionally deferred to Phase 3.
+At this stage, the objective is to establish the account architecture and verification interfaces. PQC Credential registration and full PQC account migration are intentionally deferred to Phase 4.
 
-### 4.2 PQC Precompile
+### 5.2 PQC Precompile
 
 The PQC Precompile should provide efficient native verification for PQC signatures.
 
@@ -234,9 +310,11 @@ The precompile provides:
 - A common foundation for Bridge, Oracle, and Governance authorization.
 - A common foundation for future PQC applications.
 
-### 4.3 PQC Verification
 
-Phase 1 should validate:
+
+### 5.3 PQC Verification
+
+Phase 2 should validate:
 
 - ML-DSA-65 signature generation and verification.
 - Smart Account integration.
@@ -246,19 +324,25 @@ Phase 1 should validate:
 
 The target is:
 
-> **QDAY can reliably execute and verify PQC signatures.**
+> **QDay can reliably execute and verify PQC signatures.**
 
-### Phase 1 Deliverables
 
-| Component | Target | Priority |
-| --- | --- | --- |
-| AA Smart Account | PQC-capable architecture | Critical |
-| PQC Precompile | ML-DSA verification | Critical |
-| PQC Verification | Production-ready verification path | Critical |
-| zkEVM Integration | Compatibility validation | High |
-| Performance Benchmark | Gas / CPU / latency testing | High |
 
-### Phase 1 Completion Criteria
+### Phase 2 Deliverables
+
+
+| Component             | Target                                                                | Priority |
+| --------------------- | --------------------------------------------------------------------- | -------- |
+| AA Smart Account      | PQC-capable architecture                                              | Critical |
+| PQC Precompile        | ML-DSA verification                                                   | Critical |
+| PQC Verification      | Production-ready verification path                                    | Critical |
+| zkEVM Integration     | Compatibility validation                                              | High     |
+| Performance Benchmark | Gas / CPU / latency testing (example value via testing after Phase 1) | High     |
+
+
+
+
+### Phase 2 Completion Criteria
 
 ```
 AA Smart Account
@@ -272,17 +356,19 @@ PQC Execution Foundation
 
 The target is:
 
-> **QDAY has a production-ready foundation for executing PQC verification without requiring immediate account migration.**
+> **QDay has a production-ready foundation for executing PQC verification without requiring immediate account migration.**
 
 ---
 
-## 5. QDAY Account Credential Model
 
-PQC Credential is positioned as an **account migration mechanism**, not as the initial PQC execution foundation.
 
-It is therefore introduced after Phase 1 has established PQC verification and after Phase 2 has validated hybrid transactions.
+## 6. QDay Account Credential Model
 
-The migration path becomes:
+PQC Credential is a **Phase 4** account migration mechanism. It is not part of the Phase 1 SDK, and it is not required by the Phase 2 execution foundation or Phase 3 hybrid transactions.
+
+Phase 2 and Phase 3 should leave the account architecture open for this model. Users should not be required to register a PQC credential until Phase 4.
+
+The Phase 4 migration path is:
 
 ```
 Existing ECDSA Account
@@ -297,12 +383,14 @@ Existing ECDSA Account
    PQC-Native Account
 ```
 
-### 5.1 Account Credentials
 
-The QDAY Smart Account can support multiple authentication credentials:
+
+### 6.1 Account Credentials
+
+The QDay Smart Account can support multiple authentication credentials:
 
 ```
-QDAY Account
+QDay Account
      │
      ├── ECDSA Credential
      │
@@ -331,9 +419,9 @@ Mode = Hybrid
 
 The account remains the primary identity, while its authentication credentials can evolve.
 
-### 5.2 Why PQC Credential Is Introduced Later
+### 6.2 Why PQC Credential Is Introduced in Phase 4
 
-PQC Credential should not be required before QDAY has validated:
+PQC Credential should not be required before QDay has validated:
 
 ```
 ML-DSA
@@ -345,7 +433,7 @@ AA Smart Account
 Hybrid Transaction
 ```
 
-Once these capabilities are production-ready, PQC Credential provides a practical mechanism for existing accounts to adopt PQC without creating a completely new account and manually migrating all assets.
+Once these capabilities are production-ready, Phase 4 uses PQC Credential as the practical mechanism for existing accounts to adopt PQC without creating a completely new account and manually migrating all assets.
 
 Instead of:
 
@@ -357,7 +445,7 @@ Create New PQC Wallet
 Transfer Assets
 ```
 
-QDAY supports:
+QDay supports:
 
 ```
 Existing Account
@@ -367,7 +455,11 @@ Add PQC Credential
 Quantum-Ready Account
 ```
 
-### 5.3 Security Modes
+
+
+### 6.3 Security Modes
+
+These modes describe the account’s authentication policy. Classic compatibility exists from Phase 2. Hybrid transaction signatures are validated in Phase 3. **PQC-Ready** (registered ML-DSA credential) and credential-based policy changes are Phase 4. PQC-Native is the Phase 5 target.
 
 ### Classic
 
@@ -379,7 +471,7 @@ Transaction
 
 Used primarily for legacy EVM compatibility.
 
-### PQC-Ready
+### PQC-Ready (Phase 4)
 
 ```
 ECDSA
@@ -387,7 +479,7 @@ ECDSA
 ML-DSA Credential
 ```
 
-The account has a registered PQC credential but does not necessarily require every transaction to use both signatures.
+The account has a registered PQC credential but does not necessarily require every transaction to use both signatures. This state is created by Phase 4 credential registration, not by Phase 2 or Phase 3.
 
 ### Hybrid
 
@@ -399,9 +491,9 @@ ML-DSA Signature
 Transaction Valid
 ```
 
-This provides protection from both classical and quantum threats during the transition period.
+Phase 3 validates this as a production transaction format. Phase 4 can attach the same hybrid policy to an account that has registered a PQC credential.
 
-### PQC-Native
+### PQC-Native (Phase 5)
 
 ```
 ML-DSA Signature
@@ -413,11 +505,15 @@ This is the long-term target.
 
 ---
 
-## 6. AA Smart Wallet as the PQC Migration Layer
+
+
+## 7. AA Smart Wallet as the PQC Migration Layer
 
 Account Abstraction should not be treated merely as a wallet feature.
 
-For QDAY, **AA Smart Wallet can become the primary PQC migration layer**.
+For QDay, **AA Smart Wallet can become the primary PQC migration layer**.
+
+AA is introduced in Phase 2 as the programmable account layer. PQC Credentials are attached to that layer in Phase 4.
 
 Traditional EOA architecture:
 
@@ -441,12 +537,12 @@ Smart Account
       └── Future PQC
 ```
 
-This allows QDAY to introduce new signature schemes without forcing the entire ecosystem to immediately abandon EVM compatibility.
+This allows QDay to introduce new signature schemes without forcing the entire ecosystem to immediately abandon EVM compatibility.
 
 The recommended model is:
 
 ```
-                    QDAY Account
+                    QDay Account
                          │
                  Smart Account
                          │
@@ -460,15 +556,19 @@ The recommended model is:
                   PQC Credentials
 ```
 
+The Smart Account is the Phase 2 architecture. PQC Credentials are the Phase 4 migration mechanism that attaches to it.
+
 Therefore:
 
-> **AA + PQC = QDAY Quantum-Ready Account Architecture**
+> **AA + PQC = QDay Quantum-Ready Account Architecture**
 
 ---
 
-## 7. Phase 2 — Hybrid Security
 
-After the PQC execution foundation has been established, QDAY can introduce a formal hybrid security model.
+
+## 8. Phase 3 — Hybrid Security
+
+After the PQC execution foundation has been established, QDay can introduce a formal hybrid security model.
 
 ### Objective
 
@@ -481,6 +581,8 @@ ML-DSA
    ↓
 Hybrid Transaction
 ```
+
+
 
 ### Security Levels
 
@@ -498,6 +600,8 @@ Level 3
 ML-DSA Only
 ```
 
+
+
 ### Level 0 — ECDSA
 
 ```
@@ -510,6 +614,8 @@ Purpose:
 - Support existing wallets and applications.
 - Legacy mode.
 
+
+
 ### Level 1 — PQC Capable
 
 ```
@@ -518,7 +624,7 @@ Smart Account
 PQC Verification Capability
 ```
 
-The account architecture can execute PQC verification, but PQC Credential-based migration is not yet required.
+The account architecture can execute PQC verification, but PQC Credential registration and credential-based account migration are Phase 4 work and are not required in Phase 3.
 
 ### Level 2 — Hybrid
 
@@ -530,7 +636,7 @@ ML-DSA Signature
 Transaction Valid
 ```
 
-This should become the **recommended transition security mode** for QDAY.
+This should become the **recommended transition security mode** for QDay.
 
 ### Level 3 — PQC Native
 
@@ -542,7 +648,7 @@ PQC-Native Account
 
 This is the long-term target.
 
-### Phase 2 Deliverables
+### Phase 3 Deliverables
 
 - Hybrid transaction format.
 - Hybrid AA verification.
@@ -553,17 +659,21 @@ This is the long-term target.
 
 The target is:
 
-> **QDAY can safely operate with ECDSA + ML-DSA hybrid security in production.**
+> **QDay can safely operate with ECDSA + ML-DSA hybrid security in production.**
 
 ---
 
-## 8. Phase 3 — PQC Migration & Infrastructure
+
+
+## 9. Phase 4 — PQC Migration & Infrastructure
+
+
 
 ### Objective
 
-Phase 3 is the **PQC migration and infrastructure phase**.
+Phase 4 is the **PQC migration and infrastructure phase**.
 
-After QDAY has established PQC execution in Phase 1 and validated hybrid security in Phase 2, Phase 3 introduces PQC Credential-based account migration and progressively protects QDAY’s **critical protocol infrastructure**.
+After QDay has established PQC execution in Phase 2 and validated hybrid security in Phase 3, Phase 4 introduces PQC Credential-based account migration and progressively protects QDay’s **critical protocol infrastructure**.
 
 The objective is to protect the components that can control, authorize, or influence high-value assets and protocol state.
 
@@ -589,9 +699,13 @@ The principle is:
 
 > **Protect the highest-value authorization paths first, then progressively extend PQC protection to consensus infrastructure.**
 
-### 8.1 PQC Credential & Account Migration
 
-PQC Credential becomes a production migration mechanism in Phase 3.
+
+### 9.1 PQC Credential & Account Migration
+
+PQC Credential becomes a production migration mechanism in Phase 4.
+
+This is where account-level PQC adoption actually happens: existing accounts register an ML-DSA credential, optionally enable a hybrid policy, and can later upgrade to a PQC-native account. Phase 2 only proved that verification works. Phase 3 only proved that hybrid signatures work. Phase 4 is the first phase that changes the user’s account credentials.
 
 ### Migration Model
 
@@ -622,21 +736,37 @@ The migration should support:
 - Recovery mechanisms.
 - Backward compatibility with ECDSA.
 
+Phase 4 SDK / account APIs include:
+
+```
+registerPQCCredential()
+upgradeToPQCAccount()
+rotatePQCCredential()
+revokePQCCredential()
+setAccountPolicy()
+```
+
 The key objective is:
 
 > **Existing users can progressively adopt PQC without requiring disruptive asset migration.**
 
-### Phase 3 Credential Deliverables
 
-| Component | Target | Priority |
-| --- | --- | --- |
-| PQC Credential | Production-ready ML-DSA credential | Critical |
-| Account Upgrade | Existing account migration | Critical |
-| Credential Rotation | Secure key rotation | High |
-| Credential Recovery | Recovery / emergency mechanism | High |
-| Hybrid Policy | ECDSA + ML-DSA policy | Critical |
 
-### 8.2 PQC Bridge
+### Phase 4 Credential Deliverables
+
+
+| Component           | Target                             | Priority |
+| ------------------- | ---------------------------------- | -------- |
+| PQC Credential      | Production-ready ML-DSA credential | Critical |
+| Account Upgrade     | Existing account migration         | Critical |
+| Credential Rotation | Secure key rotation                | High     |
+| Credential Recovery | Recovery / emergency mechanism     | High     |
+| Hybrid Policy       | ECDSA + ML-DSA policy              | Critical |
+
+
+
+
+### 9.2 PQC QDay Bridge
 
 The Bridge should be one of the highest-priority PQC components because bridge authorization keys can control large amounts of cross-chain assets.
 
@@ -652,6 +782,8 @@ ECDSA Signature
 Bridge Authorization
 ```
 
+
+
 ### Hybrid Model
 
 ```
@@ -666,6 +798,8 @@ Relayer
               ↓
            Bridge
 ```
+
+
 
 ### Target Model
 
@@ -689,9 +823,9 @@ Bridge PQC migration should cover:
 
 The bridge should also support credential rotation so that PQC keys can be introduced without redesigning the entire bridge protocol.
 
-### 8.3 PQC Oracle
+### 9.3 PQC Oracle
 
-QDAY Price Oracle should progressively protect price-signing and administrative authorization paths.
+QDay Price Oracle should progressively protect price-signing and administrative authorization paths.
 
 ### Current Architecture
 
@@ -704,6 +838,8 @@ Price Proof
        ↓
 FeedPriceContract
 ```
+
+
 
 ### Hybrid Architecture
 
@@ -731,7 +867,7 @@ PQC protection should cover:
 
 The goal is to prevent a compromised classical signing key from becoming a single point of failure for price manipulation.
 
-### 8.4 PQC Governance
+### 9.4 PQC Governance
 
 Governance controls protocol-level permissions and upgrades, so it should progressively adopt the same hybrid authorization model.
 
@@ -756,7 +892,9 @@ Priority governance operations include:
 - Emergency administration
 - Consensus parameter changes
 
-### 8.5 PQC Treasury and Admin
+
+
+### 9.5 PQC Treasury and Admin
 
 High-value treasury and privileged administrator accounts should migrate before general infrastructure.
 
@@ -780,9 +918,9 @@ ECDSA + ML-DSA
 
 This provides defense in depth during the transition period.
 
-### 8.6 PQC Sequencer
+### 9.6 PQC Sequencer
 
-After Bridge, Oracle, Governance, and Treasury have PQC protection, QDAY should evaluate PQC signatures for Sequencer-level authorization.
+After Bridge, Oracle, Governance, and Treasury have PQC protection, QDay should evaluate PQC signatures for Sequencer-level authorization.
 
 Potential model:
 
@@ -796,7 +934,7 @@ ECDSA + ML-DSA
 Sequencer Authorization
 ```
 
-Before production rollout, QDAY should benchmark:
+Before production rollout, QDay should benchmark:
 
 - Signature generation latency
 - Signature verification latency
@@ -805,7 +943,9 @@ Before production rollout, QDAY should benchmark:
 - Batch / block size impact
 - Storage overhead
 
-### 8.7 PQC Validator
+
+
+### 9.7 PQC Validator
 
 Validator signatures and attestations should eventually support PQC.
 
@@ -821,21 +961,25 @@ Consensus
 
 Because PQC signatures are significantly larger than ECDSA signatures, validator migration should be introduced only after performance and network-impact testing.
 
-### Phase 3 Deliverables
+### Phase 4 Deliverables
 
-| Component | Target | Priority |
-| --- | --- | --- |
-| Bridge | Hybrid → PQC | Critical |
-| Oracle | Hybrid → PQC | Critical |
-| Governance | Hybrid → PQC | High |
-| Treasury / Admin | Hybrid → PQC | High |
-| Sequencer | PQC research → Hybrid | Medium |
-| Validator | PQC research → Hybrid | Medium |
 
-### Phase 3 Completion Criteria
+| Component        | Target                | Priority |
+| ---------------- | --------------------- | -------- |
+| Bridge           | Hybrid → PQC          | Critical |
+| Oracle           | Hybrid → PQC          | Critical |
+| Governance       | Hybrid → PQC          | High     |
+| Treasury / Admin | Hybrid → PQC          | High     |
+| Sequencer        | PQC research → Hybrid | Medium   |
+| Validator        | PQC research → Hybrid | Medium   |
+
+
+
+
+### Phase 4 Completion Criteria
 
 ```
-                QDAY Infrastructure
+                QDay Infrastructure
                        │
         ┌──────────────┼──────────────┐
         │              │              │
@@ -850,17 +994,21 @@ Because PQC signatures are significantly larger than ECDSA signatures, validator
 
 The target is:
 
-> **All critical authorization paths in QDAY have a production-ready PQC or hybrid security option.**
+> **All critical authorization paths in QDay have a production-ready PQC or hybrid security option.**
 
 ---
 
-## 9. Phase 4 — PQC-Native Network
+
+
+## 10. Phase 5 — Full PQC-Native Network
+
+
 
 ### Objective
 
-Phase 4 is the long-term target in which PQC becomes a first-class security primitive across QDAY’s account, protocol, and infrastructure layers.
+Phase 5 is the long-term target in which PQC becomes a first-class security primitive across QDay’s account, protocol, and infrastructure layers.
 
-The objective is not necessarily to remove ECDSA immediately. Instead, QDAY should reach a state where PQC is the **default security path**, while ECDSA remains available as a compatibility mechanism where appropriate.
+The objective is not necessarily to remove ECDSA immediately. Instead, QDay should reach a state where PQC is the **default security path**, while ECDSA remains available as a compatibility mechanism where appropriate.
 
 ```
 PQC-Ready
@@ -870,7 +1018,9 @@ Hybrid
 PQC-Native
 ```
 
-### 9.1 PQC-Native Account
+
+
+### 10.1 PQC-Native Account
 
 The target account model is:
 
@@ -880,7 +1030,7 @@ PQC Smart Account
        └── ML-DSA Credential
 ```
 
-However, QDAY should continue supporting:
+However, QDay should continue supporting:
 
 ```
 Legacy ECDSA Account
@@ -898,12 +1048,14 @@ Hybrid
 PQC Native
 ```
 
-### 9.2 PQC-Native Infrastructure
+
+
+### 10.2 PQC-Native Infrastructure
 
 The target state is to protect the complete critical infrastructure stack:
 
 ```
-                 QDAY
+                 QDay
                   │
        ┌──────────┼──────────┐
        │          │          │
@@ -922,7 +1074,7 @@ The target state is to protect the complete critical infrastructure stack:
 
 Each component should support PQC credentials, key rotation, and cryptographic agility.
 
-### 9.3 PQC as the Default Security Model
+### 10.3 PQC as the Default Security Model
 
 The long-term user experience should evolve toward:
 
@@ -944,9 +1096,11 @@ Hybrid         ← Recommended compatibility mode
 ECDSA          ← Legacy compatibility
 ```
 
-### 9.4 zkEVM and PQC
 
-QDAY is a zkEVM network, so PQC integration should remain separated from the ZK circuit unless there is a clear performance and proving benefit.
+
+### 10.4 zkEVM and PQC
+
+QDay is a zkEVM network, so PQC integration should remain separated from the ZK circuit unless there is a clear performance and proving benefit.
 
 ### Initial Model
 
@@ -976,14 +1130,14 @@ ZK Circuit
 Succinct PQ Proof
 ```
 
-This should remain a research and optimization direction rather than a prerequisite for QDAY’s initial PQC deployment.
+This should remain a research and optimization direction rather than a prerequisite for QDay’s initial PQC deployment.
 
-### 9.5 Long-Term Crypto Agility
+### 10.5 Long-Term Crypto Agility
 
-Even in the PQC-Native phase, QDAY should not define itself as an ML-DSA-only network.
+Even in the PQC-Native phase, QDay should not define itself as an ML-DSA-only network.
 
 ```
-                QDAY PQC Framework
+                QDay PQC Framework
                        │
           ┌────────────┼────────────┐
           │            │            │
@@ -996,9 +1150,9 @@ Even in the PQC-Native phase, QDAY should not define itself as an ML-DSA-only ne
 
 Future PQC algorithms should be introducible through protocol upgrades without requiring a fundamental redesign of the account or infrastructure architecture.
 
-### 9.6 Phase 4 Completion Criteria
+### 10.6 Phase 5 Completion Criteria
 
-QDAY reaches the PQC-Native stage when:
+QDay reaches the PQC-Native stage when:
 
 - PQC-native accounts are production-ready.
 - PQC is the default security option for new accounts.
@@ -1022,17 +1176,19 @@ EVM Compatibility
         +
 zkEVM
         ↓
-Quantum-Resistant QDAY
+Quantum-Resistant QDay
 ```
 
 ---
 
-## 10. Final QDAY PQC Architecture
+
+
+## 11. Final QDay PQC Architecture
 
 The target architecture should combine EVM compatibility, account-level migration, PQC execution capabilities, and progressive infrastructure migration.
 
 ```
-                         QDAY
+                         QDay
                           │
               Quantum-Ready EVM
                           │
@@ -1052,7 +1208,7 @@ The target architecture should combine EVM compatibility, account-level migratio
                                            │
                               ┌────────────┴────────────┐
                               │                         │
-                       PQC Credential             PQC Precompile
+                    PQC Precompile (Phase 2)   PQC Credential (Phase 4)
                               │                         │
                               └────────────┬────────────┘
                                            │
@@ -1084,24 +1240,30 @@ Existing DApps
 Existing Wallets
 ```
 
-### Layer 2 — Account Migration
+
+
+### Layer 2 — PQC Execution (Phase 2)
 
 ```
 AA Smart Account
-PQC Credential
-Hybrid Account
-PQC Account
-```
-
-### Layer 3 — PQC Execution
-
-```
 PQC Precompile
 ML-DSA Verification
 Hybrid Verification
 ```
 
-### Layer 4 — PQC Infrastructure
+
+
+### Layer 3 — Account Migration (Phase 4)
+
+```
+PQC Credential
+Hybrid Account
+PQC Account
+```
+
+
+
+### Layer 4 — PQC Infrastructure (Phase 4–5)
 
 ```
 Bridge
@@ -1117,18 +1279,44 @@ The migration direction is:
 ```
 ECDSA Compatibility
         ↓
-PQC-Ready Account
+PQC Execution (AA + Precompile)
         ↓
 Hybrid Security
         ↓
+PQC Credential / Account Migration
+        ↓
 PQC Infrastructure
         ↓
-PQC-Native QDAY
+PQC-Native QDay
 ```
 
 ---
 
-## 11. Recommended Timeline
+
+
+## 12. Recommended Timeline
+
+
+
+### Existing — Abelian Provides PQC
+
+Abelian serves as the L1 settlement and security anchor for QDay, providing a quantum-resistant finality layer for QDay state commitments.
+
+```
+Abelian L1
+     +
+Settlement & security anchor
+     +
+Quantum-resistant finality
+```
+
+Target:
+
+> **Once a QDay state commitment is finalized on Abelian, the corresponding history cannot be altered without breaking the underlying cryptographic guarantees.**
+
+---
+
+
 
 ### 2026 H2 — Prepare
 
@@ -1148,9 +1336,11 @@ PQC Verification
 
 Target:
 
-> **QDAY establishes its PQC foundation.**
+> **QDay establishes its PQC foundation.**
 
 ---
+
+
 
 ### 2027 H1 — Enable
 
@@ -1174,9 +1364,11 @@ Deliverables:
 
 Target:
 
-> **QDAY can execute PQC verification in production.**
+> **QDay can execute PQC verification in production.**
 
 ---
+
+
 
 ### 2027 H2 — Hybrid
 
@@ -1205,6 +1397,8 @@ Target:
 
 ---
 
+
+
 ### 2028 — PQC Migration & Infrastructure
 
 First enable account-level PQC migration, then progressively protect critical infrastructure:
@@ -1227,9 +1421,11 @@ Validator
 
 Target:
 
-> **Critical QDAY infrastructure becomes quantum-resistant.**
+> **Critical QDay infrastructure becomes quantum-resistant.**
 
 ---
+
+
 
 ### 2028+ — PQC Native
 
@@ -1247,22 +1443,26 @@ EVM Compatibility
 
 Target:
 
-> **Quantum-Resistant QDAY Network**
+> **Quantum-Resistant QDay Network**
 
 ---
 
-## 12. Strategic Positioning
 
-The final QDAY PQC strategy can be summarized as:
+
+## 13. Strategic Positioning
+
+The final QDay PQC strategy can be summarized as:
 
 ```
+Inherit
+   ↓
 Prepare
    ↓
 Upgrade
    ↓
 Hybridize
    ↓
-Protect Infrastructure
+Migrate & Protect
    ↓
 Go PQC Native
 ```
@@ -1270,6 +1470,8 @@ Go PQC Native
 Or, more specifically:
 
 ```
+Abelian PQC Finality
+      ↓
 Crypto Agility
       ↓
 PQC Execution
@@ -1284,25 +1486,29 @@ PQC Wallet / Bridge / Oracle
       ↓
 PQC Infrastructure
       ↓
-PQC-Native QDAY
+PQC-Native QDay
 ```
+
+
 
 ### Migration Sequencing Principle
 
 ```
-Phase 0: Prepare
+Phase 0: Inherit (PQC Finality)
         ↓
-Phase 1: Enable
+Phase 1: Prepare
         ↓
-Phase 2: Hybridize
+Phase 2: Enable
         ↓
-Phase 3: Migrate & Protect
+Phase 3: Hybridize
         ↓
-Phase 4: PQC Native
+Phase 4: Migrate & Protect
+        ↓
+Phase 5: PQC Native
 ```
 
-PQC Credential is deliberately introduced in Phase 3 because it is an **account migration mechanism**, while AA, PQC Precompile, and PQC verification are execution capabilities that must be established earlier.
+PQC Credential is deliberately introduced in Phase 4 because it is an **account migration mechanism**. AA, PQC Precompile, and PQC verification are Phase 2 execution capabilities. Hybrid signatures are a Phase 3 transition mechanism. None of those earlier phases should require users to register a PQC credential.
 
 ### Core Principle
 
-> **QDAY should not simply replace ECDSA with ML-DSA. It should build an upgradeable cryptographic architecture that allows existing accounts and infrastructure to progressively transition from classical cryptography to hybrid and finally post-quantum security.**
+> **QDay should not simply replace ECDSA with ML-DSA. It should build an upgradeable cryptographic architecture that allows existing accounts and infrastructure to progressively transition from classical cryptography to hybrid and finally post-quantum security.**

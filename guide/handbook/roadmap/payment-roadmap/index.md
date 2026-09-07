@@ -15,7 +15,7 @@ A global payment layer on QDay for:
 - Subscriptions and streaming payouts
 - Agents that pay within a spending limit, without a human clicking every tx
 
-Product context: [Why QDay](/guide/handbook/why-qday). Builder APIs: [Build on QDay — SDKs](/guide/handbook/build-on-qday#sdks) and [Payment SDK](/Knowledge/technical/developer-guide#payment-sdk).
+Product context: [Why QDay](/guide/handbook/why-qday). Builder APIs: [Build on QDay — SDKs](/guide/handbook/build-on-qday#sdks) and [Payment SDK](/Knowledge/technical/developer-guide/payment-development).
 
 ## Payment milestone table
 
@@ -41,12 +41,12 @@ Aligned with the network [QDAY Roadmap](/guide/handbook/roadmap/qday-roadmap):
 | **Agent payment** | Session key: max per payment, max per day, allowlisted payees, expiry |
 | **Webhooks** | Signed notifications when an invoice pays or a stream stops |
 
-Architecture notes: [Payment Architecture](/Knowledge/technical/system-architecture#payment-architecture) and [Payment Ecosystem](/Knowledge/technical/ecosystem#payment-ecosystem).
+Architecture notes: [Payment Architecture](/Knowledge/technical/system-architecture/payment-architecture) and [Payment Ecosystem](/Knowledge/technical/ecosystem/payment-ecosystem).
 
 ## How to follow along
 
 1. Hold USD8 on QDay ([Swap](/guide/handbook/user-guide/swap), [bridge / convert](/guide/handbook/user-guide#qday-bridge)).
-2. Integrate `@qday-io/sdk/payments` when the testnet gateway is announced ([Developer Guide](/Knowledge/technical/developer-guide#payment-development)).
+2. Integrate `@qday-io/sdk/payments` when the testnet gateway is announced ([Developer Guide](/Knowledge/technical/developer-guide/payment-development)).
 3. For agent commerce, use Smart Accounts and session keys (`@qday-io/sdk/aa`, `@qday-io/sdk/agent`).
 4. Use only official Portal and docs URLs; payment webhooks must be signature-checked.
 

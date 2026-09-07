@@ -1,6 +1,7 @@
 {
   "label": "Technical Documentation",
-  "position": 8,
+  "position": 1,
+  "collapsed": false ,
   "link": {
     "type": "generated-index",
     "description": "Technical and developer documentation for QDAY \u2014 architecture, protocol, operations, security, and reference."

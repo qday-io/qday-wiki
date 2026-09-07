@@ -1,1 +1,10 @@
-{ "label": "Reference", "position": 5 }
+{
+  "label": "Reference",
+  "key": "live-chain-reference",
+  "position": 3,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Live chain IDs, RPC endpoints, official tokens, and contract addresses."
+  }
+}
