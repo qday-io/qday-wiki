@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.knowledgeSidebar.category.Technical Documentation": {
+    "message": "技術文件",
+    "description": "The label for category 'Technical Documentation' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Technical Documentation.link.generated-index.description": {
+    "message": "QDAY 的技術與開發者文件 —— 架構、協定、營運、安全與參考資料。",
+    "description": "The generated-index page description for category 'Technical Documentation' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.System Architecture": {
+    "message": "系統架構",
+    "description": "The label for category 'System Architecture' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Ecosystem": {
+    "message": "生態系",
+    "description": "The label for category 'Ecosystem' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Developer Guide": {
+    "message": "開發者指南",
+    "description": "The label for category 'Developer Guide' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Protocol": {
+    "message": "協定",
+    "description": "The label for category 'Protocol' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Operator Guide": {
+    "message": "節點營運指南",
+    "description": "The label for category 'Operator Guide' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Security": {
+    "message": "安全",
+    "description": "The label for category 'Security' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.technical-api-reference": {
+    "message": "參考資料",
+    "description": "The label for category 'Reference' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.live-chain-reference": {
+    "message": "參考資料",
+    "description": "The label for category 'Reference' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.live-chain-reference.link.generated-index.description": {
+    "message": "即時的鏈 ID、RPC 端點、官方代幣與合約地址。",
+    "description": "The generated-index page description for category 'Reference' in sidebar 'knowledgeSidebar'"
+  },
+  "sidebar.knowledgeSidebar.category.Migration": {
+    "message": "遷移",
+    "description": "The label for category 'Migration' in sidebar 'knowledgeSidebar'"
+  }
+}

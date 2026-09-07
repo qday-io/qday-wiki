@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+title: 代幣清單
+---
+
+import AddTokenButton from '@site/src/components/QDay/AddTokenButton';
+import AddressLink from "@site/src/components/QDay/AddressLink";
+import BalancePanel from '@site/src/components/QDay/BalancePanel';
+
+# 代幣清單
+
+**QDay Origin 測試網（鏈 ID 44003）** 上已驗證的合約。這些合約並未部署於 Origin 主網（`44001`）或 Aevum（`44005`）。使用 **+ Add** 前，請先將錢包切換至 `44003`。
+
+## 原生代幣
+
+| 代幣 | 鏈 | 備註 |
+|---|---|---|
+| QDAY | 44001 Origin 主網 | 原生 Gas——不是 ERC-20 |
+| QDAY | 44003 Origin 測試網 | 原生 Gas——不是 ERC-20 |
+| QDAY | 44005 Aevum 測試網 | 原生 Gas；可從[水龍頭](/guide/start/faucet)領取 |
+
+## QDay Origin 測試網（鏈 ID 44003）
+
+| 代幣 | 地址 | 小數位數 | |
+|---|---|---|---|
+| USD8 | <AddressLink chain="qday" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" /> | 6 | <AddTokenButton symbol="USD8" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" decimals={6} /> |
+| WABEL | <AddressLink chain="qday" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" /> | 18 | <AddTokenButton symbol="WABEL" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" decimals={18} /> |
+| WQDAY | <AddressLink chain="qday" address="0x31ff878190Cf74E37d963F77599abB674d27A787" /> | 18 | <AddTokenButton symbol="WQDAY" address="0x31ff878190Cf74E37d963F77599abB674d27A787" decimals={18} /> |
+
+:::tip[代幣會新增至錢包目前所在的鏈]
+此按鈕使用 EIP-747（`wallet_watchAsset`）。你的錢包會在新增前顯示確認畫面。RPC 與區塊瀏覽器：[鏈參數](chains)。
+:::
+
+## 你的餘額
+
+連接錢包以讀取 **Origin 測試網（44003）** 上的即時餘額——原生 QDAY 加上上述 ERC-20 代幣：
+
+<BalancePanel />
+
+:::warning[Aevum / QDay2 代幣]
+44005 上的 ERC-20 地址尚未公布。請勿在 Aevum 上重複使用 44003 的地址。QDay2 代幣部署後，本頁面將列出它們。
+:::

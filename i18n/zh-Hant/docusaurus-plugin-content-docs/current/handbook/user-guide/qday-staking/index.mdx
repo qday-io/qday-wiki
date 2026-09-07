@@ -1,0 +1,133 @@
+---
+sidebar_position: 54
+sidebar_label: QDAY 質押
+---
+
+import NextSteps from "@site/src/components/QDay/NextSteps";
+
+# QDAY 質押使用指南
+
+## 前置條件
+
+質押之前，請確認你已具備以下條件：
+
+- 一個相容 EVM 的錢包（例如 MetaMask），並已新增 QDay Aevum 網路
+- 錢包中有足夠的 QDAY 或 WQDAY
+- 少量 QDAY，用於支付網路交易費用
+- 能夠存取正確的官方 QDAY 質押入口網站
+- 了解所選鎖倉期間及其限制
+
+:::warning[重要風險提示]
+- 質押涉及與智慧合約互動
+- 區塊鏈交易一經確認通常無法撤銷
+- 鎖倉中的代幣在鎖倉期間屆滿前無法解除質押
+- 獎勵率與分配方式可能依協定設計隨時間變動
+- 核准交易前，請務必確認網站網址與錢包提示的詳細內容
+:::
+
+### 如何取得 QDAY？
+
+- **方法一：質押 ABEL 賺取 QDAY**
+  1. 首先，你需要購買 ABEL。可透過 MEXC、BitMart 交易所購買，或使用 Abelian Mobile Wallet 的應用程式內購買功能。
+  2. 質押你的 ABEL 以獲得 QDAY 獎勵。詳細步驟請參閱 [ABEL 質押使用指南](/guide/handbook/user-guide/abel-staking)。
+
+- **方法二：以 USD8 兌換 QDAY**
+  1. 透過 **[QDay Bridge](https://portal.qday.io/en/bridge)**：使用 USDT（ETH）購買 USD8，或使用 Abelian Mobile Wallet 的應用程式內購買功能購買 USD8。
+  2. 透過 **[QDay Swap](https://portal.qday.io/en/qday-swap)** 或 Abelian Mobile Wallet 的應用程式內兌換功能：將 USD8 兌換為 QDAY。詳細步驟請參閱 [QDay Swap 使用指南](/guide/handbook/user-guide/swap)。
+
+### 質押機制
+
+- 質押時，系統會自動將 QDAY 轉換為 WQDAY（包裝代幣）
+- 鎖倉期間越長，獲得的份額（Share）越高
+- 獎勵每日累積，可隨時領取並提領至你的錢包
+
+## 教學
+
+依照以下步驟開始質押：
+
+### 步驟 1：設定錢包
+
+登入 MetaMask，並將 QDay Aevum 新增為自訂網路。詳細說明請參閱 [MetaMask 錢包使用指南 - 新增 QDay 網路](/guide/handbook/user-guide/metamask#將-qday-網路新增至-metamask)。
+
+### 步驟 2：進入質押頁面
+
+- 前往 https://portal.qday.io/
+- 點擊左側導覽選單中的 **「Staking」**，進入質押頁面。
+
+  ![質押入口網站首頁](/qday/staking/portal-2.png)
+
+- 點擊 **「Connect Wallet」**，並選擇你偏好的錢包（支援 MetaMask、WalletConnect、Rainbow）以連接錢包。
+
+  ![連接錢包選項](/qday/staking/qday-connect-wallet-dialog.png)
+
+### 步驟 3：質押
+
+#### 質押
+
+- 確認已在「Select Token」下拉選單中選擇 **WQDAY**。
+
+  ![WQDAY 質押介面](/qday/staking/wqday-staking.png)
+
+- 輸入要質押的 WQDAY/QDAY 數量，選擇鎖倉期間，然後點擊 **「Stake」** 並在錢包中確認交易。
+
+:::warning[注意]
+1. 最長鎖倉期間為 1460 天（4 年）。
+2. 質押 **QDAY** 時，若你的餘額足夠，QDAY 會自動轉換為 WQDAY（包裝代幣）。
+:::
+
+#### 我的質押
+
+質押完成後，可在「My Staking」分頁中檢視詳細資訊：
+
+- **每日獎勵自動累積** → **領取（Claim）** 待領取的獎勵 → 從金庫餘額 **提領（Withdraw）** 至你的 EVM 錢包。
+- 每筆紀錄會顯示質押數量、鎖倉期間與剩餘天數，並提供以下操作：
+  - **延長鎖倉期間（Extend Lock Period）**：延長現有質押的鎖倉期間，以持續累積獎勵。
+  - **追加質押（Add Stake）**：向現有質押部位加入更多代幣，以提高每日獎勵。
+  - **解除質押（Unstake）**：鎖倉期間屆滿後提領已質押的代幣。鎖倉期間內無法使用。
+
+  ![我的質押詳細資訊](/qday/staking/qday-stake-details.png)
+
+#### 儀表板
+
+點擊左側導覽選單中的 **「Dashboard」** 分頁，即可全面檢視你所有的質押資產。
+
+  ![儀表板詳細資訊](/qday/staking/dashboard.png)
+
+## 關於 WQDAY 質押獎勵
+
+### 獎勵池
+- QDAY 總供給量的 50%（約 112.59 億枚代幣）將用於質押獎勵。
+
+### 每日分配
+- 每天會將剩餘獎勵池的 1/1000 分配給質押者。
+- 由於分配額是依剩餘獎勵池計算，每日發放量會隨時間逐漸減少。
+
+### 獎勵份額計算
+你的每日獎勵取決於你的份額（Share），計算方式如下：
+**份額 = 質押數量 × 剩餘鎖倉天數**
+
+**範例：**
+- 若你質押 100 QDAY，鎖倉 1460 天，你的份額為：
+  100 × 1460 = 146,000
+- 若另一位使用者質押 200 QDAY，鎖倉 730 天，其份額為：
+  200 × 730 = 146,000
+
+在這個簡化範例中，兩個質押部位的份額相同，因此在其他條件相同的前提下，兩者會獲得相同比例的每日分配。
+
+:::warning[重要]
+- 以上為簡化說明，僅供參考。
+- 獎勵並非固定，亦不保證。
+- 實際獎勵取決於下列因素：
+  - 獎勵池的剩餘數量
+  - 所有參與質押者的總份額
+  - 質押部位隨時間的變動
+:::
+
+
+## 下一步
+
+<NextSteps steps={[
+  { title: "ABEL 質押", desc: "質押 ABEL 賺取收益", to: "/guide/handbook/user-guide/abel-staking" },
+  { title: "兌換代幣", desc: "取得 WABEL / USD8", to: "/guide/handbook/user-guide/swap" },
+  { title: "遷移至 QDay", to: "/Knowledge/migration/overview" },
+]} />

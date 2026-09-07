@@ -1,0 +1,335 @@
+---
+sidebar_position: 56
+sidebar_label: Abelian 跨鏈橋 v3
+---
+
+import NextSteps from "@site/src/components/QDay/NextSteps";
+
+﻿---
+outline: deep
+---
+
+# Abelian Bridge 3.0 版使用指南
+
+本指南說明如何使用 **Abelian Bridge**（跨鏈橋）在 Abelian 與 QDay 網路之間轉移資產。
+
+支援的跨鏈方向：
+
+- **ABEL → WABEL**
+- **WABEL → ABEL**
+
+## 教學
+
+依照以下步驟完成一筆跨鏈交易。
+
+[**一般使用者入口網站網址**](https://portal.qday.io/en/abel-conversion)
+
+### 步驟 1：連接錢包並授權跨鏈橋
+
+開始跨鏈交易之前，請先將你的錢包連接到 Abelian Bridge。
+
+錢包連接完成後：
+
+1. 點擊 **Authorize（授權）**。
+2. 在 MetaMask 中檢視簽章請求。
+3. 點擊 **Confirm（確認）** 以繼續。
+
+此授權允許你的錢包與跨鏈橋互動。
+
+:::tip[注意]
+此步驟不會轉移代幣，也不需要支付網路交易費用。
+:::
+
+![MetaMask 錢包授權](/abel-bridge-v3/01-authorize-wallet.png)
+
+*在 MetaMask 中確認跨鏈橋授權請求以繼續。*
+
+### 步驟 2：輸入跨鏈資訊
+
+#### 小額交易
+
+輸入跨鏈交易的相關資訊。
+
+繼續操作：
+
+1. 選擇來源 **Network（網路）** 與 **Token（代幣）**。
+2. 在 **Amount（金額）** 欄位輸入你要跨鏈的數量。
+3. 在 **Wallet Address（錢包地址）** 欄位輸入目的地錢包地址。
+4. 檢視目的地網路、代幣與接收數量。
+5. 如有需要，在 **Note（備註）** 欄位輸入備註。
+6. 點擊 **Generate QR Code（產生 QR Code）**。
+
+:::tip[注意]
+繼續之前請確認目的地錢包地址正確無誤。**Note（備註）** 欄位為選填。
+:::
+
+![輸入小額跨鏈資訊](/abel-bridge-v3/02-low-amount-details.png)
+
+*輸入跨鏈交易資訊，例如網路、代幣、金額與錢包地址。*
+
+#### 更改跨鏈方向
+
+點擊 **From（來源）** 與 **To（目的地）** 區塊之間的 **切換圖示**，即可更改跨鏈方向：
+
+- **ABEL → WABEL**
+- **WABEL → ABEL**
+
+來源與目的地的網路、代幣及錢包資訊會自動更新。
+
+#### 使用最大餘額
+
+點擊 **MAX** 可自動將你全部可用的代幣餘額填入 **Amount（金額）** 欄位。
+
+繼續之前請檢視接收數量與目的地錢包地址。
+
+輸入所需資訊後，點擊 **Generate New Order（產生新訂單）**。
+
+:::warning[重要]
+產生訂單之前，請確認所選的跨鏈方向與目的地錢包地址正確無誤。
+:::
+
+![跨鏈方向與最大餘額選項](/abel-bridge-v3/03-direction-and-max.png)
+
+*切換跨鏈方向，或點擊 MAX 使用全部可用代幣餘額。*
+
+#### 大額交易
+
+當輸入的金額達到以下條件時，該筆跨鏈交易會被視為大額交易：
+
+- **ABEL → WABEL** 交易：**10,000 ABEL 或以上**
+- **WABEL → ABEL** 交易：**10,000 WABEL 或以上**
+
+當輸入金額等於或高於設定的 **Multi Threshold（多重簽核門檻）** 時，會顯示 **Large conversion request（大額轉換請求）** 警告。
+
+大額交易需經人工審核與核准後才能處理。因此，處理時間可能 **長達 24 小時**。
+
+繼續操作：
+
+1. 仔細閱讀警告訊息。
+2. 在 **Wallet Address（錢包地址）** 欄位輸入目的地地址。
+3. 完成其餘跨鏈資訊。
+4. 點擊 **Generate New Order（產生新訂單）**。
+
+:::warning[重要]
+大額交易不會自動處理，在完成所需的管理員核准之前可能會一直處於待處理狀態。
+:::
+
+![大額交易警告](/abel-bridge-v3/04-large-amount-warning.png)
+
+*需要人工審核的大額轉換請求所顯示的警告訊息。*
+
+#### 確認交易
+
+點擊 **Generate QR Code（產生 QR Code）** 或 **Generate New Order（產生新訂單）** 後，會顯示 **Confirm Transaction（確認交易）** 彈出視窗。
+
+請仔細檢視以下資訊：
+
+- 待轉換金額
+- 交易費用
+- 發送或接收的總金額
+- 預估跨鏈 Gas 費用
+- 預估訂單完成時間
+
+閱讀存入提示後，點擊 **Confirm & Submit（確認並送出）** 以繼續。
+
+:::warning[重要]
+請從跨鏈資訊中所填寫的同一個錢包地址發送代幣。來自不同或無法辨識地址的存款可能無法被自動偵測，並可能導致處理延遲。
+:::
+
+![ABEL 轉 WABEL 的確認彈出視窗](/abel-bridge-v3/05-confirm-abel-to-wabel.png)
+
+*ABEL -> WABEL 跨鏈的確認彈出視窗。*
+
+![WABEL 轉 ABEL 的確認彈出視窗](/abel-bridge-v3/06-confirm-wabel-to-abel.png)
+
+*WABEL -> ABEL 跨鏈的確認彈出視窗。*
+
+### 步驟 3：完成代幣轉帳
+
+轉帳方式取決於所選的跨鏈方向：
+
+- **ABEL → WABEL：** 使用 Abelian 行動應用程式掃描 QR Code，並完成 ABEL 轉帳。
+- **WABEL → ABEL：** 點擊 **Transfer WABEL（轉帳 WABEL）**，並在已連接的錢包中確認交易。
+
+#### 小額 ABEL → WABEL 交易
+
+確認交易資訊後，會顯示 **Scan QR Code（掃描 QR Code）** 彈出視窗。
+
+完成轉帳：
+
+1. 開啟 **Abelian 行動應用程式**。
+2. 選擇 **Abelian** 帳戶。
+3. 點選 **Send（發送）**，然後選擇 **(W)ABEL Conversion（(W)ABEL 轉換）**。
+4. 掃描跨鏈橋頁面上顯示的 QR Code。
+5. 在應用程式中檢視轉帳資訊並確認交易。
+
+彈出視窗會顯示發送方地址、接收方地址、轉帳金額，以及完成存入的剩餘時間。
+
+:::warning[重要]
+請在 QR Code 到期前完成轉帳。網路費用會在轉帳時由 Abelian 行動應用程式計算。
+:::
+
+![掃描 QR Code 完成 ABEL 轉 WABEL 存入](/abel-bridge-v3/07-scan-qr-code.png)
+
+*使用 Abelian 行動應用程式掃描 QR Code 以完成存入。*
+
+#### 跨鏈成功（ABEL → WABEL）
+
+對於小額交易，系統會自動偵測已完成的存入，並處理跨鏈請求。
+
+交易成功完成後，**Bridge Successful（跨鏈成功）** 畫面會顯示：
+
+- 收到的金額
+- 交易雜湊
+- 發送方與接收方地址
+- 發送的金額
+- 交易費用
+- 先前餘額
+- 新餘額
+
+點擊 **Start New Conversion（開始新的轉換）** 即可建立另一筆跨鏈交易。
+
+:::tip[注意]
+存入完成後，處理可能需要幾分鐘。
+:::
+
+![ABEL 轉 WABEL 跨鏈成功](/abel-bridge-v3/08-bridge-success-abel-to-wabel.png)
+
+*顯示交易資訊與更新後餘額的跨鏈成功畫面。*
+
+#### WABEL → ABEL 交易
+
+對於 **WABEL → ABEL** 交易，請從已連接的錢包將 WABEL 發送至跨鏈橋的存入地址。
+
+完成轉帳：
+
+1. 檢視跨鏈橋存入地址與轉帳金額。
+2. 點擊 **Transfer WABEL（轉帳 WABEL）**。
+3. 在已連接的錢包中檢視交易資訊。
+4. 確認交易。
+
+系統會自動將 WABEL 從你已連接的錢包發送至所顯示的跨鏈橋存入地址。
+
+:::warning[重要]
+請在存入請求到期前完成轉帳。在交易送出之前，請勿關閉錢包的確認視窗。
+:::
+
+![轉帳 WABEL 存入畫面](/abel-bridge-v3/09-transfer-wabel.png)
+
+*檢視存入資訊並點擊 Transfer WABEL 以發起交易。*
+
+#### 跨鏈成功（WABEL → ABEL）
+
+對於小額 **WABEL → ABEL** 交易，系統會自動偵測已完成的存入，並處理跨鏈請求。
+
+交易成功完成後，**Bridge Successful（跨鏈成功）** 畫面會顯示：
+
+- 收到的 ABEL 數量
+- 交易雜湊
+- 發送方與接收方地址
+- 發送的 WABEL 數量
+- 交易費用
+
+點擊 **Start New Conversion（開始新的轉換）** 即可建立另一筆跨鏈交易。
+
+:::tip[注意]
+錢包交易確認後，處理可能需要幾分鐘。
+:::
+
+![WABEL 轉 ABEL 跨鏈成功](/abel-bridge-v3/10-bridge-success-wabel-to-abel.png)
+
+*顯示收到的 ABEL 與交易資訊的跨鏈成功畫面。*
+
+#### 大額交易
+
+大額跨鏈交易在代幣轉帳完成後，需要經過人工審核。
+
+結果取決於管理員的審核：
+
+- 若請求獲得核准，交易會被處理，狀態變更為 **Bridge Successful（跨鏈成功）**。
+- 若請求被拒絕，狀態變更為 **Bridge Failed（跨鏈失敗）**，此時可以申請退款。
+
+##### 申請退款
+
+當顯示 **Bridge Failed（跨鏈失敗）** 畫面時：
+
+1. 檢視拒絕原因。
+2. 點擊 **Refund（退款）**。
+3. 依照畫面上的指示送出退款請求。
+
+點擊 **Start New Conversion（開始新的轉換）** 即可建立另一筆跨鏈交易。
+
+:::tip[注意]
+大額交易在達到所需的管理員核准或拒絕數量之前，可能會一直處於待處理狀態。
+:::
+
+![大額交易失敗畫面](/abel-bridge-v3/11-large-transaction-failed.png)
+
+*針對被拒絕或失敗交易的跨鏈失敗畫面，並提供申請退款的選項。*
+
+##### 提出退款請求
+
+當轉換被拒絕、失敗或過期時，**Refund（退款）** 選項可能會變為可用。
+
+申請退款：
+
+1. 在 **Bridge Detail（跨鏈詳情）** 畫面點擊 **Refund（退款）**。
+2. 檢視彈出視窗中顯示的退款金額。
+3. 點擊 **Confirm（確認）** 以送出退款請求。
+
+退款包含原始金額與相應的交易費用。
+
+:::tip[注意]
+退款處理時間取決於網路狀況。
+:::
+
+![申請退款確認彈出視窗](/abel-bridge-v3/12-request-refund.png)
+
+*顯示退款總金額的退款確認彈出視窗。*
+
+#### 退款完成
+
+退款成功處理後，狀態會變更為 **Refund Completed（退款完成）**。
+
+**Refund Completed（退款完成）** 畫面會顯示：
+
+- 退款金額
+- 退款交易雜湊
+- 目的地錢包地址
+
+點擊 **Start New Conversion（開始新的轉換）** 即可建立另一筆跨鏈交易。
+
+:::tip[注意]
+退還的代幣會退回至 **Refunded to（退款至）** 欄位所顯示的錢包地址。
+:::
+
+![退款完成畫面](/abel-bridge-v3/13-refund-completed.png)
+
+*顯示退款金額與交易雜湊的退款完成畫面。*
+
+## 近期交易
+
+**Recent Transactions（近期交易）** 區塊會顯示你的跨鏈交易紀錄。
+
+每筆交易會顯示：
+
+- 跨鏈方向
+- 目前狀態
+- 最後更新時間
+- 交易金額
+- 預估完成時間（如有）
+
+將滑鼠移到某筆交易上並點擊 **View（檢視）**，即可開啟其詳細資訊。
+
+使用 **Previous（上一頁）** 與 **Next（下一頁）** 在頁面之間切換。
+
+![近期交易列表](/abel-bridge-v3/14-recent-transactions.png)
+
+*顯示過往跨鏈活動的近期交易紀錄區塊。*
+
+## 下一步
+
+<NextSteps steps={[
+  { title: "兌換代幣", to: "/guide/handbook/user-guide/swap" },
+  { title: "遷移至 QDay", desc: "單向資產遷移", to: "/Knowledge/migration/overview" },
+]} />

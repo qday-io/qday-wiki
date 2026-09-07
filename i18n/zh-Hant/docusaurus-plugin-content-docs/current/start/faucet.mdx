@@ -1,0 +1,31 @@
+---
+sidebar_position: 2
+title: 取得測試網代幣
+---
+
+import FaucetWidget from '@site/src/components/QDay/FaucetWidget';
+import BalancePanel from '@site/src/components/QDay/BalancePanel';
+
+# 取得測試網代幣
+
+領取測試網 **QDAY** 作為 Gas——就在這裡，無需另外前往水龍頭網站。這個小工具會連接你的
+錢包、切換至 QDay，並呼叫真實的水龍頭合約。
+
+<FaucetWidget />
+
+:::info[每個冷卻期只能領取一次]
+水龍頭在鏈上對每個地址強制執行冷卻期。若你最近已領取過，它會告訴你何時
+可以再次領取。
+:::
+
+## 查看你的資產
+
+連接後即可查看你在 QDay 上的即時餘額（原生 QDAY 加上可遷移的 ERC-20），
+直接從鏈上讀取：
+
+<BalancePanel />
+
+:::tip[這就是「嵌入 dApp」]
+上方的按鈕並不是連往其他網站的連結——而是直接在文件內進行的即時合約呼叫。
+同樣的模式可以將包裝、遷移或質押流程嵌入各自的指南頁面。
+:::

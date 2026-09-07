@@ -1,0 +1,362 @@
+---
+sidebar_position: 52
+sidebar_label: Abelian 行動錢包
+---
+
+# Abelian 行動錢包使用指南
+
+## Abelian 行動錢包簡介
+
+Abelian 行動應用程式專為 Abelian 區塊鏈及其 Layer 2 網路 QDay 設計，同時支援 iOS 與 Android 平台。
+
+作為後量子時代的加密貨幣錢包，Abelian 行動錢包具備以下核心特性：
+
+- **量子安全**：基於抗量子密碼演算法，保護您的數位資產免受未來量子運算的威脅；
+- **多層級隱私（MLP）**：同時支援 Pseudo-Private（偽私密）與 Fully-Private（完全私密）兩種地址類型，讓您依需求選擇隱私等級；
+- **雙鏈支援**：同時管理 Abelian Layer 1（ABEL）與 Layer 2（QDAY）資產；
+- **全新設計的介面**：直覺且友善的使用介面，提供流暢的操作體驗；
+- **自動同步**：快速同步區塊鏈資料，確保交易資訊即時更新；
+- **跨平台相容**：可在 iOS 與 Android 裝置之間無縫切換。
+
+:::tip[重要提示]
+- **ABEL** 是 Abelian Layer 1 區塊鏈的原生代幣，採用量子安全的隱私技術；
+- **QDAY** 是 Abelian Layer 2 網路的代幣，相容於 Ethereum 虛擬機（EVM），**並且可以匯出為私鑰後匯入 MetaMask**。
+:::
+
+## 下載 Abelian 行動應用程式
+
+### iOS 平台
+
+1. 在您的 iPhone 或 iPad 上開啟 App Store
+2. 搜尋「Abelian」，或直接前往 [App Store 上的 Abelian](https://apps.apple.com/us/app/abelian-pro/id6475756639)
+3. 點按「取得」按鈕下載並安裝應用程式
+4. 安裝完成後，點按主畫面上的 Abelian 圖示啟動應用程式
+
+**系統需求**：iOS 13.0 或更高版本
+
+### Android 平台
+
+方法一：Google Play 商店
+
+1. 在您的 Android 裝置上開啟 Google Play 商店；
+2. 搜尋「Abelian」，或直接前往 [Google Play 上的 Abelian](https://play.google.com/store/apps/details?id=info.abelian.walletpro)；
+3. 點按「安裝」按鈕下載並安裝應用程式；
+4. 安裝完成後，點按應用程式清單中的 Abelian 圖示啟動應用程式。
+
+方法二：直接下載 APK
+
+1. 前往 [Abelian 社群網站下載頁面](https://community.pqabelian.io/zh/downloads/latest#-移動應用) 下載 Abelian APK 檔案；
+2. 在您的 Android 裝置上開啟檔案管理員；
+3. 找到已下載的 APK 檔案；
+4. 點按 APK 檔案開始安裝；
+5. 安裝完成後，點按應用程式清單中的 Abelian 圖示啟動應用程式。
+
+**系統需求**：Android 6.0 或更高版本
+
+## 首次設定指南
+
+首次啟動 Abelian 行動應用程式時，您會看到歡迎畫面。
+
+![Abelian 行動應用程式歡迎畫面](/abelian/welcome.png)
+
+- 連續點按「Continue」按鈕閱讀 Abelian 行動應用程式的功能介紹頁面，接著點按「Get Started」按鈕進入語言選擇畫面。選擇您的語言並點按「Next」按鈕，即可進入錢包主介面；
+    ![Abelian 行動應用程式語言選擇畫面](/abelian/language-selection.png)
+
+- 主介面底部的導覽列分為四個區塊：
+    ![Abelian 行動應用程式主畫面](/abelian/main-screen.png)
+    1. **Abelian**：\$ABEL 錢包頁面，可在此購買與轉帳 ABEL，並查看 ABEL 錢包類型、餘額、交易紀錄等資訊；
+    2. **QDay**：\$QDAY 錢包頁面，可在此轉帳 QDAY，查看 QDAY、WQDAY、WABEL 與 USD8 的餘額與交易紀錄，支援 USD8 兌換，並提供 ABEL Bridge、ABEL Staking、QDay Staking 與 QDay Swap 的網頁連結；
+    3. **Discover**：探索頁面，顯示 Abelian 官方網站群、市場資料與官方社群網路；
+    4. **Settings**：設定頁面，提供錢包語言、主題、指紋鎖、網路設定，以及關於資訊與應用程式日誌。
+
+## 建立 ABEL 錢包帳戶
+
+Abelian 行動應用程式支援兩種不同類型的錢包：Legacy 與 MLP，各有其特定用途與優勢。
+
+- **建立 Pseudo-Private 錢包**：Pseudo-Private 錢包在隱私與效能之間取得平衡，適合日常交易，且轉帳金額上限最高。
+- **建立 Fully-Private 錢包**：Fully-Private 錢包提供最高等級的隱私保護，完全隱藏交易資訊，轉帳金額上限高於 Legacy 錢包。
+- **建立 Legacy 錢包**：Legacy 錢包是舊型錢包，已被新的多層級隱私（MLP）錢包取代。**不建議建立 Legacy 錢包**，除非您需要從舊版 Abelian 錢包遷移資產。
+
+**建立步驟**：
+
+1. 在 Abelian 錢包主介面點按「I don't have an ABEL account」按鈕，開始建立 ABEL 錢包；
+   ![Abelian 行動應用程式建立帳戶](/abelian/create-account-1.png)
+2. 首次建立錢包時，會自動出現 Passcode 設定畫面。請輸入兩次六位數密碼。若裝置具備指紋或「Touch ID」功能，會出現生物辨識登入確認畫面，點按「Confirm」按鈕即可完成安全設定；
+   ![設定 Passcode](/abelian/set-passcode.png)
+3. 在建立帳戶介面設定錢包「Name」⓵，並點按「Create」按鈕⓶ 以建立錢包；
+   ![建立帳戶 2](/abelian/create-account-2.png)
+4. 下方的 Advanced 選項可展開⓷，選擇「Create an MLP Pseudo-Private account」、「Create an MLP Fully-Private account」或「Create a Legacy account」。預設為 Pseudo-Private 錢包；
+5. 確認密碼或完成生物辨識驗證後，點按「Done」按鈕即可完成錢包建立並進入錢包主畫面。
+
+
+## 建立 QDAY 錢包帳戶
+
+QDay 錢包帳戶使用相容於 EVM 的私鑰格式。在 Abelian 行動應用程式中，無需設定 QDay 網路，只需將其與現有的 ABEL 錢包連結即可。
+
+:::tip[注意]
+若您的 ABEL 錢包為 Legacy 錢包，則無法建立 QDay 錢包，需要先升級為 MLP 錢包。
+:::
+
+**建立步驟**：
+
+1. 在主介面選擇 QDay 分頁；
+2. 點按「Open linked account」按鈕，開始建立與目前使用的 ABEL 錢包連結的 QDay 錢包。
+
+## 取得錢包地址以接收代幣
+
+建立錢包後，您需要取得錢包地址才能接收代幣資產。
+
+### 接收 ABEL
+
+1. 在錢包主介面選擇 Abelian 分頁
+2. 頂部 ABEL 金額顯示區的右側有一行「Address」，點按旁邊的複製圖示，即可將 ABEL 短地址複製到剪貼簿
+3. 點按金額區下方的「Receive」按鈕，即可顯示完整的 ABEL 錢包短地址與對應的 QR Code
+   - 點按短地址下方的複製圖示，將 ABEL 短地址複製到剪貼簿
+   - 或請對方掃描 QR Code 以傳送資產
+
+### 接收 QDAY
+
+1. 在錢包主畫面選擇 QDay 分頁
+2. 頂部 QDAY 金額顯示區的右側有一行「Address」，點按旁邊的複製圖示，即可將 QDAY 短地址複製到剪貼簿
+3. 點按金額區下方的「Receive」按鈕，即可顯示完整的 QDAY 錢包短地址與對應的 QR Code
+   - 點按短地址下方的複製圖示，將 QDAY 短地址複製到剪貼簿
+   - 或請對方掃描 QR Code 以傳送資產
+
+## 切換錢包帳戶
+
+1. 在主介面選擇 Abelian 分頁
+2. 點按 ABEL 錢包頂部的錢包名稱，展開「Select Account」選單並選擇要切換的錢包；
+3. 切換到 QDay 分頁時，會自動切換至與目前 ABEL 錢包連結的 QDAY 錢包。
+
+## 匯出 ABEL 錢包
+
+:::danger[安全警告]
+助記詞與私鑰擁有錢包的完整控制權，也是恢復錢包的唯一憑證。請務必：
+- 抄寫在紙上並存放於安全的地方
+- 不要截圖或儲存在連網裝置上
+- 不要與任何人分享
+- 遺失助記詞將無法恢復錢包資產
+- **ABEL 錢包的私鑰與助記詞無法匯入 MetaMask**
+:::
+
+### 匯出 ABEL 錢包私鑰或助記詞
+
+匯出 ABEL 錢包的助記詞或私鑰可用於備份，以便在其他裝置上還原錢包。
+
+**匯出助記詞或私鑰步驟**：
+
+1. 在主畫面選擇 Abelian 分頁，並點按右上角的「Profile」圖示
+2. 在 Profile 頁面點按「Backup」按鈕
+3. 輸入密碼或完成生物辨識驗證後，會顯示助記詞或私鑰內容。點按「Copy」按鈕即可複製助記詞或私鑰
+4. 請妥善保管複製的助記詞或私鑰
+
+### 匯出 QDay 錢包私鑰
+
+QDay 錢包使用相容於 EVM 的私鑰格式，可匯出並匯入 MetaMask 等 EVM 錢包。
+
+**匯出步驟**：
+
+1. 在主畫面選擇 QDay 分頁，並點按右上角的「Profile」圖示
+2. 在 Profile 頁面點按「Backup」按鈕
+3. 輸入密碼或完成生物辨識驗證後，會顯示私鑰內容。點按「Copy」按鈕即可複製私鑰
+4. 請妥善保管複製的私鑰
+
+:::tip[提示]
+QDay 私鑰格式：以 `0x` 開頭的 64 字元十六進位字串，例如：
+`0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef`
+:::
+
+## 將 QDay 錢包匯入 MetaMask
+
+匯出 QDay 私鑰後，您可以將其匯入 MetaMask 錢包使用。
+
+詳細步驟請參考：[MetaMask 錢包帳戶使用指南 - 匯入 QDAY 錢包](/guide/handbook/user-guide/metamask#匯入-qday-錢包)
+
+## 匯入 ABEL 錢包
+
+若您已擁有 ABEL 錢包的助記詞或私鑰，可以將其匯入 Abelian 行動應用程式。
+
+**透過助記詞或私鑰匯入**：
+
+1. 在錢包主介面選擇 Abelian 分頁
+2. 點按「Import an existing account」按鈕
+3. 若您已有錢包並需要新增一個，請在「Select Account」選單底部選擇「Add a new account」
+4. 在「Import Account」頁面填寫錢包「Name」與「Mnemonic Phrase or Private Key」
+5. 點按「Import」按鈕即可完成 ABEL 錢包匯入。
+
+## 匯入 QDay 錢包
+
+1. 在錢包主畫面選擇 QDay 分頁；
+2. 點按「Import existing account」按鈕，並在「Private Key」輸入框中輸入 QDay 錢包私鑰；
+3. 點按「Import」按鈕完成匯入，並連結至目前的 ABEL 錢包。
+
+## 轉帳 ABEL
+
+將 ABEL 代幣傳送至其他 Abelian 錢包地址（包括 Pseudo-Private、Fully-Private 與 Legacy 錢包地址）
+
+:::warning[注意事項]
+- ABEL 交易通常需要多個區塊確認才能完成
+- 您可以在交易紀錄中即時查看確認進度
+- 錢包會自動同步並更新餘額
+:::
+
+**轉帳步驟**：
+
+1. 在錢包主畫面選擇 Abelian 分頁；
+2. 點按「Send」按鈕；
+3. 在「Send ABEL」選擇選單中，您可以選擇：
+   - 「New address」：輸入收款方的 ABEL 地址
+   - 「ABEL Bridge」：掃描 ABEL Bridge 網頁上的 QR Code，自動填入用於兌換質押 WABEL 代幣的 ABEL 地址
+   - 「Your Accounts」：選擇目前 Abelian 行動應用程式中已有的 ABEL 錢包帳戶
+   - 「Contacts」：選擇目前 Abelian 行動應用程式中已儲存的聯絡人 ABEL 地址
+4. 以「New address」為例，進入「Send ABEL」頁面後，可透過以下兩種方式輸入「Recipient's address」：
+   - 點按「Scan QR」按鈕，掃描另一台裝置上的 ABEL 地址 QR Code 以自動填入 ABEL 地址
+   - 點按「Paste」按鈕，從剪貼簿貼上 ABEL 地址
+5. 在「Amount of ABEL」中輸入轉帳金額
+   - 您可以點按「Max」按鈕傳送全部餘額（扣除手續費）
+6. 檢查交易詳情並點按「Send」按鈕，輸入密碼或完成生物辨識驗證，等待交易在鏈上確認後即完成 ABEL 代幣轉帳。
+7. 返回 Abelian 分頁的「Transactions」區塊可查看交易詳情，包括：
+   - 交易雜湊
+   - 交易時間
+   - 轉帳金額
+   - 確認狀態
+   - ABEL 區塊瀏覽器連結
+
+:::tip[轉帳建議]
+- 首次轉帳至新地址時，建議先傳送小額測試
+- 請仔細核對收款地址，區塊鏈交易無法撤銷
+- 網路壅塞時可能需要較長的確認時間
+- 您可以在交易紀錄中查看交易雜湊與詳細資訊
+:::
+
+## 轉帳 QDay
+
+將 QDAY 代幣傳送至其他 QDay 錢包地址。
+
+**轉帳步驟**：
+
+1. 在錢包主畫面切換至 QDay 分頁；
+2. 點按「Send」按鈕；
+3. 在「Send QDAY」選擇選單中，您可以選擇：
+   - 「New address」：輸入收款方的 QDAY 地址
+   - 「ABEL Bridge」：掃描 ABEL Bridge 網頁上的 QR Code，自動填入用於兌換質押 WABEL 代幣的 QDAY 地址（尚未上線）
+4. 以「New address」為例，進入「Send QDAY」頁面後，可透過以下兩種方式輸入「Recipient's address」：
+   - 點按「Scan QR」按鈕，掃描另一台裝置上的 QDAY 地址 QR Code 以自動填入 QDAY 地址
+   - 點按「Paste」按鈕，從剪貼簿貼上 QDAY 地址
+5. 在「Amount of QDAY」中輸入轉帳金額
+   - 您可以點按「Max」按鈕傳送全部餘額（扣除手續費）
+6. 檢查交易詳情並點按「Send」按鈕，輸入密碼或完成生物辨識驗證，等待交易在鏈上確認後即完成 QDAY 代幣轉帳。
+7. 返回 QDay 分頁的「Transactions」區塊可查看交易詳情，包括：
+   - 交易雜湊
+   - 交易時間
+   - 傳送方地址
+   - 收款方地址
+   - 轉帳金額
+   - 確認狀態
+   - QDay 區塊瀏覽器連結
+
+**QDay 轉帳特性**：
+
+- 交易速度快，通常在數秒至數分鐘內確認
+- Gas 費用較低，適合頻繁交易
+- 支援傳送 QDAY 與各種 ERC20 代幣
+- 可在 QDay 區塊瀏覽器上查看交易詳情
+
+:::warning[注意事項]
+- 請確認收款地址支援 QDay 網路
+- 傳送 ERC20 代幣時，請確保錢包有足夠的 QDAY 支付 Gas 費用
+- QDay 地址與 ABEL 地址格式不同，請勿混淆
+:::
+
+## 查看錢包資訊與同步狀態
+
+Abelian 行動應用程式提供詳細的錢包帳戶資訊與同步狀態顯示。
+
+**ABEL 錢包帳戶詳情**：
+
+1. 在主畫面選擇 Abelian 分頁，並點按右上角的「Profile」圖示
+2. 選擇「Account Details」選項，可查看以下資訊：
+   - 錢包名稱（可在此重新命名錢包）
+   - 錢包地址（長地址／短地址）
+   - 錢包隱私類型（Pseudo-Private／Fully-Private／Legacy）
+   - 可用餘額
+   - 區塊同步狀態
+   - 交易統計
+   - 建立日期
+   - 錢包相關金鑰：View、Serial Number、Detector Root
+
+**QDAY 錢包帳戶詳情**：
+
+1. 在主畫面選擇 QDay 分頁，並點按右上角的「Profile」圖示
+2. 選擇「Account Details」選項，可查看以下資訊：
+   - 錢包地址
+   - 網路參數
+   - 已連結的 ABEL 錢包地址（Pseudo-Private）
+
+**ABEL 網路同步狀態**：
+
+1. 在 Abelian 錢包的「Account Details」頁面查看同步狀態
+2. 同步狀態包括：
+   - **Active**：綠點，錢包已與區塊鏈完全同步
+   - **Inactive**：紅點，錢包未連線至網路或同步失敗
+
+## 購買 ABEL
+
+Abelian 行動應用程式提供使用 USDT 與 USDC 購買 ABEL 的功能。
+
+**購買步驟**：
+
+1. 在錢包主畫面選擇 Abelian 分頁
+2. 點按「Buy ABEL」按鈕
+3. 在「New Order」頁面輸入購買金額（USD），系統會自動計算可購買的 ABEL 代幣數量。點按「Place Order」按鈕
+4. 在「Payment Method」頁面選擇付款方式：
+   - USDT：使用 USDT 購買 ABEL（Ethereum、Binance Smart Chain、TRON）
+   - USDC：使用 USDC 購買 ABEL（Ethereum）
+5. 選擇後點按「Checkout」按鈕，檢查交易詳情，並使用您的付款工具掃描 QR Code 付款。
+6. 等待交易確認。交易成功後，ABEL 會自動加入 Abelian 錢包；
+7. 在「History」頁面可查看交易紀錄。
+
+## 兌換 USD8
+
+Abelian 行動應用程式提供使用 USDT 與 USDC 兌換 USD8 穩定幣的功能。
+
+**兌換步驟**：
+
+1. 在錢包主畫面選擇 QDay 分頁
+2. 點按 USD8 代幣後方的「Convert」按鈕
+3. 在「Get USD8」頁面輸入要兌換的 USD8 代幣數量，系統會自動計算需支付的 USDT 或 USDC 金額。點按「Continue」按鈕
+4. 選擇付款方式：
+   - USDT：使用 USDT 兌換 USD8（Ethereum、Binance Smart Chain、TRON）
+   - USDC：使用 USDC 兌換 USD8（Ethereum）
+5. 選擇後點按「Checkout」按鈕，檢查交易詳情，並使用您的付款工具掃描 QR Code 付款。
+6. 等待交易確認。交易成功後，USD8 會自動加入 QDay 錢包；
+7. 在「History」頁面可查看交易紀錄。
+
+---
+
+## 常見問題
+
+**Q：ABEL 錢包可以匯入 MetaMask 嗎？**
+
+A：不行。ABEL 採用量子安全的密碼演算法，與 MetaMask 使用的 EVM 標準不相容。只有 QDay 錢包可以匯出私鑰並匯入 MetaMask。
+
+**Q：我應該使用哪種錢包類型？**
+
+A：
+- 日常交易與頻繁使用：建議使用 Pseudo-Private 錢包
+- 大額資產儲存或極高隱私需求：建議使用 Fully-Private 錢包
+- 不再建議使用 Legacy 錢包；請將現有錢包遷移至新的 MLP 錢包
+
+**Q：忘記錢包密碼怎麼辦？**
+
+A：若您有助記詞或私鑰備份，可以刪除並重新安裝應用程式，再以助記詞或私鑰匯入錢包並設定新密碼。若沒有備份，則無法恢復錢包。
+
+**Q：交易一直顯示為待處理怎麼辦？**
+
+A：
+- ABEL 交易：檢查網路同步狀態，並等待更多區塊確認
+- QDay 交易：可能是 Gas 費用設定過低；您可以嘗試加速交易，或等待網路較不壅塞時自動確認
+
+---
+
+如需更多協助，請造訪 [QDay 官方網站](https://www.qday.io) 或加入 [Discord 社群](https://discord.gg/Rrb33mC3Kc) 參與討論。

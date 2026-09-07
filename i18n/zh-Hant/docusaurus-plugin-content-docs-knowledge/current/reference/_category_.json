@@ -1,0 +1,10 @@
+{
+  "label": "參考資料",
+  "key": "live-chain-reference",
+  "position": 3,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "即時的鏈 ID、RPC 端點、官方代幣與合約地址。"
+  }
+}
