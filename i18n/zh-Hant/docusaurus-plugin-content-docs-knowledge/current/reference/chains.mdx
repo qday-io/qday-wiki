@@ -1,0 +1,67 @@
+---
+sidebar_position: 1
+title: 鏈參數
+---
+
+import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
+
+# 鏈參數
+
+用於連接錢包或 dApp 的即時端點。
+
+<div style={{display: 'flex', gap: '0.75rem', flexWrap: 'wrap', margin: '1rem 0 1.5rem'}}>
+  <AddNetworkButton network="qday" />
+  <AddNetworkButton network="qday2" />
+</div>
+
+| | QDay Origin（主網） | QDay Origin（測試網） | QDay Aevum（測試網） |
+|---|---|---|---|
+| 角色 | 正式環境 Origin | Origin 測試網 | Aevum 目標鏈（1:1 分配） |
+| 鏈 ID | `44001`（`0xABE1`） | `44003`（`0xABE3`） | `44005`（`0xABE5`） |
+| RPC | `https://rpc.qday.io` | `https://rpc.qday.info` | `https://rpc-test.qday.info` |
+| WebSocket | `wss://rpc.qday.io` | `wss://rpc.qday.info` | `wss://rpc-test.qday.info` |
+| 區塊瀏覽器 | `https://explorer.qday.io` | `https://explorer.qday.info` | `https://explorer-test.qday.info` |
+| 原生代幣符號 | QDAY | QDAY | QDAY |
+| 小數位數 | 18 | 18 | 18 |
+
+**Add QDay to Wallet** 按鈕會新增 Origin 主網（`44001`）。**Add QDay2** 會新增 Aevum 測試網（`44005`）。
+
+:::warning[測試網與主網]
+**44001 是 Origin 主網。** **44005 是目前的公開 Aevum 測試網。** 請務必以本頁面核對 RPC、鏈 ID 與地址——而不是聊天訊息或某個 dApp 的橫幅。
+:::
+
+透過錢包 UI 新增：[將 QDay 新增至你的錢包](/guide/start/add-network)。程式化連接：[錢包整合](/Knowledge/technical/developer-guide/wallet-integration)。代幣：[代幣清單](tokens)。合約：[官方地址](contracts)。
+
+## 手動設定（EIP-3085）
+
+```json title="QDay Origin mainnet (44001)"
+{
+  "chainId": "0xABE1",
+  "chainName": "QDay",
+  "rpcUrls": ["https://rpc.qday.io"],
+  "blockExplorerUrls": ["https://explorer.qday.io"],
+  "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
+}
+```
+
+```json title="QDay Origin testnet (44003)"
+{
+  "chainId": "0xABE3",
+  "chainName": "QDay",
+  "rpcUrls": ["https://rpc.qday.info"],
+  "blockExplorerUrls": ["https://explorer.qday.info"],
+  "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
+}
+```
+
+```json title="QDay Aevum / QDay2 (44005)"
+{
+  "chainId": "0xABE5",
+  "chainName": "QDay2",
+  "rpcUrls": ["https://rpc-test.qday.info"],
+  "blockExplorerUrls": ["https://explorer-test.qday.info"],
+  "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
+}
+```
+
+`chainName` `QDay2` 與文件內的 **Add QDay2** 按鈕一致。面向使用者的文案通常稱為 **QDay Aevum**。

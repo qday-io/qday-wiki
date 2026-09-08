@@ -1,0 +1,9 @@
+{
+  "label": "使用指南",
+  "position": 5,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "handbook/user-guide/index"
+  }
+}

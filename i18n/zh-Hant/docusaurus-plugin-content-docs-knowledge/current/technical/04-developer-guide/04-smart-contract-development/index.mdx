@@ -1,0 +1,130 @@
+---
+title: 智慧合約開發
+draft: false
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 智慧合約開發
+
+QDAY2 完全相容 Solidity。你可以像為 Ethereum 主網撰寫合約一樣撰寫合約。
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HelloQDAY {
+    string public message = "Quantum-safe by default";
+
+    function setMessage(string calldata _msg) external {
+        message = _msg;
+    }
+}
+```
+
+**使用 Hardhat 部署**
+
+```javascript
+// hardhat.config.js
+module.exports = {
+  networks: {
+    qday: {
+      url: "https://rpc.qday.io",
+      accounts: [process.env.PRIVATE_KEY],
+    },
+  },
+};
+```
+
+```bash
+npx hardhat run scripts/deploy.js --network qday
+```
+
+## 定義鏈
+
+<Tabs groupId="lib">
+<TabItem value="viem" label="viem / wagmi">
+
+```ts title="chains.ts"
+import { defineChain } from 'viem';
+
+export const qday = defineChain({
+  id: 44001,
+  name: 'QDay',
+  nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
+  rpcUrls: { default: { http: ['https://rpc.qday.io'] } },
+  blockExplorers: { default: { name: 'QDay', url: 'https://explorer.qday.io' } },
+});
+```
+
+</TabItem>
+<TabItem value="ethers" label="ethers">
+
+```ts title="provider.ts"
+import { JsonRpcProvider } from 'ethers';
+
+export const provider = new JsonRpcProvider('https://rpc.qday.io', {
+  chainId: 44001,
+  name: 'QDay',
+});
+```
+
+</TabItem>
+</Tabs>
+
+Aevum 測試網的鏈 ID 為 `44005`／RPC 為 `https://rpc-test.qday.info`。請參閱[鏈參數](/Knowledge/reference/chains)。
+
+## 讀取合約（代幣餘額）
+
+<Tabs groupId="lib">
+<TabItem value="viem" label="viem">
+
+```ts
+import { createPublicClient, http, erc20Abi } from 'viem';
+import { qday } from './chains';
+
+const client = createPublicClient({ chain: qday, transport: http() });
+
+const balance = await client.readContract({
+  address: '0x…token',
+  abi: erc20Abi,
+  functionName: 'balanceOf',
+  args: ['0x…user'],
+});
+```
+
+</TabItem>
+<TabItem value="ethers" label="ethers">
+
+```ts
+import { Contract } from 'ethers';
+import { provider } from './provider';
+
+const erc20 = new Contract('0x…token', ['function balanceOf(address) view returns (uint256)'], provider);
+const balance = await erc20.balanceOf('0x…user');
+```
+
+</TabItem>
+</Tabs>
+
+## 寫入合約（送出交易）
+
+```ts title="wagmi writeContract"
+import { useWriteContract } from 'wagmi';
+
+const { writeContractAsync } = useWriteContract();
+
+await writeContractAsync({
+  chainId: 44001,
+  address: '0x…contract',
+  abi,
+  functionName: 'doSomething',
+  args: [/* … */],
+});
+```
+
+:::tip 互動範例
+本 wiki 的多個頁面內嵌了這些呼叫的即時版本——請參閱
+[水龍頭](/guide/start/faucet)（連接 + 寫入）與[代幣清單](/Knowledge/reference/tokens)（連接 + 讀取）。
+:::

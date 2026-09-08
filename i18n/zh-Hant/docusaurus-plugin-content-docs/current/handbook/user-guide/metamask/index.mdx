@@ -1,0 +1,139 @@
+---
+sidebar_position: 51
+sidebar_label: MetaMask 錢包
+---
+
+import NextSteps from "@site/src/components/QDay/NextSteps";
+
+# MetaMask 錢包使用指南
+
+## 下載 MetaMask 擴充功能
+
+1. 開啟瀏覽器並造訪 [MetaMask 官方網站](https://metamask.io/)。
+2. 以 Chrome 瀏覽器安裝為例：點擊「[Install MetaMask for Chrome](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn)」，並依提示「新增擴充功能」。
+
+   ![為 Chrome 安裝 MetaMask 擴充功能](/qday/metamask/chrome-metamask-install-en.png)
+
+3. 其他支援的瀏覽器：
+   - [為 Firefox 安裝 MetaMask](https://addons.mozilla.org/zh-CN/firefox/addon/ether-metamask/)
+   - [為 Microsoft Edge 安裝 MetaMask](https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm)
+
+4. 安裝完成後，點擊瀏覽器工具列中的擴充功能圖示開始設定。
+
+## 建立 MetaMask 錢包帳戶
+
+1. 點擊瀏覽器工具列中的 MetaMask 擴充功能圖示開始設定。
+2. 選擇「建立新錢包」。
+3. 依畫面指示建立一組強密碼。
+4. MetaMask 會產生一組私密復原助記詞（Secret Recovery Phrase）。請依正確順序抄下全部 12 個單字，並存放於安全的離線位置。
+5. 依提示驗證助記詞，完成錢包建立。
+
+:::warning[重要]
+私密復原助記詞是你 MetaMask 錢包的主要備份。任何持有此助記詞的人都能控制你的資產。
+建立 MetaMask 錢包時，會以你的私密復原助記詞產生一份新的錢包備份。
+若你之後使用私鑰匯入帳戶，該匯入的帳戶可能無法透過你剛建立的 MetaMask 錢包的私密復原助記詞復原。
+請務必妥善備份任何匯入的私鑰，或保留對建立該帳戶之原始錢包的存取權。
+:::
+
+:::danger[絕對不要做以下事情]
+- 絕不將你的私密復原助記詞分享給任何人
+- 絕不將它輸入任何網站
+- 絕不將它儲存在截圖、電子郵件、聊天應用程式或雲端筆記中
+- 絕不將它交給任何自稱客服的人
+:::
+
+## 取得錢包地址
+
+1. 開啟 MetaMask。
+2. 選擇你要使用的帳戶。
+3. 點擊帳戶名稱或地址區域，即可將錢包地址複製到剪貼簿。
+
+:::info[說明]
+你的錢包地址是公開的，可分享給他人以接收資產。
+:::
+
+:::warning[安全提示]
+在傳送或接收資金前，請務必再次核對貼上的地址。某些惡意軟體會替換你剪貼簿中已複製的錢包地址。
+:::
+
+![複製 MetaMask 錢包地址](/qday/metamask/get-metamask-address3.png)
+
+## 將 QDAY 網路新增至 MetaMask
+
+1. 造訪 [QDay Explorer](https://explorer-test.qday.info)。
+2. 點擊右上角的 **「Add QDay Aevum」**（或對應的網路按鈕），自動將 QDay 新增至 MetaMask。
+3. 若 MetaMask 開啟網路核准提示，請在核准前仔細檢查網路詳細資訊。
+   確認前請核對以下資訊：
+   - 網路名稱：QDay Aevum
+   - RPC URL：https://rpc-test.qday.info
+   - 鏈 ID：44005
+   - 貨幣符號：tQDAY
+   - 區塊瀏覽器 URL：https://explorer-test.qday.info
+
+### 手動新增 QDAY 網路
+
+若自動新增失敗，你可以手動新增網路：
+
+1. 開啟 MetaMask，點擊右上角的「☰」選單，並選擇 **「Networks（網路）」**。
+2. 點擊 **「Add a custom network（新增自訂網路）」** 並填入以下資訊：
+   - **網路名稱**：QDay Aevum
+   - **預設 RPC URL**：`https://rpc-test.qday.info`
+   - **鏈 ID**：44005
+   - **貨幣符號**：tQDAY
+   - **區塊瀏覽器**：`https://explorer-test.qday.info`
+
+   ![手動新增 QDay 網路](/qday/metamask/add-metamask-network-en.png)
+
+3. 點擊 **「Save（儲存）」** 即可切換至 QDay Aevum 網路。
+
+:::info[主網]
+QDay 主網即將推出。主網網路參數將於上線時在此發布。
+:::
+
+## 匯入 QDAY 錢包
+
+1. 首先，從 Abelian 行動應用程式匯出你 QDAY 錢包的私鑰。
+2. 在 MetaMask 中，開啟左上角的帳戶下拉選單，選擇 **「Add wallet（新增錢包）」** > **「Import an account（匯入帳戶）」**。
+
+   ![匯入 QDAY 錢包帳戶](/qday/metamask/import-qday-account.png)
+
+3. 選擇 **「Private Key（私鑰）」**，貼上你備份的私鑰，然後點擊 **「Import（匯入）」**。你的 QDAY 錢包現已成功新增至 MetaMask。
+
+   ![輸入 QDAY 錢包私鑰](/qday/metamask/input-qday-privatekey-en.png)
+
+## 將 ERC20 代幣新增至 MetaMask
+
+### 將 USD8 代幣新增至 MetaMask
+
+1. 確認 MetaMask 已連接至 QDAY 網路。
+2. 在 **「Tokens（代幣）」** 分頁下，點擊 **「Import tokens（匯入代幣）」**。
+
+   ![MetaMask 匯入 USD8 代幣 1](/qday/metamask/import-tokens1.png)
+
+3. 將下方清單中對應的代幣合約地址貼入「Token contract address（代幣合約地址）」欄位。
+
+   ![MetaMask 匯入 USD8 代幣 2](/qday/metamask/import-tokens2.png)
+
+4. 其餘資訊會自動填入。點擊 **「Next（下一步）」**，然後點擊 **「Import（匯入）」**。
+
+   ![MetaMask 匯入 USD8 代幣 3](/qday/metamask/import-tokens3.png)
+
+### 新增 WQDAY 與 WABEL 代幣
+
+#### 代幣合約地址清單
+
+| 合約名稱 | 代幣合約地址                               |
+| ------------- | ------------------------------------------ |
+| **USD8**      | 0x668FaAFd6b363d6cED62491BfCBE2A39da3D14cB |
+| **WQDAY**     | 0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660 |
+| **WABEL**     | 0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882 |
+
+提示：依照上述相同步驟，即可將 WQDAY 與 WABEL 代幣新增至 MetaMask。
+
+## 下一步
+
+<NextSteps steps={[
+  { title: "取得測試網代幣", desc: "領取 QDAY 以支付 Gas", to: "/guide/start/faucet" },
+  { title: "兌換代幣", desc: "交易 WABEL / QDAY / USD8", to: "/guide/handbook/user-guide/swap" },
+  { title: "遷移至 QDay", desc: "單向移轉你的資產", to: "/Knowledge/migration/overview" },
+]} />

@@ -20,7 +20,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Explorer": {
-    "message": "Explorer",
+    "message": "區塊瀏覽器",
     "description": "Navbar item with label Explorer"
   },
   "item.label.Portal": {
@@ -28,19 +28,19 @@
     "description": "Navbar item with label Portal"
   },
   "item.label.Swap": {
-    "message": "Swap",
+    "message": "兌換",
     "description": "Navbar item with label Swap"
   },
   "item.label.Staking": {
-    "message": "Staking",
+    "message": "質押",
     "description": "Navbar item with label Staking"
   },
   "item.label.Bridge": {
-    "message": "Bridge",
+    "message": "跨鏈橋",
     "description": "Navbar item with label Bridge"
   },
   "item.label.Faucet": {
-    "message": "Faucet",
+    "message": "水龍頭",
     "description": "Navbar item with label Faucet"
   },
   "logo.alt": {
@@ -50,5 +50,13 @@
   "item.label.Discord": {
     "message": "Discord",
     "description": "Navbar item with label Discord"
+  },
+  "item.label.User Guide": {
+    "message": "使用指南",
+    "description": "Navbar item with label User Guide"
+  },
+  "item.label.Technical": {
+    "message": "技術文件",
+    "description": "Navbar item with label Technical"
   }
 }

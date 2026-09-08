@@ -1,0 +1,71 @@
+---
+sidebar_position: 53
+sidebar_label: 兌換
+---
+
+import NextSteps from "@site/src/components/QDay/NextSteps";
+
+import AddTokenButton from '@site/src/components/QDay/AddTokenButton';
+
+# QDay Swap 使用指南
+
+QDay Swap 是基於 QDay 區塊鏈的去中心化交易平台，讓你能快速兌換各種代幣，並透過提供流動性賺取收益。
+
+:::tip[將兌換代幣新增至你的錢包]
+<AddTokenButton symbol="USD8" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" decimals={6} />
+&nbsp;<AddTokenButton symbol="WABEL" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" decimals={18} />
+&nbsp;<AddTokenButton symbol="WQDAY" address="0x31ff878190Cf74E37d963F77599abB674d27A787" decimals={18} />
+:::
+
+:::tip[前置條件]
+使用前，請確認你已安裝並設定好 [MetaMask 錢包](/guide/handbook/user-guide/metamask)，並已 [新增 QDAY 網路](/guide/handbook/user-guide/metamask#將-qday-網路新增至-metamask)。
+:::
+
+## 代幣兌換
+
+QDay Swap 支援三種代幣之間的即時兌換：**WABEL**、**QDAY** 與 **USD8**。
+
+**操作步驟：**
+1. 造訪 [QDay Swap](https://portal.qday.io/en/qday-swap) 並連接你的 MetaMask 錢包（請確認已切換至 QDAY 網路）。
+2. 在「Swap」介面中選擇你要支付與接收的代幣。
+3. 輸入數量，系統會自動計算匯率與預估可收到的代幣數量。
+4. 點擊「Swap」，並在錢包中確認授權與交易，即可完成流程。
+
+![QDAY Swap](/qday/swap/swap_en.png)
+
+## 流動性池
+
+透過向流動性池提供代幣，你可以成為流動性提供者（LP）並賺取交易手續費收益。「Liquidity Pools（流動性池）」頁面包含兩個分頁：「Pool Statistics（池統計）」與「Add Liquidity（新增流動性）」：
+
+### 池統計
+在這裡可以檢視不同流動性池的資料。你可以透過下拉選單在以下三個交易對之間切換：
+- **QDAY / USD8**
+- **QDAY / WABEL**
+- **WABEL / USD8**
+
+![池統計](/qday/swap/liquidity_pool_en.png)
+
+### 新增流動性
+**操作步驟：**
+1. 切換至「Add Liquidity」分頁，在 **WABEL**、**QDAY** 與 **USD8** 之間選擇你要提供流動性的代幣對。
+2. 選擇適當的手續費等級（預設建議為 0.30% 或 0.05%），然後點擊「Continue」按鈕。
+3. 在接下來的介面中（如下圖所示，以 QDAY/USD8 為例），輸入你要新增的代幣數量，系統會依目前匯率自動計算另一種代幣所需的數量。
+4. 點擊底部的「Add Liquidity」按鈕，在錢包中授權並確認交易。完成後，你將收到對應的 LP 份額。
+
+![新增流動性](/qday/swap/add_liquidity_en.png)
+
+## 管理部位與交易紀錄
+
+- **My Positions（我的部位）**：在「Liquidity Pools」頁面點擊「My Positions」，可檢視你目前提供的流動性詳情，並可隨時執行「Remove Liquidity（移除流動性）」操作。
+- **Transaction History（交易紀錄）**：點擊右上角的錢包地址並選擇「Transaction History」，可檢視你所有的兌換與流動性操作紀錄。
+
+:::danger[安全警告]
+請務必透過官方連結（https://portal.qday.io/en/qday-swap）存取 QDay Swap，以防範釣魚網站。進行大額交易前，建議先以小額測試流程。
+:::
+
+## 下一步
+
+<NextSteps steps={[
+  { title: "QDAY 質押", desc: "用你的代幣賺取收益", to: "/guide/handbook/user-guide/qday-staking" },
+  { title: "鏈參數", desc: "將 QDay 新增至你的錢包", to: "/Knowledge/reference/chains" },
+]} />

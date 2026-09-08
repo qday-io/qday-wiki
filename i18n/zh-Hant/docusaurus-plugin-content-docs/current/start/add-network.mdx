@@ -1,0 +1,37 @@
+---
+sidebar_position: 1
+title: 將 QDay 新增至您的錢包
+---
+
+import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
+import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
+
+# 將 QDay 新增至您的錢包
+
+一鍵將 MetaMask 連接至 QDay。這是一個**即時**按鈕——純 Markdown 的 wiki 做不到的互動元素：
+
+<AddNetworkButton network="qday2" />
+
+新增完成後，您可以直接在這份文件中看到網路正在運行：
+
+<LiveChainStatus network="qday2" />
+
+:::tip[一鍵 vs 手動]
+此按鈕使用 EIP-3085（`wallet_addEthereumChain`）——您的錢包會在新增前顯示確認畫面，列出確切的參數。未經您的核准，不會新增任何內容。
+:::
+
+## 手動參數
+
+若您偏好手動新增（MetaMask → 網路 → 手動新增網路）：
+
+| 欄位 | 值 |
+|---|---|
+| 網路名稱 | QDay Aevum |
+| 鏈 ID | `44005` |
+| RPC URL | `https://rpc-test.qday.info` |
+| 區塊瀏覽器 | `https://explorer-test.qday.info` |
+| 貨幣 | tQDAY |
+
+:::warning[測試網]
+以上為目前的**測試網**端點——主網數值將於上線時公布。
+:::

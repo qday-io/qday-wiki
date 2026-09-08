@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.User Guide": {
-    "message": "User Guide",
+    "message": "使用指南",
     "description": "The label for category 'User Guide' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.migration": {
@@ -20,19 +20,35 @@
     "description": "The label for category 'start' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Get Started": {
-    "message": "Get Started",
+    "message": "快速開始",
     "description": "The label for category 'Get Started' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Migration": {
-    "message": "Migration",
+    "message": "遷移",
     "description": "The label for category 'Migration' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Reference": {
-    "message": "Reference",
+    "message": "參考資料",
     "description": "The label for category 'Reference' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Developers": {
-    "message": "Developers",
+    "message": "開發者",
     "description": "The label for category 'Developers' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.guideSidebar.category.Get Started": {
+    "message": "開始使用",
+    "description": "The label for category 'Get Started' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Handbook": {
+    "message": "手冊",
+    "description": "The label for category 'Handbook' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.User Guide": {
+    "message": "使用指南",
+    "description": "The label for category 'User Guide' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Roadmap": {
+    "message": "路線圖",
+    "description": "The label for category 'Roadmap' in sidebar 'guideSidebar'"
   }
 }

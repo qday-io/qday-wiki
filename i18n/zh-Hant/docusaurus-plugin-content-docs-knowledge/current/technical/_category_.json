@@ -1,0 +1,9 @@
+{
+  "label": "技術文件",
+  "position": 1,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "QDAY 的技術與開發者文件 —— 架構、協定、營運、安全與參考資料。"
+  }
+}
