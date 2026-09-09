@@ -37,6 +37,7 @@ const config: Config = {
           routeBasePath: 'guide',
           sidebarPath: './sidebars-guide.ts',
           editUrl: 'https://github.com/qday-io/qday-wiki/tree/main/',
+          editLocalizedFiles: true, // zh-Hant pages link to i18n/ files, not the English source
         },
         blog: false, // pure wiki; enable later for announcements
         theme: { customCss: './src/css/custom.css' },
@@ -54,6 +55,7 @@ const config: Config = {
         routeBasePath: 'Knowledge',
         sidebarPath: './sidebars-knowledge.ts',
         editUrl: 'https://github.com/qday-io/qday-wiki/tree/main/',
+        editLocalizedFiles: true,
       },
     ],
     // Keep old /docs/* URLs working after the split into /guide + /Knowledge.
