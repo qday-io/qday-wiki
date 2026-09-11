@@ -50,5 +50,13 @@
   "sidebar.guideSidebar.category.Roadmap": {
     "message": "路線圖",
     "description": "The label for category 'Roadmap' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Handbook.link.generated-index.title": {
+    "message": "手冊",
+    "description": "The generated-index page title for category Handbook in sidebar guideSidebar"
+  },
+  "sidebar.guideSidebar.category.Handbook.link.generated-index.description": {
+    "message": "QDay 上的日常操作：錢包、質押、兌換與跨鏈橋。",
+    "description": "The generated-index page description for category Handbook in sidebar guideSidebar"
   }
 }
