@@ -3,7 +3,9 @@
   "position": 3,
   "collapsed": false,
   "link": {
-    "type": "doc",
-    "id": "handbook/index"
+    "type": "generated-index",
+    "title": "Handbook",
+    "description": "Everyday tasks on QDay — wallets, staking, swap, and the bridge.",
+    "slug": "/handbook"
   }
 }
