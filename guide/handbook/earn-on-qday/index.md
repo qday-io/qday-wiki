@@ -13,7 +13,7 @@ QDay airdrops reward **active QDay and Abelian community members**. Eligibility 
 
 **How to claim**
 
-1. Watch announcements on official channels: [Discord](https://discord.gg/Rrb33mC3Kc), [X (@QDayOfficial)](https://x.com/QDayOfficial), and the [QDay Portal](https://portal.qday.io).
+1. Watch announcements on official channels: [Telegram]](https://web.telegram.org/k/#@qday_official_group)), [X (@QDayOfficial)](https://x.com/QDayOfficial), and the [QDay Portal](https://portal.qday.io).
 2. When a campaign opens, go to the **official airdrop portal** linked from those channels (reached from [portal.qday.io](https://portal.qday.io) — never from a random DM or a lookalike URL).
 3. Connect the same wallet you used on QDay / Abelian (see [MetaMask](/guide/handbook/user-guide/metamask) or [Abelian Mobile Wallet](/guide/handbook/user-guide/abelian-mobile-wallet)).
 4. Check eligibility, review the terms, and claim. Confirm the transaction in your wallet. Gas is paid in QDAY.
