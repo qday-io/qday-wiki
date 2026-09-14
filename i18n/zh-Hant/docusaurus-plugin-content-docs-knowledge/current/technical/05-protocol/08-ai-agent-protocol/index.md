@@ -5,7 +5,7 @@ draft: false
 
 # AI 代理協定
 
-AI 代理協定定義了自主代理如何與 QDAY2 合約及外部 AI 推論互動。
+AI 代理協定定義了自主代理如何與 QDay Aevum 合約及外部 AI 推論互動。
 
 **意圖宣告（Intent Declaration）** — 使用者透過提交已簽章的 `Intent` 結構來宣告意圖，內容包含：目標描述（UTF-8）、觸發條件、授權操作（以合約呼叫選擇器編碼）、資源限制與到期時間。意圖會儲存在鏈上的 Intent Registry 合約中。
 

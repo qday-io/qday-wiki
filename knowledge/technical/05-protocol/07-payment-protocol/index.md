@@ -5,7 +5,7 @@ draft: false
 
 # Payment Protocol
 
-The QDAY2 payment protocol defines a lifecycle for structured, verifiable payments.
+The QDay Aevum payment protocol defines a lifecycle for structured, verifiable payments.
 
 **Payment Session** — A payment session is initiated when a payer creates an on-chain payment intent specifying: payee address, amount, currency, expiry, and optional metadata hash. The session ID is derived from these parameters.
 

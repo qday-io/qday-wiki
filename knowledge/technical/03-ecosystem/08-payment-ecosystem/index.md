@@ -5,7 +5,7 @@ draft: false
 
 # Payment Ecosystem
 
-**PQUSD** — A USD-pegged stablecoin native to QDAY2. PQUSD is the primary currency for the QDAY2 payment layer and is used for invoices, subscriptions, and agent micropayments.
+**PQUSD** — A USD-pegged stablecoin native to QDay Aevum. PQUSD is the primary currency for the QDay Aevum payment layer and is used for invoices, subscriptions, and agent micropayments.
 
 | Contract | Address |
 |----------|---------|

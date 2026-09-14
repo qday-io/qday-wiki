@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ensureQday2, getProvider } from './wallet';
 import ConnectButtons from './ConnectButtons';
 
-// Real testnet faucet embedded in the docs: connect wallet → claim QDAY on QDay2.
+// Real testnet faucet embedded in the docs: connect wallet → claim QDAY on QDay Aevum.
 // Calls the deployed QDayFaucet.claim(address) — selector 0x1e83409a.
 const FAUCET = '0x73bd8b412744386DFf7f5651e9765BCcee546C81';
 
@@ -40,7 +40,7 @@ export default function FaucetWidget() {
     }}>
       <div style={{ fontWeight: 650, marginBottom: 4 }}>Get testnet QDAY</div>
       <div style={{ fontSize: 14, color: 'var(--ifm-color-emphasis-700)', marginBottom: 12 }}>
-        {addr ? <>Connected <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code></> : 'Connect your wallet to claim gas on QDay2.'}
+        {addr ? <>Connected <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code></> : 'Connect your wallet to claim gas on QDay Aevum.'}
       </div>
       {addr ? (
         <button onClick={claim} disabled={state === 'busy'} style={{

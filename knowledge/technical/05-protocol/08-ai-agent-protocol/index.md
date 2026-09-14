@@ -5,7 +5,7 @@ draft: false
 
 # AI Agent Protocol
 
-The AI Agent Protocol defines how autonomous agents interact with QDAY2 contracts and external AI inference.
+The AI Agent Protocol defines how autonomous agents interact with QDay Aevum contracts and external AI inference.
 
 **Intent Declaration** — Users declare an intent by submitting a signed `Intent` struct: goal description (UTF-8), trigger conditions, authorized actions (encoded as contract call selectors), resource limits, and expiry. Intents are stored on-chain in the Intent Registry contract.
 

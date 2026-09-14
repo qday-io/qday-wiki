@@ -5,7 +5,7 @@ draft: false
 
 # Network Topology
 
-QDAY2 operates across four logical layers:
+QDay Aevum operates across four logical layers:
 
 **Client Layer** — Wallets, dApps, and RPC clients connect to the QDAY Node (cdk-erigon) JSON-RPC endpoint. The RPC Gateway load-balances requests across multiple read replicas.
 
@@ -13,4 +13,4 @@ QDAY2 operates across four logical layers:
 
 **DA / Settlement Layer** — The Abelian Plus Node provides data availability using `reth` (execution) and `lighthouse` (consensus). All zkEVM contracts — `PolygonZkEVMBridge`, `PolygonRollupManager`, `GlobalExitRoot`, and `Verifier` — are deployed here.
 
-**L1 Record Layer** — The Committer writes batch status roots and rollup summaries directly to the Abelian blockchain. This is the quantum-resistant anchor for all QDAY2 state.
+**L1 Record Layer** — The Committer writes batch status roots and rollup summaries directly to the Abelian blockchain. This is the quantum-resistant anchor for all QDay Aevum state.

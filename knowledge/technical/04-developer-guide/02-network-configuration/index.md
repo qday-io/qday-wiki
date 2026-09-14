@@ -5,11 +5,11 @@ draft: false
 
 # Network Configuration
 
-QDay is a quantum-safe, EVM-compatible Layer 2. Two networks are relevant today: **Origin** (source) and **Aevum / QDay2** (destination). Live IDs, RPCs, and explorers: [Chain parameters](/Knowledge/reference/chains).
+QDay is a quantum-safe, EVM-compatible Layer 2. Two networks are relevant today: **Origin** (source) and **QDay Aevum** (destination). Live IDs, RPCs, and explorers: [Chain parameters](/Knowledge/reference/chains).
 
 ```mermaid
 flowchart LR
-  QDay["QDay Origin (44003)\nsource"] -->|migrate 1:1| QDay2["QDay2 Aevum (44005)\ndestination"]
+  QDay["QDay Origin (44003)\nsource"] -->|migrate 1:1| Aevum["QDay Aevum (44005)\ndestination"]
 ```
 
 | | QDay Origin (mainnet) | QDay Origin (testnet) | QDay Aevum (testnet) |

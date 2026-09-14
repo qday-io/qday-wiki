@@ -5,7 +5,7 @@ draft: false
 
 # Smart Account API
 
-ERC-4337 Smart Accounts on QDAY2. UserOperations go through the **EntryPoint**; the bundler is Alto. Guide: [ERC-4337 Development](/Knowledge/technical/developer-guide/erc-4337-development). Protocol: [Account Abstraction Protocol](/Knowledge/technical/protocol/account-abstraction-protocol).
+ERC-4337 Smart Accounts on QDay Aevum. UserOperations go through the **EntryPoint**; the bundler is Alto. Guide: [ERC-4337 Development](/Knowledge/technical/developer-guide/erc-4337-development). Protocol: [Account Abstraction Protocol](/Knowledge/technical/protocol/account-abstraction-protocol).
 
 ## SDK (`@qday-io/sdk/aa`)
 

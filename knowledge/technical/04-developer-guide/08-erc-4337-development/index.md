@@ -19,7 +19,7 @@ Use the EntryPoint address from the [Reference](/Knowledge/technical/reference) 
 
 ## Bundler
 
-QDAY2 runs the [Alto](https://github.com/pimlicolabs/alto) bundler. Send UserOperations to the bundler's RPC endpoint:
+QDay Aevum runs the [Alto](https://github.com/pimlicolabs/alto) bundler. Send UserOperations to the bundler's RPC endpoint:
 
 ```typescript
 import { createBundlerClient } from "permissionless";

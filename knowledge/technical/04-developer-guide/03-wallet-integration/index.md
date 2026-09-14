@@ -5,7 +5,7 @@ draft: false
 
 # Wallet Integration
 
-QDAY2 supports two wallet types:
+QDay Aevum supports two wallet types:
 
 **EOA Wallets** — Standard Ethereum externally-owned accounts (ECDSA). MetaMask, Frame, and any wallet that supports custom EVM chains work out of the box. Connect by adding the network from [Network Configuration](/Knowledge/technical/developer-guide/network-configuration).
 

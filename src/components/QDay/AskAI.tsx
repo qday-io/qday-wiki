@@ -8,7 +8,7 @@ import {translate} from '@docusaurus/Translate';
 type Msg = { role: 'user' | 'assistant'; text: string };
 
 const SUGGESTIONS = [
-  translate({id: 'ai.q1', message: 'How do I add QDay2 to MetaMask?'}),
+  translate({id: 'ai.q1', message: 'How do I add QDay Aevum to MetaMask?'}),
   translate({id: 'ai.q2', message: 'How does migration work?'}),
   translate({id: 'ai.q3', message: 'What are the RPC endpoints?'}),
 ];

@@ -5,7 +5,7 @@ draft: false
 
 # Payment Architecture
 
-QDAY2 includes a first-class payment layer designed for high-frequency, low-latency commerce and agent-driven micropayments.
+QDay Aevum includes a first-class payment layer designed for high-frequency, low-latency commerce and agent-driven micropayments.
 
 **Payment Gateway** — A unified API layer that abstracts the underlying smart contract interactions. Merchants and dApps interact with the Payment Gateway to create payment requests without writing contract code.
 

@@ -5,7 +5,7 @@ draft: false
 
 # 錢包整合
 
-QDAY2 支援兩種錢包類型：
+QDay Aevum 支援兩種錢包類型：
 
 **EOA 錢包** — 標準的 Ethereum 外部擁有帳戶（ECDSA）。MetaMask、Frame 以及任何支援自訂 EVM 鏈的錢包皆可直接使用。請依照[網路設定](/Knowledge/technical/developer-guide/network-configuration)新增網路以進行連接。
 

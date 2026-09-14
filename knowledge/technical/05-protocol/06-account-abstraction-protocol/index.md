@@ -5,7 +5,7 @@ draft: false
 
 # Account Abstraction Protocol
 
-QDAY2 implements **ERC-4337** account abstraction without requiring changes to the core EVM protocol.
+QDay Aevum implements **ERC-4337** account abstraction without requiring changes to the core EVM protocol.
 
 **UserOperation** — Instead of a standard Ethereum transaction, users construct a `UserOperation` struct containing: `sender` (Smart Account address), `nonce`, `initCode` (for account deployment), `callData`, `callGasLimit`, `verificationGasLimit`, `preVerificationGas`, `maxFeePerGas`, `maxPriorityFeePerGas`, `paymasterAndData`, and `signature`.
 

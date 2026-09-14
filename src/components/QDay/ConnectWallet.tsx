@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { connectAbelian, ensureQday2 } from './wallet';
 
-// Homepage-hero button, parallel to <AddNetworkButton> ("Add QDay2 to Wallet").
-// Connects Abelian Wallet Pro over WalletConnect, then adds/switches to QDay2 —
-// so both hero buttons read "Add QDay2 to <wallet>".
+// Homepage-hero button, parallel to <AddNetworkButton> ("Add QDay Aevum to Wallet").
+// Connects Abelian Wallet Pro over WalletConnect, then adds/switches to QDay Aevum —
+// so both hero buttons read "Add QDay Aevum to <wallet>".
 
 export default function ConnectWallet() {
   const [addr, setAddr] = useState<string | null>(null);
@@ -47,7 +47,7 @@ export default function ConnectWallet() {
       padding: '10px 18px', fontWeight: 600, fontSize: 15,
       cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
     }} title={msg || undefined}>
-      {state === 'busy' ? 'Check your wallet…' : 'Add QDay2 to Abelian Wallet Pro'}
+      {state === 'busy' ? 'Check your wallet…' : 'Add QDay Aevum to Abelian Wallet Pro'}
     </button>
   );
 }

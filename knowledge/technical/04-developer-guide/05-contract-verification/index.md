@@ -5,7 +5,7 @@ draft: false
 
 # Contract Verification
 
-Verify contracts on the QDAY2 Explorer using the standard Blockscout verification flow:
+Verify contracts on the QDay Aevum Explorer using the standard Blockscout verification flow:
 
 ```bash
 forge verify-contract \

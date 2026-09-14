@@ -5,11 +5,11 @@ draft: false
 
 # Precompiled Contracts
 
-QDAY2 adds post-quantum cryptography precompiles on top of the standard EVM precompiles.
+QDay Aevum adds post-quantum cryptography precompiles on top of the standard EVM precompiles.
 
 ## Cryptography
 
-Standard Ethereum precompiles (`ecrecover`, SHA-256, modexp, and the others) behave as on Ethereum. QDAY2 additionally exposes lattice-based signature verification so contracts can check ML-DSA-65 and hybrid signatures without a Solidity implementation of the scheme.
+Standard Ethereum precompiles (`ecrecover`, SHA-256, modexp, and the others) behave as on Ethereum. QDay Aevum additionally exposes lattice-based signature verification so contracts can check ML-DSA-65 and hybrid signatures without a Solidity implementation of the scheme.
 
 ## ML-DSA-65 Verify
 

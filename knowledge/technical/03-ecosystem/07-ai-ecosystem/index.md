@@ -7,7 +7,7 @@ draft: false
 
 **Agent SDK** — `@qday-io/sdk/agent` provides primitives for creating, deploying, and managing on-chain AI agents. Agents operate through ERC-4337 Smart Accounts using session keys for authorization.
 
-**MCP Servers** — QDAY2 AI agents connect to external AI inference through MCP (Model Context Protocol) servers. Any MCP-compatible AI provider can be plugged in as the agent's reasoning backend.
+**MCP Servers** — QDay Aevum AI agents connect to external AI inference through MCP (Model Context Protocol) servers. Any MCP-compatible AI provider can be plugged in as the agent's reasoning backend.
 
 **Intent Registry** — An on-chain registry where users declare high-level intents (goals + constraints). The Intent Engine interprets intents and translates them into concrete transaction sequences.
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// Interactive doc component: one-click "Add QDay2 to Wallet" via EIP-3085.
+// Interactive doc component: one-click "Add QDay Aevum to Wallet" via EIP-3085.
 // This is the kind of live element MDX/Docusaurus enables inside docs — a plain
 // Markdown site (MkDocs) can only show the params in a table.
 
@@ -9,9 +9,9 @@ type Net = { chainIdHex: string; chainName: string; rpc: string; explorer: strin
 const NETWORKS: Record<string, Net> = {
   qday2: {
     chainIdHex: '0xABE5', // 44005
-    chainName: 'QDay2',
+    chainName: 'QDay Aevum',
     rpc: 'https://rpc-test.qday.info',
-    explorer: 'https://explorer.qday.info',
+    explorer: 'https://explorer-test.qday.info',
   },
   qday: {
     chainIdHex: '0xABE1', // 44001 Origin mainnet

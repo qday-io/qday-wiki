@@ -74,15 +74,15 @@ export async function ensureQday2(): Promise<void> {
     await eth.request({
       method: 'wallet_addEthereumChain',
       params: [{
-        chainId: QDAY2.chainIdHex, chainName: 'QDay2',
-        rpcUrls: [QDAY2.rpc], blockExplorerUrls: ['https://explorer.qday.info'],
+        chainId: QDAY2.chainIdHex, chainName: 'QDay Aevum',
+        rpcUrls: [QDAY2.rpc], blockExplorerUrls: ['https://explorer-test.qday.info'],
         nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
       }],
     });
   }
 }
 
-// Minimal JSON-RPC read against the QDay2 RPC (no wallet needed).
+// Minimal JSON-RPC read against the QDay Aevum RPC (no wallet needed).
 export async function rpcCall(method: string, params: any[]): Promise<any> {
   const res = await fetch(QDAY2.rpc, {
     method: 'POST',

@@ -5,7 +5,7 @@ draft: false
 
 # Smart Account API
 
-QDAY2 上的 ERC-4337 智慧帳戶（Smart Account）。UserOperation 會經過 **EntryPoint**；bundler 為 Alto。指南：[ERC-4337 開發](/Knowledge/technical/developer-guide/erc-4337-development)。協定：[帳戶抽象協定](/Knowledge/technical/protocol/account-abstraction-protocol)。
+QDay Aevum 上的 ERC-4337 智慧帳戶（Smart Account）。UserOperation 會經過 **EntryPoint**；bundler 為 Alto。指南：[ERC-4337 開發](/Knowledge/technical/developer-guide/erc-4337-development)。協定：[帳戶抽象協定](/Knowledge/technical/protocol/account-abstraction-protocol)。
 
 ## SDK（`@qday-io/sdk/aa`）
 

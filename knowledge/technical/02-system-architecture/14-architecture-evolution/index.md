@@ -5,7 +5,7 @@ draft: false
 
 # Architecture Evolution
 
-QDAY2's architecture is designed to evolve in two phases:
+QDay Aevum's architecture is designed to evolve in two phases:
 
 **Phase 1 (current)** — L1-assisted ZK rollups with EVM compatibility. Ledger security is inherited from Abelian via the Committer's status root submissions. Account keys remain ECDSA.
 
