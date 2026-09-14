@@ -5,7 +5,7 @@ draft: false
 
 # Ecosystem Overview
 
-QDAY2 is an EVM-compatible, quantum-resistant Layer 2. Its ecosystem is designed around four application pillars:
+QDay Aevum is an EVM-compatible, quantum-resistant Layer 2. Its ecosystem is designed around four application pillars:
 
 1. **ZK Rollup Infrastructure** — fast, low-cost transactions anchored to Abelian's quantum-resistant Layer 1
 2. **Post-Quantum Accounts** — ML-DSA-65-based accounts and wallets for Phase 2

@@ -5,9 +5,9 @@ draft: false
 
 # 錢包生態系
 
-**EOA 錢包**——由 ECDSA 保護的標準 Ethereum 外部擁有帳戶。任何 Ethereum 錢包（MetaMask、Rabby、硬體錢包）只要新增網路即可在 QDAY2 上使用。即使是 EOA 帳戶，QDAY2 也從 Abelian L1 繼承了帳本層級的抗量子能力。
+**EOA 錢包**——由 ECDSA 保護的標準 Ethereum 外部擁有帳戶。任何 Ethereum 錢包（MetaMask、Rabby、硬體錢包）只要新增網路即可在 QDay Aevum 上使用。即使是 EOA 帳戶，QDay Aevum 也從 Abelian L1 繼承了帳本層級的抗量子能力。
 
-**智慧帳戶錢包**——ERC-4337 智慧帳戶提供最佳的使用者體驗：免 Gas 交易（由 Paymaster 贊助）、一鍵批次交易、用於週期性操作的 session key，以及可程式化的多簽恢復機制。QDAY2 智慧帳戶 SDK 讓部署與操作智慧帳戶如同連接一般錢包一樣簡單。
+**智慧帳戶錢包**——ERC-4337 智慧帳戶提供最佳的使用者體驗：免 Gas 交易（由 Paymaster 贊助）、一鍵批次交易、用於週期性操作的 session key，以及可程式化的多簽恢復機制。QDay Aevum 智慧帳戶 SDK 讓部署與操作智慧帳戶如同連接一般錢包一樣簡單。
 
 **後量子錢包（第二階段）**——在第二階段，使用者將能直接在錢包中產生 ML-DSA-65 帳戶。單一 BIP-39 助記詞會同時衍生出標準 ECDSA 帳戶與抗量子的 ML-DSA-65 帳戶，讓資產能順暢地從古典安全性遷移至後量子安全性。
 

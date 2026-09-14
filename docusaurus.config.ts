@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'QDay Wiki',
-  tagline: 'QDay2 — the quantum-safe Layer2',
+  tagline: 'QDay Aevum — the quantum-safe Layer2',
   favicon: 'img/favicon.ico',
 
   future: { v4: true },

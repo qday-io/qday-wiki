@@ -5,7 +5,7 @@ draft: false
 
 # JSON-RPC API
 
-QDAY2 nodes (`cdk-erigon`) speak **Ethereum JSON-RPC**. Wallets, Foundry, Hardhat, ethers, viem, and MetaMask use the `eth_` / `net_` / `web3_` methods unchanged. Polygon CDK adds a **`zkevm_`** namespace for batch status, witnesses, and Global Exit Root — the parts that have no Ethereum equivalent.
+QDay Aevum nodes (`cdk-erigon`) speak **Ethereum JSON-RPC**. Wallets, Foundry, Hardhat, ethers, viem, and MetaMask use the `eth_` / `net_` / `web3_` methods unchanged. Polygon CDK adds a **`zkevm_`** namespace for batch status, witnesses, and Global Exit Root — the parts that have no Ethereum equivalent.
 
 Live HTTP / WebSocket URLs: [Chain parameters](/Knowledge/reference/chains).
 
@@ -23,7 +23,7 @@ Public RPC should expose `eth_*` (and typically `net_*` / `web3_*`). `zkevm_getW
 
 ## Ethereum JSON-RPC (`eth`)
 
-Methods below follow the [Ethereum Execution APIs](https://ethereum.github.io/execution-apis/). QDAY2 is EVM-compatible; these work the same as on Ethereum.
+Methods below follow the [Ethereum Execution APIs](https://ethereum.github.io/execution-apis/). QDay Aevum is EVM-compatible; these work the same as on Ethereum.
 
 ### Chain and client
 
@@ -34,7 +34,7 @@ Methods below follow the [Ethereum Execution APIs](https://ethereum.github.io/ex
 | `eth_blockNumber` | — | Latest L2 block number (hex) |
 | `eth_protocolVersion` | — | Ethereum protocol version |
 | `eth_coinbase` | — | Sequencer coinbase (fee recipient) |
-| `net_version` | — | Network ID (decimal string; matches chain ID on QDAY2) |
+| `net_version` | — | Network ID (decimal string; matches chain ID on QDay Aevum) |
 | `net_listening` | — | Whether the node is listening for peers |
 | `net_peerCount` | — | Connected peer count (hex) |
 | `web3_clientVersion` | — | Client version string (`cdk-erigon/…`) |
@@ -59,7 +59,7 @@ Methods below follow the [Ethereum Execution APIs](https://ethereum.github.io/ex
 | `eth_getBlockTransactionCountByHash` | `hash` | Tx count in the block |
 | `eth_getBlockTransactionCountByNumber` | `block` | Tx count in the block |
 | `eth_getBlockReceipts` | `block` | All receipts in the block |
-| `eth_getUncleCountByBlockHash` | `hash` | Always `0x0` on QDAY2 (no uncles) |
+| `eth_getUncleCountByBlockHash` | `hash` | Always `0x0` on QDay Aevum (no uncles) |
 | `eth_getUncleCountByBlockNumber` | `block` | Always `0x0` |
 | `eth_getUncleByBlockHashAndIndex` | `hash`, `index` | Always `null` |
 | `eth_getUncleByBlockNumberAndIndex` | `block`, `index` | Always `null` |
@@ -75,7 +75,7 @@ Methods below follow the [Ethereum Execution APIs](https://ethereum.github.io/ex
 | `eth_getTransactionReceipt` | `hash` | Receipt (status, logs, gas used) |
 | `eth_pendingTransactions` | — | Txs in the local pool (if enabled) |
 
-`eth_sendTransaction` / `eth_sign` are wallet methods. Public QDAY2 RPC expects **signed** payloads via `eth_sendRawTransaction`.
+`eth_sendTransaction` / `eth_sign` are wallet methods. Public QDay Aevum RPC expects **signed** payloads via `eth_sendRawTransaction`.
 
 ### Call and gas
 

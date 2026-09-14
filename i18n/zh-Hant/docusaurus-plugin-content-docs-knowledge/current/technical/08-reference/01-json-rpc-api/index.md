@@ -5,7 +5,7 @@ draft: false
 
 # JSON-RPC API
 
-QDAY2 節點（`cdk-erigon`）使用 **Ethereum JSON-RPC**。錢包、Foundry、Hardhat、ethers、viem 與 MetaMask 可直接沿用 `eth_` / `net_` / `web3_` 方法，無需修改。Polygon CDK 額外提供 **`zkevm_`** 命名空間，用於批次狀態、witness 與 Global Exit Root——這些是 Ethereum 沒有對應項的部分。
+QDay Aevum 節點（`cdk-erigon`）使用 **Ethereum JSON-RPC**。錢包、Foundry、Hardhat、ethers、viem 與 MetaMask 可直接沿用 `eth_` / `net_` / `web3_` 方法，無需修改。Polygon CDK 額外提供 **`zkevm_`** 命名空間，用於批次狀態、witness 與 Global Exit Root——這些是 Ethereum 沒有對應項的部分。
 
 即時 HTTP / WebSocket URL：[鏈參數](/Knowledge/reference/chains)。
 
@@ -23,7 +23,7 @@ curl -s https://rpc.qday.io \
 
 ## Ethereum JSON-RPC（`eth`）
 
-以下方法遵循 [Ethereum Execution APIs](https://ethereum.github.io/execution-apis/)。QDAY2 與 EVM 相容；這些方法的行為與 Ethereum 上相同。
+以下方法遵循 [Ethereum Execution APIs](https://ethereum.github.io/execution-apis/)。QDay Aevum 與 EVM 相容；這些方法的行為與 Ethereum 上相同。
 
 ### 鏈與用戶端
 
@@ -34,7 +34,7 @@ curl -s https://rpc.qday.io \
 | `eth_blockNumber` | — | 最新 L2 區塊高度（十六進位） |
 | `eth_protocolVersion` | — | Ethereum 協定版本 |
 | `eth_coinbase` | — | 排序器 coinbase（手續費接收者） |
-| `net_version` | — | 網路 ID（十進位字串；在 QDAY2 上與鏈 ID 相同） |
+| `net_version` | — | 網路 ID（十進位字串；在 QDay Aevum 上與鏈 ID 相同） |
 | `net_listening` | — | 節點是否正在監聽對等節點 |
 | `net_peerCount` | — | 已連線的對等節點數量（十六進位） |
 | `web3_clientVersion` | — | 用戶端版本字串（`cdk-erigon/…`） |
@@ -59,7 +59,7 @@ curl -s https://rpc.qday.io \
 | `eth_getBlockTransactionCountByHash` | `hash` | 該區塊中的交易數量 |
 | `eth_getBlockTransactionCountByNumber` | `block` | 該區塊中的交易數量 |
 | `eth_getBlockReceipts` | `block` | 該區塊中的所有收據 |
-| `eth_getUncleCountByBlockHash` | `hash` | 在 QDAY2 上永遠為 `0x0`（沒有叔塊） |
+| `eth_getUncleCountByBlockHash` | `hash` | 在 QDay Aevum 上永遠為 `0x0`（沒有叔塊） |
 | `eth_getUncleCountByBlockNumber` | `block` | 永遠為 `0x0` |
 | `eth_getUncleByBlockHashAndIndex` | `hash`、`index` | 永遠為 `null` |
 | `eth_getUncleByBlockNumberAndIndex` | `block`、`index` | 永遠為 `null` |
@@ -75,7 +75,7 @@ curl -s https://rpc.qday.io \
 | `eth_getTransactionReceipt` | `hash` | 收據（狀態、日誌、已用 Gas） |
 | `eth_pendingTransactions` | — | 本機交易池中的交易（若已啟用） |
 
-`eth_sendTransaction` / `eth_sign` 為錢包方法。公開的 QDAY2 RPC 要求透過 `eth_sendRawTransaction` 送出**已簽章**的資料。
+`eth_sendTransaction` / `eth_sign` 為錢包方法。公開的 QDay Aevum RPC 要求透過 `eth_sendRawTransaction` 送出**已簽章**的資料。
 
 ### 呼叫與 Gas
 

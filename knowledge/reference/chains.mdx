@@ -24,7 +24,7 @@ Live endpoints for connecting a wallet or dApp.
 | Native symbol | QDAY | QDAY | QDAY |
 | Decimals | 18 | 18 | 18 |
 
-The **Add QDay to Wallet** button adds Origin mainnet (`44001`). **Add QDay2** adds Aevum testnet (`44005`).
+The **Add QDay to Wallet** button adds Origin mainnet (`44001`). **Add QDay Aevum** adds the Aevum testnet (`44005`).
 
 :::warning[Testnet vs mainnet]
 **44001 is Origin mainnet.** **44005 is the current public Aevum testnet.** Always verify RPC, chain ID, and addresses against this page — not against a chat message or a random dApp banner.
@@ -54,14 +54,14 @@ Add via wallet UI: [Add QDay to your wallet](/guide/start/add-network). Programm
 }
 ```
 
-```json title="QDay Aevum / QDay2 (44005)"
+```json title="QDay QDay Aevum (44005)"
 {
   "chainId": "0xABE5",
-  "chainName": "QDay2",
+  "chainName": "QDay Aevum",
   "rpcUrls": ["https://rpc-test.qday.info"],
   "blockExplorerUrls": ["https://explorer-test.qday.info"],
   "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
 }
 ```
 
-`chainName` `QDay2` matches the in-docs **Add QDay2** button. User-facing copy often says **QDay Aevum**.
+`chainName` `QDay Aevum` matches the in-docs **Add QDay Aevum** button and the name shown in wallets.

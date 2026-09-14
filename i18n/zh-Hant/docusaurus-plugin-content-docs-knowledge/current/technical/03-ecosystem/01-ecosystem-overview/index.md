@@ -5,7 +5,7 @@ draft: false
 
 # 生態系概覽
 
-QDAY2 是一個與 EVM 相容的抗量子 Layer 2。其生態系圍繞四大應用支柱設計：
+QDay Aevum 是一個與 EVM 相容的抗量子 Layer 2。其生態系圍繞四大應用支柱設計：
 
 1. **ZK Rollup 基礎設施**——錨定於 Abelian 抗量子 Layer 1 的快速、低成本交易
 2. **後量子帳戶**——第二階段基於 ML-DSA-65 的帳戶與錢包

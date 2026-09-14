@@ -5,4 +5,4 @@ draft: false
 
 # Protocol
 
-The underlying protocol design of QDAY2 — consensus, proving, bridging, and application-layer protocols.
+The underlying protocol design of QDay Aevum — consensus, proving, bridging, and application-layer protocols.

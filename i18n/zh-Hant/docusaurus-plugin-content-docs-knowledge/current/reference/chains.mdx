@@ -24,7 +24,7 @@ import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
 | 原生代幣符號 | QDAY | QDAY | QDAY |
 | 小數位數 | 18 | 18 | 18 |
 
-**Add QDay to Wallet** 按鈕會新增 Origin 主網（`44001`）。**Add QDay2** 會新增 Aevum 測試網（`44005`）。
+**Add QDay to Wallet** 按鈕會新增 Origin 主網（`44001`）。**Add QDay Aevum** 會新增 Aevum 測試網（`44005`）。
 
 :::warning[測試網與主網]
 **44001 是 Origin 主網。** **44005 是目前的公開 Aevum 測試網。** 請務必以本頁面核對 RPC、鏈 ID 與地址——而不是聊天訊息或某個 dApp 的橫幅。
@@ -54,14 +54,14 @@ import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
 }
 ```
 
-```json title="QDay Aevum / QDay2 (44005)"
+```json title="QDay QDay Aevum (44005)"
 {
   "chainId": "0xABE5",
-  "chainName": "QDay2",
+  "chainName": "QDay Aevum",
   "rpcUrls": ["https://rpc-test.qday.info"],
   "blockExplorerUrls": ["https://explorer-test.qday.info"],
   "nativeCurrency": { "name": "QDAY", "symbol": "QDAY", "decimals": 18 }
 }
 ```
 
-`chainName` `QDay2` 與文件內的 **Add QDay2** 按鈕一致。面向使用者的文案通常稱為 **QDay Aevum**。
+`chainName` `QDay Aevum` 與文件內的 **Add QDay Aevum** 按鈕以及錢包中顯示的名稱一致。

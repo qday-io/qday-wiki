@@ -346,12 +346,12 @@ The locale dropdown in the top-right switches languages. Chinese URLs are prefix
 ```mdx
 ---
 sidebar_position: 1
-title: Add QDay2 to your wallet
+title: Add QDay Aevum to your wallet
 ---
 
 import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
 
-# Add QDay2 to your wallet
+# Add QDay Aevum to your wallet
 
 <AddNetworkButton network="qday2" />
 ```

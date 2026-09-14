@@ -9,4 +9,4 @@ draft: false
 
 **Double-spend protection** — The bridge tracks a `nullifier` for each bridge event. Once claimed, the nullifier is marked as spent and the same event cannot be claimed again.
 
-**PQZK Bridge** — The QDAY2 ↔ Abelian bridge is anchored by the Committer's status root submissions to the Abelian Chain. Forging a status root submission would require breaking Abelian's lattice-based cryptography.
+**PQZK Bridge** — The QDay Aevum ↔ Abelian bridge is anchored by the Committer's status root submissions to the Abelian Chain. Forging a status root submission would require breaking Abelian's lattice-based cryptography.

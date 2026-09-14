@@ -365,7 +365,7 @@
     "message": "我是使用者"
   },
   "home.card.user.body": {
-    "message": "把 QDay2 加入錢包，swap、質押、使用 dApp。"
+    "message": "把 QDay Aevum 加入錢包，swap、質押、使用 dApp。"
   },
   "home.card.user.cta": {
     "message": "開始使用"
@@ -374,7 +374,7 @@
     "message": "我要遷移"
   },
   "home.card.migrate.body": {
-    "message": "把 USD8 / WABEL / WQDAY 與原生 QDAY 從 QDay 遷到 QDay2。"
+    "message": "把 USD8 / WABEL / WQDAY 與原生 QDAY 從 QDay Origin 遷到 QDay Aevum。"
   },
   "home.card.migrate.cta": {
     "message": "遷移指南"
@@ -389,7 +389,7 @@
     "message": "開發者文件"
   },
   "home.eyebrow": {
-    "message": "QDay2 · 抗量子 Layer2"
+    "message": "QDay Aevum · 抗量子 Layer2"
   },
   "home.title.before": {
     "message": "下一代 QDay 的 "
@@ -413,7 +413,7 @@
     "message": "最新動態"
   },
   "ai.q1": {
-    "message": "如何把 QDay2 加入 MetaMask？"
+    "message": "如何把 QDay Aevum 加入 MetaMask？"
   },
   "ai.q2": {
     "message": "遷移是怎麼運作的？"
@@ -446,10 +446,10 @@
     "message": "關閉"
   },
   "updates.qday2": {
-    "message": "QDay2 測試網已上線 — 加入你的錢包"
+    "message": "QDay Aevum 測試網已上線 — 加入你的錢包"
   },
   "updates.migration": {
-    "message": "如何把資產從 QDay 遷移到 QDay2"
+    "message": "如何把資產從 QDay 遷移到 QDay Aevum"
   },
   "updates.dev": {
     "message": "在 QDay 上開發 dApp — wagmi / viem 快速上手"

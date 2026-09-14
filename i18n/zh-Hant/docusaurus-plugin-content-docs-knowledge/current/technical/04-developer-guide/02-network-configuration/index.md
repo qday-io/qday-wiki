@@ -5,11 +5,11 @@ draft: false
 
 # 網路設定
 
-QDay 是抗量子、相容 EVM 的 Layer 2。目前有兩個相關的網路：**Origin**（來源）與 **Aevum / QDay2**（目的地）。最新的 ID、RPC 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
+QDay 是抗量子、相容 EVM 的 Layer 2。目前有兩個相關的網路：**Origin**（來源）與 **QDay Aevum**（目的地）。最新的 ID、RPC 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
 
 ```mermaid
 flowchart LR
-  QDay["QDay Origin (44003)\nsource"] -->|migrate 1:1| QDay2["QDay2 Aevum (44005)\ndestination"]
+  QDay["QDay Origin (44003)\nsource"] -->|migrate 1:1| Aevum["QDay Aevum (44005)\ndestination"]
 ```
 
 | | QDay Origin（主網） | QDay Origin（測試網） | QDay Aevum（測試網） |

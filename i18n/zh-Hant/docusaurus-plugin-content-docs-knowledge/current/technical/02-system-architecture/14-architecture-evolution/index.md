@@ -5,7 +5,7 @@ draft: false
 
 # 架構演進
 
-QDAY2 的架構設計為分兩個階段演進：
+QDay Aevum 的架構設計為分兩個階段演進：
 
 **第一階段（目前）**——具 EVM 相容性的 L1 輔助 ZK rollup。帳本安全性透過 Committer 提交的狀態根繼承自 Abelian。帳戶金鑰仍為 ECDSA。
 

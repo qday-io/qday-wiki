@@ -16,14 +16,14 @@ export default function Home(): ReactNode {
     {
       icon: '⛓️',
       title: translate({id: 'home.card.user.title', message: 'I’m a user'}),
-      body: translate({id: 'home.card.user.body', message: 'Add QDay2 to your wallet, swap, stake, and use dApps.'}),
+      body: translate({id: 'home.card.user.body', message: 'Add QDay Aevum to your wallet, swap, stake, and use dApps.'}),
       to: '/guide/start/add-network',
       cta: translate({id: 'home.card.user.cta', message: 'Get started'}),
     },
     {
       icon: '↔️',
       title: translate({id: 'home.card.migrate.title', message: 'I’m migrating'}),
-      body: translate({id: 'home.card.migrate.body', message: 'Move USD8 / WABEL / WQDAY and native QDAY from QDay to QDay2.'}),
+      body: translate({id: 'home.card.migrate.body', message: 'Move USD8 / WABEL / WQDAY and native QDAY from QDay Origin to QDay Aevum.'}),
       to: '/Knowledge/migration/overview',
       cta: translate({id: 'home.card.migrate.cta', message: 'Migration guide'}),
     },
@@ -36,7 +36,7 @@ export default function Home(): ReactNode {
     },
   ];
   return (
-    <Layout title="QDay Wiki" description="QDay2 — the quantum-safe Layer2. Guides for users and developers.">
+    <Layout title="QDay Wiki" description="QDay Aevum — the quantum-safe Layer2. Guides for users and developers.">
       <header className={styles.hero}>
         <div className={styles.heroGlow} aria-hidden />
         <div className={styles.heroInner}>

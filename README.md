@@ -1,6 +1,6 @@
 # QDay Community Wiki
 
-The QDay ecosystem's community wiki — guides for users and developers, covering QDay and the QDay2
+The QDay ecosystem's community wiki — guides for users and developers, covering QDay and the QDay Aevum
 launch. Built with **Docusaurus** (migrated from VitePress) so pages can embed live, interactive
 web3 widgets (add-network, faucet, balances) alongside normal Markdown.
 
@@ -20,7 +20,7 @@ docs/
   intro.md               landing intro
   start/                 get started (add network, faucet - interactive)
   guide/                 user guides (metamask, staking, swap, bridge, wallet, whitepaper)
-  migration/             QDay -> QDay2 migration (interactive)
+  migration/             QDay -> QDay Aevum migration (interactive)
   reference/             chain params, token list, contract addresses
 src/
   pages/index.tsx        branded landing hero

@@ -5,11 +5,11 @@ draft: false
 
 # 預編譯合約
 
-QDAY2 在標準 EVM 預編譯合約之上，新增了後量子密碼學預編譯合約。
+QDay Aevum 在標準 EVM 預編譯合約之上，新增了後量子密碼學預編譯合約。
 
 ## 密碼學
 
-標準 Ethereum 預編譯合約（`ecrecover`、SHA-256、modexp 等）的行為與 Ethereum 上相同。QDAY2 額外提供基於格的簽章驗證，讓合約無需以 Solidity 實作該演算法即可驗證 ML-DSA-65 與混合簽章。
+標準 Ethereum 預編譯合約（`ecrecover`、SHA-256、modexp 等）的行為與 Ethereum 上相同。QDay Aevum 額外提供基於格的簽章驗證，讓合約無需以 Solidity 實作該演算法即可驗證 ML-DSA-65 與混合簽章。
 
 ## ML-DSA-65 驗證
 

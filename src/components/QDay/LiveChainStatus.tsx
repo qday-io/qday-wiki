@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-// Interactive doc component: live block height from the QDay2 RPC, refreshed on
+// Interactive doc component: live block height from the QDay Aevum RPC, refreshed on
 // an interval. Shows what MDX enables — a doc page that reflects real chain state.
 
 const RPC: Record<string, string> = {
@@ -50,7 +50,7 @@ export default function LiveChainStatus({ network = 'qday2' }: { network?: 'qday
         background: err ? 'var(--ifm-color-danger)' : 'var(--ifm-color-success)',
         boxShadow: err ? 'none' : '0 0 6px var(--ifm-color-success)',
       }} />
-      <span style={{ fontWeight: 600 }}>{network === 'qday2' ? 'QDay2' : 'QDay'}</span>
+      <span style={{ fontWeight: 600 }}>{network === 'qday2' ? 'QDay Aevum' : 'QDay'}</span>
       <span style={{ color: 'var(--ifm-color-emphasis-600)', fontFamily: 'var(--ifm-font-family-monospace)' }}>
         {err ? 'RPC unreachable' : block === null ? 'connecting…' : `block #${block.toLocaleString()}`}
       </span>

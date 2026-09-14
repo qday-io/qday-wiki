@@ -19,7 +19,7 @@ IEntryPoint constant ENTRY_POINT = IEntryPoint(ENTRY_POINT_ADDRESS);
 
 ## Bundler
 
-QDAY2 運行 [Alto](https://github.com/pimlicolabs/alto) bundler。將 UserOperation 傳送至 bundler 的 RPC 端點：
+QDay Aevum 運行 [Alto](https://github.com/pimlicolabs/alto) bundler。將 UserOperation 傳送至 bundler 的 RPC 端點：
 
 ```typescript
 import { createBundlerClient } from "permissionless";

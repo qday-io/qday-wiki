@@ -5,7 +5,7 @@ draft: false
 
 # AI Agent Architecture
 
-QDAY2 provides a native runtime environment for on-chain AI agents.
+QDay Aevum provides a native runtime environment for on-chain AI agents.
 
 **Agent Runtime** — A sandboxed execution environment where agents operate. The runtime manages agent lifecycle, resource limits, and interaction with on-chain contracts.
 

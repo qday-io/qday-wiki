@@ -5,7 +5,7 @@ draft: false
 
 # 網路拓樸
 
-QDAY2 運作於四個邏輯層之上：
+QDay Aevum 運作於四個邏輯層之上：
 
 **用戶端層（Client Layer）** — 錢包、dApp 與 RPC 用戶端連接至 QDAY 節點（cdk-erigon）的 JSON-RPC 端點。RPC 閘道會將請求負載平衡至多個讀取副本。
 
@@ -13,4 +13,4 @@ QDAY2 運作於四個邏輯層之上：
 
 **DA / 結算層（DA / Settlement Layer）** — Abelian Plus 節點使用 `reth`（執行）與 `lighthouse`（共識）提供資料可用性。所有 zkEVM 合約——`PolygonZkEVMBridge`、`PolygonRollupManager`、`GlobalExitRoot` 與 `Verifier`——皆部署於此層。
 
-**L1 記錄層（L1 Record Layer）** — Committer 將批次狀態根與 rollup 摘要直接寫入 Abelian 區塊鏈。這是所有 QDAY2 狀態的抗量子錨點。
+**L1 記錄層（L1 Record Layer）** — Committer 將批次狀態根與 rollup 摘要直接寫入 Abelian 區塊鏈。這是所有 QDay Aevum 狀態的抗量子錨點。

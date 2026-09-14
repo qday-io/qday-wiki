@@ -5,7 +5,7 @@ draft: false
 
 # 帳戶抽象協定
 
-QDAY2 實作 **ERC-4337** 帳戶抽象，無需變更核心 EVM 協定。
+QDay Aevum 實作 **ERC-4337** 帳戶抽象，無需變更核心 EVM 協定。
 
 **UserOperation** — 使用者不使用標準的 Ethereum 交易，而是建構一個 `UserOperation` 結構，其中包含：`sender`（智慧帳戶地址）、`nonce`、`initCode`（用於部署帳戶）、`callData`、`callGasLimit`、`verificationGasLimit`、`preVerificationGas`、`maxFeePerGas`、`maxPriorityFeePerGas`、`paymasterAndData` 與 `signature`。
 

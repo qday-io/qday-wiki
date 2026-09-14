@@ -5,7 +5,7 @@ draft: false
 
 # zk Proof Protocol
 
-The ZK proof protocol ensures that every state transition on QDAY2 can be verified cryptographically without re-executing all transactions.
+The ZK proof protocol ensures that every state transition on QDay Aevum can be verified cryptographically without re-executing all transactions.
 
 ## Batch
 
