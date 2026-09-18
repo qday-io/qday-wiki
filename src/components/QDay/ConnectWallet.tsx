@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connectAbelian, ensureQday2 } from './wallet';
 
 // Homepage-hero button, parallel to <AddNetworkButton> ("Add QDay Aevum to Wallet").
-// Connects Abelian Wallet over WalletConnect, then adds/switches to QDay Aevum —
+// Connects Abelian (Mobile) over WalletConnect, then adds/switches to QDay Aevum —
 // so both hero buttons read "Add QDay Aevum to <wallet>".
 
 export default function ConnectWallet() {
@@ -14,7 +14,7 @@ export default function ConnectWallet() {
     try {
       setState('busy'); setMsg('');
       const account = await connectAbelian();
-      if (!account) throw new Error('Abelian Wallet connection cancelled.');
+      if (!account) throw new Error('Abelian (Mobile) connection cancelled.');
       setAddr(account);
       const onQday = await ensureQday2();
       setMsg(onQday ? '' : 'Connected. Switch to QDay Aevum in the wallet to use the widgets.');
@@ -32,7 +32,7 @@ export default function ConnectWallet() {
         background: 'rgba(31,157,77,.14)', color: '#1f9d4d',
       }}>
         <span style={{ width: 8, height: 8, borderRadius: 999, background: '#1f9d4d' }} />
-        Abelian Wallet <code style={{ color: 'inherit' }}>{addr.slice(0, 6)}…{addr.slice(-4)}</code>
+        Abelian (Mobile) <code style={{ color: 'inherit' }}>{addr.slice(0, 6)}…{addr.slice(-4)}</code>
         <button onClick={() => { setAddr(null); setMsg(''); }} style={{
           marginLeft: 4, background: 'transparent', border: 'none', color: 'inherit',
           fontWeight: 700, cursor: 'pointer', fontSize: 16, lineHeight: 1,
@@ -48,7 +48,7 @@ export default function ConnectWallet() {
       padding: '10px 18px', fontWeight: 600, fontSize: 15,
       cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
     }} title={msg || undefined}>
-      {state === 'busy' ? 'Check your wallet…' : 'Add QDay Aevum to Abelian Wallet'}
+      {state === 'busy' ? 'Check your wallet…' : 'Add QDay Aevum to Abelian (Mobile)'}
     </button>
   );
 }

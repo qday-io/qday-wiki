@@ -3,7 +3,7 @@ import { connectInjected, connectAbelian } from './wallet';
 
 // Two connect options shared by the interactive widgets:
 //   • "Connect Wallet"      → any injected EIP-1193 wallet (MetaMask, OKX, Rabby…)
-//   • "Abelian Wallet"  → WalletConnect v2 (QR / abelian:// deep link)
+//   • "Abelian (Mobile)" → WalletConnect v2 (QR / abelian:// deep link)
 // onAccount receives the connected address; the parent handles the rest.
 
 export default function ConnectButtons({
@@ -45,7 +45,7 @@ export default function ConnectButtons({
         {busy ? 'Check your wallet…' : 'Connect Wallet'}
       </button>
       <button
-        onClick={() => run(connectAbelian, 'Abelian Wallet connection cancelled.')}
+        onClick={() => run(connectAbelian, 'Abelian (Mobile) connection cancelled.')}
         disabled={busy}
         style={{
           background: 'transparent', color: 'var(--ifm-color-primary)',
@@ -54,7 +54,7 @@ export default function ConnectButtons({
           cursor: busy ? 'default' : 'pointer', opacity: busy ? 0.6 : 1,
         }}
       >
-        Abelian Wallet
+        Abelian (Mobile)
       </button>
     </div>
   );
