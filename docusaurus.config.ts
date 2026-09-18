@@ -135,8 +135,9 @@ const config: Config = {
     // re-show it to users who dismissed a previous message.
     announcementBar: {
       id: 'wip-2026-08',
-      content:
-        'Documentation revision underway: please report issues on <a target="_blank" rel="noopener" href="https://discord.gg/Rrb33mC3Kc">Discord</a> or via <a target="_blank" rel="noopener" href="https://github.com/qday-io/qday-wiki/issues">GitHub</a>.',
+      // The visible text lives in src/theme/AnnouncementBar/Content so it can be
+      // translated per locale (PQALABS-952); this string is only a fallback.
+      content: 'Documentation revision underway.',
       backgroundColor: '#3e2f00',
       textColor: '#f5d76e',
       isCloseable: true,

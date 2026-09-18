@@ -1,0 +1,11 @@
+/* Mirrors the default theme styles so the swizzle only changes the content. */
+.content {
+  font-size: 85%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: underline;
+}
