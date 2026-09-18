@@ -18,7 +18,7 @@ export const QDAY = {
 export const WALLETCONNECT_PROJECT_ID = '997747885b3c0af7c6faa74f4e2fc5d1';
 
 // Active EIP-1193 provider for this session: an injected wallet (window.ethereum)
-// OR a WalletConnect provider (Abelian Wallet Pro). Widgets read/send through
+// OR a WalletConnect provider (Abelian Wallet). Widgets read/send through
 // getProvider() so both paths work transparently.
 let active: any = null;
 
@@ -38,15 +38,29 @@ export async function connectInjected(): Promise<string | null> {
 // Back-compat alias.
 export const connect = connectInjected;
 
-// "Abelian Wallet Pro" button: mobile wallet that connects over WalletConnect v2
-// (QR on desktop, `abelian://` deep link on mobile) — same integration as QDay Portal.
+// "Abelian Wallet" button: mobile wallet that connects over WalletConnect v2.
+// Desktop shows the WalletConnect QR; mobile opens the app through its
+// `abelian://` deep link — the same pairing the QDay Portal uses.
+//
+// Chains are sent as OPTIONAL only (`chains: []`). A required eip155 namespace
+// makes the wallet reject the proposal outright when it does not already know
+// that chain, which is why scanning the QR used to do nothing.
+export const ABELIAN_WALLET_NAME = 'Abelian Wallet';
+
+function isMobile(): boolean {
+  if (typeof navigator === 'undefined') return false;
+  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 export async function connectAbelian(): Promise<string | null> {
   const { EthereumProvider } = await import('@walletconnect/ethereum-provider');
+  const mobile = isMobile();
   const provider = await EthereumProvider.init({
     projectId: WALLETCONNECT_PROJECT_ID,
-    chains: [QDAY2.chainIdNum],
-    optionalChains: [QDAY.chainIdNum],
-    showQrModal: true,
+    chains: [],
+    optionalChains: [QDAY2.chainIdNum, QDAY.chainIdNum],
+    // On mobile we hand the URI to the app ourselves; the modal only helps on desktop.
+    showQrModal: !mobile,
     rpcMap: {
       [QDAY2.chainIdNum]: QDAY2.rpc,
       [QDAY.chainIdNum]: QDAY.rpc,
@@ -58,27 +72,49 @@ export async function connectAbelian(): Promise<string | null> {
       icons: ['https://community.qday.io/logo.svg'],
     },
   });
+
+  if (mobile) {
+    provider.on('display_uri', (uri: string) => {
+      window.location.href = `abelian://wc?uri=${encodeURIComponent(uri)}`;
+    });
+  }
+
   await provider.connect();
   active = provider;
   return provider.accounts?.[0] ?? null;
 }
 
-export async function ensureQday2(): Promise<void> {
+const QDAY2_PARAMS = {
+  chainId: QDAY2.chainIdHex,
+  chainName: 'QDay Aevum',
+  rpcUrls: [QDAY2.rpc],
+  blockExplorerUrls: ['https://explorer-test.qday.info'],
+  nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
+};
+
+// Switches the connected wallet to QDay Aevum, adding the network when it is
+// unknown. Returns false instead of throwing when the wallet refuses: over
+// WalletConnect the session may simply not carry the chain, and that must not
+// look like a failed connection.
+export async function ensureQday2(): Promise<boolean> {
   const eth = getProvider();
-  if (!eth) return;
-  const current = await eth.request({ method: 'eth_chainId' });
-  if (current === QDAY2.chainIdHex) return;
+  if (!eth) return false;
+  try {
+    const current = await eth.request({ method: 'eth_chainId' });
+    if (current === QDAY2.chainIdHex) return true;
+  } catch {
+    // Some WalletConnect sessions answer eth_chainId only after a switch.
+  }
   try {
     await eth.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: QDAY2.chainIdHex }] });
+    return true;
   } catch {
-    await eth.request({
-      method: 'wallet_addEthereumChain',
-      params: [{
-        chainId: QDAY2.chainIdHex, chainName: 'QDay Aevum',
-        rpcUrls: [QDAY2.rpc], blockExplorerUrls: ['https://explorer-test.qday.info'],
-        nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
-      }],
-    });
+    try {
+      await eth.request({ method: 'wallet_addEthereumChain', params: [QDAY2_PARAMS] });
+      return true;
+    } catch {
+      return false;
+    }
   }
 }
 
