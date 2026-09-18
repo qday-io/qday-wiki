@@ -498,5 +498,9 @@
   },
   "feat.dev.b": {
     "message": "完整的開發工具、SDK 與詳細文件，降低入門門檻。"
+  },
+  "theme.announcementBar.revisionNotice": {
+    "message": "文件改版進行中：如發現問題，請至 {discord} 回報或透過 {github} 提出。",
+    "description": "Announcement bar telling readers the docs are being revised and where to report issues"
   }
 }
