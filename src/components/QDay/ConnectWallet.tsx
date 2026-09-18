@@ -17,7 +17,7 @@ export default function ConnectWallet() {
       if (!account) throw new Error('Abelian Wallet connection cancelled.');
       setAddr(account);
       const onQday = await ensureQday2();
-      setMsg(onQday ? '' : 'Connected. Switch to QDay Aevum in the wallet to use the widgets.');
+      setMsg(onQday ? '' : 'Connected, but this wallet could not switch to QDay Aevum (44005).');
       setState('idle');
     } catch (e: any) {
       setState('err'); setMsg(e?.shortMessage ?? e?.message ?? 'Connection failed.');
@@ -42,6 +42,7 @@ export default function ConnectWallet() {
   }
 
   return (
+    <span style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
     <button onClick={go} disabled={state === 'busy'} style={{
       background: 'transparent', color: 'var(--ifm-color-primary)',
       border: '1px solid var(--ifm-color-primary)', borderRadius: 8,
@@ -50,5 +51,12 @@ export default function ConnectWallet() {
     }} title={msg || undefined}>
       {state === 'busy' ? 'Check your wallet…' : 'Add QDay Aevum to Abelian Wallet'}
     </button>
+      {/* The wallet's home scanner only reads addresses and payment codes; the
+          WalletConnect pairing lives on its own screen, so say where to scan. */}
+      <small style={{ opacity: 0.7, fontSize: 12.5 }}>
+        Scan from Abelian Wallet → Settings → DApp Connection
+      </small>
+      {msg ? <small style={{ color: '#f5a524', fontSize: 12.5 }}>{msg}</small> : null}
+    </span>
   );
 }

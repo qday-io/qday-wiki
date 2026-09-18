@@ -96,6 +96,9 @@ const QDAY2_PARAMS = {
 // unknown. Returns false instead of throwing when the wallet refuses: over
 // WalletConnect the session may simply not carry the chain, and that must not
 // look like a failed connection.
+// EIP-3326: the wallet answers 4902 when it does not know the chain at all.
+export const CHAIN_NOT_ADDED = 4902;
+
 export async function ensureQday2(): Promise<boolean> {
   const eth = getProvider();
   if (!eth) return false;
@@ -108,7 +111,9 @@ export async function ensureQday2(): Promise<boolean> {
   try {
     await eth.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: QDAY2.chainIdHex }] });
     return true;
-  } catch {
+  } catch (err: any) {
+    // Wallets that support adding networks offer it after a 4902; mobile
+    // wallets with a fixed chain list (Abelian Wallet today) reject both.
     try {
       await eth.request({ method: 'wallet_addEthereumChain', params: [QDAY2_PARAMS] });
       return true;
