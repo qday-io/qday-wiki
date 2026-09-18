@@ -1,9 +1,9 @@
 ---
-title: 網路拓樸
+title: 網絡拓樸
 draft: false
 ---
 
-# 網路拓樸
+# 網絡拓樸
 
 QDay Aevum 運作於四個邏輯層之上：
 

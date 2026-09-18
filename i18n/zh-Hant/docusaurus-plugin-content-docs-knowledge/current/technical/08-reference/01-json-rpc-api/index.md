@@ -23,7 +23,7 @@ curl -s https://rpc.qday.io \
 
 ## Ethereum JSON-RPC（`eth`）
 
-以下方法遵循 [Ethereum Execution APIs](https://ethereum.github.io/execution-apis/)。QDay Aevum 與 EVM 相容；這些方法的行為與 Ethereum 上相同。
+以下方法遵循 [Ethereum Execution APIs](https://ethereum.github.io/execution-apis/)。QDay Aevum 與 EVM 兼容；這些方法的行為與 Ethereum 上相同。
 
 ### 鏈與用戶端
 
@@ -34,7 +34,7 @@ curl -s https://rpc.qday.io \
 | `eth_blockNumber` | — | 最新 L2 區塊高度（十六進位） |
 | `eth_protocolVersion` | — | Ethereum 協定版本 |
 | `eth_coinbase` | — | 排序器 coinbase（手續費接收者） |
-| `net_version` | — | 網路 ID（十進位字串；在 QDay Aevum 上與鏈 ID 相同） |
+| `net_version` | — | 網絡 ID（十進位字串；在 QDay Aevum 上與鏈 ID 相同） |
 | `net_listening` | — | 節點是否正在監聽對等節點 |
 | `net_peerCount` | — | 已連線的對等節點數量（十六進位） |
 | `web3_clientVersion` | — | 用戶端版本字串（`cdk-erigon/…`） |
@@ -182,7 +182,7 @@ curl -s https://rpc.qday.io \
 
 ## 相關頁面
 
-- [網路設定](/Knowledge/technical/developer-guide/network-configuration)——端點與 curl 檢查
-- [網路協定](/Knowledge/technical/protocol/network-protocol)——DevP2P + JSON-RPC 介面
+- [網絡設定](/Knowledge/technical/developer-guide/network-configuration)——端點與 curl 檢查
+- [網絡協定](/Knowledge/technical/protocol/network-protocol)——DevP2P + JSON-RPC 介面
 - [zk 證明協定](/Knowledge/technical/protocol/zk-proof-protocol)——批次 / witness / 證明者 / 驗證者
 - [鏈參數](/Knowledge/reference/chains)——鏈 ID 與 RPC URL

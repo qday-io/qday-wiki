@@ -4,7 +4,7 @@
     "description": "The title of the footer links column with title=Docs in the footer"
   },
   "link.title.Network": {
-    "message": "網路",
+    "message": "網絡",
     "description": "The title of the footer links column with title=Network in the footer"
   },
   "link.title.More": {

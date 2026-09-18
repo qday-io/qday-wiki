@@ -5,9 +5,9 @@ draft: false
 
 # 開發者工具
 
-**Foundry** — 完整相容 Foundry。搭配 `--rpc-url https://rpc.qday.io` 旗標使用 `forge`、`cast` 與 `anvil`。
+**Foundry** — 完整兼容 Foundry。搭配 `--rpc-url https://rpc.qday.io` 旗標使用 `forge`、`cast` 與 `anvil`。
 
-**Hardhat** — 在 `hardhat.config.js` 中將 QDay Aevum 新增為網路（請參閱[開發者指南](/Knowledge/technical/developer-guide/getting-started)）。所有適用於 Ethereum 主網的 Hardhat 外掛皆可在 QDay Aevum 上使用。
+**Hardhat** — 在 `hardhat.config.js` 中將 QDay Aevum 新增為網絡（請參閱[開發者指南](/Knowledge/technical/developer-guide/getting-started)）。所有適用於 Ethereum 主網的 Hardhat 外掛皆可在 QDay Aevum 上使用。
 
 **Remix** — 透過「External HTTP Provider」選項並填入 QDay Aevum 的 RPC URL，將 Remix IDE 連接至 QDay Aevum。
 

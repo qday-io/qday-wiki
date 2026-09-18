@@ -7,9 +7,9 @@ draft: false
 
 QDay Aevum 支援兩種錢包類型：
 
-**EOA 錢包** — 標準的 Ethereum 外部擁有帳戶（ECDSA）。MetaMask、Frame 以及任何支援自訂 EVM 鏈的錢包皆可直接使用。請依照[網路設定](/Knowledge/technical/developer-guide/network-configuration)新增網路以進行連接。
+**EOA 錢包** — 標準的 Ethereum 外部擁有帳戶（ECDSA）。MetaMask、Frame 以及任何支援自訂 EVM 鏈的錢包皆可直接使用。請依照[網絡設定](/Knowledge/technical/developer-guide/network-configuration)新增網絡以進行連接。
 
-**智慧帳戶錢包** — ERC-4337 智慧帳戶提供免 Gas 交易、批次呼叫與 Session Key 委託。智慧帳戶會在首次使用時部署；使用者的 EOA 作為擁有者／簽章者。
+**智慧帳戶錢包** — ERC-4337 智慧帳戶提供免 Gas 交易、批次呼叫與 Session Key 委託。智慧帳戶會在首次使用時部署；用戶的 EOA 作為擁有者／簽章者。
 
 ```typescript
 import { createSmartAccountClient } from "@qday-io/sdk/aa";
@@ -27,7 +27,7 @@ const txHash = await client.sendTransaction({
 });
 ```
 
-## 以程式方式新增網路（EIP-3085）
+## 以程式方式新增網絡（EIP-3085）
 
 ```ts title="wallet_addEthereumChain — Origin mainnet"
 await window.ethereum.request({

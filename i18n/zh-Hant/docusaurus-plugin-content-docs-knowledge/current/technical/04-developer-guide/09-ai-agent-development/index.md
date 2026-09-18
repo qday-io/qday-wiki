@@ -78,4 +78,4 @@ const paymentAgent = agent.createPaymentAgent({
 
 ## Agent 授權
 
-所有 Agent 的操作都受使用者所授予的 session key 限制。Agent 無法花費超過 session key 允許的額度、無法呼叫不在允許清單上的合約，也無法在金鑰過期後繼續操作——這些限制由 `EntryPoint` 在驗證時強制執行，而非由 Agent 自身的程式碼負責。
+所有 Agent 的操作都受用戶所授予的 session key 限制。Agent 無法花費超過 session key 允許的額度、無法呼叫不在允許清單上的合約，也無法在金鑰過期後繼續操作——這些限制由 `EntryPoint` 在驗證時強制執行，而非由 Agent 自身的程式碼負責。

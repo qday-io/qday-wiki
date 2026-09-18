@@ -5,7 +5,7 @@ draft: false
 
 # 經濟模型
 
-**Gas**——QDay Aevum 採用與 Ethereum 相容的 Gas 模型。Gas 價格以原生 Gas 代幣計價，並遵循 EIP-1559（基礎費用 + 優先費用）。
+**Gas**——QDay Aevum 採用與 Ethereum 兼容的 Gas 模型。Gas 價格以原生 Gas 代幣計價，並遵循 EIP-1559（基礎費用 + 優先費用）。
 
 **QDAY 代幣**——QDAY 代幣（總供應量：22,517,998,100）用於驗證者質押、治理與手續費支付。QDAY 的總供應量與 Abelian L1 上的 ABEL 一致。
 

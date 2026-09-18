@@ -6,13 +6,13 @@ sidebar_label: 快速開始
 
 # 快速開始
 
-## 新增網路
+## 新增網絡
 
-QDay 支援 MetaMask 以及任何相容 WalletConnect 的錢包。請使用以下資訊手動新增網路：
+QDay 支援 MetaMask 以及任何兼容 WalletConnect 的錢包。請使用以下資訊手動新增網絡：
 
 | | 測試網 | 主網 |
 |---|---|---|
-| 網路名稱 | QDay Aevum | 即將推出 |
+| 網絡名稱 | QDay Aevum | 即將推出 |
 | RPC URL | rpc-test.qday.info | 即將推出 |
 | 鏈 ID | 44005 | 即將推出 |
 | 貨幣符號 | tQDAY | 即將推出 |
@@ -32,22 +32,22 @@ QDay 支援 MetaMask 以及任何相容 WalletConnect 的錢包。請使用以�
 
 ## 第一筆交易
 
-本教學示範在 **QDay Aevum**（測試網）上使用 MetaMask 傳送 **1 QDAY**——這是目前唯一上線的網路。請先[新增 QDay 網路](/guide/start/add-network)並[領取測試網 QDAY](/guide/start/faucet)。主網即將推出；上線後步驟相同。
+本教學示範在 **QDay Aevum**（測試網）上使用 MetaMask 傳送 **1 QDAY**——這是目前唯一上線的網絡。請先[新增 QDay 網絡](/guide/start/add-network)並[領取測試網 QDAY](/guide/start/faucet)。主網即將推出；上線後步驟相同。
 
 ### 前置條件
 
-- 已安裝 [MetaMask](/guide/handbook/user-guide/metamask)，並已新增 QDay 網路
+- 已安裝 [MetaMask](/guide/handbook/user-guide/metamask)，並已新增 QDay 網絡
 - 一個有餘額的帳戶（至少 1 QDAY，外加少量 Gas 費用）
 - 收款方的 QDay 地址（練習時可使用自己的另一個帳戶）
 
 ### 在 MetaMask 中傳送 1 QDAY
 
-1. 開啟 MetaMask 擴充功能，將網路切換至 **QDay Aevum**（測試網）。確認原生代幣顯示為 tQDAY。
+1. 開啟 MetaMask 擴充功能，將網絡切換至 **QDay Aevum**（測試網）。確認原生代幣顯示為 tQDAY。
 2. 點擊 **傳送（Send）**。
-3. 將收款地址貼入 **收款方（To）** 欄位。請逐字核對——地址錯誤無法復原，而且部分惡意軟體會悄悄替換剪貼簿中複製的地址。
+3. 將收款地址貼入 **收款方（To）** 欄位。請逐字核對——地址錯誤無法復原，而且部分惡意軟件會悄悄替換剪貼簿中複製的地址。
 4. 在金額欄位輸入 **1**，並確認資產為 **QDAY**，而非 USD8 或 WABEL 等 ERC-20 代幣。
 5. 點擊 **繼續（Continue）**（或 **下一步（Next）**）。檢查以下項目：
-   - 網路
+   - 網絡
    - 收款方
    - 金額：1 QDAY
    - 預估 Gas 費用（以 QDAY 支付；通常僅為不到一美分至幾美分）
@@ -59,12 +59,12 @@ QDay 支援 MetaMask 以及任何相容 WalletConnect 的錢包。請使用以�
 :::
 
 :::warning[Gas 以 QDAY 支付]
-原生代幣轉帳的網路費用以 QDAY 支付。若 MetaMask 提示無法支付費用，你需要在傳送的 1 QDAY 之外，額外保留少量 QDAY 餘額。
+原生代幣轉帳的網絡費用以 QDAY 支付。若 MetaMask 提示無法支付費用，你需要在傳送的 1 QDAY 之外，額外保留少量 QDAY 餘額。
 :::
 
-## 部署你的第一個智慧合約
+## 部署你的第一個智能合約
 
-QDay 相容 EVM，因此 [Remix IDE](https://remix.ethereum.org) 的用法與在 Ethereum 上相同。本範例透過 MetaMask 在 QDay 上部署一個小型合約。
+QDay 兼容 EVM，因此 [Remix IDE](https://remix.ethereum.org) 的用法與在 Ethereum 上相同。本範例透過 MetaMask 在 QDay 上部署一個小型合約。
 
 ### 前置條件
 
@@ -101,17 +101,17 @@ contract HelloQDay {
 
 1. 開啟 **Deploy & Run Transactions** 外掛。
 2. 將 **Environment** 設為 **Injected Provider - MetaMask**（而非 Remix VM）。Remix 會請求連接 MetaMask——請核准。
-3. 在 MetaMask 中確認目前選取的網路為 QDay Aevum（鏈 ID `44005`），且 Remix 中顯示的帳戶是你要用來部署的帳戶。
+3. 在 MetaMask 中確認目前選取的網絡為 QDay Aevum（鏈 ID `44005`），且 Remix 中顯示的帳戶是你要用來部署的帳戶。
 
 :::danger[請勿誤將合約部署至 Ethereum]
-若 Environment 為 Injected Provider，但 MetaMask 仍停留在 Ethereum，合約會部署到 Ethereum 上，並以 ETH 支付費用。點擊 Deploy 之前，請務必確認 MetaMask 中的網路名稱。
+若 Environment 為 Injected Provider，但 MetaMask 仍停留在 Ethereum，合約會部署到 Ethereum 上，並以 ETH 支付費用。點擊 Deploy 之前，請務必確認 MetaMask 中的網絡名稱。
 :::
 
 ### 4. 部署
 
 1. 在合約下拉選單中選擇 **HelloQDay**。
 2. 點擊 **Deploy**。
-3. 檢視 MetaMask 的確認視窗（網路、以 QDAY 計的預估 Gas），然後點擊 **確認（Confirm）**。
+3. 檢視 MetaMask 的確認視窗（網絡、以 QDAY 計的預估 Gas），然後點擊 **確認（Confirm）**。
 4. 等待交易確認。合約會出現在 Remix 的 **Deployed Contracts** 區塊中。複製合約地址。
 
 ### 5. 呼叫合約並在區塊瀏覽器上驗證

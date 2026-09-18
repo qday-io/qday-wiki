@@ -6,17 +6,17 @@ sidebar_label: 在 QDay 上開發
 
 # 在 QDay 上開發
 
-QDay 與 EVM 相容：Solidity、MetaMask、Remix、Hardhat、Foundry 與 wagmi/viem 的用法與在 Ethereum 上相同。將它們指向 QDay RPC 即可開始開發。以下頁面是技術知識庫——本手冊頁面是導覽地圖；細節都在那裡，並會持續擴充。
+QDay 與 EVM 兼容：Solidity、MetaMask、Remix、Hardhat、Foundry 與 wagmi/viem 的用法與在 Ethereum 上相同。將它們指向 QDay RPC 即可開始開發。以下頁面是技術知識庫——本手冊頁面是導覽地圖；細節都在那裏，並會持續擴充。
 
 ## 技術知識庫
 
 使用 **Technical** 文件在 QDay 上建立你自己的服務：連接到鏈、部署合約，並從 dApp 呼叫它們。
 
-- **[開發者指南](/Knowledge/technical/developer-guide/getting-started)**——網路、RPC、dApp 逐步教學、錢包、智慧帳戶、代理與支付
+- **[開發者指南](/Knowledge/technical/developer-guide/getting-started)**——網絡、RPC、dApp 逐步教學、錢包、智慧帳戶、代理與支付
 - **[系統架構](/Knowledge/technical/system-architecture)**——rollup、RPC 與應用層如何組合在一起
 - **[鏈參數](/Knowledge/reference/chains)** · **[合約](/Knowledge/reference/contracts)**——ID、RPC 與官方地址
 
-如果你尚未使用過此網路，請先從[將 QDay 新增至你的錢包](/guide/start/add-network)與[在 Remix 中部署第一個合約](/guide/handbook/getting-started#部署你的第一個智慧合約)開始。
+如果你尚未使用過此網絡，請先從[將 QDay 新增至你的錢包](/guide/start/add-network)與[在 Remix 中部署第一個合約](/guide/handbook/getting-started#部署你的第一個智能合約)開始。
 
 ## 基礎設施
 
@@ -24,8 +24,8 @@ QDay 與 EVM 相容：Solidity、MetaMask、Remix、Hardhat、Foundry 與 wagmi/
 
 - **RPC 與區塊瀏覽器**——JSON-RPC 與 Blockscout 風格的區塊瀏覽器（[基礎設施](/Knowledge/technical/ecosystem/infrastructure)）
 - **索引器**——透過 GraphQL 查詢代幣轉帳、DEX 交易、支付與代理事件，無需重放鏈上歷史（[索引器](/Knowledge/technical/ecosystem/infrastructure)）
-- **價格預言機**——與 Chainlink Aggregator 介面相容的鏈上資料饋送（[預言機與資料](/Knowledge/technical/ecosystem/oracle-data)）
-- **連接 / RPC**——端點與 `wallet_addEthereumChain`（[網路設定](/Knowledge/technical/developer-guide/network-configuration)、[錢包整合](/Knowledge/technical/developer-guide/wallet-integration)）
+- **價格預言機**——與 Chainlink Aggregator 介面兼容的鏈上資料饋送（[預言機與資料](/Knowledge/technical/ecosystem/oracle-data)）
+- **連接 / RPC**——端點與 `wallet_addEthereumChain`（[網絡設定](/Knowledge/technical/developer-guide/network-configuration)、[錢包整合](/Knowledge/technical/developer-guide/wallet-integration)）
 
 面向節點營運者的操作手冊位於[節點營運者指南](/Knowledge/technical/operator-guide)。端點 URL 與 API 格式將隨服務上線陸續補充至這些頁面。
 

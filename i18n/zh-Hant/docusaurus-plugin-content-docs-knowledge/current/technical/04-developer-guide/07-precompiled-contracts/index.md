@@ -9,7 +9,7 @@ QDay Aevum 在標準 EVM 預編譯合約之上，新增了後量子密碼學預�
 
 ## 密碼學
 
-標準 Ethereum 預編譯合約（`ecrecover`、SHA-256、modexp 等）的行為與 Ethereum 上相同。QDay Aevum 額外提供基於格的簽章驗證，讓合約無需以 Solidity 實作該演算法即可驗證 ML-DSA-65 與混合簽章。
+標準 Ethereum 預編譯合約（`ecrecover`、SHA-256、modexp 等）的行為與 Ethereum 上相同。QDay Aevum 額外提供基於格的簽章驗證，讓合約無需以 Solidity 實作該算法即可驗證 ML-DSA-65 與混合簽章。
 
 ## ML-DSA-65 驗證
 
@@ -42,4 +42,4 @@ address constant HYBRID_VERIFY = address(0x101);
 
 ## 未來擴充
 
-預編譯合約地址將於第二階段上線時確定。隨著後量子帳戶模型落地，可能會新增更多驗證用的預編譯合約。目前的地址請查閱[參考資料](/Knowledge/technical/reference)頁面。
+預編譯合約地址將於第二階段上線時確定。隨着後量子帳戶模型落地，可能會新增更多驗證用的預編譯合約。目前的地址請查閱[參考資料](/Knowledge/technical/reference)頁面。
