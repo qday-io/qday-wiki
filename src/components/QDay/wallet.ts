@@ -18,7 +18,7 @@ export const QDAY = {
 export const WALLETCONNECT_PROJECT_ID = '997747885b3c0af7c6faa74f4e2fc5d1';
 
 // Active EIP-1193 provider for this session: an injected wallet (window.ethereum)
-// OR a WalletConnect provider (Abelian Wallet). Widgets read/send through
+// OR a WalletConnect provider (Abelian (Mobile)). Widgets read/send through
 // getProvider() so both paths work transparently.
 let active: any = null;
 
@@ -38,14 +38,14 @@ export async function connectInjected(): Promise<string | null> {
 // Back-compat alias.
 export const connect = connectInjected;
 
-// "Abelian Wallet" button: mobile wallet that connects over WalletConnect v2.
+// "Abelian (Mobile)" button: mobile wallet that connects over WalletConnect v2.
 // Desktop shows the WalletConnect QR; mobile opens the app through its
 // `abelian://` deep link — the same pairing the QDay Portal uses.
 //
 // Chains are sent as OPTIONAL only (`chains: []`). A required eip155 namespace
 // makes the wallet reject the proposal outright when it does not already know
 // that chain, which is why scanning the QR used to do nothing.
-export const ABELIAN_WALLET_NAME = 'Abelian Wallet';
+export const ABELIAN_WALLET_NAME = 'Abelian (Mobile)';
 
 function isMobile(): boolean {
   if (typeof navigator === 'undefined') return false;
