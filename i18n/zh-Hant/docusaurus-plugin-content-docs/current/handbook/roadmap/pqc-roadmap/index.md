@@ -9,9 +9,9 @@ sidebar_label: QDAY 後量子路線圖
 
 QDay 的 PQC 策略應從單純的「支援 PQC 的 EVM 鏈」演進為：
 
-> **具備帳戶層級遷移能力的量子就緒 EVM 網路（Quantum-Ready EVM Network with Account-Level Migration）**
+> **具備帳戶層級遷移能力的量子就緒 EVM 網絡（Quantum-Ready EVM Network with Account-Level Migration）**
 
-核心原則不是決定何時必須移除 ECDSA，而是建立一條遷移路徑，讓既有使用者、帳戶、應用程式與基礎設施能夠逐步採用後量子安全性。
+核心原則不是決定何時必須移除 ECDSA，而是建立一條遷移路徑，讓既有用戶、帳戶、應用程式與基礎設施能夠逐步採用後量子安全性。
 
 建議的遷移模型為：
 
@@ -33,9 +33,9 @@ PQC-Native Account
 
 此方法達成三項目標：
 
-1. 保留現有的 EVM 相容性。
+1. 保留現有的 EVM 兼容性。
 2. 提供一條可行的 PQC 遷移路徑。
-3. 讓 QDay 最終成為抗量子網路。
+3. 讓 QDay 最終成為抗量子網絡。
 
 ---
 
@@ -53,7 +53,7 @@ PQC-Native Account
 | **Phase 2** | 2026 H2 – 2027 H1 | PQC 執行基礎                   | AA Smart Account、PQC Precompile、PQC 驗證                                         |
 | **Phase 3** | 2027 H1 – H2      | 混合安全性                     | ECDSA + PQC、混合交易、混合 AA                                                     |
 | **Phase 4** | 2027 H2 – 2028    | PQC 遷移與基礎設施             | PQC Credential、帳戶遷移、跨鏈橋、預言機、治理                                     |
-| **Phase 5** | 2028+             | 完整 PQC 原生網路              | PQC 原生帳戶、驗證者、排序器、全面遷移                                             |
+| **Phase 5** | 2028+             | 完整 PQC 原生網絡              | PQC 原生帳戶、驗證者、排序器、全面遷移                                             |
 
 
 最重要的轉變是：
@@ -147,7 +147,7 @@ QDay 不應把 PQC 視為僅限 EVM 的升級。即使在帳戶、預編譯合�
 
 ### 目標
 
-在改變 QDay 面向使用者的交易模型之前，先建立密碼學基礎。
+在改變 QDay 面向用戶的交易模型之前，先建立密碼學基礎。
 
 ```
                     QDay PQC Foundation
@@ -169,7 +169,7 @@ ML-DSA-65 應作為 QDay 首次實作的主要 PQC 簽章方案。
 
 關鍵需求：
 
-- 標準化的 PQC 簽章演算法。
+- 標準化的 PQC 簽章算法。
 - 在 QDay 密碼學層原生支援。
 - 支援錢包簽章與驗證。
 - 支援 Smart Account 驗證。
@@ -192,7 +192,7 @@ SignatureScheme
 
 QDay **不應**將 ML-DSA-65 硬編碼進協定架構。
 
-設計應允許在不重新設計帳戶、交易或基礎設施模型的前提下引入未來的演算法。
+設計應允許在不重新設計帳戶、交易或基礎設施模型的前提下引入未來的算法。
 
 建議的抽象：
 
@@ -321,7 +321,7 @@ Phase 2 應驗證：
 - Smart Account 整合。
 - PQC Precompile 的正確性。
 - 驗證 Gas 與執行效能。
-- 與 zkEVM 執行環境的相容性。
+- 與 zkEVM 執行環境的兼容性。
 
 目標是：
 
@@ -337,7 +337,7 @@ Phase 2 應驗證：
 | AA Smart Account      | 具備 PQC 能力的架構                                                   | 關鍵     |
 | PQC Precompile        | ML-DSA 驗證                                                           | 關鍵     |
 | PQC 驗證              | 可投入生產的驗證路徑                                                  | 關鍵     |
-| zkEVM 整合            | 相容性驗證                                                            | 高       |
+| zkEVM 整合            | 兼容性驗證                                                            | 高       |
 | 效能基準測試          | Gas／CPU／延遲測試（Phase 1 之後透過測試取得範例數值）                | 高       |
 
 
@@ -367,7 +367,7 @@ PQC Execution Foundation
 
 PQC Credential 是 **Phase 4** 的帳戶遷移機制。它不屬於 Phase 1 的 SDK，也不是 Phase 2 執行基礎或 Phase 3 混合交易所需的項目。
 
-Phase 2 與 Phase 3 應為此模型保留開放的帳戶架構。在 Phase 4 之前，不應要求使用者註冊 PQC 憑證。
+Phase 2 與 Phase 3 應為此模型保留開放的帳戶架構。在 Phase 4 之前，不應要求用戶註冊 PQC 憑證。
 
 Phase 4 的遷移路徑為：
 
@@ -460,7 +460,7 @@ Quantum-Ready Account
 
 ### 6.3 安全模式
 
-這些模式描述帳戶的驗證政策。Classic 相容性自 Phase 2 起存在。混合交易簽章於 Phase 3 驗證。**PQC-Ready**（已註冊 ML-DSA 憑證）與基於憑證的政策變更屬於 Phase 4。PQC-Native 是 Phase 5 的目標。
+這些模式描述帳戶的驗證政策。Classic 兼容性自 Phase 2 起存在。混合交易簽章於 Phase 3 驗證。**PQC-Ready**（已註冊 ML-DSA 憑證）與基於憑證的政策變更屬於 Phase 4。PQC-Native 是 Phase 5 的目標。
 
 ### Classic
 
@@ -470,7 +470,7 @@ ECDSA
 Transaction
 ```
 
-主要用於舊有 EVM 相容性。
+主要用於舊有 EVM 兼容性。
 
 ### PQC-Ready（Phase 4）
 
@@ -538,7 +538,7 @@ Smart Account
       └── Future PQC
 ```
 
-這讓 QDay 能引入新的簽章方案，而不必迫使整個生態系立即放棄 EVM 相容性。
+這讓 QDay 能引入新的簽章方案，而不必迫使整個生態系立即放棄 EVM 兼容性。
 
 建議模型為：
 
@@ -611,7 +611,7 @@ ECDSA
 
 目的：
 
-- 最大化 EVM 相容性。
+- 最大化 EVM 兼容性。
 - 支援既有錢包與應用程式。
 - 舊有模式。
 
@@ -656,7 +656,7 @@ PQC-Native Account
 - ECDSA + ML-DSA 簽章驗證。
 - 錢包支援混合簽章。
 - Gas 與效能基準測試。
-- 與既有 EVM 應用程式的相容性測試。
+- 與既有 EVM 應用程式的兼容性測試。
 
 目標是：
 
@@ -706,7 +706,7 @@ Validator
 
 PQC Credential 在 Phase 4 成為生產環境的遷移機制。
 
-帳戶層級的 PQC 採用實際上就在此發生：既有帳戶註冊 ML-DSA 憑證，可選擇啟用混合政策，之後可再升級為 PQC 原生帳戶。Phase 2 只證明了驗證可行。Phase 3 只證明了混合簽章可行。Phase 4 是第一個改變使用者帳戶憑證的階段。
+帳戶層級的 PQC 採用實際上就在此發生：既有帳戶註冊 ML-DSA 憑證，可選擇啟用混合政策，之後可再升級為 PQC 原生帳戶。Phase 2 只證明了驗證可行。Phase 3 只證明了混合簽章可行。Phase 4 是第一個改變用戶帳戶憑證的階段。
 
 ### 遷移模型
 
@@ -735,7 +735,7 @@ PQC-Native Account
 - 帳戶政策更新。
 - 混合授權。
 - 復原機制。
-- 與 ECDSA 的向後相容性。
+- 與 ECDSA 的向後兼容性。
 
 Phase 4 的 SDK／帳戶 API 包括：
 
@@ -749,7 +749,7 @@ setAccountPolicy()
 
 關鍵目標是：
 
-> **既有使用者能逐步採用 PQC，而無需進行破壞性的資產遷移。**
+> **既有用戶能逐步採用 PQC，而無需進行破壞性的資產遷移。**
 
 
 
@@ -940,7 +940,7 @@ Sequencer Authorization
 - 簽章產生延遲
 - 簽章驗證延遲
 - CPU 消耗
-- 網路頻寬
+- 網絡頻寬
 - 批次／區塊大小的影響
 - 儲存開銷
 
@@ -960,7 +960,7 @@ ML-DSA / Hybrid Signature
 Consensus
 ```
 
-由於 PQC 簽章遠大於 ECDSA 簽章，驗證者遷移應在完成效能與網路影響測試後才引入。
+由於 PQC 簽章遠大於 ECDSA 簽章，驗證者遷移應在完成效能與網絡影響測試後才引入。
 
 ### Phase 4 交付項目
 
@@ -1001,7 +1001,7 @@ Consensus
 
 
 
-## 10. Phase 5 — 完整 PQC 原生網路
+## 10. Phase 5 — 完整 PQC 原生網絡
 
 
 
@@ -1009,7 +1009,7 @@ Consensus
 
 Phase 5 是長期目標，PQC 將成為 QDay 帳戶、協定與基礎設施各層的一級安全基元。
 
-目標不一定是立即移除 ECDSA。相反地，QDay 應達到 PQC 成為**預設安全路徑**的狀態，而 ECDSA 在適當之處仍可作為相容機制使用。
+目標不一定是立即移除 ECDSA。相反地，QDay 應達到 PQC 成為**預設安全路徑**的狀態，而 ECDSA 在適當之處仍可作為兼容機制使用。
 
 ```
 PQC-Ready
@@ -1039,7 +1039,7 @@ Hybrid Account
 PQC-Native Account
 ```
 
-這形成長期的相容性模型：
+這形成長期的兼容性模型：
 
 ```
 Legacy
@@ -1077,7 +1077,7 @@ PQC Native
 
 ### 10.3 PQC 作為預設安全模型
 
-長期的使用者體驗應朝以下方向演進：
+長期的用戶體驗應朝以下方向演進：
 
 ```
 New Account
@@ -1087,7 +1087,7 @@ PQC-Native Smart Account
 ML-DSA
 ```
 
-混合模式仍可供需要傳統密碼學相容性的應用程式使用。
+混合模式仍可供需要傳統密碼學兼容性的應用程式使用。
 
 建議的預設層級：
 
@@ -1101,7 +1101,7 @@ ECDSA          ← Legacy compatibility
 
 ### 10.4 zkEVM 與 PQC
 
-QDay 是 zkEVM 網路，因此除非有明確的效能與證明效益，PQC 整合應與 ZK 電路保持分離。
+QDay 是 zkEVM 網絡，因此除非有明確的效能與證明效益，PQC 整合應與 ZK 電路保持分離。
 
 ### 初始模型
 
@@ -1131,11 +1131,11 @@ ZK Circuit
 Succinct PQ Proof
 ```
 
-這應保持為研究與最佳化方向，而非 QDay 初始 PQC 部署的先決條件。
+這應保持為研究與優化方向，而非 QDay 初始 PQC 部署的先決條件。
 
 ### 10.5 長期密碼敏捷性
 
-即使在 PQC 原生階段，QDay 也不應將自己定義為僅支援 ML-DSA 的網路。
+即使在 PQC 原生階段，QDay 也不應將自己定義為僅支援 ML-DSA 的網絡。
 
 ```
                 QDay PQC Framework
@@ -1149,7 +1149,7 @@ Succinct PQ Proof
                  Crypto Agility
 ```
 
-未來的 PQC 演算法應能透過協定升級引入，而無需從根本上重新設計帳戶或基礎設施架構。
+未來的 PQC 算法應能透過協定升級引入，而無需從根本上重新設計帳戶或基礎設施架構。
 
 ### 10.6 Phase 5 完成標準
 
@@ -1161,8 +1161,8 @@ QDay 在符合以下條件時達到 PQC 原生階段：
 - 跨鏈橋與預言機具備 PQC 原生安全性。
 - 治理與國庫支援 PQC 原生控制。
 - 排序器與驗證者的 PQC 支援已在需要之處通過生產驗證。
-- ECDSA 僅在相容性需要之處保留。
-- 密碼敏捷性允許未來的 PQC 演算法升級。
+- ECDSA 僅在兼容性需要之處保留。
+- 密碼敏捷性允許未來的 PQC 算法升級。
 
 最終狀態為：
 
@@ -1186,7 +1186,7 @@ Quantum-Resistant QDay
 
 ## 11. 最終 QDay PQC 架構
 
-目標架構應結合 EVM 相容性、帳戶層級遷移、PQC 執行能力與漸進式的基礎設施遷移。
+目標架構應結合 EVM 兼容性、帳戶層級遷移、PQC 執行能力與漸進式的基礎設施遷移。
 
 ```
                          QDay
@@ -1232,7 +1232,7 @@ Quantum-Resistant QDay
 
 此架構有四個主要層級：
 
-### Layer 1 — 相容性
+### Layer 1 — 兼容性
 
 ```
 ECDSA
@@ -1361,7 +1361,7 @@ ML-DSA Verification
 - PQC Precompile
 - ML-DSA 驗證
 - PQC 執行基準測試
-- zkEVM 相容性驗證
+- zkEVM 兼容性驗證
 
 目標：
 
@@ -1444,7 +1444,7 @@ EVM Compatibility
 
 目標：
 
-> **抗量子的 QDay 網路**
+> **抗量子的 QDay 網絡**
 
 ---
 
@@ -1508,7 +1508,7 @@ Phase 4: Migrate & Protect
 Phase 5: PQC Native
 ```
 
-PQC Credential 刻意在 Phase 4 引入，因為它是一種**帳戶遷移機制**。AA、PQC Precompile 與 PQC 驗證是 Phase 2 的執行能力。混合簽章是 Phase 3 的過渡機制。前述任何階段都不應要求使用者註冊 PQC 憑證。
+PQC Credential 刻意在 Phase 4 引入，因為它是一種**帳戶遷移機制**。AA、PQC Precompile 與 PQC 驗證是 Phase 2 的執行能力。混合簽章是 Phase 3 的過渡機制。前述任何階段都不應要求用戶註冊 PQC 憑證。
 
 ### 核心原則
 

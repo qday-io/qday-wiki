@@ -7,7 +7,7 @@ draft: false
 
 AI 代理協定定義了自主代理如何與 QDay Aevum 合約及外部 AI 推論互動。
 
-**意圖宣告（Intent Declaration）** — 使用者透過提交已簽章的 `Intent` 結構來宣告意圖，內容包含：目標描述（UTF-8）、觸發條件、授權操作（以合約呼叫選擇器編碼）、資源限制與到期時間。意圖會儲存在鏈上的 Intent Registry 合約中。
+**意圖宣告（Intent Declaration）** — 用戶透過提交已簽章的 `Intent` 結構來宣告意圖，內容包含：目標描述（UTF-8）、觸發條件、授權操作（以合約呼叫選擇器編碼）、資源限制與到期時間。意圖會儲存在鏈上的 Intent Registry 合約中。
 
 **鏈上授權（On-chain Authorization）** — 每個代理都關聯一組智慧帳戶 Session Key，用以限定代理可呼叫的合約與函式，以及可轉移的價值。Session Key 是授權邊界——無論代理的 AI 模型提出什麼建議，代理都無法超出此範圍。
 

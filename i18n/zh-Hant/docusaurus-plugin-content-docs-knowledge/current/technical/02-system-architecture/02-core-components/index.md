@@ -7,7 +7,7 @@ draft: false
 
 | 元件 | 實作 | 主要角色 |
 |-----------|---------------|--------------|
-| 使用者／錢包 | MetaMask、SDK、RPC 客戶端 | 送出交易 |
+| 用戶／錢包 | MetaMask、SDK、RPC 客戶端 | 送出交易 |
 | QDAY 節點 | `cdk-erigon` | 排序器——執行交易、產生 L2 區塊、維護狀態 |
 | Sequence Sender | `cdk-node` | 收集區塊、建立批次、提交至 `zkRollupManager` |
 | zkRollupManager | Solidity 合約（DA 層） | 接受批次、驗證 ZK 證明、最終確定狀態 |

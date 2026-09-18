@@ -15,8 +15,8 @@ QDay 的生態系分層建構：一個將 QDay 連接至 Abelian 以取得安全
 QDay 的生態系應用包括：
 
 - **ABEL 質押** — 在 QDay 上質押 ABEL，賺取質押與空投獎勵。
-- **QDay Bridge** — 在 QDay 與其他 EVM 相容鏈之間轉移 ERC20、TRC20 與 QRC20 代幣。
-- **QDay 質押** — 質押 QDAY 以支持網路並賺取獎勵。
+- **QDay Bridge** — 在 QDay 與其他 EVM 兼容鏈之間轉移 ERC20、TRC20 與 QRC20 代幣。
+- **QDay 質押** — 質押 QDAY 以支持網絡並賺取獎勵。
 - **Q-Swap** — QDay 的去中心化交易所，用於兌換代幣。
 
 ## DeFi

@@ -7,17 +7,17 @@ import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
 
 # QDay 遷移
 
-目前有兩件不同的事情同時進行。**鏈升級**指的是網路本身：QDay Origin → QDay Aevum。**資產遷移**指的是你的代幣：在 QDay Origin 上鎖定，並在 QDay Aevum 上以 1:1 收到。
+目前有兩件不同的事情同時進行。**鏈升級**指的是網絡本身：QDay Origin → QDay Aevum。**資產遷移**指的是你的代幣：在 QDay Origin 上鎖定，並在 QDay Aevum 上以 1:1 收到。
 
 ---
 
 ## 1. 鏈升級
 
-**QDay Origin** 是目前的正式生產鏈。**QDay Aevum** 是升級後的網路（新的鏈 ID、新的 RPC、新的區塊瀏覽器）。錢包與 dApp 必須手動新增 QDay Aevum；它們不會自動跟隨升級。
+**QDay Origin** 是目前的正式生產鏈。**QDay Aevum** 是升級後的網絡（新的鏈 ID、新的 RPC、新的區塊瀏覽器）。錢包與 dApp 必須手動新增 QDay Aevum；它們不會自動跟隨升級。
 
 | | QDay Origin | QDay Aevum |
 |---|---|---|
-| 是什麼 | 目前的正式生產網路 | 升級後的網路 |
+| 是什麼 | 目前的正式生產網絡 | 升級後的網絡 |
 | 主網 | **已上線**——鏈 ID `44001` | **尚未開放**——鏈 ID `44002`（即將推出） |
 | 測試網 | 已上線——鏈 ID `44003` | **已上線**——鏈 ID `44005`（目前的公開測試網） |
 
@@ -33,7 +33,7 @@ RPC、WebSocket 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
 **升級時該做什麼**
 
 1. 新增你需要的鏈：Origin 主網（`44001`）和／或 Aevum 測試網（`44005`）——[將 QDay 新增到你的錢包](/guide/start/add-network)。
-2. 當你開始在 QDay Aevum 上建置或測試時，將應用程式與 RPC 設定指向 Aevum 端點——[網路設定](/Knowledge/technical/developer-guide/network-configuration)。
+2. 當你開始在 QDay Aevum 上建置或測試時，將應用程式與 RPC 設定指向 Aevum 端點——[網絡設定](/Knowledge/technical/developer-guide/network-configuration)。
 3. 在 Aevum 主網（`44002`）正式宣布之前，正式環境請繼續使用 Origin 主網。
 
 ---

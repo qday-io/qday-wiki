@@ -23,5 +23,5 @@ QDay 背後的團隊。
 - **LinkedIn：** [PQA Labs](https://www.linkedin.com/company/pqa-labs/)
 
 :::info
-請只關注上方的官方連結。QDay 絕不會主動私訊你、索取你的助記詞，或以「客服」帳號要求提供私鑰。
+請只關注上方的官方連結。QDay 絕不會主動私訊你、索取你的助記詞，或以「客服」帳戶要求提供私鑰。
 :::

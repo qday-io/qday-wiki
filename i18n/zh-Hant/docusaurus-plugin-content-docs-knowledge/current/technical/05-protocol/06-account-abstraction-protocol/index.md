@@ -7,7 +7,7 @@ draft: false
 
 QDay Aevum 實作 **ERC-4337** 帳戶抽象，無需變更核心 EVM 協定。
 
-**UserOperation** — 使用者不使用標準的 Ethereum 交易，而是建構一個 `UserOperation` 結構，其中包含：`sender`（智慧帳戶地址）、`nonce`、`initCode`（用於部署帳戶）、`callData`、`callGasLimit`、`verificationGasLimit`、`preVerificationGas`、`maxFeePerGas`、`maxPriorityFeePerGas`、`paymasterAndData` 與 `signature`。
+**UserOperation** — 用戶不使用標準的 Ethereum 交易，而是建構一個 `UserOperation` 結構，其中包含：`sender`（智慧帳戶地址）、`nonce`、`initCode`（用於部署帳戶）、`callData`、`callGasLimit`、`verificationGasLimit`、`preVerificationGas`、`maxFeePerGas`、`maxPriorityFeePerGas`、`paymasterAndData` 與 `signature`。
 
 **Bundler 記憶池（Bundler Mempool）** — Alto bundler 維護一個鏈下的 UserOperation 記憶池。Bundler 會收集 UserOperation，模擬執行以檢查有效性與 Gas 上限，並將多個 UserOperation 打包成單一 `handleOps()` 交易。
 

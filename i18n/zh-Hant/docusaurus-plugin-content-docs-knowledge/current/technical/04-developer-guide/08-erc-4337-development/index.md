@@ -37,7 +37,7 @@ const userOpHash = await bundler.sendUserOperation({
 
 ## Paymaster
 
-部署 Paymaster 為你的使用者代付 Gas。最簡單的模式是 `VerifyingPaymaster`，由它為符合資格的 UserOperation 簽核：
+部署 Paymaster 為你的用戶代付 Gas。最簡單的模式是 `VerifyingPaymaster`，由它為符合資格的 UserOperation 簽核：
 
 ```solidity
 import "@account-abstraction/contracts/core/BasePaymaster.sol";

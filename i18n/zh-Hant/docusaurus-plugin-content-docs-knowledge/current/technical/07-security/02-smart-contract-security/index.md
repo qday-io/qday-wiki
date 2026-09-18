@@ -1,9 +1,9 @@
 ---
-title: 智慧合約安全性
+title: 智能合約安全性
 draft: false
 ---
 
-# 智慧合約安全性
+# 智能合約安全性
 
 **Polygon CDK 血統**——核心 zkEVM 合約（`PolygonZkEVMBridge`、`PolygonRollupManager`、`GlobalExitRoot`、`Verifier`）是 Polygon CDK 合約的分支，這些合約已由多家安全公司獨立審計。QDAY 專屬的修改極少，且集中於 Committer 與 Record Contracts。
 

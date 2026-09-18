@@ -1,11 +1,11 @@
 ---
-title: 網路設定
+title: 網絡設定
 draft: false
 ---
 
-# 網路設定
+# 網絡設定
 
-QDay 是抗量子、相容 EVM 的 Layer 2。目前有兩個相關的網路：**Origin**（來源）與 **QDay Aevum**（目的地）。最新的 ID、RPC 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
+QDay 是抗量子、兼容 EVM 的 Layer 2。目前有兩個相關的網絡：**Origin**（來源）與 **QDay Aevum**（目的地）。最新的 ID、RPC 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
 
 ```mermaid
 flowchart LR
@@ -33,4 +33,4 @@ curl -s https://rpc.qday.io \
   -d '{"jsonrpc":"2.0","id":1,"method":"eth_blockNumber","params":[]}'
 ```
 
-在錢包中新增此鏈：[錢包整合](/Knowledge/technical/developer-guide/wallet-integration)。接著 [建置你的第一個合約](/Knowledge/technical/developer-guide/smart-contract-development)。
+在錢包中新增此鏈：[錢包整合](/Knowledge/technical/developer-guide/wallet-integration)。接着 [建置你的第一個合約](/Knowledge/technical/developer-guide/smart-contract-development)。

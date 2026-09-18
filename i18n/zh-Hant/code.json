@@ -362,7 +362,7 @@
     "description": "The title of the tag list page"
   },
   "home.card.user.title": {
-    "message": "我是使用者"
+    "message": "我是用戶"
   },
   "home.card.user.body": {
     "message": "把 QDay Aevum 加入錢包，swap、質押、使用 dApp。"
@@ -401,7 +401,7 @@
     "message": "知識庫。"
   },
   "home.lede": {
-    "message": "全球首個相容以太坊虛擬機（EVM）的抗量子 Layer 2 網路，建構於創新的 Abelian 區塊鏈之上。"
+    "message": "全球首個兼容以太坊虛擬機（EVM）的抗量子 Layer 2 網絡，建構於創新的 Abelian 區塊鏈之上。"
   },
   "home.browseDocs": {
     "message": "瀏覽文件 →"
@@ -458,7 +458,7 @@
     "message": "QDay 社群"
   },
   "home.title": {
-    "message": "抗量子 EVM Layer 2 網路"
+    "message": "抗量子 EVM Layer 2 網絡"
   },
   "home.features": {
     "message": "為什麼選 QDay"
@@ -470,10 +470,10 @@
     "message": "採用後量子密碼學，在量子運算時代確保你的資產與交易安全。"
   },
   "feat.evm.t": {
-    "message": "相容 EVM"
+    "message": "兼容 EVM"
   },
   "feat.evm.b": {
-    "message": "完全相容以太坊虛擬機，讓既有智能合約與 dApp 無縫遷移。"
+    "message": "完全兼容以太坊虛擬機，讓既有智能合約與 dApp 無縫遷移。"
   },
   "feat.l2.t": {
     "message": "高效能 Layer 2"
@@ -485,7 +485,7 @@
     "message": "互通性"
   },
   "feat.interop.b": {
-    "message": "支援跨鏈資產轉移與通訊，串接傳統區塊鏈生態與抗量子網路。"
+    "message": "支援跨鏈資產轉移與通訊，串接傳統區塊鏈生態與抗量子網絡。"
   },
   "feat.decentral.t": {
     "message": "去中心化"
