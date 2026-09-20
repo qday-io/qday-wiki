@@ -25,5 +25,5 @@ draft: false
 **步驟 6——資料可用性記錄**
 **Abelian Plus Node**（DA 節點元件）儲存 rollup 資料、託管 zkEVM 合約，並確保所有批次資料皆可取得。DA 層上的 **Record Contracts** 持久化批次中繼資料與狀態根。
 
-**步驟 7——提交至 Abelian 鏈**
+**步驟 7——提交至 Abelian**
 **Committer** 監看 `zkRollupManager` 合約中的事件（`VerifyBatches`、`BatchVerified`、`StateUpdated`）。每當觸發事件發生，它會取得相關資料、呼叫 Abelian RPC、將資料寫入 Abelian 鏈，並將結果寫回 DA 節點的記錄合約 (Record Contracts)。Abelian 鏈接着儲存 Batch Status Root、rollup 狀態摘要與必要的鏈上紀錄——從而在第一層(Layer 1)提供抗量子的最終性(quantum-resistant finality）。
