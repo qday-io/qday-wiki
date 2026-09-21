@@ -41,22 +41,29 @@ export default function ConnectWallet() {
     );
   }
 
+  // The button stays inline with its siblings in the hero row; the hint and any
+  // message are separate flex items with `order: 1` and full width, so they wrap
+  // onto their own line underneath instead of making this button taller.
   return (
-    <span style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-    <button onClick={go} disabled={state === 'busy'} style={{
-      background: 'transparent', color: 'var(--ifm-color-primary)',
-      border: '1px solid var(--ifm-color-primary)', borderRadius: 8,
-      padding: '10px 18px', fontWeight: 600, fontSize: 15,
-      cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
-    }} title={msg || undefined}>
-      {state === 'busy' ? 'Check your wallet…' : 'Add QDay Aevum to Abelian (Mobile)'}
-    </button>
+    <>
+      <button onClick={go} disabled={state === 'busy'} style={{
+        background: 'transparent', color: 'var(--ifm-color-primary)',
+        border: '1px solid var(--ifm-color-primary)', borderRadius: 8,
+        padding: '10px 18px', fontWeight: 600, fontSize: 15,
+        cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
+      }} title={msg || undefined}>
+        {state === 'busy' ? 'Check your wallet…' : 'Add QDay Aevum to Abelian (Mobile)'}
+      </button>
       {/* The wallet's home scanner only reads addresses and payment codes; the
           WalletConnect pairing lives on its own screen, so say where to scan. */}
-      <small style={{ opacity: 0.7, fontSize: 12.5 }}>
+      <small style={{ order: 1, flexBasis: '100%', textAlign: 'center', marginTop: -8, opacity: 0.7, fontSize: 12.5 }}>
         Scan from Abelian (Mobile) → Settings → DApp Connection
       </small>
-      {msg ? <small style={{ color: '#f5a524', fontSize: 12.5 }}>{msg}</small> : null}
-    </span>
+      {msg ? (
+        <small style={{ order: 2, flexBasis: '100%', textAlign: 'center', marginTop: -4, color: '#f5a524', fontSize: 12.5 }}>
+          {msg}
+        </small>
+      ) : null}
+    </>
   );
 }
