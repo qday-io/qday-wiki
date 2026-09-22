@@ -7,8 +7,7 @@ slug: /intro
 # QDay
 
 **QDay** is a quantum-safe, EVM-compatible Layer 2 on Abelian. **QDay Aevum** is the upgraded network —
-the chain upgrade the ecosystem is moving to. This wiki covers both: existing QDay guides plus the
-QDay Aevum upgrade and how to migrate.
+the chain upgrade the ecosystem is moving to.
 
 <div className="grid cards" markdown>
 
