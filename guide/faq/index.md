@@ -6,17 +6,17 @@ title: FAQ
 # FAQ
 
 ### What is QDay?
-QDay is the quantum-safe, EVM-compatible — currently live on testnet (QDay Aevum), with mainnet coming soon.
+QDay is the quantum-safe, EVM-compatible Layer 2 — currently live on testnet (QDay Aevum), with mainnet coming soon.
 
 ### Which wallets support the QDay Testnet, and how do I add the network?
 QDay Testnet is EVM-compatible and supports MetaMask, WalletConnect, and Rainbow.
 
 Network details:
 - **Network Name:** QDay Aevum
-- **RPC URL:** https://rpc-test.qday.io
+- **RPC URL:** https://rpc-test.qday.info
 - **Chain ID:** 44005
 - **Currency Symbol:** tQDAY
-- **Explorer:** https://explorer-test.qday.io
+- **Explorer:** https://explorer-test.qday.info
 
 ### What is the current status of dApp redeployment on the new testnet?
 Core dApps (QDay Portal, Staking, QDay Swap, QDay Bridge, ABEL/WABEL Bridge) are currently being redeployed and integrated on the new testnet cluster.
@@ -29,7 +29,7 @@ The minimum staking amount is 1,000 WABEL.
 
 ### How can I obtain QDAY or WQDAY for staking?
 You can obtain QDAY by:
-1. Staking ABEL to earn QDAY rewards, 
+1. Staking ABEL to earn QDAY rewards,
 2. Acquiring USD8 via QDay Bridge / Abelian App (Mobile) and swapping USD8 for QDAY on QDay Swap.
 
 ### How are QDAY staking rewards calculated and distributed?
