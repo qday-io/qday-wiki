@@ -6,7 +6,7 @@ slug: /intro
 
 # QDay
 
-**QDay** 是建構於 Abelian 之上、量子安全且兼容於 EVM 的 Layer 2。**QDay Aevum** 是升級後的網絡——整個生態系正在遷移至此鏈升級版本。本 wiki 涵蓋兩者：既有的 QDay 指南，以及 QDay Aevum 升級與遷移方式。
+**QDay** 是建構於 Abelian 之上、量子安全且兼容於 EVM 的 Layer 2。**QDay Aevum** 是升級後的網絡——整個生態系正在遷移至此鏈升級版本。
 
 <div className="grid cards" markdown>
 
