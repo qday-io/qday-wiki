@@ -2,713 +2,711 @@
 sidebar_position: 57
 sidebar_label: Whitepaper
 ---
-
 # QDay: The World's First Quantum-Resistant EVM-Compatible Layer 2
 
----
+FEBRUARY 2026
 
-Abelian
-January, 2025
-Version 1.0
+Version 2.1
 
----
+Abstract: QDay is the world's first quantum-resistant, EVM-compatible Layer 2 network, designed to enhance blockchain security with quantum-resistant algorithms while maintaining compatibility with the Ethereum Virtual Machine (EVM).
 
-**Abstract:** QDay is the world\'s first quantum-resistant, EVM-compatible Layer 2 network, designed to enhance blockchain security with quantum-resistant algorithms while maintaining compatibility with
-the Ethereum Virtual Machine (EVM).
+QDay represents a groundbreaking advancement in blockchain technology, offering the first quantum-resistant, EVM-compatible Layer 2 solution. Through its innovative multi-phase implementation strategy, QDay addresses the critical challenge of quantum computing threats while preserving the practical advantages of existing blockchain infrastructure.
 
-QDay represents a groundbreaking advancement in blockchain technology, offering the first quantum-resistant, EVM-compatible Layer 2 solution. Through its innovative two-phase implementation strategy, QDay addresses the critical challenge of quantum computing threats while preserving the
-practical advantages of existing blockchain infrastructure.
+Adopting a comprehensive ecosystem approach, QDay includes core DeFi applications, cross- chain bridges, and enhanced payment capabilities, creating a complete quantum-resistant solution for the blockchain environment. The platform's token economic model ensures long- term sustainability and incentivizes broad network participation.
 
-Adopting a comprehensive ecosystem approach, QDay integrates core DeFi applications and cross-chain bridges, delivering a complete quantum-resistant solution for the blockchain environment. The
-platform\'s token economic model ensures long-term sustainability while driving broad network participation.
+QDay's roadmap provides a clear path for full implementation, integrating the platform's innovative technological features, positioning QDay as a pioneer in quantum-resistant blockchain technology.
 
-QDay\'s roadmap from 2024 to 2026 provides a clear path for full implementation, integrating the platform\'s innovative technological features and positioning QDay as a pioneer in quantum-resistant
-blockchain technology.
 
-## Introduction
+## Version History
 
----
+| Version | Date | Changes Made | Author |
+| --- | --- | --- | --- |
+| 1.0 | 29/07/2024 | Document Creation | Duncan W. Danny L. |
+| 1.1 | 14/01/2025 | Revisions to functions and roadmap | Danny L. |
+| 1.2 | 24/09/2025 | Minor revisions | Vike S. |
+| 2.0 | 05/02/2026 | Revisions to functions and roadmap | Danny L. Pascal L. |
+| 2.1 | 25/06/2026 | Minor revisions | Pascal L. |
 
-In the dynamic realm of blockchain technology, the persistent pursuit of enhanced security, scalability, and interoperability is paramount. The rise of quantum computing presents an existential threat to the cryptographic bedrock of current blockchain infrastructures. In response to this impending quantum revolution, we proudly present QDay, the first-of-its-kind post-quantum EVM-compatible Layer 2 network, built atop the pioneering quantum-resistant Abelian Blockchain (Layer 1). QDay is a testament to our commitment to fortify blockchain against quantum threats while elevating its performance and functionality.
+## 1. Introduction
 
-### The Synergy of Layer 2 and Quantum-Resistant Foundations
+In the dynamic realm of blockchain technology, the persistent pursuit of enhanced security, scalability, and interoperability is paramount. The rise of quantum computing presents an existential threat to the cryptographic bedrock of current blockchain infrastructures. In response to this impending quantum revolution, we proudly present QDay, the first-of-its-kind post- quantum EVM-compatible Layer 2 network, built atop the pioneering quantum-resistant Abelian Blockchain (Layer 1). QDay is a testament to our commitment to fortify blockchain against quantum threats while elevating its performance and functionality.
 
-QDay is not merely an extension; it\'s a symbiotic enhancement of the Abelian Blockchain, the world\'s inaugural quantum-resistant blockchain platform. By leveraging the quantum-resistant algorithms already operational on Abelian, QDay fortifies the security measures to an unprecedented level. As a Layer 2 solution, it operates above the Abelian Blockchain, streamlining transaction processing, reducing costs, and accelerating confirmation times---all while inheriting the quantum-resistant properties of its Layer 1 counterpart.
+## 1.1. The Synergy of Layer 2 and Quantum-Resistant Foundations
 
-### Innovating with a POS-over-POW Model
+By leveraging the quantum-resistant algorithms already operational on Abelian, QDay fortifies the security measures to an unprecedented level. As a Layer 2 solution, it streamlines transaction processing, reducing costs, and accelerating confirmation times—all while inheriting the quantum-resistant properties of its Layer 1 counterpart.
 
-Breaking new ground, QDay introduces an innovative consensus mechanism strategy by implementing a Proof of Stake (POS) model over the Abelian Blockchain\'s Proof of Work (POW) system. This novel POS-over-POW relationship is a first in the industry, offering the combined benefits of both systems: the robust security and decentralization of POW with the energy efficiency and scalability of POS. This strategic fusion ensures that QDay is not only quantum-resistant but also environmentally sustainable and poised for future growth.
+## 1.2. Innovating with a POS-over-POW Model
 
-### QDay\'s Quantum-Resistant EVM-Compatible Layer 2: Core Advantages
+Breaking new ground, QDay introduces an innovative consensus mechanism strategy by implementing a Proof of Stake (POS) model over the Abelian Blockchain's Proof of Work (POW) system. This novel POS-over-POW relationship is a first in the industry, offering the combined benefits of both systems: the robust security and decentralization of POW with the energy efficiency and scalability of POS. This strategic fusion ensures that QDay is not only quantum-resistant but also environmentally sustainable and poised for future growth.
 
-- **Quantum-Resistant Security**: Building on the quantum-resistant algorithms of the Abelian Blockchain, QDay introduces an additional layer of security, shielding the network against the quantum threat while maintaining the integrity and safety of user assets and data.
+## 1.3. QDay's Quantum-Resistant EVM-Compatible Layer 2: Core Advantages
 
-- **Enhanced Scalability**: QDay\'s Layer 2 solution leverages the robust foundation of Abelian to significantly advance transaction throughput, aiming to achieve 1,000 TPS at inception, thus ensuring a scalable network ready to accommodate the ever-growing demands of blockchain applications.
+- Quantum-Resistant Security: Building on the quantum-resistant algorithms – first from the Abelian Blockchain with development upgrades to become native post-quantum – QDay introduces an additional layer of security, shielding the network against the quantum threat while maintaining the integrity and safety of user assets and data.
 
-- **Cost-Effective Transactions**: By processing transactions off-chain and utilizing the POS consensus mechanism, QDay significantly reduces transaction fees, making blockchain technology more accessible and affordable for a diverse range of applications and users.
+- Enhanced Scalability: QDay's Layer 2 solution leverages the robust foundation of Abelian to significantly advance transaction throughput, aiming to achieve over 4,000 TPS, thus ensuring a scalable network ready to accommodate the ever-growing demands of blockchain applications.
 
-- **Accelerated Transaction Confirmations**: QDay\'s network is engineered for speed, providing near-instantaneous transaction finality, which is crucial for applications that depend on quick and reliable transaction processing.
+- Cost-Effective Transactions: By processing transactions off-chain and utilizing the POS consensus mechanism, QDay significantly reduces transaction fees, making blockchain technology more accessible and affordable for a diverse range of applications and users.
 
-- **A Developer\'s Playground**: With EVM compatibility at its core, developers can effortlessly transition to QDay using their preferred Ethereum-based development tools and languages, promoting innovation and streamlining the development process.
 
-- **Interoperability as a Priority**: QDay is meticulously crafted to ensure seamless interaction with other blockchain networks, promoting cross-chain transactions and contributing to a more cohesive and versatile blockchain ecosystem.
+- Accelerated Transaction Confirmations: QDay's network is engineered for speed, providing near-instantaneous transaction finality, which is crucial for applications that depend on quick and reliable transaction processing.
 
-### The Road Ahead: Pioneering the Future of Quantum-Resistant Blockchain
+- A Developer's Playground: With EVM compatibility at its core, developers can effortlessly transition to QDay using their preferred Ethereum-based development tools and languages, promoting innovation and streamlining the development process.
+
+- Interoperability as a Priority: QDay is meticulously crafted to ensure seamless interaction with other blockchain networks, promoting cross-chain transactions and contributing to a more cohesive and versatile blockchain ecosystem.
+
+## 1.4. The Road Ahead: Pioneering the Future of Quantum-Resistant Blockchain
 
 The development of quantum-resistant security in QDay will be conducted in two major phases:
 
-- **Phase 1: L1-Assisted Quantum-Resistant Rollups with EVM Compatibility** - In this phase, QDay will implement a quantum-resistant ledger by integrating ZK Rollups with the Abelian Blockchain, preserving EVM compatibility through the adoption of the account model and smart contract functionalities.This will allow for a smooth transition for Ethereum developers and enable the use of existing Ethereum tools and languages. With such L1-assisted quantum-resistant rollups, QDay will be resistant to quantum attacks targeting the modification of ledger data such as transaction orders, amounts, and state structure.In addition, when any attacks are detected, QDay will be able to prevent the loss of funds by temporarily halting the execution of rollups in a quantum-resistant manner, i.e., attackers cannot move forward once the rollups have been halted because they are not able to forge the quantum-resistant signatures generated by the rollup operators.
+## Phase 1: L1-Assisted Quantum-Resistant Rollups with EVM Compatibility
 
-- **Phase 2: L2-Native Quantum-Resistant Accounts and Smart Contracts** - In this phase, QDay will introduce quantum-resistant accounts by adding new secure keys to existing accounts and enabling operations that require these keys. To make this possible, QDay\'s EVM will be updated to support post-quantum cryptographic keys and algorithms. QDay will also support two types of smart contracts: traditional and quantum-resistant. Wallets that already work with EVM smart contracts can still use traditional contracts, while quantum-resistant contracts will only work with wallets that support QDay\'s advanced security features.
+In this phase, QDay will introduce quantum-resistant ledger by leveraging ZK Rollups to Abelian Blockchain while maintaining the EVM compatibility by inheriting the account model and smart contract capabilities of the Ethereum Virtual Machine (EVM). This will allow for a smooth transition for Ethereum developers and enable the use of existing Ethereum tools and languages. With such L1-assisted quantum-resistant rollups, QDay will be resistant to quantum attacks that target at modifying the ledger data such as transaction orders, amounts, and the structure of the state. In addition, when any attacks are detected, QDay will be able to prevent funds loss by temporarily halting the execution of rollups in a quantum-resistant manner, i.e., attackers cannot move forward once the rollups have been halted because they are not able to forge the quantum-resistant signatures generated by the rollup operators.
 
-The two quantum-resistant mechanisms work independently but complement each other. The first defends ledger data from quantum attacks, while the second protects individual accounts. Together, they provide strong, comprehensive security for QDay. For example, even if an attacker steals private keys (by hacking a computer or other means), funds can still be protected by halting rollups, freezing affected accounts, and then resuming rollups. These actions are based on the consensus of rollup operators, ensuring the process remains decentralized and secure against quantum threats.
+## Phase 2: L2-Native Quantum-Resistant Accounts and Smart Contracts
 
-![Phase 1 and Phase 2 of QDay Implementation](/qday/QDay_1.4_PSQ_Plan.png)
+In this phase, QDay will implement quantum-resistant accounts by adding new quantum- resistant keys to existing accounts and enabling operations requiring signatures from quantum- resistant keys. To this end, the EVM implementation of QDay will be updated to support the auxiliary post-quantum cryptographic keys and algorithms. On top of this quantum-resistant account model, QDay will support two types of smart contracts: traditional contract and quantum-resistant contract. Wallets that support EVM smart contracts can still interact with the traditional contracts while the quantum-resistant contracts will only be available to wallets that support quantum-resistant keys and algorithms built in QDay.
 
-## Technical Overview
 
----
+The above two quantum-resistant mechanisms are orthogonal. The former is a layer of defense against quantum attacks to the ledger data, while the latter is a layer of defense against quantum attacks to specific accounts. The combination of these two mechanisms will provide a comprehensive quantum-resistant security to QDay. For example, even if an attacker manages to get the private keys of some accounts (by hacking the victim's computer or other means), it is still possible to prevent funds loss by halting the execution of the rollups, taking remedial measures such as freezing the affected accounts, and finally continuing the execution of the rollups. Note that all these actions will be conducted based on the consensus of the rollup operators, which is both decentralized and quantum-resistant by design.
 
-### Quantum-Resistant Cryptography in Abelian (Layer 1)
+## 2. Technical Overview
 
-Abelian serves as the foundational Phase 0 of the QDay implementation. Its proven track record of successful operation over the years establishes a strong and solid foundation for QDay.
+## 2.1. Quantum-Resistant Cryptography in Abelian (Layer 1)
 
-The Abelian blockchain employs quantum-resistant keys and algorithms to ensure the system\'s security against the advent of quantum computers. By utilizing lattice-based quantum-resistant assumptions such as Learning With Errors (LWE) and Ring-LWE, Abelian ensures strong protection against quantum attacks.These algorithms provide a robust foundation for the blockchain, ensuring that transactions and user data remain secure even in the face of future quantum computing advancements.
+We can think of Abelian as the Phase 0 of QDay implementation. It has already been running successfully for years which lays a solid foundation for QDay. The Abelian blockchain employs quantum-resistant keys and algorithms to ensure the system's security against the advent of quantum computers. Specifically, Abelian uses lattice-based cryptographic techniques, such as the Learning With Errors (LWE) problem and Ring-LWE, which are believed to be secure against quantum attacks.
 
-- **Security**: Lattice-based cryptography offers enhanced security by resisting both classical and quantum attacks. This ensures the Abelian blockchain remains resilient against future quantum threats, protecting the integrity and confidentiality of user data and transactions.
+These algorithms provide a robust foundation for the blockchain, ensuring that transactions and user data remain secure even in the face of future quantum computing advancements.
 
-- **Efficiency**: These algorithms are optimized for performance, enabling secure and efficient transaction processing. Leveraging lattice-based cryptographic techniques, Abelian ensures the network handles a high volume of transactions without compromising speed or security.
+- Security: Lattice-based cryptography offers enhanced security by being resistant to both classical and quantum attacks. This ensures that the Abelian blockchain can withstand potential threats from future quantum computers, maintaining the integrity and confidentiality of user data and transactions.
 
-- **Scalability**: The scalability of lattice-based techniques enables the network to grow while maintaining security and efficiency. This positions Abelian to support a growing user base, fostering broader adoption and usage.
+- Efficiency: These algorithms are optimized for performance, allowing for secure and efficient transaction processing. By leveraging lattice-based cryptographic techniques, Abelian ensures that the network can handle a high volume of transactions without compromising speed or security.
 
-- **Future-Proofing**: Abelian is dedicated to advancing quantum-resistant technologies through continuous research and development. The network will regularly update its cryptographic algorithms to strengthen security and performance, maintaining its leadership in quantum-resistant blockchain innovation.
+- Scalability: The scalability of lattice-based techniques ensures that the network can grow without compromising security or efficiency. This makes Abelian well-suited for supporting a large and expanding user base, facilitating widespread adoption and usage.
 
-### Quantum-Resistant Cryptography in QDay-to-Abelian Rollups (Layer 2 to Layer 1)
+- Future-Proofing: Abelian is committed to continuous research and development in quantum-resistant technologies. The network will regularly update its cryptographic algorithms to enhance security and performance, ensuring that it remains at the forefront of quantum-resistant blockchain technology.
 
-This is the *Phase 1* of QDay implementation.
+## 2.2. Quantum-Resistant Cryptography in QDay-to-Abelian Rollups (L2 to L1)
 
-**Innovative POS-over-POW Consensus Integration**
+This is the Phase 1 of QDay implementation.
 
-POS-over-POW is an innovative consensus mechanism that combines the strengths of both Proof of Stake (POS) and Proof of Work (POW) to create a more secure and efficient blockchain network. This hybrid approach leverages the established security of POW while introducing the energy efficiency and scalability of POS.
+## Innovative POS-over-POW Consensus Integration
 
-In a POS-over-POW system, the underlying blockchain operates on a POW consensus mechanism, which is known for its robustness and security. POW involves miners competing to solve complex mathematical puzzles, thereby validating transactions and securing the network. This process is computationally intensive and energy-demanding, but it delivers a high level of security because of the immense computational power required to compromise the network.
+POS-over-POW is an innovative consensus mechanism that combines the strengths of both Proof of Stake and Proof of Work to create a more secure and efficient blockchain network. This hybrid approach leverages the established security of POW while introducing the energy efficiency and scalability of POS.
 
-Building on the POW foundation, a POS layer is implemented. In POS, validators are selected to create new blocks and validate transactions based on the number of coins they hold and stake as collateral. This process is far less energy-intensive than POW, as it eliminates the need for solving complex puzzles, relying instead on economic incentives to encourage honest behavior from validators.
+In a POS-over-POW system, the underlying blockchain operates on a POW consensus mechanism, which is known for its robustness and security. POW involves miners competing to solve complex mathematical puzzles, thereby validating transactions and securing the network. This process is computationally intensive and energy-consuming but provides a high degree of security due to the significant amount of computational power required to attack the network.
+
+On top of this POW foundation, a POS layer is implemented. In POS, validators are chosen to create new blocks and validate transactions based on the number of coins they hold and are willing to "stake" as collateral. This process is much less energy-intensive compared to POW because it does not involve solving complex puzzles. Instead, it relies on economic incentives to ensure that validators act honestly.
 
 The POS-over-POW consensus mechanism offers several advantages over a pure POS-over-POS system:
 
-1) **Enhanced Security**:
+1\) Enhanced Security:
 
-   - **POW Foundation**: Provides strong security through computational difficulty, making attacks both costly and challenging.
+- o POW Foundation: Provides strong security through computational difficulty, making attacks costly and challenging.
 
-   - **Synergistic Security**: Combines the strengths of POS and POS, to enhance overall network security.
+- o Synergistic Security: Combines the strengths of POS and POS, enhancing overall network security.
 
-2) **Energy Efficiency**:
+2\) Energy Efficiency:
 
-   - **Reduced Energy Consumption**: POS layer significantly lowers energy use compared to using POW alone.
+- o Reduced Energy Consumption: POS layer significantly lowers energy use compared to POW alone.
 
-   - **Optimized Resource Usage**: Balances security and energy efficiency by leveraging POW for security and POS for validation.
+- o Optimized Resource Usage: Balances security and energy efficiency by leveraging POW for security and POS for validation.
 
-3) **Scalability**:
+3\) Scalability:
 
-   - **Improved Throughput**: POS layer processes transactions more efficiently, enhancing scalability.
 
-   - **Layered Architecture**: Allows modular upgrades, enabling continuous scalability improvements.
+- o Improved Throughput: POS layer processes transactions more efficiently, enhancing scalability.
 
-4) **Economic Incentives**:
+- o Layered Architecture: Allows modular upgrades, enabling continuous scalability improvements.
 
-   - **Balanced Incentive Structure**: Rewards both miners and validators, promoting active participation through POS incentives.
+4\) Economic Incentives:
 
-   - **Stakeholder Engagement**: Involves a broad range of participants, enhancing decentralization and resilience.
+- o Balanced Incentive Structure: Rewards both miners and validators, promoting active participation through POS incentives.
 
-5) **Resistance to Centralization**:
+- o Stakeholder Engagement: Involves a broad range of participants, enhancing decentralization and resilience.
 
-   - **Distributed Security**: POW layer ensures decentralization by distributing security across a wide network of miners.
+5\) Resistance to Centralization:
 
-   - **Mitigation of Centralization Risks**: Reduces the risk of centralization found in pure POS systems by combining computational requirements with staked coins.
+- o Distributed Security: POW layer ensures decentralization by distributing security across many miners.
 
-QDay\'s implementation of POS-over-POW leverages the robust security of the Abelian blockchain\'s POW foundation while integrating a POS layer to enhance scalability and efficiency.
+- o Mitigation of Centralization Risks: Reduces the risk of centralization seen in pure POS systems by requiring both computational resources and staked coins.
 
-![POS-over-POW](/qday/QDay_2.2_POSPOW.png)
+QDay's implementation of POS-over-POW leverages the robust security of the Abelian blockchain's POW foundation while introducing a POS layer to enhance scalability and efficiency.
 
-**Quantum-Resistant Rollups**
+## Quantum-Resistant Rollups
 
-The objective of quantum-resistant rollups is to ensure that QDay\'s ledger data cannot be altered or forged, even by attackers using quantum computers. If an attack is detected, QDay can securely halt rollup execution, preventing attackers from proceeding since they cannot forge the quantum-resistant signatures generated by rollup operators. During this halt, affected accounts can be frozen, and authorities notified, with rollup execution resuming once corrective measures are in place. Unlike QDay, existing Layer 2 solutions lack this capability, as they cannot stop quantum attackers from cracking the private keys of rollup operators.
+The objective of quantum-resistant rollups is to ensure that no one can modify or forge the ledger data in QDay even with access to a quantum computer. This implies that the QDay Blockchain can halt the execution of the rollups in a quantum-resistant manner, i.e., attackers cannot move forward once the rollups have been halted because they are not able to forge the quantum-resistant signatures generated by the rollup operators. During the halt, the affected accounts can be frozen and the attackers can be reported to the authorities. The execution of the rollups can be resumed once the remedial measures have been applied. Note that existing Layer 2 solutions are incapable of implementing such quantum-resistant halt mechanism because they cannot prevent the quantum attackers from cracking the private keys of the rollup operators.
 
-QDay\'s implementation of quantum-resistant rollups is designed for simplicity. Each rollup operator uses an account on the Abelian Blockchain, with rollup data secured by quantum-resistant keys and algorithms native to the Layer 1. Beyond leveraging this quantum-resistant foundation, the rest of the rollup implementation functions similarly to other Layer 2 solutions. Specifically, QDay adapts Polygon\'s ZK Rollups to integrate with the unique features of the Abelian Blockchain. The technical details will be covered in the next section.
+The implementation of quantum-resistant rollups in QDay is straightforward. Each rollups operator will be using an Abelian Blockchain account to run the rollups. The rollups data are signed by the quantum-resistant keys and algorithms built in Layer 1. Other than taking advantage of the existing quantum-resistant Layer 1, the rest of the rollup implementation could be exactly the same as any other Layer 2 solutions. In QDay, specifically, the ZK Rollups are built to adapt to the features of the Abelian Blockchain. We will describe the technical details in the next section.
 
-### Quantum-Resistant Accounts and Smart Contracts in QDay (Layer 2)
+## 2.3. Quantum-Resistant Accounts and Smart Contracts in QDay (Layer 2)
 
-This is the *Phase 2* of QDay implementation.
+This is the Phase 2 of QDay implementation.
 
-QDay aims to deliver quantum-resistant security equal to or greater than its Layer 1 foundation, while maintaining EVM compatibility, high transaction speed, and low latency. To achieve this, QDay will implement its own quantum-resistant accounts and smart contracts, separate from the Layer 1 and rollups. This approach ensures QDay becomes fully quantum-resistant while still benefiting from the added security of quantum-resistant rollups.
+The ultimate goal of QDay is to provide quantum-resistant security at the same level or even higher than the Layer 1, while maintaining the EVM compatibility with high transaction throughput and low transaction latency. To this end, QDay will implement quantum-resistant accounts and smart contracts independently from both the Layer 1 and the rollups. In this way, QDay will eventually be quantum-resistant on its own while still gaining the benefits of the quantum-resistant rollups.
 
-Implementing Phase 2 will be complex, as it involves redesigning QDay\'s EVM to support quantum-resistant keys and algorithms while remaining compatible with existing keys and smart contracts. To manage this, QDay will introduce two transaction modes: legacy transaction and quantum-resistant transaction.
+However, the implementation of Phase 2 will be challenging. It requires a complete redesign of the EVM implementation in QDay validator nodes to support the quantum-resistant keys and algorithms while maintaining the back-compatibility with the existing (non-quantum-resistant) keys and smart contracts. To address this challenge, QDay will introduce two modes of transactions: legacy transaction and quantum-resistant transaction.
 
-**Legacy Transaction**
+## Legacy Transaction
 
-Legacy transactions refer to the existing transaction format supported by the current EVM implementation in QDay validator nodes, distinguishing them from quantum-resistant transactions. Legacy transactions are supported in the following two cases:
+Legacy transactions is just another name, to distinguish from the quantum-resistant transactions, of the transactions that are supported by the current EVM implementation in QDay validator nodes. Legacy transactions are supported by having accounts using the legacy keys to interact either with the legacy smart contracts, or with the quantum-resistant smart contracts with the fallback mechanism to support legacy keys.
 
+Note that in the latter case, the account can be unaware of whether the smart contract supports the quantum-resistant keys and algorithms. The fallback mechanism is transparent to the users which implies that third-party wallets without quantum-resistant key support can also be used to interact with such quantum-resistant smart contracts.
 
-- Accounts using legacy keys to interact with the legacy smart contracts.
+However, it is a bit less meaningful to allow quantum-resistant keys to interact with legacy (non-quantum-resistant) smart contracts. This so-called backwardness does not seem to be recommended due to the security consideration.
 
-- Accounts using legacy keys to interact with the quantum-resistant smart contracts that include a fallback mechanism to support legacy keys.
+## Quantum-Resistant Transaction
 
-In the second case, the account does not need to know whether the smart contract supports quantum-resistant keys and algorithms. The fallback mechanism is seamless and transparent to users, meaning third-party wallets without quantum-resistant key support can still interact with these quantum-resistant smart contracts.
+Quantum-resistant transactions are processed by the EVM implementation in QDay validator nodes that are upgraded to support the quantum-resistant keys and algorithms. Such transactions are only supported when accounts use quantum-resistant keys to interact with the quantum- resistant smart contracts. In other words, quantum-resistant transactions have nothing to do with the legacy keys. Only the wallets that support the quantum-resistant keys and algorithms can be used to send such transactions. To complete Phase 2, a reference implementation of quantum- resistant wallets will be provided as a core component of QDay, of which the design and the implementation details will be published in a separate whitepaper.
 
-However, allowing quantum-resistant keys to interact with legacy (non-quantum-resistant) smart contracts is less meaningful. This so-called backward compatibility is not recommended due to security concerns.
+## 3. Tokenomics
 
-**Quantum-Resistant Transaction**
+The total supply of \$QDAY tokens is 22,517,998,100. All \$QDAY tokens will be created at the TGE. The distribution of \$QDAY is designed to ensure network security, incentivize participation, and foster community growth, and will be conducted according to the table below. The lock-up and vesting rules will be implemented by either smart contracts deployed on QDay or the supervision of the DAO.
 
-Quantum-resistant transactions are handled by the upgraded EVM implementation in QDay validator nodes, which supports quantum-resistant keys and algorithms. These transactions are only supported in the following scenario:
+| Category | Allocation (%) | Allocation (Token) | Strategic Purpose | Lock-up & Vesting |
+| --- | --- | --- | --- | --- |
+| Staking Rewards | 35.00% | 7,881,299,335 | To reward protocol staking | Longer the lock-up, higher the rewards. |
+| Investors & Backers | 20.00% | 4,503,599,620 | Private rounds to fund initial and ongoing development | 12-month cliff, then 3-year daily linear vesting |
+| Team & Contributors | 15.00% | 3,377,699,715 | For the founding team and future hires | 3-Yr equal vesting (5% per year) |
+| Protocol Treasury | 20.00% | 4,503,599,620 | Long-term reserves for future development and strategic partnerships. | 4-Yr equal vesting (5% per year) |
+| Community / Ecosystem Growth / Initial Liquidity | 10.00% | 2,251,799,810 | Airdrops, Developer Grants, and Liquidity Provision. | None, 100% unlocked at TGE. |
+| TOTAL | 100.00% | 22,517,998,100 |   |   |
 
-- Accounts using quantum-resistant keys to interact with the quantum-resistant smart contracts.
 
-In other words, quantum-resistant transactions are entirely independent of legacy keys. Only wallets equipped with quantum-resistant key and algorithm support can initiate these transactions. To successfully complete Phase 2, QDay will provide a reference implementation of quantum-resistant wallets as a core component. The design and implementation details of these wallets will be published in a separate whitepaper.
+## 4. Phase 1: L1-Assisted Quantum-Resistant Rollups with EVM Compatibility
 
-## Tokenomics
+In Phase 1, QDay will introduce quantum-resistant ledger by leveraging ZK Rollups to Abelian Blockchain while maintaining the EVM compatibility by inheriting the account model and smart contract capabilities of the Ethereum Virtual Machine. This will allow for a smooth transition for Ethereum developers and enable the use of existing Ethereum tools and languages. With such L1-assisted quantum-resistant rollups, QDay will be resistant to quantum attacks that target at modifying the ledger data such as transaction orders, amounts, and the structure of the state. In addition, when any attacks are detected, QDay will be able to prevent funds loss by temporarily halting the execution of rollups in a quantum-resistant manner, i.e., attackers cannot move forward once the rollups has been halted because they are not able to forge the quantum-resistant signatures generated by the rollup operators. This section will focus on the technical details of the quantum-resistant rollups in QDay.
 
----
+## 4.1. Introduction to ZK Rollups
 
-The total supply of QDAY is  22,517,998,100, mirroring the total supply of ABEL. The distribution of QDAY is designed to ensure network security, incentivize participation, and foster community growth. The QDay DAO (Decentralized Autonomous Organization) will be responsible for the allocation of QDAY after TGE (Token Generation Event).
+ZK Rollups, or Zero-Knowledge Rollups, represent a cutting-edge Layer 2 scaling solution designed to address the inherent limitations of blockchain technology, particularly in terms of scalability and transaction throughput. By aggregating multiple transactions into a single batch and submitting this batch to the main Layer 1 blockchain, ZK Rollups significantly reduce the computational load and storage requirements on the main chain.
 
-### Token Distribution
+The core innovation of ZK Rollups lies in their use of zero-knowledge proofs. These cryptographic proofs allow one party to prove to another that a statement is true without revealing any specific information about the statement itself. In the context of ZK Rollups, this means that transactions can be verified for correctness without exposing the underlying transaction data. This not only enhances privacy but also ensures that the verification process is both secure and efficient.
 
- | **Category** | **%** | **Amount (100M)** | **Lock Up** | **Vesting** |
- | ----------- | ----------- | ----------- | ----------- | ----------- |
- | Validators | 50% | 112.59 | | |
- | Community Growth | 4.5% | 10.13 | | |
- | Initial Liquidity | 0.5% | 1.13 | | |
- | Investors | 10% | 22.52 | 24 months | 12 months |
- | ABEL Staking Airdrop | 10% | 22.52 | 48 months | |
- | Team | 15% | 33.78 | 48 months | 24 months |
- | Insurance Fund | 10% | 22.52 | Till DAO decides | |
- | **Total** | **100%** | **225.18** | | |
+Furthermore, ZK Rollups offer a compelling solution to the scalability trilemma, which posits that it is challenging to achieve decentralization, security, and scalability simultaneously. By offloading transaction processing to Layer 2 while maintaining the security assurances of Layer 1, ZK Rollups strike a balance that enhances overall network performance without compromising on security or decentralization.
 
-All QDAY tokens will be generated at the TGE, with distribution following the allocation outlined in the above table. Lock-up and vesting rules will be enforced either through smart contracts deployed on QDay or under the supervision of the DAO.
+## 4.2. QDay's Adoption of Polygon ZK Rollups Technology
 
-**Validators** - The majority of QDAY (50%) will be allocated to validators. The validators will be responsible for running the QDay validator nodes and securing the network. Rewards will be calculated daily based on the validators\' online time during that period and distributed every four weeks. To be eligible to operate as a validator, the following requirements must be met:
+QDay's integration of Polygon ZK Rollups technology represents a strategic move to leverage one of the most advanced and reliable Layer 2 solutions available. Polygon ZK Rollups are built on robust cryptographic foundations and are designed to handle a high volume of transactions efficiently. This makes them an ideal choice for QDay's objectives of enhancing scalability and privacy.
 
-- The party must be a legal entity or an individual who is at least 20 years old.
+Polygon's ZK Rollups employ zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge), a type of zero-knowledge proof that is both succinct and non- interactive. This means that the proofs are small in size and can be verified quickly without the need for back-and-forth communication between the prover and verifier. This characteristic is particularly advantageous for blockchain applications, where efficiency and speed are paramount.
 
-- The party must either (1) operate a validator node securely and reliably, or (2) delegate validator operations to a capable third party.
+In practice, QDay will use Polygon ZK Rollups to process transactions off-chain, thereby reducing the load on the Abelian main chain. Transactions are bundled together into a single proof, which is then submitted to the Abelian chain for finalization. This approach not only enhances transaction throughput but also reduces gas fees, making the network more cost- effective for users.
 
-- The party must agree to adhere to the governance and consensus rules established by the QDay DAO.
+Moreover, Polygon's ZK Rollups are designed to be highly interoperable, allowing for seamless integration with various blockchain ecosystems. This flexibility is crucial for QDay as it aims to create a scalable and adaptable Layer 2 solution that can evolve with the needs of the blockchain ecosystem.
 
-- The party must stake a minimum of 100,000 QDAY to the validator node. The initial QDAY can be obtained either by staking ABEL to get the airdrop or by purchasing it from the market.
+One of the unique aspects of QDay's implementation is using Abelian, a blockchain similar to Bitcoin, as the Layer 1 foundation for its ZK Rollups. This is a departure from the more common approach of using an EVM-compatible chain as the Layer 1 base. Consequently, this requires significant modifications to the standard Polygon ZK Rollups framework to ensure compatibility with Abelian's architecture.
 
-**Community Growth** - 4.5% of QDAY will be allocated to incentivize community initiatives, marketing, grants, partnerships, and related activities. Distribution will be managed by QDay DAO, based on contributions to the QDay ecosystem. To ensure long-term community incentives, this portion of QDAY will be distributed gradually over 12 to 48 months.
+Abelian, being similar to Bitcoin, employs a different consensus mechanism and transaction model compared to EVM-compatible chains. Specifically, Abelian uses a UTXO (Unspent Transaction Output) model, whereas EVM-compatible chains typically use an account-based model. This fundamental difference necessitates a reworking of the ZK Rollups' data structures and proof generation mechanisms to align with the UTXO model.
 
-**Initial Liquidity** - 0.5% of QDAY will be allocated to establish initial liquidity pools for QDAY trading pairs on decentralized exchanges (DEX). This will help generate a market price shortly after the TGE, which is essential for the proper functioning of all QDAY-related DeFi dApps.
 
-**Investors** - 10% of QDAY will be allocated to strategic investors committed to supporting QDay in the long term. These tokens will be locked for 24 months post-investment and will then be gradually distributed over a 12-month period.
+Additionally, Abelian's consensus algorithm, which is designed to be quantum-resistant, must be integrated into the rollup's verification process in Phase 1. This involves adapting the proof submission and verification protocols to ensure that they are compatible with Abelian's consensus rules. While the specifics of these modifications are complex and technical, the overarching goal is to create a seamless interaction between the rollup and the Abelian main chain, preserving the security and efficiency benefits of both layers.
 
-**ABEL Staking Airdrop** - 10% of QDAY will be allocated as an airdrop to ABEL stakers, specifically rewarding long-term supporters of Abelian. By participating in ABEL staking on QDay, stakers will receive a portion of QDAY as rewards. The airdrop will occur immediately after staking, with the received QDAY automatically staked to a validator node selected by the staker. During the 48-month lock-up period for the airdropped QDAY, stakers will continue earning QDAY rewards from validator operations.
+## 4.3. Benefits of Quantum-Resistant Rollups
 
-**Team** - 15% of QDAY will be allocated to the team members. The tokens will be locked for 48 months and will be distributed gradually over a period of 24 months. The longest lock-up period of this portion of QDAY is to ensure the team members are committed to the long-term success of QDay.
+The main benefit of quantum-resistant rollups is that it promises that the data in the ledger are quantum-proof once the corresponding rollups have been confirmed by Abelian. It prevents the 51% attacks, even with the access to a quantum computer, on the ledger data. In particular, such prevention also applies to the pending data, i.e., the data that have been submitted to QDay but not yet confirmed by Abelian. This new feature enables QDay to halt the execution of the rollups in a quantum-resistant manner, i.e., attackers cannot move forward once the rollups has been halted because they are not able to forge the quantum-resistant signatures generated by the rollup operators. Note that such a halt mechanism runs on the rollup operators only, which does not affect the operation of the QDay Blockchain on its own.
 
-**Insurance Fund** - 10% of QDAY will be reserved to cover potential fund losses in officially recognized cases, such as hacks or validator misconduct. Given QDay\'s robust security, the likelihood of such incidents is extremely low. As a result, the insurance fund is not expected to be used and will remain permanently locked if no losses occur.
+As this is a new feature that is not supported by any existing Layer 2 solutions, we will illustrate how it works with a concrete example. The following events are assumed to happen in the timeline:
 
-## Phase 1: L1-Assisted Quantum-Resistant Rollups with EVM Compatibility
+1\) An attacker with access to a quantum computer exploits a vulnerability in a DeFi dApp on QDay and rug pulls all the funds from the pool.
 
----
+2\) The stolen funds are moved to a QDay account that is controlled by the attacker.
 
-In Phase 1, QDay will introduce a quantum-resistant ledger by integrating ZK Rollups into the Abelian Blockchain while maintaining compatibility with the Ethereum Virtual Machine (EVM). This ensures a seamless transition for Ethereum developers, enabling them to use existing tools, languages, and the familiar account and smart contract model of the EVM.The L1-assisted quantum-resistant rollups will protect QDay from quantum attacks that aim to alter ledger data, such as transaction orders, amounts, and state structures. In addition, if an attack is detected, QDay can prevent fund losses by temporarily halting rollup execution in a quantum-resistant manner. Once halted, attackers cannot proceed because they are unable to forge the quantum-resistant signatures generated by the rollup operators. This section will focus on the technical details of the quantum-resistant rollups in QDay.
+3\) A user notices the rug pull and reports the incident to the dApp provider.
 
-### Introduction to ZK Rollups
+4\) The dApp provider freezes the account and reports the incident to QDay DAO.
 
-ZK Rollups, or Zero-Knowledge Rollups, are an advanced Layer 2 scaling solution designed to overcome blockchain limitations, particularly in scalability and transaction throughput. They work by aggregating multiple transactions into a single batch and submitting it to the Layer 1 blockchain. This approach significantly reduces the computational load and storage demands on the main chain, enabling faster and more efficient processing.
+5\) QDay DAO creates a vote proposal for halting the rollups execution for 12 hours.
 
-The core innovation of ZK Rollups lies in their use of zero-knowledge proofs, a cryptographic technique that allows one party to prove the validity of a statement without revealing any details about the statement itself. In the context of ZK Rollups, this enables transactions to be verified for accuracy without exposing the underlying transaction data. This approach not only enhances privacy but also ensures a secure and efficient verification process.
+6\) All DAO members are called to vote for this proposal within 30 minutes.
 
-ZK Rollups also present an effective solution to the scalability trilemma, which asserts that achieving decentralization, security, and scalability simultaneously is inherently difficult. By shifting transaction processing to Layer 2 while retaining the robust security guarantees of Layer 1, ZK Rollups achieve a balanced approach that improves network performance without sacrificing decentralization or security.
+7\) The vote passes and the rollup’s execution is halted immediately. From this point onwards, the attacker is unable to move the funds out of QDay because QDay Bridge does not process any transaction that is not rollups-confirmed.
 
-### QDay\'s Adoption of Polygon ZK Rollups Technology
+8\) The dApp provider will be notified that they have around 12 hours to do the necessary actions to protect the users' funds. If necessary, they can apply for more time by requesting the QDay DAO to extend the suspension period.
 
-QDay\'s adoption of Polygon ZK Rollups technology is a strategic step toward utilizing one of the most advanced and reliable Layer 2 solutions available. Built on strong cryptographic foundations, Polygon ZK Rollups are engineered to efficiently process high transaction volumes. This aligns perfectly with QDay\'s goals of achieving greater scalability and enhanced privacy.
+9\) The dApp provider contacts the token issuer to freeze all the addresses that are controlled by the attacker. Note that the freeze operation is essentially a smart contract call on QDay, which is not affected by the rollups halt.
 
-Polygon\'s ZK Rollups utilize zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge), a highly efficient form of zero-knowledge proof. These proofs are compact and can be verified quickly without requiring multiple interactions between the prover and verifier. This efficiency makes zk-SNARKs especially well-suited for blockchain applications, where speed and scalability are paramount.
+10\) The token issuer requests solid evidence of the rug pull from the dApp provider. In this example, the dApp provider submits the evidence and passes the check conducted by the token issuer.
 
-In practice, QDay leverages Polygon ZK Rollups to process transactions off-chain, significantly reducing the load on the Abelian main chain. Multiple transactions are aggregated into a single proof, which is submitted to the Abelian chain for finalization. This method enhances transaction throughput, lowers gas fees, and makes the network more cost-effective for users.
+11\) The token issuer freezes the attacker's addresses.
 
-Moreover, Polygon\'s ZK Rollups are built for high interoperability, enabling smooth integration with diverse blockchain ecosystems. This adaptability is essential for QDay, as it seeks to deliver a scalable and flexible Layer 2 solution capable of evolving alongside the blockchain industry\'s changing demands.
+12\) The rollups execution is resumed either: (1) after 12 hours, or (2) the dApp provider notifies the QDay DAO that all required actions have been taken and the rollups execution can be resumed. In the latter case, the QDay DAO will also vote for the proposal to resume the rollups execution.
 
-Polygon\'s ZK Rollups are built for high interoperability, enabling smooth integration with diverse blockchain ecosystems. This adaptability is essential for QDay, as it seeks to deliver a scalable and flexible Layer 2 solution capable of evolving alongside the blockchain industry\'s changing demands.
+13\) The QDay Blockchain resumes normal operation. The dApp provider contacts the police or any other relevant authorities to report the rug pull. Further legal actions will be taken against the attacker.
 
-A distinctive feature of QDay's implementation is its use of Abelian, a blockchain akin to Bitcoin, as the Layer 1 foundation for its ZK Rollups. This approach diverges from the conventional use of EVM-compatible chains as the Layer 1 base. As a result, substantial modifications to the standard Polygon ZK Rollups framework are required to ensure compatibility with Abelian's architecture.
+14\) If any further actions are needed, the QDay DAO will vote for the proposals accordingly. Usually, such actions should be proposed by the police or other relevant authorities.
 
-Abelian, like Bitcoin, employs a distinct consensus mechanism and transaction model compared to EVM-compatible chains. While EVM-compatible chains rely on an account-based model, Abelian operates on a UTXO (Unspent Transaction Output) model. This fundamental difference requires reengineering the ZK Rollups\' data structures and proof generation mechanisms to align with the UTXO model.
+It is worth noting that the above example assumes that the attacker has access to a quantum computer. Even so, the attacker is unable to move the funds out of QDay because the rollups process requires the quantum-resistant signatures generated by the rollup operators. This example illustrates that the quantum-resistant halt mechanism can enhance the overall security of any dApps deployed on QDay.
 
-In addition, Abelian\'s quantum-resistant consensus algorithm must be incorporated into the rollup\'s verification process. This requires modifying the proof submission and verification protocols to align with Abelian\'s consensus rules. While the specifics of these modifications are complex, the primary objective is to ensure seamless integration between the rollup and the Abelian main chain, preserving the security and efficiency advantages of both layers.
+4.4. Future Work: PQZK Bridge
 
-### Benefits of Quantum-Resistant Rollups
+What is PQZK Bridge?
 
-Quantum-resistant rollups offer a key advantage: they ensure that ledger data is quantum-proof once the rollups are confirmed by the Abelian blockchain. This security extends to both confirmed and pending data - transactions submitted to QDay but not yet finalized by Abelian - protecting against 51% attacks even with access to a quantum computer.
 
-A groundbreaking feature of QDay is its ability to halt rollup execution in a quantum-resistant manner. Attackers cannot proceed once a rollup is halted, as they are unable to forge the quantum-resistant signatures generated by rollup operators. Importantly, this halt mechanism operates solely on the rollup layer and does not interfere with the functioning of the QDay blockchain itself.
+The PQZK Bridge, or Post-Quantum Zero-Knowledge Bridge, is a cryptographic protocol designed to facilitate the secure and efficient transition of blockchain systems to post-quantum security standards. It combines the principles of zero-knowledge proofs with post-quantum cryptographic algorithms to create a robust framework that can withstand the capabilities of quantum computers.
 
-As this feature is not supported by any existing Layer 2 solution, we will demonstrate its functionality with a concrete example.
-
-The following events are set to take place in the timeline:
-
-1) An attacker with access to a quantum computer exploits a vulnerability in a DeFi dApp on QDay, draining all funds from the pool in a rug pull.
-
-2) The stolen funds are transferred to a QDay account under the attacker's control.
-
-3) A user notices the rugpull and reports the incident to the dApp provider.
-
-4) The dApp provider freezes the attacker's account and escalates the incident to QDay DAO.
-
-5) The QDay DAO initiates a vote proposal to halt rollup execution for 12 hours.
-
-6) All DAO members are prompted to vote on the proposal within 30 minutes.
-
-7) The vote passes and the rollups execution is halted immediately. From this point onwards, the attacker is unable to transfer the funds out of QDay since the QDay Bridge only processes transactions that have been confirmed by rollups.
-
-8) The dApp provider is notified that they have approximately 12 hours to take necessary actions to secure users\' funds. If additional time is required, they can request an extension of the suspension period from the QDay DAO.
-
-9) The dApp provider contacts the token issuer to freeze all addresses controlled by the attacker. Notably, this freeze operation is executed as a smart contract call on QDay and is unaffected by the rollup halt.
-
-10) The token issuer requests solid evidence of the rugpull from the dApp provider. In this example, the dApp provider submits the required evidence, which successfully passes the token issuer\'s review.
-
-11) The token issuer freezes the attacker\'s addresses.
-
-12) The rollups execution is resumed either: (1) after 12 hours, or (2) the dApp provider notifies the QDay DAO that all required actions have been taken and the rollups execution can resume In the latter case, the QDay DAO will also vote on a proposal to resume the rollups execution.
-
-13) The QDay Blockchain returns to normal operation. The dApp provider reports the rug pull to the police or other relevant authorities, initiating further legal actions against the attacker.
-
-14) If additional actions are required, the QDay DAO will vote on the relevant proposals. Typically, such actions are initiated based on recommendations from the police or other relevant authorities.
-
-It is worth noting that the above example assumes the attacker has access to a quantum computer. Despite this, the attacker cannot transfer funds out of QDay via the QDay Bridge, as the rollup process depends on quantum-resistant signatures generated by rollup operators. This example demonstrates how the quantum-resistant halt mechanism significantly enhances the security of dApps deployed on QDay.
-
-### Future Work: PQZK Bridge
-
-**What is PQZK Bridge?**
-
-The PQZK Bridge, or Post-Quantum Zero-Knowledge Bridge, is a cryptographic protocol designed to securely and efficiently transition blockchain systems to post-quantum security standards. By integrating zero-knowledge proofs with post-quantum cryptographic algorithms, it establishes a resilient framework capable of withstanding the advanced capabilities of quantum computers.
-
-Zero-knowledge proofs (ZKPs) enable one party to prove the truth of a statement to another without disclosing any details about the statement itself. In blockchain, ZKPs allow transactions to be verified for accuracy while preserving privacy. Post-quantum cryptography (PQC), on the other hand, focuses on cryptographic algorithms designed to withstand attacks from quantum computers.
+Zero-knowledge proofs (ZKPs) allow one party to prove to another that a statement is true without revealing any specific information about the statement itself. In the context of blockchain, ZKPs enable the verification of transaction correctness while preserving privacy. Post-quantum cryptography (PQC), on the other hand, involves cryptographic algorithms that are resistant to attacks from quantum computers.
 
 The PQZK Bridge integrates these two technologies by using post-quantum cryptographic primitives to construct zero-knowledge proofs. This ensures that the proofs remain secure even in the presence of quantum adversaries. The PQZK Bridge acts as a middleware layer that facilitates the deployment of PQZK Rollups on existing blockchain platforms, providing a seamless upgrade path to quantum security.
 
-![PQZK Bridge](/qday/QDay_4.4_PQZK.png)
-**Implementing QDay\'s PQZK Rollups with PQZK Bridge**
+## Implementing QDay's Rollups with PQZK Bridge
 
-To implement PQZK Rollups, QDay will leverage the PQZK Bridge to transition from traditional ZK Rollups to a fully quantum-resistant solution. Here\'s how this process will be achieved:
+To implement PQZK Rollups, QDay will leverage the PQZK Bridge to transition from traditional ZK Rollups to a fully quantum-resistant solution.
 
-- **Integration of Post-Quantum Cryptographic Primitives**: The first step involves integrating post-quantum cryptographic primitives into the rollup framework. These primitives, such as lattice-based cryptography or hash-based signatures, replace traditional cryptographic algorithms used in zero-knowledge proofs.
+The first step involves integrating post-quantum cryptographic primitives into the rollup framework. These primitives, such as lattice-based cryptography or hash-based signatures, replace the traditional cryptographic algorithms used in zero-knowledge proofs.
 
-- **Construction of PQZK Proofs**: With these post-quantum primitives, QDay will construct PQZK proofs. These proofs will preserve the zero-knowledge property, enabling transaction verification without exposing sensitive information, while also providing resistance against quantum attacks.
+Using these post-quantum primitives, QDay will construct PQZK proofs. These proofs will maintain the zero-knowledge property, ensuring that transaction verification can be done without revealing any sensitive information, while also being resistant to quantum attacks.
 
-- **Modification of Rollup Protocols**: The rollup protocols will be updated to integrate PQZK proofs, requiring modifications to the processes for proof generation, submission, and verification to accommodate the new post-quantum cryptographic constructs.
+The rollup protocols will then be modified to incorporate PQZK proofs. This includes adapting the proof generation, submission, and verification processes to handle the new post-quantum cryptographic constructs.
 
-- **Deployment on Abelian Layer 1**: The updated rollup protocols, now incorporating PQZK proofs, will be deployed on the Abelian Layer 1 blockchain. Abelian\'s quantum-resistant properties will complement the PQZK Rollups, providing a robust, end-to-end solution resistant to quantum attacks.
+These modified rollup protocols, now incorporating PQZK proofs, will be deployed on the Abelian Layer 1 blockchain. Abelian's quantum-resistant properties will complement the PQZK Rollups, providing a robust, end-to-end quantum-resistant solution.
 
-- **Testing and Optimization**: Extensive testing will be carried out to verify the functionality and efficiency of the PQZK Rollups. Optimization efforts will focus on minimizing the computational overhead associated with post-quantum cryptographic operations, ensuring that the rollup solution remains scalable and performant.
+Finally, extensive testing will be conducted to ensure that the PQZK Rollups function correctly and efficiently. Optimization efforts will focus on minimizing the computational overhead associated with post-quantum cryptographic operations, ensuring that the rollup solution remains scalable and performant.
 
-**Extending PQZK Rollups to Other EVM-Compatible Chains**
+## Extending PQZK Rollups to Other EVM-Compatible Chains
 
-The advantages of PQZK Rollups extend beyond QDay and Abelian. The PQZK Bridge technology can be adapted for other EVM-compatible chains, enabling them to achieve quantum security. Here\'s how this can be achieved:
+The benefits of PQZK Rollups are not limited to QDay and Abelian. The PQZK Bridge technology can be extended to other EVM-compatible chains, enabling them to achieve quantum security as well.
 
-- **Adapting PQZK Bridge for EVM-Compatible Chains**: The PQZK Bridge can be customized to integrate with the unique architectures and consensus mechanisms of EVM-compatible chains. This involves modifying the bridge protocols to ensure compatibility with the Ethereum Virtual Machine (EVM) and other related technologies.
+The PQZK Bridge can be adapted to work with the specific architectures and consensus mechanisms of EVM-compatible chains. This involves modifying the bridge protocols to ensure compatibility with the Ethereum Virtual Machine and other related technologies.
 
-- **Deployment of PQZK Rollups on EVM-Compatible Chains**: After adaptation, the PQZK Bridge can facilitate the deployment of PQZK Rollups on various EVM-compatible chains. This enables these chains to process transactions off-chain in a quantum-resistant manner, enhancing their scalability and security.
+Once adapted, the PQZK Bridge can be used to deploy PQZK Rollups on various EVM- compatible chains. This enables these chains to process transactions off-chain in a quantum- resistant manner, enhancing their scalability and security.
 
-- **Interoperability and Ecosystem Integration**: The interoperability features of the PQZK Bridge enable seamless integration of PQZK Rollups across different blockchain ecosystems. This promotes a more secure and interconnected blockchain landscape, allowing multiple chains to benefit from quantum-resistant transaction processing.
+By leveraging the interoperability features of the PQZK Bridge, different blockchain ecosystems can integrate PQZK Rollups seamlessly. This fosters a more secure and interconnected blockchain landscape, where multiple chains can benefit from quantum-resistant transaction processing.
 
-- **Community and Developer Support**: To support the adoption of PQZK Rollups, comprehensive documentation, developer tools, and community resources will be made available. These resources will enable blockchain developers to efficiently implement and deploy PQZK Rollups on their platforms, accelerating the shift toward quantum-secure blockchain technology.
+To facilitate the adoption of PQZK Rollups, extensive documentation, developer tools, and community support will be provided. This ensures that blockchain developers can easily implement and deploy PQZK Rollups on their respective platforms, accelerating the transition to quantum-safe blockchain technology.
 
-By adopting PQZK Rollups through the PQZK Bridge, QDay strengthens its own security while enhancing the resilience of the broader blockchain ecosystem against quantum threats. This forward-thinking approach ensures that blockchain systems remain secure, scalable, and efficient as quantum computing technology continues to advance.
+In conclusion, by adopting PQZK Rollups through the PQZK Bridge, QDay not only enhances its own security but also contributes to the broader blockchain ecosystem's resilience against quantum threats. This proactive approach ensures that as quantum computing technology evolves, blockchain systems remain secure, scalable, and efficient.
+
+## 5. Phase 2: Quantum-Resistant Account with EVM Compatibility
+
+In Phase 2, QDay will introduce quantum-resistant account and legacy account and the following corresponding concepts:
 
 
-![PQZK Rollups](/qday/QDay_4.4_PQZK-Rollup.png)
+- o quantum-resistant wallets and legacy wallets;
 
-## Phase 2: Quantum-Resistant Account with EVM Compatibility
+- o quantum-resistant contracts and legacy contracts;
 
----
+- o quantum-resistant dApps and legacy dApps.
 
-In Phase 2, QDay will introduce a quantum-resistant account and legacy account, along with the following related concepts:
+Each mnemonic phrase of the legacy account can be used to derive the corresponding quantum- resistant account. This is to ensure a smooth transition from the legacy account to the quantum- resistant account. All QDay users can use the same mnemonic phrase to access both the quantum-resistant account and the legacy account. Specifically, all EVM-compatible wallets will continue to use the legacy account without any changes and be unaware of the existence of the quantum-resistant account while the quantum-resistant wallets will support both the quantum- resistant account and the legacy account for the same mnemonic phrase. A reference implementation of the quantum-resistant wallet will be provided by QDay and the corresponding source code will be open-sourced.
 
-- *quantum-resistant wallets* and *legacy wallets*;
+Other than the mnemonic phrase, the quantum-resistant account is completely independent from the legacy account. This is deliberately designed to ensure the post-quantum security of the new account.
 
-- *quantum-resistant contracts* and *legacy contracts*;
+Specifically, the following objectives will be achieved in Phase 2:
 
-- *quantum-resistant dApps* and *legacy dApps*.
+- o Legacy accounts can be used in the same way as before, i.e., supported by the legacy wallets and legacy smart contracts.
 
-Each mnemonic phrase from a legacy account can seamlessly derive a corresponding quantum-resistant account, ensuring an easy transition for users. This design allows users to access both account types using the same mnemonic phrase. EVM-compatible wallets will continue to function with legacy accounts without any changes, remaining unaware of quantum-resistant accounts. In contrast, quantum-resistant wallets will support both legacy and quantum-resistant accounts under the same mnemonic phrase. To facilitate adoption, QDay will provide an open-source reference implementation of the quantum-resistant wallet, promoting transparency and ease of integration.
+- o Quantum-resistant accounts can be used with the quantum-resistant wallets. It is expected that no legacy wallets will support the quantum-resistant accounts.
 
-Apart from sharing the same mnemonic phrase, the quantum-resistant account is completely independent from the legacy account. This is deliberately designed to ensure the post-quantum security of the new account. Specifically, the following objectives will be achieved in Phase 2:
+- o The reference implementation of the quantum-resistant wallet by the QDay team will support the legacy accounts. For the quantum-resistant wallets implemented by other parties, it is optional to support the legacy accounts.
 
-- Legacy accounts will continue to function as before, fully supported by legacy wallets and legacy smart contracts.
+- o The quantum-resistant contracts will NOT support the legacy accounts. This is key to ensure that the post-quantum security will not be compromised by mixing the usage of non-quantum-resistant cryptographic primitives.
 
-- Quantum-resistant accounts will be compatible with quantum-resistant wallets, while legacy wallets are not expected to support quantum-resistant accounts.
+- o The quantum-resistant contracts will be compatible with the legacy contracts in two ways: 1) the quantum-resistant contracts can contain the legacy functions that are not quantum-resistant; 2) the quantum-resistant functions can be called by the legacy wallets with the help of an external quantum-resistant signature generator.
 
-- The QDay team\'s reference implementation of the quantum-resistant wallet will support the legacy accounts. For the quantum-resistant wallets implemented by third parties, supporting legacy accounts will be optional.
+- o Some quantum-resistant dApps may support the legacy accounts by implementing both the quantum-resistant and legacy protocols.
 
-- The quantum-resistant contracts will **NOT** support the legacy accounts. This is key to ensure that the post-quantum security will not be compromised by the use of non-quantum-resistant cryptographic primitives.
+- o Quantum-resistant accounts can interact with the quantum-resistant smart contracts and dApps using the quantum-resistant wallets. They may also be able to interact with the legacy smart contracts and dApps in case that the quantum-resistant wallets support the fallback mechanism for such scenarios.
 
-- Quantum-resistant contracts will maintain compatibility with legacy contracts in two ways: 1) they can include legacy functions that are not quantum-resistant; 2) quantum-resistant functions can be accessed by legacy wallets through an external quantum-resistant signature generator.
+- o The table below shows whether a quantum-resistant object can interact with or support a legacy object. Note that it is certain that a legacy object is not able to interact with a quantum-resistant object and therefore we don't show the corresponding table in the reverse direction.
 
-- Some quantum-resistant dApps may support the legacy accounts by implementing both quantum-resistant and legacy protocols.
-
-- Quantum-resistant accounts can interact with quantum-resistant smart contracts and dApps using the quantum-resistant wallets. They may interact with legacy smart contracts and dApps if quantum-resistant wallets include a fallback mechanism for these scenarios.
-
-- The table below shows whether a quantum-resistant object can interact with or support a legacy object. Since legacy objects cannot interact with quantum-resistant objects, the corresponding reverse table is not included.
-
-| **Object** | **Legacy Account** | **Legacy Wallet** | **Legacy Contract** | **Legacy dApp** |
-| --------------- | ------------- | ----------------- | --------------------- | ------------- |
+| Object | Legacy Account | Legacy Wallet | Legacy Contract | Legacy dApp |
+| --- | --- | --- | --- | --- |
 | Quantum-Resistant Account | may fallback to | cannot be used by | may interact with | may interact with |
 | Quantum-Resistant Wallet | may support | same mnemonics | may support | may support |
 | Quantum-Resistant Contract | not compatible | not compatible | not compatible | not compatible |
 | Quantum-Resistant dApp | may support | may be used by | may support | may support |
 
-**To summarize, the objective of Phase 2 is to add the support for the quantum-resistant objects without compromising any post-quantum security features while maintaining the maximum backward compatibility with the legacy objects**. The remainder of this section will outline the overall design of the core components in QDay Phase 2, followed by a detailed discussion of the design principles and trade-offs.
+To summarize, the objective of Phase 2 is to add the support for the quantum-resistant objects without compromising any post-quantum security features while maintaining the maximum backward compatibility with the legacy objects. In the rest of this section, we will describe the overall design of the core components in QDay Phase 2 followed by elaborating the principles and trade-offs of the design.
 
-### Quantum-Resistant Account
+## 5.1. Quantum-Resistant Account
 
-The quantum-resistant account in QDay will use the same post-quantum cryptographic primitives as in Abelian Blockchain. While it shares the same mnemonic phrase as the legacy account, it diverges completely in functionality and structure from that point forward.
+The quantum-resistant account in QDay will use the same post-quantum cryptographic primitives as in Abelian Blockchain. It starts with the same mnemonic phrase as the legacy account but fully diverges from that point onwards.
 
 The process of deriving the quantum-resistant account from a BIP-39 mnemonic phrase is defined in AIP-11 (Abelian Improvement Proposal 11). For the convenience of the readers, we will briefly describe the process here.
 
-**Step 1: From Mnemonic to Entropy-Seed**: AIP-11 uses the same entropy-seed derivation process as in BIP-39. However, AIP-11 requires the entropy-seed to be 256 bits long which corresponds to 24 mnemonic words. To address this, for mnemonic phrases with less than 24 words, we will pad the mnemonic phrase with the word \"abandon\" (the first word in the BIP-39 wordlist) until it has 24 words while for mnemonic phrases with more than 24 words, we will truncate the mnemonic phrase to 24 words.
+## Step 1: From Mnemonic to Entropy-Seed
 
-**Step 2: From Entropy-Seed to Master-Seed**: The entropy-seed is then used to derive the 512-bit master-seed using a deterministic key derivation function. The key derivation function is defined as follows:
+AIP-11 uses the same entropy-seed derivation process as in BIP-39. However, AIP-11 requires the entropy-seed to be 256 bits long which corresponds to 24 mnemonic words. To address this, for mnemonic phrases with less than 24 words, we will pad the mnemonic phrase with the word "abandon" (the first word in the BIP-39 wordlist) until it has 24 words while for mnemonic phrases with more than 24 words, we will truncate the mnemonic phrase to 24 words.
 
-```
-MasterSeed=PRF(EntropySeed,'AccountMasterSeed')MasterSeed=PRF(EntropySeed,'AccountMasterSeed')
-```
 
-where PRFPRF is a post-quantum key derivation function using **KMAC256** as the underlying hash function, defined as follows:
+## Step 2: From Entropy-Seed to Master-Seed
 
-```
-PRF(𝑘𝑒𝑦,𝑖𝑛𝑝𝑢𝑡):=KMAC256(𝑘𝑒𝑦,𝑖𝑛𝑝𝑢𝑡,512,'ABELIANPRF').
-```
+The entropy-seed is then used to derive the 512-bit master-seed using a deterministic key derivation function. The key derivation function is defined as follows:
 
-**Step 3: From Master-Seed to Account-Root-Seeds**: In Abelian, each account consists of a set of *root seeds*, namely *CoinSpKeyRootSeed*, *CoinSnKeyRootSeed*, *CoinDetectorRootKey* and *CoinVKRootSeed*, collectively referred to as *Account-Root-Seeds*. All root seeds are 512 bits long, derived from the marster-seed by using the following key derivation functions:
+MasterSeed=PRF(EntropySeed,’AccountMasterSeed’)
 
-**CoinSpKeyRootSeed=PRF(MasterSeed,'CoinSpendKeyRootSeed'),**
-**CoinSnKeyRootSeed=PRF(MasterSeed,'CoinSerialNumberKeyRootSeed'),**
-**CoinDetectorRootKey=PRF(MasterSeed,'CoinDetectorRootKey'),**
-**CoinVKRootSeed=PRF(Master-Seed,'CoinValueKeyRootSeed').**
+where PRF is a post-quantum key derivation function using KMAC256 as the
 
-Note that the **PRF** function is the same as the one used in the previous step.
+underlying hash function, defined as follows:
 
-**Step 4: From Master-Seed to Public-Rands**: In AIP-11, each set of root seeds can be used to derive multiple addresses corresponding to different values of public rand. In QDay, to conform to the convention of existing Hirachical Deterministic Wallets (HDW), we will use the following deterministic function defined by AIP-11 to derive an public rand from the master-seed and a sequence number. Specifically, the public rand is derived as follows:
+PRF(key,input):=KMAC256(key,input,512,’ABELIANPRF’).
 
-**PublicRand(𝑠𝑒𝑞𝑁𝑜)=PRF(PublicRandRootSeed,𝑠𝑒𝑞𝑁𝑜),**
+## Step 3: From Master-Seed to Account-Root-Seeds
+
+In Abelian, each account consists of a set of root seeds, namely CoinSpKeyRootSeed, CoinSnKeyRootSeed, CoinDetectorRootKey and CoinVK RootSeed, collectively referred to as Account-Root-Seeds. All root seeds are 512 bits long, derived from the master-seed by using the following key derivation functions:
+
+CoinSpKeyRootSeed=PRF(MasterSeed,’CoinSpendKeyRootSeed’),
+
+CoinSnKeyRootSeed=PRF(MasterSeed,’CoinSerialNumberKeyRootSeed’),
+
+CoinDetectorRootKey=PRF(MasterSeed,’CoinDetectorRootKey’),
+
+CoinVKRootSeed=PRF(Master-Seed,’CoinValueKeyRootSeed’).
+
+Note that the PRF function is the same as the one used in the previous step.
+
+## Step 4: From Master-Seed to Public-Rands
+
+In AIP-11, each set of root seeds can be used to derive multiple addresses corresponding to different values of public rand. In QDay, to conform to the convention of existing Hierarchical Deterministic Wallets (HDW), we will use the following deterministic function defined by AIP- 11 to derive a public rand from the master-seed and a sequence number. Specifically, the public rand is derived as follows:
+
+PublicRand(𝑠𝑒𝑞𝑁𝑜)=PRF(PublicRandRootSeed, 𝑠𝑒𝑞𝑁𝑜),
 
 where
 
-**PublicRandRootSeed=PRF(MasterSeed,'PublicRandRootSeed').**
+PublicRandRootSeed=PRF(MasterSeed,’PublicRandRootSeed’).
 
-**Step 5: From Account-Root-Seeds and Public-Rand to Address and Private-Key**: Once both the account-root-seeds and the public-rand are derived, the corresponding address and private-key can be derived deterministically. As this process is beyond the scope of AIP-11, we will use the same process implemented in the Abelian SDK v2 to gain more consistency with the ecosystem of the L1 chain.
 
-### Upgrade of QDay Nodes
+## Step 5: From Account-Root-Seeds and Public-Rand to Address and Private-Key
 
-To enable the functionality of quantum-resistant accounts, the blockchain must first support the transfer of the native token QDAY between legacy accounts and quantum-resistant accounts. This requires upgrading QDay nodes to: 1) recognize the new address format used by quantum-resistant accounts, 2) verify signatures generated by quantum-resistant accounts, and 3) facilitate the transfer of QDAY between legacy and quantum-resistant accounts. However, fulfilling the third requirement is not straightforward. This is because we must maintain backward compatibility, allowing legacy wallets to perform transfers without being aware of the new address format used by quantum-resistant accounts.
+Once both the account-root-seeds and the public-rand are derived, the corresponding address and private-key can be derived deterministically. As this process is beyond the scope of AIP-11, we will use the same process implemented in the Abelian SDK v2 to gain more consistency with the ecosystem of the Layer 1 chain.
 
-**Challenge**: Is it possible to support the transfer of the native token QDAY between the legacy account and the quantum-resistant account without changing the legacy wallets?
+## 5.2. Upgrade of QDay Nodes
 
-To overcome this challenge, we will develop a smart contract on the QDay Blockchain that serves as a bridge between legacy accounts and quantum-resistant accounts. This smart contract will be a legacy contract, ensuring compatibility with legacy wallets.The general process is as follows:
+To make sense of the quantum-resistant account, the blockchain must support the transfer of the native token \$QDAY between the legacy account and the quantum-resistant account in the first place. Specifically, QDay nodes must be upgraded to be able to: 1) recognize the new type of address in the quantum-resistant account; 2) verify the signatures generated by the quantum- resistant account; 3) enable the transfer of the native token \$QDAY between the legacy account and the quantum-resistant account. However, it is not straightforward to support the third requirement. This is because we need to maintain the backward compatibility for the legacy wallets to make such transfers without knowing the new type of address.
 
-1) The legacy account invokes the **send** function of the smart , specifying the quantum-resistant account as the recipient and the amount of QDAY to be transferred as the input.
+A key challenge here is that whether it is possible to support the transfer of the native token \$QDAY between the legacy account and the quantum-resistant account without changing the legacy wallets. To address this challenge, we will develop a smart contract on the QDay blockchain to act as a bridge between the legacy account and the quantum-resistant account. The smart contract itself is a legacy one and can be used by the legacy wallets.
 
-2) The smart contract verifies the signature of the legacy account and validates the recipient address.
+1\) The legacy account invokes the Send function of the smart contract with the quantum- resistant account as the recipient and the amount of the native token \$QDAY as the input.
 
-3) The smart contract receives QDAY from the legacy account and transfers it to the quantum-resistant account.
+2\) The smart contract verifies the signature of the legacy account and the recipient address.
 
-In the last step, the smart contract transfers QDAY from its own legacy address to the recipient\'s quantum-resistant address. This is carried out by calling a new primitive function **legacy_to_quantum_resistant_transfer** implemented by QDay Node. The EVM implementation of QDay Node will be upgraded to support this primitive function along with another primitive function **quantum_resistant_to_legacy_transfer** which handles the reverse process.
+3\) The smart contract receives \$QDAY from the legacy account and sends it to the quantum-resistant account.
 
-Though the interface of the above two primitive functions looks simple, the implementation is non-trivial. It requires a comprehensive set of cryptographic operations involving both the legacy algorithms and the post-quantum ones. The technical details are beyond the scope of this whitepaper and will be elaborated when we open-source the QDay Node\'s implementation.
+In the last step, the smart contract transfers \$QDAY from its own legacy address to the recipient's quantum-resistant address. This is carried out by calling a new primitive function legacy_to_quantum_resistant_transfer implemented by QDay Node. The EVM implementation of QDay Node will be upgraded to support this primitive function along with another primitive function quantum_resistant_to_legacy_transfer which handles the reverse process.
 
-### Quantum-Resistant Wallet
+Though the interface of the above two primitive functions looks simple, the implementation is non-trivial. It requires a comprehensive set of cryptographic operations involving both the legacy algorithms and the post-quantum ones. The technical details are beyond the scope of this whitepaper and will be elaborated when we open-source the QDay Node's implementation.
 
-It is clear that all existing EVM-based wallets will not support the quantum-resistant account defined by QDay, as they are not designed to support post-quantum security features. Therefore, a new type of wallet is required to support QDay\'s quantum-resistant account. QDay will provide a reference implementation of this wallet in Phase 2, and the source code will be open-sourced to allow the community or other parties to build compatible quantum-resistant wallets.
+## 5.3. Quantum-Resistant Wallet
 
-To create or import a quantum-resistant account, the user will use the same mnemonic phrase as the legacy account. The wallet will derive the quantum-resistant account from the mnemonic phrase , enabling it to transfer the native token QDAY and interact with the quantum-resistant smart contracts and dApps.
+It is obvious that all existing EVM-based wallets will not support the quantum-resistant account defined by QDay for that they are not supposed to support any post-quantum security features. Therefore, it is necessary to implement a new type of wallet to support QDay's quantum-resistant account. We will provide a reference implementation of such a wallet in QDay Phase 2. The code will be open-sourced to the public to help the community or any other parties to build compatible quantum-resistant wallets.
 
-To transfer QDAY from quantum-resistant account to legacy account, the quantum-resistant wallet will directly submit a transaction to the blockchain nodes. This differs from transferring QDAY from a legacy account to a quantum-resistant account using legacy wallets, as outlined in the previous section. After the Phase 2 upgrade, QDay nodes will be able to process such transactions directly, eliminating the need for the smart contract bridge in this case.
+To create or import a quantum-resistant account, the user will use the same mnemonic phrase as the legacy account. The wallet will derive the quantum-resistant account from the mnemonic phrase and use it to transfer the native token \$QDAY and interact with the quantum-resistant smart contracts and dApps.
 
-The main purpose of the quantum-resistant wallet is to interact with the quantum-resistant smart contracts and dApps. To understand how the quantum-resistant wallet interacts with these smart contracts, it's essential to first examine the design and implementation of the quantum-resistant smart contracts themselves. As such, we will cover this in the next section, where we provide a detailed explanation of the quantum-resistant smart contracts.
+To transfer \$QDAY from a quantum-resistant account to a legacy account, the quantum-resistant wallet will directly submit a transaction to the blockchain nodes. This is different from transferring \$QDAY from a legacy account to a quantum-resistant account in legacy wallets. As described in the previous section, QDay nodes will be able to directly process such transactions after the Phase 2 upgrade. Therefore, it's unnecessary to use the smart contract bridge in this case.
 
-In the reference implementation, we will provide a fallback mechanism to support those scenarios. Specifically, to interact with a legacy smart contract, the wallet will use the corresponding legacy address to call the smart contract. The wallet will automatically handle the migration of assets. For example, when interacting with a smart contract that swaps QDAY for PQUSD, the wallet will first transfer the QDAY to the legacy address, execute the smart contract call, and then transfer the PQUSD to the quantum-resistant address once the transaction is complete.
+The main purpose of the quantum-resistant wallet is to interact with the quantum-resistant smart contracts and dApps. To understand how the quantum-resistant wallet interacts with the quantum-resistant smart contracts, we need to first understand how the quantum-resistant smart contracts are designed and implemented. Therefore, we leave this part to the next section where we describe the quantum-resistant smart contracts in detail.
 
-### Quantum-Resistant Contracts
+In addition, a quantum-resistant wallet can also be used to interact with the legacy smart contracts and dApps, in case it is properly implemented. In the reference implementation, we will provide a fallback mechanism to support such scenarios. Specifically, to interact with a legacy smart contract, the wallet will use the corresponding legacy address to call the smart
 
-In QDay Phase 2, a quantum-resistant contract can be considered as a legacy contract with an extra layer of post-quantum signature verification. From the caller\'s perspective, the quantum-resistant contract functions just like the legacy one. The only difference is that for each call to contract methods intended to be quantum-resistant, the caller must provide an extra quantum-resistant signature. This signature is passed as a standard parameter in the contract method and is verified by the contract itself.
 
-Consider the transfer method in a quantum-resistant ERC20 contract. The legacy ERC20 method signature is as follows:
+contract. The migration of assets will be handled automatically by the wallet. For example, to interact with a smart contract that swaps \$QDAY for the chain’s to-be-developed native stablecoin, the wallet will transfer the \$QDAY to the legacy address before calling the smart contract and then transfer the stablecoin to the quantum-resistant address after the smart contract call.
 
-```
+## 5.4. Quantum-Resistant Contracts
+
+In QDay Phase 2, a quantum-resistant contract can be viewed as a legacy contract with an extra layer of post-quantum signature verification. From the perspective of the caller, the quantum- resistant contract is essentially the same as the legacy one. The only difference is that the caller needs to provide an extra quantum-resistant signature for every single call to contract methods that are supposed to be quantum-resistant. The quantum-resistant signature is passed by a normal parameter of a contract method and is verified by the contract itself.
+
+Consider the transfer method in a quantum-resistant ERC20 contract. The legacy ERC20 method signature is as follows:
+
 function transfer(address to, uint256 value) external returns (bool);
-```
 
 The quantum-resistant version of the method is as follows:
 
-```
-function pq_transfer(bytes pq_sig_data, address to, uint256 value) external returns (bool);
-```
+function pq_transfer(bytes pq_sig_data, address to, uint256 value) external returns
 
-where **pq_sig_data** is the quantum-resistant signature.
+(bool);
 
-As a convention defined by QDay, the function name must be prefixed with **pq\_** and the signature is enforced to be the first parameter. This convention makes it easy to distinguish the quantum-resistant methods from the legacy ones. More importantly, with this convention, the QDay nodes can verify the quantum-resistant signatures automatically without extra codes in the contract. Specifically, as long as the signature data is generated in the standard way defined by QDay and passed as the first parameter to a function of which the name is prefixed with **pq\_**, the QDay nodes will verify the signature using the built-in quantum-resistant signature verification mechanism.
+where pq_sig_data is the quantum-resistant signature.
 
-Theoretically, the same mechanism can be implemented in a legacy contract on any EVM-compatible chain, provided the following issues are addressed:
+As a convention defined by QDay, the function name must be prefixed with pq_ and the signature is enforced to be the first parameter. This convention makes it easy to distinguish the quantum-resistant methods from the legacy ones. More importantly, with this convention, the QDay nodes can verify the quantum-resistant signatures automatically without extra codes in the contract. Specifically, as long as the signature data is generated in the standard way defined by QDay and passed as the first parameter to a function of which the name is prefixed with pq_, the QDay nodes will verify the signature using the built-in quantum-resistant signature verification mechanism.
 
-1) The quantum-resistant signature can be generated by either a quantum-resistant wallet or an external tool conforming to the standard defined by QDay.
+Theoretically, the same mechanism can be implemented in a legacy contract on any EVM- compatible chain if the following issues can be addressed:
 
-2) The quantum-resistant signature can be verified within the contract function using the regular EVM instructions.
 
-The first issue is relatively straightforward to address, though it may result in a less-than-ideal user experience when using legacy wallets alongside an external tool. The second issue is more challenging, as implementing quantum-resistant cryptographic operations within the contract function using regular EVM instructions is complex. Also, since these operations are resource-intensive, they could lead to prohibitively high gas fees for users.
+- 1\) The quantum-resistant signature can be generated by either a quantum-resistant wallet or an external tool conforming to the standard defined by QDay.
 
-It's important to note that the second issue does not exist in QDay, as quantum-resistant signature verification is implemented as a built-in feature. The computation is handled natively on the operating system of the QDay nodes (rather than through the EVM), meaning the computational cost is not passed on to users in the form of gas fees.
+- 2\) The quantum-resistant signature can be verified within the contract function using the regular EVM instructions.
 
-### Quantum-Resistant dApps
+The first issue is straightforward to address though it may have unsatisfactory user experience when using legacy wallets companioned with an external tool. The second issue may be quite challenging to address as implementing the quantum-resistant cryptographic operations inside the contract function using the regular EVM instructions is non-trivial. Worse still, as the operations are resource-intensive, it may lead to unaffordable gas fees for the users.
 
-As seen above, smart contracts must be upgraded to support the quantum-resistant signatures. To ensure a smooth transition, dApps deployed in Phase 1 can take the following approach to gradually upgrade to the quantum-resistant ones:
+Note that the second issue does not exist in QDay as the quantum-resistant signature verification is implemented as a built-in feature of QDay such that the computation is carried out natively on the operating system of the QDay nodes (i.e., not through the EVM) and therefore the computational cost will not be charged to the users in the form of gas fees.
 
-1) Keep the user interface of the dApp unchanged. Legacy wallets can interact with the dApp as before.
+## 5.5. Quantum-Resistant dApps
 
-2) Add new quantum-resistant methods to the smart contracts used by the dApp , while ensuring that all existing legacy methods must be kept unchanged.
+We can see from the above that smart contracts must be upgraded to support quantum- resistant signatures. For the sake of smooth transition, dApps deployed in Phase 1 can take keep the user interface of the dApp unchanged. Legacy wallets can interact with the dApp as before by first adding new quantum-resistant methods to the smart contracts used by the dApp, with all the existing legacy methods must be kept unchanged, and then upgrade the user interface of the dApp to add the support for the quantum-resistant wallets.
 
-3) Upgrade the user interface of the dApp to add support quantum-resistant wallets.
+However, in some situations, it may be necessary to implement a separate quantum-resistant version of the dApp without the compatibility with the legacy wallets. This is to ensure that the quantum-resistant contracts will not be affected by the legacy ones. It is worth noting that QDay has no restriction on whether, when and how the dApps are upgraded to the quantum-resistant ones and the choice is left to the dApp developers.
 
-However, in some cases, it may be necessary to implement a separate quantum-resistant version of the dApp, without compatibility with legacy wallets, to ensure that the quantum-resistant contracts remain unaffected by legacy ones. It is important to note that QDay imposes no restrictions on when, how, or if dApps are upgraded to quantum-resistant versions - this decision is left entirely to the dApp developers.
-
-### The Design Principles
+## 5.6. The Design Principles
 
 The design of QDay Phase 2 follows these core principles:
 
-1) **Backward Compatibility**
+- 1\) Backward Compatibility
 
-- Legacy accounts and wallets continue to function without modification.
+- o Legacy accounts and wallets continue to function without modification.
 
-- Legacy smart contracts remain fully operational.
+- o Legacy smart contracts remain fully operational.
 
-- Existing dApps can gradually transition to quantum-resistant versions.
+- o Existing dApps can gradually transition to quantum-resistant versions.
 
-2) **Security Isolation**
 
-- Quantum-resistant accounts are completely independent from legacy accounts (sharing only the mnemonic phrase).
+- 2\) Security Isolation
 
-- Quantum-resistant smart contracts cannot be compromised by legacy cryptographic primitives.
+- o Quantum-resistant accounts are completely independent from legacy accounts (sharing only the mnemonic phrase).
 
-- Clear separation between quantum-resistant and legacy transaction types.
+- o Quantum-resistant smart contracts cannot be compromised by legacy cryptographic primitives.
 
-3) **Seamless User Experience**
+- o Clear separation between quantum-resistant and legacy transaction types.
 
-- Same mnemonic phrase can derive both legacy and quantum-resistant accounts.
+- 3\) Seamless User Experience
 
-- Quantum-resistant wallets can optionally support legacy operations.
+- o Same mnemonic phrase can derive both legacy and quantum-resistant accounts.
 
-- Automatic asset migration between legacy and quantum-resistant accounts when needed.
+- o Quantum-resistant wallets can optionally support legacy operations.
 
-4) **Efficient Implementation**
+- o Automatic asset migration between legacy and quantum-resistant accounts when needed.
 
-- Quantum-resistant signature verification is integrated into QDay nodes.
+- 4\) Efficient Implementation
 
-- Additional gas costs for quantum-resistant operations.
+- o Quantum-resistant signature verification is built into QDay nodes.
 
-- Standardized prefix (pq\_) for quantum-resistant contract methods.
+- o Additional gas costs for quantum-resistant operations.
 
-5) **Flexible Adoption**
+- o Standardized prefix (pq_) for quantum-resistant contract methods.
 
-- The developers of dApps can choose their own upgrade timeline.
+- 5\) Flexible Adoption
 
-- Multiple implementation approaches available (gradual upgrade or complete replacement).
+- o The developers of dApps can choose their own upgrade timeline.
 
-- Optional fallback mechanisms for legacy compatibility.
+- o Multiple implementational approaches available (gradual upgrade or complete replacement).
 
-6) **Clear Standards**
+- o Optional fallback mechanisms for legacy compatibility.
 
-- Consistent naming conventions for quantum-resistant methods.
+## 6) Clear Standards
 
-- Standardized signature data format.
+- o Consistent naming conventions for quantum-resistant methods.
 
-- Well-defined interfaces between legacy and quantum-resistant components.
+- o Standardized signature data format.
 
-These principles ensure that QDay can smoothly transition to quantum-resistant security while preserving usability and supporting organic ecosystem growth.
+- o Well-defined interfaces between legacy and quantum-resistant components.
 
-## Application Ecosystem
+These principles ensure that QDay can transition to quantum-resistant security while maintaining usability and allowing for organic ecosystem growth.
 
----
+## 6. Application Ecosystem
 
-According to the features described in the previous sections, the QDay application ecosystem will be composed of the following categories:
+## Category 1: Application related to Abelian
 
-**Category 1: Application related to Abelian**
+Since Abelian is the solid foundation of the security of QDay, especially in Phase 1 where the post-quantum features of the L2 chain are completely gained from the rollups to the L1 chain, the applications related to Abelian will be the first to be launched on QDay. Such applications will be led by the QDay team with strategic and technical support from the Abelian team.
 
-Since Abelian serves as the core foundation for QDay\'s security, especially in Phase 1 where the post-quantum features of the L2 chain are fully derived from the rollups to the L1 chain, applications related to Abelian will be the first to be launched on QDay. Due to the complexities of managing both L1 and L2 chains, all early-stage applications related to Abelian on QDay are expected to be developed by either the QDay team or the Abelian team.Currently, the main applications fall in this category are Wrapped ABEL (wABEL) and Abelian Staking.
 
-- **Wrapped ABEL (wABEL)** - wABEL is a QRC20 token on QDay that is 1:1 pegged to the ABEL coin on Abelian. It is used to bridge the ABEL token between the QDay Blockchain and the Abelian Blockchain. To mint wABEL, the user needs to lock the ABEL coin on Abelian and receive the corresponding amount of wABEL on QDay. To burn wABEL, the user needs to burn the wABEL on QDay and receive the corresponding amount of ABEL coin on Abelian. To support such operations, QDay team will implement an online service for the minting and burning of wABEL. The service will be operated by a union of institutions having Trust Service Provider (TSP) certification.
+Currently, the main applications fall in this category are Wrapped ABEL (wABEL) and Abelian Staking.
 
-- **Abelian Staking** - Abelian Staking is a dApp that enables users to stake ABEL on QDay in order to earn airdrop and staking rewards. The specific details of the airdrop and staking rewards will be announced at the launch of the QDay Mainnet.
+- o Wrapped ABEL (wABEL) - wABEL is a QRC20 token on QDay that is 1:1 pegged to the ABEL coin on Abelian. It is used to bridge the ABEL token between the QDay Blockchain and the Abelian Blockchain. To mint wABEL, the user needs to lock the ABEL coin on Abelian and receive the corresponding amount of wABEL on QDay. To burn wABEL, the user needs to burn the wABEL on QDay and receive the corresponding amount of ABEL coin on Abelian. To support such operations, QDay team will implement an online service for the minting and burning of wABEL. The service will be operated by a union of institutions having Trust Service Provider (TSP) certification.
 
-**Category 2: Legacy EVM-compatible Applications**
+- o Abelian Staking - Abelian Staking is a dApp to allow users to stake ABEL on QDay to earn airdrop and staking rewards. The details of the airdrop and staking rewards will be announced at the launch time of the QDay Phase 1 Mainnet.
 
-Except for the first category, all dApps deployed in Phase 1 will function similarly to those on existing EVM-compatible chains. They will be compatible with legacy accounts and legacy wallets. To better support community-developed dApps, the QDay team will implement a set of fundamental DeFi dApps and make them available to the community at the launch of both the Testnet and the Mainnet.
+## Category 2: EVM-compatible Applications
 
-- **QDay Bridge** - QDay Bridge is a dApp to provide the cross-chain asset transfer functions. Unlike wABEL, QDay Bridge will focus on bridging ERC20, TRC20 and QRC20 tokens between QDay and other EVM-compatible chains.
+These dApps will be EVM-compatible that shall work with legacy accounts and legacy wallets. To better support the dApps developed by the community, QDay team will implement a set of fundamental DeFi dApps and provide them to the community at the launch time of both the Testnet and the Phase 1 Mainnet.
 
-- **QDay Swap** - QDay Swap is a decentralized exchange (DEX) dApp to provide the token swap functions. To ensure QDay navigates the cold start period as smoothly as possible, the initial liquidity of QDAY, wABEL and the corresponding stable coins will be provided from the treasury of QDay and Abelian.
+- o QDay Bridge: a dApp to provide the cross-chain asset transfer functions. Different from wABEL, QDay Bridge will focus on bridging ERC20, TRC20 and QRC20 tokens between QDay and other EVM-compatible chains.
 
-- **QDay Staking** - QDay Staking is a dApp to provide staking functions for QDAY. Similar to Lido, staked QDAY will be used for the consensus mechanism of validators, and the rewards will be derived from validator rewards(see [Tokenomics](#tokenomics) for more details).
+- o QDay Staking: a dApp to provide the staking functions for \$QDAY. The staked \$QDAY encourages long-term holding of the tokens by its community.
 
-- **QDay Lending** - QDay Lending is a dApp to provide lending and borrowing functions for QRC20 tokens. It\'s similar to the lending protocols on the existing EVM-compatible chains such as Aave and Compound.
+- o Q-Swap: a decentralized exchange (DEX) dApp to provide the token swap functions. To help QDay go through the cold start period as smoothly as possible, the initial liquidity of \$QDAY, wABEL and the chain’s native stablecoins will be provided from the treasury of QDay and Abelian.
 
-- **QDay Finance** - QDay Finance is a consolidated dApp to integrate all the financial services including QDay Bridge, QDay Swap, QDay Staking, QDay Lending, etc. With the help of QDay Finance, the users can easily manage their DeFi assets and participate in various DeFi dApps in a unified interface.
+- o Q-LEAP (Quantum Lending Ecosystem And Protocol): a dApp to provide the lending and borrowing functions for QRC20 tokens. It's similar to the lending protocols on the existing EVM-compatible chains such as Aave and Compound.
 
-**Category 3: Quantum-Resistant Applications**
+- o Q-Finance: a consolidated dApp to integrate all the services above, where the users can easily manage their DeFi assets and participate in various DeFi dApps in a unified interface.
 
-QDay Phase 2, our focus will be on providing quantum-resistant versions of existing dApps. These dApps will serve as reference implementations of quantum-resistant contracts and dApps for the community. In addition, we will offer an external quantum-resistant signature generator to enable legacy wallets to interact with quantum-resistant contracts and dApps. Since Phase 2 is still in its early planning stages, further details about the quantum-resistant applications will be shared in the future.
 
-## Roadmap
+## Category 3: Quantum-Resistant Applications
 
----
+In QDay Phase 2, we will focus on providing quantum-resistant versions of the existing dApps. These dApps will serve as the reference implementations of the quantum-resistant contracts and dApps for the community. In addition, we will provide an external quantum- resistant signature generator for legacy wallets to interact with the quantum-resistant contracts and dApps. As the planning of Phase 2 is still in the early stage, we will provide more details about the quantum-resistant applications in the future.
+
+## 7. A New Evolution: Quantum-Resistant Global Payment Network (Phase 1.5)
+
+## 7.1. Vision: A Universal Platform for the Quantum Era
+
+QDay was conceived as more than the world's first quantum-resistant EVM-compatible Layer 2. The long-term vision positions QDay as a universal application platform — one capable of hosting payments, decentralized finance, commerce, and AI-native services within a single, cohesive ecosystem.
+
+All applications in this ecosystem share two foundational properties: the full expressive power of the Ethereum Virtual Machine, and the post-quantum security guarantees inherited from the Abelian blockchain at Layer 1.
+
+Central to this vision is for the chain to have its own native stablecoin that is secured, compliant, and fiat-backed. Such stablecoin enables seamless, stable value exchange across all application categories — from consumer payments to autonomous agent commerce — without requiring users or agents to interact with volatile native tokens. In combination with QDay's quantum- resistant infrastructure, having this native stablecoin positions the platform as a credible, secure foundation for the global movement of digital money.
+
+In summary, the team's R&D mission for the next phase of QDay development is:
+
+To make QDay the world's first quantum-resistant payment blockchain with native agentic payment capabilities, powered by its own native stablecoin and secured by ZK proofs anchored on the Abelian Layer 1.
+
+## 7.2. Convergence of Major Industry Trends
+
+QDay's next strategic chapter is shaped by three industry trends that are simultaneously reinforcing each other and accelerating the demand for exactly the infrastructure that QDay is designed to provide.
+
+## Trend 1 — The Rise of AI and Autonomous Agents
+
+
+Artificial intelligence systems are no longer passive tools that respond to human queries. Modern AI agents plan, decide, and act autonomously on behalf of their users — scheduling meetings, executing trades, managing workflows, and increasingly, making purchases and financial transfers without human intervention at each step. The shift from AI as a software tool to AI as an economic actor is well underway.
+
+This transformation has a direct consequence for blockchain infrastructure: AI agents require payment rails that operate at machine speed, with programmable rules, spending limits, and cryptographic identity. Traditional financial systems were not designed for this. Blockchain networks that provide programmable, low-cost, and identity-aware payment primitives are positioned to become the settlement layer for the agent economy. QDay, with its EVM programmability, stablecoin infrastructure, and forthcoming agent-specific capabilities, is designed to serve precisely this role.
+
+## Trend 2 — The Digitization of the US Dollar via Stablecoins
+
+USD-pegged stablecoins — most prominently USDC and USDT — have achieved a combined market capitalization in the hundreds of billions and are processing trillions of dollars in annual settlement volume on public blockchains. Their regulatory trajectory has also shifted fundamentally: the United States has enacted legislative frameworks that formally recognize payment stablecoins. Same has happened in Europe and Hong Kong. Other major economies including the United Kingdom, the UAE, Singapore, and Japan are all pursuing equivalent frameworks.
+
+Stablecoins now serve not merely as crypto-native instruments but as programmable dollar rails: they settle international B2B payments at a fraction of the cost and latency of correspondent banking, they enable creator monetization in emerging markets without local banking access, and they are being integrated directly into Visa's card settlement infrastructure. The US government has explicitly acknowledged stablecoins as a mechanism to extend the reach and demand for US dollar-denominated instruments globally.
+
+QDay's own native stablecoin positions the platform at the intersection of this structural shift, where the entire QDay payment ecosystem is designed, enabling agents, users, and institutions to transact in digital dollars on a quantum-secure network.
+
+## Trend 3 — The Emergence of Agentic Payments
+
+Payment infrastructure is undergoing a fundamental redesign in response to the agent economy. Stripe, Google, Coinbase, and a growing cohort of fintech companies have announced or deployed agent-specific payment primitives: APIs that allow AI agents to hold balances, initiate transfers, pay for API calls on a per-request basis, and receive value on behalf of their principals — all without requiring a human to authorize every transaction.
+
+The HTTP 402 payment protocol (sometimes referred to as x402) has emerged as a nascent standard for embedding stablecoin payments into ordinary web requests: an agent calls an API, the server responds with a payment request, the agent pays in USDC, and access is granted — all within a single HTTP exchange, with no API key management and no subscription overhead. Research from major cloud and payment providers indicates that a growing share of internet traffic is already generated by AI agents rather than humans, and that this share is increasing rapidly. The payment infrastructure to serve this traffic must be programmable, low-latency, and capable of operating at machine speed and machine scale.
+
+QDay is designed to participate natively in this emerging agentic payment landscape.
+
+## 7.3. The Strategic Path Forward
+
+## Migration to Polygon CDK
+
+The foundational step in QDay's next phase is the migration of the QDay blockchain to the Polygon Chain Development Kit (CDK). This is a strategic infrastructure decision with broad downstream consequences for QDay's performance and payment capabilities.
+
+Polygon CDK is an open-source toolkit for deploying sovereign EVM-compatible blockchains as ZK rollups. A CDK chain retains full sovereignty — its own native token (\$QDAY), its own validator set, its own governance — while connecting to a shared interoperability layer called AggLayer. The migration does not replace QDay's existing architecture; it upgrades the settlement and proof mechanisms with the capabilities described in this section.
+
+Key characteristics of a CDK-based QDay chain:
+
+- o High throughput: ~2,000 transactions per second for the default CDK mode. Up to 20,000 TPS with optimized infrastructure.
+
+- o Sub-cent transaction fees: Average fees of a few cents per transaction, making microtransactions and agent micropayments economically viable at scale.
+
+- o Sub-second payment settlement on the QDay chain itself (excluding the proof submission to the L1 Abelian blockchain).
+
+- o Validium mode: Transaction data can be stored off-chain with only ZK proofs posted to the settlement layer, preserving privacy while maintaining cryptographic integrity.
+
+- o EVM-compatible: Full compatibility with the Ethereum development toolchain — all existing QDay smart contracts, dApps, and developer tooling migrate without modification.
+
+- o ZK proof–based settlement: Every batch of QDay transactions is accompanied by a zero- knowledge validity proof routed through a proof aggregation layer that submits consolidated proofs to the Abelian blockchain — preserving the quantum-resistant settlement guarantee that is central to QDay's security model.
+
+## Agentic Payment Capabilities
+
+- o Wallet infrastructure: Enterprise-grade smart contract wallets with embedded SDK, gas abstraction (users pay entirely in QDay’s native stablecoin, never in native gas tokens), passkey-based authentication and spending controls. AI agents can be assigned session- scoped wallets with configurable spending limits and expiry windows.
+
+- o Compliance and identity: Onchain agent identity registration via ERC-8004, enabling agents to build portable reputation and be trusted by counterparties and services.
+
+- o Settlement rails: QDay's own chain provides fast, low-cost settlement — sub-second speed, sub-cent fees — as the base layer for all payment flows.
+
+
+- o The x402 agentic payment protocol: The HTTP 402 payment standard enables AI agents to pay per API request in QDay’s native stablecoin via ordinary HTTP calls. An agent making a data request, an inference call, or a service invocation can pay for it in QDay’s native stablecoin in real time without prior agreements, subscriptions, or API key management.
+
+## QDay's Native Stablecoin for the Agent Economy
+
+QDay shall have its own native stablecoin that is US dollar-pegged as the primary unit of account for all payment activity on the platform. In the context of the agent economy, such stablecoin serves several distinct functions:
+
+- o Gas abstraction: The integration and usage of a paymaster infrastructure in QDay's will allow agents and users to pay transaction fees in the native stablecoin, eliminating the need to hold or manage the \$QDAY native token for routine payment operations. From the agent's perspective, every interaction is calculated in stablecoin — there is no concept of gas tokens.
+
+- o AI agent treasury: Agents can hold stablecoin balances in their session-scoped wallets, spend within their configured limits, and receive stablecoins as payment for services rendered — constituting a complete economic lifecycle without human intervention.
+
+- o Cross-border payments: Stablecoin transfers on QDay settle in under a second at sub-cent fees, making it practical for cross-border B2B and consumer payment flows where traditional rails impose multi-day settlement windows and fees of 1-3%.
+
+- o DeFi collateral: Within QDay's DeFi ecosystem (Q-Swap, Q-LEAP, etc.), the native stablecoin shall serve as the primary stable collateral, enabling lending, borrowing, and liquidity provisioning in a dollar-denominated instrument that does not require exposure to crypto price volatility.
+
+## 7.4. The QDay Differentiator: Quantum-Secure Payments
+
+The most significant strategic differentiation for QDay in the global payments landscape is one that no other payment blockchain currently possesses — post-quantum cryptographic security that is in Phase 1 anchored on a purpose-built quantum-resistant Layer 1 before becoming native post-quantum in Phase 2.
+
+## QDay's Unique Security Architecture
+
+In Phase 1, QDay operates as an EVM Layer 2 chain whose final state is settled — through the PQZK Bridge — on the Abelian L1, where the L1 chain employs lattice-based cryptographic algorithms (LWE and Ring-LWE) that are classified as quantum-resistant by the National Institute of Standards and Technology (NIST).
+
+The critical property is cross-chain finality backed by ZK proofs settled on Abelian L1. Once a batch of QDay transactions has been proven and committed to Abelian, the finality of that state is protected by quantum-resistant cryptography. An adversary with access to a quantum computer cannot forge the Abelian-layer signatures of the rollup operators, cannot produce a valid PQZK proof for an invalid state transition, and therefore cannot modify or reverse confirmed QDay transactions — even with quantum computational resources.
+
+This property is unique to QDay in the current market. Competing payment blockchains and L2 solutions settle on Ethereum or alternative L1s whose cryptographic assumptions are classical and therefore vulnerable to a sufficiently capable quantum computer. QDay is the only EVM- compatible payment network that anchors its finality in post-quantum cryptography.
+
+## Quantum-Resistant Agentic Commerce
+
+The convergence of AI agents and quantum-resistant payments is a particularly significant research direction. As AI agents become economic actors — holding balances, initiating payments, and managing financial positions — the security of the keys and wallets they use becomes critical. A quantum computer capable of breaking elliptic curve cryptography could, in principle, derive the private key of any standard EVM wallet from its public key. For an AI agent operating autonomously at scale, the consequences of such an attack would be severe and potentially irreversible.
+
+QDay's roadmap addresses this directly. The Phase 2 quantum-resistant account model — which introduces post-quantum keys, quantum-resistant wallets, and quantum-resistant smart contracts — will be extended to cover agent wallet infrastructure. AI agents operating on QDay will be able to hold stablecoin balances in quantum-resistant accounts, with session-scoped spending limits enforced by quantum-resistant smart contracts. The private keys protecting these accounts are secured by lattice-based cryptography that remains intractable to both classical and quantum adversaries.
+
+In combination with the DAO-based rollup halt mechanism described in Phase 1, QDay provides a complete response framework for quantum-level threats: detect, halt, freeze, remediate, and resume — all in a manner that a quantum computer cannot circumvent, because every step requires quantum-resistant signatures from the rollup operators.
+
+## 7.5. Research and Development Focus Areas
+
+The following areas represent the team's active R&D directions as QDay evolves toward its full payment and agent-commerce vision:
+
+- 1\. CDK migration — Completion of the QDay blockchain migration to Polygon CDK and deployment of the PQZK Bridge to anchor ZK proofs on Abelian. This is the foundational infrastructure step to the subsequent agentic payment capabilities.
+
+- 2\. Native stablecoin infrastructure — Integration with the Open Money Stack (OMS) layer. Build a QDay's paymaster infrastructure for using the chain’s stablecoin as a native gas token.
+
+- 3\. Agentic wallet services — Design and implementation of session-scoped, quantum-resistant agent wallets with configurable spending limits and time-bounded access windows. Integration with the x402 protocol for per-request stablecoin payments.
+
+- 4\. Onchain agent identity (ERC-8004) — Deployment of the ERC-8004 agent identity standard on QDay, enabling AI agents to register verifiable identities, build portable reputation, and be trusted by counterparties.
+
+- 5\. Privacy layer for institutional payments — Investigation of ZK shielded pool technologies to enable confidential institutional payment flows on QDay, where payment amounts and counterparty addresses are not disclosed to public observers while remaining verifiable to authorized auditors.
+
+## 7.6. Summary
+
+QDay's next innovation chapter is defined by three converging forces — the AI agent economy, the global adoption of US dollar stablecoins, and the demand for quantum-secure financial infrastructure — and by a clear strategic response to each.
+
+The migration to Polygon CDK unlocks the throughput and is the base for the agentic payment infrastructure. Having its own native stablecoin provides the stable, dollar-denominated monetary unit that agents, users, and institutions need to transact without volatility exposure. And the unique quantum-resistant security architecture — EVM Layer 2 execution with ZK proof finality anchored on the Abelian blockchain — provides a level of cryptographic assurance that no other payment network in the world currently offers.
+
+QDay will be the world's first quantum-resistant payment blockchain with native agentic payment capabilities: a platform where AI agents pay for services in QDay’s stablecoin, where cross-border settlements confirm in under two seconds at sub-cent cost, and where the finality of every transaction is ultimately guaranteed by post-quantum cryptography immune to the most powerful computational adversaries anticipated in the coming decade
+
+## 8. Roadmap
 
 The major milestones of QDay are shown below:
 
-| Date | Milestone |
-| ---- | --------- |
+| Date | Milestones |
+| --- | --- |
 | 2024 Q2 | Start Phase 1 Development |
-| 2024 Q3 | Launch of QDay Testnet |
-| 2025 Q1 | Launch of QDay Mainnet and ABEL Staking |
-| 2025 Q2 | Launch of QDay Finance dApps |
-| 2025 Q3 | Start Phase 2 Development |
-| 2026 Q2 | Major Upgrade of QDay Testnet for Phase 2 Upgrade |
-| 2026 Q4 | Major Upgrade of QDay Mainnet for Phase 2 Upgrade |
+| 2024 Q4 | Launch of QDay Phase 1 (Testnet v1) |
+| 2025 Q2 | Launch of QDay Phase 1 (Testnet v2) |
+| 2025 Q4 | Launch of QDay Phase 1 (Mainnet) |
+| 2026 Q1 | Start Phase 1.5 Development |
+| 2026 Q3 | Launch of QDay Phase 1.5 Upgrade – Enhanced Payment (Testnet) |
+| 2026 Q4 | Start Phase 2 Development |
+| 2027 Q1 | Launch of QDay Phase 1.5 Upgrade – Enhanced Payment (Mainnet) |
+| 2027 Q2 | Launch of QDay Phase 2 Upgrade – Native PQ (Testnet) |
+| 2027 Q4 | Launch of QDay Phase 2 Upgrade – Native PQ (Mainnet) |
 
-To establish a strong foundation for the ecosystem following the TGE of the QDay Mainnet, the QDay team will focus on developing not only the blockchain technology but also essential ecosystem services and dApps. Below, we outline the detailed plans on a quarterly basis.
+## 9. Conclusion
 
-**2024 Q2**
+QDay represents a groundbreaking advancement in blockchain technology, offering the first quantum-resistant EVM-compatible Layer 2 solution that is scalable and high-performance. Through its pragmatic multi-phase implementation strategy, QDay addresses the critical challenge of quantum computing threats while maintaining the practical benefits of existing blockchain infrastructure.
 
-1) **Development of QDay Nodes** - Implement all types of QDay nodes (validators, rollups nodes, etc.).
+Phase 1 establishes quantum-resistant ledger security through L1-assisted rollups, leveraging Abelian's quantum-resistant properties while preserving full EVM compatibility. The novel POS-over-POW consensus mechanism combines the security benefits of Proof of Work with the efficiency advantages of Proof of Stake, creating a unique and robust security model. The implementation of quantum-resistant rollups provides an additional layer of protection, allowing for secure transaction processing and the ability to halt operations if threats are detected.
 
-2) **Development of ZK Rollups** - Implement the ZK Rollups from QDay to Abelian.
+Phase 2 advances quantum security to the account level, introducing quantum-resistant accounts, wallets, and smart contracts while maintaining backward compatibility with legacy systems. This careful balance between innovation and compatibility ensures a smooth transition for existing users and developers while providing enhanced security features for those who require them.
 
-**2024 Q3**
+In between, a newly inserted Phase 1.5 addressed the growing need for a secure, high- performance payment rail in the face of growing AI demand and agentic payments and commerce.
 
-1) **QDay Testnet (v1)** - The first version of QDay Testnet is a POC (Proof of Concept) testnet to prove the feasibility of combining Rollups to Abelian with full EVM compatibility.
+QDay's comprehensive ecosystem approach, including essential DeFi applications and cross- chain bridges, creates a complete quantum-resistant blockchain environment. The platform's tokenomics model, with its balanced distribution strategy, ensures long-term sustainability and incentivizes broad participation across the network.
 
-2) **QDay Faucet (Testnet)** - The QDay Faucet is a service to provide testnet tokens for the community including users and developers.
+QDay's roadmap from outlines a clear path toward full implementation, with careful attention to testing, gradual deployment, and ecosystem development. This methodical approach, combined with the platform's innovative technical features, positions QDay as a pioneer in quantum- resistant blockchain technology, ready to address both current needs and future challenges in the evolving blockchain landscape.
 
-3) **QDay Explorer (Testnet)** - The QDay Explorer (Testnet) is a service to provide the blockchain data query and visualization functions for the QDay Testnet.
+Beyond the immediate roadmap, the QDay team is actively pursuing a strategic research and development direction that extends the platform's quantum-resistant foundation into the emerging landscape of global stablecoin payments and AI-native commerce. The goal of this research direction is unambiguous — to establish QDay as the world's first quantum-resistant global payment network with native agentic payment capabilities, providing individuals, enterprises, and autonomous AI agents with a platform where digital commerce is fast, low-cost, and immune to the quantum threats that the broader financial and blockchain landscape has yet to address.
 
-**2024 Q4**
 
-1) **QDay Testnet (v2)** - The second version of QDay Testnet will be shipped with a comprehensive set of dApps and services to provide a full-fledged testing environment for the QDay ecosystem.
+Through its combination of quantum resistance, scalability, and practical usability, QDay represents not just an incremental improvement but a fundamental advance in blockchain technology, paving the way for a more secure and sustainable future for decentralized applications and digital assets.
 
-2) **Testnet stable coins on QDay Testnet (v2)** - The stable coins are essential for the QDay ecosystem. Testnet stable coins have no real value and are only used for testing purposes.
+## 10. References
 
-3) **QDay Bridge (Testnet)** - The QDay Bridge is a service to provide the cross-chain asset transfer functions. For the testnet, it only supports bridging stable coins between QDay Testnet and the testnet of a few selected public chains.
+[1] QDay Official Website: https://www.qday.io/
 
-4) **QDay Swap (Testnet)** - The QDay Swap (Testnet) is a decentralized exchange (DEX) dApp to provide the token swap functions for the QDay Testnet.
+[2] QDay Documentation: https://community.qday.io/guide/
 
-5) **QDay Staking (Testnet)** - The QDay Staking is a service to provide the staking functions for QDay native tokens. The main purpose of the testnet staking is to test the staking, unstaking, and reward distribution processes for QDAY.
+[3] Fabian Vogelsteller, Vitalik Buterin, November 2015. ERC-20: Token Standard. https://eips.ethereum.org/EIPS/eip-20
 
-**2025 Q1**
+[4] Polygon zkRollup. https://docs.polygon.technology/cdk/concepts/zk-vs-
 
-1) **EVM Compatibility** - The QDay Mainnet will be fully EVM compatible.
+optimistic/?h=polygon+zk+rollups#zero-knowledge-rollups
 
-2) **Quantum-Resistant Rollups** - The QDay Mainnet will conduct the rollups to the Abelian Mainnet.
+## Technical Papers
 
-3) **QDAY Token Distribution** - The QDAY token distribution will be conducted according to the tokenomics described in Section 3.
+[1] Abelian, May 2023, Post-Quantum Zero-Knowledge (PQZK) Bridge
 
-4) **QDay Explorer** - The QDay Explorer is a service to provide the blockchain data query and visualization functions for the QDay Mainnet.
+https://download.pqabelian.io/release/docs/Abelian%20PQZK%20Bridge.pdf
 
-5) **QDay Bridge** - The QDay Bridge is a service to provide the cross-chain asset transfer functions for the QDay Mainnet. For the mainnet, it supports bridging stable coins between QDay Mainnet and the mainnet of Tron and a rich set of EVM-compatible chains such as Ethereum, BSC, Polygon, etc.
+[2] Abelian, February 2022, Abelian Whitepaper. https://community.pqabelian.io/guide/abel- whitepaper.html
 
-6) **QDay Swap** - The QDay Swap is a decentralized exchange (DEX) dApp to provide the token swap functions for the QDay Mainnet.
+[3] Abelian, February 2022 Abelian Improvement Proposal 0011: Mnemonic Codes for Generating Deterministic Accounts.
 
-7) **QDay Staking** - The QDay Staking is a dApp to provide the staking functions for QDay native tokens. On QDay Mainnet, most of the QDAY rewards will be distributed to the QDAY stakers and the validators.
-
-8) **Abelian Staking** - The Abelian Staking is a service to provide the staking functions for Abelian native tokens.
-
-**2025 Q2**
-
-1) **QDay Mainnet (Phase 1)** - The QDay Mainnet (Phase 1) will be launched with the following features:
-
-2) **QDay Lending** - The QDay Lending is a dApp to provide the lending and borrowing functions for QRC20 tokens.
-
-3) **QDay Finance** - The QDay Finance is a consolidated dApp to integrate all the financial services including QDay Bridge, QDay Swap, QDay Staking, Abelian Staking, QDay Lending, etc.
-
-**2025 Q3**
-
-1) **QDay NFT Marketplace** - The QDay NFT Marketplace is a dApp to provide the NFT trading functions for the QDay Mainnet.
-
-2) **QDay Prediction Market** - The QDay Prediction Market is a dApp to provide the prediction market functions for the QDay Mainnet.
-
-3) **Development of EVM compatible Quantum-Resistant Account** - The first milestone of Phase 2 development is to implement the quantum-resistant account with full EVM compatibility.
-
-**2025 Q4**
-
-1) **Development of QDay Wallet** - The QDay Wallet is a new type of wallet to support the quantum-resistant account with full EVM compatibility.
-
-2) **Development of Quantum-Resistant dApps** - The quantum-resistant dApps are upgraded from the legacy ones with the support of the quantum-resistant account.
-
-**2026 Q1**
-
-1) **Integration of Phase 2 technology** - Consolidate the quantum-resistant account with the legacy one and conduct integration tests.
-
-**2026 Q2**
-
-1) **QDay Testnet (Phase 2)** - Launch the QDay Testnet (Phase 2) with the quantum-resistant account and QDay Wallet.
-
-2) **Quantum-Resistant dApps on QDay Testnet (Phase 2)** - Launch the quantum-resistant dApps that can be used by the QDay Wallet on QDay Testnet (Phase 2).
-
-**2026 Q3**
-
-1) **Quantum-Resistant QDay Bridge (Testnet)** - Launch the quantum-resistant QDay Bridge on QDay Testnet (Phase 2).
-
-**2026 Q4**
-
-1) **QDay Mainnet (Phase 2)** - Launch the QDay Mainnet (Phase 2) with the quantum-resistant account and QDay Wallet.
-
-2) **Quantum-Resistant dApps on QDay Mainnet (Phase 2)** - Launch the quantum-resistant dApps that can be used by the QDay Wallet on QDay Mainnet (Phase 2).
-
-3) **Quantum-Resistant QDay Bridge (Mainnet)** - Launch the quantum-resistant QDay Bridge on QDay Mainnet (Phase 2).
-
-## Conclusion
-
----
-
-QDay represents a pioneering advancement in blockchain technology, offering the world's first quantum-resistant, EVM-compatible Layer 2 solution, built upon the trusted and proven foundation of the Abelian Blockchain. Through its visionary two-phase implementation strategy, QDay addresses the critical challenge presented by quantum computing while preserving the strengths of existing blockchain infrastructure.
-
-Phase 1 establishes quantum-resistant ledger security through L1-assisted rollups, leveraging Abelian\'s quantum-resistant properties while preserving full EVM compatibility. The POS-over-POW consensus mechanism combines the security benefits of Proof of Work with the efficiency of Proof of Stake, creating a resilient security model. The integration of quantum-resistant rollups provides an extra layer of protection, enabling secure transaction processing and the ability to halt operations in response to detected threats.
-
-Phase 2 advances quantum security at the account level, introducing quantum-resistant accounts, wallets, and smart contracts while maintaining backward compatibility with legacy systems. This thoughtful balance between innovation and compatibility ensures a smooth transition for existing users and developers, offering enhanced security features for those who need them.
-
-QDay\'s comprehensive ecosystem approach, including key DeFi applications and cross-chain bridges, establishes a complete quantum-resistant blockchain environment. The platform\'s tokenomics model, featuring a well-balanced distribution strategy, ensures long-term sustainability while driving broad participation across the network.
-
-Looking ahead, QDay\'s roadmap from 2024 to 2026 outlines a clear path toward full implementation, emphasizing thorough testing, gradual deployment, and ecosystem development. This methodical approach, combined with the platform\'s innovative technical features, positions QDay as a pioneer in quantum-resistant blockchain technology, equipped to address both current needs and future challenges in the evolving blockchain landscape.
-
-By combining quantum resistance, scalability, and practical usability, QDay represents not just an incremental improvement, but a transformative leap in blockchain technology. It paves the way for a more secure and sustainable future for decentralized applications and digital assets.
-
-## References
-
----
-
-\[1\] Abelian Official Website. https://www.pqabelian.xyz/
-
-\[2\] Abelian Documentation. https://community.pqabelian.io/guide/
-
-\[3\] Abelian Foundation. (2023, May). *Post-Quantum Zero-Knowledge (PQZK) Bridge*.https://download.pqabelian.io/release/docs/Abelian%20PQZK%20Bridge.pdf
-
-\[4\] Abelian Whitepaper. https://community.pqabelian.io/guide/abel-whitepaper.html
-
-\[5\] Abelian Foundation. (2025, Jan). *Abelian Improvement Proposal 0011: Mnemonic Codes for Generating Deterministic Accounts*. https://github.com/pqabelian/aips/tree/master/aips
-
-\[6\] Fabian Vogelsteller, Vitalik Buterin. (2015, Nov). *ERC-20: Token Standard*. https://eips.ethereum.org/EIPS/eip-20
-
-\[7\] Polygon zkRollup. https://docs.polygon.technology/cdk/concepts/zk-vs-optimistic/?h=polygon+zk+rollups#zero-knowledge-rollups
-
-\[8\] Nakamoto, S. (2008). *Bitcoin: A Peer-to-Peer Electronic Cash System.* https://bitcoin.org/bitcoin.pdf
-
-\[9\] Wood, G. (2014). *Ethereum: A Secure Decentralised Generalised Transaction Ledger. Ethereum Yellowpaper*. https://ethereum.github.io/yellowpaper/paper.pdf
-
-\[10\] Ethereum Foundation. *ERC-20 Standards.* https://ethereum.org/en/developers/docs/standards/tokens/erc-20/
-
-\[11\] Ethereum Foundation. *Decentralized Applications (dApps).* https://ethereum.org/en/dapps/
-
----
-
-[Download the Japanese version of the QDay Whitepaper PDF document](https://download.pqabelian.io/release/docs/QDay_Whitepaper_Japanese.pdf)
+https://github.com/pqabelian/aips/blob/master/aips/aip0011/aip0011_v005.md
