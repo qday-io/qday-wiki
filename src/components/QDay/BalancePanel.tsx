@@ -1,16 +1,42 @@
 import React, { useState } from 'react';
-import { fmtEther } from './wallet';
+import { fmtEther, QDAY, QDAY2 } from './wallet';
 import ConnectButtons from './ConnectButtons';
 
 // Real asset balances embedded in the docs: connect wallet → read native QDAY
-// plus the QDay ERC-20s straight from the QDay chain via balanceOf(address).
-// (Addresses are the verified QDay testnet tokens.)
-const TOKENS = [
-  { sym: 'USD8', addr: '0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F', decimals: 6 },
-  { sym: 'WABEL', addr: '0x699f540c974430781c618fb8033a1e3ff75c43d2', decimals: 18 },
-  { sym: 'WQDAY', addr: '0x31ff878190Cf74E37d963F77599abB674d27A787', decimals: 18 },
-];
-const QDAY_RPC = 'https://rpc.qday.info';
+// plus the QDay ERC-20s straight from the chain via balanceOf(address).
+//
+// Which chain is read is per page, because the two testnets hold different
+// assets: the ERC-20s below are deployed on Origin testnet (44003) only, and
+// Aevum (44005) has native QDAY from the faucet and no published ERC-20s yet.
+// Reading the wrong chain silently shows zero, so the panel names the chain it
+// read and never falls back to the other one.
+type Network = 'qday' | 'qday2';
+
+const CHAINS: Record<Network, { label: string; chainId: number; rpc: string; tokens: Token[] }> = {
+  qday: {
+    label: 'QDay Origin testnet',
+    chainId: QDAY.chainIdNum,
+    rpc: QDAY.rpc,
+    tokens: [
+      { sym: 'USD8', addr: '0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F', decimals: 6 },
+      { sym: 'WABEL', addr: '0x699f540c974430781c618fb8033a1e3ff75c43d2', decimals: 18 },
+      { sym: 'WQDAY', addr: '0x31ff878190Cf74E37d963F77599abB674d27A787', decimals: 18 },
+    ],
+  },
+  qday2: {
+    label: 'QDay Aevum testnet',
+    chainId: QDAY2.chainIdNum,
+    rpc: QDAY2.rpc,
+    // No ERC-20 addresses are published on Aevum yet — see the token list.
+    tokens: [],
+  },
+};
+
+interface Token {
+  sym: string;
+  addr: string;
+  decimals: number;
+}
 
 function balanceOfData(holder: string): string {
   return '0x70a08231' + '0'.repeat(24) + holder.toLowerCase().replace(/^0x/, '');
@@ -29,7 +55,8 @@ function scale(hex: string, decimals: number): string {
   return s.replace(/\.?0+$/, '') || '0';
 }
 
-export default function BalancePanel() {
+export default function BalancePanel({ network = 'qday' }: { network?: Network }) {
+  const chain = CHAINS[network];
   const [addr, setAddr] = useState<string | null>(null);
   const [rows, setRows] = useState<{ sym: string; bal: string }[]>([]);
   const [state, setState] = useState<'idle' | 'busy' | 'err'>('idle');
@@ -38,10 +65,10 @@ export default function BalancePanel() {
   async function load(account: string) {
     try {
       setState('busy'); setMsg('');
-      const native = await rpc(QDAY_RPC, 'eth_getBalance', [account, 'latest']);
+      const native = await rpc(chain.rpc, 'eth_getBalance', [account, 'latest']);
       const out = [{ sym: 'QDAY (native)', bal: fmtEther(BigInt(native ?? '0x0')) }];
-      for (const t of TOKENS) {
-        const raw = await rpc(QDAY_RPC, 'eth_call', [{ to: t.addr, data: balanceOfData(account) }, 'latest']);
+      for (const t of chain.tokens) {
+        const raw = await rpc(chain.rpc, 'eth_call', [{ to: t.addr, data: balanceOfData(account) }, 'latest']);
         out.push({ sym: t.sym, bal: scale(raw, t.decimals) });
       }
       setRows(out); setState('idle');
@@ -56,7 +83,12 @@ export default function BalancePanel() {
       padding: '18px 20px', margin: '1rem 0', background: 'var(--ifm-background-surface-color)',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-        <div style={{ fontWeight: 650 }}>Your QDay assets</div>
+        <div>
+          <div style={{ fontWeight: 650 }}>Your QDay assets</div>
+          <div style={{ fontSize: 12.5, color: 'var(--ifm-color-emphasis-600)', marginTop: 2 }}>
+            Read from {chain.label} (chain ID {chain.chainId})
+          </div>
+        </div>
         {addr ? (
           <button onClick={() => load(addr)} disabled={state === 'busy'} style={{
             background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
@@ -75,7 +107,7 @@ export default function BalancePanel() {
         )}
       </div>
       {addr && <div style={{ fontSize: 13, color: 'var(--ifm-color-emphasis-600)', marginTop: 4 }}>
-        <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code> on QDay</div>}
+        <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code> on {chain.label}</div>}
       {rows.length > 0 && (
         <table style={{ width: '100%', marginTop: 14, marginBottom: 0 }}>
           <tbody>
