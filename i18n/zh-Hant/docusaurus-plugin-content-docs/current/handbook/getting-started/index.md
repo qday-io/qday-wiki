@@ -21,9 +21,7 @@ QDay 支援 MetaMask 以及任何兼容 WalletConnect 的錢包。請使用以�
 ## 水龍頭
 
 在測試網上，將錢包連接至 QDay 的水龍頭（Faucet），即可領取用於測試的代幣。
-
-![快速開始指南](/img/getting-started1.jpg)
-![快速開始指南](/img/getting-started2.jpg)
+https://faucet.qday.info/en
 
 
 ## 跨鏈橋
