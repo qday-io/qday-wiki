@@ -20,10 +20,15 @@ can claim again.
 
 ## Check your assets
 
-Connect to see your live balances on QDay (native QDAY + the migratable ERC-20s), read straight from
-the chain:
+Connect to see your live balance on **QDay Aevum (chain ID 44005)**, read straight from the chain —
+this is where the faucet sends testnet QDAY:
 
-<BalancePanel />
+<BalancePanel network="qday2" />
+
+:::note[Only native QDAY on Aevum]
+No ERC-20s are published on Aevum yet. USD8, WABEL and WQDAY live on QDay Origin testnet (44003);
+see the [token list](/Knowledge/reference/tokens) to read those balances.
+:::
 
 :::tip[This is "embedding a dApp"]
 The button above isn't a link to another site — it's a live contract call from inside the docs. The

@@ -20,10 +20,15 @@ import BalancePanel from '@site/src/components/QDay/BalancePanel';
 
 ## 查看你的資產
 
-連接後即可查看你在 QDay 上的即時餘額（原生 QDAY 加上可遷移的 ERC-20），
-直接從鏈上讀取：
+連接後即可查看你在 **QDay Aevum（鏈 ID 44005）** 上的即時餘額，直接從鏈上讀取——
+水龍頭發放的測試網 QDAY 就在這條鏈上：
 
-<BalancePanel />
+<BalancePanel network="qday2" />
+
+:::note[Aevum 上只有原生 QDAY]
+Aevum 上尚未公布任何 ERC-20。USD8、WABEL 和 WQDAY 位於 QDay Origin 測試網（44003），
+可到[代幣列表](/Knowledge/reference/tokens)查看那些餘額。
+:::
 
 :::tip[這就是「嵌入 dApp」]
 上方的按鈕並不是連往其他網站的連結——而是直接在文件內進行的即時合約呼叫。
