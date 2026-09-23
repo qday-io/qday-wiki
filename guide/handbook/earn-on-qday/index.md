@@ -9,11 +9,11 @@ Ways to earn QDAY in the QDay and Abelian communities: airdrops, liquidity minin
 
 ## Airdrop
 
-QDay airdrops reward **active QDay and Abelian community members**. Eligibility and amounts are set by each campaign (for example Discord / X activity, testnet use, or holding and using QDay products). 10% of total QDAY supply is reserved for Community & Ecosystem, including airdrops — see [Tokenomics](/guide/handbook/tokenomics).
+QDay airdrops reward **active QDay and Abelian community members**. Eligibility and amounts are set by each campaign (for example Telegram / X activity, testnet use, or holding and using QDay products). 10% of total QDAY supply is reserved for Community & Ecosystem, including airdrops — see [Tokenomics](/guide/handbook/tokenomics).
 
 **How to claim**
 
-1. Watch announcements on official channels: [Telegram]](https://web.telegram.org/k/#@qday_official_group)), [X (@QDayOfficial)](https://x.com/QDayOfficial), and the [QDay Portal](https://portal.qday.io).
+1. Watch announcements on official channels: [Telegram(https://web.telegram.org/k/#@qday_official_group)), [X (@QDayOfficial)](https://x.com/QDayOfficial), and the [QDay Portal](https://portal.qday.io).
 2. When a campaign opens, go to the **official airdrop portal** linked from those channels (reached from [portal.qday.io](https://portal.qday.io) — never from a random DM or a lookalike URL).
 3. Connect the same wallet you used on QDay / Abelian (see [MetaMask](/guide/handbook/user-guide/metamask) or [Abelian Mobile Wallet](/guide/handbook/user-guide/abelian-mobile-wallet)).
 4. Check eligibility, review the terms, and claim. Confirm the transaction in your wallet. Gas is paid in QDAY.
