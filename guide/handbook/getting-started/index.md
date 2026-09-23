@@ -20,9 +20,7 @@ QDay works with MetaMask and any WalletConnect-compatible wallet. Add the networ
 ## Faucet
 
 On testnet, connect your wallet to QDay's faucet to receive tokens for testing.
-
-![Getting Started Guide](/img/getting-started1.jpg)
-![Getting Started Guide](/img/getting-started2.jpg)
+https://faucet.qday.info/en
 
 
 ## Bridge
