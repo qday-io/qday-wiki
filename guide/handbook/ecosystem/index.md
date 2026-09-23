@@ -17,9 +17,6 @@ QDay's ecosystem applications include:
 - **QDay Bridge** — moves ERC20, TRC20, and QRC20 tokens between QDay and other EVM-compatible chains.
 - **QDay Staking** — stake QDAY to support the network and earn rewards.
 - **Q-Swap** — QDay's decentralized exchange for swapping tokens.
-- [Placeholder] A prediction market is planned.
-- [Placeholder] An oracle service is planned.
-- [Placeholder] An onchain identity product is planned.
 
 ## DeFi
 
