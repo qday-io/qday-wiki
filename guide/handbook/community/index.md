@@ -9,9 +9,9 @@ Follow and join the official QDay channels.
 
 ## QDay Network
 
+- **Telegram:** [@QDayOfficial](https://web.telegram.org/k/#@qday_official_group)
 - **X:** [@QDayOfficial](https://x.com/QDayOfficial)
 - **LinkedIn:** [QDay Network](https://www.linkedin.com/company/qday-network/)
-- **Discord:** [discord.gg/Rrb33mC3Kc](https://discord.gg/Rrb33mC3Kc)
 - **GitHub:** [github.com/qday-io](https://github.com/qday-io)
 
 ## PQA Labs
