@@ -80,7 +80,13 @@ export async function rpcCall(method: string, params: any[]): Promise<any> {
     body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }),
   });
   const j = await res.json();
-  if (j.error) throw new Error(j.error.message);
+  if (j.error) {
+    // Keep `data`: for a revert the RPC puts the error selector there and
+    // only says "execution reverted" in the message.
+    const err: any = new Error(j.error.message);
+    err.data = j.error.data;
+    throw err;
+  }
   return j.result;
 }
 
