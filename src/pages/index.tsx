@@ -3,7 +3,6 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
 import AddNetworkButton from '@site/src/components/QDay/AddNetworkButton';
-import ConnectWallet from '@site/src/components/QDay/ConnectWallet';
 import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
 import NetworkStats from '@site/src/components/QDay/NetworkStats';
 import QuickLinks from '@site/src/components/QDay/QuickLinks';
@@ -53,7 +52,6 @@ export default function Home(): ReactNode {
           </p>
           <div className={styles.heroActions}>
             <AddNetworkButton network="qday2" />
-            <ConnectWallet />
             <Link className={styles.ghostBtn} to="/guide/intro">
               <Translate id="home.browseDocs">Browse the docs →</Translate>
             </Link>

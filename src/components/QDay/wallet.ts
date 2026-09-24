@@ -14,12 +14,8 @@ export const QDAY = {
   rpc: 'https://rpc.qday.info',
 };
 
-// Shared WalletConnect v2 project (same one QDay Portal uses).
-export const WALLETCONNECT_PROJECT_ID = '997747885b3c0af7c6faa74f4e2fc5d1';
-
-// Active EIP-1193 provider for this session: an injected wallet (window.ethereum)
-// OR a WalletConnect provider (Abelian (Mobile)). Widgets read/send through
-// getProvider() so both paths work transparently.
+// Active EIP-1193 provider for this session: the injected wallet
+// (window.ethereum). Widgets read/send through getProvider().
 let active: any = null;
 
 export function getProvider(): any {
@@ -38,52 +34,6 @@ export async function connectInjected(): Promise<string | null> {
 // Back-compat alias.
 export const connect = connectInjected;
 
-// "Abelian (Mobile)" button: mobile wallet that connects over WalletConnect v2.
-// Desktop shows the WalletConnect QR; mobile opens the app through its
-// `abelian://` deep link — the same pairing the QDay Portal uses.
-//
-// Chains are sent as OPTIONAL only (`chains: []`). A required eip155 namespace
-// makes the wallet reject the proposal outright when it does not already know
-// that chain, which is why scanning the QR used to do nothing.
-export const ABELIAN_WALLET_NAME = 'Abelian (Mobile)';
-
-function isMobile(): boolean {
-  if (typeof navigator === 'undefined') return false;
-  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-}
-
-export async function connectAbelian(): Promise<string | null> {
-  const { EthereumProvider } = await import('@walletconnect/ethereum-provider');
-  const mobile = isMobile();
-  const provider = await EthereumProvider.init({
-    projectId: WALLETCONNECT_PROJECT_ID,
-    chains: [],
-    optionalChains: [QDAY2.chainIdNum, QDAY.chainIdNum],
-    // On mobile we hand the URI to the app ourselves; the modal only helps on desktop.
-    showQrModal: !mobile,
-    rpcMap: {
-      [QDAY2.chainIdNum]: QDAY2.rpc,
-      [QDAY.chainIdNum]: QDAY.rpc,
-    },
-    metadata: {
-      name: 'QDay Community',
-      description: 'QDay Community Wiki',
-      url: 'https://community.qday.io',
-      icons: ['https://community.qday.io/logo.svg'],
-    },
-  });
-
-  if (mobile) {
-    provider.on('display_uri', (uri: string) => {
-      window.location.href = `abelian://wc?uri=${encodeURIComponent(uri)}`;
-    });
-  }
-
-  await provider.connect();
-  active = provider;
-  return provider.accounts?.[0] ?? null;
-}
-
 const QDAY2_PARAMS = {
   chainId: QDAY2.chainIdHex,
   chainName: 'QDay Aevum',
@@ -93,9 +43,8 @@ const QDAY2_PARAMS = {
 };
 
 // Switches the connected wallet to QDay Aevum, adding the network when it is
-// unknown. Returns false instead of throwing when the wallet refuses: over
-// WalletConnect the session may simply not carry the chain, and that must not
-// look like a failed connection.
+// unknown. Returns false instead of throwing when the wallet refuses, so a
+// wallet that cannot add the network does not look like a failed connection.
 // EIP-3326: the wallet answers 4902 when it does not know the chain at all.
 export const CHAIN_NOT_ADDED = 4902;
 
@@ -106,14 +55,14 @@ export async function ensureQday2(): Promise<boolean> {
     const current = await eth.request({ method: 'eth_chainId' });
     if (current === QDAY2.chainIdHex) return true;
   } catch {
-    // Some WalletConnect sessions answer eth_chainId only after a switch.
+    // Some wallets answer eth_chainId only after a switch.
   }
   try {
     await eth.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: QDAY2.chainIdHex }] });
     return true;
   } catch (err: any) {
-    // Wallets that support adding networks offer it after a 4902; mobile
-    // wallets with a fixed chain list (Abelian (Mobile) today) reject both.
+    // Wallets that support adding networks offer it after a 4902; wallets
+    // with a fixed chain list reject both.
     try {
       await eth.request({ method: 'wallet_addEthereumChain', params: [QDAY2_PARAMS] });
       return true;
