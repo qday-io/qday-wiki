@@ -53,7 +53,8 @@ export async function ensureQday2(): Promise<boolean> {
   if (!eth) return false;
   try {
     const current = await eth.request({ method: 'eth_chainId' });
-    if (current === QDAY2.chainIdHex) return true;
+    // Wallets answer lower-case hex ("0xabe5"); the constant is upper-case.
+    if (typeof current === 'string' && current.toLowerCase() === QDAY2.chainIdHex.toLowerCase()) return true;
   } catch {
     // Some wallets answer eth_chainId only after a switch.
   }
