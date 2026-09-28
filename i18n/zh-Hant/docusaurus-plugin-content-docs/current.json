@@ -58,5 +58,13 @@
   "sidebar.guideSidebar.category.Handbook.link.generated-index.description": {
     "message": "QDay 上的日常操作：錢包、質押、兌換與跨鏈橋。",
     "description": "The generated-index page description for category Handbook in sidebar guideSidebar"
+  },
+  "sidebar.guideSidebar.category.QDay Chain": {
+    "message": "QDay 鏈",
+    "description": "The label for category 'QDay Chain' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.QPass": {
+    "message": "QPass",
+    "description": "The label for category 'QPass' in sidebar 'guideSidebar'"
   }
 }
