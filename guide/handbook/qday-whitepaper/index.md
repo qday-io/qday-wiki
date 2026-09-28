@@ -27,10 +27,10 @@ This paper establishes the comprehensive technical, economic, cryptographic, and
 
 | Version | Date | Changes Made | Author |
 |---|---|---|---|
-| 1.0 | 29/07/2024 | Document Creation | Duncan W.<br>Danny L. |
+| 1.0 | 29/07/2024 | Document Creation | Duncan W.<br />Danny L. |
 | 1.1 | 14/01/2025 | Revisions to functions and roadmap | Danny L. |
 | 1.2 | 24/09/2025 | Minor revisions | Vike S. |
-| 2.0 | 05/02/2026 | Revisions to functions and roadmap | Danny L.<br>Pascal L. |
+| 2.0 | 05/02/2026 | Revisions to functions and roadmap | Danny L.<br />Pascal L. |
 | 2.1 | 25/06/2026 | Minor revisions | Pascal L. |
 | 2.2 | 24/09/2026 | Enhanced project focus | Danny L. |
 
@@ -200,8 +200,8 @@ The ultimate goal of QDay is to provide quantum-resistant security at the same l
 | L1 Settlement Anchor | Ring-LWE / LWE | LIVE | Post-quantum secure on Abelian L1. Guarantees state immutability. |
 | L2 Execution & Sequencer | ECDSA / POS | LIVE on Testnet | Fast execution finality. State transitions proven via ZK validity proofs. |
 | Agent Wallet / Session Keys | ECDSA / Passkey | LIVE on Testnet | ERC-4337 smart contract policy engine with spending caps and time locks. |
-| Hybrid PQ Agent Keys | ECDSA + ML-DSA-65 | PLANNED<br>Q4 2026 | Dual-signing mode combining classical ECDSA with NIST ML-DSA-65. |
-| Native PQ Accounts | Lattice / Dilithium | PLANNED<br>Q2 2027 | Fully native post-quantum accounts and EVM smart contract execution. |
+| Hybrid PQ Agent Keys | ECDSA + ML-DSA-65 | PLANNED<br />Q4 2026 | Dual-signing mode combining classical ECDSA with NIST ML-DSA-65. |
+| Native PQ Accounts | Lattice / Dilithium | PLANNED<br />Q2 2027 | Fully native post-quantum accounts and EVM smart contract execution. |
 
 However, the implementation of Phase 2 will be challenging. It requires a complete redesign of the EVM implementation in QDay validator nodes to support the quantum-resistant keys and algorithms while maintaining the back-compatibility with the existing (non-quantum-resistant) keys and smart contracts. To address this challenge, QDay will introduce dual transaction modes: legacy transaction and quantum-resistant transaction.
 
@@ -732,13 +732,13 @@ Through its combination of quantum resistance, scalability, and practical usabil
 <a id="sec-10"></a>
 ## 10. References
 
-1. QDay Official Website: <https://www.qday.io/>
-2. QDay Documentation: <https://community.qday.io/guide/>
-3. Fabian Vogelsteller, Vitalik Buterin, November 2015. ERC-20: Token Standard. <https://eips.ethereum.org/EIPS/eip-20>
-4. Polygon zkRollup. <https://docs.polygon.technology/cdk/concepts/zk-vs-optimistic/?h=polygon+zk+rollups#zero-knowledge-rollups>
+1. QDay Official Website: https://www.qday.io/
+2. QDay Documentation: https://community.qday.io/guide/
+3. Fabian Vogelsteller, Vitalik Buterin, November 2015. ERC-20: Token Standard. https://eips.ethereum.org/EIPS/eip-20
+4. Polygon zkRollup. https://docs.polygon.technology/cdk/concepts/zk-vs-optimistic/?h=polygon+zk+rollups#zero-knowledge-rollups
 
 ### Technical Papers
 
-1. Abelian, May 2023, Post-Quantum Zero-Knowledge (PQZK) Bridge. <https://download.pqabelian.io/release/docs/Abelian%20PQZK%20Bridge.pdf>
-2. Abelian, February 2022, Abelian Whitepaper. <https://community.pqabelian.io/guide/abelwhitepaper.html>
-3. Abelian, February 2022 Abelian Improvement Proposal 0011: Mnemonic Codes for Generating Deterministic Accounts. <https://github.com/pqabelian/aips/blob/master/aips/aip0011/aip0011_v005.md>
+1. Abelian, May 2023, Post-Quantum Zero-Knowledge (PQZK) Bridge. https://download.pqabelian.io/release/docs/Abelian%20PQZK%20Bridge.pdf
+2. Abelian, February 2022, Abelian Whitepaper. https://community.pqabelian.io/guide/abelwhitepaper.html
+3. Abelian, February 2022 Abelian Improvement Proposal 0011: Mnemonic Codes for Generating Deterministic Accounts. https://github.com/pqabelian/aips/blob/master/aips/aip0011/aip0011_v005.md
