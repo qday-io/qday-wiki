@@ -41,7 +41,7 @@ Full parameters for all networks (Origin mainnet `44001`, Origin testnet `44003`
 
 ### 1.1 What is QDay?
 
-QDay is a post-quantum, EVM-compatible Layer 2 network built for tomorrow. Designed for agents, payments and decentralized applications, QDay delivers sub-second settlement at scale. With a native stablecoin and the x402 standard integrated, QDay is the foundational blockchain for the agent-led economy.
+QDay is a post-quantum, EVM-compatible network built for tomorrow. Designed for agents, payments and decentralized applications, QDay delivers sub-second settlement at scale. With a native stablecoin and the x402 standard integrated, QDay is the foundational blockchain for the agent-led economy.
 
 QDay is currently live on testnet (**QDay Aevum**), with the upgraded mainnet scheduled for Q1 2027.
 
