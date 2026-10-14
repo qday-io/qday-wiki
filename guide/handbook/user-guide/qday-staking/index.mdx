@@ -4,129 +4,92 @@ sidebar_position: 54
 
 import NextSteps from "@site/src/components/QDay/NextSteps";
 
-# QDAY Staking User Guide
+# QDAY Staking Termination & Unstake Guide
+
+:::danger[QDAY Staking ends on October 15, 2026]
+QDAY Staking will end at **12:00 PM, October 15, 2026 (Hong Kong Time, UTC+8)**. This applies to both **WABEL Staking** and **QDAY Staking** positions.
+
+- New stakes, adding to existing stakes, and extending lock-up periods are no longer available.
+- All staking positions will show an **"Unstake"** button, regardless of their original lock-up period.
+- **Unstake and claim period:** from **12:00 PM, October 15, 2026** to **12:00 PM, December 31, 2026** (Hong Kong Time, UTC+8). During this period, you can unstake your tokens and claim your pending rewards.
+- If you still have staked tokens or unclaimed pending rewards after **12:00 PM, December 31, 2026 (Hong Kong Time, UTC+8)**, please contact us via the [official QDay Telegram group](TELEGRAM_LINK).
+
+Please follow the steps below to unstake your tokens and claim your pending rewards within the unstake and claim period.
+:::
 
 ## Prerequisites
 
-Before staking, please ensure you have the following:
-
-- An EVM-compatible wallet, such as MetaMask, with QDay Aevum added
-- Sufficient QDAY or WQDAY in your wallet
+- The EVM-compatible wallet (e.g. MetaMask) you used for staking, with the QDay network added
 - A small amount of QDAY to pay network transaction fees
-- Access to the correct official QDAY staking portal
-- An understanding of the selected lock-up period and its restrictions
+- Access to the official QDay Portal: https://portal.qday.io/
 
-:::warning[Important risk notice]
-- Staking involves interacting with smart contracts
-- Blockchain transactions are generally irreversible once confirmed
-- Locked tokens cannot be unstaked until the lock-up period expires
-- Reward rates and distributions may change over time according to the protocol design
-- Always verify the website URL and wallet prompt details before approving transactions
+:::warning[Security reminder]
+Blockchain transactions are irreversible once confirmed. Always verify the website URL and the details in your wallet prompt before approving any transaction.
 :::
 
-### How do I get QDAY?
+## How to Unstake
 
-- **Method 1: Stake ABEL to earn QDAY**
-  1. First, you need to purchase ABEL. You can buy it through MEXC, BitMart exchanges, or via the In-app purchase feature in the Abelian Mobile Wallet.
-  2. Stake your ABEL to receive QDAY rewards. For detailed steps, please refer to the [ABEL Staking User Guide](/guide/handbook/user-guide/abel-staking).
+### Step 1: Open My Staking
 
-- **Method 2: Swap USD8 for QDAY**
-  1. Via **[QDay Bridge](https://portal.qday.io/en/bridge)**: Use USDT (ETH) to buy USD8, or use the In-app purchase feature in the Abelian Mobile Wallet to buy USD8.
-  2. Via **[QDay Swap](https://portal.qday.io/en/qday-swap)** or the In-app swap feature in the Abelian Mobile Wallet: Swap USD8 for QDAY. For detailed steps, refer to the [QDay Swap User Guide](/guide/handbook/user-guide/swap).
+1. Go to the QDay Portal (https://portal.qday.io/) and connect the wallet you used for staking.
+2. Click **"Staking"** in the left navigation menu.
+3. Switch to the **"My Staking"** tab.
 
-### Staking Mechanism
+You will see your **WABEL Staking** and **QDAY Staking** positions, each showing the staked amount and an **"Unstake"** button.
 
-- When staking, the system automatically converts QDAY to WQDAY (wrapped token)
-- Longer lock-up periods result in higher share allocations
-- Rewards accumulate daily and can be claimed and withdrawn to your wallet anytime
+![Unstake from My Staking](/qday/staking/QDay Staking Termination 2.png)
 
-## Tutorial
+### Step 2: Unstake your tokens
 
-Follow these steps to start staking:
+For each staking position (WABEL Staking and/or QDAY Staking):
 
-### Step 1: Wallet setup
+1. Click the **"Unstake"** button under the position.
+2. In the **Unstake Amount** field, enter the amount you want to unstake, or click **"MAX"** to unstake the full amount.
+3. Click **"Unstake"** to submit. (Click **"Cancel"** if you want to go back.)
+4. Confirm the transaction in your wallet.
 
-Log into MetaMask and add QDay Aevum as a custom network. For detailed instructions, please refer to [MetaMask Wallet User Guide - Add QDay Network](/guide/handbook/user-guide/metamask#add-qday-network-to-metamask).
+If you have both WABEL Staking and QDAY Staking positions, repeat these steps for each position.
 
-### Step 2: Access the Staking Page
+### Step 3: Check your wallet
 
-- Go to https://portal.qday.io/
-- Click **"Staking"** in the left navigation menu to enter the Staking page.
+Once the transaction is confirmed, the unstaked tokens are returned to your wallet:
 
-  ![Staking portal homepage](/qday/staking/portal-2.png)
+- WABEL Staking → **Wrapped Abel (WABEL)**
+- QDAY Staking → **Wrapped QDay (WQDAY)**
 
-- Click **"Connect Wallet"** and select your preferred wallet (supports MetaMask, WalletConnect, Rainbow) to link your wallet.
+If the tokens do not appear in MetaMask, make sure your wallet is connected to the QDay network and that the WABEL / WQDAY tokens have been imported.
 
-  ![Connect wallet options](/qday/staking/qday-connect-wallet-dialog.png)
-
-### Step 3: Stake
-
-#### Staking
-
-- Ensure **WQDAY** is selected from the "Select Token" dropdown.
-
-  ![WQDAY staking interface](/qday/staking/wqday-staking.png)
-
-- Enter the amount of WQDAY/QDAY to stake, choose your lock-up period, then click **"Stake"** and confirm the transaction in your wallet.
-
-:::warning[Note]
-1. The maximum lock-up period is 1460 days (4 years).
-2. When staking **QDAY**, your QDAY will be automatically converted to WQDAY (the wrapped token) if you have a sufficient balance.
+:::tip
+To convert WABEL or WQDAY back, use **"(W)ABEL Conversion"** or **"(W)QDAY Conversion"** in the left navigation menu of the QDay Portal.
 :::
 
-#### My Staking
+## How to Claim Pending Rewards
 
-After staking, you can view your details in the "My Staking" tab:
+Pending rewards accumulated before QDAY Staking ended can still be claimed during the unstake and claim period.
 
-- **Daily rewards accumulate automatically** → **Claim** your pending rewards → **Withdraw** from your vault balance to your EVM wallet.
-- Each record shows the staking amount, lock period, and remaining days, providing the following actions:
-  - **Extend Lock Period**: Extend the lock-up duration of an existing stake to continue accumulating rewards.
-  - **Add Stake**: Add more tokens to an existing staking position to increase daily rewards.
-  - **Unstake**: Withdraw your staked tokens once the lock-up period has expired. Not available during the lock period.
+1. In the **"My Staking"** tab, go to the **Pending Rewards** section at the top.
+2. Enter the amount you want to claim, or click **"MAX"**.
+3. Click **"Claim Rewards"** and confirm the transaction in your wallet.
 
-  ![My Staking details](/qday/staking/qday-stake-details.png)
+### Adjust the Daily Withdrawal Limit
 
-#### Dashboard
+The amount of pending rewards you can claim each day is capped by the **Daily Withdrawal Limit** (default: **50,000 QDAY** per day). The remaining amount you can claim today is displayed below the input field in the **Pending Rewards** section.
 
-Click the **"Dashboard"** tab in the left navigation menu to get a comprehensive view of all your staked assets.
+To change the Daily Withdrawal Limit:
 
-  ![Dashboard Details](/qday/staking/dashboard.png)
+1. Click **"Settings"** in the left navigation menu of the QDay Portal.
+2. Find **Daily Withdrawal Limit** in the **STAKING** section. Your current limit is shown on the right.
+3. Enter a new limit as a **whole number** (in QDAY) and click **"Save"**.
 
-## About WQDAY Staking Rewards
+![Daily Withdrawal Limit setting](/qday/staking/qday-staking-daily-limit-setting.png)
 
-### Reward Pool
-- 50% of the total QDAY supply, approximately 11.259 billion tokens, is allocated for staking rewards.
-
-### Daily Distribution
-- Each day, 1/1000 of the remaining reward pool is distributed to stakers.
-- Because the distribution is calculated from the remaining pool, the daily payout decreases gradually over time.
-
-### Reward Share Calculation
-Your daily reward is based on your Share, calculated as:
-**Share = Amount Staked × Remaining Lock-up Days**
-
-**Example:**
-- If you stake 100 QDAY with a 1460-day lock-up, your share is:
-  100 × 1460 = 146,000
-- If another user stakes 200 QDAY with a 730-day lock-up, their share is:
-  200 × 730 = 146,000
-
-In this simplified example, both staking positions have the same share, so they would receive the same proportion of the daily distribution, assuming all other conditions are the same.
-
-:::warning[Important]
-- This is a simplified explanation for reference.
-- Rewards are not fixed or guaranteed.
-- Actual rewards depend on factors such as:
-  - the amount remaining in the reward pool
-  - the total shares of all participating stakers
-  - changes in staking positions over time
+:::tip
+Clicking **"Reset"** under **Reset All Settings** restores all settings, including the Daily Withdrawal Limit, to their default values.
 :::
-
 
 ## What's next
 
 <NextSteps steps={[
-  { title: "ABEL Staking", desc: "Stake ABEL for yield", to: "/guide/handbook/user-guide/abel-staking" },
   { title: "Swap tokens", desc: "Get WABEL / USD8", to: "/guide/handbook/user-guide/swap" },
   { title: "Migrate to QDay", to: "/Knowledge/migration/overview" },
 ]} />
