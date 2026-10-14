@@ -31,7 +31,7 @@ Full parameters for all networks (Origin mainnet `44001`, Origin testnet `44003`
 3. [I'm using Aevum](#3-im-using-aevum)
 4. [I'm a developer](#4-im-a-developer)
 5. [Payments & AI agents](#5-payments--ai-agents)
-6. [$QDAY token & staking](#6-qday-token--staking)
+6. [$QDAY token & staking termination](#6-qday-token--staking-termination)
 7. [Security](#7-security)
 8. [Glossary](#8-glossary)
 
@@ -75,7 +75,7 @@ Many blockchains rely on public-key cryptography such as ECDSA. A sufficiently p
 
 ### 1.9 What is $QDAY?
 
-$QDAY is QDay's native token. It is the gas and governance token of the QDay ecosystem, including network transactions and staking-related functions. See [Section 6](#6-qday-token--staking).
+$QDAY is QDay's native token. It is the gas and governance token of the QDay ecosystem. See [Section 6](#6-qday-token--staking-termination).
 
 ### 1.10 What is USD8?
 
@@ -124,9 +124,9 @@ No. Aevum is the testnet for the upgraded QDay architecture. The existing QDay (
 
 Yes. After the upgraded QDay mainnet launches, there will be a 6–12 month migration period for existing users to move their assets from the old QDay to the new one.
 
-### 2.5 How do I migrate assets and staking?
+### 2.5 How do I migrate my assets?
 
-Staking-migration and asset-migration bridge tools are being deployed. A step-by-step migration guide will be published once the migration bridges are active. Until then:
+Staked QDAY does not need to be migrated: the staking program is ending, and you simply unstake and claim your tokens — see [Section 6](#6-qday-token--staking-termination). For other assets, a step-by-step migration guide will be published once the migration bridge is active. Until then:
 
 - Adding Aevum to your wallet does **not** move your balances — tokens stay on the chain where they were issued.
 - Only use migration contract addresses published on [Official contract addresses](/Knowledge/reference/contracts) and the official [QDay Portal](https://portal.qday.io). Ignore DMs, airdrop sites and unofficial "migration" pages.
@@ -141,7 +141,7 @@ Yes. The upgraded QDay will have its own token, also named **$QDAY**. Existing Q
 
 ### 2.8 What happens to my staking?
 
-Existing QDay staking positions will be unstaked from the old QDay chain and returned as $QDAYp. You can then swap $QDAYp for $QDAY 1:1 on the upgraded QDay chain.
+The QDay staking program is ending. Rewards stop on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. The tokens you get back are $QDAYp, which you can swap 1:1 for $QDAY after mainnet launch. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
 
 ### 2.9 What happens to WQDAY or WABEL?
 
@@ -155,7 +155,7 @@ However, Aevum is a separate network with a new chain ID, RPC and explorer — c
 
 ### 2.11 Are old dApps still valid?
 
-Old dApps continue to work on QDay Origin. On the new testnet, the core dApps — QDay Portal, Staking, QDay Swap, QDay Bridge and the ABEL/WABEL Bridge — are being redeployed and integrated on the new Aevum cluster. Third-party dApps need to add the Aevum network and redeploy their contracts; they do not automatically follow the upgrade.
+Old dApps continue to work on QDay Origin. On the new testnet, the core dApps — QDay Portal, QDay Swap, QDay Bridge and the ABEL/WABEL Bridge — are being redeployed and integrated on the new Aevum cluster. Third-party dApps need to add the Aevum network and redeploy their contracts; they do not automatically follow the upgrade.
 
 ---
 
@@ -297,7 +297,7 @@ A protocol layer plus autonomous micropayment channels — i.e., a dedicated, in
 
 ---
 
-## 6. $QDAY token & staking
+## 6. $QDAY token & staking termination
 
 ### 6.1 What is the total supply and allocation of $QDAY?
 
@@ -313,24 +313,50 @@ Total supply is **22,517,998,100 QDAY**, created at the Token Generation Event.
 
 Details: [Tokenomics](/guide/handbook/tokenomics).
 
-### 6.2 How can I obtain QDAY or WQDAY for staking?
+### 6.2 Why is QDay ending the staking program?
 
-1. Stake ABEL to earn QDAY rewards ([ABEL Staking guide](/guide/handbook/user-guide/abel-staking)), or
-2. Acquire USD8 via QDay Bridge / the Abelian mobile app and swap USD8 for QDAY on QDay Swap ([Swap guide](/guide/handbook/user-guide/swap)).
+Staking was designed for QDay's early stage, when the priority was building a committed community — and it did that job. Thank you to everyone who staked.
 
-### 6.3 What is the minimum staking amount for WABEL?
+But every staking reward adds new tokens to circulation, which gradually dilutes every holder, including stakers themselves. Ahead of the Q1 2027 mainnet, we want QDay's token economy to be driven by real network activity — payments, applications and AI agents — rather than passive yield.
 
-1,000 WABEL.
+We chose a clean stop instead of a lower APY, because a smaller reward would still pay tokens to sit idle. This is a network-design decision, not a budget one: PQA Labs continues to invest in the upgraded network, developer tools and the mainnet launch.
 
-### 6.4 How are QDAY staking rewards calculated and distributed?
+### 6.3 Does this mean something is wrong with QDay?
 
-35% of the total supply (7,881,299,335 QDAY) is allocated to Staking Rewards, as specified in [Tokenomics](/guide/handbook/tokenomics). Distribution works as follows:
+No. This is a planned step in QDay's upgrade. There has been no security incident and no protocol failure. The upgraded QDay is live on the Aevum testnet, connected to Polygon's AggLayer, with mainnet scheduled for Q1 2027.
 
-- Each day, **1/1000 of the remaining reward pool** is distributed to stakers, so daily payouts decrease gradually over time.
-- Your portion is based on your **Share = Amount staked × Remaining lock-up days**. Longer lock-ups (up to 1,460 days) earn a larger share.
-- Rewards accumulate daily and can be claimed and withdrawn at any time; staked principal can only be unstaked after the lock-up expires.
+### 6.4 What happens to my staked QDAY and rewards?
 
-Rewards are not fixed or guaranteed. See the [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
+Your staked tokens remain yours, and all rewards earned up to the cutoff are honored in full under the existing staking rules.
+
+| Time (Hong Kong time, HKT) | What happens |
+|---|---|
+| **15 Oct 2026, 12:00** | Rewards stop accruing. Unstaking and claiming open. |
+| 15 Oct – 31 Dec 2026 | Unstake and claim at any time. |
+| **31 Dec 2026, 12:00** | Staking closes. |
+| After 31 Dec 2026 | Unclaimed assets can still be recovered — contact the team in the [official QDay Telegram group](https://web.telegram.org/k/#@qday_official_group). |
+
+**How to withdraw:** on the QDay Staking page (mainnet), click **Unstake**, then **Claim**. That's it. Step-by-step guide: [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
+
+The tokens you receive are $QDAYp, which can be swapped 1:1 for the new $QDAY after mainnet launch (see [2.7](#27-is-there-a-new-token)).
+
+:::danger[Stay safe]
+Only rely on official QDay channels (website, X and Telegram). The QDay team will never DM you first, ask for your seed phrase or private keys, or ask you to send tokens anywhere to "migrate" or "unlock" them.
+:::
+
+### 6.5 Will this raise the price? Will $QDAY become deflationary?
+
+We don't make promises about price — and please be cautious of anyone who does. Prices are set by the market.
+
+It is also not deflation: tokens already in circulation stay in circulation. What changes is that the largest source of new tokens is switched off, making supply more predictable for holders, builders and partners.
+
+### 6.6 Without staking rewards, why keep holding?
+
+$QDAY will be the native gas and governance token of the upgraded QDay — a post-quantum network built for stablecoin payments, smart wallets and AI agents. Holding $QDAYp now means holding a stake in that network as it heads to mainnet.
+
+### 6.7 Will staking or other rewards come back?
+
+Not in the old passive form. Any future incentive program will reward real contributions to the network, such as building applications, integrating payments, deploying agents and helping the community grow. Details will be announced through official channels when ready.
 
 ---
 
