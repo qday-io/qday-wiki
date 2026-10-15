@@ -47,10 +47,6 @@
     "message": "QDay",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Discord": {
-    "message": "Discord",
-    "description": "Navbar item with label Discord"
-  },
   "item.label.User Guide": {
     "message": "使用指南",
     "description": "Navbar item with label User Guide"
