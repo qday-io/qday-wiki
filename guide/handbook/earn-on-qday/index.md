@@ -13,7 +13,7 @@ QDay airdrops reward **active QDay and Abelian community members**. Eligibility 
 
 **How to claim**
 
-1. Watch announcements on official channels: [Telegram(https://web.telegram.org/k/#@qday_official_group)), [X (@QDayOfficial)](https://x.com/QDayOfficial), and the [QDay Portal](https://portal.qday.io).
+1. Watch announcements on official channels: [Telegram](https://web.telegram.org/k/#@qday_official_group), [X (@QDayOfficial)](https://x.com/QDayOfficial), and the [QDay Portal](https://portal.qday.io).
 2. When a campaign opens, go to the **official airdrop portal** linked from those channels (reached from [portal.qday.io](https://portal.qday.io) — never from a random DM or a lookalike URL).
 3. Connect the same wallet you used on QDay / Abelian (see [MetaMask](/guide/handbook/user-guide/metamask) or [Abelian Mobile Wallet](/guide/handbook/user-guide/abelian-mobile-wallet)).
 4. Check eligibility, review the terms, and claim. Confirm the transaction in your wallet. Gas is paid in QDAY.
@@ -74,7 +74,7 @@ Typical contributions:
 
 **How to participate**
 
-1. Do the work in public (GitHub, Discord, X) so it can be verified.
+1. Do the work in public (GitHub, Telegram, X) so it can be verified.
 2. Follow [Community](/guide/handbook/community) channels for grant / bounty windows.
 3. Apply or submit a proposal when a round is open, with a short description, links to the work, and what support you are asking for.
 4. If approved, the Foundation (or DAO, as governance rolls out) distributes the reward per that program’s terms.
@@ -87,7 +87,7 @@ Grow QDay by bringing **new users** into the network. When a campaign is live, y
 
 **How to participate**
 
-1. Wait for an official referral campaign (Portal, Discord, or X). Unofficial “referral bots” are not QDay programs.
+1. Wait for an official referral campaign (Portal, Telegram, or X). Unofficial “referral bots” are not QDay programs.
 2. Open the campaign page on the [QDay Portal](https://portal.qday.io) and connect your wallet to generate **your** referral link.
 3. Share that link with people who are new to QDay. They should complete whatever the campaign requires (wallet connect, testnet tx, and so on).
 4. Track invites and claims on the same official page. Rewards are paid according to that campaign’s rules.
@@ -105,12 +105,12 @@ QDay Ambassadors are community members who **represent and promote QDay** over a
 - Host or moderate a regional / language community
 - Publish regular, accurate explainers (threads, videos, workshops)
 - Help newcomers get onto the network without handling anyone’s keys
-- Relay feedback to the core team through official Discord
+- Relay feedback to the core team through official channels
 
 **How to apply**
 
 1. Be active and constructive on official [Community](/guide/handbook/community) channels first.
-2. When applications open, use the form or Discord process announced by QDay — not a stranger in DMs.
+2. When applications open, use the form or process announced by QDay — not a stranger in DMs.
 3. Describe your audience, language, past contributions, and how you will promote QDay.
 4. If accepted, follow the ambassador brief (brand, claims you may make, and how rewards are paid).
 

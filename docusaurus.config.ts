@@ -175,20 +175,13 @@ const config: Config = {
             { label: 'Faucet', href: 'https://fi.qday.info/en/dapps/faucet' },
           ],
         },
-        // Community icon buttons (GitHub / Discord / X / LinkedIn), styled in custom.css.
+        // Community icon buttons (GitHub / X / LinkedIn), styled in custom.css.
         {
           href: 'https://github.com/qday-io',
           position: 'right',
           className: 'header-icon-link header-github-link',
           'aria-label': 'GitHub',
           title: 'GitHub',
-        },
-        {
-          href: 'https://discord.gg/Rrb33mC3Kc',
-          position: 'right',
-          className: 'header-icon-link header-discord-link',
-          'aria-label': 'Discord',
-          title: 'Discord',
         },
         {
           href: 'https://x.com/QDayOfficial',
@@ -222,7 +215,6 @@ const config: Config = {
         { title: 'Community', items: [
           { label: 'X', href: 'https://x.com/QDayOfficial' },
           { label: 'LinkedIn', href: 'https://www.linkedin.com/company/qday-network/' },
-          { label: 'Discord', href: 'https://discord.gg/Rrb33mC3Kc' },
           { label: 'GitHub', href: 'https://github.com/qday-io' },
         ]},
       ],

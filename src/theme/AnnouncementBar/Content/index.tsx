@@ -8,12 +8,6 @@ import styles from './styles.module.css';
 // Docusaurus never runs through i18n, so the zh-Hant site showed nothing.
 // The links are passed as values, keeping one translatable sentence per locale.
 
-const discord = (
-  <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/Rrb33mC3Kc">
-    Discord
-  </a>
-);
-
 const github = (
   <a target="_blank" rel="noopener noreferrer" href="https://github.com/qday-io/qday-wiki/issues">
     GitHub
@@ -28,9 +22,9 @@ export default function AnnouncementBarContent(
       <Translate
         id="theme.announcementBar.revisionNotice"
         description="Announcement bar telling readers the docs are being revised and where to report issues"
-        values={{ discord, github }}
+        values={{ github }}
       >
-        {'Documentation revision underway: please report issues on {discord} or via {github}.'}
+        {'Documentation revision underway: please report issues via {github}.'}
       </Translate>
     </div>
   );
