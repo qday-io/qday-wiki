@@ -32,7 +32,7 @@ QDay 的區塊瀏覽器可讓你查詢網絡上的任何交易、地址或合約
 | | URL |
 |---|---|
 | 測試網（QDay Aevum） | [explorer-test.qday.info](https://explorer-test.qday.info) |
-| 主網 | 即將推出 |
+| QDay 主網 | 開發中 |
 
 - **搜尋** — 將交易雜湊、錢包地址或合約地址貼入搜尋列。
 - **交易** — 檢視狀態、區塊確認、Gas 費用與代幣轉移。

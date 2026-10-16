@@ -16,14 +16,12 @@ slug: /intro
 </div>
 
 
-## 如何區分
+## 網絡
 
-| | QDAY V1（Origin） | QDAY V2（Aevum） |
+| | QDay Aevum 測試網 | QDay 主網 |
 |---|---|---|
-| 狀態 | 已上線 | 測試網已上線；主網即將推出 |
-| 主網鏈 ID | `44001` | `44002`（即將推出） |
-| 測試網鏈 ID | `44003` | `44005` |
-| 適用對象 | 現有用戶與指南 | 新功能 + 遷移目標 |
+| 狀態 | 已上線 | 開發中 |
+| 鏈 ID | `44005` | `44002` |
+| 用途 | 體驗 QDay Aevum、開發與測試 | 正式環境——網絡參數將於上線時公布 |
 
-**QDay Aevum 主網即將推出** 
-一切皆兼容於 EVM——MetaMask、Solidity、wagmi/viem 在兩者上都能運作。
+一切皆兼容於 EVM——MetaMask、Solidity、wagmi/viem 皆可使用。

@@ -172,7 +172,7 @@ const config: Config = {
             { label: 'Explorer', href: 'https://explorer.qday.info' },
             { label: 'Portal', href: 'https://portal.qday.info' },
             { label: 'Bridge', href: 'https://portal.qday.info/en/bridge' },
-            { label: 'Faucet', href: 'https://fi.qday.info/en/dapps/faucet' },
+            { label: 'Faucet', to: '/guide/start/faucet' },
           ],
         },
         // Community icon buttons (GitHub / X / LinkedIn), styled in custom.css.

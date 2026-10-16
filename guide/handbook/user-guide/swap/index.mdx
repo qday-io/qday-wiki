@@ -11,13 +11,22 @@ import AddTokenButton from '@site/src/components/QDay/AddTokenButton';
 QDay Swap is a decentralized exchange platform based on the QDay blockchain, allowing you to quickly swap various tokens and earn yields by providing liquidity.
 
 :::tip[Add the swap tokens to your wallet]
-<AddTokenButton symbol="USD8" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" decimals={6} />
-&nbsp;<AddTokenButton symbol="WABEL" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" decimals={18} />
-&nbsp;<AddTokenButton symbol="WQDAY" address="0x31ff878190Cf74E37d963F77599abB674d27A787" decimals={18} />
+QDay Swap runs on **QDay Origin mainnet (Chain ID 44001)**. Switch your wallet to that network before adding these tokens.
+
+<AddTokenButton symbol="USD8" address="0x668FaAFd6b363d6cED62491BfCBE2A39da3D14cB" decimals={18} />
+&nbsp;<AddTokenButton symbol="WABEL" address="0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882" decimals={18} />
+&nbsp;<AddTokenButton symbol="WQDAY" address="0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660" decimals={18} />
 :::
 
 :::tip[Prerequisites]
-Before using, please ensure you have installed and set up the [MetaMask Wallet](/guide/handbook/user-guide/metamask) and [Added the QDAY Network](/guide/handbook/user-guide/metamask#add-qday-network-to-metamask).
+Before using, please ensure you have installed and set up the [MetaMask Wallet](/guide/handbook/user-guide/metamask) and added QDay Origin mainnet to MetaMask (**Networks → Add a network manually**):
+
+| Network | QDay Origin mainnet |
+|---|---|
+| Chain ID | `44001` |
+| RPC URL | `https://rpc.qday.io` |
+| Block Explorer | `https://explorer.qday.io` |
+| Currency Symbol | QDAY |
 :::
 
 ## Token Swap

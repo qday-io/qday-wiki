@@ -19,7 +19,7 @@ Please follow the steps below to unstake your tokens and claim your pending rewa
 
 ## Prerequisites
 
-- The EVM-compatible wallet (e.g. MetaMask) you used for staking, with the QDay network added
+- The EVM-compatible wallet (e.g. MetaMask) you used for staking, connected to **QDay Origin mainnet (Chain ID 44001)** — the network your staking positions are on
 - A small amount of QDAY to pay network transaction fees
 - Access to the official QDay Portal: https://portal.qday.io/
 
@@ -36,8 +36,6 @@ Blockchain transactions are irreversible once confirmed. Always verify the websi
 3. Switch to the **"My Staking"** tab.
 
 You will see your **WABEL Staking** and **QDAY Staking** positions, each showing the staked amount and an **"Unstake"** button.
-
-![Unstake from My Staking](/qday/staking/QDay Staking Termination 2.png)
 
 ### Step 2: Unstake your tokens
 
@@ -59,10 +57,16 @@ Once the transaction is confirmed, the unstaked tokens are returned to your wall
 - WABEL Staking → **Wrapped Abel (WABEL)**
 - QDAY Staking → **Wrapped QDay (WQDAY)**
 
-If the tokens do not appear in MetaMask, make sure your wallet is connected to the QDay network and that the WABEL / WQDAY tokens have been imported.
+If the tokens do not appear in MetaMask, make sure your wallet is connected to QDay Origin mainnet and that the WQDAY token has been imported:
 
-:::tip
-To convert WABEL or WQDAY back, use **"(W)ABEL Conversion"** or **"(W)QDAY Conversion"** in the left navigation menu of the QDay Portal.
+| Token | Contract address (QDay Origin mainnet, Chain ID 44001) |
+|---|---|
+| WQDAY | `0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660` |
+
+:::tip[Convert WQDAY to QDAY]
+WQDAY converts to QDAY at a **1:1** ratio. Go to [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) (or click **"(W)QDAY Conversion"** in the left navigation menu of the QDay Portal) to convert your WQDAY to QDAY.
+
+To convert WABEL back to ABEL, use [WABEL Conversion](https://portal.qday.io/en/abel-conversion) (**"(W)ABEL Conversion"** in the left navigation menu).
 :::
 
 ## How to Claim Pending Rewards

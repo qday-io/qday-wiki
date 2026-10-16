@@ -9,18 +9,17 @@ sidebar_position: 4
 
 QDay works with MetaMask and any WalletConnect-compatible wallet. Add the network manually with:
 
-| | Testnet | Mainnet |
+| | QDay Aevum Testnet | QDay Mainnet |
 |---|---|---|
-| Network Name | QDay Aevum | Coming soon |
-| RPC URL | rpc-test.qday.info | Coming soon |
-| Chain ID | 44005 | Coming soon |
-| Currency Symbol | tQDAY | Coming soon |
-| Block Explorer | explorer-test.qday.info | Coming soon |
+| Network Name | QDay Aevum | In development |
+| RPC URL | https://rpc-test.qday.info | In development |
+| Chain ID | 44005 | In development |
+| Currency Symbol | tQDAY | In development |
+| Block Explorer | https://explorer-test.qday.info | In development |
 
 ## Faucet
 
-On testnet, connect your wallet to QDay's faucet to receive tokens for testing.
-https://faucet.qday.info/en
+On testnet, claim test QDAY from the [built-in faucet](/guide/start/faucet).
 
 
 ## Bridge
@@ -29,7 +28,7 @@ To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/u
 
 ## First Transaction
 
-This walkthrough sends **1 QDAY** with MetaMask on **QDay Aevum** (testnet) — the only network live today. [Add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
+This walkthrough sends **1 QDAY** with MetaMask on **QDay Aevum testnet** (QDay mainnet is in development). [Add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
 
 ### Prerequisites
 

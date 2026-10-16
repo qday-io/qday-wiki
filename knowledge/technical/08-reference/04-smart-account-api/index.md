@@ -29,4 +29,4 @@ ERC-4337 Smart Accounts on QDay Aevum. UserOperations go through the **EntryPoin
 | `paymasterAndData` | Paymaster address + extra data (empty if self-pay) |
 | `signature` | Account signature over the UserOp hash |
 
-Bundler example URL: `https://bundler.qday.io`. EntryPoint address: [Official contract addresses](/Knowledge/reference/contracts).
+Bundler example URL: `https://bundler.qday.io`. EntryPoint address: published at launch.

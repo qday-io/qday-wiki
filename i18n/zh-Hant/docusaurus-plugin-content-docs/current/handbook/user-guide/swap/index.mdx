@@ -12,13 +12,22 @@ import AddTokenButton from '@site/src/components/QDay/AddTokenButton';
 QDay Swap 是基於 QDay 區塊鏈的去中心化交易平台，讓你能快速兌換各種代幣，並透過提供流動性賺取收益。
 
 :::tip[將兌換代幣新增至你的錢包]
-<AddTokenButton symbol="USD8" address="0xc55C1e46B7468c2050cBd6ae372EFE276203fe6F" decimals={6} />
-&nbsp;<AddTokenButton symbol="WABEL" address="0x699f540c974430781c618fb8033a1e3ff75c43d2" decimals={18} />
-&nbsp;<AddTokenButton symbol="WQDAY" address="0x31ff878190Cf74E37d963F77599abB674d27A787" decimals={18} />
+QDay Swap 運行於 **QDay Origin 主網（鏈 ID 44001）**。新增以下代幣前，請先將錢包切換至該網絡。
+
+<AddTokenButton symbol="USD8" address="0x668FaAFd6b363d6cED62491BfCBE2A39da3D14cB" decimals={18} />
+&nbsp;<AddTokenButton symbol="WABEL" address="0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882" decimals={18} />
+&nbsp;<AddTokenButton symbol="WQDAY" address="0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660" decimals={18} />
 :::
 
 :::tip[前置條件]
-使用前，請確認你已安裝並設定好 [MetaMask 錢包](/guide/handbook/user-guide/metamask)，並已 [新增 QDAY 網絡](/guide/handbook/user-guide/metamask#將-qday-網絡新增至-metamask)。
+使用前，請確認你已安裝並設定好 [MetaMask 錢包](/guide/handbook/user-guide/metamask)，並已將 QDay Origin 主網新增至 MetaMask（**網絡 → 手動新增網絡**）：
+
+| 網絡 | QDay Origin 主網 |
+|---|---|
+| 鏈 ID | `44001` |
+| RPC URL | `https://rpc.qday.io` |
+| 區塊瀏覽器 | `https://explorer.qday.io` |
+| 貨幣符號 | QDAY |
 :::
 
 ## 代幣兌換

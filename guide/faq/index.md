@@ -129,7 +129,7 @@ Yes. After the upgraded QDay mainnet launches, there will be a 6–12 month migr
 Staked QDAY does not need to be migrated: the staking program is ending, and you simply unstake and claim your tokens — see [Section 6](#6-qday-token--staking-termination). For other assets, a step-by-step migration guide will be published once the migration bridge is active. Until then:
 
 - Adding Aevum to your wallet does **not** move your balances — tokens stay on the chain where they were issued.
-- Only use migration contract addresses published on [Official contract addresses](/Knowledge/reference/contracts) and the official [QDay Portal](https://portal.qday.io). Ignore DMs, airdrop sites and unofficial "migration" pages.
+- Only use migration contract addresses published on the official [QDay Portal](https://portal.qday.io). Ignore DMs, airdrop sites and unofficial "migration" pages.
 
 ### 2.6 Do I need a new wallet?
 
@@ -141,11 +141,14 @@ Yes. The upgraded QDay will have its own token, also named **$QDAY**. Existing Q
 
 ### 2.8 What happens to my staking?
 
-The QDay staking program is ending. Rewards stop on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. The tokens you get back are $QDAYp, which you can swap 1:1 for $QDAY after mainnet launch. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
+The QDay staking program is ending. Rewards stop on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. Unstaked tokens are returned as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY 1:1 at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion); QDAY ($QDAYp) can then be swapped 1:1 for the new $QDAY after mainnet launch. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
 
 ### 2.9 What happens to WQDAY or WABEL?
 
-All wrapped assets on the old QDay will be unwrapped, with the original assets returned to their rightful owners.
+You can convert them back on the QDay Portal at any time:
+
+- **WQDAY → QDAY (1:1):** [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion)
+- **WABEL → ABEL:** [WABEL Conversion](https://portal.qday.io/en/abel-conversion)
 
 ### 2.10 Are old contracts still valid?
 
@@ -167,7 +170,7 @@ QDay Aevum is EVM-compatible and supports MetaMask, WalletConnect, Rainbow and o
 
 ### 3.2 How do I add Aevum to MetaMask?
 
-**Option 1 — one click:** use the **Add QDay Aevum** button on [Add QDay to your wallet](/guide/start/add-network). MetaMask shows the exact parameters for you to approve.
+**Option 1 — one click:** use the **Add QDay Aevum Testnet to Wallet** button on [Add QDay to your wallet](/guide/start/add-network). MetaMask shows the exact parameters for you to approve.
 
 **Option 2 — manually:** MetaMask → Networks → *Add a network manually*, then enter the values from the [Quick reference](#quick-reference--qday-aevum-testnet) table above.
 
@@ -203,7 +206,7 @@ In addition to native QDAY (gas), the following ERC-20 tokens are deployed on QD
 |---|---|---|
 | WABEL | `0x4668107253E28C2b569E76Edb14B1E88c3b93de1` | 18 |
 | WQDAY | `0x915E807e7EC1665889172902781FB851202A54dF` | 18 |
-| USD8 | `0x533b4B34ACd1021B156881a7c72dfe0665D97dB4` | 6 |
+| tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` | 18 |
 
 To see a token in MetaMask, switch to QDay Aevum, choose *Import tokens*, and paste the contract address. Always verify addresses on the [Explorer](https://explorer-test.qday.info) — do not reuse QDay Origin (`44003`) token addresses on Aevum.
 
@@ -333,12 +336,12 @@ Your staked tokens remain yours, and all rewards earned up to the cutoff are hon
 |---|---|
 | **15 Oct 2026, 12:00** | Rewards stop accruing. Unstaking and claiming open. |
 | 15 Oct – 31 Dec 2026 | Unstake and claim at any time. |
-| **31 Dec 2026, 12:00** | Staking closes. |
+| **31 Dec 2026, 12:00** | Unstake and claim period ends. |
 | After 31 Dec 2026 | Unclaimed assets can still be recovered — contact the team in the [official QDay Telegram group](https://web.telegram.org/k/#@qday_official_group). |
 
 **How to withdraw:** on the QDay Staking page (mainnet), click **Unstake**, then **Claim**. That's it. Step-by-step guide: [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
 
-The tokens you receive are $QDAYp, which can be swapped 1:1 for the new $QDAY after mainnet launch (see [2.7](#27-is-there-a-new-token)).
+Unstaked tokens are returned to your wallet as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY at a 1:1 ratio at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion), and WABEL to ABEL at [WABEL Conversion](https://portal.qday.io/en/abel-conversion). QDAY ($QDAYp) can be swapped 1:1 for the new $QDAY after mainnet launch (see [2.7](#27-is-there-a-new-token)).
 
 :::danger[Stay safe]
 Only rely on official QDay channels (website, X and Telegram). The QDay team will never DM you first, ask for your seed phrase or private keys, or ask you to send tokens anywhere to "migrate" or "unlock" them.

@@ -31,7 +31,7 @@ QDay's block explorer lets you look up any transaction, address, or contract on 
 | | URL |
 |---|---|
 | Testnet (QDay Aevum) | [explorer-test.qday.info](https://explorer-test.qday.info) |
-| Mainnet | Coming soon |
+| QDay Mainnet | In development |
 
 - **Search** — paste a transaction hash, wallet address, or contract address into the search bar.
 - **Transactions** — view status, block confirmation, gas fee, and token transfers.

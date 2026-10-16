@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 
-// Interactive doc component: one-click "Add QDay Aevum to Wallet" via EIP-3085.
+// Interactive doc component: one-click "Add QDay Aevum Testnet to Wallet" via EIP-3085.
 // This is the kind of live element MDX/Docusaurus enables inside docs — a plain
 // Markdown site (MkDocs) can only show the params in a table.
 
-type Net = { chainIdHex: string; chainName: string; rpc: string; explorer: string };
+type Net = { chainIdHex: string; chainName: string; label: string; rpc: string; explorer: string };
 
 const NETWORKS: Record<string, Net> = {
   qday2: {
     chainIdHex: '0xABE5', // 44005
     chainName: 'QDay Aevum',
+    label: 'QDay Aevum Testnet',
     rpc: 'https://rpc-test.qday.info',
     explorer: 'https://explorer-test.qday.info',
   },
   qday: {
     chainIdHex: '0xABE1', // 44001 Origin mainnet
     chainName: 'QDay',
+    label: 'QDay',
     rpc: 'https://rpc.qday.io',
     explorer: 'https://explorer.qday.io',
   },
@@ -70,7 +72,7 @@ export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qda
           opacity: state === 'busy' ? 0.6 : 1,
         }}
       >
-        {state === 'busy' ? 'Check your wallet…' : `Add ${net.chainName} to Wallet`}
+        {state === 'busy' ? 'Check your wallet…' : `Add ${net.label} to Wallet`}
       </button>
       {msg && (
         <p style={{ marginTop: 8, fontSize: 14, color: state === 'err' ? 'var(--ifm-color-danger)' : 'var(--ifm-color-success)' }}>
