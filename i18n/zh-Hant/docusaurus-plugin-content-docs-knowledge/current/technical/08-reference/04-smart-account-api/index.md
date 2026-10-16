@@ -29,4 +29,4 @@ QDay Aevum 上的 ERC-4337 智慧帳戶（Smart Account）。UserOperation 會�
 | `paymasterAndData` | Paymaster 地址 + 額外資料（自付時為空） |
 | `signature` | 帳戶對 UserOp 雜湊的簽章 |
 
-Bundler 範例 URL：`https://bundler.qday.io`。EntryPoint 地址：[官方合約地址](/Knowledge/reference/contracts)。
+Bundler 範例 URL：`https://bundler.qday.io`。EntryPoint 地址：將於上線時公布。

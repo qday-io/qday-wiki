@@ -13,7 +13,7 @@ Use the **Technical** docs to stand up your own service on QDay: connect to the 
 
 - **[Developer Guide](/Knowledge/technical/developer-guide/getting-started)** — network, RPC, dApp walkthrough, wallets, Smart Accounts, agents, and payments
 - **[System architecture](/Knowledge/technical/system-architecture)** — how the rollup, RPC, and application layer fit together
-- **[Chain parameters](/Knowledge/reference/chains)** · **[Contracts](/Knowledge/reference/contracts)** — IDs, RPCs, and official addresses
+- **[Chain parameters](/Knowledge/reference/chains)** · **[Tokens](/Knowledge/reference/tokens)** — IDs, RPCs, and token addresses
 
 Start with [Add QDay to your wallet](/guide/start/add-network) and [deploy a first contract in Remix](/guide/handbook/getting-started#deploy-your-first-smart-contract) if you have not used the network yet.
 

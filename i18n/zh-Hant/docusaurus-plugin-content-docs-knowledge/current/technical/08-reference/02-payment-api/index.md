@@ -26,4 +26,4 @@ draft: false
 | `subscription.renewed` | 週期性扣款成功 |
 | `stream.stopped` | 串流結束（押金耗盡、已取消或已到期） |
 
-除非你指定其他 ERC-20，支付層的貨幣為 **PQUSD**（6 位小數）。地址：[官方合約地址](/Knowledge/reference/contracts)。
+除非你指定其他 ERC-20，支付層的貨幣為 **PQUSD**（6 位小數）。

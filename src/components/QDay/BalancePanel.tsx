@@ -6,8 +6,8 @@ import ConnectButtons from './ConnectButtons';
 // plus the QDay ERC-20s straight from the chain via balanceOf(address).
 //
 // Which chain is read is per page, because the two testnets hold different
-// assets: the ERC-20s below are deployed on Origin testnet (44003) only, and
-// Aevum (44005) has native QDAY from the faucet and no published ERC-20s yet.
+// assets: Origin testnet (44003) and Aevum testnet (44005) use different
+// ERC-20 addresses (see /Knowledge/reference/tokens).
 // Reading the wrong chain silently shows zero, so the panel names the chain it
 // read and never falls back to the other one.
 type Network = 'qday' | 'qday2';
@@ -27,8 +27,11 @@ const CHAINS: Record<Network, { label: string; chainId: number; rpc: string; tok
     label: 'QDay Aevum testnet',
     chainId: QDAY2.chainIdNum,
     rpc: QDAY2.rpc,
-    // No ERC-20 addresses are published on Aevum yet — see the token list.
-    tokens: [],
+    tokens: [
+      { sym: 'WABEL', addr: '0x4668107253E28C2b569E76Edb14B1E88c3b93de1', decimals: 18 },
+      { sym: 'WQDAY', addr: '0x915E807e7EC1665889172902781FB851202A54dF', decimals: 18 },
+      { sym: 'tUSD8', addr: '0x456569838f1d43009A91ebA4263147Afd7233483', decimals: 18 },
+    ],
   },
 };
 

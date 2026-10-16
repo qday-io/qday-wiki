@@ -16,4 +16,4 @@ draft: false
 | `createDeFiAgent({ strategy, protocols, riskTolerance })` | 兌換／借貸策略 |
 | `createPaymentAgent({ sessionKey, maxSinglePayment, maxDailySpend, allowedRecipients })` | 有額度限制的自主支付 |
 
-範例中的預設 MCP URL：`https://mcp.qday.io`。Intent registry 地址：[官方合約地址](/Knowledge/reference/contracts)。
+範例中的預設 MCP URL：`https://mcp.qday.io`。Intent registry 地址：將於上線時公布。

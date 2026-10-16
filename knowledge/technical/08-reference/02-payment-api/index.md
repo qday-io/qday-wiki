@@ -26,4 +26,4 @@ Until the gateway publishes a public spec, this table is the contract.
 | `subscription.renewed` | Period charge succeeded |
 | `stream.stopped` | Stream ended (deposit empty, cancelled, or expired) |
 
-Currency for the payment layer is **PQUSD** (6 decimals) unless you pass another ERC-20. Addresses: [Official contract addresses](/Knowledge/reference/contracts).
+Currency for the payment layer is **PQUSD** (6 decimals) unless you pass another ERC-20.

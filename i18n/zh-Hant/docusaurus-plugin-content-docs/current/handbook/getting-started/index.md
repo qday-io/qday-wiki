@@ -10,18 +10,17 @@ sidebar_label: 快速開始
 
 QDay 支援 MetaMask 以及任何兼容 WalletConnect 的錢包。請使用以下資訊手動新增網絡：
 
-| | 測試網 | 主網 |
+| | QDay Aevum 測試網 | QDay 主網 |
 |---|---|---|
-| 網絡名稱 | QDay Aevum | 即將推出 |
-| RPC URL | rpc-test.qday.info | 即將推出 |
-| 鏈 ID | 44005 | 即將推出 |
-| 貨幣符號 | tQDAY | 即將推出 |
-| 區塊瀏覽器 | explorer-test.qday.info | 即將推出 |
+| 網絡名稱 | QDay Aevum | 開發中 |
+| RPC URL | https://rpc-test.qday.info | 開發中 |
+| 鏈 ID | 44005 | 開發中 |
+| 貨幣符號 | tQDAY | 開發中 |
+| 區塊瀏覽器 | https://explorer-test.qday.info | 開發中 |
 
 ## 水龍頭
 
-在測試網上，將錢包連接至 QDay 的水龍頭（Faucet），即可領取用於測試的代幣。
-https://faucet.qday.info/en
+在測試網上，可透過[內建水龍頭](/guide/start/faucet)領取測試用 QDAY。
 
 
 ## 跨鏈橋
@@ -30,7 +29,7 @@ https://faucet.qday.info/en
 
 ## 第一筆交易
 
-本教學示範在 **QDay Aevum**（測試網）上使用 MetaMask 傳送 **1 QDAY**——這是目前唯一上線的網絡。請先[新增 QDay 網絡](/guide/start/add-network)並[領取測試網 QDAY](/guide/start/faucet)。主網即將推出；上線後步驟相同。
+本教學示範在 **QDay Aevum 測試網**上使用 MetaMask 傳送 **1 QDAY**（QDay 主網正在開發中）。請先[新增 QDay 網絡](/guide/start/add-network)並[領取測試網 QDAY](/guide/start/faucet)。主網即將推出；上線後步驟相同。
 
 ### 前置條件
 

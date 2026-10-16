@@ -16,4 +16,4 @@ Runtime API for on-chain agents (`@qday-io/sdk/agent`). Agents sign only through
 | `createDeFiAgent({ strategy, protocols, riskTolerance })` | Swap / lending strategies |
 | `createPaymentAgent({ sessionKey, maxSinglePayment, maxDailySpend, allowedRecipients })` | Bounded autonomous payments |
 
-Default MCP URL in examples: `https://mcp.qday.io`. Intent registry address: [Official contract addresses](/Knowledge/reference/contracts).
+Default MCP URL in examples: `https://mcp.qday.io`. Intent registry address: published at launch.

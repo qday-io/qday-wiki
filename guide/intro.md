@@ -17,14 +17,12 @@ the chain upgrade the ecosystem is moving to.
 </div>
 
 
-## Which is which
+## Networks
 
-| | QDAY V1 (Origin) | QDAY V2 (Aevum) |
+| | QDay Aevum testnet | QDay mainnet |
 |---|---|---|
-| Status | Live | Testnet live; mainnet coming soon |
-| Mainnet Chain ID | `44001` | `44002` (coming soon) |
-| Testnet Chain ID | `44003` | `44005` |
-| Audience | Existing users & guides | New features + migration target |
+| Status | Live | In development |
+| Chain ID | `44005` | `44002` |
+| Use it for | Trying QDay Aevum, building and testing | Production — parameters published at launch |
 
-**QDay Aevum's  mainnet will coming soon** 
-Everything is EVM-compatible — MetaMask, Solidity, wagmi/viem work on both.
+Everything is EVM-compatible — MetaMask, Solidity, wagmi/viem all work.

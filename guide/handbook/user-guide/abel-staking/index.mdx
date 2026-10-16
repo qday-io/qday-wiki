@@ -19,7 +19,7 @@ Please follow the steps below to unstake your WABEL and claim your pending rewar
 
 ## Prerequisites
 
-- The EVM-compatible wallet (e.g. MetaMask) you used for WABEL staking, with the QDay network added
+- The EVM-compatible wallet (e.g. MetaMask) you used for WABEL staking, connected to **QDay Origin mainnet (Chain ID 44001)** — the network your staking positions are on
 - A small amount of WABEL to pay network transaction fees
 - Access to the official QDay Portal: https://portal.qday.io/
 
@@ -47,14 +47,18 @@ You will see your **WABEL Staking** position, showing the staked amount and an *
 4. Confirm the transaction in your wallet.
 
 :::tip
-If you also have a **QDAY Staking** position, please refer to the [QDAY Staking Termination Guide](/guide/handbook/user-guide/qday-staking/) — the steps are the same.
+If you also have a **QDAY Staking** position, please refer to the [QDAY Staking Termination Guide](/guide/handbook/user-guide/qday-staking/) — the steps are the same. Unstaked QDAY Staking positions are returned as WQDAY, which converts 1:1 to QDAY at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion).
 :::
 
 ### Step 3: Check your wallet
 
 Once the transaction is confirmed, the unstaked tokens are returned to your wallet as **Wrapped Abel (WABEL)**.
 
-If WABEL does not appear in MetaMask, make sure your wallet is connected to the QDay network and that the WABEL token has been imported.
+If WABEL does not appear in MetaMask, make sure your wallet is connected to QDay Origin mainnet and that the WABEL token has been imported:
+
+| Token | Contract address (QDay Origin mainnet, Chain ID 44001) |
+|---|---|
+| WABEL | `0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882` |
 
 :::tip
 To convert WABEL back to ABEL on the Abelian network, use **"(W)ABEL Conversion"** in the left navigation menu of the QDay Portal, or visit the [WABEL Conversion page](https://portal.qday.io/en/abel-conversion).

@@ -14,7 +14,7 @@ QDay 與 EVM 兼容：Solidity、MetaMask、Remix、Hardhat、Foundry 與 wagmi/
 
 - **[開發者指南](/Knowledge/technical/developer-guide/getting-started)**——網絡、RPC、dApp 逐步教學、錢包、智慧帳戶、代理與支付
 - **[系統架構](/Knowledge/technical/system-architecture)**——rollup、RPC 與應用層如何組合在一起
-- **[鏈參數](/Knowledge/reference/chains)** · **[合約](/Knowledge/reference/contracts)**——ID、RPC 與官方地址
+- **[鏈參數](/Knowledge/reference/chains)** · **[代幣](/Knowledge/reference/tokens)**——ID、RPC 與代幣地址
 
 如果你尚未使用過此網絡，請先從[將 QDay 新增至你的錢包](/guide/start/add-network)與[在 Remix 中部署第一個合約](/guide/handbook/getting-started#部署你的第一個智能合約)開始。
 

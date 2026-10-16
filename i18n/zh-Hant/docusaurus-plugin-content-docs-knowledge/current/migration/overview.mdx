@@ -48,8 +48,8 @@ RPC、WebSocket 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
 
 ### 狀態
 
-- **主網（44001 → 44002）** 尚未開放。在 [官方合約地址](/Knowledge/reference/contracts) 與官方 [入口網站](https://portal.qday.io) 公布地址之前，請勿將 Origin 主網資產發送到任何「遷移」合約。
-- **測試網（44003 → 44005）** 是 lockbox 部署後應使用的路徑。Lockbox／distributor 地址在合約頁面上仍標示為*上線時公布*。
+- **主網（44001 → 44002）** 尚未開放。在官方 [入口網站](https://portal.qday.io) 公布地址之前，請勿將 Origin 主網資產發送到任何「遷移」合約。
+- **測試網（44003 → 44005）** 是 lockbox 部署後應使用的路徑。Lockbox／distributor 地址將於上線時在官方入口網站公布。
 
 ### 運作方式
 
@@ -77,9 +77,9 @@ flowchart LR
 | USD8 / WABEL / WQDAY | 在 QDay Origin 上鎖定 ERC-20 |
 | 原生 QDAY | 先包裝為 **WQDAY**，再鎖定 WQDAY |
 
-目前代幣合約位於 Origin 測試網 `44003`。請參閱 [代幣列表](/Knowledge/reference/tokens)。除非本 wiki 明確指出已部署，否則請勿在 Aevum `44005` 或 Origin 主網 `44001` 上重複使用這些地址。
+QDay Aevum 測試網的代幣地址請參閱 [代幣清單](/Knowledge/reference/tokens)。不同網絡的代幣地址不同——切勿在其他網絡上重複使用。
 
 ### 現在該做什麼
 
-1. 等待 [官方合約地址](/Knowledge/reference/contracts) 與 [入口網站](https://portal.qday.io) 公布官方 lockbox 地址。
+1. 等待 [入口網站](https://portal.qday.io) 公布官方 lockbox 地址。
 2. 遷移窗口開放後，只透過這些地址進行鎖定。忽略私訊、空投網站與非官方的「遷移」頁面。

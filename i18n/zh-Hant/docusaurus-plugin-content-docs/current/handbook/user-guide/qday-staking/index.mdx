@@ -5,129 +5,98 @@ sidebar_label: QDAY 質押
 
 import NextSteps from "@site/src/components/QDay/NextSteps";
 
-# QDAY 質押使用指南
+# QDAY 質押終止指南
+
+:::danger[QDAY 質押將於 2026 年 10 月 15 日結束]
+QDAY 質押將於 **2026 年 10 月 15 日中午 12:00（香港時間，UTC+8）** 結束。此安排同時適用於 **WABEL 質押（WABEL Staking）** 與 **QDAY 質押（QDAY Staking）** 部位。
+
+- 已停止開放新質押、追加質押及延長鎖倉期間。
+- 無論原先的鎖倉期間為何，所有質押部位都會顯示 **「Unstake」** 按鈕。
+- **解除質押及領取期間：** 自 **2026 年 10 月 15 日中午 12:00** 起至 **2026 年 12 月 31 日中午 12:00** 止（香港時間，UTC+8）。你可在此期間解除質押並領取待領取獎勵。
+- 若於 **2026 年 12 月 31 日中午 12:00（香港時間，UTC+8）** 後仍有已質押代幣或未領取的待領取獎勵，請透過 [QDay Global Telegram 群組](https://web.telegram.org/k/#@qday_official_group) 與我們聯繫。
+
+請在解除質押及領取期間內，依照以下步驟解除質押並領取待領取獎勵。
+:::
 
 ## 前置條件
 
-質押之前，請確認你已具備以下條件：
-
-- 一個兼容 EVM 的錢包（例如 MetaMask），並已新增 QDay Aevum 網絡
-- 錢包中有足夠的 QDAY 或 WQDAY
+- 你用於質押的 EVM 兼容錢包（例如 MetaMask），並已連接至 **QDay Origin 主網（鏈 ID 44001）**——即你的質押部位所在的網絡
 - 少量 QDAY，用於支付網絡交易費用
-- 能夠存取正確的官方 QDAY 質押入口網站
-- 了解所選鎖倉期間及其限制
+- 能夠存取官方 QDay Portal：https://portal.qday.io/
 
-:::warning[重要風險提示]
-- 質押涉及與智能合約互動
-- 區塊鏈交易一經確認通常無法撤銷
-- 鎖倉中的代幣在鎖倉期間屆滿前無法解除質押
-- 獎勵率與分配方式可能依協定設計隨時間變動
-- 核准交易前，請務必確認網站網址與錢包提示的詳細內容
+:::warning[安全提醒]
+區塊鏈交易一經確認即無法撤銷。核准任何交易前，請務必確認網站網址與錢包提示中的詳細內容。
 :::
 
-### 如何取得 QDAY？
+## 如何解除質押
 
-- **方法一：質押 ABEL 賺取 QDAY**
-  1. 首先，你需要購買 ABEL。可透過 MEXC、BitMart 交易所購買，或使用 Abelian Mobile Wallet 的應用程式內購買功能。
-  2. 質押你的 ABEL 以獲得 QDAY 獎勵。詳細步驟請參閱 [ABEL 質押使用指南](/guide/handbook/user-guide/abel-staking)。
+### 步驟 1：開啟「My Staking」
 
-- **方法二：以 USD8 兌換 QDAY**
-  1. 透過 **[QDay Bridge](https://portal.qday.io/en/bridge)**：使用 USDT（ETH）購買 USD8，或使用 Abelian Mobile Wallet 的應用程式內購買功能購買 USD8。
-  2. 透過 **[QDay Swap](https://portal.qday.io/en/qday-swap)** 或 Abelian Mobile Wallet 的應用程式內兌換功能：將 USD8 兌換為 QDAY。詳細步驟請參閱 [QDay Swap 使用指南](/guide/handbook/user-guide/swap)。
+1. 前往 QDay Portal（https://portal.qday.io/），並連接你用於質押的錢包。
+2. 點擊左側導覽選單中的 **「Staking」**。
+3. 切換至 **「My Staking」** 分頁。
 
-### 質押機制
+你會看到你的 **WABEL Staking** 與 **QDAY Staking** 部位，每個部位都會顯示質押數量及 **「Unstake」** 按鈕。
 
-- 質押時，系統會自動將 QDAY 轉換為 WQDAY（包裝代幣）
-- 鎖倉期間越長，獲得的份額（Share）越高
-- 獎勵每日累積，可隨時領取並提領至你的錢包
+### 步驟 2：解除質押你的代幣
 
-## 教學
+針對每個質押部位（WABEL Staking 及／或 QDAY Staking）：
 
-依照以下步驟開始質押：
+1. 點擊該部位下方的 **「Unstake」** 按鈕。
+2. 在 **Unstake Amount** 欄位輸入要解除質押的數量，或點擊 **「MAX」** 解除全部質押。
+3. 點擊 **「Unstake」** 送出。（若要返回，請點擊 **「Cancel」**。）
+4. 在錢包中確認交易。
 
-### 步驟 1：設定錢包
+![解除質押你的代幣](/qday/staking/qday-staking-termination-2.png)
 
-登入 MetaMask，並將 QDay Aevum 新增為自訂網絡。詳細說明請參閱 [MetaMask 錢包使用指南 - 新增 QDay 網絡](/guide/handbook/user-guide/metamask#將-qday-網絡新增至-metamask)。
+若你同時持有 WABEL Staking 與 QDAY Staking 部位，請針對每個部位重複上述步驟。
 
-### 步驟 2：進入質押頁面
+### 步驟 3：檢查你的錢包
 
-- 前往 https://portal.qday.io/
-- 點擊左側導覽選單中的 **「Staking」**，進入質押頁面。
+交易確認後，已解除質押的代幣會退回你的錢包：
 
-  ![質押入口網站首頁](/qday/staking/portal-2.png)
+- WABEL Staking → **Wrapped Abel（WABEL）**
+- QDAY Staking → **Wrapped QDay（WQDAY）**
 
-- 點擊 **「Connect Wallet」**，並選擇你偏好的錢包（支援 MetaMask、WalletConnect、Rainbow）以連接錢包。
+若代幣未顯示在 MetaMask 中，請確認你的錢包已連接至 QDay Origin 主網，並已匯入 WQDAY 代幣：
 
-  ![連接錢包選項](/qday/staking/qday-connect-wallet-dialog.png)
+| 代幣 | 合約地址（QDay Origin 主網，鏈 ID 44001） |
+|---|---|
+| WQDAY | `0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660` |
 
-### 步驟 3：質押
+:::tip[將 WQDAY 轉換為 QDAY]
+WQDAY 可按 **1:1** 比例轉換為 QDAY。請前往 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion)（或點擊 QDay Portal 左側導覽選單中的 **「(W)QDAY Conversion」**），將 WQDAY 轉換為 QDAY。
 
-#### 質押
-
-- 確認已在「Select Token」下拉選單中選擇 **WQDAY**。
-
-  ![WQDAY 質押介面](/qday/staking/wqday-staking.png)
-
-- 輸入要質押的 WQDAY/QDAY 數量，選擇鎖倉期間，然後點擊 **「Stake」** 並在錢包中確認交易。
-
-:::warning[注意]
-1. 最長鎖倉期間為 1460 天（4 年）。
-2. 質押 **QDAY** 時，若你的餘額足夠，QDAY 會自動轉換為 WQDAY（包裝代幣）。
+如需將 WABEL 轉換回 ABEL，請使用 [WABEL 轉換頁面](https://portal.qday.io/en/abel-conversion)（左側導覽選單中的 **「(W)ABEL Conversion」**）。
 :::
 
-#### 我的質押
+## 如何領取待領取獎勵
 
-質押完成後，可在「My Staking」分頁中檢視詳細資訊：
+QDAY 質押結束前累積的待領取獎勵，仍可在解除質押及領取期間內領取。
 
-- **每日獎勵自動累積** → **領取（Claim）** 待領取的獎勵 → 從金庫餘額 **提領（Withdraw）** 至你的 EVM 錢包。
-- 每筆紀錄會顯示質押數量、鎖倉期間與剩餘天數，並提供以下操作：
-  - **延長鎖倉期間（Extend Lock Period）**：延長現有質押的鎖倉期間，以持續累積獎勵。
-  - **追加質押（Add Stake）**：向現有質押部位加入更多代幣，以提高每日獎勵。
-  - **解除質押（Unstake）**：鎖倉期間屆滿後提領已質押的代幣。鎖倉期間內無法使用。
+1. 在 **「My Staking」** 分頁中，前往頂部的 **Pending Rewards** 區塊。
+2. 輸入要領取的數量，或點擊 **「MAX」**。
+3. 點擊 **「Claim Rewards」**，並在錢包中確認交易。
 
-  ![我的質押詳細資訊](/qday/staking/qday-stake-details.png)
+### 調整每日提領上限
 
-#### 儀表板
+每日可領取的待領取獎勵數量受 **每日提領上限（Daily Withdrawal Limit）** 限制（預設：每日 **50,000 QDAY**）。今日剩餘可領取的數量會顯示在 **Pending Rewards** 區塊的輸入欄位下方。
 
-點擊左側導覽選單中的 **「Dashboard」** 分頁，即可全面檢視你所有的質押資產。
+如需變更每日提領上限：
 
-  ![儀表板詳細資訊](/qday/staking/dashboard.png)
+1. 點擊 QDay Portal 左側導覽選單中的 **「Settings」**。
+2. 在 **STAKING** 區塊中找到 **Daily Withdrawal Limit**，右側會顯示你目前的上限。
+3. 以 **整數**（單位為 QDAY）輸入新的上限，然後點擊 **「Save」**。
 
-## 關於 WQDAY 質押獎勵
+![每日提領上限設定](/qday/staking/qday-staking-daily-limit-setting.png)
 
-### 獎勵池
-- QDAY 總供給量的 50%（約 112.59 億枚代幣）將用於質押獎勵。
-
-### 每日分配
-- 每天會將剩餘獎勵池的 1/1000 分配給質押者。
-- 由於分配額是依剩餘獎勵池計算，每日發放量會隨時間逐漸減少。
-
-### 獎勵份額計算
-你的每日獎勵取決於你的份額（Share），計算方式如下：
-**份額 = 質押數量 × 剩餘鎖倉天數**
-
-**範例：**
-- 若你質押 100 QDAY，鎖倉 1460 天，你的份額為：
-  100 × 1460 = 146,000
-- 若另一位用戶質押 200 QDAY，鎖倉 730 天，其份額為：
-  200 × 730 = 146,000
-
-在這個簡化範例中，兩個質押部位的份額相同，因此在其他條件相同的前提下，兩者會獲得相同比例的每日分配。
-
-:::warning[重要]
-- 以上為簡化說明，僅供參考。
-- 獎勵並非固定，亦不保證。
-- 實際獎勵取決於下列因素：
-  - 獎勵池的剩餘數量
-  - 所有參與質押者的總份額
-  - 質押部位隨時間的變動
+:::tip
+點擊 **Reset All Settings** 下方的 **「Reset」**，會將所有設定（包括每日提領上限）恢復為預設值。
 :::
-
 
 ## 下一步
 
 <NextSteps steps={[
-  { title: "ABEL 質押", desc: "質押 ABEL 賺取收益", to: "/guide/handbook/user-guide/abel-staking" },
   { title: "兌換代幣", desc: "取得 WABEL / USD8", to: "/guide/handbook/user-guide/swap" },
   { title: "遷移至 QDay", to: "/Knowledge/migration/overview" },
 ]} />
