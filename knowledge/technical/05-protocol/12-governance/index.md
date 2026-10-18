@@ -5,6 +5,10 @@ draft: false
 
 # Governance
 
+:::note[Protocol-level staking]
+Staked-QDAY voting refers to protocol-level staking planned for the upgraded network. It is separate from the QDAY/ABEL user staking programs, which ended on 15 Oct 2026.
+:::
+
 **QDAY DAO** — Protocol parameter changes, contract upgrades, and emergency actions require DAO approval. Voting power is proportional to staked QDAY.
 
 **Timelock** — All privileged operations on the `RollupManager` are executed through a `Timelock` contract with a minimum delay. This gives the community time to review and veto changes.

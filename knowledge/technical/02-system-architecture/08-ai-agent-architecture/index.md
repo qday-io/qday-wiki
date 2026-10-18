@@ -5,7 +5,11 @@ draft: false
 
 # AI Agent Architecture
 
-QDay Aevum provides a native runtime environment for on-chain AI agents.
+:::note[Planned — Q1 2027]
+The AI agent runtime launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::
+
+QDay will provide a native runtime environment for on-chain AI agents.
 
 **Agent Runtime** — A sandboxed execution environment where agents operate. The runtime manages agent lifecycle, resource limits, and interaction with on-chain contracts.
 

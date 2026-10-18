@@ -22,7 +22,7 @@ QDay has undergone a major architectural upgrade. If you are coming from the pre
 | Faucet | [Get testnet tokens](/guide/start/faucet) |
 | One-click setup | [Add QDay to your wallet](/guide/start/add-network) |
 
-Full parameters for all networks (Origin mainnet `44001`, Origin testnet `44003`, Aevum testnet `44005`): [Chain parameters](/Knowledge/reference/chains).
+Full network parameters: [Chain parameters](/Knowledge/reference/chains).
 
 ## Contents
 
@@ -51,7 +51,7 @@ QDay addresses two challenges facing the next generation of blockchain applicati
 
 ### 1.3 What makes QDay different?
 
-QDay combines EVM compatibility with a dual quantum-resistant security architecture — a post-quantum cryptographic signature plus a post-quantum vault in Abelian. Its latest architecture also focuses on high-performance payments, stablecoins and machine-to-machine / AI-agent transactions.
+QDay combines EVM compatibility with a quantum-resistant security architecture: settlement is secured by Abelian's post-quantum cryptography today, and native post-quantum account signatures arrive in Phase 2. Its latest architecture also focuses on high-performance payments, stablecoins and machine-to-machine / AI-agent transactions.
 
 ### 1.4 What is Abelian?
 
@@ -63,7 +63,7 @@ Aevum — from the Latin root for "eternity" — is the name of QDay's new testn
 
 ### 1.6 How does QDay settle to Abelian?
 
-QDay bundles off-chain transaction batches into zero-knowledge validity proofs and submits them to the Abelian L1 via a quantum-resistant rollup bridge. Rollup operators sign these state transitions with Abelian's native lattice-based keys, anchoring finality directly to L1. Once transactions are confirmed on Abelian, the ledger state becomes permanently immutable and resistant to quantum attacks.
+QDay bundles off-chain transaction batches into zero-knowledge validity proofs, verifies them on the DA layer, and commits each batch's status root to the Abelian L1. Rollup operators sign these state transitions with Abelian's native lattice-based keys, anchoring finality directly to L1. Once transactions are confirmed on Abelian, the ledger state becomes permanently immutable and resistant to quantum attacks.
 
 ### 1.7 What does quantum-resistant mean?
 
@@ -95,7 +95,7 @@ EVM-compatible smart contracts and dApps, including DeFi, payment and stablecoin
 
 ### 1.14 Where can I find the security documentation?
 
-All security documentation lives in the Technical Knowledge Base under **[Security](/Knowledge/technical/security)**. It covers the security overview, post-quantum security, smart-contract, wallet, bridge, RPC, payment and AI-agent security, key management, audit reports, the bug bounty and responsible disclosure. The underlying design is described in the [QDay Whitepaper](/guide/handbook/qday-whitepaper). See also [Section 7](#7-security).
+All security documentation lives in the Technical Knowledge Base under **[Security](/Knowledge/technical/security)**. It covers the security overview, post-quantum security, smart-contract, wallet, bridge, RPC, payment and AI-agent security, key management and responsible disclosure. Audit reports and the bug bounty will be published there when available. The underlying design is described in the [QDay Whitepaper](/guide/handbook/qday-whitepaper). See also [Section 7](#7-security).
 
 ---
 
@@ -126,7 +126,7 @@ Yes. After the upgraded QDay mainnet launches, there will be a 6–12 month migr
 
 ### 2.5 How do I migrate my assets?
 
-Staked QDAY does not need to be migrated: the staking program is ending, and you simply unstake and claim your tokens — see [Section 6](#6-qday-token--staking-termination). For other assets, a step-by-step migration guide will be published once the migration bridge is active. Until then:
+Staked QDAY does not need to be migrated: the staking program has ended, and you simply unstake and claim your tokens — see [Section 6](#6-qday-token--staking-termination). For other assets, a step-by-step migration guide will be published once the migration bridge is active. Until then:
 
 - Adding Aevum to your wallet does **not** move your balances — tokens stay on the chain where they were issued.
 - Only use migration contract addresses published on the official [QDay Portal](https://portal.qday.io). Ignore DMs, airdrop sites and unofficial "migration" pages.
@@ -141,7 +141,7 @@ Yes. The upgraded QDay will have its own token, also named **$QDAY**. Existing Q
 
 ### 2.8 What happens to my staking?
 
-The QDay staking program is ending. Rewards stop on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. Unstaked tokens are returned as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY 1:1 at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion); QDAY ($QDAYp) can then be swapped 1:1 for the new $QDAY after mainnet launch. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
+The QDay staking program has ended. Rewards stopped on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. Unstaked tokens are returned as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY 1:1 at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion); QDAY ($QDAYp) can then be swapped 1:1 for the new $QDAY after mainnet launch. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
 
 ### 2.9 What happens to WQDAY or WABEL?
 
@@ -192,11 +192,11 @@ QDay Aevum is EVM-compatible and supports MetaMask, WalletConnect, Rainbow and o
 
 ### 3.6 Where is the faucet?
 
-The faucet is built into the docs: [Get testnet tokens](/guide/start/faucet). Connect your wallet and claim testnet QDAY for gas. The faucet enforces an on-chain per-address cooldown; if you claimed recently, it shows when you can claim again.
+The faucet is built into the docs: [Get testnet tokens](/guide/start/faucet). Connect your wallet and claim testnet QDAY for gas. The faucet enforces an on-chain per-address cooldown; if you claimed recently, it shows when you can claim again. A brand-new wallet with 0 tQDAY can't pay gas for that claim — get your first tQDAY at [faucet.qday.info](https://faucet.qday.info).
 
 ### 3.7 How do I pay gas?
 
-Gas on Aevum is paid in native (testnet) QDAY, claimed from the faucet. Aevum uses an Ethereum-compatible EIP-1559 gas model (base fee + priority fee).
+Gas on Aevum is paid in native testnet QDAY (**tQDAY**), claimed from the faucet. Aevum uses an Ethereum-compatible EIP-1559 gas model (base fee + priority fee). Individual applications can charge fees in other tokens — for example, fees in the Agent Payment app are paid in USD8.
 
 ### 3.8 Which tokens are available on Aevum?
 
@@ -208,7 +208,7 @@ In addition to native QDAY (gas), the following ERC-20 tokens are deployed on QD
 | WQDAY | `0x915E807e7EC1665889172902781FB851202A54dF` | 18 |
 | tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` | 18 |
 
-To see a token in MetaMask, switch to QDay Aevum, choose *Import tokens*, and paste the contract address. Always verify addresses on the [Explorer](https://explorer-test.qday.info) — do not reuse QDay Origin (`44003`) token addresses on Aevum.
+To see a token in MetaMask, switch to QDay Aevum, choose *Import tokens*, and paste the contract address. Always verify addresses on the [Explorer](https://explorer-test.qday.info) — do not reuse QDay Origin (`44001` / `44003`) token addresses on Aevum.
 
 ---
 
@@ -220,7 +220,7 @@ To see a token in MetaMask, switch to QDay Aevum, choose *Import tokens*, and pa
 
 ### 4.2 How do I deploy a contract?
 
-Point your toolchain at the Aevum RPC and deploy as you would on Ethereum. You need a wallet funded with testnet QDAY from the [faucet](/guide/start/faucet).
+Point your toolchain at the Aevum RPC and deploy as you would on Ethereum. You need a wallet funded with tQDAY from the [faucet](/guide/start/faucet) (a brand-new wallet gets its first tQDAY at [faucet.qday.info](https://faucet.qday.info)).
 
 **Foundry**
 
@@ -280,7 +280,7 @@ The official QDay SDK will launch in Q1 2027. Please check back at launch time �
 
 ### 5.1 How do I test stablecoin payments?
 
-The USD8 token is already deployed on Aevum (see [3.8](#38-which-tokens-are-available-on-aevum)). Stablecoin payment features will launch in Q1 2027. Please check back at launch time — all documentation, tools and examples will be published then, and you can start testing from there.
+The testnet stablecoin **tUSD8** is already deployed on Aevum (see [3.8](#38-which-tokens-are-available-on-aevum)); **USD8** is the mainnet stablecoin. Stablecoin payment features will launch in Q1 2027. Please check back at launch time — all documentation, tools and examples will be published then, and you can start testing from there.
 
 ### 5.2 How do I test x402?
 
@@ -322,7 +322,7 @@ Staking was designed for QDay's early stage, when the priority was building a co
 
 But every staking reward adds new tokens to circulation, which gradually dilutes every holder, including stakers themselves. Ahead of the Q1 2027 mainnet, we want QDay's token economy to be driven by real network activity — payments, applications and AI agents — rather than passive yield.
 
-We chose a clean stop instead of a lower APY, because a smaller reward would still pay tokens to sit idle. This is a network-design decision, not a budget one: PQA Labs continues to invest in the upgraded network, developer tools and the mainnet launch.
+We chose a clean stop instead of a lower APY, because a smaller reward would still pay tokens to sit idle. This is a network-design decision, not a budget one: the QDay Foundation continues to invest in the upgraded network, developer tools and the mainnet launch.
 
 ### 6.3 Does this mean something is wrong with QDay?
 
@@ -337,9 +337,9 @@ Your staked tokens remain yours, and all rewards earned up to the cutoff are hon
 | **15 Oct 2026, 12:00** | Rewards stop accruing. Unstaking and claiming open. |
 | 15 Oct – 31 Dec 2026 | Unstake and claim at any time. |
 | **31 Dec 2026, 12:00** | Unstake and claim period ends. |
-| After 31 Dec 2026 | Unclaimed assets can still be recovered — contact the team in the [official QDay Telegram group](https://web.telegram.org/k/#@qday_official_group). |
+| After 31 Dec 2026 | Unclaimed assets can still be recovered — contact the team at [support@qday.io](mailto:support@qday.io). |
 
-**How to withdraw:** on the QDay Staking page (mainnet), click **Unstake**, then **Claim**. That's it. Step-by-step guide: [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
+**How to withdraw:** on the QDay Staking page (QDay Origin mainnet), click **Unstake**, then **Claim**. That's it. Step-by-step guide: [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
 
 Unstaked tokens are returned to your wallet as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY at a 1:1 ratio at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion), and WABEL to ABEL at [WABEL Conversion](https://portal.qday.io/en/abel-conversion). QDAY ($QDAYp) can be swapped 1:1 for the new $QDAY after mainnet launch (see [2.7](#27-is-there-a-new-token)).
 
@@ -383,7 +383,7 @@ ML-DSA is a lattice-based digital-signature algorithm standardized by NIST (FIPS
 
 ### 7.3 What happens if a quantum computer becomes capable of attacking ECDSA?
 
-An attacker could potentially derive private keys from exposed public keys and authorize transactions from affected accounts. Before that happens, QDay's architecture is designed to already provide a separate quantum-resistant layer protecting the ledger and settlement process, plus native quantum-resistant account security that addresses the account-key problem directly. If an attack on the ledger is detected, rollups can also be halted in a quantum-resistant way, since attackers cannot forge the operators' post-quantum signatures.
+An attacker could potentially derive private keys from exposed public keys and authorize transactions from affected accounts. Before that happens, QDay's architecture provides a separate quantum-resistant layer protecting the ledger and settlement process today, and native quantum-resistant account security (Phase 2) addresses the account-key problem directly. If an attack on the ledger is detected, rollups can also be halted in a quantum-resistant way, since attackers cannot forge the operators' post-quantum signatures.
 
 ### 7.4 What does it not protect against?
 
@@ -395,7 +395,7 @@ Security audits of the QDay network and dApps are progressing step by step. Repo
 
 ### 7.6 How do I report a bug?
 
-Please report it in the [official QDay Telegram group](https://web.telegram.org/k/#@qday_official_group). The team will respond and follow up promptly.
+Email **[support@qday.io](mailto:support@qday.io)**. For **security vulnerabilities**, report privately by email and do not disclose them publicly — see [Responsible Disclosure](/Knowledge/technical/security/responsible-disclosure).
 
 :::danger[Stay safe]
 QDay will never DM you first, ask for your seed phrase, or run a "support" account that requests private keys. Only use the official links on the [Community](/guide/handbook/community) page.
@@ -415,6 +415,7 @@ QDay will never DM you first, ask for your seed phrase, or run a "support" accou
 | **$QDAYp (QDAY Points)** | The new name for QDAY on the old QDay; swappable 1:1 for $QDAY after TGE. |
 | **tQDAY** | Native testnet QDAY on Aevum, claimed from the faucet; no real value. |
 | **USD8** | QDay's native post-quantum stablecoin, 1:1 USD-pegged and 100% reserve-backed. |
+| **tUSD8** | Testnet USD8 on QDay Aevum; no real value. |
 | **WQDAY** | Wrapped (ERC-20) QDAY, available on QDay Origin and QDay Aevum. |
 | **WABEL** | Wrapped ABEL on QDay, bridged from Abelian. |
 | **Phase 1 / 1.5 / 2** | Ledger-level quantum resistance → payment network → native quantum-resistant accounts and contracts. |

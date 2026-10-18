@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Bridge Service
-draft: false
 ---
 
 # Bridge Service

@@ -5,11 +5,16 @@ draft: false
 
 # SDK & Code Examples
 
+:::note[Coming Q1 2027]
+The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
+:::
+
 The QDAY SDK ships with examples in multiple languages. Full example repositories are at [github.com/qday-io](https://github.com/qday-io).
 
 ## JavaScript
 
 ```bash
+# Available Q1 2027 — not yet published on npm
 npm install @qday-io/sdk
 ```
 
@@ -18,6 +23,7 @@ CommonJS entry: `require('@qday-io/sdk')`.
 ## TypeScript
 
 ```bash
+# Available Q1 2027 — not yet published on npm
 npm install @qday-io/sdk
 ```
 

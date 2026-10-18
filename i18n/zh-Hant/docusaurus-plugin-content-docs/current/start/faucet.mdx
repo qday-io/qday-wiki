@@ -8,29 +8,24 @@ import BalancePanel from '@site/src/components/QDay/BalancePanel';
 
 # 取得測試網代幣
 
-領取測試網 **QDAY** 作為 Gas——就在這裏，無需另外前往水龍頭網站。這個小工具會連接你的
-錢包、切換至 QDay，並呼叫真實的水龍頭合約。
+領取測試網 **tQDAY** 作為 Gas。這個小工具會連接你的錢包、切換至 QDay Aevum 測試網，並呼叫水龍頭合約。
 
 <FaucetWidget />
 
-:::info[每個冷卻期只能領取一次]
-水龍頭在鏈上對每個地址強制執行冷卻期。若你最近已領取過，它會告訴你何時
-可以再次領取。
+:::tip[全新錢包？]
+在這裏領取屬於鏈上交易，因此需要少量 Gas。若你的錢包有 **0 tQDAY**，請先到 [faucet.qday.info](https://faucet.qday.info) 領取你的第一筆 tQDAY——它會為你支付 Gas。
 :::
 
-## 查看你的資產
+:::info[每個冷卻期只能領取一次]
+水龍頭在鏈上對每個地址強制執行冷卻期。若你最近已領取過，它會告訴你何時可以再次領取。
+:::
 
-連接後即可查看你在 **QDay Aevum（鏈 ID 44005）** 上的即時餘額，直接從鏈上讀取——
-水龍頭發放的測試網 QDAY 就在這條鏈上：
+## 查看你的資產 {/* #check-your-assets */}
+
+連接後即可查看你在 **QDay Aevum（鏈 ID 44005）** 上的即時餘額，直接從鏈上讀取——水龍頭發放的 tQDAY 就在這條鏈上：
 
 <BalancePanel network="qday2" />
 
 :::note[Aevum 測試網代幣]
-上方面板也會顯示你在 Aevum 上的 WABEL、WQDAY 與 tUSD8。合約地址與一鍵 **+ Add** 按鈕
-請見[代幣清單](/Knowledge/reference/tokens)。
-:::
-
-:::tip[這就是「嵌入 dApp」]
-上方的按鈕並不是連往其他網站的連結——而是直接在文件內進行的即時合約呼叫。
-同樣的模式可以將包裝或遷移流程嵌入各自的指南頁面。
+此面板也會顯示你在 Aevum 上的 WABEL、WQDAY 與 tUSD8。合約地址與一鍵 **+ 新增** 按鈕請見[代幣清單](/Knowledge/reference/tokens)。
 :::

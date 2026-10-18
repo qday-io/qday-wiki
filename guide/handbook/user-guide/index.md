@@ -4,7 +4,7 @@ title: User Guide
 
 # User Guide
 
-Step-by-step guides for everyday tasks on QDay — wallets, swap, staking, and bridging. New here? Start with [Getting Started](/guide/handbook/getting-started) or [add QDay to your wallet](/guide/start/add-network).
+Step-by-step guides for everyday tasks on QDay — wallets, swap, bridging, and unstaking. New here? Start with [Getting Started](/guide/handbook/getting-started) or [add QDay to your wallet](/guide/start/add-network).
 
 ## Guides in this section
 
@@ -16,12 +16,12 @@ Step-by-step guides for everyday tasks on QDay — wallets, swap, staking, and b
 ### Earn
 
 - **[Swap](swap)** — trade WABEL, QDAY, and USD8, or provide liquidity
-- **[QDAY Staking](qday-staking)** — stake QDAY / WQDAY for protocol rewards
-- **[ABEL Staking](abel-staking)** — convert ABEL to WABEL and stake on QDay
+- **[QDAY Staking](qday-staking)** — staking ended 15 Oct 2026; unstake and claim by 31 Dec 2026
+- **[ABEL Staking](abel-staking)** — staking ended 15 Oct 2026; unstake WABEL and claim by 31 Dec 2026
 
 ### Bridge
 
-- **[Abelian Bridge v3](abelian-bridge-v3)** — move ABEL ↔ WABEL between Abelian and QDay
+- **[Abelian Bridge](abelian-bridge-v3)** — move ABEL ↔ WABEL between Abelian and QDay
 - **[QDay Bridge](#qday-bridge)** — move ERC20, TRC20, and QRC20 tokens across EVM chains
 
 ## Explorer
@@ -35,7 +35,7 @@ QDay's block explorer lets you look up any transaction, address, or contract on 
 
 - **Search** — paste a transaction hash, wallet address, or contract address into the search bar.
 - **Transactions** — view status, block confirmation, gas fee, and token transfers.
-- **Address details** — see QDAY, WABEL, and USD8 balances, history, and verified contract source when available.
+- **Address details** — see tQDAY, WABEL, and tUSD8 balances, history, and verified contract source when available.
 - **Network stats** — check current block height, average block time, and throughput on the homepage.
 
 ![QDay block explorer](/img/user-guide10.jpg)
@@ -43,6 +43,8 @@ QDay's block explorer lets you look up any transaction, address, or contract on 
 ## QDay Bridge
 
 QDay Bridge and [Abelian Bridge](abelian-bridge-v3) are separate products. Use QDay Bridge for ERC20, TRC20, and QRC20 assets on other EVM-compatible chains. Use Abelian Bridge for ABEL / WABEL.
+
+QDay Bridge runs on **QDay Aevum testnet** and **QDay Origin testnet**.
 
 Portal: [portal.qday.io/en/bridge](https://portal.qday.io/en/bridge)
 

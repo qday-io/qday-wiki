@@ -7,6 +7,6 @@ draft: false
 
 **PolygonZkEVMBridge** — The bridge contract is deployed on the DA layer. To bridge assets from QDay Aevum to another chain, the bridge contract on QDay Aevum locks the asset and emits a `BridgeEvent`. The event is included in the batch's Local Exit Root, which is committed to the Global Exit Root after ZK verification.
 
-**PQZK Bridge (QDay Aevum ↔ Abelian)** — The PQZK Bridge handles transfers between QDay Aevum (EVM account model) and the Abelian Layer 1 (UTXO model). The Committer's status root submissions to Abelian Chain serve as the trust anchor. Wrapped ABEL (wABEL) on QDay Aevum represents ABEL locked on the Abelian L1.
+**PQZK Bridge (QDay Aevum ↔ Abelian)** — The PQZK Bridge handles transfers between QDay Aevum (EVM account model) and the Abelian Layer 1 (UTXO model). The Committer's status root submissions to Abelian Chain serve as the trust anchor. Wrapped ABEL (WABEL) on QDay Aevum represents ABEL locked on the Abelian L1.
 
 How exit roots are committed and claimed is covered in [Cross-chain Messaging](/Knowledge/technical/protocol/cross-chain-messaging).

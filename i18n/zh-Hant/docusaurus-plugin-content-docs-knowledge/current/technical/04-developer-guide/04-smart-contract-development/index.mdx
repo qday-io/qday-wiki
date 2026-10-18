@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # 智能合約開發
 
-QDay Aevum 完全兼容 Solidity。你可以像為 Ethereum 主網撰寫合約一樣撰寫合約。
+QDay Aevum 完全兼容 Solidity。撰寫合約的方式與以太坊主網完全相同。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -30,7 +30,8 @@ contract HelloQDAY {
 module.exports = {
   networks: {
     qday: {
-      url: "https://rpc.qday.io",
+      url: "https://rpc-test.qday.info", // QDay Aevum testnet
+      chainId: 44005,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -41,7 +42,7 @@ module.exports = {
 npx hardhat run scripts/deploy.js --network qday
 ```
 
-## 定義鏈
+## 定義鏈 {/* #define-the-chain */}
 
 <Tabs groupId="lib">
 <TabItem value="viem" label="viem / wagmi">
@@ -50,11 +51,17 @@ npx hardhat run scripts/deploy.js --network qday
 import { defineChain } from 'viem';
 
 export const qday = defineChain({
-  id: 44001,
-  name: 'QDay',
-  nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
-  rpcUrls: { default: { http: ['https://rpc.qday.io'] } },
-  blockExplorers: { default: { name: 'QDay', url: 'https://explorer.qday.io' } },
+  id: 44005,
+  name: 'QDay Aevum',
+  nativeCurrency: { name: 'tQDAY', symbol: 'tQDAY', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc-test.qday.info'],
+      webSocket: ['wss://rpc-test.qday.info'],
+    },
+  },
+  blockExplorers: { default: { name: 'QDay Aevum Explorer', url: 'https://explorer-test.qday.info' } },
+  testnet: true,
 });
 ```
 
@@ -64,18 +71,18 @@ export const qday = defineChain({
 ```ts title="provider.ts"
 import { JsonRpcProvider } from 'ethers';
 
-export const provider = new JsonRpcProvider('https://rpc.qday.io', {
-  chainId: 44001,
-  name: 'QDay',
+export const provider = new JsonRpcProvider('https://rpc-test.qday.info', {
+  chainId: 44005,
+  name: 'qday-aevum-testnet',
 });
 ```
 
 </TabItem>
 </Tabs>
 
-Aevum 測試網的鏈 ID 為 `44005`／RPC 為 `https://rpc-test.qday.info`。請參閱[鏈參數](/Knowledge/reference/chains)。
+以上範例以 QDay Aevum 測試網（鏈 ID `44005`）為目標。QDay 主網（鏈 ID `44002`）的參數將於上線時公佈——請參閱[鏈參數](/Knowledge/reference/chains)。用作 Gas 的測試網 tQDAY 可從 [faucet.qday.info](https://faucet.qday.info) 或[文件內置水龍頭](/guide/start/faucet)領取。
 
-## 讀取合約（代幣餘額）
+## 讀取合約（代幣餘額） {/* #read-a-contract-token-balance */}
 
 <Tabs groupId="lib">
 <TabItem value="viem" label="viem">
@@ -108,7 +115,7 @@ const balance = await erc20.balanceOf('0x…user');
 </TabItem>
 </Tabs>
 
-## 寫入合約（送出交易）
+## 寫入合約（發送交易） {/* #write-a-contract-send-a-tx */}
 
 ```ts title="wagmi writeContract"
 import { useWriteContract } from 'wagmi';
@@ -116,7 +123,7 @@ import { useWriteContract } from 'wagmi';
 const { writeContractAsync } = useWriteContract();
 
 await writeContractAsync({
-  chainId: 44001,
+  chainId: 44005,
   address: '0x…contract',
   abi,
   functionName: 'doSomething',
@@ -125,6 +132,5 @@ await writeContractAsync({
 ```
 
 :::tip 互動範例
-本 wiki 的多個頁面內嵌了這些呼叫的即時版本——請參閱
-[水龍頭](/guide/start/faucet)（連接 + 寫入）與[代幣清單](/Knowledge/reference/tokens)（連接 + 讀取）。
+本 wiki 的多個頁面內嵌了這些呼叫的即時版本——請參閱[水龍頭](/guide/start/faucet)（連接 + 寫入）與[代幣清單](/Knowledge/reference/tokens)（連接 + 讀取）。
 :::

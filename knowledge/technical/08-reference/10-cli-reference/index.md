@@ -5,9 +5,14 @@ draft: false
 
 # CLI Reference
 
+:::note[Coming Q1 2027]
+The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
+:::
+
 Install:
 
 ```bash
+# Available Q1 2027 — not yet published on npm
 npm install -g @qday-io/cli
 ```
 

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 
 // Live network stat strip — the kind of at-a-glance metrics mature chain docs
 // open with. Reads straight from the QDay RPC: latest block, gas price, block
 // time (derived from the last two blocks), and chain id.
 
-const RPC = 'https://rpc.qday.info';
+// QDay Aevum testnet (44005).
+const RPC = 'https://rpc-test.qday.info';
 
 async function rpc(method: string, params: any[] = []): Promise<any> {
   const ctrl = new AbortController();
@@ -24,11 +26,21 @@ async function rpc(method: string, params: any[] = []): Promise<any> {
 
 type Stat = { label: string; value: string };
 
+function labels() {
+  return {
+    latest: translate({id: 'stats.latestBlock', message: 'Latest block', description: 'Network stats label: latest block height'}),
+    blockTime: translate({id: 'stats.blockTime', message: 'Block time', description: 'Network stats label: seconds between the last two blocks'}),
+    gasPrice: translate({id: 'stats.gasPrice', message: 'Gas price', description: 'Network stats label: current gas price'}),
+    chainId: translate({id: 'stats.chainId', message: 'Chain ID', description: 'Network stats label: chain ID'}),
+  };
+}
+
 function Skeleton() {
   return <span style={{ opacity: 0.4 }}>···</span>;
 }
 
 export default function NetworkStats() {
+  const L = labels();
   const [stats, setStats] = useState<Stat[] | null>(null);
   const [err, setErr] = useState(false);
 
@@ -48,10 +60,10 @@ export default function NetworkStats() {
           cur && prev ? parseInt(cur.timestamp, 16) - parseInt(prev.timestamp, 16) : null;
         const gwei = gas ? (parseInt(gas, 16) / 1e9).toFixed(2) : '—';
         const next: Stat[] = [
-          { label: 'Latest block', value: '#' + n.toLocaleString() },
-          { label: 'Block time', value: dt != null ? `${dt}s` : '—' },
-          { label: 'Gas price', value: `${gwei} Gwei` },
-          { label: 'Chain ID', value: chainId ? String(parseInt(chainId, 16)) : '—' },
+          { label: L.latest, value: '#' + n.toLocaleString() },
+          { label: L.blockTime, value: dt != null ? translate({id: 'stats.seconds', message: '{n}s', description: 'Block time value in seconds'}, {n: dt}) : '—' },
+          { label: L.gasPrice, value: `${gwei} Gwei` },
+          { label: L.chainId, value: chainId ? String(parseInt(chainId, 16)) : '—' },
         ];
         if (alive) { setStats(next); setErr(false); }
       } catch {
@@ -64,10 +76,10 @@ export default function NetworkStats() {
   }, []);
 
   const cells = stats ?? [
-    { label: 'Latest block', value: '' },
-    { label: 'Block time', value: '' },
-    { label: 'Gas price', value: '' },
-    { label: 'Chain ID', value: '' },
+    { label: L.latest, value: '' },
+    { label: L.blockTime, value: '' },
+    { label: L.gasPrice, value: '' },
+    { label: L.chainId, value: '' },
   ];
 
   return (

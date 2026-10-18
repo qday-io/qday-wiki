@@ -1,27 +1,33 @@
 import React, { useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 
 // Interactive doc component: one-click "Add QDay Aevum Testnet to Wallet" via EIP-3085.
 // This is the kind of live element MDX/Docusaurus enables inside docs — a plain
 // Markdown site (MkDocs) can only show the params in a table.
 
-type Net = { chainIdHex: string; chainName: string; label: string; rpc: string; explorer: string };
+type Net = { chainIdHex: string; chainName: string; rpc: string; explorer: string };
 
 const NETWORKS: Record<string, Net> = {
   qday2: {
     chainIdHex: '0xABE5', // 44005
     chainName: 'QDay Aevum',
-    label: 'QDay Aevum Testnet',
     rpc: 'https://rpc-test.qday.info',
     explorer: 'https://explorer-test.qday.info',
   },
   qday: {
     chainIdHex: '0xABE1', // 44001 Origin mainnet
     chainName: 'QDay',
-    label: 'QDay',
     rpc: 'https://rpc.qday.io',
     explorer: 'https://explorer.qday.io',
   },
 };
+
+// One full sentence per network so each locale can word (and space) it naturally.
+function buttonLabel(network: 'qday' | 'qday2'): string {
+  return network === 'qday2'
+    ? translate({id: 'addNetwork.button.qday2', message: 'Add QDay Aevum Testnet to Wallet', description: 'Add-network button for the QDay Aevum testnet'})
+    : translate({id: 'addNetwork.button.qday', message: 'Add QDay to Wallet', description: 'Add-network button for QDay'});
+}
 
 export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qday' | 'qday2' }) {
   const [state, setState] = useState<'idle' | 'busy' | 'ok' | 'err'>('idle');
@@ -32,7 +38,7 @@ export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qda
     const eth = (globalThis as any).ethereum;
     if (!eth) {
       setState('err');
-      setMsg('No wallet found — install a wallet extension first.');
+      setMsg(translate({id: 'addNetwork.err.noWallet', message: 'No wallet found — install a wallet extension first.'}));
       return;
     }
     setState('busy');
@@ -44,14 +50,16 @@ export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qda
           chainName: net.chainName,
           rpcUrls: [net.rpc],
           blockExplorerUrls: [net.explorer],
-          nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
+          nativeCurrency: net.chainIdHex === '0xABE5'
+            ? { name: 'tQDAY', symbol: 'tQDAY', decimals: 18 }
+            : { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
         }],
       });
       setState('ok');
-      setMsg(`${net.chainName} added to your wallet.`);
+      setMsg(translate({id: 'addNetwork.ok', message: '{network} added to your wallet.'}, {network: net.chainName}));
     } catch (e: any) {
       setState('err');
-      setMsg(e?.message ?? 'Request rejected.');
+      setMsg(e?.message ?? translate({id: 'wallet.err.rejected', message: 'Request rejected.'}));
     }
   }
 
@@ -72,7 +80,9 @@ export default function AddNetworkButton({ network = 'qday2' }: { network?: 'qda
           opacity: state === 'busy' ? 0.6 : 1,
         }}
       >
-        {state === 'busy' ? 'Check your wallet…' : `Add ${net.label} to Wallet`}
+        {state === 'busy'
+          ? translate({id: 'wallet.checkWallet', message: 'Check your wallet…'})
+          : buttonLabel(network)}
       </button>
       {msg && (
         <p style={{ marginTop: 8, fontSize: 14, color: state === 'err' ? 'var(--ifm-color-danger)' : 'var(--ifm-color-success)' }}>

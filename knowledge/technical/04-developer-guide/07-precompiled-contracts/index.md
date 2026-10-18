@@ -5,11 +5,11 @@ draft: false
 
 # Precompiled Contracts
 
-QDay Aevum adds post-quantum cryptography precompiles on top of the standard EVM precompiles.
+In **Phase 2**, QDay will add post-quantum cryptography precompiles on top of the standard EVM precompiles. They are not available on Aevum testnet yet.
 
 ## Cryptography
 
-Standard Ethereum precompiles (`ecrecover`, SHA-256, modexp, and the others) behave as on Ethereum. QDay Aevum additionally exposes lattice-based signature verification so contracts can check ML-DSA-65 and hybrid signatures without a Solidity implementation of the scheme.
+Standard Ethereum precompiles (`ecrecover`, SHA-256, modexp, and the others) behave as on Ethereum. In Phase 2, QDay will additionally expose lattice-based signature verification so contracts can check ML-DSA-65 and hybrid signatures without a Solidity implementation of the scheme.
 
 ## ML-DSA-65 Verify
 
@@ -42,4 +42,4 @@ address constant HYBRID_VERIFY = address(0x101);
 
 ## Future Extensions
 
-Precompile addresses are confirmed at Phase 2 launch. Additional verification precompiles may be added as the post-quantum account model lands. Check the [Reference](/Knowledge/technical/reference) page for current addresses.
+Precompile addresses will be published at Phase 2 launch. Additional verification precompiles may be added as the post-quantum account model lands.

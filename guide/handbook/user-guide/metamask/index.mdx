@@ -89,6 +89,18 @@ If automatic addition fails, you can add the network manually:
 QDay mainnet is in development. Its network parameters will be published here at launch.
 :::
 
+### Add QDay Origin mainnet (existing network)
+
+QDay Origin is the existing QDay network and keeps running. Add it as well if you hold QDAY, WQDAY or WABEL from it — for example to unstake, convert WQDAY / WABEL, or use QDay Swap. Existing QDAY balances from the Abelian mobile app are on QDay Origin mainnet.
+
+| Field | Value |
+|---|---|
+| Network name | QDay Origin |
+| RPC URL | `https://rpc.qday.io` |
+| Chain ID | `44001` |
+| Currency symbol | QDAY |
+| Block explorer | `https://explorer.qday.io` |
+
 ## Import QDAY Wallet
 
 1. First, export the private key of your QDAY wallet from the Abelian mobile app.
@@ -96,15 +108,15 @@ QDay mainnet is in development. Its network parameters will be published here at
 
    ![Import QDAY Wallet Account](/qday/metamask/import-qday-account.png)
 
-3. Select **"Private Key"**, paste your backed-up private key, and click **"Import"**. Your QDAY wallet is now successfully added to MetaMask.
+3. Select **"Private Key"**, paste your backed-up private key, and click **"Import"**. Your QDAY wallet is now successfully added to MetaMask. Its existing QDAY balance is on **QDay Origin mainnet** — switch to that network to see it (see [Add QDay Origin mainnet](#add-qday-origin-mainnet-existing-network)).
 
    ![Enter QDAY Wallet Private Key](/qday/metamask/input-qday-privatekey-en.png)
 
 ## Add ERC20 Tokens to MetaMask
 
-### Add USD8 Token to MetaMask
+### Add tUSD8 Token to MetaMask
 
-1. Make sure you are connected to the QDAY network in MetaMask.
+1. Make sure MetaMask is on the network the token belongs to (QDay Aevum testnet or QDay Origin mainnet — see the address list below).
 2. Under the **"Tokens"** tab, click **"Import tokens"**.
 
    ![MetaMask Import USD8 Token 1](/qday/metamask/import-tokens1.png)
@@ -121,7 +133,7 @@ QDay mainnet is in development. Its network parameters will be published here at
 
 #### Token Contract Address List
 
-Make sure MetaMask is connected to QDay Aevum testnet before importing.
+Token addresses differ by network. Make sure MetaMask is on the matching network before importing.
 
 **QDay Aevum testnet (Chain ID 44005)**
 
@@ -131,12 +143,20 @@ Make sure MetaMask is connected to QDay Aevum testnet before importing.
 | **WQDAY**     | 0x915E807e7EC1665889172902781FB851202A54dF |
 | **WABEL**     | 0x4668107253E28C2b569E76Edb14B1E88c3b93de1 |
 
+**QDay Origin mainnet (Chain ID 44001)** — existing network
+
+| Contract Name | Token Contract Address                     |
+| ------------- | ------------------------------------------ |
+| **USD8**      | 0x668FaAFd6b363d6cED62491BfCBE2A39da3D14cB |
+| **WQDAY**     | 0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660 |
+| **WABEL**     | 0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882 |
+
 Tip: Follow the same steps above to add WQDAY and WABEL tokens to MetaMask.
 
 ## What's next
 
 <NextSteps steps={[
-  { title: "Get testnet tokens", desc: "Claim QDAY to pay for gas", to: "/guide/start/faucet" },
-  { title: "Swap tokens", desc: "Trade WABEL / QDAY / USD8", to: "/guide/handbook/user-guide/swap" },
-  { title: "Migrate to QDay", desc: "Move your assets one-way", to: "/Knowledge/migration/overview" },
+  { title: "Get testnet tokens", desc: "Claim tQDAY to pay for gas", to: "/guide/start/faucet" },
+  { title: "Token list", desc: "QDay Aevum testnet tokens", to: "/Knowledge/reference/tokens" },
+  { title: "Migration", desc: "What to expect — opens after QDay mainnet launch", to: "/Knowledge/migration/overview" },
 ]} />

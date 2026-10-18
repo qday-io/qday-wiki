@@ -169,10 +169,9 @@ const config: Config = {
         {
           label: 'Testnet', position: 'right',
           items: [
-            { label: 'Explorer', href: 'https://explorer.qday.info' },
-            { label: 'Portal', href: 'https://portal.qday.info' },
-            { label: 'Bridge', href: 'https://portal.qday.info/en/bridge' },
+            { label: 'Explorer', href: 'https://explorer-test.qday.info' },
             { label: 'Faucet', to: '/guide/start/faucet' },
+            { label: 'Add Network', to: '/guide/start/add-network' },
           ],
         },
         // Community icon buttons (GitHub / X / LinkedIn), styled in custom.css.
@@ -218,7 +217,7 @@ const config: Config = {
           { label: 'GitHub', href: 'https://github.com/qday-io' },
         ]},
       ],
-      copyright: `QDay · Abelian Foundation`,
+      copyright: `QDay Foundation`,
     },
     prism: {
       theme: prismThemes.github,

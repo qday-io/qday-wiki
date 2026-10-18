@@ -5,7 +5,11 @@ draft: false
 
 # Payment Architecture
 
-QDay Aevum includes a first-class payment layer designed for high-frequency, low-latency commerce and agent-driven micropayments.
+:::note[Planned — Q1 2027]
+The payment layer, including Agent Payment and x402 support, launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::
+
+QDay will include a first-class payment layer designed for high-frequency, low-latency commerce and agent-driven micropayments.
 
 **Payment Gateway** — A unified API layer that abstracts the underlying smart contract interactions. Merchants and dApps interact with the Payment Gateway to create payment requests without writing contract code.
 
@@ -13,7 +17,7 @@ QDay Aevum includes a first-class payment layer designed for high-frequency, low
 
 **Merchant** — Merchant onboarding registers a merchant address and webhook endpoint with the Payment Gateway. Merchants receive settlement notifications via webhook when payments finalize.
 
-**Invoice** — A structured payment request with an amount, currency (PQUSD or native gas token), expiry, and metadata. Invoices are created on-chain and can be paid by any account or AI agent.
+**Invoice** — A structured payment request with an amount, currency (USD8 or the native gas token QDAY), expiry, and metadata. Invoices are created on-chain and can be paid by any account or AI agent.
 
 **Subscription** — Recurring payment plans are implemented as Session Key authorizations. A subscriber grants the merchant's payment contract a Session Key limited to a specific amount per period.
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import { ensureQday2, fmtEther, getProvider, rpcCall } from './wallet';
 import ConnectButtons from './ConnectButtons';
 
@@ -15,10 +16,14 @@ const DRIP_AMOUNT = '0x35a1529b'; //         dripAmount()
 
 // Custom errors the contract can revert with.
 const REVERTS: Record<string, string> = {
-  '0xc1ab61a1': 'This address already claimed recently. Try again after the cooldown.', // CooldownActive
-  '0xc1336f85': 'The faucet is temporarily out of QDAY. Please try again later.', //      FaucetEmpty
-  '0x9e87fac8': 'The faucet is paused right now. Please try again later.', //             Paused
-  '0xba092d16': 'Claims must come from a regular wallet, not a contract.', //             NotEOA
+  // CooldownActive
+  '0xc1ab61a1': translate({id: 'faucet.err.cooldown', message: 'This address already claimed recently. Try again after the cooldown.'}),
+  // FaucetEmpty
+  '0xc1336f85': translate({id: 'faucet.err.empty', message: 'The faucet is temporarily out of tQDAY. Please try again later.'}),
+  // Paused
+  '0x9e87fac8': translate({id: 'faucet.err.paused', message: 'The faucet is paused right now. Please try again later.'}),
+  // NotEOA
+  '0xba092d16': translate({id: 'faucet.err.notEoa', message: 'Claims must come from a regular wallet, not a contract.'}),
 };
 
 function withAddress(selector: string, addr: string): string {
@@ -28,7 +33,9 @@ function withAddress(selector: string, addr: string): string {
 function fmtWait(sec: number): string {
   const h = Math.floor(sec / 3600);
   const m = Math.ceil((sec % 3600) / 60);
-  return h > 0 ? `${h} h ${m} min` : `${m} min`;
+  return h > 0
+    ? translate({id: 'faucet.wait.hm', message: '{h} h {m} min', description: 'Faucet cooldown: hours and minutes'}, {h, m})
+    : translate({id: 'faucet.wait.m', message: '{m} min', description: 'Faucet cooldown: minutes'}, {m});
 }
 
 // Pulls a revert selector out of whatever shape the wallet or RPC error has.
@@ -56,14 +63,14 @@ export default function FaucetWidget() {
   async function claim() {
     const account = addr;
     const eth = getProvider();
-    if (!account || !eth) { setState('err'); setMsg('Connect a wallet first.'); return; }
+    if (!account || !eth) { setState('err'); setMsg(translate({id: 'faucet.err.connectFirst', message: 'Connect a wallet first.'})); return; }
     try {
       setState('busy'); setMsg('');
 
       // 1. Cooldown: read it from the chain before asking the wallet to sign.
       const wait = Number(BigInt(await rpcCall('eth_call', [{ to: FAUCET, data: withAddress(TIME_UNTIL_NEXT, account) }, 'latest'])));
       if (wait > 0) {
-        setState('err'); setMsg(`This address already claimed. You can claim again in ${fmtWait(wait)}.`);
+        setState('err'); setMsg(translate({id: 'faucet.err.alreadyClaimed', message: 'This address already claimed. You can claim again in {wait}.'}, {wait: fmtWait(wait)}));
         return;
       }
 
@@ -71,15 +78,19 @@ export default function FaucetWidget() {
       const balance = BigInt(await rpcCall('eth_getBalance', [account, 'latest']));
       if (balance === 0n) {
         setState('err');
-        setMsg(<>This wallet has no QDAY on QDay Aevum yet, so it cannot pay the gas for a claim. Get your first
-          QDAY at <a href={FAUCET_SITE} target="_blank" rel="noreferrer">faucet.qday.info</a>, which covers
-          the gas for you.</>);
+        setMsg(
+          <Translate
+            id="faucet.err.noGas"
+            values={{site: <a href={FAUCET_SITE} target="_blank" rel="noreferrer">faucet.qday.info</a>}}>
+            {'This wallet has no tQDAY on QDay Aevum yet, so it cannot pay the gas for a claim. Get your first tQDAY at {site}, which covers the gas for you.'}
+          </Translate>,
+        );
         return;
       }
 
       // 3. Network: the claim must go to QDay Aevum, never to whatever chain the wallet is on.
       if (!(await ensureQday2())) {
-        setState('err'); setMsg('Switch your wallet to QDay Aevum (chain ID 44005), then try again.');
+        setState('err'); setMsg(translate({id: 'faucet.err.wrongChain', message: 'Switch your wallet to QDay Aevum (chain ID 44005), then try again.'}));
         return;
       }
 
@@ -87,7 +98,7 @@ export default function FaucetWidget() {
       try {
         await rpcCall('eth_call', [{ from: account, to: FAUCET, data: withAddress(CLAIM, account) }, 'latest']);
       } catch (e: any) {
-        setState('err'); setMsg(revertMessage(e) ?? `The faucet refused the claim: ${e?.message ?? 'unknown reason'}.`);
+        setState('err'); setMsg(revertMessage(e) ?? translate({id: 'faucet.err.refused', message: 'The faucet refused the claim: {reason}.'}, {reason: e?.message ?? translate({id: 'faucet.err.unknownReason', message: 'unknown reason'})}));
         return;
       }
 
@@ -97,19 +108,19 @@ export default function FaucetWidget() {
         params: [{ from: account, to: FAUCET, data: withAddress(CLAIM, account), value: '0x0' }],
       });
       const txLink = <a href={`${EXPLORER}/tx/${tx}`} target="_blank" rel="noreferrer">{tx.slice(0, 10)}…</a>;
-      setMsg(<>Claim sent ({txLink}). Waiting for confirmation…</>);
+      setMsg(<Translate id="faucet.status.sent" values={{tx: txLink}}>{'Claim sent ({tx}). Waiting for confirmation…'}</Translate>);
 
       // 5. Only report success once the chain says so.
       const receipt = await waitForReceipt(tx);
       if (!receipt) {
-        setState('err'); setMsg(<>Claim sent ({txLink}) but not confirmed yet. Check the explorer in a minute.</>);
+        setState('err'); setMsg(<Translate id="faucet.status.unconfirmed" values={{tx: txLink}}>{'Claim sent ({tx}) but not confirmed yet. Check the explorer in a minute.'}</Translate>);
       } else if (receipt.status === '0x1') {
-        setState('ok'); setMsg(<>Received {fmtEther(drip)} testnet QDAY ({txLink}).</>);
+        setState('ok'); setMsg(<Translate id="faucet.status.received" values={{amount: fmtEther(drip), tx: txLink}}>{'Received {amount} testnet tQDAY ({tx}).'}</Translate>);
       } else {
-        setState('err'); setMsg(<>The claim transaction failed on-chain ({txLink}).</>);
+        setState('err'); setMsg(<Translate id="faucet.status.failed" values={{tx: txLink}}>{'The claim transaction failed on-chain ({tx}).'}</Translate>);
       }
     } catch (e: any) {
-      setState('err'); setMsg(revertMessage(e) ?? e?.shortMessage ?? e?.message ?? 'Claim failed.');
+      setState('err'); setMsg(revertMessage(e) ?? e?.shortMessage ?? e?.message ?? translate({id: 'faucet.err.claimFailed', message: 'Claim failed.'}));
     }
   }
 
@@ -118,9 +129,13 @@ export default function FaucetWidget() {
       border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 12,
       padding: '18px 20px', margin: '1rem 0', background: 'var(--ifm-background-surface-color)',
     }}>
-      <div style={{ fontWeight: 650, marginBottom: 4 }}>Get testnet QDAY</div>
+      <div style={{ fontWeight: 650, marginBottom: 4 }}>
+        <Translate id="faucet.title">Get testnet tQDAY</Translate>
+      </div>
       <div style={{ fontSize: 14, color: 'var(--ifm-color-emphasis-700)', marginBottom: 12 }}>
-        {addr ? <>Connected <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code></> : 'Connect your wallet to claim gas on QDay Aevum.'}
+        {addr
+          ? <Translate id="faucet.connected" values={{addr: <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code>}}>{'Connected {addr}'}</Translate>
+          : translate({id: 'faucet.intro', message: 'Connect your wallet to claim gas on QDay Aevum.'})}
       </div>
       {addr ? (
         <button onClick={claim} disabled={state === 'busy'} style={{
@@ -128,7 +143,9 @@ export default function FaucetWidget() {
           padding: '9px 16px', fontWeight: 600, fontSize: 14.5,
           cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
         }}>
-          {state === 'busy' ? 'Working…' : 'Claim testnet QDAY'}
+          {state === 'busy'
+            ? translate({id: 'faucet.button.busy', message: 'Working…'})
+            : translate({id: 'faucet.button.claim', message: 'Claim testnet tQDAY'})}
         </button>
       ) : (
         <ConnectButtons

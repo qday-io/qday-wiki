@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Partners
-draft: false
 ---
 
 # Partners

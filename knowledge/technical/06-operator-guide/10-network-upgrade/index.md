@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Network Upgrade
-draft: false
 ---
 
 # Network Upgrade

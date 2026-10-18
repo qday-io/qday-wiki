@@ -27,10 +27,12 @@ const T = {
 // e.g. POST /api/ask { question, locale } -> { answer, sources[] }
 async function askBackend(question: string): Promise<string> {
   await new Promise((r) => setTimeout(r, 600));
-  return (
-    "The AI assistant isn't connected yet. When it is, it'll answer from this " +
-    'wiki\'s content (the docs are MDX, so it can be indexed and cited). ' +
-    `You asked: "${question}"`
+  return translate(
+    {
+      id: 'ai.notConnected',
+      message: 'The AI assistant isn\'t connected yet. When it is, it\'ll answer from this wiki\'s content (the docs are MDX, so it can be indexed and cited). You asked: "{question}"',
+    },
+    {question},
   );
 }
 
@@ -55,7 +57,7 @@ export default function AskAI() {
       const answer = await askBackend(question);
       setMsgs((m) => [...m, { role: 'assistant', text: answer }]);
     } catch {
-      setMsgs((m) => [...m, { role: 'assistant', text: 'Something went wrong. Please try again.' }]);
+      setMsgs((m) => [...m, { role: 'assistant', text: translate({id: 'ai.error', message: 'Something went wrong. Please try again.'}) }]);
     } finally {
       setBusy(false);
     }
@@ -83,7 +85,7 @@ export default function AskAI() {
                 <div style={{ fontSize: 11.5, color: 'var(--ifm-color-emphasis-600)' }}>{T.subtitle}</div>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} aria-label="Close" style={{
+            <button onClick={() => setOpen(false)} aria-label={T.close} style={{
               background: 'transparent', border: 0, cursor: 'pointer', fontSize: 20,
               color: 'var(--ifm-color-emphasis-600)', lineHeight: 1,
             }}>×</button>
@@ -135,7 +137,7 @@ export default function AskAI() {
       )}
 
       {/* launcher */}
-      <button onClick={() => setOpen((v) => !v)} aria-label="Ask QDay AI" style={{
+      <button onClick={() => setOpen((v) => !v)} aria-label={T.title} style={{
         display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto',
         padding: '12px 18px', borderRadius: 999, border: 0, cursor: 'pointer',
         background: 'var(--ifm-color-primary)', color: '#fff', fontWeight: 650, fontSize: 15,

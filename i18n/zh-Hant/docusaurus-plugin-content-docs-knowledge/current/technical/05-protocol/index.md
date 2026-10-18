@@ -1,9 +1,9 @@
 ---
-title: 協定
+title: 協議
 draft: false
-sidebar_label: 協定
+sidebar_label: 協議
 ---
 
-# 協定
+# 協議
 
-QDay Aevum 的底層協定設計——共識、證明、跨鏈與應用層協定。
+QDay Aevum 的底層協議設計——共識、證明、跨鏈與應用層協議。

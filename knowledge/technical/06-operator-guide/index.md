@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Operator Guide
-draft: false
 ---
 
 # Operator Guide

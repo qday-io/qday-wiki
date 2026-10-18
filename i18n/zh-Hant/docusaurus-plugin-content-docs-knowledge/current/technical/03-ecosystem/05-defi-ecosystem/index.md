@@ -1,16 +1,16 @@
 ---
-title: DeFi 生態系
+title: DeFi 生態系統
 draft: false
 ---
 
-# DeFi 生態系
+# DeFi 生態系統
 
-**QDay Swap** — QDay Aevum 代幣的去中心化交易所，支援 QDAY、wABEL（包裝版 ABEL）、PQUSD 以及跨鏈而來的 ERC-20 代幣。支援標準 AMM 兌換路由。
+**QDay Swap**——採用標準 AMM 兌換路由的去中心化交易所。QDay Swap 目前在 QDay Origin 主網（鏈 ID `44001`）上運行，尚未部署於 QDay Aevum；Aevum 版本將於稍後推出。
 
-**QDay Lending** — 借貸協定，用戶可存入資產作為抵押品並據此借款。利率依使用率以算法決定。
+**QDay Lending** *（計劃中）*——借貸協議，用戶可存入資產作為抵押品並以其借款。利率根據使用率以算法釐定。
 
-**QDay Finance** — 整合式 DeFi 入口網站，在單一介面中提供兌換、質押、借貸與提供流動性等功能。
+**QDay Finance** *（計劃中）*——聚合式 DeFi 入口，在單一介面內提供兌換、借貸及流動性供應。
 
-**QDay Staking** — 在 QDay Aevum 上質押 ABEL 可賺取質押獎勵，同時在 L2 上保有流動性。質押部位會被代幣化，可作為其他 DeFi 協定的抵押品。
+**QDay Staking**——QDAY/ABEL 質押已於 2026 年 10 月 15 日結束，不再接受新的質押，亦不再產生獎勵。詳情請參閱 [QDAY 質押](/guide/handbook/user-guide/qday-staking)。
 
-**包裝版 ABEL（wABEL）** — wABEL 是從 Abelian Layer 1 跨鏈而來、兼容於 EVM 的 ABEL 表示形式。它遵循標準的 ERC-20 介面。
+**包裝 ABEL（WABEL）**——WABEL 是從 Abelian Layer 1 跨鏈轉入的 ABEL 在 EVM 上的兼容表示形式，遵循標準 ERC-20 介面。

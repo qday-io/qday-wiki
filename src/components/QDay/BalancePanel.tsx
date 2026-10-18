@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import { fmtEther, QDAY, QDAY2 } from './wallet';
 import ConnectButtons from './ConnectButtons';
 
@@ -14,7 +15,7 @@ type Network = 'qday' | 'qday2';
 
 const CHAINS: Record<Network, { label: string; chainId: number; rpc: string; tokens: Token[] }> = {
   qday: {
-    label: 'QDay Origin testnet',
+    label: translate({id: 'balance.chain.origin', message: 'QDay Origin testnet'}),
     chainId: QDAY.chainIdNum,
     rpc: QDAY.rpc,
     tokens: [
@@ -24,7 +25,7 @@ const CHAINS: Record<Network, { label: string; chainId: number; rpc: string; tok
     ],
   },
   qday2: {
-    label: 'QDay Aevum testnet',
+    label: translate({id: 'balance.chain.aevum', message: 'QDay Aevum testnet'}),
     chainId: QDAY2.chainIdNum,
     rpc: QDAY2.rpc,
     tokens: [
@@ -58,7 +59,7 @@ function scale(hex: string, decimals: number): string {
   return s.replace(/\.?0+$/, '') || '0';
 }
 
-export default function BalancePanel({ network = 'qday' }: { network?: Network }) {
+export default function BalancePanel({ network = 'qday2' }: { network?: Network }) {
   const chain = CHAINS[network];
   const [addr, setAddr] = useState<string | null>(null);
   const [rows, setRows] = useState<{ sym: string; bal: string }[]>([]);
@@ -69,14 +70,14 @@ export default function BalancePanel({ network = 'qday' }: { network?: Network }
     try {
       setState('busy'); setMsg('');
       const native = await rpc(chain.rpc, 'eth_getBalance', [account, 'latest']);
-      const out = [{ sym: 'QDAY (native)', bal: fmtEther(BigInt(native ?? '0x0')) }];
+      const out = [{ sym: translate({id: 'balance.native', message: '{sym} (native)', description: 'Native coin row in the balance panel'}, {sym: network === 'qday2' ? 'tQDAY' : 'QDAY'}), bal: fmtEther(BigInt(native ?? '0x0')) }];
       for (const t of chain.tokens) {
         const raw = await rpc(chain.rpc, 'eth_call', [{ to: t.addr, data: balanceOfData(account) }, 'latest']);
         out.push({ sym: t.sym, bal: scale(raw, t.decimals) });
       }
       setRows(out); setState('idle');
     } catch (e: any) {
-      setState('err'); setMsg(e?.message ?? 'Failed to read balances.');
+      setState('err'); setMsg(e?.message ?? translate({id: 'balance.err.read', message: 'Failed to read balances.'}));
     }
   }
 
@@ -87,9 +88,11 @@ export default function BalancePanel({ network = 'qday' }: { network?: Network }
     }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
         <div>
-          <div style={{ fontWeight: 650 }}>Your QDay assets</div>
+          <div style={{ fontWeight: 650 }}><Translate id="balance.title">Your QDay assets</Translate></div>
           <div style={{ fontSize: 12.5, color: 'var(--ifm-color-emphasis-600)', marginTop: 2 }}>
-            Read from {chain.label} (chain ID {chain.chainId})
+            <Translate id="balance.readFrom" values={{chain: chain.label, chainId: chain.chainId}}>
+              {'Read from {chain} (chain ID {chainId})'}
+            </Translate>
           </div>
         </div>
         {addr ? (
@@ -98,7 +101,9 @@ export default function BalancePanel({ network = 'qday' }: { network?: Network }
             padding: '8px 14px', fontWeight: 600, fontSize: 14,
             cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
           }}>
-            {state === 'busy' ? 'Reading…' : 'Refresh'}
+            {state === 'busy'
+              ? translate({id: 'balance.button.reading', message: 'Reading…'})
+              : translate({id: 'balance.button.refresh', message: 'Refresh'})}
           </button>
         ) : (
           <ConnectButtons
@@ -110,7 +115,9 @@ export default function BalancePanel({ network = 'qday' }: { network?: Network }
         )}
       </div>
       {addr && <div style={{ fontSize: 13, color: 'var(--ifm-color-emphasis-600)', marginTop: 4 }}>
-        <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code> on {chain.label}</div>}
+        <Translate id="balance.addressOn" values={{addr: <code>{addr.slice(0, 6)}…{addr.slice(-4)}</code>, chain: chain.label}}>
+          {'{addr} on {chain}'}
+        </Translate></div>}
       {rows.length > 0 && (
         <table style={{ width: '100%', marginTop: 14, marginBottom: 0 }}>
           <tbody>

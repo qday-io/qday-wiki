@@ -1,49 +1,53 @@
 ---
 sidebar_position: 56
-sidebar_label: Abelian 跨鏈橋 v3
+sidebar_label: Abelian 跨鏈橋
 ---
 
 import NextSteps from "@site/src/components/QDay/NextSteps";
 
 
-# Abelian Bridge 3.0 版使用指南
+# Abelian 跨鏈橋使用指南
 
 本指南說明如何使用 **Abelian Bridge**（跨鏈橋）在 Abelian 與 QDay 網絡之間轉移資產。
+
+:::info[網絡]
+Abelian Bridge 運行於 **QDay Origin 主網**、**QDay Origin 測試網**及 **QDay Aevum 測試網**。
+:::
 
 支援的跨鏈方向：
 
 - **ABEL → WABEL**
 - **WABEL → ABEL**
 
-## 教學
+## 教學 {/* #tutorial */}
 
 依照以下步驟完成一筆跨鏈交易。
 
 [**一般用戶入口網站網址**](https://portal.qday.io/en/abel-conversion)
 
-### 步驟 1：連接錢包並授權跨鏈橋
+### 步驟 1：連接錢包並授權跨鏈橋 {/* #step-1-connect-your-wallet-and-authorize-the-bridge */}
 
 開始跨鏈交易之前，請先將你的錢包連接到 Abelian Bridge。
 
 錢包連接完成後：
 
 1. 點擊 **Authorize（授權）**。
-2. 在 MetaMask 中檢視簽章請求。
+2. 在 MetaMask 中檢視簽名請求。
 3. 點擊 **Confirm（確認）** 以繼續。
 
 此授權允許你的錢包與跨鏈橋互動。
 
 :::tip[注意]
-此步驟不會轉移代幣，也不需要支付網絡交易費用。
+此步驟不會轉移代幣，也不需要支付網絡交易手續費。
 :::
 
 ![MetaMask 錢包授權](/abel-bridge-v3/01-authorize-wallet.png)
 
 *在 MetaMask 中確認跨鏈橋授權請求以繼續。*
 
-### 步驟 2：輸入跨鏈資訊
+### 步驟 2：輸入跨鏈資訊 {/* #step-2-enter-bridge-details */}
 
-#### 小額交易
+#### 小額交易 {/* #low-amount-transaction */}
 
 輸入跨鏈交易的相關資訊。
 
@@ -64,7 +68,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *輸入跨鏈交易資訊，例如網絡、代幣、金額與錢包地址。*
 
-#### 更改跨鏈方向
+#### 更改跨鏈方向 {/* #change-the-bridge-direction */}
 
 點擊 **From（來源）** 與 **To（目的地）** 區塊之間的 **切換圖示**，即可更改跨鏈方向：
 
@@ -73,7 +77,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 來源與目的地的網絡、代幣及錢包資訊會自動更新。
 
-#### 使用最大餘額
+#### 使用最大餘額 {/* #use-the-maximum-balance */}
 
 點擊 **MAX** 可自動將你全部可用的代幣餘額填入 **Amount（金額）** 欄位。
 
@@ -89,7 +93,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *切換跨鏈方向，或點擊 MAX 使用全部可用代幣餘額。*
 
-#### 大額交易
+#### 大額交易 {/* #large-amount-transaction */}
 
 當輸入的金額達到以下條件時，該筆跨鏈交易會被視為大額交易：
 
@@ -115,7 +119,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *需要人工審核的大額轉換請求所顯示的警告訊息。*
 
-#### 確認交易
+#### 確認交易 {/* #confirm-the-transaction */}
 
 點擊 **Generate QR Code（產生 QR Code）** 或 **Generate New Order（產生新訂單）** 後，會顯示 **Confirm Transaction（確認交易）** 彈出視窗。
 
@@ -141,36 +145,36 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *WABEL -> ABEL 跨鏈的確認彈出視窗。*
 
-### 步驟 3：完成代幣轉帳
+### 步驟 3：完成代幣轉帳 {/* #step-3-complete-the-token-transfer */}
 
 轉帳方式取決於所選的跨鏈方向：
 
-- **ABEL → WABEL：** 使用 Abelian 行動應用程式掃描 QR Code，並完成 ABEL 轉帳。
+- **ABEL → WABEL：** 使用 Abelian 手機應用程式掃描 QR Code，並完成 ABEL 轉帳。
 - **WABEL → ABEL：** 點擊 **Transfer WABEL（轉帳 WABEL）**，並在已連接的錢包中確認交易。
 
-#### 小額 ABEL → WABEL 交易
+#### 小額 ABEL → WABEL 交易 {/* #low-amount-abel--wabel-transaction */}
 
 確認交易資訊後，會顯示 **Scan QR Code（掃描 QR Code）** 彈出視窗。
 
 完成轉帳：
 
-1. 開啟 **Abelian 行動應用程式**。
+1. 開啟 **Abelian 手機應用程式**。
 2. 選擇 **Abelian** 帳戶。
-3. 點選 **Send（發送）**，然後選擇 **(W)ABEL Conversion（(W)ABEL 轉換）**。
+3. 點擊 **Send（發送）**，然後選擇 **(W)ABEL Conversion（(W)ABEL 轉換）**。
 4. 掃描跨鏈橋頁面上顯示的 QR Code。
 5. 在應用程式中檢視轉帳資訊並確認交易。
 
 彈出視窗會顯示發送方地址、接收方地址、轉帳金額，以及完成存入的剩餘時間。
 
 :::warning[重要]
-請在 QR Code 到期前完成轉帳。網絡費用會在轉帳時由 Abelian 行動應用程式計算。
+請在 QR Code 到期前完成轉帳。網絡費用會在轉帳時由 Abelian 手機應用程式計算。
 :::
 
 ![掃描 QR Code 完成 ABEL 轉 WABEL 存入](/abel-bridge-v3/07-scan-qr-code.png)
 
-*使用 Abelian 行動應用程式掃描 QR Code 以完成存入。*
+*使用 Abelian 手機應用程式掃描 QR Code 以完成存入。*
 
-#### 跨鏈成功（ABEL → WABEL）
+#### 跨鏈成功（ABEL → WABEL） {/* #bridge-successful-abel--wabel */}
 
 對於小額交易，系統會自動偵測已完成的存入，並處理跨鏈請求。
 
@@ -194,7 +198,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *顯示交易資訊與更新後餘額的跨鏈成功畫面。*
 
-#### WABEL → ABEL 交易
+#### WABEL → ABEL 交易 {/* #wabel--abel-transaction */}
 
 對於 **WABEL → ABEL** 交易，請從已連接的錢包將 WABEL 發送至跨鏈橋的存入地址。
 
@@ -215,7 +219,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *檢視存入資訊並點擊 Transfer WABEL 以發起交易。*
 
-#### 跨鏈成功（WABEL → ABEL）
+#### 跨鏈成功（WABEL → ABEL） {/* #bridge-successful-wabel--abel */}
 
 對於小額 **WABEL → ABEL** 交易，系統會自動偵測已完成的存入，並處理跨鏈請求。
 
@@ -237,7 +241,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *顯示收到的 ABEL 與交易資訊的跨鏈成功畫面。*
 
-#### 大額交易
+#### 大額交易 {/* #large-value-transaction */}
 
 大額跨鏈交易在代幣轉帳完成後，需要經過人工審核。
 
@@ -246,7 +250,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 - 若請求獲得核准，交易會被處理，狀態變更為 **Bridge Successful（跨鏈成功）**。
 - 若請求被拒絕，狀態變更為 **Bridge Failed（跨鏈失敗）**，此時可以申請退款。
 
-##### 申請退款
+##### 申請退款 {/* #request-a-refund */}
 
 當顯示 **Bridge Failed（跨鏈失敗）** 畫面時：
 
@@ -264,7 +268,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *針對被拒絕或失敗交易的跨鏈失敗畫面，並提供申請退款的選項。*
 
-##### 提出退款請求
+##### 提出退款請求 {/* #requesting-a-refund */}
 
 當轉換被拒絕、失敗或過期時，**Refund（退款）** 選項可能會變為可用。
 
@@ -284,7 +288,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *顯示退款總金額的退款確認彈出視窗。*
 
-#### 退款完成
+#### 退款完成 {/* #refund-completed */}
 
 退款成功處理後，狀態會變更為 **Refund Completed（退款完成）**。
 
@@ -304,7 +308,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *顯示退款金額與交易雜湊的退款完成畫面。*
 
-## 近期交易
+## 近期交易 {/* #recent-transactions */}
 
 **Recent Transactions（近期交易）** 區塊會顯示你的跨鏈交易紀錄。
 
@@ -324,9 +328,9 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 
 *顯示過往跨鏈活動的近期交易紀錄區塊。*
 
-## 下一步
+## 下一步 {/* #whats-next */}
 
 <NextSteps steps={[
   { title: "兌換代幣", to: "/guide/handbook/user-guide/swap" },
-  { title: "遷移至 QDay", desc: "單向資產遷移", to: "/Knowledge/migration/overview" },
+  { title: "遷移", desc: "須知事項——QDay 主網推出後開放", to: "/Knowledge/migration/overview" },
 ]} />

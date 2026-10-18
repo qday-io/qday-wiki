@@ -7,12 +7,8 @@
     "message": "網絡",
     "description": "The title of the footer links column with title=Network in the footer"
   },
-  "link.title.More": {
-    "message": "更多",
-    "description": "The title of the footer links column with title=More in the footer"
-  },
   "link.item.label.Get Started": {
-    "message": "快速開始",
+    "message": "開始使用",
     "description": "The label of footer link with label=Get Started linking to /guide/start/add-network"
   },
   "link.item.label.Migration": {
@@ -36,7 +32,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/qday-io"
   },
   "copyright": {
-    "message": "QDay · Abelian Foundation",
+    "message": "QDay 基金會",
     "description": "The footer copyright"
   },
   "link.title.Community": {

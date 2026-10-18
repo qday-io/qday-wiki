@@ -1,16 +1,16 @@
 ---
-title: 網絡拓樸
+title: 網絡拓撲
 draft: false
 ---
 
-# 網絡拓樸
+# 網絡拓撲
 
-QDay Aevum 運作於四個邏輯層之上：
+QDay Aevum 橫跨四個邏輯層運作：
 
-**用戶端層（Client Layer）** — 錢包、dApp 與 RPC 用戶端連接至 QDAY 節點（cdk-erigon）的 JSON-RPC 端點。RPC 閘道會將請求負載平衡至多個讀取副本。
+**客戶端層**——錢包、dApp 及 RPC 客戶端連接至 QDAY Node（cdk-erigon）的 JSON-RPC 端點。RPC Gateway 將請求負載平衡至多個唯讀副本。
 
-**L2 執行層（L2 Execution Layer）** — `cdk-erigon` 同時擔任排序器與全節點。它維護 EVM 狀態與交易池（TxPool），並產生 L2 區塊。
+**L2 執行層**——`cdk-erigon` 同時擔任排序器（Sequencer）與全節點。它維護 EVM 狀態與交易池（TxPool），並產生 L2 區塊。
 
-**DA / 結算層（DA / Settlement Layer）** — Abelian Plus 節點使用 `reth`（執行）與 `lighthouse`（共識）提供資料可用性。所有 zkEVM 合約——`PolygonZkEVMBridge`、`PolygonRollupManager`、`GlobalExitRoot` 與 `Verifier`——皆部署於此層。
+**DA / 結算層**——Abelian Plus Node 使用 `reth`（執行層）與 `lighthouse`（共識層）提供數據可用性。所有 zkEVM 合約——`PolygonZkEVMBridge`、`PolygonRollupManager`、`GlobalExitRoot` 及 `Verifier`——都部署於此。
 
-**L1 記錄層（L1 Record Layer）** — Committer 將批次狀態根與 rollup 摘要直接寫入 Abelian 區塊鏈。這是所有 QDay Aevum 狀態的抗量子錨點。
+**L1 記錄層**——Committer 將批次狀態根與 Rollup 摘要直接寫入 Abelian 區塊鏈。這是所有 QDay Aevum 狀態的抗量子錨點。

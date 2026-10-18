@@ -8,10 +8,14 @@ import BalancePanel from '@site/src/components/QDay/BalancePanel';
 
 # Get testnet tokens
 
-Claim testnet **QDAY** for gas — right here, no separate faucet site needed. This widget connects your
-wallet, switches to QDay, and calls the real faucet contract.
+Claim testnet **tQDAY** for gas. This widget connects your wallet, switches to QDay Aevum testnet,
+and calls the faucet contract.
 
 <FaucetWidget />
+
+:::tip[Brand-new wallet?]
+Claiming here is an on-chain transaction, so it needs a little gas. If your wallet has **0 tQDAY**, get your first tQDAY at [faucet.qday.info](https://faucet.qday.info) first — it covers the gas for you.
+:::
 
 :::info[One claim per cooldown]
 The faucet enforces a per-address cooldown on-chain. If you claimed recently, it'll tell you when you
@@ -21,16 +25,11 @@ can claim again.
 ## Check your assets
 
 Connect to see your live balance on **QDay Aevum (chain ID 44005)**, read straight from the chain —
-this is where the faucet sends testnet QDAY:
+this is where the faucet sends tQDAY:
 
 <BalancePanel network="qday2" />
 
 :::note[Aevum testnet tokens]
 The panel also shows your WABEL, WQDAY and tUSD8 on Aevum. Contract addresses and one-click
 **+ Add** buttons are on the [token list](/Knowledge/reference/tokens).
-:::
-
-:::tip[This is "embedding a dApp"]
-The button above isn't a link to another site — it's a live contract call from inside the docs. The
-same pattern can embed wrap or migrate flows on their own guide pages.
 :::

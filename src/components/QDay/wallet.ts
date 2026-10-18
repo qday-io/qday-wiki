@@ -39,7 +39,7 @@ const QDAY2_PARAMS = {
   chainName: 'QDay Aevum',
   rpcUrls: [QDAY2.rpc],
   blockExplorerUrls: ['https://explorer-test.qday.info'],
-  nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
+  nativeCurrency: { name: 'tQDAY', symbol: 'tQDAY', decimals: 18 },
 };
 
 // Switches the connected wallet to QDay Aevum, adding the network when it is

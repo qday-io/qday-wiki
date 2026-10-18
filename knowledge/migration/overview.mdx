@@ -7,79 +7,41 @@ import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
 
 # QDay Migration
 
-Two different moves are happening at once. **Chain upgrade** is the network itself: QDay Origin → QDay Aevum. **Asset migration** is your tokens: lock on QDay Origin, receive 1:1 on QDay Aevum.
+QDay is being upgraded. **QDay Aevum** is the public testnet of the upgraded network, and the upgraded **QDay mainnet** is in development. Migration is **not open yet** — this page explains what to expect.
 
 ---
 
-## 1. Chain upgrade
+## 1. Networks today
 
-**QDay Origin** is today’s production chain. **QDay Aevum** is the upgraded network (new chain ID, new RPC, new explorer). Wallets and dApps must add QDay Aevum; they do not automatically follow the upgrade.
-
-| | QDay Origin | QDay Aevum |
+| | Status | Chain ID |
 |---|---|---|
-| What it is | Current production network | Upgraded network |
-| Mainnet | **Live** — chain ID `44001` | **Not open yet** — chain ID `44002` (coming) |
-| Testnet | Live — chain ID `44003` | **Live** — chain ID `44005` (current public testnet) |
+| **QDay Aevum testnet** | **Live** — try the upgraded network, build and test | `44005` |
+| **QDay mainnet** | In development — scheduled for Q1 2027 | `44002` |
 
-RPC, WebSocket, and explorers: [Chain parameters](/Knowledge/reference/chains).
-
-Live testnet endpoints:
-
-<LiveChainStatus network="qday" />
 <LiveChainStatus network="qday2" />
 
-**What this is not.** Adding Aevum to MetaMask does not move your balances. Tokens stay on the chain they were issued on until you complete asset migration (below).
+- QDay Aevum is a **testnet**. It does not replace any existing network, and its tokens (tQDAY, tUSD8, …) have no real value.
+- The current QDay network keeps running, mainnet and testnet. Nothing changes for your existing assets today.
+- Adding Aevum testnet to your wallet does **not** move your balances.
 
-**What to do for the upgrade**
-
-1. Add the chain you need: Origin mainnet (`44001`) and/or Aevum testnet (`44005`) — [Add QDay to your wallet](/guide/start/add-network).
-2. Point apps and RPC configs at the Aevum endpoint when you start building or testing on QDay Aevum — [Network Configuration](/Knowledge/technical/developer-guide/network-configuration).
-3. Keep using Origin mainnet for production until Aevum mainnet (`44002`) is announced.
+RPC, WebSocket, and explorer: [Chain parameters](/Knowledge/reference/chains). Add the network: [Add QDay to your wallet](/guide/start/add-network).
 
 ---
 
-## 2. On-chain asset migration
+## 2. Your QDAY: $QDAYp → $QDAY
 
-After the new chain exists, balances still have to be moved. You lock an asset **once** on QDay Origin; the same amount is released to you **1:1** on QDay Aevum.
+- Existing QDAY tokens are now called **QDAY Points ($QDAYp)**.
+- After the QDay mainnet Token Generation Event (TGE), $QDAYp can be swapped **1:1** for the new **$QDAY**.
+- If you hold **WQDAY** — for example after unstaking from QDAY Staking — convert it 1:1 to QDAY ($QDAYp) at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion).
 
-:::danger[One-way and permanent]
-Locking on QDay Origin cannot be undone. There is no reverse bridge. Check the amount and the QDay Aevum recipient before you sign.
+---
+
+## 3. Migration window
+
+After QDay mainnet launches, existing users move their assets during a dedicated **6–12 month migration window** ([FAQ 2.3](/guide/faq#23-what-is-the-migration-roadmap)). Step-by-step instructions and the official contract addresses will be published on the [QDay Portal](https://portal.qday.io) when the window opens.
+
+:::danger[Stay safe]
+Migration is not open yet. Do not send assets to any "migration" contract or website. Follow only the official QDay Portal and official QDay channels — the QDay team will never DM you first or ask for your seed phrase.
 :::
 
-### Status
-
-- **Mainnet (44001 → 44002)** is not open. Do not send Origin mainnet assets to any “migration” contract until addresses are published on the official [portal](https://portal.qday.io).
-- **Testnet (44003 → 44005)** is the path to use when the lockbox is deployed. Lockbox / distributor addresses will be published on the official portal at launch.
-
-### How it works
-
-```mermaid
-flowchart LR
-    A["Lock on QDay Origin"] --> B[Wait for confirmations]
-    B --> C["Relayer allocates 1:1<br/>on QDay Aevum"]
-    C --> D[Tokens received on QDay Aevum]
-```
-
-You sign **one** transaction: the lock on QDay Origin. The relayer pays gas on QDay Aevum.
-
-| Contract | Chain | Job |
-|---|---|---|
-| MigrationLockbox | QDay Origin | Holds locked assets (one-way) |
-| MigrationDistributor | QDay Aevum | Credits you 1:1 from the pre-funded pool |
-| MigrationClaim | QDay Aevum | Backstop claim if the window ends without a relay |
-
-### What can migrate
-
-Same asset set on both sides, 1:1:
-
-| Asset | How |
-|---|---|
-| USD8 / WABEL / WQDAY | Lock the ERC-20 on QDay Origin |
-| Native QDAY | Wrap to **WQDAY** first, then lock WQDAY |
-
-QDay Aevum testnet token addresses are on the [Token list](/Knowledge/reference/tokens). Token addresses differ by network — never reuse an address from one network on another.
-
-### What to do now
-
-1. Wait for official lockbox addresses on the [portal](https://portal.qday.io).
-2. When the window opens, lock only through those addresses. Ignore DMs, airdrop sites, and unofficial “migration” pages.
+Related: [FAQ — I used the old QDay](/guide/faq#2-i-used-the-old-qday) · [Token list](/Knowledge/reference/tokens)

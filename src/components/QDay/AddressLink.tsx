@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 
 // Contract/address display with copy + explorer link — the standard way mature
 // chain docs render addresses so users can verify and jump to the explorer.
@@ -42,8 +43,10 @@ export default function AddressLink({
       </a>
       <button
         onClick={copy}
-        aria-label="Copy address"
-        title={copied ? 'Copied' : 'Copy'}
+        aria-label={translate({id: 'address.copyAria', message: 'Copy address'})}
+        title={copied
+          ? translate({id: 'address.copied', message: 'Copied'})
+          : translate({id: 'address.copy', message: 'Copy'})}
         style={{
           background: 'transparent', border: 0, cursor: 'pointer', padding: 2,
           color: copied ? 'var(--ifm-color-success)' : 'var(--ifm-color-emphasis-500)', fontSize: 13,

@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Prover Node
-draft: false
 ---
 
 # Prover Node

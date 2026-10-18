@@ -1,6 +1,6 @@
 {
   "theme.ErrorPageContent.title": {
-    "message": "此頁已當機。",
+    "message": "此頁面發生錯誤。",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
@@ -64,7 +64,7 @@
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "文件選項卡",
+    "message": "文件分頁導覽",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
@@ -179,11 +179,11 @@
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "主導航",
+    "message": "主導覽",
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "我們沒有您要找的頁面。",
+    "message": "我們沒有你要找的頁面。",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
@@ -259,7 +259,7 @@
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "收合下拉選單",
+    "message": "收起下拉選單",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
@@ -334,7 +334,7 @@
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "此頁面未列出。搜索引擎不會對其索引，只有擁有直接連結的用戶才能訪問。",
+    "message": "此頁面未列出。搜尋引擎不會將其編入索引，只有擁有直接連結的用戶才能瀏覽。",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
@@ -354,7 +354,7 @@
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
-    "message": "跳至主要内容",
+    "message": "跳至主要內容",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
@@ -365,7 +365,7 @@
     "message": "我是用戶"
   },
   "home.card.user.body": {
-    "message": "把 QDay Aevum 加入錢包，swap、質押、使用 dApp。"
+    "message": "將 QDay Aevum 測試網新增至你的錢包，領取測試代幣，體驗 dApp。"
   },
   "home.card.user.cta": {
     "message": "開始使用"
@@ -374,7 +374,7 @@
     "message": "我要遷移"
   },
   "home.card.migrate.body": {
-    "message": "把 USD8 / WABEL / WQDAY 與原生 QDAY 從 QDay Origin 遷到 QDay Aevum。"
+    "message": "QDay 主網上線時你的 QDAY 會怎樣：QDAYp 按 1:1 兌換為 $QDAY。"
   },
   "home.card.migrate.cta": {
     "message": "遷移指南"
@@ -383,22 +383,10 @@
     "message": "我是開發者"
   },
   "home.card.dev.body": {
-    "message": "鏈參數、RPC 端點、合約，以及 dApp 快速上手。"
+    "message": "鏈參數、RPC 端點、合約，以及 dApp 快速入門。"
   },
   "home.card.dev.cta": {
     "message": "開發者文件"
-  },
-  "home.eyebrow": {
-    "message": "QDay Aevum · 抗量子 Layer2"
-  },
-  "home.title.before": {
-    "message": "下一代 QDay 的 "
-  },
-  "home.title.next": {
-    "message": "官方"
-  },
-  "home.title.after": {
-    "message": "知識庫。"
   },
   "home.lede": {
     "message": "全球首個兼容以太坊虛擬機（EVM）的抗量子 Layer 2 網絡，建構於創新的 Abelian 區塊鏈之上。"
@@ -407,19 +395,19 @@
     "message": "瀏覽文件 →"
   },
   "home.ecosystem": {
-    "message": "探索生態系"
+    "message": "探索生態系統"
   },
   "home.updates": {
     "message": "最新動態"
   },
   "ai.q1": {
-    "message": "如何把 QDay Aevum 加入 MetaMask？"
+    "message": "如何將 QDay Aevum 新增至 MetaMask？"
   },
   "ai.q2": {
-    "message": "遷移是怎麼運作的？"
+    "message": "遷移是怎樣運作的？"
   },
   "ai.q3": {
-    "message": "RPC 端點是什麼？"
+    "message": "RPC 端點是甚麼？"
   },
   "ai.title": {
     "message": "問 QDay AI"
@@ -445,15 +433,6 @@
   "ai.close": {
     "message": "關閉"
   },
-  "updates.qday2": {
-    "message": "QDay Aevum 測試網已上線 — 加入你的錢包"
-  },
-  "updates.migration": {
-    "message": "如何把資產從 QDay 遷移到 QDay Aevum"
-  },
-  "updates.dev": {
-    "message": "在 QDay 上開發 dApp — wagmi / viem 快速上手"
-  },
   "home.brand": {
     "message": "QDay 社群"
   },
@@ -461,7 +440,7 @@
     "message": "抗量子 EVM Layer 2 網絡"
   },
   "home.features": {
-    "message": "為什麼選 QDay"
+    "message": "為甚麼選擇 QDay"
   },
   "feat.secure.t": {
     "message": "抗量子安全"
@@ -502,5 +481,271 @@
   "theme.announcementBar.revisionNotice": {
     "message": "文件改版進行中：如發現問題，請透過 {github} 回報。",
     "description": "Announcement bar telling readers the docs are being revised and where to report issues"
+  },
+  "stats.latestBlock": {
+    "message": "最新區塊",
+    "description": "Network stats label: latest block height"
+  },
+  "stats.blockTime": {
+    "message": "出塊時間",
+    "description": "Network stats label: seconds between the last two blocks"
+  },
+  "stats.gasPrice": {
+    "message": "Gas 價格",
+    "description": "Network stats label: current gas price"
+  },
+  "stats.chainId": {
+    "message": "鏈 ID",
+    "description": "Network stats label: chain ID"
+  },
+  "stats.seconds": {
+    "message": "{n} 秒",
+    "description": "Block time value in seconds"
+  },
+  "quicklinks.explorer.title": {
+    "message": "區塊瀏覽器"
+  },
+  "quicklinks.explorer.desc": {
+    "message": "QDay Aevum 測試網的區塊、交易與地址"
+  },
+  "quicklinks.portal.title": {
+    "message": "Portal"
+  },
+  "quicklinks.portal.desc": {
+    "message": "QDay 應用程式中心"
+  },
+  "quicklinks.faucet.title": {
+    "message": "水龍頭"
+  },
+  "quicklinks.faucet.desc": {
+    "message": "領取測試網 tQDAY"
+  },
+  "quicklinks.bridge.title": {
+    "message": "跨鏈橋"
+  },
+  "quicklinks.bridge.desc": {
+    "message": "在不同鏈之間轉移資產"
+  },
+  "quicklinks.swap.title": {
+    "message": "兌換"
+  },
+  "quicklinks.swap.desc": {
+    "message": "在 QDay 上兌換代幣"
+  },
+  "quicklinks.staking.title": {
+    "message": "質押"
+  },
+  "quicklinks.staking.desc": {
+    "message": "已結束 — 請於 2026 年 12 月 31 日前解除質押並領取"
+  },
+  "updates.tag.launch": {
+    "message": "上線",
+    "description": "Updates tag pill"
+  },
+  "updates.tag.upgrade": {
+    "message": "升級",
+    "description": "Updates tag pill"
+  },
+  "updates.tag.guide": {
+    "message": "指南",
+    "description": "Updates tag pill"
+  },
+  "updates.tag.notice": {
+    "message": "公告",
+    "description": "Updates tag pill"
+  },
+  "faucet.err.cooldown": {
+    "message": "此地址最近已領取過，請於冷卻期結束後再試。"
+  },
+  "faucet.err.empty": {
+    "message": "水龍頭的 tQDAY 暫時已用完，請稍後再試。"
+  },
+  "faucet.err.paused": {
+    "message": "水龍頭目前已暫停，請稍後再試。"
+  },
+  "faucet.err.notEoa": {
+    "message": "必須使用一般錢包領取，不能使用合約地址。"
+  },
+  "faucet.wait.hm": {
+    "message": "{h} 小時 {m} 分鐘",
+    "description": "Faucet cooldown: hours and minutes"
+  },
+  "faucet.wait.m": {
+    "message": "{m} 分鐘",
+    "description": "Faucet cooldown: minutes"
+  },
+  "faucet.err.connectFirst": {
+    "message": "請先連接錢包。"
+  },
+  "faucet.err.alreadyClaimed": {
+    "message": "此地址已領取過，你可於 {wait} 後再次領取。"
+  },
+  "faucet.err.noGas": {
+    "message": "此錢包在 QDay Aevum 上尚未有 tQDAY，因此無法支付領取所需的 Gas 費。請先到 {site} 領取首筆 tQDAY，該網站會為你代付 Gas 費。"
+  },
+  "faucet.err.wrongChain": {
+    "message": "請將錢包切換至 QDay Aevum（鏈 ID 44005），然後再試。"
+  },
+  "faucet.err.refused": {
+    "message": "水龍頭拒絕了是次領取：{reason}。"
+  },
+  "faucet.err.unknownReason": {
+    "message": "原因不明"
+  },
+  "faucet.status.sent": {
+    "message": "已送出領取交易（{tx}），正在等待確認…"
+  },
+  "faucet.status.unconfirmed": {
+    "message": "已送出領取交易（{tx}），但尚未確認。請稍後在區塊瀏覽器查看。"
+  },
+  "faucet.status.received": {
+    "message": "已收到 {amount} 測試網 tQDAY（{tx}）。"
+  },
+  "faucet.status.failed": {
+    "message": "領取交易在鏈上執行失敗（{tx}）。"
+  },
+  "faucet.err.claimFailed": {
+    "message": "領取失敗。"
+  },
+  "faucet.title": {
+    "message": "領取測試網 tQDAY"
+  },
+  "faucet.connected": {
+    "message": "已連接 {addr}"
+  },
+  "faucet.intro": {
+    "message": "連接你的錢包，即可在 QDay Aevum 上領取 Gas 代幣。"
+  },
+  "faucet.button.busy": {
+    "message": "處理中…"
+  },
+  "faucet.button.claim": {
+    "message": "領取測試網 tQDAY"
+  },
+  "wallet.err.connectFailed": {
+    "message": "錢包連接失敗。"
+  },
+  "wallet.err.noWallet": {
+    "message": "找不到錢包，請先安裝錢包擴充功能。"
+  },
+  "wallet.err.rejected": {
+    "message": "請求已被拒絕。"
+  },
+  "wallet.checkWallet": {
+    "message": "請在錢包中確認…"
+  },
+  "wallet.connect": {
+    "message": "連接錢包"
+  },
+  "balance.chain.origin": {
+    "message": "QDay Origin 測試網"
+  },
+  "balance.chain.aevum": {
+    "message": "QDay Aevum 測試網"
+  },
+  "balance.native": {
+    "message": "{sym}（原生代幣）",
+    "description": "Native coin row in the balance panel"
+  },
+  "balance.err.read": {
+    "message": "讀取餘額失敗。"
+  },
+  "balance.title": {
+    "message": "你的 QDay 資產"
+  },
+  "balance.readFrom": {
+    "message": "讀取自 {chain}（鏈 ID {chainId}）"
+  },
+  "balance.button.reading": {
+    "message": "讀取中…"
+  },
+  "balance.button.refresh": {
+    "message": "重新整理"
+  },
+  "balance.addressOn": {
+    "message": "{chain} 上的 {addr}"
+  },
+  "addNetwork.err.noWallet": {
+    "message": "找不到錢包，請先安裝錢包擴充功能。"
+  },
+  "addNetwork.ok": {
+    "message": "已將 {network} 新增至你的錢包。"
+  },
+  "addToken.ok": {
+    "message": "已將 {symbol} 新增至你的錢包。"
+  },
+  "addToken.added": {
+    "message": "✓ 已新增"
+  },
+  "addToken.busy": {
+    "message": "請在錢包中確認…"
+  },
+  "addToken.button": {
+    "message": "+ 新增 {symbol}"
+  },
+  "chainStatus.unreachable": {
+    "message": "無法連接 RPC"
+  },
+  "chainStatus.connecting": {
+    "message": "連接中…"
+  },
+  "chainStatus.block": {
+    "message": "區塊 #{block}"
+  },
+  "address.copyAria": {
+    "message": "複製地址"
+  },
+  "address.copied": {
+    "message": "已複製"
+  },
+  "address.copy": {
+    "message": "複製"
+  },
+  "ai.notConnected": {
+    "message": "AI 助手尚未接通。接通後，它會根據本 wiki 的內容作答（文件採用 MDX 格式，可被索引及引用）。你的問題：「{question}」"
+  },
+  "ai.error": {
+    "message": "發生錯誤，請再試一次。"
+  },
+  "home.meta.description": {
+    "message": "QDay Aevum — 抗量子 Layer2。為用戶及開發者而設的使用指南。",
+    "description": "Homepage meta description"
+  },
+  "notFound.metaTitle": {
+    "message": "找不到頁面"
+  },
+  "notFound.eyebrow": {
+    "message": "404 · 找不到頁面"
+  },
+  "notFound.title": {
+    "message": "這個頁面走錯路了。"
+  },
+  "notFound.body": {
+    "message": "你要找的頁面不存在或已被移動。你可以前往以下頁面："
+  },
+  "notFound.home": {
+    "message": "首頁"
+  },
+  "notFound.getStarted": {
+    "message": "開始使用"
+  },
+  "notFound.migration": {
+    "message": "遷移"
+  },
+  "navbar.docs.technical": {
+    "message": "技術文件",
+    "description": "Docs dropdown label while reading the Technical (Knowledge) docs"
+  },
+  "navbar.docs.userGuide": {
+    "message": "使用指南",
+    "description": "Docs dropdown label while reading the User Guide docs"
+  },
+  "addNetwork.button.qday2": {
+    "message": "將 QDay Aevum 測試網新增至錢包",
+    "description": "Add-network button for the QDay Aevum testnet"
+  },
+  "addNetwork.button.qday": {
+    "message": "將 QDay 新增至錢包",
+    "description": "Add-network button for QDay"
   }
 }

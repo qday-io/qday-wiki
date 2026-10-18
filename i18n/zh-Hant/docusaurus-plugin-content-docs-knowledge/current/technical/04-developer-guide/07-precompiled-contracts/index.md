@@ -5,15 +5,15 @@ draft: false
 
 # 預編譯合約
 
-QDay Aevum 在標準 EVM 預編譯合約之上，新增了後量子密碼學預編譯合約。
+在**第 2 階段**，QDay 將在標準 EVM 預編譯合約之上新增後量子密碼學預編譯合約，目前 Aevum 測試網尚未提供。
 
-## 密碼學
+## 密碼學 {/* #cryptography */}
 
-標準 Ethereum 預編譯合約（`ecrecover`、SHA-256、modexp 等）的行為與 Ethereum 上相同。QDay Aevum 額外提供基於格的簽章驗證，讓合約無需以 Solidity 實作該算法即可驗證 ML-DSA-65 與混合簽章。
+標準以太坊預編譯合約（`ecrecover`、SHA-256、modexp 等）的行為與以太坊上相同。第 2 階段，QDay 將額外提供格密碼簽名驗證，讓合約無需以 Solidity 實作該方案，即可驗證 ML-DSA-65 與混合簽名。
 
-## ML-DSA-65 驗證
+## ML-DSA-65 驗證 {/* #ml-dsa-65-verify */}
 
-驗證 ML-DSA-65（FIPS 204）簽章。使用此預編譯合約可在 Solidity 合約內驗證後量子簽章。
+驗證 ML-DSA-65（FIPS 204）簽名。使用此預編譯合約可在 Solidity 合約內驗證後量子簽名。
 
 ```solidity
 // Precompile address (Phase 2)
@@ -32,14 +32,14 @@ function verifyMLDSA65(
 }
 ```
 
-## 混合驗證
+## 混合驗證 {/* #hybrid-verify */}
 
-在第一階段 → 第二階段的過渡期間，驗證 ML-DSA-65 + ECDSA 混合簽章。兩個簽章都必須有效。
+在第 1 階段 → 第 2 階段的過渡期間，驗證 ML-DSA-65 + ECDSA 混合簽名。兩個簽名都必須有效。
 
 ```solidity
 address constant HYBRID_VERIFY = address(0x101);
 ```
 
-## 未來擴充
+## 未來擴充 {/* #future-extensions */}
 
-預編譯合約地址將於第二階段上線時確定。隨着後量子帳戶模型落地，可能會新增更多驗證用的預編譯合約。目前的地址請查閱[參考資料](/Knowledge/technical/reference)頁面。
+預編譯合約地址將於第 2 階段上線時公佈。隨着後量子帳戶模型落地，可能會新增更多驗證用的預編譯合約。

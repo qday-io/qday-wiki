@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Node Overview
-draft: false
 ---
 
 # Node Overview

@@ -1,19 +1,24 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import {translate} from '@docusaurus/Translate';
 
 // Ecosystem quick-links wall — the "everything in one place" grid mature chain
 // docs use to route users to the explorer, faucet, bridge, swap, etc.
 
 type Item = { icon: string; title: string; desc: string; href: string };
 
-const LINKS: Item[] = [
-  { icon: '🔍', title: 'Explorer', desc: 'Blocks, txs, addresses, tokens', href: 'https://explorer.qday.io' },
-  { icon: '🚪', title: 'Portal', desc: 'The QDay app hub', href: 'https://portal.qday.io' },
-  { icon: '💧', title: 'Faucet', desc: 'Get testnet QDAY', href: '/guide/start/faucet' },
-  { icon: '🌉', title: 'Bridge', desc: 'Move assets across chains', href: 'https://portal.qday.info/en/bridge' },
-  { icon: '🔄', title: 'Swap', desc: 'Trade tokens on QDay', href: 'https://portal.qday.io/en/qday-swap' },
-  { icon: '📈', title: 'Staking', desc: 'Earn on QDAY / ABEL', href: 'https://portal.qday.io/en/staking' },
-];
+// Built inside the component so translate() resolves per locale. Internal
+// links (starting with "/") go through <Link>, which adds the locale prefix.
+function links(): Item[] {
+  return [
+    { icon: '🔍', title: translate({id: 'quicklinks.explorer.title', message: 'Explorer'}), desc: translate({id: 'quicklinks.explorer.desc', message: 'QDay Aevum testnet blocks, txs, addresses'}), href: 'https://explorer-test.qday.info' },
+    { icon: '🚪', title: translate({id: 'quicklinks.portal.title', message: 'Portal'}), desc: translate({id: 'quicklinks.portal.desc', message: 'The QDay app hub'}), href: 'https://portal.qday.io' },
+    { icon: '💧', title: translate({id: 'quicklinks.faucet.title', message: 'Faucet'}), desc: translate({id: 'quicklinks.faucet.desc', message: 'Get testnet tQDAY'}), href: '/guide/start/faucet' },
+    { icon: '🌉', title: translate({id: 'quicklinks.bridge.title', message: 'Bridge'}), desc: translate({id: 'quicklinks.bridge.desc', message: 'Move assets across chains'}), href: 'https://portal.qday.io/en/bridge' },
+    { icon: '🔄', title: translate({id: 'quicklinks.swap.title', message: 'Swap'}), desc: translate({id: 'quicklinks.swap.desc', message: 'Trade tokens on QDay'}), href: 'https://portal.qday.io/en/qday-swap' },
+    { icon: '📈', title: translate({id: 'quicklinks.staking.title', message: 'Staking'}), desc: translate({id: 'quicklinks.staking.desc', message: 'Ended — unstake & claim by 31 Dec 2026'}), href: '/guide/handbook/user-guide/qday-staking' },
+  ];
+}
 
 export default function QuickLinks() {
   return (
@@ -21,10 +26,10 @@ export default function QuickLinks() {
       display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
       gap: 14, maxWidth: 1000, margin: '0 auto',
     }}>
-      {LINKS.map((l) => {
+      {links().map((l) => {
         const internal = l.href.startsWith('/');
         return (
-        <Link key={l.title} to={l.href} {...(internal ? {} : { target: '_blank', rel: 'noreferrer' })} style={{
+        <Link key={l.href} to={l.href} {...(internal ? {} : { target: '_blank', rel: 'noreferrer' })} style={{
           display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none',
           padding: '16px 18px', borderRadius: 12, color: 'inherit',
           border: '1px solid var(--ifm-color-emphasis-200)',

@@ -5,6 +5,10 @@ draft: false
 
 # AI Agent Security
 
+:::note[Planned — Q1 2027]
+AI agents, session keys and Smart Accounts launch with QDay mainnet in Q1 2027 and are not live today. The controls below describe the planned security model.
+:::
+
 **Session key boundaries** — Every AI agent operates exclusively through a Session Key issued by the user's Smart Account. The Session Key specifies: allowed contract addresses, allowed function selectors, per-call value limit, cumulative spend limit, and expiry timestamp. The `EntryPoint` enforces these limits at verification time — the agent's own code cannot circumvent them.
 
 **No privileged access** — Agents never hold the user's master signing key. If an agent is compromised, the attacker can only act within the Session Key's scope. Users can revoke a Session Key at any time by calling the `SessionKeyManager` on their Smart Account.

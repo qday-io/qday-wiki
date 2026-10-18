@@ -5,30 +5,33 @@ draft: false
 
 # Network Configuration
 
-QDay is a quantum-safe, EVM-compatible Layer 2. Two networks are relevant today: **Origin** (source) and **QDay Aevum** (destination). Live IDs, RPCs, and explorers: [Chain parameters](/Knowledge/reference/chains).
+QDay is a quantum-safe, EVM-compatible Layer 2. These docs target the public **QDay Aevum testnet**. The upcoming **QDay mainnet** is in development; its parameters will be published at launch. Live IDs, RPCs, and explorers: [Chain parameters](/Knowledge/reference/chains).
 
-```mermaid
-flowchart LR
-  QDay["QDay Origin (44003)\nsource"] -->|migrate 1:1| Aevum["QDay Aevum (44005)\ndestination"]
-```
-
-| | QDay Origin (mainnet) | QDay Origin (testnet) | QDay Aevum (testnet) |
-|---|---|---|---|
-| Role | Production Origin | Origin testnet | Aevum destination (1:1 allocate) |
-| Chain ID | `44001` (`0xABE1`) | `44003` (`0xABE3`) | `44005` (`0xABE5`) |
-| RPC | `https://rpc.qday.io` | `https://rpc.qday.info` | `https://rpc-test.qday.info` |
-| WebSocket | `wss://rpc.qday.io` | `wss://rpc.qday.info` | `wss://rpc-test.qday.info` |
-| Explorer | `https://explorer.qday.io` | `https://explorer.qday.info` | `https://explorer-test.qday.info` |
-| Currency | QDAY | QDAY | QDAY |
+| | QDay Aevum (testnet) | QDay mainnet |
+|---|---|---|
+| Status | Live — use for development | In development |
+| Chain ID | `44005` (`0xABE5`) | `44002` |
+| RPC | `https://rpc-test.qday.info` | Published at launch |
+| WebSocket | `wss://rpc-test.qday.info` | Published at launch |
+| Explorer | `https://explorer-test.qday.info` | Published at launch |
+| Verifier API | `https://explorer-test.qday.info/api` | Published at launch |
+| Native currency (gas) | tQDAY (18 decimals) | QDAY (18 decimals) |
+| Stablecoin | tUSD8 (`0x456569838f1d43009A91ebA4263147Afd7233483`, 18 decimals) | USD8 |
 
 :::warning[Testnet vs mainnet]
-**44001 is Origin mainnet.** **44005 is the current public Aevum testnet.** Always verify RPC, chain ID, and addresses against [Chain parameters](/Knowledge/reference/chains).
+**44005 is the current public Aevum testnet** — all code samples in these docs default to it. QDay mainnet (`44002`) parameters will be published at launch. Always verify RPC, chain ID, and addresses against [Chain parameters](/Knowledge/reference/chains).
 :::
+
+:::info[Gas and fee tokens]
+Regular network gas is paid in QDAY (tQDAY on testnet). Individual apps may charge fees in a different token — for example, the Agent Payment app (launching with QDay mainnet in Q1 2027) will charge fees in USD8.
+:::
+
+Test tokens: get tQDAY from [faucet.qday.info](https://faucet.qday.info) or the [in-docs faucet](/guide/start/faucet).
 
 ## Quick check
 
 ```bash title="Latest block via curl"
-curl -s https://rpc.qday.io \
+curl -s https://rpc-test.qday.info \
   -X POST -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"eth_blockNumber","params":[]}'
 ```

@@ -19,43 +19,43 @@ QDay works with MetaMask and any WalletConnect-compatible wallet. Add the networ
 
 ## Faucet
 
-On testnet, claim test QDAY from the [built-in faucet](/guide/start/faucet).
+On testnet, claim tQDAY from the [built-in faucet](/guide/start/faucet). A brand-new wallet with 0 tQDAY gets its first tQDAY at [faucet.qday.info](https://faucet.qday.info).
 
 
 ## Bridge
 
-To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/user-guide#qday-bridge) (ERC20 / TRC20 / QRC20) or [Abelian Bridge v3](/guide/handbook/user-guide/abelian-bridge-v3) (ABEL / WABEL).
+To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/user-guide#qday-bridge) (ERC20 / TRC20 / QRC20) or [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) (ABEL / WABEL).
 
 ## First Transaction
 
-This walkthrough sends **1 QDAY** with MetaMask on **QDay Aevum testnet** (QDay mainnet is in development). [Add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
+This walkthrough sends **1 tQDAY** with MetaMask on **QDay Aevum testnet** (QDay mainnet is in development). [Add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
 
 ### Prerequisites
 
 - [MetaMask](/guide/handbook/user-guide/metamask) installed, with the QDay network added
-- A funded account (at least 1 QDAY plus a little extra for gas)
+- A funded account (at least 1 tQDAY plus a little extra for gas)
 - The recipient's QDay address (another of your accounts is fine for practice)
 
-### Send 1 QDAY in MetaMask
+### Send 1 tQDAY in MetaMask
 
 1. Open the MetaMask extension and switch the network to **QDay Aevum** (testnet). Confirm the native token shows as tQDAY.
 2. Click **Send**.
 3. Paste the recipient address into the **To** field. Check it character by character — a wrong address cannot be reversed, and some malware silently replaces an address copied to the clipboard.
-4. Enter **1** in the amount field and make sure the asset is **QDAY**, not an ERC-20 such as USD8 or WABEL.
+4. Enter **1** in the amount field and make sure the asset is **tQDAY**, not an ERC-20 such as tUSD8 or WABEL.
 5. Click **Continue** (or **Next**). Review:
    - Network
    - Recipient
-   - Amount: 1 QDAY
+   - Amount: 1 tQDAY
    - Estimated gas fee (paid in QDAY; it should be a fraction of a cent to a few cents)
 6. Click **Confirm**. MetaMask broadcasts the transaction.
 7. Open the **Activity** tab. When the status is **Confirmed**, click the transaction to view it on the [block explorer](https://explorer-test.qday.info) (testnet; the mainnet explorer will be published at launch).
 
 :::tip[Practice on testnet]
-Send 1 QDAY to a second MetaMask account you control, then send it back. That confirms you can sign, pay gas, and read the explorer before you move mainnet funds.
+Send 1 tQDAY to a second MetaMask account you control, then send it back. That confirms you can sign, pay gas, and read the explorer before you move mainnet funds.
 :::
 
 :::warning[Gas is QDAY]
-A native transfer pays the network fee in QDAY. If MetaMask says the fee cannot be paid, you need a small extra QDAY balance on top of the 1 QDAY you are sending.
+A native transfer pays the network fee in QDAY. If MetaMask says the fee cannot be paid, you need a small extra QDAY balance on top of the 1 tQDAY you are sending.
 :::
 
 ## Deploy your first smart contract

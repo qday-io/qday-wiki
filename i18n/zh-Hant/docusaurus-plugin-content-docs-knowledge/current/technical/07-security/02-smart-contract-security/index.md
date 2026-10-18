@@ -1,11 +1,11 @@
 ---
-title: 智能合約安全性
+title: 智能合約安全
 draft: false
 ---
 
-# 智能合約安全性
+# 智能合約安全
 
-**Polygon CDK 血統**——核心 zkEVM 合約（`PolygonZkEVMBridge`、`PolygonRollupManager`、`GlobalExitRoot`、`Verifier`）是 Polygon CDK 合約的分支，這些合約已由多家安全公司獨立審計。QDAY 專屬的修改極少，且集中於 Committer 與 Record Contracts。
+**Polygon CDK 淵源**——核心 zkEVM 合約（`PolygonZkEVMBridge`、`PolygonRollupManager`、`GlobalExitRoot`、`Verifier`）是 Polygon CDK 合約的分支，這些合約已由多家安全公司獨立審計。QDAY 專屬的修改極少，且集中於 Committer 與 Record Contracts。
 
 **時間鎖（Timelock）**——`RollupManager` 上所有特權操作（合約升級、參數變更、緊急暫停）都透過 `Timelock` 合約執行，主網上最少延遲 24 小時。這讓社群有時間在變更生效前進行審查，並在必要時予以否決。
 

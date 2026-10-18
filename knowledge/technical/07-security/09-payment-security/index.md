@@ -5,6 +5,10 @@ draft: false
 
 # Payment Security
 
+:::note[Planned — Q1 2027]
+The payment layer, including Agent Payment and session-key subscriptions, launches with QDay mainnet in Q1 2027 and is not live today. The controls below describe the planned security model.
+:::
+
 **On-chain enforcement** — Payment amounts, recipient whitelists, and expiry are enforced by the Payment contract on-chain. Neither the Payment Service (off-chain API) nor the merchant can alter payment terms after the payer has committed.
 
 **Agent payment limits** — Session Keys for AI payment agents carry strict spend limits. An agent cannot initiate a payment larger than its `maxSinglePayment` or exceed its `maxDailySpend`, regardless of what external instructions it receives.
