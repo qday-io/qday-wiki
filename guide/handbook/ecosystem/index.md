@@ -13,18 +13,18 @@ QDay's ecosystem is built in layers: a core protocol connecting QDay to Abelian 
 
 QDay's ecosystem applications include:
 
-- **ABEL Staking** — stake ABEL on QDay to earn staking and airdrop rewards.
+- **ABEL Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/abel-staking) by 31 Dec 2026.
 - **QDay Bridge** — moves ERC20, TRC20, and QRC20 tokens between QDay and other EVM-compatible chains.
-- **QDay Staking** — stake QDAY to support the network and earn rewards.
-- **Q-Swap** — QDay's decentralized exchange for swapping tokens.
+- **QDay Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/qday-staking) by 31 Dec 2026.
+- **QDay Swap** — QDay's decentralized exchange for swapping tokens.
 
 ## DeFi
 
-Together, these form QDay's DeFi layer: Q-Swap handles token swaps, and staking is available for both QDAY and ABEL. The design intent is for USD8, QDay's native stablecoin, to serve as the primary collateral and settlement asset across all of them, so DeFi activity on QDay isn't exposed to native-token price swings.
+Together, these form QDay's DeFi layer: QDay Swap handles token swaps. The design intent is for USD8, QDay's native stablecoin, to serve as the primary collateral and settlement asset across all of them, so DeFi activity on QDay isn't exposed to native-token price swings.
 
 ## AI Ecosystem
 
-AI agents on QDay hold their own wallets, register a verifiable onchain identity, and pay for services directly in USD8 — a single API call can be paid for in real time, without a subscription or a human approving each transaction.
+Launching with QDay mainnet in Q1 2027, AI agents on QDay will hold their own wallets, register a verifiable onchain identity, and pay for services directly in USD8 — a single API call can be paid for in real time, without a subscription or a human approving each transaction.
 
 ## Abelian Partnership
 

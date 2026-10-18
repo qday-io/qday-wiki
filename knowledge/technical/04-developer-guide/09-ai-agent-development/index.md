@@ -5,6 +5,10 @@ draft: false
 
 # AI Agent Development
 
+:::note[Planned — Q1 2027]
+The AI agent APIs, Agent Payment, session keys and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) launch with QDay mainnet in Q1 2027 and are not live today; the SDK is not yet published on npm and `https://mcp.qday.io` goes live at launch. Code on this page shows the planned API.
+:::
+
 ## Agent SDK
 
 ```typescript
@@ -19,7 +23,7 @@ const agent = new QDAYAgent({
 
 ## MCP Integration
 
-Agents communicate with external AI models via MCP (Model Context Protocol):
+Agents will communicate with external AI models via MCP (Model Context Protocol):
 
 ```typescript
 // Register a tool the agent can call
@@ -36,7 +40,7 @@ agent.registerTool({
 });
 
 // Run the agent
-await agent.run("Swap 100 USDC for QDAY at the best available rate");
+await agent.run("Swap 100 USD8 for QDAY at the best available rate");
 ```
 
 ## Wallet Agent
@@ -45,7 +49,7 @@ A Wallet Agent monitors an account's holdings and executes portfolio management 
 
 ```typescript
 const walletAgent = agent.createWalletAgent({
-  intent: "Keep ETH balance above 0.1 by selling QDAY when needed",
+  intent: "Keep QDAY balance above 0.1 by selling USD8 when needed",
   checkInterval: 60, // seconds
 });
 await walletAgent.start();
@@ -53,7 +57,7 @@ await walletAgent.start();
 
 ## DeFi Agent
 
-A DeFi Agent interacts with QDay Swap, QDay Lending, and other DeFi protocols:
+A DeFi Agent will interact with QDay Swap, QDay Lending *(planned)*, and other DeFi protocols:
 
 ```typescript
 const defiAgent = agent.createDeFiAgent({
@@ -70,8 +74,8 @@ A Payment Agent autonomously pays for services within session-key-bounded limits
 ```typescript
 const paymentAgent = agent.createPaymentAgent({
   sessionKey,
-  maxSinglePayment: parseUnits("5", 6),    // 5 PQUSD per payment
-  maxDailySpend: parseUnits("50", 6),      // 50 PQUSD per day
+  maxSinglePayment: parseUnits("5", 18),   // 5 tUSD8 per payment (18 decimals)
+  maxDailySpend: parseUnits("50", 18),     // 50 tUSD8 per day
   allowedRecipients: [API_PROVIDER_ADDRESS],
 });
 ```

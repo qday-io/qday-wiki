@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Bug Bounty
-draft: false
 ---
 
 # Bug Bounty

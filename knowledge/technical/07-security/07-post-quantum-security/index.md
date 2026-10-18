@@ -9,6 +9,6 @@ draft: false
 
 **Why ECDSA is insufficient** — ECDSA signatures rely on the elliptic-curve discrete logarithm problem. Shor's algorithm running on a sufficiently large quantum computer can solve this in polynomial time. A quantum computer with ~4,000 logical qubits could break a 256-bit ECDSA key. "Harvest now, decrypt later" attacks mean adversaries may be collecting signed transactions today with the intent to break them when quantum hardware matures.
 
-**Hybrid signatures** — During the Phase 1 → Phase 2 transition, QDay Aevum accepts hybrid signatures containing both an ML-DSA-65 signature and an ECDSA signature. Both must be valid. This ensures backward compatibility while adding quantum resistance immediately. As tooling matures, the ECDSA requirement can be dropped by governance vote.
+**Hybrid signatures** — During the Phase 1 → Phase 2 transition, QDay will accept hybrid signatures containing both an ML-DSA-65 signature and an ECDSA signature. Both must be valid. This ensures backward compatibility while adding quantum resistance immediately. As tooling matures, the ECDSA requirement can be dropped by governance vote.
 
 **Key isolation** — The ML-DSA-65 account key and the ECDSA account key are derived independently from the same mnemonic. Compromise of the ECDSA key does not expose the ML-DSA-65 key.

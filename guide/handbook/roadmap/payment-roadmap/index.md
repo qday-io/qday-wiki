@@ -4,6 +4,10 @@ title: QDAY Payment Roadmap
 
 # QDAY Payment Roadmap
 
+:::note[Coming Q1 2027]
+The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
+:::
+
 QDay’s **payment network** (Phase 1.5): USD8 as the unit of account, a gateway for merchants, and rails for people and **AI agents**. Everyday dApp gas stays in QDAY; **agent-initiated** payments are designed to fee in USD8.
 
 ## Goal
@@ -50,4 +54,4 @@ Architecture notes: [Payment Architecture](/Knowledge/technical/system-architect
 3. For agent commerce, use Smart Accounts and session keys (`@qday-io/sdk/aa`, `@qday-io/sdk/agent`).
 4. Use only official Portal and docs URLs; payment webhooks must be signature-checked.
 
-PQC of the **ledger** is on the [QDAY PQC Roadmap](/guide/handbook/roadmap/pqc-roadmap). Payment contracts in Phase 1.5 still sit on Phase 1 EVM accounts until Phase 2 QR contracts exist.
+PQC of the **ledger** is on the [QDay PQC Roadmap](/guide/handbook/roadmap/pqc-roadmap). Payment contracts in Phase 1.5 still sit on Phase 1 EVM accounts until Phase 2 QR contracts exist.

@@ -13,4 +13,4 @@ QDay Aevum uses a **PoS-over-PoW** consensus design: a Proof-of-Stake validator 
 
 **L1 Finality** — After the Committer writes the batch status root to the Abelian Chain, the transaction has full L1 finality anchored by Abelian's lattice-based cryptographic security.
 
-**CometBFT Integration** — QDay Aevum integrates CometBFT (formerly Tendermint) for distributed state machine replication across DA nodes, providing Byzantine fault-tolerant consensus among the validator set.
+**DA Layer Consensus** — The DA / settlement layer runs the Abelian Plus Node, which uses `reth` for execution and `lighthouse` for consensus among the validator set.

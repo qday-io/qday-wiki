@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: RPC Node
-draft: false
 ---
 
 # RPC Node

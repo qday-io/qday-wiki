@@ -7,10 +7,10 @@ draft: false
 
 QDay Aevum nodes (`cdk-erigon`) speak **Ethereum JSON-RPC**. Wallets, Foundry, Hardhat, ethers, viem, and MetaMask use the `eth_` / `net_` / `web3_` methods unchanged. Polygon CDK adds a **`zkevm_`** namespace for batch status, witnesses, and Global Exit Root — the parts that have no Ethereum equivalent.
 
-Live HTTP / WebSocket URLs: [Chain parameters](/Knowledge/reference/chains).
+Examples use the QDay Aevum testnet (`https://rpc-test.qday.info`, `wss://rpc-test.qday.info`). Live HTTP / WebSocket URLs: [Chain parameters](/Knowledge/reference/chains).
 
 ```bash title="JSON-RPC request"
-curl -s https://rpc.qday.io \
+curl -s https://rpc-test.qday.info \
   -X POST -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"eth_chainId","params":[]}'
 ```
@@ -29,7 +29,7 @@ Methods below follow the [Ethereum Execution APIs](https://ethereum.github.io/ex
 
 | Method | Params | Description |
 |--------|--------|-------------|
-| `eth_chainId` | — | Chain ID (`0xABE1` / `44001` Origin mainnet) |
+| `eth_chainId` | — | Chain ID (`0xABE5` / `44005` on QDay Aevum testnet) |
 | `eth_syncing` | — | `false` if in sync, otherwise a sync progress object |
 | `eth_blockNumber` | — | Latest L2 block number (hex) |
 | `eth_protocolVersion` | — | Ethereum protocol version |
@@ -123,7 +123,7 @@ Maps onto [Consensus & Settlement](/Knowledge/technical/protocol/consensus-settl
 | `zkevm_isBlockConsolidated` | `blockNumber` | `true` if the block’s batch is verified |
 
 ```bash title="Latest verified batch"
-curl -s https://rpc.qday.io \
+curl -s https://rpc-test.qday.info \
   -X POST -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"zkevm_verifiedBatchNumber","params":[]}'
 ```
@@ -184,5 +184,5 @@ Used by the Aggregator / Prover. Expect large payloads and rate limits.
 
 - [Network Configuration](/Knowledge/technical/developer-guide/network-configuration) — endpoints and curl check
 - [Network Protocol](/Knowledge/technical/protocol/network-protocol) — DevP2P + JSON-RPC surface
-- [zk Proof Protocol](/Knowledge/technical/protocol/zk-proof-protocol) — batch / witness / prover / verifier
+- [ZK Proof Protocol](/Knowledge/technical/protocol/zk-proof-protocol) — batch / witness / prover / verifier
 - [Chain parameters](/Knowledge/reference/chains) — chain IDs and RPC URLs

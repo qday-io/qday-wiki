@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 
 // Interactive doc component: live block height from the QDay Aevum RPC, refreshed on
 // an interval. Shows what MDX enables — a doc page that reflects real chain state.
@@ -52,7 +53,11 @@ export default function LiveChainStatus({ network = 'qday2' }: { network?: 'qday
       }} />
       <span style={{ fontWeight: 600 }}>{network === 'qday2' ? 'QDay Aevum' : 'QDay'}</span>
       <span style={{ color: 'var(--ifm-color-emphasis-600)', fontFamily: 'var(--ifm-font-family-monospace)' }}>
-        {err ? 'RPC unreachable' : block === null ? 'connecting…' : `block #${block.toLocaleString()}`}
+        {err
+          ? translate({id: 'chainStatus.unreachable', message: 'RPC unreachable'})
+          : block === null
+            ? translate({id: 'chainStatus.connecting', message: 'connecting…'})
+            : translate({id: 'chainStatus.block', message: 'block #{block}'}, {block: block.toLocaleString()})}
       </span>
     </div>
   );

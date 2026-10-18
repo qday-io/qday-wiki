@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: 節點營運者指南
-draft: false
 sidebar_label: 節點營運指南
 ---
 

@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: 災難復原
-draft: false
 ---
 
 # 災難復原

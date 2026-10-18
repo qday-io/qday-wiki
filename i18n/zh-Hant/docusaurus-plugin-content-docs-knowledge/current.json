@@ -8,7 +8,7 @@
     "description": "The label for category 'Technical Documentation' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.Technical Documentation.link.generated-index.description": {
-    "message": "QDAY 的技術與開發者文件 —— 架構、協定、營運、安全與參考資料。",
+    "message": "QDay 的技術及開發者文件——架構、協議、營運、安全與參考資料。",
     "description": "The generated-index page description for category 'Technical Documentation' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.System Architecture": {
@@ -16,7 +16,7 @@
     "description": "The label for category 'System Architecture' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.Ecosystem": {
-    "message": "生態系",
+    "message": "生態系統",
     "description": "The label for category 'Ecosystem' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.Developer Guide": {
@@ -24,7 +24,7 @@
     "description": "The label for category 'Developer Guide' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.Protocol": {
-    "message": "協定",
+    "message": "協議",
     "description": "The label for category 'Protocol' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.Operator Guide": {
@@ -36,11 +36,11 @@
     "description": "The label for category 'Security' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.technical-api-reference": {
-    "message": "參考資料",
+    "message": "API 參考",
     "description": "The label for category 'Reference' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.live-chain-reference": {
-    "message": "參考資料",
+    "message": "鏈參考",
     "description": "The label for category 'Reference' in sidebar 'knowledgeSidebar'"
   },
   "sidebar.knowledgeSidebar.category.live-chain-reference.link.generated-index.description": {

@@ -5,11 +5,15 @@ draft: false
 
 # Smart Account Architecture
 
-QDay Aevum implements **ERC-4337 Account Abstraction** using a TypeScript-based bundler infrastructure.
+:::note[Planned — Q1 2027]
+ERC-4337 account abstraction (EntryPoint, bundler, paymaster, session keys, Smart Account SDK) launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::
 
-**EntryPoint** — The canonical ERC-4337 `EntryPoint` contract is deployed on QDay Aevum. All UserOperations flow through the EntryPoint, which validates and executes them as a single atomic bundle.
+QDay will implement **ERC-4337 Account Abstraction** using a TypeScript-based bundler infrastructure.
 
-**Bundler** — QDay Aevum uses the **Alto** bundler (TypeScript implementation). Bundlers collect UserOperations from users, simulate execution, bundle them, and call `EntryPoint.handleOps()`. The Alto bundler maintains a dedicated UserOperation mempool.
+**EntryPoint** — The canonical ERC-4337 `EntryPoint` contract is not yet deployed on QDay Aevum; its address will be published at launch. All UserOperations flow through the EntryPoint, which validates and executes them as a single atomic bundle.
+
+**Bundler** — QDay will use the **Alto** bundler (TypeScript implementation). Bundlers collect UserOperations from users, simulate execution, bundle them, and call `EntryPoint.handleOps()`. The Alto bundler maintains a dedicated UserOperation mempool.
 
 **Paymaster** — A Paymaster contract can sponsor gas fees for users. Developers can deploy custom Paymasters to offer gasless transactions or pay fees in ERC-20 tokens instead of the native gas token.
 

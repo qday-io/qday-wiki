@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Earn on QDAY
 
-Ways to earn QDAY in the QDay and Abelian communities: airdrops, liquidity mining, staking, ecosystem incentives, referrals, and the ambassador program. Always use **official** QDay links. QDay will never DM you first or ask for a seed phrase.
+Ways to earn QDAY in the QDay and Abelian communities: airdrops, liquidity mining, ecosystem incentives, referrals, and the ambassador program. Always use **official** QDay links. QDay will never DM you first or ask for a seed phrase.
 
 ## Airdrop
 
@@ -26,11 +26,11 @@ Only claim from links posted by official QDay accounts. A fake “airdrop” sit
 
 Provide liquidity to QDay’s trading protocols and earn a share of trading fees (and any extra mining rewards the pool offers). This is how you help the QDay market stay liquid while earning yield.
 
-**Core pairs on Q-Swap:** QDAY/USD8, QDAY/WABEL, and WABEL/USD8.
+**Core pairs on QDay Swap:** QDAY/USD8, QDAY/WABEL, and WABEL/USD8.
 
 **How to participate**
 
-1. Add QDay to your wallet and hold both tokens in the pair (plus a little QDAY for gas).
+1. QDay Swap runs on **QDay Origin mainnet (Chain ID 44001)** — add that network to your wallet (parameters in the [Swap guide](/guide/handbook/user-guide/swap)) and hold both tokens in the pair (plus a little QDAY for gas).
 2. Open [QDay Swap](https://portal.qday.io/en/qday-swap) → **Liquidity Pools**.
 3. Compare pools under **Pool Statistics**, then **Add Liquidity**: pick a pair, a fee tier (0.30% is the usual default), and deposit both tokens.
 4. Confirm in MetaMask. You receive an LP share. Fees accrue to the pool; you can remove liquidity from **My Positions** at any time.
@@ -41,25 +41,11 @@ Full screenshots and steps: [Swap user guide](/guide/handbook/user-guide/swap#li
 LP returns depend on volume and price movement. Start with a small amount and read the pool stats before depositing a large position.
 :::
 
-## Staking
+## Staking (ended)
 
-Stake through QDay’s staking protocols to earn protocol rewards. **35%** of QDAY supply is reserved for staking rewards; longer lock-ups earn a larger share.
-
-Two products share the [staking portal](https://portal.qday.io/en/staking):
-
-| Protocol | What you stake | What you earn | Guide |
-|---|---|---|---|
-| **QDAY Staking** | QDAY / WQDAY | QDAY rewards | [QDAY Staking](/guide/handbook/user-guide/qday-staking) |
-| **ABEL Staking** | WABEL (ABEL bridged to QDay) | QDAY rewards | [ABEL Staking](/guide/handbook/user-guide/abel-staking) |
-
-**How to participate**
-
-1. [Add the QDay network](/guide/start/add-network) in MetaMask.
-2. Hold the asset you want to stake (bridge ABEL → WABEL first if you are using ABEL Staking).
-3. Open the staking portal, connect your wallet, choose the token, amount, and lock-up (up to 1,460 days / 4 years).
-4. Confirm **Stake**. Rewards accrue daily and can be claimed independently of the lock-up; unstaking the principal waits until the lock ends.
-
-Locked tokens cannot be withdrawn early. Verify you are on `portal.qday.io` before signing.
+:::warning[QDAY / ABEL Staking has ended]
+QDAY Staking and ABEL (WABEL) Staking ended at **12:00 PM, 15 October 2026 (HKT)**. New stakes are no longer accepted. You can unstake and claim pending rewards until **12:00 PM, 31 December 2026 (HKT)** — see the [QDAY Staking](/guide/handbook/user-guide/qday-staking) and [ABEL Staking](/guide/handbook/user-guide/abel-staking) termination guides.
+:::
 
 ## Ecosystem Incentives
 
@@ -83,7 +69,7 @@ Builder-oriented programs are also listed under [Build on QDay](/guide/handbook/
 
 ## Referral
 
-Grow QDay by bringing **new users** into the network. When a campaign is live, you share your official referral link; qualified sign-ups or first actions (for example adding the network, a swap, or a stake) can earn you a reward.
+Grow QDay by bringing **new users** into the network. When a campaign is live, you share your official referral link; qualified sign-ups or first actions (for example adding the network or a swap) can earn you a reward.
 
 **How to participate**
 

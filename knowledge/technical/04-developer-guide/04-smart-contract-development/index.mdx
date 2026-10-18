@@ -30,7 +30,8 @@ contract HelloQDAY {
 module.exports = {
   networks: {
     qday: {
-      url: "https://rpc.qday.io",
+      url: "https://rpc-test.qday.info", // QDay Aevum testnet
+      chainId: 44005,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -50,11 +51,17 @@ npx hardhat run scripts/deploy.js --network qday
 import { defineChain } from 'viem';
 
 export const qday = defineChain({
-  id: 44001,
-  name: 'QDay',
-  nativeCurrency: { name: 'QDAY', symbol: 'QDAY', decimals: 18 },
-  rpcUrls: { default: { http: ['https://rpc.qday.io'] } },
-  blockExplorers: { default: { name: 'QDay', url: 'https://explorer.qday.io' } },
+  id: 44005,
+  name: 'QDay Aevum',
+  nativeCurrency: { name: 'tQDAY', symbol: 'tQDAY', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc-test.qday.info'],
+      webSocket: ['wss://rpc-test.qday.info'],
+    },
+  },
+  blockExplorers: { default: { name: 'QDay Aevum Explorer', url: 'https://explorer-test.qday.info' } },
+  testnet: true,
 });
 ```
 
@@ -64,16 +71,16 @@ export const qday = defineChain({
 ```ts title="provider.ts"
 import { JsonRpcProvider } from 'ethers';
 
-export const provider = new JsonRpcProvider('https://rpc.qday.io', {
-  chainId: 44001,
-  name: 'QDay',
+export const provider = new JsonRpcProvider('https://rpc-test.qday.info', {
+  chainId: 44005,
+  name: 'qday-aevum-testnet',
 });
 ```
 
 </TabItem>
 </Tabs>
 
-Aevum testnet is chain ID `44005` / `https://rpc-test.qday.info`. See [Chain parameters](/Knowledge/reference/chains).
+These samples target the QDay Aevum testnet (chain ID `44005`). QDay mainnet (chain ID `44002`) parameters will be published at launch — see [Chain parameters](/Knowledge/reference/chains). Get testnet tQDAY for gas from [faucet.qday.info](https://faucet.qday.info) or the [in-docs faucet](/guide/start/faucet).
 
 ## Read a contract (token balance)
 
@@ -116,7 +123,7 @@ import { useWriteContract } from 'wagmi';
 const { writeContractAsync } = useWriteContract();
 
 await writeContractAsync({
-  chainId: 44001,
+  chainId: 44005,
   address: '0x…contract',
   abi,
   functionName: 'doSomething',

@@ -12,11 +12,11 @@ sidebar_position: 2
 | Speed | ~15–30 transactions per second at the base layer | Thousands of transactions per second today, designed to scale toward tens of thousands |
 | Fees | Can rise sharply when the network is busy | Designed to stay low and predictable — a fraction of a cent to a few cents per transaction |
 | Finality | ~12–15 minutes for full settlement | Under a second on QDay itself, with settlement anchored to Abelian shortly after |
-| Smart accounts | Optional add-on most wallets don't use by default | Smart contract wallets with gas paid in QDAY (USD8 for agent-initiated payments), passkey login, and spending limits built in |
+| Smart accounts | Optional add-on most wallets don't use by default | Smart contract wallets with gas paid in QDAY (USD8 for agent-initiated payments), passkey login, and spending limits — launching with QDay mainnet in Q1 2027 |
 | Quantum security | Relies on cryptography that isn't designed to resist quantum computers | Settlement secured by quantum-resistant cryptography from the start |
-| AI agents | No native support | Built-in identity and payment infrastructure for AI agents |
+| AI agents | No native support | Built-in identity and payment infrastructure for AI agents — launching with QDay mainnet in Q1 2027 |
 | Payments | Workable, but cost and speed limit frequent or small payments | Built around USD8, a native stablecoin designed for everyday and machine-speed payments |
-| Everyday experience | Mnemonic phrases and manual fee management | Simpler by design: predictable QDAY gas fees, passkey login |
+| Everyday experience | Mnemonic phrases and manual fee management | Simpler by design: predictable QDAY gas fees, passkey login (Q1 2027) |
 
 ## QDay vs Generic EVM
 
@@ -38,12 +38,12 @@ If a dApp on QDay is ever exploited, the affected account can be frozen and the 
 
 ### ERC-4337
 
-QDay wallets are smart contracts (ERC-4337 account abstraction) rather than simple key pairs: fees can be paid in USD8 instead of a separate gas token, login can use a device passkey instead of a mnemonic phrase, and AI agents can be given their own wallets with configurable spending limits and expiration windows.
+Launching with QDay mainnet in Q1 2027, QDay wallets will be smart contracts (ERC-4337 account abstraction) rather than simple key pairs: fees in the Agent Payment app can be paid in USD8 instead of a separate gas token, login can use a device passkey instead of a mnemonic phrase, and AI agents can be given their own wallets with configurable spending limits and expiration windows.
 
 ### AI Agent
 
-QDay gives AI agents a direct, native way to transact: an onchain identity standard so an agent can build a verifiable reputation, and a payment protocol that lets an agent pay for an API call or service in a single request — in USD8, with no subscription or manual approval needed.
+Launching with QDay mainnet in Q1 2027, QDay will give AI agents a direct, native way to transact: an onchain identity standard so an agent can build a verifiable reputation, and a payment protocol that lets an agent pay for an API call or service in a single request — in USD8, with no subscription or manual approval needed.
 
 ### Payment
 
-USD8, QDay's native stablecoin pegged to the US dollar, is the primary way value moves across the network — for consumer payments, merchant settlement, and machine-speed agent payments alike. Fees are paid in USD8 rather than a volatile native token, and cross-border transfers are designed to settle in under a couple of seconds, well below the cost and delay of traditional banking rails.
+USD8, QDay's native stablecoin pegged to the US dollar, is the primary way value moves across the network — for consumer payments, merchant settlement, and machine-speed agent payments alike. In the Agent Payment app, fees are paid in USD8 rather than a volatile native token (regular network gas is paid in QDAY), and cross-border transfers are designed to settle in under a couple of seconds, well below the cost and delay of traditional banking rails.

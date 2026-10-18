@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
 import NavbarItem from '@theme/NavbarItem';
 import type {Props} from '@theme/NavbarItem/DropdownNavbarItem/Desktop';
-import {useDocsDropdownLabel} from '../useDocsDropdownLabel';
+import {isDocsDropdown, useDocsDropdownLabel} from '../useDocsDropdownLabel';
 
 export default function DropdownNavbarItemDesktop({
   items,
@@ -14,7 +14,7 @@ export default function DropdownNavbarItemDesktop({
 }: Props): ReactNode {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [showDropdown, setShowDropdown] = useState(false);
-  const displayLabel = useDocsDropdownLabel(props.label);
+  const displayLabel = useDocsDropdownLabel(props.label, items);
 
   useEffect(() => {
     const handleClickOutside = (
@@ -54,7 +54,7 @@ export default function DropdownNavbarItemDesktop({
         href={props.to ? undefined : '#'}
         className={clsx('navbar__link', className, {
           'navbar__link--active':
-            props.label === 'Docs' && displayLabel !== 'Docs',
+            isDocsDropdown(items) && displayLabel !== props.label,
         })}
         {...props}
         label={displayLabel}

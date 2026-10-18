@@ -5,7 +5,7 @@ draft: false
 
 # 高可用性
 
-- **RPC 閘道**：多個 `cdk-erigon` 唯讀副本置於負載平衡器之後。任何副本都可服務讀取流量；只有指定的 Sequencer 會寫入新區塊。
-- **zk 證明者**：證明者實例可水平擴展；Aggregator 會將批次分配至可用的證明者。
-- **DA 節點**：`reth` + `lighthouse` 以 Ethereum 共識 / 執行配對的形式運行，並採用標準的 Ethereum 高可用模式（多個信標節點、執行用戶端）。
-- **數據庫**：以 PostgreSQL 複寫保存 `cdk-erigon` 與 `cdk-node` 的狀態。
+- **RPC Gateway**：多個 `cdk-erigon` 唯讀副本位於負載平衡器之後。任何副本都可以處理讀取流量；只有指定的排序器（Sequencer）會寫入新區塊。
+- **zk Prover**：證明者實例可以橫向擴展；Aggregator 會將批次分配給可用的證明者。
+- **DA Node**：`reth` + `lighthouse` 以以太坊共識層 / 執行層配對的形式運行，採用標準的以太坊高可用性模式（多個信標節點及執行客戶端）。
+- **數據庫**：以 PostgreSQL 複製保存 `cdk-erigon` 及 `cdk-node` 的狀態。

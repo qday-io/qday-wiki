@@ -1,4 +1,5 @@
 import React from 'react';
+import {translate} from '@docusaurus/Translate';
 import { connectInjected } from './wallet';
 
 // Connect option shared by the interactive widgets: any injected EIP-1193
@@ -24,7 +25,7 @@ export default function ConnectButtons({
       if (!account) throw new Error(notInstalled);
       onAccount(account);
     } catch (e: any) {
-      onError(e?.shortMessage ?? e?.message ?? 'Wallet connection failed.');
+      onError(e?.shortMessage ?? e?.message ?? translate({id: 'wallet.err.connectFailed', message: 'Wallet connection failed.'}));
     } finally {
       setBusy(false);
     }
@@ -33,7 +34,7 @@ export default function ConnectButtons({
   return (
     <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
       <button
-        onClick={() => run(connectInjected, 'No wallet found — install a wallet extension.')}
+        onClick={() => run(connectInjected, translate({id: 'wallet.err.noWallet', message: 'No wallet found — install a wallet extension.'}))}
         disabled={busy}
         style={{
           background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', borderRadius: 8,
@@ -41,7 +42,9 @@ export default function ConnectButtons({
           cursor: busy ? 'default' : 'pointer', opacity: busy ? 0.6 : 1,
         }}
       >
-        {busy ? 'Check your wallet…' : 'Connect Wallet'}
+        {busy
+          ? translate({id: 'wallet.checkWallet', message: 'Check your wallet…'})
+          : translate({id: 'wallet.connect', message: 'Connect Wallet'})}
       </button>
     </div>
   );

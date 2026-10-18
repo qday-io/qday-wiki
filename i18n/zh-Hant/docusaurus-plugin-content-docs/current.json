@@ -3,38 +3,6 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.User Guide": {
-    "message": "使用指南",
-    "description": "The label for category 'User Guide' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.migration": {
-    "message": "migration",
-    "description": "The label for category 'migration' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.reference": {
-    "message": "reference",
-    "description": "The label for category 'reference' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.start": {
-    "message": "start",
-    "description": "The label for category 'start' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.Get Started": {
-    "message": "快速開始",
-    "description": "The label for category 'Get Started' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.Migration": {
-    "message": "遷移",
-    "description": "The label for category 'Migration' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.Reference": {
-    "message": "參考資料",
-    "description": "The label for category 'Reference' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.Developers": {
-    "message": "開發者",
-    "description": "The label for category 'Developers' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.guideSidebar.category.Get Started": {
     "message": "開始使用",
     "description": "The label for category 'Get Started' in sidebar 'guideSidebar'"
@@ -56,7 +24,7 @@
     "description": "The generated-index page title for category Handbook in sidebar guideSidebar"
   },
   "sidebar.guideSidebar.category.Handbook.link.generated-index.description": {
-    "message": "QDay 上的日常操作：錢包、質押、兌換與跨鏈橋。",
+    "message": "QDay 上的日常操作：錢包、兌換、跨鏈橋與解除質押。",
     "description": "The generated-index page description for category Handbook in sidebar guideSidebar"
   }
 }

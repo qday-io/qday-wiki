@@ -5,6 +5,10 @@ draft: false
 
 # Smart Account API
 
+:::note[Coming Q1 2027]
+The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
+:::
+
 ERC-4337 Smart Accounts on QDay Aevum. UserOperations go through the **EntryPoint**; the bundler is Alto. Guide: [ERC-4337 Development](/Knowledge/technical/developer-guide/erc-4337-development). Protocol: [Account Abstraction Protocol](/Knowledge/technical/protocol/account-abstraction-protocol).
 
 ## SDK (`@qday-io/sdk/aa`)

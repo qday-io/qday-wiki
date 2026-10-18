@@ -5,6 +5,10 @@ sidebar_position: 7
 
 # Build on QDay
 
+:::note[Coming Q1 2027]
+The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
+:::
+
 QDay is EVM-compatible: Solidity, MetaMask, Remix, Hardhat, Foundry, and wagmi/viem work as they do on Ethereum. Point them at QDay RPC and build. The pages below are the technical knowledge base — this handbook page is the map; the details live there and will keep growing.
 
 ## Technical knowledge base
@@ -26,7 +30,7 @@ Do not scrape every block yourself. QDay’s shared infrastructure is meant for 
 - **Price oracle** — on-chain feeds compatible with Chainlink’s Aggregator interface ([Oracle & Data](/Knowledge/technical/ecosystem/oracle-data))
 - **Connect / RPC** — endpoints and `wallet_addEthereumChain` ([Network Configuration](/Knowledge/technical/developer-guide/network-configuration), [Wallet Integration](/Knowledge/technical/developer-guide/wallet-integration))
 
-Operator-facing runbooks live in the [Operator Guide](/Knowledge/technical/operator-guide). Endpoint URLs and API shapes will be filled in on those pages as services go live.
+Operator documentation (runbooks, endpoint URLs and API shapes) will be published as services go live.
 
 ## SDKs
 

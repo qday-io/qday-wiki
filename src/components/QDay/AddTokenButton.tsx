@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 import { getProvider } from './wallet';
 
 // One-click "Add token to wallet" via EIP-747 (wallet_watchAsset). Drop it into
@@ -20,17 +21,17 @@ export default function AddTokenButton({
 
   async function add() {
     const eth = getProvider();
-    if (!eth) { setState('err'); setMsg('No wallet found — install a wallet extension.'); return; }
+    if (!eth) { setState('err'); setMsg(translate({id: 'wallet.err.noWallet', message: 'No wallet found — install a wallet extension.'})); return; }
     setState('busy'); setMsg('');
     try {
       const added = await eth.request({
         method: 'wallet_watchAsset',
         params: { type: 'ERC20', options: { address, symbol, decimals, image } },
       });
-      if (added) { setState('ok'); setMsg(`${symbol} added to your wallet.`); }
+      if (added) { setState('ok'); setMsg(translate({id: 'addToken.ok', message: '{symbol} added to your wallet.'}, {symbol})); }
       else { setState('idle'); }
     } catch (e: any) {
-      setState('err'); setMsg(e?.message ?? 'Request rejected.');
+      setState('err'); setMsg(e?.message ?? translate({id: 'wallet.err.rejected', message: 'Request rejected.'}));
     }
   }
 
@@ -43,7 +44,11 @@ export default function AddTokenButton({
         padding: '4px 12px', fontSize: 13.5, fontWeight: 600,
         cursor: state === 'busy' ? 'default' : 'pointer', opacity: state === 'busy' ? 0.6 : 1,
       }}>
-        {state === 'ok' ? '✓ Added' : state === 'busy' ? 'Check wallet…' : `+ Add ${symbol}`}
+        {state === 'ok'
+          ? translate({id: 'addToken.added', message: '✓ Added'})
+          : state === 'busy'
+            ? translate({id: 'addToken.busy', message: 'Check wallet…'})
+            : translate({id: 'addToken.button', message: '+ Add {symbol}'}, {symbol})}
       </button>
       {state === 'err' && <span style={{ fontSize: 12.5, color: 'var(--ifm-color-danger)' }}>{msg}</span>}
     </span>

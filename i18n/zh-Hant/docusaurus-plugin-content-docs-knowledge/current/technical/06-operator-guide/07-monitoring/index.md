@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: 監控
-draft: false
 ---
 
 # 監控

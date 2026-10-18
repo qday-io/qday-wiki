@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Disaster Recovery
-draft: false
 ---
 
 # Disaster Recovery

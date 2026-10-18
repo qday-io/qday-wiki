@@ -5,12 +5,16 @@ draft: false
 
 # 開發者工具
 
-**Foundry** — 完整兼容 Foundry。搭配 `--rpc-url https://rpc.qday.io` 旗標使用 `forge`、`cast` 與 `anvil`。
+:::note[將於 2027 年第一季推出]
+QDay SDK（`@qday-io/sdk`）及 CLI（`@qday-io/cli`）將於 2027 年第一季推出，目前尚未在 npm 上發佈。
+:::
 
-**Hardhat** — 在 `hardhat.config.js` 中將 QDay Aevum 新增為網絡（請參閱[開發者指南](/Knowledge/technical/developer-guide/getting-started)）。所有適用於 Ethereum 主網的 Hardhat 外掛皆可在 QDay Aevum 上使用。
+**Foundry**——完全兼容 Foundry。使用 `forge`、`cast` 及 `anvil` 時加上 `--rpc-url https://rpc-test.qday.info` 參數（QDay Aevum 測試網）。
 
-**Remix** — 透過「External HTTP Provider」選項並填入 QDay Aevum 的 RPC URL，將 Remix IDE 連接至 QDay Aevum。
+**Hardhat**——在 `hardhat.config.js` 中將 QDay Aevum 新增為網絡（請參閱[開發者指南](/Knowledge/technical/developer-guide/getting-started)）。所有適用於以太坊主網的 Hardhat 插件都可在 QDay Aevum 上使用。
 
-**SDK** — `@qday-io/sdk` npm 套件提供以 TypeScript 為優先的客戶端，涵蓋智慧帳戶、ERC-4337 bundler 互動、支付建立與 AI Agent 管理。
+**Remix**——透過「External HTTP Provider」選項，以 QDay Aevum RPC URL 將 Remix IDE 連接至 QDay Aevum。
 
-**CLI** — `qday` CLI 提供所有 SDK 功能的命令列存取。透過 `npm install -g @qday-io/cli` 安裝。
+**SDK** *（2027 年第一季推出）*——`@qday-io/sdk` npm 套件將提供以 TypeScript 為先的客戶端，涵蓋智能帳戶、ERC-4337 bundler 互動、建立付款及 AI 代理管理。
+
+**CLI** *（2027 年第一季推出）*——`qday` CLI 將透過命令列提供所有 SDK 功能，可透過 `npm install -g @qday-io/cli` 安裝。

@@ -7,79 +7,41 @@ import LiveChainStatus from '@site/src/components/QDay/LiveChainStatus';
 
 # QDay 遷移
 
-目前有兩件不同的事情同時進行。**鏈升級**指的是網絡本身：QDay Origin → QDay Aevum。**資產遷移**指的是你的代幣：在 QDay Origin 上鎖定，並在 QDay Aevum 上以 1:1 收到。
+QDay 正在升級。**QDay Aevum** 是升級後網絡的公開測試網，而升級後的 **QDay 主網**正在開發中。遷移**尚未開放**——本頁說明你可以預期的情況。
 
 ---
 
-## 1. 鏈升級
+## 1. 目前的網絡 {/* #1-networks-today */}
 
-**QDay Origin** 是目前的正式生產鏈。**QDay Aevum** 是升級後的網絡（新的鏈 ID、新的 RPC、新的區塊瀏覽器）。錢包與 dApp 必須手動新增 QDay Aevum；它們不會自動跟隨升級。
-
-| | QDay Origin | QDay Aevum |
+| | 狀態 | 鏈 ID |
 |---|---|---|
-| 是什麼 | 目前的正式生產網絡 | 升級後的網絡 |
-| 主網 | **已上線**——鏈 ID `44001` | **尚未開放**——鏈 ID `44002`（即將推出） |
-| 測試網 | 已上線——鏈 ID `44003` | **已上線**——鏈 ID `44005`（目前的公開測試網） |
+| **QDay Aevum 測試網** | **已上線**——體驗升級後的網絡、開發與測試 | `44005` |
+| **QDay 主網** | 開發中——預計 2027 年第一季推出 | `44002` |
 
-RPC、WebSocket 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。
-
-即時測試網端點：
-
-<LiveChainStatus network="qday" />
 <LiveChainStatus network="qday2" />
 
-**這不是什麼。** 將 Aevum 新增到 MetaMask 並不會移動你的餘額。在你完成資產遷移（見下文）之前，代幣仍會留在原本發行的鏈上。
+- QDay Aevum 是**測試網**，不會取代任何現有網絡，其代幣（tQDAY、tUSD8 等）沒有實際價值。
+- 現有的 QDay 網絡（主網與測試網）會繼續運作。你現有的資產目前不受任何影響。
+- 將 Aevum 測試網新增至錢包**不會**轉移你的餘額。
 
-**升級時該做什麼**
-
-1. 新增你需要的鏈：Origin 主網（`44001`）和／或 Aevum 測試網（`44005`）——[將 QDay 新增到你的錢包](/guide/start/add-network)。
-2. 當你開始在 QDay Aevum 上建置或測試時，將應用程式與 RPC 設定指向 Aevum 端點——[網絡設定](/Knowledge/technical/developer-guide/network-configuration)。
-3. 在 Aevum 主網（`44002`）正式宣布之前，正式環境請繼續使用 Origin 主網。
+RPC、WebSocket 與區塊瀏覽器：[鏈參數](/Knowledge/reference/chains)。新增網絡：[將 QDay 新增至你的錢包](/guide/start/add-network)。
 
 ---
 
-## 2. 鏈上資產遷移
+## 2. 你的 QDAY：$QDAYp → $QDAY {/* #2-your-qday-qdayp--qday */}
 
-新的鏈存在之後，餘額仍需要被移動。你在 QDay Origin 上**一次性**鎖定資產；相同數量會在 QDay Aevum 上以 **1:1** 釋放給你。
+- 現有的 QDAY 代幣現稱為 **QDAY Points（$QDAYp）**。
+- QDay 主網代幣生成事件（TGE）之後，$QDAYp 可按 **1:1** 兌換為新的 **$QDAY**。
+- 如你持有 **WQDAY**（例如從 QDAY 質押解除質押後取得），可在 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) 按 1:1 轉換為 QDAY（$QDAYp）。
 
-:::danger[單向且永久]
-在 QDay Origin 上鎖定後無法復原。沒有反向跨鏈橋。簽署前請確認金額與 QDay Aevum 的接收地址。
+---
+
+## 3. 遷移期 {/* #3-migration-window */}
+
+QDay 主網上線後，現有用戶會在專設的 **6 至 12 個月遷移期**內轉移資產（[常見問題 2.3](/guide/faq#23-what-is-the-migration-roadmap)）。遷移期開始時，詳細步驟與官方合約地址將於 [QDay Portal](https://portal.qday.io) 公佈。
+
+:::danger[注意安全]
+遷移尚未開放。請勿將資產發送至任何「遷移」合約或網站。只依循官方 QDay Portal 及官方 QDay 渠道——QDay 團隊絕不會主動私訊你，也不會要求你提供助記詞。
 :::
 
-### 狀態
-
-- **主網（44001 → 44002）** 尚未開放。在官方 [入口網站](https://portal.qday.io) 公布地址之前，請勿將 Origin 主網資產發送到任何「遷移」合約。
-- **測試網（44003 → 44005）** 是 lockbox 部署後應使用的路徑。Lockbox／distributor 地址將於上線時在官方入口網站公布。
-
-### 運作方式
-
-```mermaid
-flowchart LR
-    A["Lock on QDay Origin"] --> B[Wait for confirmations]
-    B --> C["Relayer allocates 1:1<br/>on QDay Aevum"]
-    C --> D[Tokens received on QDay Aevum]
-```
-
-你只需簽署**一筆**交易：在 QDay Origin 上的鎖定。中繼者（relayer）會支付 QDay Aevum 上的 Gas。
-
-| 合約 | 鏈 | 職責 |
-|---|---|---|
-| MigrationLockbox | QDay Origin | 保管已鎖定的資產（單向） |
-| MigrationDistributor | QDay Aevum | 從預先注資的資金池以 1:1 撥付給你 |
-| MigrationClaim | QDay Aevum | 若遷移窗口結束仍未完成中繼時的備援領取機制 |
-
-### 可遷移的資產
-
-兩側資產集合相同，1:1：
-
-| 資產 | 方式 |
-|---|---|
-| USD8 / WABEL / WQDAY | 在 QDay Origin 上鎖定 ERC-20 |
-| 原生 QDAY | 先包裝為 **WQDAY**，再鎖定 WQDAY |
-
-QDay Aevum 測試網的代幣地址請參閱 [代幣清單](/Knowledge/reference/tokens)。不同網絡的代幣地址不同——切勿在其他網絡上重複使用。
-
-### 現在該做什麼
-
-1. 等待 [入口網站](https://portal.qday.io) 公布官方 lockbox 地址。
-2. 遷移窗口開放後，只透過這些地址進行鎖定。忽略私訊、空投網站與非官方的「遷移」頁面。
+相關頁面：[常見問題——我用過舊版 QDay](/guide/faq#2-i-used-the-old-qday) · [代幣清單](/Knowledge/reference/tokens)

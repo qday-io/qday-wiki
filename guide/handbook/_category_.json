@@ -5,7 +5,7 @@
   "link": {
     "type": "generated-index",
     "title": "Handbook",
-    "description": "Everyday tasks on QDay — wallets, staking, swap, and the bridge.",
+    "description": "Everyday tasks on QDay — wallets, swap, the bridge, and unstaking.",
     "slug": "/handbook"
   }
 }

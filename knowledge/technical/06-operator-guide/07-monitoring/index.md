@@ -1,6 +1,6 @@
 ---
+unlisted: true
 title: Monitoring
-draft: false
 ---
 
 # Monitoring

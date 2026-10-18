@@ -8,7 +8,7 @@ draft: false
 If you discover a security vulnerability in QDay Aevum, please disclose it responsibly:
 
 1. **Do not** publish the vulnerability publicly until a fix is deployed.
-2. Email the QDay Aevum security team at the address listed on the official website.
+2. Email the QDay security team at **[support@qday.io](mailto:support@qday.io)**.
 3. Include a clear description of the vulnerability, reproduction steps, and your estimated impact.
 4. Allow a minimum of 90 days for the team to investigate and deploy a fix before public disclosure.
 

@@ -14,17 +14,17 @@ The product and network plan for QDay: an EVM-compatible Layer 2 on Abelian, the
 | **Phase 1.5** | Payment network: USD8, invoices, merchants, agent payments | Same L2; payments are a first-class layer |
 | **Phase 2** | Native PQC accounts, wallets, and contracts on QDay | Quantum resistance at the account, not only the rollup |
 
-How the stages fit together: [Introduction](/guide/handbook/introduction). PQC detail: [QDAY PQC Roadmap](/guide/handbook/roadmap/pqc-roadmap). Payments: [QDAY Payment Roadmap](/guide/handbook/roadmap/payment-roadmap).
+How the stages fit together: [Introduction](/guide/handbook/introduction). PQC detail: [QDay PQC Roadmap](/guide/handbook/roadmap/pqc-roadmap). Payments: [QDAY Payment Roadmap](/guide/handbook/roadmap/payment-roadmap).
 
 ## Networks today
 
 | | QDay |
 |---|---|
-| Status | Testnet live; mainnet coming soon |
-| Mainnet Chain ID | Coming soon |
+| Status | QDay Aevum testnet live; QDay mainnet in development |
+| Mainnet Chain ID | `44002` (in development) |
 | Testnet Chain ID | `44005` |
 
-Add a network: [Get Started](/guide/start/add-network). Parameters: [Chain params](/Knowledge/reference/chains).
+Add a network: [Add QDay to your wallet](/guide/start/add-network). Parameters: [Chain params](/Knowledge/reference/chains).
 
 ## Milestone table
 
@@ -38,13 +38,13 @@ Add a network: [Get Started](/guide/start/add-network). Parameters: [Chain param
 | Phase 1.5 Testnet | 2026 Q3 |
 | Phase 2 (native quantum-resistant accounts) development begins | 2026 Q4 |
 | Phase 1.5 Mainnet | 2027 Q1 |
-| Phase 2 Testnet | 2027 Q2 |
+| Phase 2 Testnet | Before 2027 Q1 |
 | Phase 2 Mainnet | 2027 Q4 |
 
 ## What Phase 1 already covers
 
 - EVM execution (Solidity, MetaMask, Remix, Hardhat, Foundry)
 - ZK rollups to Abelian and a quantum-resistant halt if the ledger is attacked
-- Explorer, faucet (testnet), [Swap](/guide/handbook/user-guide/swap), [staking](/guide/handbook/user-guide/qday-staking), [bridges](/guide/handbook/user-guide#qday-bridge)
+- Explorer, faucet (testnet), [Swap](/guide/handbook/user-guide/swap), [staking](/guide/handbook/user-guide/qday-staking) (ended Oct 2026), [bridges](/guide/handbook/user-guide#qday-bridge)
 
 Builders: [Build on QDay](/guide/handbook/build-on-qday) and the [Technical knowledge base](/Knowledge/technical/developer-guide/getting-started).

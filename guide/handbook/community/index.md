@@ -9,7 +9,7 @@ Follow and join the official QDay channels.
 
 ## QDay Network
 
-- **Telegram:** [@QDayOfficial](https://web.telegram.org/k/#@qday_official_group)
+- **Telegram:** [QDay Global group](https://web.telegram.org/k/#@qday_official_group)
 - **X:** [@QDayOfficial](https://x.com/QDayOfficial)
 - **LinkedIn:** [QDay Network](https://www.linkedin.com/company/qday-network/)
 - **GitHub:** [github.com/qday-io](https://github.com/qday-io)

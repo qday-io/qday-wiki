@@ -5,6 +5,10 @@ draft: false
 
 # ERC-4337 Development
 
+:::note[Planned — Q1 2027]
+ERC-4337 support (EntryPoint, Alto bundler, paymaster, session keys) and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) launch with QDay mainnet in Q1 2027 and are not live today. The EntryPoint and bundler are not yet deployed on QDay Aevum, and the SDK is not yet published on npm. Code on this page shows the planned API.
+:::
+
 ## EntryPoint
 
 The `EntryPoint` contract is the hub of the ERC-4337 system. All UserOperations flow through it.
@@ -15,11 +19,11 @@ import "@account-abstraction/contracts/interfaces/IEntryPoint.sol";
 IEntryPoint constant ENTRY_POINT = IEntryPoint(ENTRY_POINT_ADDRESS);
 ```
 
-Use the EntryPoint address from the [Reference](/Knowledge/technical/reference) page.
+The EntryPoint address will be published at launch.
 
 ## Bundler
 
-QDay Aevum runs the [Alto](https://github.com/pimlicolabs/alto) bundler. Send UserOperations to the bundler's RPC endpoint:
+QDay will run the [Alto](https://github.com/pimlicolabs/alto) bundler. Once live, you will send UserOperations to the bundler's RPC endpoint (`https://bundler.qday.io` goes live at launch):
 
 ```typescript
 import { createBundlerClient } from "permissionless";

@@ -7,11 +7,7 @@ draft: false
 
 QDAY's positioning, vision, and technical direction.
 
-:::info Draft
-This page is scaffolded — the structure is in place and the content is being written.
-:::
-
-**Highlights:** zk Proof, ML-DSA-65, ERC-4337, AI Agent, Payment
+**Highlights:** ZK proof, ML-DSA-65, ERC-4337, AI Agent, Payment
 
 ## What is QDAY
 
@@ -21,7 +17,7 @@ As a Layer 2, QDAY brings familiar EVM smart-contract execution and improved tra
 
 Nearly every blockchain in use today relies on elliptic-curve cryptography (ECDSA) to protect wallets and sign transactions. That math is efficient and battle-tested, but it is also known to be breakable by a sufficiently powerful quantum computer running Shor's algorithm. The assets and identities secured by those signatures are, in effect, borrowing against a deadline.
 
-QDAY is built to remove that deadline. Rather than relying on ECDSA, it inherits Abelian's lattice-based cryptography (built on Learning-With-Errors and Ring-LWE hardness assumptions) and layers Zero-Knowledge Rollups, a novel PoS-over-PoW consensus design, and a two-phase quantum-resistant account model on top.
+QDAY is built to remove that deadline. Accounts on QDAY still use standard ECDSA today — ML-DSA-65 accounts, post-quantum precompiles and hybrid signatures arrive in Phase 2 — but settlement inherits the quantum resistance of Abelian's lattice-based cryptography (built on Learning-With-Errors and Ring-LWE hardness assumptions). On top of that foundation QDAY layers Zero-Knowledge Rollups, a novel PoS-over-PoW consensus design, and a two-phase quantum-resistant account model.
 
 In short: QDAY is where you can transact and build today with cryptography and an architecture designed to remain secure after Q-Day.
 
@@ -81,14 +77,14 @@ If a quantum-capable attacker exploits a vulnerability, QDAY's DAO can vote to h
 Backward-compatible account model 
 Phase 2's quantum-resistant accounts are designed so a single mnemonic phrase can derive both a legacy (EVM-standard) account and a quantum-resistant one, easing the migration path for existing users and wallets.
 
-Account Abstraction
-Through robust support for ERC-4337, QDAY enables advanced account abstraction (utilizing typed bundlers like Alto). This provides users with gasless transactions, batch processing, and vastly improved UX.
+Account Abstraction (planned — launches with QDay mainnet in Q1 2027)
+ERC-4337 support, using the Alto bundler, will bring smart accounts, session keys and paymaster-sponsored gasless transactions, batch processing, and improved UX.
 
 Advanced Application Ecosystem
-QDAY's infrastructure supports seamless cross-chain interoperability, decentralized exchanges (QDay Swap), and robust, high-speed Payment capabilities tailored for scalable DeFi solutions.
+QDAY's infrastructure supports cross-chain interoperability (Abelian Bridge) and decentralized exchanges (QDay Swap, live on QDay Origin mainnet today). High-speed payment capabilities, including Agent Payment, launch with QDay mainnet in Q1 2027.
 
-Automated & Intelligent Interactions
-Designed to handle high-frequency interactions, QDAY's low-latency environment is perfectly suited for on-chain automation, where an AI Agent can autonomously manage intent-based transactions, execute smart contract interactions, and optimize trading strategies on decentralized exchanges.
+Automated & Intelligent Interactions (planned — launches with QDay mainnet in Q1 2027)
+Designed to handle high-frequency interactions, QDAY's low-latency environment is suited for on-chain automation, where an AI Agent will be able to autonomously manage intent-based transactions, execute smart contract interactions, and optimize trading strategies on decentralized exchanges.
 
 ## Technology Stack
 
@@ -101,10 +97,10 @@ Execution & Proving
 Forked instances of Polygon CDK, PolygonZKEVM contracts, and a highly performant Rust EVM implementation (qday-revm).
 
 Data Availability & Consensus
-Integrates CometBFT for distributed state machine replication and DA nodes forking Ethermint.
+The Abelian Plus Node provides data availability, using reth for execution and lighthouse for consensus.
 
 Smart Wallets & Bundlers
-TypeScript-based ERC-4337 bundlers and highly optimized indexers for seamless cross-chain bridging operations.
+TypeScript-based ERC-4337 bundlers (planned — launch with QDay mainnet in Q1 2027) and highly optimized indexers for cross-chain bridging operations.
 
 ## Network Roadmap
 
@@ -114,6 +110,3 @@ Integration of ZK Rollups with Abelian to create a quantum-resistant ledger whil
 Phase 2: L2-Native Quantum-Resistant Accounts & Smart Contracts. 
 Full implementation of quantum-resistant cryptographic keys directly into user accounts. The EVM will be natively upgraded to process post-quantum algorithms, seamlessly supporting both traditional contracts (for backward compatibility) and highly secure quantum-resistant contracts.
 
-## Release Lifecycle
-
-_Coming soon._

@@ -5,7 +5,7 @@ draft: false
 
 # 整體架構
 
-QDay Aevum 是建構於 Abelian Layer 1 之上的模組化 ZK rollup 堆疊。系統在 Polygon CDK 架構的基礎上，加入三項 QDAY 專屬的擴充：**Abelian Plus Node**（DA + 紀錄層）、**Committer**（L1 同步服務），以及 **Record Contracts**（Abelian 上的鏈上批次中繼資料儲存）。
+QDay Aevum 是一個模組化的 ZK Rollup 技術堆疊，疊加於 Abelian Layer 1 之上。系統在 Polygon CDK 架構的基礎上加入三項 QDAY 專屬組件：**Abelian Plus Node**（DA 層 + 記錄層）、**Committer**（L1 同步服務），以及 **Record Contracts**（位於 Abelian 上、儲存批次元數據的鏈上合約）。
 
 ```
 ┌────────────────────────────────────────┐

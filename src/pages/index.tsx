@@ -15,14 +15,14 @@ export default function Home(): ReactNode {
     {
       icon: '⛓️',
       title: translate({id: 'home.card.user.title', message: 'I’m a user'}),
-      body: translate({id: 'home.card.user.body', message: 'Add QDay Aevum to your wallet, swap, stake, and use dApps.'}),
+      body: translate({id: 'home.card.user.body', message: 'Add QDay Aevum testnet to your wallet, get test tokens, and try dApps.'}),
       to: '/guide/start/add-network',
       cta: translate({id: 'home.card.user.cta', message: 'Get started'}),
     },
     {
       icon: '↔️',
       title: translate({id: 'home.card.migrate.title', message: 'I’m migrating'}),
-      body: translate({id: 'home.card.migrate.body', message: 'Move USD8 / WABEL / WQDAY and native QDAY from QDay Origin to QDay Aevum.'}),
+      body: translate({id: 'home.card.migrate.body', message: 'What happens to your QDAY when QDay mainnet launches: QDAYp → $QDAY at a 1:1 ratio.'}),
       to: '/Knowledge/migration/overview',
       cta: translate({id: 'home.card.migrate.cta', message: 'Migration guide'}),
     },
@@ -35,7 +35,13 @@ export default function Home(): ReactNode {
     },
   ];
   return (
-    <Layout title="QDay Wiki" description="QDay Aevum — the quantum-safe Layer2. Guides for users and developers.">
+    <Layout
+      title="QDay Wiki"
+      description={translate({
+        id: 'home.meta.description',
+        message: 'QDay Aevum — the quantum-safe Layer2. Guides for users and developers.',
+        description: 'Homepage meta description',
+      })}>
       <header className={styles.hero}>
         <div className={styles.heroGlow} aria-hidden />
         <div className={styles.heroInner}>
@@ -57,7 +63,6 @@ export default function Home(): ReactNode {
             </Link>
           </div>
           <div className={styles.liveRow}>
-            <LiveChainStatus network="qday" />
             <LiveChainStatus network="qday2" />
           </div>
         </div>

@@ -5,7 +5,7 @@ draft: false
 
 # Deployment Architecture
 
-Components are deployed in dependency order. See [Operator Guide](/Knowledge/technical/operator-guide) for detailed configuration per phase.
+Components are deployed in dependency order. Detailed per-phase configuration will be covered in operator documentation, which will be published later.
 
 ```
 Infrastructure (Docker / K8s / PostgreSQL / Redis / Monitoring)

@@ -95,7 +95,7 @@ export default function DropdownNavbarItemMobile({
   const localPathname = useLocalPathname();
   const isActive = isSamePath(props.to, localPathname);
   const containsActive = containsActiveItems(items, localPathname);
-  const displayLabel = useDocsDropdownLabel(props.label);
+  const displayLabel = useDocsDropdownLabel(props.label, items);
 
   const {collapsed, toggleCollapsed} = useItemCollapsible({
     active: isActive || containsActive,

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import {useLocation} from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {translate} from '@docusaurus/Translate';
 import updatesData from '@site/data/updates.json';
 
 // "Latest updates" strip. Announcements are edited by PMs in data/updates.json —
@@ -9,17 +10,17 @@ import updatesData from '@site/data/updates.json';
 type Tag = 'launch' | 'upgrade' | 'guide' | 'notice';
 
 const TAG_STYLE: Record<Tag, {bg: string; fg: string; label: string}> = {
-  launch:  {bg: 'rgba(79,93,255,.14)',  fg: 'var(--ifm-color-primary)', label: 'Launch'},
-  upgrade: {bg: 'rgba(31,157,77,.14)',  fg: '#1f9d4d',                  label: 'Upgrade'},
-  guide:   {bg: 'rgba(182,115,26,.16)', fg: '#b6731a',                  label: 'Guide'},
-  notice:  {bg: 'var(--ifm-color-emphasis-200)', fg: 'var(--ifm-color-emphasis-700)', label: 'Notice'},
+  launch:  {bg: 'rgba(79,93,255,.14)',  fg: 'var(--ifm-color-primary)', label: translate({id: 'updates.tag.launch', message: 'Launch', description: 'Updates tag pill'})},
+  upgrade: {bg: 'rgba(31,157,77,.14)',  fg: '#1f9d4d',                  label: translate({id: 'updates.tag.upgrade', message: 'Upgrade', description: 'Updates tag pill'})},
+  guide:   {bg: 'rgba(182,115,26,.16)', fg: '#b6731a',                  label: translate({id: 'updates.tag.guide', message: 'Guide', description: 'Updates tag pill'})},
+  notice:  {bg: 'var(--ifm-color-emphasis-200)', fg: 'var(--ifm-color-emphasis-700)', label: translate({id: 'updates.tag.notice', message: 'Notice', description: 'Updates tag pill'})},
 };
 
 type Item = {tag: string; date: string; title: string; title_zh?: string; to: string};
 
 export default function Updates() {
-  const {pathname} = useLocation();
-  const isZh = pathname.startsWith('/zh-Hant');
+  const {i18n} = useDocusaurusContext();
+  const isZh = i18n.currentLocale === 'zh-Hant';
   const items = (updatesData.items ?? []) as Item[];
 
   return (

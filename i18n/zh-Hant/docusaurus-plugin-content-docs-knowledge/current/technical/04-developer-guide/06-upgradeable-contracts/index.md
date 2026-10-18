@@ -11,4 +11,4 @@ draft: false
 forge install OpenZeppelin/openzeppelin-contracts-upgradeable
 ```
 
-涉及大量資產的代理合約管理操作，應使用 `TimelockController` 以確保安全，與 QDay Aevum 協定本身的治理模型保持一致。
+涉及大額資產的代理合約管理操作，應使用 `TimelockController` 以確保安全，與 QDay Aevum 協議本身的治理模型保持一致。

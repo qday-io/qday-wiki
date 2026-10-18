@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "QDay Wiki",
+    "message": "",
     "description": "The title in the navbar"
   },
   "item.label.Docs": {
@@ -15,10 +15,6 @@
     "message": "測試網",
     "description": "Navbar item with label Testnet"
   },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
-  },
   "item.label.Explorer": {
     "message": "區塊瀏覽器",
     "description": "Navbar item with label Explorer"
@@ -30,14 +26,6 @@
   "item.label.Swap": {
     "message": "兌換",
     "description": "Navbar item with label Swap"
-  },
-  "item.label.Staking": {
-    "message": "質押",
-    "description": "Navbar item with label Staking"
-  },
-  "item.label.Bridge": {
-    "message": "跨鏈橋",
-    "description": "Navbar item with label Bridge"
   },
   "item.label.Faucet": {
     "message": "水龍頭",
@@ -54,5 +42,13 @@
   "item.label.Technical": {
     "message": "技術文件",
     "description": "Navbar item with label Technical"
+  },
+  "item.label.Add Network": {
+    "message": "新增網絡",
+    "description": "Navbar item with label Add Network"
+  },
+  "item.label.Staking": {
+    "message": "質押",
+    "description": "Navbar item with label Staking"
   }
 }
