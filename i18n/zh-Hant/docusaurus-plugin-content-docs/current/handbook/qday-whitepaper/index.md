@@ -82,7 +82,7 @@ QDay 採取全面的生態系統策略，涵蓋核心 DeFi 應用、跨鏈橋及
 在數碼金融及分散式系統不斷演變的過程中，對安全性、擴展性、互操作性及實際可用性的不懈追求至關重要。全球數碼生態系統目前正同時經歷兩項結構性轉變，重新定義了底層區塊鏈基礎設施的要求：
 
 - **轉向機器主導：** 根據 Cloudflare 的數據，由自主 AI 代理、機械人及後台微服務驅動的自動化流量，於 2026 年 6 月史上首次正式超越互聯網上的人類流量，佔全球網絡請求總量的 57.4%。其中代理式 AI 流量（即自主軟件代表委託人執行現實世界的金融及 API 操作）按年激增 7,851%。
-- **量子威脅時間表加快：** 與此同時，實際的量子硬件進展大幅縮短了破解傳統公鑰密碼學的預計時間。Google Quantum AI、Ethereum Foundation 與 Stanford 於 2026 年 3 月聯合發表的一篇里程碑論文，將破解 256 位元橢圓曲線密碼學（ECDSA）所需的物理量子位元數目估算降低了 40 倍，由 2,000 萬個物理量子位元減至少於 500,000 個。
+- **量子威脅時間表加快：** 與此同時，實際的量子硬件進展大幅縮短了破解傳統公鑰密碼學的預計時間。Google Quantum AI、以太坊基金會與 Stanford 於 2026 年 3 月聯合發表的一篇里程碑論文，將破解 256 位元橢圓曲線密碼學（ECDSA）所需的物理量子位元數目估算降低了 40 倍，由 2,000 萬個物理量子位元減至少於 500,000 個。
 
 傳統區塊鏈基礎設施從來沒有被設計成能同時應對這兩項挑戰。為快速執行而打造的高吞吐量 EVM 鏈，幾乎完全依賴傳統 ECDSA 簽名，令帳戶餘額、智能合約狀態及交易記錄極易受到「先收集、後解密」（Harvest Now, Decrypt Later，HNDL）量子攻擊。相反，專門打造的後量子區塊鏈一直以來都是孤立運作，欠缺 EVM 兼容性、開發者工具、具流動性的穩定幣，以及自主機器所需的高頻結算原語。
 
@@ -124,7 +124,7 @@ QDay 抗量子安全性的開發將分兩個主要階段進行，為 QDay 建立
 
 #### 第 1 階段：具 EVM 兼容性的抗量子 Rollup（The Vault） {/* #phase-1-quantum-resistant-rollups-with-evm-compatibility-the-vault */}
 
-在這個階段，QDay 將透過向 Abelian 區塊鏈進行 ZK Rollup，引入抗量子帳本，同時繼承以太坊虛擬機（EVM）的帳戶模型及智能合約功能，以維持 EVM 兼容性。這讓以太坊開發者可以順暢過渡，並能使用現有的以太坊工具及語言。憑藉這種 L1 輔助的抗量子 Rollup，QDay 將能抵禦以修改帳本數據（例如交易次序、金額及狀態結構）為目標的量子攻擊。此外，一旦偵測到任何攻擊，QDay 能以抗量子的方式暫時停止 Rollup 的執行，從而防止資金損失；換言之，Rollup 一經停止，攻擊者便無法再推進，因為他們無法偽造由 Rollup 營運者產生的抗量子簽名。
+在這個階段，QDay 將透過向 Abelian 區塊鏈進行 ZK Rollup，引入抗量子帳本，同時繼承以太坊虛擬機（EVM）的帳戶模型及智能合約功能，以維持 EVM 兼容性。這讓以太坊開發者可以順暢過渡，並能使用現有的以太坊工具及語言。憑藉這種 L1 輔助的抗量子 Rollup，QDay 將能抵禦以修改帳本數據（例如交易次序、金額及狀態結構）為目標的量子攻擊。此外，一旦偵測到任何攻擊，QDay 能以抗量子的方式暫停 Rollup 的執行，從而防止資金損失；換言之，Rollup 一經暫停，攻擊者便無法再推進，因為他們無法偽造由 Rollup 營運者產生的抗量子簽名。
 
 #### 第 1.5 階段：代理支付網絡（The Rail） {/* #phase-15-agentic-payment-network-the-rail */}
 
@@ -134,7 +134,7 @@ QDay 抗量子安全性的開發將分兩個主要階段進行，為 QDay 建立
 
 在這個階段，QDay 將透過為現有帳戶加入新的抗量子密鑰，並啟用需要抗量子密鑰簽名的操作，實現抗量子帳戶。為此，QDay 的 EVM 實作將會更新，以支援輔助的後量子密碼學密鑰及算法。在這個抗量子帳戶模型之上，QDay 將支援兩類智能合約：傳統合約及抗量子合約。支援 EVM 智能合約的錢包仍可與傳統合約互動，而抗量子合約則只供支援 QDay 內置抗量子密鑰及算法的錢包使用。
 
-上述兩項抗量子機制是正交的。前者是針對帳本數據量子攻擊的一層防禦，後者則是針對特定帳戶量子攻擊的一層防禦。結合這兩項機制，將為 QDay 提供全面的抗量子安全性。舉例來說，即使攻擊者成功取得某些帳戶的私鑰（透過入侵受害者的電腦或其他方式），仍可透過停止 Rollup 執行、採取補救措施（例如凍結受影響帳戶），最後再恢復 Rollup 執行，以防止資金損失。請注意，所有這些行動都會基於 Rollup 營運者的共識進行，而該共識在設計上既去中心化亦抗量子。
+上述兩項抗量子機制是正交的。前者是針對帳本數據量子攻擊的一層防禦，後者則是針對特定帳戶量子攻擊的一層防禦。結合這兩項機制，將為 QDay 提供全面的抗量子安全性。舉例來說，即使攻擊者成功取得某些帳戶的私鑰（透過入侵受害者的電腦或其他方式），仍可透過暫停 Rollup 執行、採取補救措施（例如凍結受影響帳戶），最後再恢復 Rollup 執行，以防止資金損失。請注意，所有這些行動都會基於 Rollup 營運者的共識進行，而該共識在設計上既去中心化亦抗量子。
 
 ---
 
@@ -183,7 +183,7 @@ QDay 實施的 POS-over-POW 借助 Abelian 區塊鏈 POW 基礎的穩健安全�
 
 #### 抗量子 Rollup {/* #quantum-resistant-rollups */}
 
-抗量子 Rollup 的目標，是確保即使有人能使用量子電腦，亦無法修改或偽造 QDay 的帳本數據。這意味着 QDay 區塊鏈能以抗量子的方式停止 Rollup 的執行；換言之，Rollup 一經停止，攻擊者便無法再推進，因為他們無法偽造由 Rollup 營運者產生的抗量子簽名。在停止期間，受影響的帳戶可被凍結，攻擊者亦可被舉報予有關當局。補救措施完成後，Rollup 便可恢復執行。請注意，現有的 Layer 2 解決方案無法實施這種抗量子停止機制，因為它們無法阻止量子攻擊者破解 Rollup 營運者的私鑰。
+抗量子 Rollup 的目標，是確保即使有人能使用量子電腦，亦無法修改或偽造 QDay 的帳本數據。這意味着 QDay 區塊鏈能以抗量子的方式暫停 Rollup 的執行；換言之，Rollup 一經暫停，攻擊者便無法再推進，因為他們無法偽造由 Rollup 營運者產生的抗量子簽名。在暫停期間，受影響的帳戶可被凍結，攻擊者亦可被舉報予有關當局。補救措施完成後，Rollup 便可恢復執行。請注意，現有的 Layer 2 解決方案無法實施這種抗量子暫停機制，因為它們無法阻止量子攻擊者破解 Rollup 營運者的私鑰。
 
 在 QDay 中實施抗量子 Rollup 相當直接。每個 Rollup 營運者都會使用一個 Abelian 區塊鏈帳戶來運行 Rollup。Rollup 數據由 Layer 1 內置的抗量子密鑰及算法簽署。除了利用現有的抗量子 Layer 1 之外，其餘的 Rollup 實作可以與任何其他 Layer 2 解決方案完全相同。具體而言，QDay 的 ZK Rollup 是為配合 Abelian 區塊鏈的特性而打造。我們將在下一節說明技術細節。
 
@@ -252,7 +252,7 @@ $QDAY 代幣的總供應量為 22,517,998,100 枚。所有 $QDAY 代幣將於 TG
 <a id="sec-4"></a>
 ## 4. 第 1 階段：具備 EVM 兼容性、由 L1 輔助的抗量子 Rollup {/* #4-phase-1-l1-assisted-quantum-resistant-rollups-with-evm-compatibility */}
 
-在第 1 階段，QDay 將透過把 ZK Rollup 提交至 Abelian 區塊鏈，引入抗量子帳本，同時繼承以太坊虛擬機（EVM）的帳戶模型及智能合約功能，以保持 EVM 兼容性。這讓以太坊開發者可以順暢過渡，並繼續使用現有的以太坊工具及程式語言。憑藉這種由 L1 輔助的抗量子 Rollup，QDay 將能抵禦以篡改帳本數據（例如交易次序、金額及狀態結構）為目標的量子攻擊。此外，一旦偵測到任何攻擊，QDay 能以抗量子的方式暫時停止 Rollup 的執行，從而防止資金損失；換言之，Rollup 一經暫停，攻擊者便無法再推進，因為他們無法偽造由 Rollup 營運者產生的抗量子簽名。本節將集中介紹 QDay 抗量子 Rollup 的技術細節。
+在第 1 階段，QDay 將透過把 ZK Rollup 提交至 Abelian 區塊鏈，引入抗量子帳本，同時繼承以太坊虛擬機（EVM）的帳戶模型及智能合約功能，以保持 EVM 兼容性。這讓以太坊開發者可以順暢過渡，並繼續使用現有的以太坊工具及程式語言。憑藉這種由 L1 輔助的抗量子 Rollup，QDay 將能抵禦以篡改帳本數據（例如交易次序、金額及狀態結構）為目標的量子攻擊。此外，一旦偵測到任何攻擊，QDay 能以抗量子的方式暫停 Rollup 的執行，從而防止資金損失；換言之，Rollup 一經暫停，攻擊者便無法再推進，因為他們無法偽造由 Rollup 營運者產生的抗量子簽名。本節將集中介紹 QDay 抗量子 Rollup 的技術細節。
 
 <a id="sec-4-1"></a>
 ### 4.1. ZK Rollup 簡介 {/* #41-introduction-to-zk-rollups */}
@@ -538,20 +538,20 @@ QDay 第 2 階段的設計遵循以下核心原則：
 
 ### 第 1 類：與 Abelian 相關的應用 {/* #category-1-application-related-to-abelian */}
 
-由於 Abelian 是 QDay 安全性的穩固基礎，尤其在第 1 階段，L2 鏈的後量子特性完全來自提交至 L1 鏈的 Rollup，因此與 Abelian 相關的應用將率先在 QDay 上推出。這類應用將由 QDay 團隊主導，並獲 Abelian 團隊提供策略及技術支援。目前屬於此類別的主要應用為 Wrapped ABEL（WABEL）及 Abelian Staking。
+由於 Abelian 是 QDay 安全性的穩固基礎，尤其在第 1 階段，L2 鏈的後量子特性完全來自提交至 L1 鏈的 Rollup，因此與 Abelian 相關的應用將率先在 QDay 上推出。這類應用將由 QDay 團隊主導，並獲 Abelian 團隊提供策略及技術支援。此類別的主要應用曾為 Wrapped ABEL（WABEL）及 Abelian Staking（已於 2026 年 10 月 15 日結束）。
 
-- **Wrapped ABEL (WABEL)** - WABEL 是 QDay 上的 ERC-20 代幣，與 Abelian 上的 ABEL 幣按 1:1 錨定，用於在 QDay 區塊鏈與 Abelian 區塊鏈之間橋接 ABEL 代幣。如要鑄造 WABEL，用戶需要在 Abelian 上鎖定 ABEL 幣，並在 QDay 上收取相應數量的 WABEL。如要銷毀 WABEL，用戶需要在 QDay 上銷毀 WABEL，並在 Abelian 上收取相應數量的 ABEL 幣。為支援這些操作，QDay 團隊將實作一項用於鑄造及銷毀 WABEL 的線上服務。該服務將由一個持有信託服務提供者（TSP）認證的機構聯盟營運。
+- **Wrapped ABEL (WABEL)** - WABEL 是 QDay 上的 ERC-20 代幣，與 Abelian 上的 ABEL 幣按 1:1 錨定，用於在 QDay 區塊鏈與 Abelian 區塊鏈之間橋接 ABEL 代幣。WABEL 由 Abelian Bridge 智能合約鑄造及銷毀：當用戶在 Abelian 上鎖定 ABEL 時，QDay 上會鑄造相應數量的 WABEL；當用戶在 QDay 上銷毀 WABEL 時，Abelian 上會釋放相應數量的 ABEL。請參閱 [Abelian Bridge 使用指南](/guide/handbook/user-guide/abelian-bridge-v3)。
 - **Abelian Staking** - Abelian Staking 是一個曾讓用戶在 QDay 上質押 ABEL（以 WABEL 形式）以賺取獎勵的 dApp，已於 2026 年 10 月 15 日結束；請參閱 [ABEL 質押終止指南](/guide/handbook/user-guide/abel-staking)。
 
 ### 第 2 類：EVM 兼容應用 {/* #category-2-evm-compatible-applications */}
 
 這些 dApp 將會是 EVM 兼容的，可配合傳統帳戶及傳統錢包使用。為更好地支援社群開發的 dApp，QDay 團隊將實作一套基礎 DeFi dApp，並於測試網及第 1 階段主網推出時提供予社群。
 
-- **QDay Bridge：** 提供跨鏈資產轉移功能的 dApp。與 WABEL 不同，QDay Bridge 將專注於在 QDay 與其他 EVM 兼容鏈之間橋接 ERC20、TRC20 及 QRC20 代幣。
+- **QDay Bridge：** 提供跨鏈資產轉移功能的 dApp。與 WABEL 不同，QDay Bridge 將專注於在 QDay 與其他鏈之間橋接代幣，例如 ERC-20、TRC-20 及 QRC-20 資產。
 - **QDay Staking：** 曾為 $QDAY 提供質押功能的 dApp。現行計劃已於 2026 年 10 月 15 日結束（請參閱 [QDAY 質押終止指南](/guide/handbook/user-guide/qday-staking)）；質押功能將在升級後的網絡上重新部署。
 - **QDay Swap：** 提供代幣兌換功能的去中心化交易所（DEX）dApp。為協助 QDay 盡可能順利渡過冷啟動期，$QDAY、WABEL 及本鏈原生穩定幣的初始流動性將由 QDay 及 Abelian 的金庫提供。
-- **Q-Finance：** 整合上述所有服務的綜合 dApp，用戶可在統一介面中輕鬆管理其 DeFi 資產，並參與各種 DeFi dApp。
-- **QLEAP (QDay Lending Ecosystem And Protocol)：** 為 QRC20 代幣提供借貸功能的 dApp，與現有 EVM 兼容鏈上的借貸協議（例如 Aave 和 Compound）類似。
+- **QDay Finance（計劃中）：** 整合上述所有服務的綜合 dApp，用戶可在統一介面中輕鬆管理其 DeFi 資產，並參與各種 DeFi dApp。
+- **QDay Lending（計劃中）：** 為 QRC20 代幣提供借貸功能的 dApp，與現有 EVM 兼容鏈上的借貸協議（例如 Aave 和 Compound）類似。
 
 ### 第 3 類：抗量子應用 {/* #category-3-quantum-resistant-applications */}
 
@@ -637,8 +637,8 @@ QDay 將擁有自己與美元錨定的原生穩定幣，作為平台上所有支
 
 - **Gas 抽象：** 在 QDay 整合及使用 Paymaster 基礎設施後，代理和用戶可用原生穩定幣支付交易手續費，在代理支付流程中的日常操作無需持有或管理 $QDAY 原生代幣。從代理的角度看，每次互動都以穩定幣計算——根本沒有 Gas 代幣的概念。
 - **AI 代理金庫：** 代理可在其限定會話範圍的錢包中持有穩定幣餘額，在設定的上限內消費，並收取穩定幣作為所提供服務的報酬——構成無需人類介入的完整經濟生命週期。
-- **跨境支付：** QDay 上的穩定幣轉帳可在一秒內結算，手續費低於一仙，適用於跨境 B2B 及消費者支付流程；相比之下，傳統通道的結算需時數天，手續費達 1-3%。
-- **DeFi 抵押品：** 在 QDay 的 DeFi 生態系統（QDay Swap、QLEAP 等）內，原生穩定幣將作為主要的穩定抵押品，以美元計價的工具支援借貸及流動性提供，而無需承受加密貨幣價格波動的風險。
+- **跨境支付：** QDay 上的穩定幣轉帳可在一秒內結算，手續費低於一仙，適用於跨境 B2B 及消費者支付流程；相比之下，傳統支付通道的結算需時數天，手續費達 1-3%。
+- **DeFi 抵押品：** 在 QDay 的 DeFi 生態系統（QDay Swap、QDay Lending（計劃中）等）內，原生穩定幣將作為主要的穩定抵押品，以美元計價的工具支援借貸及流動性提供，而無需承受加密貨幣價格波動的風險。
 
 <a id="sec-7-4"></a>
 ### 7.4. QDay 的差異化優勢：量子安全支付 {/* #74-the-qday-differentiator-quantum-secure-payments */}
@@ -647,7 +647,7 @@ QDay 在全球支付格局中最重要的戰略差異，是目前其他支付區
 
 #### QDay 獨特的安全架構 {/* #qdays-unique-security-architecture */}
 
-在第 1 階段，QDay 以 EVM Layer 2 鏈的形式運作，其最終狀態透過 PQZK Bridge 結算於 Abelian L1；該 L1 鏈採用被美國國家標準與技術研究院（NIST）列為抗量子的格密碼算法（LWE 及 Ring-LWE）。
+在第 1 階段，QDay 以 EVM Layer 2 鏈的形式運作，待 PQZK Bridge 框架實作後，其最終狀態將透過該框架結算於 Abelian L1；該 L1 鏈採用被美國國家標準與技術研究院（NIST）列為抗量子的格密碼算法（LWE 及 Ring-LWE）。
 
 關鍵特性是由結算於 Abelian L1 的 ZK 證明支持的跨鏈最終確定性。一批 QDay 交易一經證明並提交至 Abelian，該狀態的最終確定性即受抗量子密碼學保護。擁有量子電腦的攻擊者無法偽造 Rollup 營運者在 Abelian 層的簽名，無法為無效的狀態轉換產生有效的 PQZK 證明，因此即使擁有量子運算資源，亦無法修改或撤銷已確認的 QDay 交易。
 
@@ -666,7 +666,7 @@ QDay 的路線圖直接應對這一問題。第 2 階段的抗量子帳戶模型
 
 隨着 QDay 朝其完整的支付及代理商業願景演進，以下是團隊目前積極推進的研發方向：
 
-1. **CDK 遷移**——完成 QDay 區塊鏈遷移至 Polygon CDK，並部署 PQZK Bridge 以將 ZK 證明錨定於 Abelian。這是其後代理支付能力的基礎設施根基。
+1. **CDK 遷移**——完成 QDay 區塊鏈遷移至 Polygon CDK，並實作 PQZK Bridge 框架以將 ZK 證明錨定於 Abelian。這是其後代理支付能力的基礎設施根基。
 2. **原生穩定幣基礎設施**——與 Open Money Stack（OMS）層整合。建立 QDay 的 Paymaster 基礎設施，讓鏈上穩定幣可用作原生 Gas 代幣。
 3. **代理錢包服務**——設計及實現限定會話範圍、抗量子的代理錢包，支援可設定的消費上限及限時存取窗口；並與 x402 協議整合，實現按請求的穩定幣支付。
 4. **鏈上代理身份（ERC-8004）**——在 QDay 上部署 ERC-8004 代理身份標準，讓 AI 代理註冊可驗證的身份、建立可攜的聲譽，並獲交易對手信任。

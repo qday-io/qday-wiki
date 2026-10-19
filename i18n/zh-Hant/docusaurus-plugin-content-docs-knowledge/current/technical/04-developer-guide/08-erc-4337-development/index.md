@@ -58,7 +58,7 @@ contract QDAYPaymaster is BasePaymaster {
 }
 ```
 
-## 會話密鑰（Session Key） {/* #session-key */}
+## 會話密鑰 {/* #session-key */}
 
 透過會話密鑰模組，授予 AI 代理或 dApp 有限的簽署權限：
 

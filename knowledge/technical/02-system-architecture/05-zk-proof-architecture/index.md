@@ -1,9 +1,9 @@
 ---
-title: zk Proof Architecture
+title: ZK Proof Architecture
 draft: false
 ---
 
-# zk Proof Architecture
+# ZK Proof Architecture
 
 The ZK proof pipeline converts a batch of EVM transactions into a cryptographic validity proof that any verifier can check without re-executing the transactions.
 

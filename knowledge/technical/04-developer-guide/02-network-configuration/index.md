@@ -16,7 +16,7 @@ QDay is a quantum-safe, EVM-compatible Layer 2. These docs target the public **Q
 | Explorer | `https://explorer-test.qday.info` | Published at launch |
 | Verifier API | `https://explorer-test.qday.info/api` | Published at launch |
 | Native currency (gas) | tQDAY (18 decimals) | QDAY (18 decimals) |
-| Stablecoin | tUSD8 (`0x456569838f1d43009A91ebA4263147Afd7233483`, 18 decimals) | USD8 |
+| Stablecoin | tUSD8 (`0x456569838f1d43009A91ebA4263147Afd7233483`, 6 decimals) | USD8 (6 decimals) |
 
 :::warning[Testnet vs mainnet]
 **44005 is the current public Aevum testnet** — all code samples in these docs default to it. QDay mainnet (`44002`) parameters will be published at launch. Always verify RPC, chain ID, and addresses against [Chain parameters](/Knowledge/reference/chains).

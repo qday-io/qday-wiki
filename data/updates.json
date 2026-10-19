@@ -4,15 +4,15 @@
     {
       "tag": "notice",
       "date": "2026-10",
-      "title": "QDAY / ABEL staking ended on 15 Oct — unstake and claim by 31 Dec 2026",
-      "title_zh": "QDAY / ABEL 質押已於 10 月 15 日結束 — 請於 2026 年 12 月 31 日前解除質押並領取獎勵",
+      "title": "QDAY / ABEL staking ended on 15 Oct — unstake and claim by 12:00 HKT, 31 Dec 2026",
+      "title_zh": "QDAY / ABEL 質押已於 10 月 15 日結束——請於 2026 年 12 月 31 日 12:00（HKT）前解除質押並領取獎勵",
       "to": "/guide/handbook/user-guide/qday-staking"
     },
     {
       "tag": "launch",
       "date": "2026-08",
       "title": "QDay Aevum testnet is live — add it to your wallet",
-      "title_zh": "QDay Aevum 測試網已上線 — 加入你的錢包",
+      "title_zh": "QDay Aevum 測試網已上線——新增至你的錢包",
       "to": "/guide/start/add-network"
     },
     {
@@ -26,7 +26,7 @@
       "tag": "guide",
       "date": "2026-08",
       "title": "Build a dApp on QDay — wagmi / viem quickstart",
-      "title_zh": "在 QDay 上開發 dApp — wagmi / viem 快速上手",
+      "title_zh": "在 QDay 上開發 dApp——wagmi / viem 快速入門",
       "to": "/Knowledge/technical/developer-guide/smart-contract-development"
     }
   ]

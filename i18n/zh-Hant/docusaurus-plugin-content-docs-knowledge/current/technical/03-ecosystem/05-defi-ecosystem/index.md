@@ -11,6 +11,6 @@ draft: false
 
 **QDay Finance** *（計劃中）*——聚合式 DeFi 入口，在單一介面內提供兌換、借貸及流動性供應。
 
-**QDay Staking**——QDAY/ABEL 質押已於 2026 年 10 月 15 日結束，不再接受新的質押，亦不再產生獎勵。詳情請參閱 [QDAY 質押](/guide/handbook/user-guide/qday-staking)。
+**QDay Staking**——QDAY/ABEL 質押已於 2026 年 10 月 15 日結束，不再接受新的質押，亦不再產生獎勵。詳情請參閱 [QDAY 質押終止指南](/guide/handbook/user-guide/qday-staking)。
 
 **包裝 ABEL（WABEL）**——WABEL 是從 Abelian Layer 1 跨鏈轉入的 ABEL 在 EVM 上的兼容表示形式，遵循標準 ERC-20 介面。

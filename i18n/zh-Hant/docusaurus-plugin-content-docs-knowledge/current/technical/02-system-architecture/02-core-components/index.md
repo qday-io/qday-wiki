@@ -11,8 +11,8 @@ draft: false
 | QDAY Node | `cdk-erigon` | 排序器（Sequencer）——執行交易、產生 L2 區塊、維護狀態 |
 | Sequence Sender | `cdk-node` | 收集區塊、建立批次、提交至 `zkRollupManager` |
 | zkRollupManager | Solidity 合約（DA 層） | 接收批次、驗證 ZK 證明、最終確定狀態 |
-| Aggregator | `cdk-node` | 擷取批次資訊、協調 zk Prover、提交證明 |
-| zk Prover | QDAY 證明服務 | 為批次產生有效性證明 |
+| Aggregator | `cdk-node` | 擷取批次資訊、協調 ZK Prover、提交證明 |
+| ZK Prover | QDAY 證明服務 | 為批次產生有效性證明 |
 | DA Node | `reth` + `lighthouse` | 數據可用性——託管 zkEVM 合約、儲存 Rollup 數據 |
 | Committer | `qday-anchor-relay` | 監聽 Rollup 事件，將狀態根同步至 Abelian Chain |
 | Abelian Chain | Abelian L1 | 儲存批次狀態根、Rollup 摘要及最終記錄 |

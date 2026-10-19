@@ -6,11 +6,11 @@ slug: /intro
 
 # QDay
 
-**QDay** 是建構於 Abelian 之上、抗量子且兼容 EVM 的 Layer 2。**QDay Aevum** 是升級後的網絡——即整個生態系統正在遷移至的鏈升級版本。
+**QDay** 是建構於 Abelian 之上、抗量子且兼容 EVM 的 Layer 2。**QDay Aevum** 是升級版 QDay 架構的公共測試網；QDay 主網將於 2027 年第一季推出。
 
 <div className="grid cards" markdown>
 
-- **初次接觸 QDay Aevum？** → [將它新增至你的錢包](start/add-network)
+- **初次接觸 QDay Aevum？** → [將 QDay 新增至你的錢包](start/add-network)
 - **正在開發？** → [開發者文件](/Knowledge/technical/developer-guide/getting-started)
 
 </div>

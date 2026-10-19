@@ -25,13 +25,13 @@ QDay 支援 MetaMask 及任何兼容 WalletConnect 的錢包。請使用以下�
 
 ## 跨鏈橋 {/* #bridge */}
 
-如要將資產從其他鏈轉移至 QDay，請使用 [QDay Bridge](/guide/handbook/user-guide#qday-bridge)（ERC20 / TRC20 / QRC20）或 [Abelian 跨鏈橋](/guide/handbook/user-guide/abelian-bridge-v3)（ABEL / WABEL）。
+如要將資產從其他鏈轉移至 QDay，請使用 [QDay Bridge](/guide/handbook/user-guide#qday-bridge)（ERC-20 / TRC-20 / QRC-20）或 [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3)（ABEL / WABEL）。
 
 ## 第一筆交易 {/* #first-transaction */}
 
-本教學示範在 **QDay Aevum 測試網**上使用 MetaMask 發送 **1 tQDAY**（QDay 主網正在開發中）。請先[新增 QDay 網絡](/guide/start/add-network)並[領取測試網 QDAY](/guide/start/faucet)。主網即將推出；推出後步驟相同。
+本教學示範在 **QDay Aevum 測試網**上使用 MetaMask 發送 **1 tQDAY**（QDay 主網正在開發中）。請先[新增 QDay 網絡](/guide/start/add-network)並[領取 tQDAY](/guide/start/faucet)。主網即將推出；推出後步驟相同。
 
-### 事前準備 {/* #prerequisites */}
+### 前置條件 {/* #prerequisites */}
 
 - 已安裝 [MetaMask](/guide/handbook/user-guide/metamask)，並已新增 QDay 網絡
 - 一個有餘額的帳戶（至少 1 tQDAY，另加少量作 Gas）
@@ -47,26 +47,26 @@ QDay 支援 MetaMask 及任何兼容 WalletConnect 的錢包。請使用以下�
    - 網絡
    - 收款人
    - 金額：1 tQDAY
-   - 預估 Gas 費用（以 QDAY 支付；應為不足一美仙至數美仙）
+   - 預估 Gas 費用（在測試網上以 tQDAY 支付；應為不足一美仙至數美仙）
 6. 點擊 **Confirm**（確認）。MetaMask 會廣播該交易。
 7. 開啟 **Activity**（活動）分頁。當狀態顯示為 **Confirmed**（已確認）時，點擊該交易即可在[區塊瀏覽器](https://explorer-test.qday.info)上查看（測試網；主網區塊瀏覽器將於推出時公佈）。
 
 :::tip[在測試網上練習]
-先將 1 tQDAY 發送至你控制的第二個 MetaMask 帳戶，再發送回來。這樣可在轉移主網資金之前，確認你能夠簽署交易、支付 Gas 及查閱區塊瀏覽器。
+先將 1 tQDAY 發送至你控制的第二個 MetaMask 帳戶，再發送回來。這樣可在日後於主網上使用真實資金之前，確認你能夠簽署交易、支付 Gas 及查閱區塊瀏覽器。
 :::
 
-:::warning[Gas 以 QDAY 支付]
-原生代幣轉帳以 QDAY 支付網絡手續費。如果 MetaMask 提示無法支付手續費，你需要在發送的 1 tQDAY 之外，額外持有少量 QDAY 餘額。
+:::warning[測試網上的 Gas 為 tQDAY]
+原生代幣轉帳以原生代幣支付網絡手續費（測試網上為 tQDAY；主網上為 QDAY）。如果 MetaMask 提示無法支付手續費，你需要在發送的 1 tQDAY 之外，額外持有少量 tQDAY 餘額。
 :::
 
 ## 部署你的第一個智能合約 {/* #deploy-your-first-smart-contract */}
 
 QDay 兼容 EVM，因此 [Remix IDE](https://remix.ethereum.org) 的用法與在以太坊上相同。本範例透過 MetaMask 在 QDay 上部署一個小型合約。
 
-### 事前準備 {/* #prerequisites-1 */}
+### 前置條件 {/* #prerequisites-1 */}
 
 - MetaMask 已連接至 QDay（建議使用測試網）
-- 帳戶中有足夠 QDAY 支付部署所需的 Gas
+- 帳戶中有足夠 tQDAY 支付部署所需的 Gas
 - 已安裝 MetaMask 擴充功能的瀏覽器（Remix 的 Injected Provider 會使用它）
 
 ### 1. 開啟 Remix 並建立合約 {/* #1-open-remix-and-create-the-contract */}
@@ -108,7 +108,7 @@ contract HelloQDay {
 
 1. 在合約下拉選單中選擇 **HelloQDay**。
 2. 點擊 **Deploy**。
-3. 檢查 MetaMask 的確認畫面（網絡、以 QDAY 計算的預估 Gas），然後點擊 **Confirm**（確認）。
+3. 檢查 MetaMask 的確認畫面（網絡、以 tQDAY 計算的預估 Gas），然後點擊 **Confirm**（確認）。
 4. 等待交易確認。合約會出現在 Remix 的 **Deployed Contracts** 之下。複製合約地址。
 
 ### 5. 呼叫合約並在區塊瀏覽器上核實 {/* #5-call-it-and-verify-on-the-explorer */}

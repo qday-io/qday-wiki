@@ -74,8 +74,8 @@ const defiAgent = agent.createDeFiAgent({
 ```typescript
 const paymentAgent = agent.createPaymentAgent({
   sessionKey,
-  maxSinglePayment: parseUnits("5", 18),   // 5 tUSD8 per payment (18 decimals)
-  maxDailySpend: parseUnits("50", 18),     // 50 tUSD8 per day
+  maxSinglePayment: parseUnits("5", 6),    // 5 tUSD8 per payment (6 decimals)
+  maxDailySpend: parseUnits("50", 6),      // 50 tUSD8 per day
   allowedRecipients: [API_PROVIDER_ADDRESS],
 });
 ```

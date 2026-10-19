@@ -16,9 +16,9 @@ QDay 兼容 EVM：Solidity、MetaMask、Remix、Hardhat、Foundry 及 wagmi/viem
 
 使用 **Technical**（技術）文件在 QDay 上建立你自己的服務：連接到鏈、部署合約，並從 dApp 呼叫它們。
 
-- **[開發者指南](/Knowledge/technical/developer-guide/getting-started)**——網絡、RPC、dApp 逐步教學、錢包、Smart Accounts（智能帳戶）、AI 代理及支付
+- **[開發者指南](/Knowledge/technical/developer-guide/getting-started)**——網絡、RPC、dApp 逐步教學、錢包、智能帳戶、AI 代理及支付
 - **[系統架構](/Knowledge/technical/system-architecture)**——Rollup、RPC 與應用層如何組合在一起
-- **[鏈參數](/Knowledge/reference/chains)** · **[代幣](/Knowledge/reference/tokens)**——ID、RPC 及代幣地址
+- **[鏈參數](/Knowledge/reference/chains)** · **[代幣清單](/Knowledge/reference/tokens)**——ID、RPC 及代幣地址
 
 如果你尚未使用過此網絡，請先從[將 QDay 新增至你的錢包](/guide/start/add-network)及[在 Remix 中部署第一個合約](/guide/handbook/getting-started#deploy-your-first-smart-contract)開始。
 
@@ -35,14 +35,14 @@ QDay 兼容 EVM：Solidity、MetaMask、Remix、Hardhat、Foundry 及 wagmi/viem
 
 ## SDK {/* #sdks */}
 
-應用層 SDK 封裝了 Smart Accounts（智能帳戶）、AI 代理及**支付**功能，讓你無需自行組合原始 RPC 和 ABI 即可推出產品。
+應用層 SDK 封裝了智能帳戶、AI 代理及**支付**功能，讓你無需自行組合原始 RPC 和 ABI 即可推出產品。
 
 | 套件 | 用途 |
 |---|---|
-| `@qday-io/sdk` | TypeScript 客戶端：Smart Accounts、bundler、支付、AI 代理 |
+| `@qday-io/sdk` | TypeScript 客戶端：智能帳戶、bundler、支付、AI 代理 |
 | `@qday-io/sdk/payments` | **支付 SDK**——發票、結帳、訂閱、串流付款、webhook |
-| `@qday-io/sdk/aa` | ERC-4337 Smart Accounts 及會話密鑰（Session Key） |
+| `@qday-io/sdk/aa` | ERC-4337 智能帳戶及會話密鑰（Session Key） |
 | `@qday-io/sdk/agent` | 鏈上 AI 代理（MCP + intent registry） |
 | `@qday-io/cli` | 提供相同功能的 CLI（`npm install -g @qday-io/cli`） |
 
-安裝與範例：[開發者指南——支付 SDK](/Knowledge/technical/developer-guide/payment-development)及 [SDK 與程式碼範例](/Knowledge/technical/developer-guide/sdk-code-examples)。支付閘道的生態系統概覽：[支付生態系統](/Knowledge/technical/ecosystem/payment-ecosystem)。API 表格（發佈後提供）：[技術參考](/Knowledge/technical/reference)。
+安裝與範例：[開發者指南——支付 SDK](/Knowledge/technical/developer-guide/payment-development)及 [SDK 與程式碼範例](/Knowledge/technical/developer-guide/sdk-code-examples)。支付閘道的生態系統概覽：[支付生態系統](/Knowledge/technical/ecosystem/payment-ecosystem)。API 表格（發佈後提供）：[參考資料](/Knowledge/technical/reference)。

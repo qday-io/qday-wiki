@@ -7,10 +7,6 @@
     "message": "文件",
     "description": "Navbar item with label Docs"
   },
-  "item.label.Mainnet": {
-    "message": "主網",
-    "description": "Navbar item with label Mainnet"
-  },
   "item.label.Testnet": {
     "message": "測試網",
     "description": "Navbar item with label Testnet"
@@ -50,5 +46,9 @@
   "item.label.Staking": {
     "message": "質押",
     "description": "Navbar item with label Staking"
+  },
+  "item.label.Origin Mainnet": {
+    "message": "Origin 主網",
+    "description": "Navbar item with label Origin Mainnet"
   }
 }

@@ -13,14 +13,14 @@ QDay's ecosystem is built in layers: a core protocol connecting QDay to Abelian 
 
 QDay's ecosystem applications include:
 
-- **ABEL Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/abel-staking) by 31 Dec 2026.
-- **QDay Bridge** — moves ERC20, TRC20, and QRC20 tokens between QDay and other EVM-compatible chains.
-- **QDay Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/qday-staking) by 31 Dec 2026.
+- **ABEL Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/abel-staking) by 12:00 HKT, 31 Dec 2026.
+- **QDay Bridge** — moves tokens such as ERC-20, TRC-20 and QRC-20 assets between QDay and other chains.
+- **QDay Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/qday-staking) by 12:00 HKT, 31 Dec 2026.
 - **QDay Swap** — QDay's decentralized exchange for swapping tokens.
 
 ## DeFi
 
-Together, these form QDay's DeFi layer: QDay Swap handles token swaps. The design intent is for USD8, QDay's native stablecoin, to serve as the primary collateral and settlement asset across all of them, so DeFi activity on QDay isn't exposed to native-token price swings.
+QDay's DeFi layer currently centres on QDay Swap, which handles token swaps (on QDay Origin mainnet); further DeFi products such as QDay Lending are planned. The design intent is for USD8, QDay's native stablecoin, to serve as the primary collateral and settlement asset across these applications, so DeFi activity on QDay isn't exposed to native-token price swings.
 
 ## AI Ecosystem
 

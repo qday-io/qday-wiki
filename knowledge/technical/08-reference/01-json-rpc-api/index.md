@@ -17,7 +17,7 @@ curl -s https://rpc-test.qday.info \
 
 Block parameters accept a hex quantity or a tag: `earliest`, `latest`, `pending`, `safe`, `finalized`.
 
-:::note Public vs operator
+:::note[Public vs operator]
 Public RPC should expose `eth_*` (and typically `net_*` / `web3_*`). `zkevm_getWitness`, `zkevm_getProverInput`, `debug_*`, and `admin_*` belong on operator nodes — see [RPC Security](/Knowledge/technical/security/rpc-security).
 :::
 

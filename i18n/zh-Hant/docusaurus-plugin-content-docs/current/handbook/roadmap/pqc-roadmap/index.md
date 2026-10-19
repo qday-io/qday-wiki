@@ -50,7 +50,7 @@ PQC-Native Account
 | ----------- | ----------------- | ------------------------------ | --------------------------------------------------------------------------------- |
 | **第 0 階段** | 現有              | Abelian 提供 PQC               | L1 結算與安全錨定、狀態承諾的抗量子最終確定性                                          |
 | **第 1 階段** | 2026 H2           | PQC 基礎                       | 密碼敏捷性（Crypto Agility）、ML-DSA-65、PQC SDK                                    |
-| **第 2 階段** | 2026 H2 – 2027 H1 | PQC 執行基礎                   | AA Smart Account、PQC Precompile、PQC 驗證                                         |
+| **第 2 階段** | 2026 H2 – 2027 H1 | PQC 執行基礎                   | AA 智能帳戶、PQC Precompile、PQC 驗證                                         |
 | **第 3 階段** | 2027 H1 – H2      | 混合安全性                     | ECDSA + PQC、混合交易、混合 AA                                                     |
 | **第 4 階段** | 2027 H2 – 2028    | PQC 遷移與基礎設施             | PQC Credential、帳戶遷移、跨鏈橋、預言機、治理                                     |
 | **第 5 階段** | 2028+             | 完整 PQC 原生網絡              | PQC 原生帳戶、驗證者、排序器、全面遷移                                             |
@@ -100,7 +100,7 @@ Abelian 作為 QDay 的 L1 結算與安全錨定層，為 QDay 的狀態承諾�
 
 一旦 QDay 的狀態承諾在 Abelian 上完成最終確認，對應的 QDay 歷史即以密碼學方式錨定於 L1，除非破壞底層的密碼學保證，否則無法篡改。
 
-Abelian 是後續每個階段的先決條件。在 QDay 引入 EVM 層 PQC 之前，已確認的狀態就已受到這條 L1 最終確定性路徑的保護。
+Abelian 是後續每個階段的前置條件。在 QDay 引入 EVM 層 PQC 之前，已確認的狀態就已受到這條 L1 最終確定性路徑的保護。
 
 ```
                     Abelian L1
@@ -172,7 +172,7 @@ ML-DSA-65 應作為 QDay 首次實作的主要 PQC 簽名方案。
 - 標準化的 PQC 簽名算法。
 - 在 QDay 密碼學層原生支援。
 - 支援錢包簽名與驗證。
-- 支援 Smart Account 驗證。
+- 支援智能帳戶驗證。
 - 支援未來的混合簽名。
 
 實作應抽象於統一的簽名介面之後：
@@ -245,7 +245,7 @@ createHybridSignature()
 
 在引入帳戶層級遷移之前，建立並驗證 QDay 支援 PQC 驗證所需的核心執行能力。
 
-優先事項是證明 QDay 能透過 AA Smart Account 與 PQC Precompile 可靠地執行 PQC 驗證。
+優先事項是證明 QDay 能透過 AA 智能帳戶與 PQC Precompile 可靠地執行 PQC 驗證。
 
 ```
                      QDay PQC Execution
@@ -262,7 +262,7 @@ createHybridSignature()
 
 
 
-### 5.1 AA Smart Account 基礎 {/* #51-aa-smart-account-foundation */}
+### 5.1 AA 智能帳戶基礎 {/* #51-aa-smart-account-foundation */}
 
 帳戶抽象（Account Abstraction）應作為可支援多種驗證機制的可編程帳戶層引入。
 
@@ -307,7 +307,7 @@ Output:
 - 原生執行。
 - 比純 Solidity 實作更低的驗證成本。
 - 更佳的性能。
-- 可供 Smart Account 重複使用的驗證。
+- 可供智能帳戶重複使用的驗證。
 - 跨鏈橋、預言機與治理授權的共同基礎。
 - 未來 PQC 應用的共同基礎。
 
@@ -318,7 +318,7 @@ Output:
 第 2 階段應驗證：
 
 - ML-DSA-65 簽名產生與驗證。
-- Smart Account 整合。
+- 智能帳戶整合。
 - PQC Precompile 的正確性。
 - 驗證 Gas 與執行性能。
 - 與 zkEVM 執行環境的兼容性。
@@ -334,7 +334,7 @@ Output:
 
 | 組件                  | 目標                                                                  | 優先級   |
 | --------------------- | --------------------------------------------------------------------- | -------- |
-| AA Smart Account      | 具備 PQC 能力的架構                                                   | 關鍵     |
+| AA 智能帳戶           | 具備 PQC 能力的架構                                                   | 關鍵     |
 | PQC Precompile        | ML-DSA 驗證                                                           | 關鍵     |
 | PQC 驗證              | 可投入生產的驗證路徑                                                  | 關鍵     |
 | zkEVM 整合            | 兼容性驗證                                                            | 高       |
@@ -388,7 +388,7 @@ Existing ECDSA Account
 
 ### 6.1 帳戶憑證 {/* #61-account-credentials */}
 
-QDay Smart Account 可支援多種驗證憑證：
+QDay 智能帳戶可支援多種驗證憑證：
 
 ```
 QDay Account
@@ -508,11 +508,11 @@ Transaction Valid
 
 
 
-## 7. AA Smart Wallet 作為 PQC 遷移層 {/* #7-aa-smart-wallet-as-the-pqc-migration-layer */}
+## 7. AA 智能錢包作為 PQC 遷移層 {/* #7-aa-smart-wallet-as-the-pqc-migration-layer */}
 
 帳戶抽象不應僅被視為錢包功能。
 
-對 QDay 而言，**AA Smart Wallet 可成為主要的 PQC 遷移層**。
+對 QDay 而言，**AA 智能錢包可成為主要的 PQC 遷移層**。
 
 AA 在第 2 階段作為可編程帳戶層引入。PQC Credential 則在第 4 階段附加到該層。
 
@@ -557,7 +557,7 @@ Smart Account
                   PQC Credentials
 ```
 
-Smart Account 是第 2 階段的架構。PQC Credential 是第 4 階段附加於其上的遷移機制。
+智能帳戶是第 2 階段的架構。PQC Credential 是第 4 階段附加於其上的遷移機制。
 
 因此：
 
@@ -767,7 +767,7 @@ setAccountPolicy()
 
 
 
-### 9.2 PQC QDay 跨鏈橋 {/* #92-pqc-qday-bridge */}
+### 9.2 PQC QDay Bridge {/* #92-pqc-qday-bridge */}
 
 跨鏈橋應是優先級最高的 PQC 組件之一，因為跨鏈橋的授權密鑰可控制大量跨鏈資產。
 
@@ -1131,7 +1131,7 @@ ZK Circuit
 Succinct PQ Proof
 ```
 
-這應保持為研究與優化方向，而非 QDay 初始 PQC 部署的先決條件。
+這應保持為研究與優化方向，而非 QDay 初始 PQC 部署的前置條件。
 
 ### 10.5 長期密碼敏捷性 {/* #105-long-term-crypto-agility */}
 
@@ -1357,7 +1357,7 @@ ML-DSA Verification
 
 交付項目：
 
-- PQC Smart Account 架構
+- PQC 智能帳戶架構
 - PQC Precompile
 - ML-DSA 驗證
 - PQC 執行基準測試

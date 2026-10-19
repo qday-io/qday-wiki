@@ -126,7 +126,7 @@ const config: Config = {
   // build time. Comparable to MkDocs Material's built-in search.
   themes: [
     '@docusaurus/theme-mermaid',
-    ['@easyops-cn/docusaurus-search-local', { hashed: true, indexBlog: false }],
+    ['@easyops-cn/docusaurus-search-local', { hashed: true, indexBlog: false, docsRouteBasePath: ['guide', 'Knowledge'], language: ['en', 'zh'] }],
   ],
 
   themeConfig: {
@@ -158,7 +158,7 @@ const config: Config = {
           ],
         },
         {
-          label: 'Mainnet', position: 'right',
+          label: 'Origin Mainnet', position: 'right',
           items: [
             { label: 'Explorer', href: 'https://explorer.qday.io' },
             { label: 'Portal', href: 'https://portal.qday.io' },
@@ -209,7 +209,7 @@ const config: Config = {
         ]},
         { title: 'Network', items: [
           { label: 'Portal', href: 'https://portal.qday.io' },
-          { label: 'Explorer', href: 'https://explorer.qday.io' },
+          { label: 'Explorer', href: 'https://explorer-test.qday.info' },
         ]},
         { title: 'Community', items: [
           { label: 'X', href: 'https://x.com/QDayOfficial' },

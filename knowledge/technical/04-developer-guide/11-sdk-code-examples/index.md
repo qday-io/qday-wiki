@@ -9,7 +9,7 @@ draft: false
 The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
 :::
 
-The QDAY SDK ships with examples in multiple languages. Full example repositories are at [github.com/qday-io](https://github.com/qday-io).
+Only the TypeScript / JavaScript SDK (`@qday-io/sdk`) and the CLI (`@qday-io/cli`) are planned for Q1 2027. Go, Rust and Python SDKs are planned but not published — the package names below are placeholders and may change, so do not install look-alike packages from public registries. Example repositories will be published under [github.com/qday-io](https://github.com/qday-io).
 
 ## JavaScript
 
@@ -31,22 +31,31 @@ ESM + types: `import { … } from '@qday-io/sdk'`. Wallet, contract, and payment
 
 ## Go
 
+Planned — not published; package names may change.
+
 ```bash
-go get github.com/qday-io/qday-go-sdk
+# Planned — not published; package names may change. Do not install look-alike packages.
+# go get github.com/qday-io/qday-go-sdk
 ```
 
 ## Rust
 
+Planned — not published; package names may change.
+
 ```bash
-cargo add qday-sdk
+# Planned — not published; package names may change. Do not install look-alike packages.
+# cargo add qday-sdk
 ```
 
-Crate: `qday-sdk` on crates.io.
+Crate (planned, not published): `qday-sdk` on crates.io.
 
 ## Python
 
+Planned — not published; package names may change.
+
 ```bash
-pip install qday-sdk
+# Planned — not published; package names may change. Do not install look-alike packages.
+# pip install qday-sdk
 ```
 
-Package: `qday-sdk` on PyPI.
+Package (planned, not published): `qday-sdk` on PyPI.

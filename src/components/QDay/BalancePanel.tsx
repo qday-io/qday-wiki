@@ -31,7 +31,7 @@ const CHAINS: Record<Network, { label: string; chainId: number; rpc: string; tok
     tokens: [
       { sym: 'WABEL', addr: '0x4668107253E28C2b569E76Edb14B1E88c3b93de1', decimals: 18 },
       { sym: 'WQDAY', addr: '0x915E807e7EC1665889172902781FB851202A54dF', decimals: 18 },
-      { sym: 'tUSD8', addr: '0x456569838f1d43009A91ebA4263147Afd7233483', decimals: 18 },
+      { sym: 'tUSD8', addr: '0x456569838f1d43009A91ebA4263147Afd7233483', decimals: 6 },
     ],
   },
 };

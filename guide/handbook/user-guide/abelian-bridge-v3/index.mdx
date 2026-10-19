@@ -13,6 +13,8 @@ This guide explains how to use the **Abelian Bridge** to transfer assets between
 Abelian Bridge runs on **QDay Origin mainnet**, **QDay Origin testnet** and **QDay Aevum testnet**.
 :::
 
+WABEL is minted and burned by the Abelian Bridge smart contracts: bridging ABEL → WABEL mints WABEL on QDay, and bridging WABEL → ABEL burns it and releases ABEL on Abelian.
+
 Supported bridge directions:
 
 - **ABEL → WABEL**
@@ -120,7 +122,7 @@ Large-value transactions are not processed automatically and may remain pending 
 
 #### Confirm the Transaction
 
-After clicking **Generate QR Code** or **Generate New Order**, the **Confirm Transaction** pop-up is displayed.
+After clicking **Generate QR Code** or **Generate New Order**, the **Confirm Transaction** pop-up is displayed. The button label depends on the bridge direction and amount, as shown in the screenshots above: **Generate QR Code** appears for a low-amount ABEL → WABEL deposit (completed by scanning a QR code in the Abelian mobile app), and **Generate New Order** appears for a large-amount transaction or a WABEL → ABEL transaction.
 
 Review the following information carefully:
 
@@ -247,35 +249,27 @@ Large-value bridge transactions require manual review after the token transfer i
 The result depends on the admin review:
 
 - If the request is approved, the transaction is processed and the status changes to **Bridge Successful**.
-- If the request is rejected, the status changes to **Bridge Failed** and a refund can be requested.
-
-##### Request a Refund
-
-When the **Bridge Failed** screen is displayed:
-
-1. Review the rejection reason.
-2. Click **Refund**.
-3. Follow the on-screen instructions to submit the refund request.
-
-Click **Start New Conversion** to create another bridge transaction.
+- If the request is rejected, the status changes to **Bridge Failed** and a refund can be requested (see [Request a refund](#request-a-refund)).
 
 :::tip[Note]
 Large-value transactions may remain pending until the required number of admin approvals or rejections is reached.
 :::
 
+#### Request a refund
+
+When a conversion is rejected, fails, or expires, the **Refund** option may become available. You can start a refund from either of two places:
+
+- **Bridge Failed screen:** shown, for example, when a large-value request is rejected. Review the rejection reason, then click **Refund**.
+- **Bridge Detail screen:** open the transaction from [Recent Transactions](#recent-transactions) (**View**), then click **Refund**.
+
 ![Large-Value Transaction Failed Screen](/abel-bridge-v3/11-large-transaction-failed.png)
 
 *Bridge Failed screen for rejected or failed transactions with option to request a refund.*
 
-##### Requesting a Refund
+Then:
 
-When a conversion is rejected, fails, or expires, the **Refund** option may become available.
-
-To request a refund:
-
-1. Click **Refund** on the **Bridge Detail** screen.
-2. Review the refund amount displayed in the pop-up.
-3. Click **Confirm** to submit the refund request.
+1. Review the refund amount displayed in the pop-up.
+2. Click **Confirm** to submit the refund request.
 
 The refund includes the original amount and the applicable transaction fee.
 

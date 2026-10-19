@@ -36,16 +36,16 @@ QDay 的產品及網絡計劃：先是建於 Abelian 之上、兼容 EVM 的 Lay
 | 第 1 階段測試網 v2 | 2025 Q2 |
 | 第 1 階段主網 | 2025 Q4 |
 | 第 1.5 階段（支付網絡）開發啟動 | 2026 Q1 |
-| 第 1.5 階段測試網 | 2026 Q3 |
+| 第 1.5 階段測試網（在 Aevum 上進行 Polygon CDK 升級；x402 facilitator、AI 代理錢包及穩定幣 Paymaster 將於 2027 年第一季隨 QDay 主網推出） | 2026 Q3 |
 | 第 2 階段（原生抗量子帳戶）開發啟動 | 2026 Q4 |
-| 第 1.5 階段主網 | 2027 Q1 |
 | 第 2 階段測試網 | 2027 Q1 之前 |
+| 第 1.5 階段主網 | 2027 Q1 |
 | 第 2 階段主網 | 2027 Q4 |
 
 ## 第 1 階段已涵蓋的內容 {/* #what-phase-1-already-covers */}
 
 - EVM 執行（Solidity、MetaMask、Remix、Hardhat、Foundry）
 - 以 ZK Rollup 提交至 Abelian，以及帳本遭受攻擊時的抗量子暫停機制
-- 區塊瀏覽器、水龍頭（測試網）、[Swap](/guide/handbook/user-guide/swap)、[質押](/guide/handbook/user-guide/qday-staking)（已於 2026 年 10 月結束）、[跨鏈橋](/guide/handbook/user-guide#qday-bridge)
+- 區塊瀏覽器、水龍頭（測試網）、[QDay Swap](/guide/handbook/user-guide/swap)、[質押](/guide/handbook/user-guide/qday-staking)（已於 2026 年 10 月結束）、[跨鏈橋](/guide/handbook/user-guide#qday-bridge)
 
 開發者：[在 QDay 上開發](/guide/handbook/build-on-qday)及[技術知識庫](/Knowledge/technical/developer-guide/getting-started)。

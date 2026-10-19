@@ -416,7 +416,7 @@
     "message": "根據本 wiki 內容回答 · 預覽"
   },
   "ai.intro": {
-    "message": "問任何關於 QDay 的問題 — 試試："
+    "message": "問任何關於 QDay 的問題——試試："
   },
   "ai.placeholder": {
     "message": "詢問關於 QDay…"
@@ -476,7 +476,7 @@
     "message": "對開發者友善"
   },
   "feat.dev.b": {
-    "message": "完整的開發工具、SDK 與詳細文件，降低入門門檻。"
+    "message": "完整的開發工具、詳細文件及 SDK（2027 年第一季推出），降低開發門檻。"
   },
   "theme.announcementBar.revisionNotice": {
     "message": "文件改版進行中：如發現問題，請透過 {github} 回報。",
@@ -524,19 +524,19 @@
     "message": "跨鏈橋"
   },
   "quicklinks.bridge.desc": {
-    "message": "在不同鏈之間轉移資產"
+    "message": "跨鏈轉移資產（QDay Origin 測試網／Aevum 測試網）"
   },
   "quicklinks.swap.title": {
     "message": "兌換"
   },
   "quicklinks.swap.desc": {
-    "message": "在 QDay 上兌換代幣"
+    "message": "在 QDay Origin 主網兌換代幣"
   },
   "quicklinks.staking.title": {
     "message": "質押"
   },
   "quicklinks.staking.desc": {
-    "message": "已結束 — 請於 2026 年 12 月 31 日前解除質押並領取"
+    "message": "已結束——請於 2026 年 12 月 31 日 12:00（HKT）前解除質押並領取"
   },
   "updates.tag.launch": {
     "message": "上線",
@@ -708,7 +708,7 @@
     "message": "發生錯誤，請再試一次。"
   },
   "home.meta.description": {
-    "message": "QDay Aevum — 抗量子 Layer2。為用戶及開發者而設的使用指南。",
+    "message": "QDay Aevum——抗量子 Layer2。為用戶及開發者而設的使用指南。",
     "description": "Homepage meta description"
   },
   "notFound.metaTitle": {
@@ -747,5 +747,8 @@
   "addNetwork.button.qday": {
     "message": "將 QDay 新增至錢包",
     "description": "Add-network button for QDay"
+  },
+  "addToken.err.switch": {
+    "message": "請先將錢包切換至 {network}，然後再試一次。"
   }
 }

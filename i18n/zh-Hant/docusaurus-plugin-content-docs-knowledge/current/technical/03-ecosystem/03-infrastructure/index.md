@@ -11,4 +11,4 @@ draft: false
 
 **索引器**——高效能的事件索引器追蹤代幣轉帳、DEX 交易、支付事件及 AI 代理操作。應用程式可以透過 GraphQL API 查詢已索引的數據，而無需重播鏈上歷史。
 
-**水龍頭**——測試網水龍頭（`https://faucet.qday.info`）分發 QDay Aevum 測試網 Gas 代幣 tQDAY，供開發及測試使用。你亦可以從[文件內置水龍頭](/guide/start/faucet)領取。
+**水龍頭**——測試網水龍頭（`https://faucet.qday.info`）分發 QDay Aevum 測試網 Gas 代幣 tQDAY，供開發及測試使用。你亦可以透過文件內置水龍頭（[取得測試網代幣](/guide/start/faucet)）領取。

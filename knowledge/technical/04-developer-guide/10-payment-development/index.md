@@ -11,12 +11,12 @@ The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are
 
 ## Payment SDK
 
-The samples below target the QDay Aevum testnet (chain ID `44005`) and use **tUSD8**, the testnet version of the USD8 stablecoin (18 decimals). On QDay mainnet, use USD8 — its address will be published at launch.
+The samples below target the QDay Aevum testnet (chain ID `44005`) and use **tUSD8**, the testnet version of the USD8 stablecoin (6 decimals). On QDay mainnet, use USD8 — its address will be published at launch.
 
 ```typescript
 import { QDAYPayments } from "@qday-io/sdk/payments";
 
-// tUSD8 on QDay Aevum testnet (18 decimals)
+// tUSD8 on QDay Aevum testnet (6 decimals)
 const TUSD8_ADDRESS = "0x456569838f1d43009A91ebA4263147Afd7233483";
 
 const payments = new QDAYPayments({
@@ -34,7 +34,7 @@ Regular network gas is paid in QDAY (tQDAY on testnet). Individual apps may char
 ```typescript
 // Create an invoice (merchant side)
 const invoice = await payments.createInvoice({
-  amount: parseUnits("9.99", 18), // 9.99 tUSD8
+  amount: parseUnits("9.99", 6), // 9.99 tUSD8
   currency: TUSD8_ADDRESS,
   memo: "Pro subscription - August 2026",
   expiresIn: 3600, // 1 hour
@@ -58,7 +58,7 @@ await receipt.wait(); // wait for L2 soft confirmation
 // Create a recurring payment authorization
 const subscription = await payments.createSubscription({
   merchant: MERCHANT_ADDRESS,
-  amount: parseUnits("9.99", 18),
+  amount: parseUnits("9.99", 6),
   period: "monthly",
   currency: TUSD8_ADDRESS,
 });
@@ -71,8 +71,8 @@ const subscription = await payments.createSubscription({
 // Stream 1 tUSD8 per hour to a content provider
 const stream = await payments.createStream({
   recipient: PROVIDER_ADDRESS,
-  flowRate: parseUnits("1", 18) / BigInt(3600), // per second
-  deposit: parseUnits("24", 18), // 24h deposit
+  flowRate: parseUnits("1", 6) / BigInt(3600), // per second
+  deposit: parseUnits("24", 6), // 24h deposit
   currency: TUSD8_ADDRESS,
 });
 ```

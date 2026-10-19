@@ -15,9 +15,9 @@ The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are
 | `@qday-io/sdk/payments` | TypeScript | Invoices, checkout, subscriptions, streams, webhooks |
 | `@qday-io/sdk/aa` | TypeScript | ERC-4337 accounts and session keys |
 | `@qday-io/sdk/agent` | TypeScript | On-chain agents (MCP + intent registry) |
-| `github.com/qday-io/qday-go-sdk` | Go | Same surface for Go services |
-| `qday-sdk` (crates.io) | Rust | Same surface for Rust |
-| `qday-sdk` (PyPI) | Python | Same surface for Python |
+| `github.com/qday-io/qday-go-sdk` | Go | Planned — not published; package names may change |
+| `qday-sdk` (crates.io) | Rust | Planned — not published; package names may change |
+| `qday-sdk` (PyPI) | Python | Planned — not published; package names may change |
 | `@qday-io/cli` | CLI | `npm install -g @qday-io/cli` (available Q1 2027) — [CLI Reference](/Knowledge/technical/reference/cli-reference) |
 
 ```bash

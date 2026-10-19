@@ -14,8 +14,8 @@ QDay 空投獎勵**活躍的 QDay 及 Abelian 社群成員**。資格及數量�
 
 **如何領取**
 
-1. 留意官方頻道的公告：[Telegram](https://web.telegram.org/k/#@qday_official_group)、[X (@QDayOfficial)](https://x.com/QDayOfficial) 及 [QDay Portal](https://portal.qday.io)。
-2. 活動開始時，前往這些頻道所連結的**官方空投入口**（經 [portal.qday.io](https://portal.qday.io) 進入——切勿透過陌生私訊或仿冒網址進入）。
+1. 留意官方渠道的公告：[Telegram](https://web.telegram.org/k/#@qday_official_group)、[X (@QDayOfficial)](https://x.com/QDayOfficial) 及 [QDay Portal](https://portal.qday.io)。
+2. 活動開始時，前往這些渠道所連結的**官方空投入口**（經 [portal.qday.io](https://portal.qday.io) 進入——切勿透過陌生私訊或仿冒網址進入）。
 3. 連接你在 QDay / Abelian 上使用的同一個錢包（請參閱 [MetaMask](/guide/handbook/user-guide/metamask) 或 [Abelian 手機錢包](/guide/handbook/user-guide/abelian-mobile-wallet)）。
 4. 檢查資格、細閱條款，然後領取。在錢包中確認交易。Gas 以 QDAY 支付。
 
@@ -45,7 +45,7 @@ LP 回報取決於交易量及價格變動。請先以小額開始，並在存�
 ## 質押（已結束） {/* #staking-ended */}
 
 :::warning[QDAY / ABEL 質押已結束]
-QDAY Staking 及 ABEL（WABEL）Staking 已於 **2026 年 10 月 15 日中午 12:00（HKT）** 結束，不再接受新的質押。你可在 **2026 年 12 月 31 日中午 12:00（HKT）** 前解除質押並領取待領獎勵——請參閱 [QDAY 質押終止指南](/guide/handbook/user-guide/qday-staking)及 [ABEL 質押終止指南](/guide/handbook/user-guide/abel-staking)。
+QDAY Staking 及 ABEL（WABEL）Staking 已於 **2026 年 10 月 15 日中午 12:00（HKT）** 結束，不再接受新的質押。你可在 **2026 年 12 月 31 日 12:00（HKT）前**解除質押並領取待領獎勵——請參閱 [QDAY 質押終止指南](/guide/handbook/user-guide/qday-staking)及 [ABEL 質押終止指南](/guide/handbook/user-guide/abel-staking)。
 :::
 
 ## 生態系統激勵 {/* #ecosystem-incentives */}
@@ -62,7 +62,7 @@ QDay 基金會支持**建設及推廣**生態系統的人——文件、工具�
 **如何參與**
 
 1. 公開進行你的工作（GitHub、Telegram、X），以便核實。
-2. 關注[社群](/guide/handbook/community)頻道，留意資助 / 賞金的開放時段。
+2. 關注[社群](/guide/handbook/community)渠道，留意資助 / 賞金的開放時段。
 3. 在申請期開放時提交申請或提案，附上簡短說明、工作成果連結，以及你所需要的支援。
 4. 若獲批准，基金會（或在治理逐步推出後由 DAO）會按該計劃的條款發放獎勵。
 
@@ -96,7 +96,7 @@ QDay 大使是較長期**代表及推廣 QDay** 的社群成員——經營地�
 
 **如何申請**
 
-1. 先在官方[社群](/guide/handbook/community)頻道保持活躍並作出建設性貢獻。
+1. 先在官方[社群](/guide/handbook/community)渠道保持活躍並作出建設性貢獻。
 2. 申請開放時，使用 QDay 公佈的表格或流程——而非私訊中的陌生人。
 3. 說明你的受眾、語言、過往貢獻，以及你將如何推廣 QDay。
 4. 若獲接納，請遵從大使簡介（品牌、你可作出的聲明，以及獎勵的發放方式）。

@@ -11,4 +11,6 @@ QDay Aevum 與外部鏈之間的跨鏈資產轉移，採用 **PolygonZkEVMBridge
 
 **GlobalExitRoot**——追蹤所有跨鏈退出的共用 Merkle 根。任何信任 GlobalExitRoot 的鏈，都可以根據它驗證領取申請，而無需重新執行跨鏈交易。
 
-**QDAY ↔ Abelian 跨鏈橋（PQZK Bridge）**——在 QDay Aevum（EVM）與 Abelian Layer 1（UTXO）之間轉移的資產會經由 PQZK Bridge，而 PQZK Bridge 以 Committer 提交至 Abelian Chain 的狀態根作為錨定。
+**Abelian Bridge（ABEL ⇄ WABEL，現已上線）**——目前，Abelian Layer 1（UTXO）上的 ABEL 經由 [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) 與 QDay 上的 WABEL 互相轉換。ABEL 跨鏈轉入時，Abelian Bridge 智能合約會鑄造 WABEL；WABEL 轉換回 ABEL 時，合約會將其銷毀。Abelian Bridge 運行於 QDay Origin 主網、QDay Origin 測試網及 QDay Aevum 測試網。
+
+**PQZK Bridge（統稱概念）**——PQZK Bridge（Post-Quantum Zero-Knowledge Bridge，後量子零知識橋）是一個統稱，指以後量子零知識證明連接 QDay 與 Abelian Layer 1 的整體框架。它並非獨立的 dApp；用戶轉移資產請使用 Abelian Bridge（ABEL ⇄ WABEL）及 QDay Bridge。其完整實作屬未來工作（見[白皮書 §4.4](/guide/handbook/qday-whitepaper#sec-4-4)）。在此框架下，QDay（EVM）與 Abelian Layer 1（UTXO）透過 Committer 提交至 Abelian Chain 的狀態根相連。

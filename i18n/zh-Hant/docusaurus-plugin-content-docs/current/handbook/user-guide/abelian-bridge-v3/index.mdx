@@ -1,18 +1,20 @@
 ---
 sidebar_position: 56
-sidebar_label: Abelian 跨鏈橋
+sidebar_label: Abelian Bridge
 ---
 
 import NextSteps from "@site/src/components/QDay/NextSteps";
 
 
-# Abelian 跨鏈橋使用指南
+# Abelian Bridge 使用指南
 
-本指南說明如何使用 **Abelian Bridge**（跨鏈橋）在 Abelian 與 QDay 網絡之間轉移資產。
+本指南說明如何使用 **Abelian Bridge** 在 Abelian 與 QDay 網絡之間轉移資產。
 
 :::info[網絡]
 Abelian Bridge 運行於 **QDay Origin 主網**、**QDay Origin 測試網**及 **QDay Aevum 測試網**。
 :::
+
+WABEL 由 Abelian Bridge 智能合約鑄造及銷毀：ABEL → WABEL 跨鏈時會在 QDay 上鑄造 WABEL；WABEL → ABEL 跨鏈時則會銷毀 WABEL，並在 Abelian 上釋放 ABEL。
 
 支援的跨鏈方向：
 
@@ -121,7 +123,7 @@ Abelian Bridge 運行於 **QDay Origin 主網**、**QDay Origin 測試網**及 *
 
 #### 確認交易 {/* #confirm-the-transaction */}
 
-點擊 **Generate QR Code（產生 QR Code）** 或 **Generate New Order（產生新訂單）** 後，會顯示 **Confirm Transaction（確認交易）** 彈出視窗。
+點擊 **Generate QR Code（產生 QR Code）** 或 **Generate New Order（產生新訂單）** 後，會顯示 **Confirm Transaction（確認交易）** 彈出視窗。按鈕名稱取決於跨鏈方向及金額，如上方截圖所示：小額 ABEL → WABEL 存入會顯示 **Generate QR Code**（透過 Abelian 手機應用程式掃描 QR Code 完成），而大額交易或 WABEL → ABEL 交易則會顯示 **Generate New Order**。
 
 請仔細檢視以下資訊：
 
@@ -248,35 +250,27 @@ Abelian Bridge 運行於 **QDay Origin 主網**、**QDay Origin 測試網**及 *
 結果取決於管理員的審核：
 
 - 若請求獲得核准，交易會被處理，狀態變更為 **Bridge Successful（跨鏈成功）**。
-- 若請求被拒絕，狀態變更為 **Bridge Failed（跨鏈失敗）**，此時可以申請退款。
-
-##### 申請退款 {/* #request-a-refund */}
-
-當顯示 **Bridge Failed（跨鏈失敗）** 畫面時：
-
-1. 檢視拒絕原因。
-2. 點擊 **Refund（退款）**。
-3. 依照畫面上的指示送出退款請求。
-
-點擊 **Start New Conversion（開始新的轉換）** 即可建立另一筆跨鏈交易。
+- 若請求被拒絕，狀態變更為 **Bridge Failed（跨鏈失敗）**，此時可以申請退款（請參閱[申請退款](#request-a-refund)）。
 
 :::tip[注意]
 大額交易在達到所需的管理員核准或拒絕數量之前，可能會一直處於待處理狀態。
 :::
 
+#### 申請退款 {/* #request-a-refund */}
+
+當轉換被拒絕、失敗或過期時，**Refund（退款）** 選項可能會變為可用。你可以從以下兩個位置發起退款：
+
+- **Bridge Failed（跨鏈失敗）畫面：** 例如大額請求被拒絕時會顯示此畫面。檢視拒絕原因後，點擊 **Refund（退款）**。
+- **Bridge Detail（跨鏈詳情）畫面：** 從[近期交易](#recent-transactions)開啟該筆交易（**View**），然後點擊 **Refund（退款）**。
+
 ![大額交易失敗畫面](/abel-bridge-v3/11-large-transaction-failed.png)
 
 *針對被拒絕或失敗交易的跨鏈失敗畫面，並提供申請退款的選項。*
 
-##### 提出退款請求 {/* #requesting-a-refund */}
+然後：
 
-當轉換被拒絕、失敗或過期時，**Refund（退款）** 選項可能會變為可用。
-
-申請退款：
-
-1. 在 **Bridge Detail（跨鏈詳情）** 畫面點擊 **Refund（退款）**。
-2. 檢視彈出視窗中顯示的退款金額。
-3. 點擊 **Confirm（確認）** 以送出退款請求。
+1. 檢視彈出視窗中顯示的退款金額。
+2. 點擊 **Confirm（確認）** 以送出退款請求。
 
 退款包含原始金額與相應的交易費用。
 

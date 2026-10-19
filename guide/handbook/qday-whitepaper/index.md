@@ -538,20 +538,20 @@ These principles ensure that QDay can transition to quantum-resistant security w
 
 ### Category 1: Application related to Abelian
 
-Since Abelian is the solid foundation of the security of QDay, especially in Phase 1 where the post-quantum features of the L2 chain are completely gained from the rollups to the L1 chain, the applications related to Abelian will be the first to be launched on QDay. Such applications will be led by the QDay team with strategic and technical support from the Abelian team. Currently, the main applications fall in this category are Wrapped ABEL (WABEL) and Abelian Staking.
+Since Abelian is the solid foundation of the security of QDay, especially in Phase 1 where the post-quantum features of the L2 chain are completely gained from the rollups to the L1 chain, the applications related to Abelian will be the first to be launched on QDay. Such applications will be led by the QDay team with strategic and technical support from the Abelian team. The main applications in this category were Wrapped ABEL (WABEL) and Abelian Staking (which ended on 15 October 2026).
 
-- **Wrapped ABEL (WABEL)** - WABEL is an ERC-20 token on QDay that is 1:1 pegged to the ABEL coin on Abelian. It is used to bridge the ABEL token between the QDay Blockchain and the Abelian Blockchain. To mint WABEL, the user needs to lock the ABEL coin on Abelian and receive the corresponding amount of WABEL on QDay. To burn WABEL, the user needs to burn the WABEL on QDay and receive the corresponding amount of ABEL coin on Abelian. To support such operations, QDay team will implement an online service for the minting and burning of WABEL. The service will be operated by a union of institutions having Trust Service Provider (TSP) certification.
+- **Wrapped ABEL (WABEL)** - WABEL is an ERC-20 token on QDay that is 1:1 pegged to the ABEL coin on Abelian. It is used to bridge the ABEL token between the QDay Blockchain and the Abelian Blockchain. WABEL is minted and burned by the Abelian Bridge smart contracts: when the user locks ABEL on Abelian, the corresponding amount of WABEL is minted on QDay; when the user burns WABEL on QDay, the corresponding amount of ABEL is released on Abelian. See the [Abelian Bridge guide](/guide/handbook/user-guide/abelian-bridge-v3).
 - **Abelian Staking** - Abelian Staking was a dApp that allowed users to stake ABEL (as WABEL) on QDay to earn rewards. It ended on 15 October 2026; see the [ABEL Staking guide](/guide/handbook/user-guide/abel-staking).
 
 ### Category 2: EVM-compatible Applications
 
 These dApps will be EVM-compatible that shall work with legacy accounts and legacy wallets. To better support the dApps developed by the community, QDay team will implement a set of fundamental DeFi dApps and provide them to the community at the launch time of both the Testnet and the Phase 1 Mainnet.
 
-- **QDay Bridge:** a dApp to provide the cross-chain asset transfer functions. Different from WABEL, QDay Bridge will focus on bridging ERC20, TRC20 and QRC20 tokens between QDay and other EVM-compatible chains.
+- **QDay Bridge:** a dApp to provide the cross-chain asset transfer functions. Different from WABEL, QDay Bridge will focus on bridging tokens such as ERC-20, TRC-20 and QRC-20 assets between QDay and other chains.
 - **QDay Staking:** a dApp that provided staking for $QDAY. The current program ended on 15 October 2026 (see the [QDAY Staking guide](/guide/handbook/user-guide/qday-staking)); staking will be redeployed on the upgraded network.
 - **QDay Swap:** a decentralized exchange (DEX) dApp to provide the token swap functions. To help QDay go through the cold start period as smoothly as possible, the initial liquidity of $QDAY, WABEL and the chain's native stablecoins will be provided from the treasury of QDay and Abelian.
-- **Q-Finance:** a consolidated dApp to integrate all the services above, where the users can easily manage their DeFi assets and participate in various DeFi dApps in a unified interface.
-- **QLEAP (QDay Lending Ecosystem And Protocol):** a dApp to provide the lending and borrowing functions for QRC20 tokens. It's similar to the lending protocols on the existing EVM-compatible chains such as Aave and Compound.
+- **QDay Finance (planned):** a consolidated dApp to integrate all the services above, where the users can easily manage their DeFi assets and participate in various DeFi dApps in a unified interface.
+- **QDay Lending (planned):** a dApp to provide the lending and borrowing functions for QRC20 tokens. It's similar to the lending protocols on the existing EVM-compatible chains such as Aave and Compound.
 
 ### Category 3: Quantum-Resistant Applications
 
@@ -638,7 +638,7 @@ QDay shall have its own native stablecoin that is US dollar-pegged as the primar
 - **Gas abstraction:** The integration and usage of a paymaster infrastructure in QDay's will allow agents and users to pay transaction fees in the native stablecoin, eliminating the need to hold or manage the $QDAY native token for routine operations in agent payment flows. From the agent's perspective, every interaction is calculated in stablecoin — there is no concept of gas tokens.
 - **AI agent treasury:** Agents can hold stablecoin balances in their session-scoped wallets, spend within their configured limits, and receive stablecoins as payment for services rendered — constituting a complete economic lifecycle without human intervention.
 - **Cross-border payments:** Stablecoin transfers on QDay settle in under a second at sub-cent fees, making it practical for cross-border B2B and consumer payment flows where traditional rails impose multi-day settlement windows and fees of 1-3%.
-- **DeFi collateral:** Within QDay's DeFi ecosystem (QDay Swap, QLEAP, etc.), the native stablecoin shall serve as the primary stable collateral, enabling lending, borrowing, and liquidity provisioning in a dollar-denominated instrument that does not require exposure to crypto price volatility.
+- **DeFi collateral:** Within QDay's DeFi ecosystem (QDay Swap, QDay Lending (planned), etc.), the native stablecoin shall serve as the primary stable collateral, enabling lending, borrowing, and liquidity provisioning in a dollar-denominated instrument that does not require exposure to crypto price volatility.
 
 <a id="sec-7-4"></a>
 ### 7.4. The QDay Differentiator: Quantum-Secure Payments
@@ -647,7 +647,7 @@ The most significant strategic differentiation for QDay in the global payments l
 
 #### QDay's Unique Security Architecture
 
-In Phase 1, QDay operates as an EVM Layer 2 chain whose final state is settled — through the PQZK Bridge — on the Abelian L1, where the L1 chain employs lattice-based cryptographic algorithms (LWE and Ring-LWE) that are classified as quantum-resistant by the National Institute of Standards and Technology (NIST).
+In Phase 1, QDay operates as an EVM Layer 2 chain whose final state will settle on the Abelian L1 through the PQZK Bridge framework once it is implemented, where the L1 chain employs lattice-based cryptographic algorithms (LWE and Ring-LWE) that are classified as quantum-resistant by the National Institute of Standards and Technology (NIST).
 
 The critical property is cross-chain finality backed by ZK proofs settled on Abelian L1. Once a batch of QDay transactions has been proven and committed to Abelian, the finality of that state is protected by quantum-resistant cryptography. An adversary with access to a quantum computer cannot forge the Abelian-layer signatures of the rollup operators, cannot produce a valid PQZK proof for an invalid state transition, and therefore cannot modify or reverse confirmed QDay transactions — even with quantum computational resources.
 
@@ -666,7 +666,7 @@ In combination with the DAO-based rollup halt mechanism described in Phase 1, QD
 
 The following areas represent the team's active R&D directions as QDay evolves toward its full payment and agent-commerce vision:
 
-1. **CDK migration** — Completion of the QDay blockchain migration to Polygon CDK and deployment of the PQZK Bridge to anchor ZK proofs on Abelian. This is the foundational infrastructure step to the subsequent agentic payment capabilities.
+1. **CDK migration** — Completion of the QDay blockchain migration to Polygon CDK and implementation of the PQZK Bridge framework to anchor ZK proofs on Abelian. This is the foundational infrastructure step to the subsequent agentic payment capabilities.
 2. **Native stablecoin infrastructure** — Integration with the Open Money Stack (OMS) layer. Build a QDay's paymaster infrastructure for using the chain's stablecoin as a native gas token.
 3. **Agentic wallet services** — Design and implementation of session-scoped, quantum-resistant agent wallets with configurable spending limits and time-bounded access windows. Integration with the x402 protocol for per-request stablecoin payments.
 4. **Onchain agent identity (ERC-8004)** — Deployment of the ERC-8004 agent identity standard on QDay, enabling AI agents to register verifiable identities, build portable reputation, and be trusted by counterparties.

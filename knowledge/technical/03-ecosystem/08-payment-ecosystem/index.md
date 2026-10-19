@@ -5,7 +5,7 @@ draft: false
 
 # Payment Ecosystem
 
-**USD8** — A USD-pegged stablecoin (18 decimals) and the primary currency for the QDay payment layer, used for invoices, subscriptions, and agent micropayments. On the QDay Aevum testnet it is available as **tUSD8**.
+**USD8** — A USD-pegged stablecoin (6 decimals) and the primary currency for the QDay payment layer, used for invoices, subscriptions, and agent micropayments. On the QDay Aevum testnet it is available as **tUSD8**.
 
 | Token | Network | Address |
 |-------|---------|---------|
