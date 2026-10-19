@@ -11,4 +11,4 @@ draft: false
 
 **Abelian Bridge（現已上線）**——ABEL ⇄ WABEL 轉換目前經由 [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) 進行；ABEL 跨鏈轉入時，其智能合約會鑄造 WABEL，WABEL 轉換回 ABEL 時則會將其銷毀。Abelian Bridge 運行於 QDay Origin 主網、QDay Origin 測試網及 QDay Aevum 測試網。
 
-**PQZK Bridge（統稱概念）**——PQZK Bridge（Post-Quantum Zero-Knowledge Bridge，後量子零知識橋）是一個統稱，指以後量子零知識證明連接 QDay 與 Abelian Layer 1 的整體框架。它並非獨立的 dApp；用戶轉移資產請使用 Abelian Bridge（ABEL ⇄ WABEL）及 QDay Bridge。其完整實作屬未來工作（見[白皮書 §4.4](/guide/handbook/qday-whitepaper#sec-4-4)）。在此框架下，QDay 的狀態以 Committer 向 Abelian Chain 提交的狀態根為錨點；若要偽造狀態根提交，必須破解 Abelian 的格密碼學。
+**PQZK Bridge（統稱概念）**——PQZK Bridge（Post-Quantum Zero-Knowledge Bridge，後量子零知識橋）是一個統稱，指在後量子公鏈（例如 Abelian）上構建的零知識跨鏈橋，並非某個特定的 dApp。目前的 Abelian Bridge（ABEL ⇄ WABEL）及 QDay Bridge 均未達到 PQZK Bridge 的標準；QDay 與 Abelian 之間的 PQZK Bridge 屬未來工作（見[白皮書 §4.4](/guide/handbook/qday-whitepaper#sec-4-4)）。按此設計，QDay 的狀態以 Committer 向 Abelian Chain 提交的狀態根為錨點；若要偽造狀態根提交，必須破解 Abelian 的格密碼學。
