@@ -16,14 +16,14 @@ QDay 日常操作的逐步指南——錢包、兌換、跨鏈與解除質押。
 
 ### 賺取收益 {/* #earn */}
 
-- **[兌換](swap)**——交易 WABEL、QDAY 與 USD8，或提供流動性
-- **[QDAY 質押](qday-staking)**——質押已於 2026 年 10 月 15 日結束；請於 2026 年 12 月 31 日前解除質押並領取獎勵
-- **[ABEL 質押](abel-staking)**——質押已於 2026 年 10 月 15 日結束；請於 2026 年 12 月 31 日前解除質押 WABEL 並領取獎勵
+- **[QDay Swap](swap)**——交易 WABEL、QDAY 與 USD8，或提供流動性
+- **[QDAY 質押](qday-staking)**——質押已於 2026 年 10 月 15 日結束；請於 2026 年 12 月 31 日 12:00（HKT）前解除質押並領取獎勵
+- **[ABEL 質押](abel-staking)**——質押已於 2026 年 10 月 15 日結束；請於 2026 年 12 月 31 日 12:00（HKT）前解除質押 WABEL 並領取獎勵
 
 ### 跨鏈橋 {/* #bridge */}
 
-- **[Abelian 跨鏈橋](abelian-bridge-v3)**——在 Abelian 與 QDay 之間轉移 ABEL ↔ WABEL
-- **[QDay Bridge](#qday-bridge)**——在 EVM 鏈之間轉移 ERC20、TRC20 與 QRC20 代幣
+- **[Abelian Bridge](abelian-bridge-v3)**——在 Abelian 與 QDay 之間轉移 ABEL ↔ WABEL
+- **[QDay Bridge](#qday-bridge)**——在 QDay 與其他鏈之間轉移 ERC-20、TRC-20 與 QRC-20 資產等代幣
 
 ## 區塊瀏覽器 {/* #explorer */}
 
@@ -43,7 +43,7 @@ QDay 的區塊瀏覽器可讓你查詢網絡上的任何交易、地址或合約
 
 ## QDay Bridge {/* #qday-bridge */}
 
-QDay Bridge 與 [Abelian 跨鏈橋](abelian-bridge-v3) 是兩個獨立的產品。其他兼容 EVM 鏈上的 ERC20、TRC20 與 QRC20 資產請使用 QDay Bridge；ABEL / WABEL 請使用 Abelian 跨鏈橋。
+QDay Bridge 與 [Abelian Bridge](abelian-bridge-v3) 是兩個獨立的產品。來自其他鏈的 ERC-20、TRC-20 與 QRC-20 資產等代幣請使用 QDay Bridge；ABEL / WABEL 請使用 Abelian Bridge。
 
 QDay Bridge 運行於 **QDay Aevum 測試網**及 **QDay Origin 測試網**。
 

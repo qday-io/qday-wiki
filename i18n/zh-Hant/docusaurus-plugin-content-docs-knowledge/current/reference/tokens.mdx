@@ -15,15 +15,15 @@ import BalancePanel from '@site/src/components/QDay/BalancePanel';
 
 | 代幣 | 鏈 | 備註 |
 |---|---|---|
-| tQDAY | 44005 Aevum 測試網 | 原生 Gas 代幣——不是 ERC-20；可從[水龍頭](/guide/start/faucet)領取 |
+| tQDAY | 44005 Aevum 測試網 | 原生 Gas 代幣——不是 ERC-20；可透過[取得測試網代幣](/guide/start/faucet)領取 |
 
 ## QDay Aevum 測試網（鏈 ID 44005） {/* #qday-aevum-testnet-chain-id-44005 */}
 
-| 代幣 | 地址 | 小數點位數 | |
+| 代幣 | 地址 | 小數位 | |
 |---|---|---|---|
-| WABEL | <AddressLink chain="qday2" address="0x4668107253E28C2b569E76Edb14B1E88c3b93de1" /> | 18 | <AddTokenButton symbol="WABEL" address="0x4668107253E28C2b569E76Edb14B1E88c3b93de1" decimals={18} /> |
-| WQDAY | <AddressLink chain="qday2" address="0x915E807e7EC1665889172902781FB851202A54dF" /> | 18 | <AddTokenButton symbol="WQDAY" address="0x915E807e7EC1665889172902781FB851202A54dF" decimals={18} /> |
-| tUSD8 | <AddressLink chain="qday2" address="0x456569838f1d43009A91ebA4263147Afd7233483" /> | 18 | <AddTokenButton symbol="tUSD8" address="0x456569838f1d43009A91ebA4263147Afd7233483" decimals={18} /> |
+| WABEL | <AddressLink chain="qday2" address="0x4668107253E28C2b569E76Edb14B1E88c3b93de1" /> | 18 | <AddTokenButton symbol="WABEL" address="0x4668107253E28C2b569E76Edb14B1E88c3b93de1" decimals={18} chainId="0xABE5" networkName="QDay Aevum testnet" /> |
+| WQDAY | <AddressLink chain="qday2" address="0x915E807e7EC1665889172902781FB851202A54dF" /> | 18 | <AddTokenButton symbol="WQDAY" address="0x915E807e7EC1665889172902781FB851202A54dF" decimals={18} chainId="0xABE5" networkName="QDay Aevum testnet" /> |
+| tUSD8 | <AddressLink chain="qday2" address="0x456569838f1d43009A91ebA4263147Afd7233483" /> | 6 | <AddTokenButton symbol="tUSD8" address="0x456569838f1d43009A91ebA4263147Afd7233483" decimals={6} chainId="0xABE5" networkName="QDay Aevum testnet" /> |
 
 :::tip[請確認錢包已切換至 QDay Aevum 測試網]
 **+ 新增** 按鈕會把代幣新增至錢包目前所在的網絡，因此請先切換至 Aevum 測試網（`44005`）。此按鈕使用 EIP-747（`wallet_watchAsset`）。你的錢包會在新增前顯示確認畫面。RPC 與區塊瀏覽器：[鏈參數](chains)。

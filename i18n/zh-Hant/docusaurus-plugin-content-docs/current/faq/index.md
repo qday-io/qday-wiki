@@ -18,7 +18,7 @@ QDay 已完成一次重大的架構升級。如果你來自之前的 QDay 網絡
 | RPC URL | `https://rpc-test.qday.info` |
 | WebSocket | `wss://rpc-test.qday.info` |
 | 區塊瀏覽器 | [https://explorer-test.qday.info](https://explorer-test.qday.info) |
-| 貨幣符號 | tQDAY（原生測試網 QDAY，18 位小數） |
+| 貨幣符號 | tQDAY（原生測試網 QDAY，18 個小數位） |
 | 水龍頭 | [取得測試網代幣](/guide/start/faucet) |
 | 一鍵設定 | [將 QDay 新增至你的錢包](/guide/start/add-network) |
 
@@ -41,7 +41,7 @@ QDay 已完成一次重大的架構升級。如果你來自之前的 QDay 網絡
 
 ### 1.1 甚麼是 QDay？ {/* #11-what-is-qday */}
 
-QDay 是一個為未來而建的後量子、EVM 兼容網絡。QDay 專為 AI 代理、支付和去中心化應用而設計，能夠大規模實現亞秒級結算。QDay 整合了原生穩定幣和 x402 標準，是代理經濟的基礎區塊鏈。
+QDay 是一個為未來而建的後量子、EVM 兼容網絡。QDay 專為 AI 代理、支付和去中心化應用而設計，能夠大規模實現亞秒級結算。QDay 旨在整合原生穩定幣和 x402 標準（將隨 QDay 主網於 2027 年第一季推出），致力成為代理經濟的基礎區塊鏈。
 
 QDay 目前已在測試網（**QDay Aevum**）上線，升級後的主網預計於 2027 年第一季推出。
 
@@ -158,7 +158,7 @@ QDay 質押計劃已經結束。獎勵已於 **2026 年 10 月 15 日 12:00（HK
 
 ### 2.11 舊 dApp 是否仍然有效？ {/* #211-are-old-dapps-still-valid */}
 
-舊 dApp 在 QDay Origin 上會繼續運作。在新測試網上，核心 dApp——QDay Portal、QDay Swap、QDay Bridge 及 ABEL/WABEL Bridge——正在新的 Aevum 叢集上重新部署及整合。第三方 dApp 需要加入 Aevum 網絡並重新部署其合約；它們不會自動跟隨升級。
+舊 dApp 在 QDay Origin 上會繼續運作。在新測試網上，QDay Bridge 及 Abelian Bridge（ABEL ⇄ WABEL，位於 [QDay Portal](https://portal.qday.io/en/abel-conversion)）已在 Aevum 上運行；QDay Swap 稍後跟進——它目前只在 QDay Origin 主網上運行。第三方 dApp 需要加入 Aevum 網絡並重新部署其合約；它們不會自動跟隨升級。
 
 ---
 
@@ -166,7 +166,7 @@ QDay 質押計劃已經結束。獎勵已於 **2026 年 10 月 15 日 12:00（HK
 
 ### 3.1 哪些錢包支援 Aevum？ {/* #31-which-wallets-support-aevum */}
 
-QDay Aevum 與 EVM 兼容，支援 MetaMask、WalletConnect、Rainbow 及其他允許自訂 EVM 網絡的錢包。請參閱 [MetaMask 錢包使用指南](/guide/handbook/user-guide/metamask) 及 [Abelian 手機錢包使用指南](/guide/handbook/user-guide/abelian-mobile-wallet)。
+QDay Aevum 與 EVM 兼容，支援 MetaMask、WalletConnect、Rainbow 及其他允許自訂 EVM 網絡的錢包。請參閱 [MetaMask 錢包使用指南](/guide/handbook/user-guide/metamask)。[Abelian 手機錢包](/guide/handbook/user-guide/abelian-mobile-wallet)並非 Aevum 錢包：其 QDay 分頁使用的是 QDay Origin 主網。
 
 ### 3.2 如何將 Aevum 加入 MetaMask？ {/* #32-how-do-i-add-aevum-to-metamask */}
 
@@ -183,7 +183,7 @@ QDay Aevum 與 EVM 兼容，支援 MetaMask、WalletConnect、Rainbow 及其他�
 `44005`（十六進制 `0xABE5`）。
 
 :::warning[切勿混淆鏈 ID]
-`44001` 是 QDay Origin **主網**，`44003` 是 QDay Origin **測試網**，而 `44005` 是目前公開的 **Aevum 測試網**。請務必以[鏈參數](/Knowledge/reference/chains)核實，而非依賴聊天訊息或隨機 dApp 的橫額。
+`44001` 是 QDay Origin **主網**，`44003` 是 QDay Origin **測試網**，而 `44005` 是目前公開的 **Aevum 測試網**。請務必以[鏈參數](/Knowledge/reference/chains)核實，而非依賴聊天訊息或隨機 dApp 的橫幅。
 :::
 
 ### 3.5 區塊瀏覽器在哪裏？ {/* #35-where-is-the-explorer */}
@@ -192,7 +192,7 @@ QDay Aevum 與 EVM 兼容，支援 MetaMask、WalletConnect、Rainbow 及其他�
 
 ### 3.6 水龍頭在哪裏？ {/* #36-where-is-the-faucet */}
 
-水龍頭內置於文件網站：[取得測試網代幣](/guide/start/faucet)。連接你的錢包，即可領取用作 Gas 的測試網 QDAY。水龍頭在鏈上對每個地址設有冷卻時間；如果你最近已領取過，它會顯示你何時可以再次領取。全新錢包若只有 0 tQDAY，便無法支付該次領取所需的 Gas——請先到 [faucet.qday.info](https://faucet.qday.info) 領取你的第一筆 tQDAY。
+水龍頭內置於文件網站：[取得測試網代幣](/guide/start/faucet)。連接你的錢包，即可領取用作 Gas 的 tQDAY。水龍頭在鏈上對每個地址設有冷卻時間；如果你最近已領取過，它會顯示你何時可以再次領取。全新錢包若只有 0 tQDAY，便無法支付該次領取所需的 Gas——請先到 [faucet.qday.info](https://faucet.qday.info) 領取你的第一筆 tQDAY。
 
 ### 3.7 如何支付 Gas？ {/* #37-how-do-i-pay-gas */}
 
@@ -200,13 +200,13 @@ Aevum 上的 Gas 以原生測試網 QDAY（**tQDAY**）支付，可從水龍頭�
 
 ### 3.8 Aevum 上有哪些代幣？ {/* #38-which-tokens-are-available-on-aevum */}
 
-除原生 QDAY（Gas）外，QDay Aevum（`44005`）上已部署以下 ERC-20 代幣：
+除原生 tQDAY（Gas）外，QDay Aevum（`44005`）上已部署以下 ERC-20 代幣：
 
 | 代幣 | 合約地址 | 小數位 |
 |---|---|---|
 | WABEL | `0x4668107253E28C2b569E76Edb14B1E88c3b93de1` | 18 |
 | WQDAY | `0x915E807e7EC1665889172902781FB851202A54dF` | 18 |
-| tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` | 18 |
+| tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` | 6 |
 
 如要在 MetaMask 中顯示代幣，請切換至 QDay Aevum，選擇 *Import tokens*，然後貼上合約地址。請務必在[區塊瀏覽器](https://explorer-test.qday.info)上核實地址——切勿在 Aevum 上重用 QDay Origin（`44001`／`44003`）的代幣地址。
 
@@ -227,7 +227,8 @@ Aevum 上的 Gas 以原生測試網 QDAY（**tQDAY**）支付，可從水龍頭�
 ```bash
 forge create src/MyContract.sol:MyContract \
   --rpc-url https://rpc-test.qday.info \
-  --private-key $PRIVATE_KEY
+  --private-key $PRIVATE_KEY \
+  --broadcast
 ```
 
 **Hardhat**
@@ -294,9 +295,9 @@ forge verify-contract \
 
 此功能將於 2027 年第一季推出。請在推出時再來查看——屆時將發佈所有文件、工具和範例，你可以由此開始測試。
 
-### 5.5 對於代理之間的交易，你們設想的是用於自主小額支付通道的協議層，還是 Gas 抽象模型？ {/* #55-are-you-envisioning-a-protocol-layer-for-autonomous-micropayment-channels-or-a-gas-abstraction-model-for-agent-to-agent-transactions */}
+### 5.5 對於代理之間的交易，你們設想的是用於自主小額支付渠道的協議層，還是 Gas 抽象模型？ {/* #55-are-you-envisioning-a-protocol-layer-for-autonomous-micropayment-channels-or-a-gas-abstraction-model-for-agent-to-agent-transactions */}
 
-協議層加上自主小額支付通道——即一套專門、獨立的支付協議和通道，專為 AI 代理之間小額、高頻、自動化的交易而設計（類似閃電網絡的做法）。
+協議層加上自主小額支付渠道——即一套專門、獨立的支付協議和渠道，專為 AI 代理之間小額、高頻、自動化的交易而設計（類似閃電網絡的做法）。
 
 ---
 
@@ -309,7 +310,7 @@ forge verify-contract \
 | 類別 | 佔比 | 歸屬安排 |
 |---|---|---|
 | 質押獎勵 | 35%（7,881,299,335） | 鎖倉期越長，獎勵越高 |
-| 投資者及支持者 | 20% | 12 個月鎖定期，其後 3 年線性釋放 |
+| 投資者及支持者 | 20% | 12 個月懸崖期，其後 3 年線性釋放 |
 | 協議金庫 | 20% | 4 年等額歸屬 |
 | 團隊及貢獻者 | 15% | 3 年等額歸屬 |
 | 社群及生態系統 | 10% | 推出時全數解鎖 |
@@ -322,7 +323,7 @@ forge verify-contract \
 
 然而，每一筆質押獎勵都會為流通量增添新代幣，逐步攤薄每位持有人，包括質押者本身。在 2027 年第一季主網推出之前，我們希望 QDay 的代幣經濟由真實的網絡活動——支付、應用和 AI 代理——所驅動，而非被動收益。
 
-我們選擇乾脆停止，而非調低 APY，因為即使獎勵較少，仍然是在為閒置的代幣支付報酬。這是網絡設計上的決定，而非預算上的決定：QDay Foundation 會繼續投資於升級後的網絡、開發者工具及主網推出。
+我們選擇乾脆停止，而非調低 APY，因為即使獎勵較少，仍然是在為閒置的代幣支付報酬。這是網絡設計上的決定，而非預算上的決定：QDay 基金會會繼續投資於升級後的網絡、開發者工具及主網推出。
 
 ### 6.3 這是否代表 QDay 出了問題？ {/* #63-does-this-mean-something-is-wrong-with-qday */}
 
@@ -335,9 +336,9 @@ forge verify-contract \
 | 時間（香港時間，HKT） | 安排 |
 |---|---|
 | **2026 年 10 月 15 日 12:00** | 獎勵停止累積。開放解除質押及領取。 |
-| 2026 年 10 月 15 日 – 12 月 31 日 | 可隨時解除質押及領取。 |
+| 2026 年 10 月 15 日 12:00 至 12 月 31 日 12:00 | 可隨時解除質押及領取。 |
 | **2026 年 12 月 31 日 12:00** | 解除質押及領取期結束。 |
-| 2026 年 12 月 31 日之後 | 未領取的資產仍可取回——請發送電郵至 [support@qday.io](mailto:support@qday.io) 聯絡團隊。 |
+| 2026 年 12 月 31 日 12:00 之後 | 未領取的資產仍可取回——請發送電郵至 [support@qday.io](mailto:support@qday.io) 聯絡團隊。 |
 
 **提取方法：** 在 QDay 質押頁面（QDay Origin 主網）點擊 **Unstake**，然後點擊 **Claim**，就是這樣。逐步指南：[QDAY 質押終止指南](/guide/handbook/user-guide/qday-staking)。
 
@@ -391,7 +392,7 @@ ML-DSA 是一種由 NIST 標準化（FIPS 204）的格密碼數碼簽名算法�
 
 ### 7.5 QDay 是否已經過審計？ {/* #75-has-qday-been-audited */}
 
-QDay 網絡及 dApp 的安全審計正逐步進行。報告完成後將在[審計報告](/Knowledge/technical/security/audit-reports)頁面發佈。
+QDay 網絡及 dApp 的安全審計正逐步進行。審計報告將於備妥後發佈。
 
 ### 7.6 如何報告漏洞？ {/* #76-how-do-i-report-a-bug */}
 

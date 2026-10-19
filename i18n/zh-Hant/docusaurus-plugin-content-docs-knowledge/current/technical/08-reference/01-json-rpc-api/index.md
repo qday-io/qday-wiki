@@ -17,7 +17,7 @@ curl -s https://rpc-test.qday.info \
 
 區塊參數可接受十六進位數值或標籤：`earliest`、`latest`、`pending`、`safe`、`finalized`。
 
-:::note 公開節點與節點營運者
+:::note[公開節點與節點營運者]
 公開 RPC 應開放 `eth_*`（通常也包含 `net_*` / `web3_*`）。`zkevm_getWitness`、`zkevm_getProverInput`、`debug_*` 與 `admin_*` 應僅存在於節點營運者的節點上——請參閱 [RPC 安全](/Knowledge/technical/security/rpc-security)。
 :::
 
@@ -133,7 +133,7 @@ curl -s https://rpc-test.qday.info \
 | 方法 | 參數 | 說明 |
 |--------|--------|-------------|
 | `zkevm_getBatchByNumber` | `batchNumber` | 批次元數據：區塊、狀態根、時間戳記、L1 資訊 |
-| `zkevm_getBatchCountersByNumber` | `batchNumber` | 該批次的 zk 計數器與已用 Gas |
+| `zkevm_getBatchCountersByNumber` | `batchNumber` | 該批次的 ZK 計數器與已用 Gas |
 | `zkevm_getFullBlockByNumber` | `blockNumber` | L2 區塊加上 zkEVM 額外欄位 |
 | `zkevm_getFullBlockByHash` | `blockHash` | 同上，依雜湊查詢 |
 | `zkevm_getL2BlockInfoTree` | `blockNumber` | L2 區塊資訊樹（GER / 區塊資訊葉節點） |
@@ -146,7 +146,7 @@ curl -s https://rpc-test.qday.info \
 
 | 方法 | 參數 | 說明 |
 |--------|--------|-------------|
-| `zkevm_estimateCounters` | `transaction` | 估算交易的 zk **計數器**（與 `eth_estimateGas` 不同） |
+| `zkevm_estimateCounters` | `transaction` | 估算交易的 ZK **計數器**（與 `eth_estimateGas` 不同） |
 | `zkevm_getWitness` | `blockNumber`（及選項） | 用於證明區塊的執行 witness |
 | `zkevm_getBatchWitness` | `batchNumber` | 整個批次的 witness |
 | `zkevm_getBlockRangeWitness` | `from`、`to` | 涵蓋區塊範圍的 witness |

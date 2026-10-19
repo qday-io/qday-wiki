@@ -20,7 +20,7 @@ draft: false
 `zkRollupManager` 合約接收提交的批次，驗證排序器的授權，記錄該批次並更新 Rollup 狀態。這是第二個共識點：批次此時正式成為 Rollup 記錄的一部分。
 
 **步驟 5——產生並提交 ZK 證明**
-**Aggregator** 監察 `zkRollupManager` 中新獲接受的批次。它取得批次編號（Batch Number）、批次雜湊（Batch Hash）、狀態根（State Root）及本地退出根（Local Exit Root），然後將這些數據發送至 **zk Prover**。證明者計算出有效性證明並返回 Aggregator。接着 Aggregator 呼叫 `zkRollupManager.verifyBatches()`，提交批次、狀態根及證明。合約驗證證明並更新最終狀態（Final State）——該批次此時已**最終確定**，交易亦已達到 L2 最終確定性。
+**Aggregator** 監察 `zkRollupManager` 中新獲接受的批次。它取得批次編號（Batch Number）、批次雜湊（Batch Hash）、狀態根（State Root）及本地退出根（Local Exit Root），然後將這些數據發送至 **ZK Prover**。證明者計算出有效性證明並返回 Aggregator。接着 Aggregator 呼叫 `zkRollupManager.verifyBatches()`，提交批次、狀態根及證明。合約驗證證明並更新最終狀態（Final State）——該批次此時已**最終確定**，交易亦已達到 L2 最終確定性。
 
 **步驟 6——數據可用性記錄**
 **Abelian Plus Node**（DA Node 組件）儲存 Rollup 數據、託管 zkEVM 合約，並確保所有批次數據均可取用。DA 層上的 **Record Contracts** 持久保存批次元數據與狀態根。

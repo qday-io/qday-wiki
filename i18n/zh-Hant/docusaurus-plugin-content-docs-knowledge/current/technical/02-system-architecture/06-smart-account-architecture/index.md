@@ -6,7 +6,7 @@ draft: false
 # 智能帳戶架構
 
 :::note[計劃中——2027 年第一季]
-ERC-4337 帳戶抽象（EntryPoint、bundler、Paymaster、會話密鑰（Session Key）、Smart Account SDK）將於 2027 年第一季隨 QDay 主網推出，目前尚未上線。本頁描述的是計劃中的設計。
+ERC-4337 帳戶抽象（EntryPoint、bundler、Paymaster、會話密鑰（Session Key）、智能帳戶 SDK）將於 2027 年第一季隨 QDay 主網推出，目前尚未上線。本頁描述的是計劃中的設計。
 :::
 
 QDay 將使用基於 TypeScript 的 bundler 基礎設施，實作 **ERC-4337 帳戶抽象**。
@@ -17,4 +17,4 @@ QDay 將使用基於 TypeScript 的 bundler 基礎設施，實作 **ERC-4337 帳
 
 **Paymaster**——Paymaster 合約可為用戶代付 Gas 費用。開發者可部署自訂 Paymaster，提供免 Gas 交易，或讓用戶以 ERC-20 代幣代替原生 Gas 代幣支付手續費。
 
-**會話密鑰（Session Key）**——會話密鑰是從用戶的智能帳戶（Smart Account）衍生、有時間限制及範圍限制的簽署密鑰。它讓 AI 代理、dApp 及受委託的簽署者可授權特定操作（例如在消費上限內進行交易），而無需暴露主密鑰。
+**會話密鑰**——會話密鑰是從用戶的智能帳戶（Smart Account）衍生、有時間限制及範圍限制的簽署密鑰。它讓 AI 代理、dApp 及受委託的簽署者可授權特定操作（例如在消費上限內進行交易），而無需暴露主密鑰。

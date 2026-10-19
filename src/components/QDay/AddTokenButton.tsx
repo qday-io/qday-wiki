@@ -10,11 +10,17 @@ export default function AddTokenButton({
   address,
   decimals = 18,
   image,
+  chainId,
+  networkName,
 }: {
   symbol: string;
   address: string;
   decimals?: number;
   image?: string;
+  /** Hex chain ID the token lives on (e.g. '0xABE5'). The wallet is switched to it before adding. */
+  chainId?: string;
+  /** Human-readable network name shown if the switch fails. */
+  networkName?: string;
 }) {
   const [state, setState] = useState<'idle' | 'busy' | 'ok' | 'err'>('idle');
   const [msg, setMsg] = useState('');
@@ -23,6 +29,15 @@ export default function AddTokenButton({
     const eth = getProvider();
     if (!eth) { setState('err'); setMsg(translate({id: 'wallet.err.noWallet', message: 'No wallet found — install a wallet extension.'})); return; }
     setState('busy'); setMsg('');
+    if (chainId) {
+      try {
+        await eth.request({ method: 'wallet_switchEthereumChain', params: [{ chainId }] });
+      } catch {
+        setState('err');
+        setMsg(translate({id: 'addToken.err.switch', message: 'Switch your wallet to {network} first, then try again.'}, {network: networkName ?? chainId}));
+        return;
+      }
+    }
     try {
       const added = await eth.request({
         method: 'wallet_watchAsset',

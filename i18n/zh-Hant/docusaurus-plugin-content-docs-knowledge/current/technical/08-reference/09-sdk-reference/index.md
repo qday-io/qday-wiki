@@ -15,9 +15,9 @@ QDay SDK（`@qday-io/sdk`）與 CLI（`@qday-io/cli`）將於 2027 年第一季�
 | `@qday-io/sdk/payments` | TypeScript | 發票、結帳、訂閱、串流支付、Webhook |
 | `@qday-io/sdk/aa` | TypeScript | ERC-4337 帳戶與會話密鑰（Session Key） |
 | `@qday-io/sdk/agent` | TypeScript | 鏈上代理（MCP + intent registry） |
-| `github.com/qday-io/qday-go-sdk` | Go | 供 Go 服務使用的相同介面 |
-| `qday-sdk`（crates.io） | Rust | 供 Rust 使用的相同介面 |
-| `qday-sdk`（PyPI） | Python | 供 Python 使用的相同介面 |
+| `github.com/qday-io/qday-go-sdk` | Go | 計劃中——尚未發佈；套件名稱可能變更 |
+| `qday-sdk`（crates.io） | Rust | 計劃中——尚未發佈；套件名稱可能變更 |
+| `qday-sdk`（PyPI） | Python | 計劃中——尚未發佈；套件名稱可能變更 |
 | `@qday-io/cli` | CLI | `npm install -g @qday-io/cli`（2027 年第一季推出）——[CLI 參考資料](/Knowledge/technical/reference/cli-reference) |
 
 ```bash

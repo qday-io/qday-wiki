@@ -41,7 +41,7 @@ Full network parameters: [Chain parameters](/Knowledge/reference/chains).
 
 ### 1.1 What is QDay?
 
-QDay is a post-quantum, EVM-compatible network built for tomorrow. Designed for agents, payments and decentralized applications, QDay delivers sub-second settlement at scale. With a native stablecoin and the x402 standard integrated, QDay is the foundational blockchain for the agent-led economy.
+QDay is a post-quantum, EVM-compatible network built for tomorrow. Designed for agents, payments and decentralized applications, QDay delivers sub-second settlement at scale. Designed to integrate a native stablecoin and the x402 standard (launching with QDay mainnet in Q1 2027), QDay aims to be the foundational blockchain for the agent-led economy.
 
 QDay is currently live on testnet (**QDay Aevum**), with the upgraded mainnet scheduled for Q1 2027.
 
@@ -158,7 +158,7 @@ However, Aevum is a separate network with a new chain ID, RPC and explorer — c
 
 ### 2.11 Are old dApps still valid?
 
-Old dApps continue to work on QDay Origin. On the new testnet, the core dApps — QDay Portal, QDay Swap, QDay Bridge and the ABEL/WABEL Bridge — are being redeployed and integrated on the new Aevum cluster. Third-party dApps need to add the Aevum network and redeploy their contracts; they do not automatically follow the upgrade.
+Old dApps continue to work on QDay Origin. On the new testnet, QDay Bridge and the Abelian Bridge (ABEL ⇄ WABEL, on [QDay Portal](https://portal.qday.io/en/abel-conversion)) already run on Aevum; QDay Swap will follow — it currently runs on QDay Origin mainnet only. Third-party dApps need to add the Aevum network and redeploy their contracts; they do not automatically follow the upgrade.
 
 ---
 
@@ -166,7 +166,7 @@ Old dApps continue to work on QDay Origin. On the new testnet, the core dApps �
 
 ### 3.1 Which wallets support Aevum?
 
-QDay Aevum is EVM-compatible and supports MetaMask, WalletConnect, Rainbow and other wallets that allow custom EVM networks. See the [MetaMask guide](/guide/handbook/user-guide/metamask) and [Abelian Mobile Wallet guide](/guide/handbook/user-guide/abelian-mobile-wallet).
+QDay Aevum is EVM-compatible and supports MetaMask, WalletConnect, Rainbow and other wallets that allow custom EVM networks. See the [MetaMask guide](/guide/handbook/user-guide/metamask). The [Abelian Mobile Wallet](/guide/handbook/user-guide/abelian-mobile-wallet) is not an Aevum wallet: its QDay tab uses QDay Origin mainnet.
 
 ### 3.2 How do I add Aevum to MetaMask?
 
@@ -192,7 +192,7 @@ QDay Aevum is EVM-compatible and supports MetaMask, WalletConnect, Rainbow and o
 
 ### 3.6 Where is the faucet?
 
-The faucet is built into the docs: [Get testnet tokens](/guide/start/faucet). Connect your wallet and claim testnet QDAY for gas. The faucet enforces an on-chain per-address cooldown; if you claimed recently, it shows when you can claim again. A brand-new wallet with 0 tQDAY can't pay gas for that claim — get your first tQDAY at [faucet.qday.info](https://faucet.qday.info).
+The faucet is built into the docs: [Get testnet tokens](/guide/start/faucet). Connect your wallet and claim tQDAY for gas. The faucet enforces an on-chain per-address cooldown; if you claimed recently, it shows when you can claim again. A brand-new wallet with 0 tQDAY can't pay gas for that claim — get your first tQDAY at [faucet.qday.info](https://faucet.qday.info).
 
 ### 3.7 How do I pay gas?
 
@@ -200,13 +200,13 @@ Gas on Aevum is paid in native testnet QDAY (**tQDAY**), claimed from the faucet
 
 ### 3.8 Which tokens are available on Aevum?
 
-In addition to native QDAY (gas), the following ERC-20 tokens are deployed on QDay Aevum (`44005`):
+In addition to native tQDAY (gas), the following ERC-20 tokens are deployed on QDay Aevum (`44005`):
 
 | Token | Contract address | Decimals |
 |---|---|---|
 | WABEL | `0x4668107253E28C2b569E76Edb14B1E88c3b93de1` | 18 |
 | WQDAY | `0x915E807e7EC1665889172902781FB851202A54dF` | 18 |
-| tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` | 18 |
+| tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` | 6 |
 
 To see a token in MetaMask, switch to QDay Aevum, choose *Import tokens*, and paste the contract address. Always verify addresses on the [Explorer](https://explorer-test.qday.info) — do not reuse QDay Origin (`44001` / `44003`) token addresses on Aevum.
 
@@ -227,7 +227,8 @@ Point your toolchain at the Aevum RPC and deploy as you would on Ethereum. You n
 ```bash
 forge create src/MyContract.sol:MyContract \
   --rpc-url https://rpc-test.qday.info \
-  --private-key $PRIVATE_KEY
+  --private-key $PRIVATE_KEY \
+  --broadcast
 ```
 
 **Hardhat**
@@ -335,9 +336,9 @@ Your staked tokens remain yours, and all rewards earned up to the cutoff are hon
 | Time (Hong Kong time, HKT) | What happens |
 |---|---|
 | **15 Oct 2026, 12:00** | Rewards stop accruing. Unstaking and claiming open. |
-| 15 Oct – 31 Dec 2026 | Unstake and claim at any time. |
+| 15 Oct 12:00 – 31 Dec 2026, 12:00 | Unstake and claim at any time. |
 | **31 Dec 2026, 12:00** | Unstake and claim period ends. |
-| After 31 Dec 2026 | Unclaimed assets can still be recovered — contact the team at [support@qday.io](mailto:support@qday.io). |
+| After 31 Dec 2026, 12:00 | Unclaimed assets can still be recovered — contact the team at [support@qday.io](mailto:support@qday.io). |
 
 **How to withdraw:** on the QDay Staking page (QDay Origin mainnet), click **Unstake**, then **Claim**. That's it. Step-by-step guide: [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
 
@@ -391,7 +392,7 @@ Quantum-resistant infrastructure does not automatically protect users against co
 
 ### 7.5 Has QDay been audited?
 
-Security audits of the QDay network and dApps are progressing step by step. Reports will be published on the [Audit Reports](/Knowledge/technical/security/audit-reports) page as they are completed.
+Security audits of the QDay network and dApps are progressing step by step. Audit reports will be published when available.
 
 ### 7.6 How do I report a bug?
 

@@ -15,13 +15,16 @@ QDay Aevum 支援兩種錢包類型：
 
 **智能帳戶錢包** *（計劃中——將於 2027 年第一季隨 QDay 主網推出）*——ERC-4337 智能帳戶將提供免 Gas 交易、批次呼叫與會話密鑰（Session Key）委託。智能帳戶將在首次使用時部署；用戶的 EOA 作為擁有者／簽署者。
 
+以下範例展示的是計劃中的 API。ERC-4337 EntryPoint 與 bundler（`bundler.qday.io`）將於 2027 年第一季隨 QDay 主網推出，目前尚未部署於 QDay Aevum 測試網，因此這段程式碼現時無法在 Aevum 上運行。
+
 ```typescript
+// Planned — EntryPoint and bundler launch with QDay mainnet (Q1 2027); not deployed on Aevum.
 import { createSmartAccountClient } from "@qday-io/sdk/aa";
 
 const client = await createSmartAccountClient({
   signer: eoaWallet,
-  rpcUrl: "https://rpc-test.qday.info",
-  bundlerUrl: "https://bundler.qday.io",
+  rpcUrl: "https://rpc-test.qday.info",   // QDay Aevum testnet (no EntryPoint / bundler yet)
+  bundlerUrl: "https://bundler.qday.io",  // live at QDay mainnet launch
 });
 
 // Send a gasless transaction (Paymaster covers gas)

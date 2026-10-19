@@ -16,15 +16,16 @@ draft: false
 驗證 ML-DSA-65（FIPS 204）簽名。使用此預編譯合約可在 Solidity 合約內驗證後量子簽名。
 
 ```solidity
-// Precompile address (Phase 2)
-address constant ML_DSA_65_VERIFY = address(0x100);
+// Placeholder: the real precompile address will be published at Phase 2 launch.
+// Replace address(0) with the published address before deploying.
+address constant ML_DSA_65_VERIFY_PRECOMPILE = address(0); // address published at Phase 2 launch
 
 function verifyMLDSA65(
     bytes calldata publicKey,   // 1952 bytes
     bytes calldata message,
     bytes calldata signature    // 3309 bytes
 ) internal view returns (bool) {
-    (bool success, bytes memory result) = ML_DSA_65_VERIFY.staticcall(
+    (bool success, bytes memory result) = ML_DSA_65_VERIFY_PRECOMPILE.staticcall(
         abi.encode(publicKey, message, signature)
     );
     require(success, "precompile call failed");
@@ -37,7 +38,8 @@ function verifyMLDSA65(
 在第 1 階段 → 第 2 階段的過渡期間，驗證 ML-DSA-65 + ECDSA 混合簽名。兩個簽名都必須有效。
 
 ```solidity
-address constant HYBRID_VERIFY = address(0x101);
+// Placeholder: the real precompile address will be published at Phase 2 launch.
+address constant HYBRID_VERIFY_PRECOMPILE = address(0); // address published at Phase 2 launch
 ```
 
 ## 未來擴充 {/* #future-extensions */}

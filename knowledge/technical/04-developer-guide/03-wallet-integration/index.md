@@ -15,13 +15,16 @@ QDay Aevum supports two wallet types:
 
 **Smart Account Wallets** *(planned — launch with QDay mainnet in Q1 2027)* — ERC-4337 Smart Accounts will provide gasless transactions, batched calls, and session key delegation. Smart accounts will be deployed on first use; the user's EOA acts as the owner/signer.
 
+The example below shows the planned API. The ERC-4337 EntryPoint and bundler (`bundler.qday.io`) launch with QDay mainnet in Q1 2027 and are not deployed on the QDay Aevum testnet, so this code will not run against Aevum today.
+
 ```typescript
+// Planned — EntryPoint and bundler launch with QDay mainnet (Q1 2027); not deployed on Aevum.
 import { createSmartAccountClient } from "@qday-io/sdk/aa";
 
 const client = await createSmartAccountClient({
   signer: eoaWallet,
-  rpcUrl: "https://rpc-test.qday.info",
-  bundlerUrl: "https://bundler.qday.io",
+  rpcUrl: "https://rpc-test.qday.info",   // QDay Aevum testnet (no EntryPoint / bundler yet)
+  bundlerUrl: "https://bundler.qday.io",  // live at QDay mainnet launch
 });
 
 // Send a gasless transaction (Paymaster covers gas)

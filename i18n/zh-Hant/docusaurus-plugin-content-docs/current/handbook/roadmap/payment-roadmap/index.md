@@ -30,9 +30,9 @@ QDay 的**支付網絡**（第 1.5 階段）：以 USD8 作為記帳單位、為
 |---|---|---|
 | USD8 及 Swap / Bridge（第 1 階段） | 直至第 1 階段主網 | 轉移及交易 USD8；部分流程可手動付款 |
 | 第 1.5 階段開發啟動 | 2026 Q1 | 支付閘道、發票、webhook |
-| 第 1.5 階段測試網 | 2026 Q3 | 商戶及 AI 代理在 Aevum / 測試網上試用整套技術 |
+| 第 1.5 階段測試網 | 2026 Q3 | 在 Aevum 測試網上進行 Polygon CDK 升級；x402 facilitator、AI 代理錢包及穩定幣 Paymaster 將於 2027 年第一季隨 QDay 主網推出 |
 | 第 1.5 階段主網 | 2027 Q1 | 正式運作的支付網絡 |
-| 原生 PQC 帳戶（第 2 階段） | 2027 | QR 帳戶推出後可使用同一套支付 API |
+| 原生 PQC 帳戶（第 2 階段） | 2027 | 抗量子帳戶推出後可使用同一套支付 API |
 
 ## 第 1.5 階段的用途 {/* #what-phase-15-is-for */}
 
@@ -50,9 +50,9 @@ QDay 的**支付網絡**（第 1.5 階段）：以 USD8 作為記帳單位、為
 
 ## 如何跟進 {/* #how-to-follow-along */}
 
-1. 在 QDay 上持有 USD8（[Swap](/guide/handbook/user-guide/swap)、[跨鏈 / 轉換](/guide/handbook/user-guide#qday-bridge)）。
+1. 熟悉 USD8：目前可透過 [QDay Swap](/guide/handbook/user-guide/swap) 在 QDay Origin 主網上取得；tUSD8 是 Aevum 測試網上的測試版本（請參閱[代幣清單](/Knowledge/reference/tokens)）。
 2. 測試網支付閘道公佈後，整合 `@qday-io/sdk/payments`（[開發者指南](/Knowledge/technical/developer-guide/payment-development)）。
-3. 如屬 AI 代理商業活動，請使用 Smart Accounts（智能帳戶）及會話密鑰（`@qday-io/sdk/aa`、`@qday-io/sdk/agent`）。
+3. 如屬 AI 代理商業活動，請使用智能帳戶及會話密鑰（`@qday-io/sdk/aa`、`@qday-io/sdk/agent`）。
 4. 只使用官方 Portal 及文件網址；支付 webhook 必須驗證簽名。
 
-**帳本**的 PQC 載於 [QDay 後量子路線圖](/guide/handbook/roadmap/pqc-roadmap)。在第 2 階段的 QR 合約出現之前，第 1.5 階段的支付合約仍運行於第 1 階段的 EVM 帳戶之上。
+**帳本**的 PQC 載於 [QDay 後量子路線圖](/guide/handbook/roadmap/pqc-roadmap)。在第 2 階段的抗量子合約出現之前，第 1.5 階段的支付合約仍運行於第 1 階段的 EVM 帳戶之上。

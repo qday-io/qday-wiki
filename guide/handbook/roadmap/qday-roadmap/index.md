@@ -35,10 +35,10 @@ Add a network: [Add QDay to your wallet](/guide/start/add-network). Parameters: 
 | Phase 1 Testnet v2 | 2025 Q2 |
 | Phase 1 Mainnet | 2025 Q4 |
 | Phase 1.5 (payment network) development begins | 2026 Q1 |
-| Phase 1.5 Testnet | 2026 Q3 |
+| Phase 1.5 Testnet (Polygon CDK upgrade on Aevum; x402 facilitator, agent wallets and stablecoin paymaster follow with QDay mainnet in Q1 2027) | 2026 Q3 |
 | Phase 2 (native quantum-resistant accounts) development begins | 2026 Q4 |
-| Phase 1.5 Mainnet | 2027 Q1 |
 | Phase 2 Testnet | Before 2027 Q1 |
+| Phase 1.5 Mainnet | 2027 Q1 |
 | Phase 2 Mainnet | 2027 Q4 |
 
 ## What Phase 1 already covers

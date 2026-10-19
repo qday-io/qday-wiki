@@ -9,7 +9,7 @@ draft: false
 QDay SDK（`@qday-io/sdk`）與 CLI（`@qday-io/cli`）將於 2027 年第一季推出，目前尚未在 npm 上發佈。本頁的程式碼展示的是計劃中的 API。
 :::
 
-QDay Aevum 上的 ERC-4337 智能帳戶（Smart Account）。UserOperation 會經過 **EntryPoint**；bundler 為 Alto。指南：[ERC-4337 開發](/Knowledge/technical/developer-guide/erc-4337-development)。協議：[帳戶抽象協議](/Knowledge/technical/protocol/account-abstraction-protocol)。
+QDay 上的 ERC-4337 智能帳戶（Smart Account）*（計劃中）*。ERC-4337 EntryPoint 與 bundler 將於 2027 年第一季隨 QDay 主網推出，目前尚未部署於 QDay Aevum 測試網。UserOperation 會經過 **EntryPoint**；bundler 為 Alto。指南：[ERC-4337 開發](/Knowledge/technical/developer-guide/erc-4337-development)。協議：[帳戶抽象協議](/Knowledge/technical/protocol/account-abstraction-protocol)。
 
 ## SDK（`@qday-io/sdk/aa`） {/* #sdk-qday-iosdkaa */}
 

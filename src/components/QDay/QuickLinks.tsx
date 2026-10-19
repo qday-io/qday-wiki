@@ -14,9 +14,9 @@ function links(): Item[] {
     { icon: '🔍', title: translate({id: 'quicklinks.explorer.title', message: 'Explorer'}), desc: translate({id: 'quicklinks.explorer.desc', message: 'QDay Aevum testnet blocks, txs, addresses'}), href: 'https://explorer-test.qday.info' },
     { icon: '🚪', title: translate({id: 'quicklinks.portal.title', message: 'Portal'}), desc: translate({id: 'quicklinks.portal.desc', message: 'The QDay app hub'}), href: 'https://portal.qday.io' },
     { icon: '💧', title: translate({id: 'quicklinks.faucet.title', message: 'Faucet'}), desc: translate({id: 'quicklinks.faucet.desc', message: 'Get testnet tQDAY'}), href: '/guide/start/faucet' },
-    { icon: '🌉', title: translate({id: 'quicklinks.bridge.title', message: 'Bridge'}), desc: translate({id: 'quicklinks.bridge.desc', message: 'Move assets across chains'}), href: 'https://portal.qday.io/en/bridge' },
-    { icon: '🔄', title: translate({id: 'quicklinks.swap.title', message: 'Swap'}), desc: translate({id: 'quicklinks.swap.desc', message: 'Trade tokens on QDay'}), href: 'https://portal.qday.io/en/qday-swap' },
-    { icon: '📈', title: translate({id: 'quicklinks.staking.title', message: 'Staking'}), desc: translate({id: 'quicklinks.staking.desc', message: 'Ended — unstake & claim by 31 Dec 2026'}), href: '/guide/handbook/user-guide/qday-staking' },
+    { icon: '🌉', title: translate({id: 'quicklinks.bridge.title', message: 'Bridge'}), desc: translate({id: 'quicklinks.bridge.desc', message: 'Move assets across chains (QDay Origin testnet / Aevum testnet)'}), href: 'https://portal.qday.io/en/bridge' },
+    { icon: '🔄', title: translate({id: 'quicklinks.swap.title', message: 'Swap'}), desc: translate({id: 'quicklinks.swap.desc', message: 'Trade tokens on QDay Origin mainnet'}), href: 'https://portal.qday.io/en/qday-swap' },
+    { icon: '📈', title: translate({id: 'quicklinks.staking.title', message: 'Staking'}), desc: translate({id: 'quicklinks.staking.desc', message: 'Ended — unstake & claim by 12:00 HKT, 31 Dec 2026'}), href: '/guide/handbook/user-guide/qday-staking' },
   ];
 }
 

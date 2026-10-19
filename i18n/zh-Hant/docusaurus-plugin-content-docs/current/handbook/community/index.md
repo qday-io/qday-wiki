@@ -6,7 +6,7 @@ sidebar_label: 社群
 
 # 社群
 
-關注並加入 QDay 官方頻道。
+關注並加入 QDay 官方渠道。
 
 ## QDay Network {/* #qday-network */}
 

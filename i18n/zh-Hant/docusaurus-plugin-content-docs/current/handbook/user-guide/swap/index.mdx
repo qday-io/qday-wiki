@@ -1,6 +1,6 @@
 ---
 sidebar_position: 53
-sidebar_label: 兌換
+sidebar_label: QDay Swap
 ---
 
 import NextSteps from "@site/src/components/QDay/NextSteps";
@@ -11,12 +11,12 @@ import AddTokenButton from '@site/src/components/QDay/AddTokenButton';
 
 QDay Swap 是基於 QDay 區塊鏈的去中心化交易平台，讓你能快速兌換各種代幣，並透過提供流動性賺取收益。
 
-:::tip[將兌換代幣新增至你的錢包]
+:::tip[將 QDay Swap 代幣新增至你的錢包]
 QDay Swap 運行於 **QDay Origin 主網（鏈 ID 44001）**。新增以下代幣前，請先將錢包切換至該網絡。
 
-<AddTokenButton symbol="USD8" address="0x668FaAFd6b363d6cED62491BfCBE2A39da3D14cB" decimals={18} />
-&nbsp;<AddTokenButton symbol="WABEL" address="0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882" decimals={18} />
-&nbsp;<AddTokenButton symbol="WQDAY" address="0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660" decimals={18} />
+<AddTokenButton symbol="USD8" address="0x668FaAFd6b363d6cED62491BfCBE2A39da3D14cB" decimals={6} chainId="0xABE1" networkName="QDay Origin mainnet" />
+&nbsp;<AddTokenButton symbol="WABEL" address="0x3a4D0834fe667D780c0fa434Ec9c1c3b08181882" decimals={18} chainId="0xABE1" networkName="QDay Origin mainnet" />
+&nbsp;<AddTokenButton symbol="WQDAY" address="0xEF253e9FC2d063869FD5B3C0E1c326aB7E030660" decimals={18} chainId="0xABE1" networkName="QDay Origin mainnet" />
 :::
 
 :::tip[前置條件]
@@ -69,11 +69,11 @@ QDay Swap 支援三種代幣之間的即時兌換：**WABEL**、**QDAY** 與 **U
 - **Transaction History（交易紀錄）**：點擊右上角的錢包地址並選擇「Transaction History」，可檢視你所有的兌換與流動性操作紀錄。
 
 :::danger[安全警告]
-請務必透過官方連結 https://portal.qday.io/en/qday-swap 存取 QDay Swap，以防範釣魚網站。進行大額交易前，建議先以小額測試流程。
+請務必透過官方連結（[https://portal.qday.io/en/qday-swap](https://portal.qday.io/en/qday-swap)）存取 QDay Swap，以防範釣魚網站。進行大額交易前，建議先以小額測試流程。
 :::
 
 ## 下一步 {/* #whats-next */}
 
 <NextSteps steps={[
-  { title: "QDAY 質押（已結束）", desc: "請於 2026 年 12 月 31 日前解除質押並領取獎勵", to: "/guide/handbook/user-guide/qday-staking" },
+  { title: "QDAY 質押（已結束）", desc: "請於 2026 年 12 月 31 日 12:00（HKT）前解除質押並領取獎勵", to: "/guide/handbook/user-guide/qday-staking" },
 ]} />

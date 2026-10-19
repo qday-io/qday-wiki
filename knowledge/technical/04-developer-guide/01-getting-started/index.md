@@ -32,7 +32,8 @@ QDay Aevum is EVM-compatible. Any Ethereum developer tool you already use — Fo
 # Deploy a contract with Foundry
 forge create src/MyContract.sol:MyContract \
   --rpc-url https://rpc-test.qday.info \
-  --private-key $PRIVATE_KEY
+  --private-key $PRIVATE_KEY \
+  --broadcast
 ```
 
 When the QDay SDK ships *(available Q1 2027)*, install it with:

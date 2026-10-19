@@ -6,8 +6,7 @@ slug: /intro
 
 # QDay
 
-**QDay** is a quantum-safe, EVM-compatible Layer 2 on Abelian. **QDay Aevum** is the upgraded network —
-the chain upgrade the ecosystem is moving to.
+**QDay** is a quantum-safe, EVM-compatible Layer 2 on Abelian. **QDay Aevum** is the public testnet of the upgraded QDay architecture; QDay mainnet launches in Q1 2027.
 
 <div className="grid cards" markdown>
 

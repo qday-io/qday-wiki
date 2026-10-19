@@ -6,7 +6,7 @@ sidebar_position: 13
 
 # History
 
-:::info Draft
+:::info[Draft]
 This page is scaffolded — the structure is in place and the content is being written. A timeline works well here.
 :::
 

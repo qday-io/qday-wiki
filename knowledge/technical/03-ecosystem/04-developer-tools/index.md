@@ -13,7 +13,7 @@ The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are
 
 **Hardhat** — Add QDay Aevum as a network in `hardhat.config.js` (see [Developer Guide](/Knowledge/technical/developer-guide/getting-started)). All Hardhat plugins that work with Ethereum mainnet work on QDay Aevum.
 
-**Remix** — Connect Remix IDE to QDay Aevum via the "External HTTP Provider" option with the QDay Aevum RPC URL.
+**Remix** — In Remix IDE, choose the "Injected Provider - MetaMask" environment with MetaMask connected to the QDay Aevum testnet.
 
 **SDK** *(available Q1 2027)* — The `@qday-io/sdk` npm package will provide TypeScript-first clients for Smart Accounts, ERC-4337 bundler interaction, payment creation, and AI agent management.
 

@@ -30,4 +30,4 @@ QDay SDK（`@qday-io/sdk`）與 CLI（`@qday-io/cli`）將於 2027 年第一季�
 | `subscription.renewed` | 週期性扣款成功 |
 | `stream.stopped` | 串流結束（押金耗盡、已取消或已到期） |
 
-除非你指定其他 ERC-20，支付層的貨幣為 **USD8**（18 位小數；在 QDay Aevum 測試網上為 **tUSD8**，地址 `0x456569838f1d43009A91ebA4263147Afd7233483`）。網絡 Gas 以 QDAY 支付（測試網上為 tQDAY）；個別應用程式可能以其他代幣收取手續費——Agent Payment 應用（2027 年第一季推出）將以 USD8 收取手續費。
+除非你指定其他 ERC-20，支付層的貨幣為 **USD8**（小數位：6；在 QDay Aevum 測試網上為 **tUSD8**，地址 `0x456569838f1d43009A91ebA4263147Afd7233483`）。網絡 Gas 以 QDAY 支付（測試網上為 tQDAY）；個別應用程式可能以其他代幣收取手續費——Agent Payment 應用（2027 年第一季推出）將以 USD8 收取手續費。

@@ -34,7 +34,7 @@ const FEATURES: F[] = [
   {
     icon: '📊',
     title: translate({id: 'feat.dev.t', message: 'Developer-Friendly'}),
-    body: translate({id: 'feat.dev.b', message: 'Comprehensive development tools, SDKs, and detailed documentation to lower the barrier to entry.'}),
+    body: translate({id: 'feat.dev.b', message: 'Comprehensive development tools, detailed documentation and SDKs (Q1 2027) to lower the barrier to entry.'}),
   },
 ];
 

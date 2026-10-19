@@ -24,11 +24,11 @@ On testnet, claim tQDAY from the [built-in faucet](/guide/start/faucet). A brand
 
 ## Bridge
 
-To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/user-guide#qday-bridge) (ERC20 / TRC20 / QRC20) or [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) (ABEL / WABEL).
+To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/user-guide#qday-bridge) (ERC-20 / TRC-20 / QRC-20) or [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) (ABEL / WABEL).
 
 ## First Transaction
 
-This walkthrough sends **1 tQDAY** with MetaMask on **QDay Aevum testnet** (QDay mainnet is in development). [Add the QDay network](/guide/start/add-network) and [claim testnet QDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
+This walkthrough sends **1 tQDAY** with MetaMask on **QDay Aevum testnet** (QDay mainnet is in development). [Add the QDay network](/guide/start/add-network) and [claim tQDAY](/guide/start/faucet) first. Mainnet is coming soon; once it launches, the steps will be the same.
 
 ### Prerequisites
 
@@ -46,16 +46,16 @@ This walkthrough sends **1 tQDAY** with MetaMask on **QDay Aevum testnet** (QDay
    - Network
    - Recipient
    - Amount: 1 tQDAY
-   - Estimated gas fee (paid in QDAY; it should be a fraction of a cent to a few cents)
+   - Estimated gas fee (paid in tQDAY on testnet; it should be a fraction of a cent to a few cents)
 6. Click **Confirm**. MetaMask broadcasts the transaction.
 7. Open the **Activity** tab. When the status is **Confirmed**, click the transaction to view it on the [block explorer](https://explorer-test.qday.info) (testnet; the mainnet explorer will be published at launch).
 
 :::tip[Practice on testnet]
-Send 1 tQDAY to a second MetaMask account you control, then send it back. That confirms you can sign, pay gas, and read the explorer before you move mainnet funds.
+Send 1 tQDAY to a second MetaMask account you control, then send it back. That confirms you can sign, pay gas, and read the explorer before you use real funds on mainnet later.
 :::
 
-:::warning[Gas is QDAY]
-A native transfer pays the network fee in QDAY. If MetaMask says the fee cannot be paid, you need a small extra QDAY balance on top of the 1 tQDAY you are sending.
+:::warning[Gas is tQDAY on testnet]
+A native transfer pays the network fee in the native token (tQDAY on testnet; QDAY on mainnet). If MetaMask says the fee cannot be paid, you need a small extra tQDAY balance on top of the 1 tQDAY you are sending.
 :::
 
 ## Deploy your first smart contract
@@ -65,7 +65,7 @@ QDay is EVM-compatible, so [Remix IDE](https://remix.ethereum.org) works the sam
 ### Prerequisites
 
 - MetaMask connected to QDay (testnet recommended)
-- Enough QDAY in the account to cover deploy gas
+- Enough tQDAY in the account to cover deploy gas
 - A browser with the MetaMask extension (Remix's Injected Provider uses it)
 
 ### 1. Open Remix and create the contract
@@ -107,7 +107,7 @@ If Environment is Injected Provider but MetaMask is still on Ethereum, the contr
 
 1. In the contract dropdown, select **HelloQDay**.
 2. Click **Deploy**.
-3. Review the MetaMask confirmation (network, estimated gas in QDAY) and click **Confirm**.
+3. Review the MetaMask confirmation (network, estimated gas in tQDAY) and click **Confirm**.
 4. Wait until the transaction confirms. The contract appears under **Deployed Contracts** in Remix. Copy the contract address.
 
 ### 5. Call it and verify on the explorer

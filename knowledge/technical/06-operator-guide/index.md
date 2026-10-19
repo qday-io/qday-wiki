@@ -7,6 +7,6 @@ title: Operator Guide
 
 Running and operating QDAY nodes.
 
-:::info Draft
+:::info[Draft]
 This section is scaffolded — the structure is in place and the content is being written.
 :::

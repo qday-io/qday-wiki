@@ -16,13 +16,13 @@ Step-by-step guides for everyday tasks on QDay — wallets, swap, bridging, and 
 ### Earn
 
 - **[Swap](swap)** — trade WABEL, QDAY, and USD8, or provide liquidity
-- **[QDAY Staking](qday-staking)** — staking ended 15 Oct 2026; unstake and claim by 31 Dec 2026
-- **[ABEL Staking](abel-staking)** — staking ended 15 Oct 2026; unstake WABEL and claim by 31 Dec 2026
+- **[QDAY Staking](qday-staking)** — staking ended 15 Oct 2026; unstake and claim by 12:00 HKT, 31 Dec 2026
+- **[ABEL Staking](abel-staking)** — staking ended 15 Oct 2026; unstake WABEL and claim by 12:00 HKT, 31 Dec 2026
 
 ### Bridge
 
 - **[Abelian Bridge](abelian-bridge-v3)** — move ABEL ↔ WABEL between Abelian and QDay
-- **[QDay Bridge](#qday-bridge)** — move ERC20, TRC20, and QRC20 tokens across EVM chains
+- **[QDay Bridge](#qday-bridge)** — move tokens such as ERC-20, TRC-20 and QRC-20 assets between QDay and other chains
 
 ## Explorer
 
@@ -42,7 +42,7 @@ QDay's block explorer lets you look up any transaction, address, or contract on 
 
 ## QDay Bridge
 
-QDay Bridge and [Abelian Bridge](abelian-bridge-v3) are separate products. Use QDay Bridge for ERC20, TRC20, and QRC20 assets on other EVM-compatible chains. Use Abelian Bridge for ABEL / WABEL.
+QDay Bridge and [Abelian Bridge](abelian-bridge-v3) are separate products. Use QDay Bridge for tokens such as ERC-20, TRC-20 and QRC-20 assets from other chains. Use Abelian Bridge for ABEL / WABEL.
 
 QDay Bridge runs on **QDay Aevum testnet** and **QDay Origin testnet**.
 
