@@ -57,3 +57,5 @@ QDay Bridge 運行於 **QDay Aevum 測試網**及 **QDay Origin 測試網**。
 6. 在跨鏈橋的交易歷史中追蹤轉移狀態，直到完成為止。
 
 ![QDay Bridge](/img/user-guide11.jpg)
+
+*示例：qUSDT → WQDAY，來源鏈與目標鏈均為 QDay。*

@@ -9,6 +9,6 @@ draft: false
 
 **Abelian Bridge (ABEL ⇄ WABEL, live today)** — ABEL ⇄ WABEL conversion between the Abelian Layer 1 (UTXO model) and QDay (EVM account model) currently goes through the [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3). Its smart contracts mint WABEL on QDay when ABEL is bridged in and burn WABEL when it is converted back to ABEL. The Abelian Bridge runs on QDay Origin mainnet, QDay Origin testnet and the QDay Aevum testnet.
 
-**PQZK Bridge (planned)** — The PQZK Bridge is planned future work and is not live yet. It is designed to handle transfers between QDay (EVM account model) and the Abelian Layer 1 (UTXO model), with the Committer's status root submissions to Abelian Chain serving as the trust anchor.
+**PQZK Bridge (umbrella concept)** — PQZK Bridge (Post-Quantum Zero-Knowledge Bridge) is the umbrella term for the framework that links QDay and the Abelian Layer 1 with post-quantum zero-knowledge proofs. It is not a standalone dApp; users move assets with the Abelian Bridge (ABEL ⇄ WABEL) and QDay Bridge. Its full implementation is future work (see [whitepaper §4.4](/guide/handbook/qday-whitepaper#sec-4-4)). In this framework, the Committer's status root submissions to Abelian Chain serve as the trust anchor between QDay (EVM account model) and the Abelian Layer 1 (UTXO model).
 
 How exit roots are committed and claimed is covered in [Cross-chain Messaging](/Knowledge/technical/protocol/cross-chain-messaging).

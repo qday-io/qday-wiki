@@ -647,7 +647,7 @@ The most significant strategic differentiation for QDay in the global payments l
 
 #### QDay's Unique Security Architecture
 
-In Phase 1, QDay operates as an EVM Layer 2 chain whose final state will settle on the Abelian L1 through the PQZK Bridge once the PQZK Bridge is deployed, where the L1 chain employs lattice-based cryptographic algorithms (LWE and Ring-LWE) that are classified as quantum-resistant by the National Institute of Standards and Technology (NIST).
+In Phase 1, QDay operates as an EVM Layer 2 chain whose final state will settle on the Abelian L1 through the PQZK Bridge framework once it is implemented, where the L1 chain employs lattice-based cryptographic algorithms (LWE and Ring-LWE) that are classified as quantum-resistant by the National Institute of Standards and Technology (NIST).
 
 The critical property is cross-chain finality backed by ZK proofs settled on Abelian L1. Once a batch of QDay transactions has been proven and committed to Abelian, the finality of that state is protected by quantum-resistant cryptography. An adversary with access to a quantum computer cannot forge the Abelian-layer signatures of the rollup operators, cannot produce a valid PQZK proof for an invalid state transition, and therefore cannot modify or reverse confirmed QDay transactions — even with quantum computational resources.
 
@@ -666,7 +666,7 @@ In combination with the DAO-based rollup halt mechanism described in Phase 1, QD
 
 The following areas represent the team's active R&D directions as QDay evolves toward its full payment and agent-commerce vision:
 
-1. **CDK migration** — Completion of the QDay blockchain migration to Polygon CDK and deployment of the PQZK Bridge to anchor ZK proofs on Abelian. This is the foundational infrastructure step to the subsequent agentic payment capabilities.
+1. **CDK migration** — Completion of the QDay blockchain migration to Polygon CDK and implementation of the PQZK Bridge framework to anchor ZK proofs on Abelian. This is the foundational infrastructure step to the subsequent agentic payment capabilities.
 2. **Native stablecoin infrastructure** — Integration with the Open Money Stack (OMS) layer. Build a QDay's paymaster infrastructure for using the chain's stablecoin as a native gas token.
 3. **Agentic wallet services** — Design and implementation of session-scoped, quantum-resistant agent wallets with configurable spending limits and time-bounded access windows. Integration with the x402 protocol for per-request stablecoin payments.
 4. **Onchain agent identity (ERC-8004)** — Deployment of the ERC-8004 agent identity standard on QDay, enabling AI agents to register verifiable identities, build portable reputation, and be trusted by counterparties.

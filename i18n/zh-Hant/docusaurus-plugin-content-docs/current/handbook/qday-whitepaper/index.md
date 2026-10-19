@@ -647,7 +647,7 @@ QDay 在全球支付格局中最重要的戰略差異，是目前其他支付區
 
 #### QDay 獨特的安全架構 {/* #qdays-unique-security-architecture */}
 
-在第 1 階段，QDay 以 EVM Layer 2 鏈的形式運作，待 PQZK Bridge 部署後，其最終狀態將透過 PQZK Bridge 結算於 Abelian L1；該 L1 鏈採用被美國國家標準與技術研究院（NIST）列為抗量子的格密碼算法（LWE 及 Ring-LWE）。
+在第 1 階段，QDay 以 EVM Layer 2 鏈的形式運作，待 PQZK Bridge 框架實作後，其最終狀態將透過該框架結算於 Abelian L1；該 L1 鏈採用被美國國家標準與技術研究院（NIST）列為抗量子的格密碼算法（LWE 及 Ring-LWE）。
 
 關鍵特性是由結算於 Abelian L1 的 ZK 證明支持的跨鏈最終確定性。一批 QDay 交易一經證明並提交至 Abelian，該狀態的最終確定性即受抗量子密碼學保護。擁有量子電腦的攻擊者無法偽造 Rollup 營運者在 Abelian 層的簽名，無法為無效的狀態轉換產生有效的 PQZK 證明，因此即使擁有量子運算資源，亦無法修改或撤銷已確認的 QDay 交易。
 
@@ -666,7 +666,7 @@ QDay 的路線圖直接應對這一問題。第 2 階段的抗量子帳戶模型
 
 隨着 QDay 朝其完整的支付及代理商業願景演進，以下是團隊目前積極推進的研發方向：
 
-1. **CDK 遷移**——完成 QDay 區塊鏈遷移至 Polygon CDK，並部署 PQZK Bridge 以將 ZK 證明錨定於 Abelian。這是其後代理支付能力的基礎設施根基。
+1. **CDK 遷移**——完成 QDay 區塊鏈遷移至 Polygon CDK，並實作 PQZK Bridge 框架以將 ZK 證明錨定於 Abelian。這是其後代理支付能力的基礎設施根基。
 2. **原生穩定幣基礎設施**——與 Open Money Stack（OMS）層整合。建立 QDay 的 Paymaster 基礎設施，讓鏈上穩定幣可用作原生 Gas 代幣。
 3. **代理錢包服務**——設計及實現限定會話範圍、抗量子的代理錢包，支援可設定的消費上限及限時存取窗口；並與 x402 協議整合，實現按請求的穩定幣支付。
 4. **鏈上代理身份（ERC-8004）**——在 QDay 上部署 ERC-8004 代理身份標準，讓 AI 代理註冊可驗證的身份、建立可攜的聲譽，並獲交易對手信任。

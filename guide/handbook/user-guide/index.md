@@ -56,3 +56,5 @@ Portal: [portal.qday.io/en/bridge](https://portal.qday.io/en/bridge)
 6. Track the transfer's status from the bridge's transaction history until it completes.
 
 ![QDay Bridge](/img/user-guide11.jpg)
+
+*Example: qUSDT → WQDAY, with QDay as both the source and destination chain.*
