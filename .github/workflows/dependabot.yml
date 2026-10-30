@@ -1,0 +1,21 @@
+# Keeps .github/dependabot.yml in line with the org template in
+# qday-io/ci-templates (dependabot-config.yml). Opens a PR into main only when
+# the rendered file changes — don't edit .github/dependabot.yml by hand.
+name: Dependabot config
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # weekly: picks up template changes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    uses: qday-io/ci-templates/.github/workflows/dependabot-config.yml@v1
+    with:
+      ecosystems: "docker,npm,github-actions"
+      # deploy/compose.yml only runs this repo's own image.
+      ignore-dependencies: "ghcr.io/qday-io/*"
