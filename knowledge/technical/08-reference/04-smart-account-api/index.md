@@ -9,7 +9,7 @@ draft: false
 The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. Code on this page shows the planned API.
 :::
 
-ERC-4337 Smart Accounts on QDay *(planned)*. The ERC-4337 EntryPoint and bundler launch with QDay mainnet in Q1 2027; they are not deployed on the QDay Aevum testnet. UserOperations go through the **EntryPoint**; the bundler is Alto. Guide: [ERC-4337 Development](/Knowledge/technical/developer-guide/erc-4337-development). Protocol: [Account Abstraction Protocol](/Knowledge/technical/protocol/account-abstraction-protocol).
+ERC-4337 Smart Accounts on QDay — agent wallets and session keys (a smart-contract policy engine with spending caps and time locks) and the stablecoin paymaster are live on the QDay Aevum testnet; mainnet deployment follows in Q1 2027. UserOperations go through the **EntryPoint**; the bundler is Alto. Guide: [ERC-4337 Development](/Knowledge/technical/developer-guide/erc-4337-development). Protocol: [Account Abstraction Protocol](/Knowledge/technical/protocol/account-abstraction-protocol).
 
 ## SDK (`@qday-io/sdk/aa`)
 
@@ -33,4 +33,4 @@ ERC-4337 Smart Accounts on QDay *(planned)*. The ERC-4337 EntryPoint and bundler
 | `paymasterAndData` | Paymaster address + extra data (empty if self-pay) |
 | `signature` | Account signature over the UserOp hash |
 
-Bundler example URL: `https://bundler.qday.io`. EntryPoint address: published at launch.
+Bundler example URL: `https://bundler.qday.io` (mainnet hostname). Aevum testnet EntryPoint address and bundler endpoint will be published in the docs.

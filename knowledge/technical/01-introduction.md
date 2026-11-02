@@ -7,7 +7,7 @@ draft: false
 
 QDAY's positioning, vision, and technical direction.
 
-**Highlights:** ZK proof, ML-DSA-65, ERC-4337, AI Agent, Payment
+**Highlights:** Polygon CDK, multi-validator batch verification, ML-DSA-65, ERC-4337, AI Agent, Payment
 
 ## What is QDAY
 
@@ -17,7 +17,7 @@ As a Layer 2, QDAY brings familiar EVM smart-contract execution and improved tra
 
 Nearly every blockchain in use today relies on elliptic-curve cryptography (ECDSA) to protect wallets and sign transactions. That math is efficient and battle-tested, but it is also known to be breakable by a sufficiently powerful quantum computer running Shor's algorithm. The assets and identities secured by those signatures are, in effect, borrowing against a deadline.
 
-QDAY is built to remove that deadline. Accounts on QDAY still use standard ECDSA today — ML-DSA-65 accounts, post-quantum precompiles and hybrid signatures arrive in Phase 2 — but settlement inherits the quantum resistance of Abelian's lattice-based cryptography (built on Learning-With-Errors and Ring-LWE hardness assumptions). On top of that foundation QDAY layers Zero-Knowledge Rollups, a novel PoS-over-PoW consensus design, and a two-phase quantum-resistant account model.
+QDAY is built to remove that deadline. Accounts on QDAY still use standard ECDSA today — ML-DSA-65 accounts, post-quantum precompiles and hybrid signatures arrive in Phase 2 — but settlement inherits the quantum resistance of Abelian's lattice-based cryptography (built on Learning-With-Errors and Ring-LWE hardness assumptions). On top of that foundation QDAY layers a Polygon CDK-based rollup verified by multiple independent validators, finalized state roots committed to Abelian, and a two-phase quantum-resistant account model.
 
 In short: QDAY is where you can transact and build today with cryptography and an architecture designed to remain secure after Q-Day.
 
@@ -45,7 +45,7 @@ Building quantum-resistant from the base is better. QDAY doesn't bolt post-quant
 
 **You shouldn't have to trade security for usability.**
 
-QDAY adapts Polygon's ZK Rollup technology (adapted to work with Abelian's UTXO-based Layer 1, rather than the account-based Layer 1s ZK Rollups are normally built on) to keep the network scalable, while preserving full EVM compatibility for developers.
+QDAY is built with Polygon CDK and connected to Abelian's PoW Layer 1 through the Abelian Plus Node, which provides the EVM-compatible environment for Rollup contracts that Abelian itself does not support. This keeps the network scalable while preserving full EVM compatibility for developers.
 
 **EVM-compatible, so you don't start over.**
 
@@ -57,13 +57,13 @@ As an EVM-compatible Layer 2, QDAY lets existing Solidity tooling, wallets, and 
 
 QDAY's ledger security is anchored to Abelian's lattice-based cryptographic keys and algorithms (LWE / Ring-LWE hardness assumptions), rather than to a bolt-on module.
 
-**Quantum-resistant ZK Rollups.**
+**Quantum-resistant rollups.**
 
-QDAY adapts Polygon's Zero-Knowledge Rollup technology to Abelian's UTXO-based Layer 1. If an attack is detected, rollup execution can be halted in a quantum-resistant way — attackers cannot forge the signatures needed to keep moving funds once a halt is in effect.
+Rollup data is signed with the rollup operators' quantum-resistant Abelian keys. If an attack is detected, rollup execution can be halted in a quantum-resistant way — attackers cannot forge the rollup operators' signatures needed to keep moving funds once a halt is in effect.
 
-**PoS-over-PoW consensus.**
+**Multi-validator batch verification.**
 
-QDAY layers a Proof-of-Stake validator system on top of Abelian's Proof-of-Work Layer 1 — a hybrid design intended to combine PoW's security guarantees with PoS's efficiency and scalability.
+Multiple independent validators check each batch (batch data consistency and state transition verification) and agree through an M-of-N threshold. The Committer then submits the finalized state root to Abelian's Proof-of-Work Layer 1.
 
 **EVM-compatible Layer 2.**
 
@@ -77,7 +77,7 @@ Phase 2 (in development) introduces dedicated quantum-resistant accounts, wallet
 
 **Cost-effective, fast settlement.**
 
-Off-chain transaction processing plus the PoS layer are designed to lower fees and speed up confirmation relative to Abelian's Layer 1 alone.
+Processing transactions in the L2 execution layer, rather than on Abelian's Layer 1, is designed to lower fees and speed up confirmation relative to Abelian's Layer 1 alone.
 
 ## Core Capabilities
 
@@ -99,7 +99,7 @@ ERC-4337 support, using the Alto bundler, will bring smart accounts, session key
 
 **Advanced Application Ecosystem**
 
-QDAY's infrastructure supports cross-chain interoperability (Abelian Bridge) and decentralized exchanges (QDay Swap, live on QDay Origin mainnet today). High-speed payment capabilities, including Agent Payment, launch with QDay mainnet in Q1 2027.
+QDAY's infrastructure supports cross-chain interoperability (Abelian Bridge) and decentralized exchanges (Q-Swap, live on QDay Origin mainnet today). High-speed payment capabilities, including Agent Payment, launch with QDay mainnet in Q1 2027.
 
 **Automated & Intelligent Interactions** *(planned — launches with QDay mainnet in Q1 2027)*
 
@@ -113,13 +113,17 @@ QDAY's sophisticated modular architecture leverages the best of modern blockchai
 
 The Abelian blockchain (Lattice-based post-quantum cryptography).
 
-**Execution & Proving**
+**Execution**
 
-Forked instances of Polygon CDK, PolygonZKEVM contracts, and a highly performant Rust EVM implementation (qday-revm).
+Polygon CDK-based L2 execution and a highly performant Rust EVM implementation (qday-revm).
 
-**Data Availability & Consensus**
+**Verification & State Commitment**
 
-The Abelian Plus Node provides data availability, using reth for execution and lighthouse for consensus.
+Multiple independent validators verify batches and reach M-of-N agreement; the Committer submits the finalized state root to Abelian.
+
+**Abelian Plus Node & Data Availability**
+
+The Abelian Plus Node combines reth (EVM execution for Rollup contracts) and lighthouse (consensus client) as its DA Node infrastructure, plus the Committer and an Abelian Node that connects to the native Abelian chain.
 
 **Smart Wallets & Bundlers**
 
@@ -129,7 +133,7 @@ TypeScript-based ERC-4337 bundlers (planned — launch with QDay mainnet in Q1 2
 
 **Phase 1: L1-Assisted Quantum-Resistant Rollups with EVM Compatibility.**
 
-Integration of ZK Rollups with Abelian to create a quantum-resistant ledger while maintaining standard EVM account models. If malicious quantum anomalies are detected, consensus operators can execute a decentralized "halt," freezing rollups to prevent the loss of funds while retaining data integrity.
+Integration of CDK-based rollups with Abelian to create a quantum-resistant ledger while maintaining standard EVM account models. If malicious quantum anomalies are detected, the QDay DAO can vote to halt rollup execution, freezing rollups to prevent the loss of funds while retaining data integrity.
 
 **Phase 2: L2-Native Quantum-Resistant Accounts & Smart Contracts.**
 

@@ -23,7 +23,7 @@ QDay 是抗量子、兼容 EVM 的 Layer 2。本文件以公開的 **QDay Aevum 
 :::
 
 :::info[Gas 與手續費代幣]
-一般網絡 Gas 以 QDAY 支付（測試網上為 tQDAY）。個別應用程式可能以其他代幣收取手續費——例如 Agent Payment 應用（將於 2027 年第一季隨 QDay 主網推出）將以 USD8 收取手續費。
+透過 Paymaster Gas 抽象，用戶及 AI 代理可以使用 QDay 的原生穩定幣（USD8）支付交易手續費，而無須持有 $QDAY；穩定幣 Paymaster 已於 QDay Aevum 測試網上線，供 ERC-4337 智能帳戶使用。一般 EOA 交易（MetaMask、Foundry、Hardhat）仍以原生代幣支付 Gas——測試網上為 tQDAY，可從水龍頭領取。個別應用程式可能以其他代幣收取手續費——例如 Agent Payment 應用以 USD8 收取手續費。
 :::
 
 測試代幣：可從 [faucet.qday.info](https://faucet.qday.info) 或文件內置水龍頭（[取得測試網代幣](/guide/start/faucet)）領取 tQDAY。

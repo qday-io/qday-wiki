@@ -5,8 +5,8 @@ draft: false
 
 # Payment Protocol
 
-:::note[Planned — Q1 2027]
-The payment protocol, including Agent Payment, launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::note[Partly live on Aevum testnet]
+The x402 facilitator and the stablecoin paymaster are live on the QDay Aevum testnet (Phase 1.5 upgrade, 2026 Q3); mainnet deployment of the Enhanced Payment Network and the native stablecoin (USD8) is scheduled for Q1 2027. The invoice, streaming and Agent Payment lifecycle below describes the planned design.
 :::
 
 The QDay payment protocol defines a lifecycle for structured, verifiable payments.
@@ -15,7 +15,7 @@ The QDay payment protocol defines a lifecycle for structured, verifiable payment
 
 **Invoice Lifecycle** — An invoice passes through states: `Created` → `Pending` (payer acknowledged) → `Paid` (funds locked) → `Settled` (funds released to merchant) → `Expired` (timeout without payment) or `Cancelled` (explicitly cancelled by payer). Each state transition emits an event.
 
-**Settlement Finality** — Payment settlement is gated on L2 batch finality. Funds are released to the merchant only after the batch containing the payment transaction is ZK-verified. For time-sensitive use cases, soft-confirmation settlement is available with a configurable confirmation threshold.
+**Settlement Finality** — Payment settlement is gated on L2 batch finality. Funds are released to the merchant only after the batch containing the payment transaction has been verified by the validator set (M-of-N threshold) and its finalized state root committed to Abelian. For time-sensitive use cases, soft-confirmation settlement is available with a configurable confirmation threshold.
 
 **Streaming Payment** — Streaming payments drip funds continuously over time using a flow rate (tokens per second). The payer locks a deposit; the payee can claim accrued funds at any time. If the deposit runs out, the stream stops automatically.
 

@@ -25,7 +25,7 @@ QDay 支援 MetaMask 及任何兼容 WalletConnect 的錢包。請使用以下�
 
 ## 跨鏈橋 {/* #bridge */}
 
-如要將資產從其他鏈轉移至 QDay，請使用 [QDay Bridge](/guide/handbook/user-guide#qday-bridge)（ERC-20 / TRC-20 / QRC-20）或 [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3)（ABEL / WABEL）。
+如要將資產從其他鏈轉移至 QDay，請使用 [QDay Bridge](/guide/handbook/user-guide#qday-bridge)（在 QDay 與其他 EVM 兼容鏈之間跨鏈 ERC20、TRC20 及 QRC20 代幣）或 [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3)（ABEL / WABEL）。
 
 ## 第一筆交易 {/* #first-transaction */}
 
@@ -47,7 +47,7 @@ QDay 支援 MetaMask 及任何兼容 WalletConnect 的錢包。請使用以下�
    - 網絡
    - 收款人
    - 金額：1 tQDAY
-   - 預估 Gas 費用（在測試網上以 tQDAY 支付；應為不足一美仙至數美仙）
+   - 預估 Gas 費用（在測試網上以 tQDAY 支付；應低於一仙）
 6. 點擊 **Confirm**（確認）。MetaMask 會廣播該交易。
 7. 開啟 **Activity**（活動）分頁。當狀態顯示為 **Confirmed**（已確認）時，點擊該交易即可在[區塊瀏覽器](https://explorer-test.qday.info)上查看（測試網；主網區塊瀏覽器將於推出時公佈）。
 

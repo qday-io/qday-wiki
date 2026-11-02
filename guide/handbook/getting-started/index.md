@@ -24,7 +24,7 @@ On testnet, claim tQDAY from the [built-in faucet](/guide/start/faucet). A brand
 
 ## Bridge
 
-To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/user-guide#qday-bridge) (ERC-20 / TRC-20 / QRC-20) or [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) (ABEL / WABEL).
+To move assets onto QDay from another chain, use [QDay Bridge](/guide/handbook/user-guide#qday-bridge) (ERC20, TRC20 and QRC20 tokens between QDay and other EVM-compatible chains) or [Abelian Bridge](/guide/handbook/user-guide/abelian-bridge-v3) (ABEL / WABEL).
 
 ## First Transaction
 
@@ -46,7 +46,7 @@ This walkthrough sends **1 tQDAY** with MetaMask on **QDay Aevum testnet** (QDay
    - Network
    - Recipient
    - Amount: 1 tQDAY
-   - Estimated gas fee (paid in tQDAY on testnet; it should be a fraction of a cent to a few cents)
+   - Estimated gas fee (paid in tQDAY on testnet; it should be sub-cent)
 6. Click **Confirm**. MetaMask broadcasts the transaction.
 7. Open the **Activity** tab. When the status is **Confirmed**, click the transaction to view it on the [block explorer](https://explorer-test.qday.info) (testnet; the mainnet explorer will be published at launch).
 

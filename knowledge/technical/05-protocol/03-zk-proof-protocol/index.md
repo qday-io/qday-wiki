@@ -1,28 +1,32 @@
 ---
-title: ZK Proof Protocol
+title: Batch Verification Protocol
 draft: false
 ---
 
-# ZK Proof Protocol
+# Batch Verification Protocol
 
-The ZK proof protocol ensures that every state transition on QDay Aevum can be verified cryptographically without re-executing all transactions.
+QDay Aevum verifies state transitions with multiple independent validators and an M-of-N threshold, rather than with ZK validity proofs.
 
 ## Batch
 
-The Sequence Sender (`cdk-node`) collects L2 blocks from `cdk-erigon` and packs them into a Batch. Batches are submitted to `zkRollupManager` via `sequenceBatches()`. Each batch includes: list of encoded transactions, state root before execution, timestamp, and a forced batch flag.
+The Sequence Sender (`cdk-node`) collects L2 blocks from `cdk-erigon` and packs them into a Batch. Batches are submitted to the Rollup contracts via `sequenceBatches()`. Each batch includes: list of encoded transactions, state root before execution, timestamp, and a forced batch flag.
 
-## Witness
+## Batch Record
 
-After a batch is accepted by `zkRollupManager`, the Aggregator reads the batch data: Batch Number, Batch Hash, pre-execution State Root, post-execution State Root, and Local Exit Root. These values constitute the witness for proof generation.
+The Rollup contracts record the batch information in the EVM environment of the Abelian Plus Node (`reth` + `lighthouse`). Abelian itself has no smart contracts.
 
-## Circuit
+## Batch Data Consistency
 
-The zkEVM circuit encodes the semantics of correct EVM execution as a system of arithmetic constraints (R1CS / PLONK). The circuit checks that, given the pre-state, executing the specified transactions yields exactly the claimed post-state and exit root.
+Each validator compares the batch information recorded by the Rollup contracts with the corresponding L2 transaction data. A mismatch means the record and the transactions QDay processed are inconsistent.
 
-## Prover
+## State Transition Verification
 
-The zk Prover service receives the batch witness, evaluates the circuit, and generates a succinct validity proof. The proof is computed off-chain in a resource-intensive but parallelizable process. Multiple prover instances can run concurrently for throughput scaling.
+Each validator independently executes the batch's state transitions and compares the resulting state root with the expected state root. Correct results depend on validators using the same protocol rules, having access to the transaction data, and identifying the state commitment associated with each batch.
 
-## Verifier
+## M-of-N Agreement
 
-The `Verifier` contract (deployed on the DA layer, referenced by `zkRollupManager`) checks the proof on-chain using the verifying key embedded at deployment. Verification is efficient — it runs in constant time regardless of how many transactions are in the batch. A successful verification call to `zkRollupManager.verifyBatches()` updates the Rollup's Final State Root.
+N is the total number of participating validators; M is the minimum number of approvals required. A batch satisfies the approval requirement when at least M validators agree on its validity, subject to the protocol's acceptance and finalization rules.
+
+## State Commitment
+
+After the batch is finalized, the Committer submits QDay's finalized state root to the Abelian Chain through the Abelian Node.

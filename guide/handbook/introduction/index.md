@@ -11,7 +11,7 @@ QDay is an EVM-compatible Layer-2 network built on Abelian, a quantum-resistant 
 
 QDay is being built in three stages:
 
-1. **Quantum-resistant settlement.** Established first, using zero-knowledge rollup technology.
+1. **Quantum-resistant settlement.** Established first, using rollups to Abelian: batches are verified by multiple independent validators and their finalized state roots are committed to Abelian.
 2. **Global payment network.** Built out around QDay's own stablecoin, USD8, and designed for everyday commerce as well as payments initiated by AI agents.
 3. **Native quantum-resistant accounts and wallets.** Brought directly into QDay itself, so users are no longer relying solely on rollup-level protection.
 
@@ -45,6 +45,6 @@ QDay is built at the intersection of these three shifts: an EVM-compatible chain
 | **Quantum-ready** | Settlement secured by Abelian's quantum-resistant cryptography, with quantum-resistant accounts and wallets on the roadmap |
 | **AI Native** | Onchain agent identity and per-request payments purpose-built for AI agents |
 | **Payment Friendly** | USD8, QDay's native USD-pegged stablecoin, as the primary way value moves on QDay |
-| **zk Powered** | Zero-knowledge rollup technology for scaling and quantum-secure settlement |
-| **Low Cost** | Transaction fees designed to be a small fraction of a cent to a few cents |
+| **Rollup Powered** | Polygon CDK Layer 2 with multi-validator (M-of-N) batch verification and state roots committed to Abelian |
+| **Low Cost** | Sub-cent transaction fees, payable in USD8 via paymaster gas abstraction |
 | **High Throughput** | Designed for thousands of transactions per second, scaling toward tens of thousands as the network matures |

@@ -14,17 +14,17 @@ QDay's ecosystem is built in layers: a core protocol connecting QDay to Abelian 
 QDay's ecosystem applications include:
 
 - **ABEL Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/abel-staking) by 12:00 HKT, 31 Dec 2026.
-- **QDay Bridge** — moves tokens such as ERC-20, TRC-20 and QRC-20 assets between QDay and other chains.
+- **QDay Bridge** — bridges ERC20, TRC20 and QRC20 tokens between QDay and other EVM-compatible chains.
 - **QDay Staking** — ended 15 Oct 2026; [unstake and claim](/guide/handbook/user-guide/qday-staking) by 12:00 HKT, 31 Dec 2026.
-- **QDay Swap** — QDay's decentralized exchange for swapping tokens.
+- **Q-Swap** — QDay's decentralized exchange for swapping tokens.
 
 ## DeFi
 
-QDay's DeFi layer currently centres on QDay Swap, which handles token swaps (on QDay Origin mainnet); further DeFi products such as QDay Lending are planned. The design intent is for USD8, QDay's native stablecoin, to serve as the primary collateral and settlement asset across these applications, so DeFi activity on QDay isn't exposed to native-token price swings.
+QDay's DeFi layer currently centres on Q-Swap, which handles token swaps (on QDay Origin mainnet); further DeFi products are planned, including QLEAP (QDay Lending Ecosystem And Protocol) for lending and borrowing, and Q-Finance, a consolidated dApp to manage DeFi assets in one interface. The design intent is for USD8, QDay's native stablecoin, to serve as the primary collateral and settlement asset across these applications, so DeFi activity on QDay isn't exposed to native-token price swings.
 
 ## AI Ecosystem
 
-Launching with QDay mainnet in Q1 2027, AI agents on QDay will hold their own wallets, register a verifiable onchain identity, and pay for services directly in USD8 — a single API call can be paid for in real time, without a subscription or a human approving each transaction.
+AI agents on QDay are designed to hold their own wallets, register a verifiable onchain identity (ERC-8004), and pay for services directly in USD8 — a single API call can be paid for in real time, without a subscription or a human approving each transaction. Agent wallets and session keys (ERC-4337), the x402 facilitator and the stablecoin paymaster are live on the QDay Aevum testnet; mainnet deployment of the payment network and native stablecoin follows in Q1 2027.
 
 ## Abelian Partnership
 

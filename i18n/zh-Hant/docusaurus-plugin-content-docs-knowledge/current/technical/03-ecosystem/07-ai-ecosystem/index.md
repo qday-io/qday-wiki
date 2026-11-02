@@ -5,8 +5,8 @@ draft: false
 
 # AI 生態系統
 
-:::note[計劃中——2027 年第一季]
-AI 代理技術堆疊及 QDay SDK（`@qday-io/sdk`）/ CLI（`@qday-io/cli`）將於 2027 年第一季隨 QDay 主網推出，目前尚未上線；SDK 亦尚未在 npm 上發佈。
+:::note[部分已於 Aevum 測試網上線]
+代理錢包及會話密鑰（Session Key）（設有支出上限及時間鎖的 ERC-4337 智能合約策略引擎）以及 x402 facilitator 已於 QDay Aevum 測試網上線；主網部署將於 2027 年第一季推出。AI 代理技術堆疊的其餘部分（MCP 伺服器、Intent Registry）及 QDay SDK（`@qday-io/sdk`）/ CLI（`@qday-io/cli`）計劃於 2027 年第一季推出；SDK 尚未在 npm 上發佈。
 :::
 
 **Agent SDK**——`@qday-io/sdk/agent` 將提供建立、部署及管理鏈上 AI 代理的基本組件。AI 代理將透過 ERC-4337 智能帳戶運作，並使用會話密鑰（Session Key）進行授權。

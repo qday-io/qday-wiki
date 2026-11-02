@@ -15,4 +15,6 @@ QDay's total supply is **22,517,998,100 QDAY**, all created at launch (the Token
 | Protocol Treasury | 20% | Long-term development and partnerships | 4-year equal vesting |
 | Community & Ecosystem | 10% | Airdrops, grants, initial liquidity | Fully unlocked at launch |
 
-QDAY's core utility is staking, governance, and paying gas for everyday dApp transactions. USD8 is used to pay the fee specifically for agent-initiated payments; outside of that case, a small QDAY balance is needed to cover network fees.
+QDAY is the native gas and governance token of QDay. Through paymaster gas abstraction, users and AI agents can pay transaction fees in QDay's native stablecoin (USD8) instead of holding $QDAY. (On the Aevum testnet, regular EOA wallets such as MetaMask still pay gas in tQDAY from the [faucet](/guide/start/faucet).)
+
+Legacy token/point holders ($QDAYp) are aligned 1:1 with the new QDay chain architecture via structured migration vaults. How $QDAY captures value in a stablecoin-fee network is described in section 3.2 (Value Capture Loop & Economic Flywheel) of the [QDay Whitepaper](/guide/handbook/qday-whitepaper).

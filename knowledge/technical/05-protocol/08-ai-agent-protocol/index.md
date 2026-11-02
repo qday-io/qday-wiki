@@ -5,8 +5,8 @@ draft: false
 
 # AI Agent Protocol
 
-:::note[Planned — Q1 2027]
-The AI agent protocol launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::note[Partly live on Aevum testnet]
+Agent wallets and session keys (an ERC-4337 smart-contract policy engine with spending caps and time locks) are live on the QDay Aevum testnet; mainnet deployment follows in Q1 2027. The intent registry, MCP integration and result attestation described below are planned for Q1 2027 and are not live today.
 :::
 
 The AI Agent Protocol defines how autonomous agents will interact with QDay contracts and external AI inference.

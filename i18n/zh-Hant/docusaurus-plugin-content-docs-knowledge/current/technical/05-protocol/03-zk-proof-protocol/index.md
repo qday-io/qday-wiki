@@ -1,28 +1,32 @@
 ---
-title: ZK 證明協議
+title: 批次驗證協議
 draft: false
 ---
 
-# ZK 證明協議
+# 批次驗證協議
 
-ZK 證明協議確保 QDay Aevum 上的每一次狀態轉換都能以密碼學方式驗證，而無需重新執行所有交易。
+QDay Aevum 以多個獨立驗證者及 M-of-N 門檻驗證狀態轉換，而非使用 ZK 有效性證明。
 
 ## 批次（Batch） {/* #batch */}
 
-Sequence Sender（`cdk-node`）從 `cdk-erigon` 收集 L2 區塊並打包成一個批次。批次透過 `sequenceBatches()` 提交至 `zkRollupManager`。每個批次包含：已編碼的交易列表、執行前的狀態根、時間戳記，以及強制批次旗標。
+Sequence Sender（`cdk-node`）從 `cdk-erigon` 收集 L2 區塊並打包成一個批次。批次透過 `sequenceBatches()` 提交至 Rollup 合約。每個批次包含：已編碼的交易列表、執行前的狀態根、時間戳記，以及強制批次旗標。
 
-## 見證（Witness） {/* #witness */}
+## 批次記錄 {/* #batch-record */}
 
-批次被 `zkRollupManager` 接受後，Aggregator 讀取批次數據：Batch Number、Batch Hash、執行前的 State Root、執行後的 State Root，以及 Local Exit Root。這些值構成產生證明所需的見證。
+Rollup 合約在 Abelian Plus Node（`reth` + `lighthouse`）的 EVM 環境中記錄批次資料。Abelian 本身沒有智能合約。
 
-## 電路（Circuit） {/* #circuit */}
+## 批次數據一致性 {/* #batch-data-consistency */}
 
-zkEVM 電路將正確 EVM 執行的語意編碼為一組算術約束系統（R1CS / PLONK）。電路檢查：在給定前狀態的情況下，執行指定的交易會恰好產生所宣稱的後狀態與 exit root。
+每個驗證者會將 Rollup 合約記錄的批次資料，與對應的 L2 交易數據作比對。若兩者不符，即表示該記錄與 QDay 所處理的交易不一致。
 
-## 證明者（Prover） {/* #prover */}
+## 狀態轉換驗證 {/* #state-transition-verification */}
 
-ZK 證明者服務接收批次見證、評估電路，並產生簡潔的有效性證明。證明在鏈下計算，過程耗費大量資源但可平行化。多個證明者實例可同時執行以擴展吞吐量。
+每個驗證者會獨立執行批次的狀態轉換，並將所得的狀態根與預期的狀態根作比對。結果是否正確，取決於驗證者是否採用相同的協議規則、能否取得交易數據，以及能否識別與每個批次相關的狀態承諾。
 
-## 驗證者（Verifier） {/* #verifier */}
+## M-of-N 共識 {/* #m-of-n-agreement */}
 
-`Verifier` 合約（部署於 DA 層，由 `zkRollupManager` 參照）使用部署時內嵌的驗證密鑰在鏈上檢查證明。驗證十分高效——無論批次中有多少筆交易，都在常數時間內完成。對 `zkRollupManager.verifyBatches()` 的成功驗證呼叫會更新 Rollup 的 Final State Root。
+N 為參與驗證者的總數；M 為所需的最少批准數目。當至少 M 個驗證者同意某批次有效，並符合協議的接受及最終確定規則時，該批次即滿足批准要求。
+
+## 狀態承諾 {/* #state-commitment */}
+
+批次最終確定後，Committer 會透過 Abelian Node 將 QDay 的最終狀態根提交至 Abelian 鏈。

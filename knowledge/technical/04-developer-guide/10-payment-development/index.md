@@ -26,7 +26,7 @@ const payments = new QDAYPayments({
 ```
 
 :::info[Fee tokens]
-Regular network gas is paid in QDAY (tQDAY on testnet). Individual apps may charge fees in a different token — for example, the Agent Payment app (launching with QDay mainnet in Q1 2027) will charge fees in USD8.
+Through paymaster gas abstraction, users and AI agents can pay transaction fees in QDay's native stablecoin (USD8) instead of holding $QDAY; the stablecoin paymaster is live on the QDay Aevum testnet for ERC-4337 smart accounts. Regular EOA transactions still pay gas in the native token (tQDAY on testnet). Individual apps may charge fees in a different token — for example, the Agent Payment app charges fees in USD8.
 :::
 
 ## Invoice

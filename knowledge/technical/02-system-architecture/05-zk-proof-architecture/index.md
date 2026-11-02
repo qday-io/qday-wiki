@@ -1,18 +1,22 @@
 ---
-title: ZK Proof Architecture
+title: Batch Verification Architecture
 draft: false
 ---
 
-# ZK Proof Architecture
+# Batch Verification Architecture
 
-The ZK proof pipeline converts a batch of EVM transactions into a cryptographic validity proof that any verifier can check without re-executing the transactions.
+QDay does not rely on ZK validity proofs as its primary verification mechanism. Instead, multiple independent validators verify each batch and reach agreement through an M-of-N threshold before the state root is committed to Abelian.
 
-**Batch** — The Sequence Sender collects L2 blocks into a batch and commits the batch to `zkRollupManager`. Each batch has a unique Batch Number and encodes the transactions in execution order.
+**Batch** — The Sequence Sender (`cdk-node`) collects L2 blocks into a batch and submits it to the Rollup contracts. Each batch has a unique Batch Number and encodes the transactions in execution order.
 
-**Witness** — The Aggregator retrieves the batch data (Batch Number, Batch Hash, State Root, Local Exit Root) from `zkRollupManager`. This witness data is the input to proof generation.
+**Batch record** — The Rollup contracts record the batch information in the EVM environment of the Abelian Plus Node.
 
-**Circuit** — The prover evaluates the batch witness against the zkEVM arithmetic circuit — a constraint system that encodes correct EVM execution semantics. The circuit enforces that each state transition is valid.
+**Batch data consistency** — Each validator compares the batch information recorded by the Rollup contracts with the corresponding L2 transaction data, to catch inconsistencies between the record and the transactions QDay processed.
 
-**Prover** — The zk Prover service computes a validity proof from the circuit evaluation. It returns a `Proof` object to the Aggregator.
+**State transition verification** — Each validator independently executes the batch's state transitions and compares the resulting state root with the expected state root.
 
-**Verifier** — The Aggregator calls `zkRollupManager.verifyBatches()` on-chain. The `Verifier` contract checks the proof against the committed state root. If valid, the batch is finalized and the transaction achieves irreversible L2 finality.
+**M-of-N agreement** — N is the number of participating validators; M is the minimum number of approvals required. A batch meets the approval requirement when at least M validators agree on its validity, subject to the protocol's acceptance and finalization rules.
+
+**State commitment** — After finalization, the Committer submits the finalized state root to the Abelian Chain.
+
+Security depends on validator independence, the threshold configuration, data availability, and the rules for state acceptance and finalization.

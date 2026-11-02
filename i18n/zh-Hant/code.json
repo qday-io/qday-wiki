@@ -374,7 +374,7 @@
     "message": "我要遷移"
   },
   "home.card.migrate.body": {
-    "message": "QDay 主網上線時你的 QDAY 會怎樣：QDAYp 按 1:1 兌換為 $QDAY。"
+    "message": "你的 QDAY 會怎樣：舊有持有人（$QDAYp）將透過結構化的遷移金庫按 1:1 對接新的 QDay 鏈架構。"
   },
   "home.card.migrate.cta": {
     "message": "遷移指南"

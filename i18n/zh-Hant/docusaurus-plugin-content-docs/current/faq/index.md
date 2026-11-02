@@ -41,7 +41,7 @@ QDay 已完成一次重大的架構升級。如果你來自之前的 QDay 網絡
 
 ### 1.1 甚麼是 QDay？ {/* #11-what-is-qday */}
 
-QDay 是一個為未來而建的後量子、EVM 兼容網絡。QDay 專為 AI 代理、支付和去中心化應用而設計，能夠大規模實現亞秒級結算。QDay 旨在整合原生穩定幣和 x402 標準（將隨 QDay 主網於 2027 年第一季推出），致力成為代理經濟的基礎區塊鏈。
+QDay 是一個為未來而建的後量子、EVM 兼容網絡。QDay 專為 AI 代理、支付和去中心化應用而設計，能夠大規模實現亞秒級結算。QDay 旨在整合原生穩定幣和 x402 標準（x402 facilitator 及穩定幣 paymaster 已於 QDay Aevum 測試網上線；支付網絡及原生穩定幣的主網部署預計於 2027 年第一季進行），致力成為代理經濟的基礎區塊鏈。
 
 QDay 目前已在測試網（**QDay Aevum**）上線，升級後的主網預計於 2027 年第一季推出。
 
@@ -63,7 +63,7 @@ Aevum——源自拉丁文中意為「永恆」的詞根——是 QDay 新測試
 
 ### 1.6 QDay 如何結算到 Abelian？ {/* #16-how-does-qday-settle-to-abelian */}
 
-QDay 將鏈下交易批次打包成零知識有效性證明，在 DA 層上驗證，並將每個批次的狀態根提交至 Abelian L1。Rollup 營運者以 Abelian 原生的格密碼密鑰簽署這些狀態轉換，將最終確定性直接錨定到 L1。交易一經在 Abelian 上確認，帳本狀態便永久不可篡改，並能抵禦量子攻擊。
+QDay 是一個以 Polygon CDK 構建的 EVM 兼容 Layer 2，並透過 Abelian Plus Node 與 Abelian 整合。每個 QDay 交易批次都由多個獨立驗證者檢查，它們會驗證批次數據的一致性並重新執行狀態轉換；當達到 M-of-N 門檻的驗證者同意後，該批次即告最終確定。其後 Committer 會將最終狀態根提交至 Abelian L1，而 Abelian 的格密碼可保護已提交的狀態免受量子攻擊。
 
 ### 1.7 「抗量子」是甚麼意思？ {/* #17-what-does-quantum-resistant-mean */}
 
@@ -75,7 +75,7 @@ QDay 將鏈下交易批次打包成零知識有效性證明，在 DA 層上驗�
 
 ### 1.9 甚麼是 $QDAY？ {/* #19-what-is-qday */}
 
-$QDAY 是 QDay 的原生代幣，亦是 QDay 生態系統的 Gas 及治理代幣。請參閱[第 6 節](#6-qday-token--staking-termination)。
+$QDAY 是 QDay 的原生代幣，亦是 QDay 生態系統的 Gas 及治理代幣。透過 Paymaster Gas 抽象，用戶和 AI 代理亦可以 QDay 的原生穩定幣（USD8）支付交易手續費，而毋須持有 $QDAY。請參閱[第 6 節](#6-qday-token--staking-termination)。
 
 ### 1.10 甚麼是 USD8？ {/* #110-what-is-usd8 */}
 
@@ -137,11 +137,11 @@ EVM 兼容的智能合約和 dApp，包括 DeFi、支付和穩定幣應用，以
 
 ### 2.7 會有新代幣嗎？ {/* #27-is-there-a-new-token */}
 
-會。升級版 QDay 將擁有自己的代幣，同樣名為 **$QDAY**。現有的 QDAY 代幣現稱為 **QDAY Points（$QDAYp）**，並可在主網代幣生成事件（TGE）後按 1:1 兌換為新的 $QDAY。
+會。升級版 QDay 將擁有自己的代幣，同樣名為 **$QDAY**。現有的 QDAY 代幣現稱為 **QDAY Points（$QDAYp）**。舊有代幣／積分持有人（$QDAYp）將透過結構化的遷移金庫（migration vaults）按 1:1 對接新的 QDay 鏈架構。
 
 ### 2.8 我的質押會怎樣？ {/* #28-what-happens-to-my-staking */}
 
-QDay 質押計劃已經結束。獎勵已於 **2026 年 10 月 15 日 12:00（HKT）** 停止，你可在 **2026 年 12 月 31 日 12:00（HKT）** 前解除質押並領取代幣及已賺取的獎勵。解除質押的代幣會以 **WQDAY**（QDAY 質押）或 **WABEL**（ABEL 質押）形式退回。請在 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) 將 WQDAY 按 1:1 兌換為 QDAY；其後 QDAY（$QDAYp）可在主網推出後按 1:1 兌換為新的 $QDAY。詳情請參閱 [6.4](#64-what-happens-to-my-staked-qday-and-rewards)。
+QDay 質押計劃已經結束。獎勵已於 **2026 年 10 月 15 日 12:00（HKT）** 停止，你可在 **2026 年 12 月 31 日 12:00（HKT）** 前解除質押並領取代幣及已賺取的獎勵。解除質押的代幣會以 **WQDAY**（QDAY 質押）或 **WABEL**（ABEL 質押）形式退回。請在 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) 將 WQDAY 按 1:1 兌換為 QDAY；其後 QDAY（$QDAYp）持有人將透過結構化的遷移金庫按 1:1 對接新的 QDay 鏈架構。詳情請參閱 [6.4](#64-what-happens-to-my-staked-qday-and-rewards)。
 
 ### 2.9 WQDAY 或 WABEL 會怎樣？ {/* #29-what-happens-to-wqday-or-wabel */}
 
@@ -158,7 +158,7 @@ QDay 質押計劃已經結束。獎勵已於 **2026 年 10 月 15 日 12:00（HK
 
 ### 2.11 舊 dApp 是否仍然有效？ {/* #211-are-old-dapps-still-valid */}
 
-舊 dApp 在 QDay Origin 上會繼續運作。在新測試網上，QDay Bridge 及 Abelian Bridge（ABEL ⇄ WABEL，位於 [QDay Portal](https://portal.qday.io/en/abel-conversion)）已在 Aevum 上運行；QDay Swap 稍後跟進——它目前只在 QDay Origin 主網上運行。第三方 dApp 需要加入 Aevum 網絡並重新部署其合約；它們不會自動跟隨升級。
+舊 dApp 在 QDay Origin 上會繼續運作。在新測試網上，QDay Bridge 及 Abelian Bridge（ABEL ⇄ WABEL，位於 [QDay Portal](https://portal.qday.io/en/abel-conversion)）已在 Aevum 上運行；Q-Swap 稍後跟進——它目前只在 QDay Origin 主網上運行。第三方 dApp 需要加入 Aevum 網絡並重新部署其合約；它們不會自動跟隨升級。
 
 ---
 
@@ -196,7 +196,7 @@ QDay Aevum 與 EVM 兼容，支援 MetaMask、WalletConnect、Rainbow 及其他�
 
 ### 3.7 如何支付 Gas？ {/* #37-how-do-i-pay-gas */}
 
-Aevum 上的 Gas 以原生測試網 QDAY（**tQDAY**）支付，可從水龍頭領取。Aevum 採用與以太坊兼容的 EIP-1559 Gas 模型（基本費用 + 優先費用）。個別應用可以其他代幣收取手續費——例如 Agent Payment 應用的手續費以 USD8 支付。
+Aevum 上的 Gas 以原生測試網 QDAY（**tQDAY**）支付，可從水龍頭領取。Aevum 採用與以太坊兼容的 EIP-1559 Gas 模型（基本費用 + 優先費用）。個別應用可以其他代幣收取手續費——例如 Agent Payment 應用的手續費以 USD8 支付。概念上，QDay 的 Paymaster Gas 抽象讓用戶和 AI 代理以原生穩定幣支付交易手續費，而毋須持有 $QDAY；穩定幣 paymaster 已在 Aevum 上為 ERC-4337 智能合約錢包上線，而 MetaMask 等一般 EOA 錢包仍需 tQDAY 支付 Gas。
 
 ### 3.8 Aevum 上有哪些代幣？ {/* #38-which-tokens-are-available-on-aevum */}
 
@@ -281,23 +281,23 @@ forge verify-contract \
 
 ### 5.1 如何測試穩定幣支付？ {/* #51-how-do-i-test-stablecoin-payments */}
 
-測試網穩定幣 **tUSD8** 已部署在 Aevum 上（請參閱 [3.8](#38-which-tokens-are-available-on-aevum)）；**USD8** 是主網穩定幣。穩定幣支付功能將於 2027 年第一季推出。請在推出時再來查看——屆時將發佈所有文件、工具和範例，你可以由此開始測試。
+測試網穩定幣 **tUSD8** 已部署在 Aevum 上（請參閱 [3.8](#38-which-tokens-are-available-on-aevum)）；**USD8** 是主網穩定幣。穩定幣 paymaster 已於 QDay Aevum 測試網上線（第 1.5 階段升級）；支付網絡及原生穩定幣的主網部署預計於 2027 年第一季進行。逐步教學文件、合約地址及端點將於文件中發佈。
 
 ### 5.2 如何測試 x402？ {/* #52-how-do-i-test-x402 */}
 
-此功能將於 2027 年第一季推出。請在推出時再來查看——屆時將發佈所有文件、工具和範例，你可以由此開始測試。
+x402 facilitator 已於 QDay Aevum 測試網上線（第 1.5 階段升級）；主網將於 2027 年第一季跟進。逐步教學文件及端點將於文件中發佈。
 
 ### 5.3 如何構建代理錢包？ {/* #53-how-do-i-build-an-agent-wallet */}
 
-此功能將於 2027 年第一季推出。請在推出時再來查看——屆時將發佈所有文件、工具和範例，你可以由此開始測試。
+AI 代理錢包及會話密鑰（Session Key）——一個具備支出上限及時間鎖的 ERC-4337 智能合約策略引擎——已於 QDay Aevum 測試網上線；主網將於 2027 年第一季跟進。逐步教學文件及合約地址將於文件中發佈。官方 SDK（`@qday-io/sdk`）計劃於 2027 年第一季推出，目前尚未在 npm 上發佈。
 
 ### 5.4 如何註冊 AI 代理？ {/* #54-how-do-i-register-an-agent */}
 
-此功能將於 2027 年第一季推出。請在推出時再來查看——屆時將發佈所有文件、工具和範例，你可以由此開始測試。
+鏈上代理身份（ERC-8004）屬於第 1.5 階段增強支付網絡的一部分，其主網部署預計於 2027 年第一季進行。相關文件將於可用時在文件中發佈。
 
 ### 5.5 對於代理之間的交易，你們設想的是用於自主小額支付渠道的協議層，還是 Gas 抽象模型？ {/* #55-are-you-envisioning-a-protocol-layer-for-autonomous-micropayment-channels-or-a-gas-abstraction-model-for-agent-to-agent-transactions */}
 
-協議層加上自主小額支付渠道——即一套專門、獨立的支付協議和渠道，專為 AI 代理之間小額、高頻、自動化的交易而設計（類似閃電網絡的做法）。
+協議層加上自主小額支付渠道——即一套專門、獨立的支付協議和渠道，專為 AI 代理之間小額、高頻、自動化的交易而設計（類似閃電網絡的做法）。此外，Paymaster Gas 抽象讓代理以 QDay 的原生穩定幣（USD8）支付交易手續費，而毋須持有 $QDAY。
 
 ---
 
@@ -327,7 +327,7 @@ forge verify-contract \
 
 ### 6.3 這是否代表 QDay 出了問題？ {/* #63-does-this-mean-something-is-wrong-with-qday */}
 
-不是。這是 QDay 升級計劃中的既定一步。期間並沒有發生任何安全事故或協議故障。升級後的 QDay 已在 Aevum 測試網上線，並已連接 Polygon 的 AggLayer，主網預計於 2027 年第一季推出。
+不是。這是 QDay 升級計劃中的既定一步。期間並沒有發生任何安全事故或協議故障。升級後的 QDay 已在 Aevum 測試網上線，主網預計於 2027 年第一季推出。
 
 ### 6.4 我已質押的 QDAY 和獎勵會怎樣？ {/* #64-what-happens-to-my-staked-qday-and-rewards */}
 
@@ -342,7 +342,7 @@ forge verify-contract \
 
 **提取方法：** 在 QDay 質押頁面（QDay Origin 主網）點擊 **Unstake**，然後點擊 **Claim**，就是這樣。逐步指南：[QDAY 質押終止指南](/guide/handbook/user-guide/qday-staking)。
 
-解除質押的代幣會以 **WQDAY**（QDAY 質押）或 **WABEL**（ABEL 質押）形式退回你的錢包。請在 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) 將 WQDAY 按 1:1 比率兌換為 QDAY，並在 [WABEL Conversion](https://portal.qday.io/en/abel-conversion) 將 WABEL 兌換為 ABEL。QDAY（$QDAYp）可在主網推出後按 1:1 兌換為新的 $QDAY（請參閱 [2.7](#27-is-there-a-new-token)）。
+解除質押的代幣會以 **WQDAY**（QDAY 質押）或 **WABEL**（ABEL 質押）形式退回你的錢包。請在 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) 將 WQDAY 按 1:1 比率兌換為 QDAY，並在 [WABEL Conversion](https://portal.qday.io/en/abel-conversion) 將 WABEL 兌換為 ABEL。舊有 QDAY（$QDAYp）持有人將透過結構化的遷移金庫按 1:1 對接新的 QDay 鏈架構（請參閱 [2.7](#27-is-there-a-new-token)）。
 
 :::danger[注意安全]
 只依賴官方 QDay 渠道（網站、X 及 Telegram）。QDay 團隊絕不會主動私訊你、索取你的助記詞或私鑰，或要求你將代幣發送到任何地方以進行「遷移」或「解鎖」。
@@ -372,9 +372,9 @@ $QDAY 將成為升級版 QDay 的原生 Gas 及治理代幣——一個為穩定
 
 | 階段 | 範圍 | 狀態 |
 |---|---|---|
-| 第 1 階段 | 透過 Abelian 輔助的 ZK Rollup 實現抗量子帳本／結算；帳戶仍使用 ECDSA | 已完成，自 2025 年第四季起上線 |
-| 第 1.5 階段 | 支付網絡：USD8、發票、商戶、代理支付 | 開發中——將於 2027 年第一季推出 |
-| 第 2 階段 | 原生抗量子（ML-DSA）帳戶及智能合約，與舊有帳戶並存 | 開發中——將於 2027 年第一季前在 Aevum 測試網上線 |
+| 第 1 階段 | 透過 Abelian 輔助的 Rollup 實現抗量子帳本／結算（多驗證者 M-of-N 批次驗證；狀態根提交至 Abelian）；帳戶仍使用 ECDSA | 已完成，自 2025 年第四季起上線 |
+| 第 1.5 階段 | 支付網絡：USD8、x402、paymaster、AI 代理錢包／會話密鑰、代理支付 | 已在 Aevum 測試網上線（2026 年第三季升級）；主網於 2027 年第一季推出 |
+| 第 2 階段 | 原生抗量子（ML-DSA）帳戶及智能合約，與舊有帳戶並存 | 開發中——Aevum 測試網 2027 年第二季；主網 2027 年第四季 |
 
 請參閱 [QDAY 路線圖](/guide/handbook/roadmap/qday-roadmap)。
 
@@ -413,17 +413,17 @@ QDay 絕不會主動私訊你、索取你的助記詞，或營運要求提供私
 | **QDay Aevum** | 升級版 QDay 架構的測試網（鏈 ID `44005`）。升級後的主網預計於 2027 年第一季推出。 |
 | **Abelian** | QDay 所結算到的抗量子、注重私隱的 Layer 1。 |
 | **$QDAY** | 升級版 QDay 的原生 Gas 及治理代幣。 |
-| **$QDAYp（QDAY Points）** | 舊版 QDay 上 QDAY 的新名稱；可在 TGE 後按 1:1 兌換為 $QDAY。 |
+| **$QDAYp（QDAY Points）** | 舊版 QDay 上 QDAY 的新名稱；持有人將透過結構化的遷移金庫按 1:1 對接新的 QDay 鏈。 |
 | **tQDAY** | Aevum 上的原生測試網 QDAY，從水龍頭領取；不具實際價值。 |
 | **USD8** | QDay 的原生後量子穩定幣，與美元 1:1 錨定並有 100% 儲備支持。 |
 | **tUSD8** | QDay Aevum 上的測試網 USD8；不具實際價值。 |
 | **WQDAY** | 包裝（ERC-20）QDAY，可在 QDay Origin 及 QDay Aevum 上使用。 |
-| **WABEL** | QDay 上的包裝 ABEL，從 Abelian 跨鏈而來。 |
+| **WABEL** | 包裝 ABEL：QDay 上的 QRC20 代幣，與 Abelian 上的 ABEL 按 1:1 錨定；透過 Abelian Bridge 鑄造及銷毀。 |
 | **第 1 / 1.5 / 2 階段** | 帳本層級抗量子 → 支付網絡 → 原生抗量子帳戶及合約。 |
 | **抗量子** | 旨在抵禦量子電腦攻擊、保持安全的密碼學。 |
 | **原生後量子** | 帳戶和合約本身即使用後量子簽名（例如 ML-DSA），而不僅限於結算層。 |
 | **ML-DSA** | 經 NIST 標準化（FIPS 204）的格密碼後量子簽名算法。 |
-| **CDK** | Polygon Chain Development Kit，QDay 所基於的 ZK Rollup 技術堆疊。 |
+| **CDK** | Polygon Chain Development Kit，QDay 所基於的模組化 L2 技術堆疊。 |
 | **x402** | 基於 HTTP 402、在 HTTP 請求中為 API／資源付款的標準。 |
 | **ERC-4337** | 帳戶抽象標準：智能帳戶、bundler、paymaster、會話密鑰（Session Key）。 |
 | **ERC-8004** | 鏈上 AI 代理身份及聲譽標準。 |

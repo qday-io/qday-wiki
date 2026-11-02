@@ -15,17 +15,17 @@ QDay 的生態系統分層建構：一個將 QDay 連接至 Abelian 以取得安
 QDay 的生態系統應用包括：
 
 - **ABEL Staking**——已於 2026 年 10 月 15 日結束；請於 2026 年 12 月 31 日 12:00（HKT）前[解除質押並領取](/guide/handbook/user-guide/abel-staking)。
-- **QDay Bridge**——在 QDay 與其他鏈之間轉移 ERC-20、TRC-20 及 QRC-20 資產等代幣。
+- **QDay Bridge**——在 QDay 與其他 EVM 兼容鏈之間跨鏈 ERC20、TRC20 及 QRC20 代幣。
 - **QDay Staking**——已於 2026 年 10 月 15 日結束；請於 2026 年 12 月 31 日 12:00（HKT）前[解除質押並領取](/guide/handbook/user-guide/qday-staking)。
-- **QDay Swap**——QDay 的去中心化交易所，用於兌換代幣。
+- **Q-Swap**——QDay 的去中心化交易所，用於兌換代幣。
 
 ## DeFi {/* #defi */}
 
-QDay 的 DeFi 層目前以 QDay Swap 為核心，負責代幣兌換（於 QDay Origin 主網上）；QDay Lending 等更多 DeFi 產品正在計劃中。設計目標是讓 QDay 的原生穩定幣 USD8 成為這些應用的主要抵押品及結算資產，使 QDay 上的 DeFi 活動不受原生代幣價格波動影響。
+QDay 的 DeFi 層目前以 Q-Swap 為核心，負責代幣兌換（於 QDay Origin 主網上）；更多 DeFi 產品正在計劃中，包括用於借貸的 QLEAP（QDay Lending Ecosystem And Protocol），以及 Q-Finance——一個在單一介面管理 DeFi 資產的整合式 dApp。設計目標是讓 QDay 的原生穩定幣 USD8 成為這些應用的主要抵押品及結算資產，使 QDay 上的 DeFi 活動不受原生代幣價格波動影響。
 
 ## AI 生態系統 {/* #ai-ecosystem */}
 
-QDay 上的 AI 代理將於 2027 年第一季隨 QDay 主網推出，屆時將擁有自己的錢包、註冊可驗證的鏈上身份，並直接以 USD8 支付服務費用——單次 API 呼叫即可即時付款，無需訂閱，亦無需人手逐筆核准交易。
+QDay 上的 AI 代理設計為擁有自己的錢包、註冊可驗證的鏈上身份（ERC-8004），並直接以 USD8 支付服務費用——單次 API 呼叫即可即時付款，無需訂閱，亦無需人手逐筆核准交易。AI 代理錢包及會話密鑰（ERC-4337）、x402 facilitator 及穩定幣 paymaster 已於 QDay Aevum 測試網上線；支付網絡及原生穩定幣的主網部署將於 2027 年第一季跟進。
 
 ## Abelian 合作夥伴關係 {/* #abelian-partnership */}
 

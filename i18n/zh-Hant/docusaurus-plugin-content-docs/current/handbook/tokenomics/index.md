@@ -16,4 +16,6 @@ QDay 的總供應量為 **22,517,998,100 QDAY**，全數於上線時（代幣生
 | 協議金庫 | 20% | 長期開發與合作夥伴關係 | 4 年等額歸屬 |
 | 社群與生態系統 | 10% | 空投、資助、初始流動性 | 上線時全數解鎖 |
 
-QDAY 的核心用途是質押、治理，以及支付日常 dApp 交易的 Gas。USD8 專門用於支付由 AI 代理發起的支付手續費；除此情況外，你需要持有少量 QDAY 餘額以支付網絡手續費。
+QDAY 是 QDay 的原生 Gas 及治理代幣。透過 Paymaster Gas 抽象，用戶和 AI 代理可以 QDay 的原生穩定幣（USD8）支付交易手續費，而毋須持有 $QDAY。（在 Aevum 測試網上，MetaMask 等一般 EOA 錢包仍以從[水龍頭](/guide/start/faucet)領取的 tQDAY 支付 Gas。）
+
+舊有代幣／積分持有人（$QDAYp）將透過結構化的遷移金庫（migration vaults）按 1:1 對接新的 QDay 鏈架構。$QDAY 如何在以穩定幣支付手續費的網絡中捕獲價值，載於 [QDay 白皮書](/guide/handbook/qday-whitepaper)第 3.2 節（價值捕獲循環與經濟飛輪）。

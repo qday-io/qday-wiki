@@ -7,7 +7,7 @@ draft: false
 
 QDAY 的定位、願景與技術方向。
 
-**重點：** ZK 證明、ML-DSA-65、ERC-4337、AI 代理、支付
+**重點：** Polygon CDK、多驗證者批次驗證、ML-DSA-65、ERC-4337、AI 代理、支付
 
 ## 甚麼是 QDAY {/* #what-is-qday */}
 
@@ -17,7 +17,7 @@ QDAY 是一個抗量子、EVM 兼容的 Layer 2 網絡，建構於全球首個�
 
 當今幾乎所有正在使用的區塊鏈都依賴橢圓曲線密碼學（ECDSA）來保護錢包與簽署交易。這套數學高效且經過實戰驗證，但已知可被執行 Shor 算法、算力足夠強大的量子電腦破解。由這些簽名所保護的資產與身份，實際上等於是在向一個期限借貸。
 
-QDAY 的目標就是消除這個期限。QDAY 上的帳戶目前仍使用標準 ECDSA——ML-DSA-65 帳戶、後量子預編譯合約與混合簽名將於第 2 階段推出——但結算繼承了 Abelian 格密碼學（建立在 Learning-With-Errors 與 Ring-LWE 困難性假設之上）的抗量子能力。QDAY 在這個基礎之上疊加零知識 Rollup、創新的 PoS-over-PoW 共識設計，以及兩階段的抗量子帳戶模型。
+QDAY 的目標就是消除這個期限。QDAY 上的帳戶目前仍使用標準 ECDSA——ML-DSA-65 帳戶、後量子預編譯合約與混合簽名將於第 2 階段推出——但結算繼承了 Abelian 格密碼學（建立在 Learning-With-Errors 與 Ring-LWE 困難性假設之上）的抗量子能力。QDAY 在這個基礎之上疊加一個以 Polygon CDK 為基礎、由多個獨立驗證者驗證的 Rollup，將最終狀態根提交至 Abelian，以及兩階段的抗量子帳戶模型。
 
 簡而言之：QDAY 讓你今天就能以專為 Q-Day 之後仍保持安全而設計的密碼學與架構進行交易與開發。
 
@@ -45,7 +45,7 @@ QDAY 的目標就是消除這個期限。QDAY 上的帳戶目前仍使用標準 
 
 **你不應該為了可用性而犧牲安全。**
 
-QDAY 改造 Polygon 的 ZK Rollup 技術（調整為可與 Abelian 基於 UTXO 的 Layer 1 協同運作，而非 ZK Rollup 通常所建構於其上的帳戶型 Layer 1），以維持網絡的可擴展性，同時為開發者保留完整的 EVM 兼容性。
+QDAY 以 Polygon CDK 構建，並透過 Abelian Plus Node 連接至 Abelian 的 PoW Layer 1；Abelian Plus Node 為 Rollup 合約提供 Abelian 本身並不支援的 EVM 兼容環境。這既維持網絡的可擴展性，同時為開發者保留完整的 EVM 兼容性。
 
 **EVM 兼容，所以你無需從頭開始。**
 
@@ -57,13 +57,13 @@ QDAY 改造 Polygon 的 ZK Rollup 技術（調整為可與 Abelian 基於 UTXO �
 
 QDAY 的帳本安全錨定於 Abelian 的格密碼學密鑰與算法（LWE / Ring-LWE 困難性假設），而非外掛模組。
 
-**抗量子 ZK Rollup。**
+**抗量子 Rollup。**
 
-QDAY 將 Polygon 的零知識 Rollup 技術改造以適配 Abelian 基於 UTXO 的 Layer 1。若偵測到攻擊，可以用抗量子的方式暫停 Rollup 執行——一旦暫停生效，攻擊者便無法偽造繼續轉移資金所需的簽名。
+Rollup 數據由 Rollup 營運者的抗量子 Abelian 密鑰簽名。若偵測到攻擊，可以用抗量子的方式暫停 Rollup 執行——一旦暫停生效，攻擊者便無法偽造繼續轉移資金所需的 Rollup 營運者簽名。
 
-**PoS-over-PoW 共識。**
+**多驗證者批次驗證。**
 
-QDAY 在 Abelian 的工作量證明（PoW）Layer 1 之上疊加一套權益證明（PoS）驗證者系統——這種混合設計旨在結合 PoW 的安全保證與 PoS 的效率及可擴展性。
+多個獨立驗證者會檢查每個批次（批次數據一致性及狀態轉換驗證），並透過 M-of-N 門檻達成一致。其後 Committer 會將最終狀態根提交至 Abelian 的工作量證明（PoW）Layer 1。
 
 **EVM 兼容的 Layer 2。**
 
@@ -77,7 +77,7 @@ QDAY 在 Abelian 的工作量證明（PoW）Layer 1 之上疊加一套權益證�
 
 **高成本效益、快速結算。**
 
-鏈下交易處理加上 PoS 層，旨在相較於單獨使用 Abelian Layer 1 降低手續費並加快確認速度。
+在 L2 執行層而非 Abelian Layer 1 上處理交易，旨在相較於單獨使用 Abelian Layer 1 降低手續費並加快確認速度。
 
 ## 核心能力 {/* #core-capabilities */}
 
@@ -99,7 +99,7 @@ QDAY 在 Abelian 的工作量證明（PoW）Layer 1 之上疊加一套權益證�
 
 **進階應用生態系統**
 
-QDAY 的基礎設施支援跨鏈互通（Abelian Bridge）與去中心化交易所（QDay Swap，目前已在 QDay Origin 主網上線）。高速支付能力（包括 Agent Payment）將於 2027 年第一季隨 QDay 主網推出。
+QDAY 的基礎設施支援跨鏈互通（Abelian Bridge）與去中心化交易所（Q-Swap，目前已在 QDay Origin 主網上線）。高速支付能力（包括 Agent Payment）將於 2027 年第一季隨 QDay 主網推出。
 
 **自動化與智能互動** *（計劃中——將於 2027 年第一季隨 QDay 主網推出）*
 
@@ -113,13 +113,17 @@ QDAY 精密的模組化架構善用了現代區塊鏈技術的精華：
 
 Abelian 區塊鏈（基於格的後量子密碼學）。
 
-**執行與證明**
+**執行**
 
-Polygon CDK、PolygonZKEVM 合約的分支實例，以及高效能的 Rust EVM 實作（qday-revm）。
+以 Polygon CDK 為基礎的 L2 執行，以及高效能的 Rust EVM 實作（qday-revm）。
 
-**數據可用性與共識**
+**驗證與狀態承諾**
 
-由 Abelian Plus Node 提供數據可用性，以 reth 負責執行、lighthouse 負責共識。
+多個獨立驗證者驗證批次並達成 M-of-N 共識；Committer 將最終狀態根提交至 Abelian。
+
+**Abelian Plus Node 與數據可用性**
+
+Abelian Plus Node 結合 reth（為 Rollup 合約提供 EVM 執行）與 lighthouse（共識客戶端）作為其 DA Node 基礎設施，另加 Committer 以及一個連接至原生 Abelian 鏈的 Abelian Node。
 
 **智能錢包與 Bundler**
 
@@ -129,7 +133,7 @@ Polygon CDK、PolygonZKEVM 合約的分支實例，以及高效能的 Rust EVM �
 
 **第 1 階段：L1 輔助的抗量子 Rollup，兼容 EVM。**
 
-將 ZK Rollup 與 Abelian 整合，建立抗量子帳本，同時維持標準 EVM 帳戶模型。若偵測到惡意的量子異常活動，共識營運者可執行去中心化的「暫停」，凍結 Rollup 以防止資金損失，同時保持數據完整性。
+將以 CDK 為基礎的 Rollup 與 Abelian 整合，建立抗量子帳本，同時維持標準 EVM 帳戶模型。若偵測到惡意的量子異常活動，QDay DAO 可投票暫停 Rollup 執行，凍結 Rollup 以防止資金損失，同時保持數據完整性。
 
 **第 2 階段：L2 原生的抗量子帳戶與智能合約。**
 

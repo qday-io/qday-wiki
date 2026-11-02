@@ -1,18 +1,22 @@
 ---
-title: ZK 證明架構
+title: 批次驗證架構
 draft: false
 ---
 
-# ZK 證明架構
+# 批次驗證架構
 
-ZK 證明流程將一批 EVM 交易轉換為密碼學有效性證明，任何驗證者都可以在不重新執行交易的情況下檢查該證明。
+QDay 並不以 ZK 有效性證明作為其主要驗證機制。取而代之，多個獨立驗證者會驗證每個批次，並在狀態根提交至 Abelian 之前透過 M-of-N 門檻達成一致。
 
-**批次（Batch）**——Sequence Sender 將 L2 區塊收集成批次，並將批次提交至 `zkRollupManager`。每個批次都有唯一的批次編號（Batch Number），並按執行順序編碼其中的交易。
+**批次（Batch）**——Sequence Sender（`cdk-node`）將 L2 區塊收集成批次，並提交至 Rollup 合約。每個批次都有唯一的批次編號（Batch Number），並按執行順序編碼其中的交易。
 
-**見證（Witness）**——Aggregator 從 `zkRollupManager` 取得批次數據（Batch Number、Batch Hash、State Root、Local Exit Root）。這些見證數據就是產生證明的輸入。
+**批次記錄**——Rollup 合約在 Abelian Plus Node 的 EVM 環境中記錄批次資訊。
 
-**電路（Circuit）**——證明者根據 zkEVM 算術電路評估批次見證；該電路是一套編碼了正確 EVM 執行語義的約束系統，確保每一次狀態轉換都有效。
+**批次數據一致性**——每個驗證者會比對 Rollup 合約所記錄的批次資訊與相應的 L2 交易數據，以找出記錄與 QDay 實際處理的交易之間的不一致。
 
-**證明者（Prover）**——ZK Prover 服務根據電路評估結果計算出有效性證明，並將 `Proof` 物件返回 Aggregator。
+**狀態轉換驗證**——每個驗證者會獨立執行該批次的狀態轉換，並將所得的狀態根與預期的狀態根比對。
 
-**驗證器（Verifier）**——Aggregator 在鏈上呼叫 `zkRollupManager.verifyBatches()`。`Verifier` 合約根據已提交的狀態根檢查證明。若證明有效，該批次即最終確定，交易亦達到不可逆轉的 L2 最終確定性。
+**M-of-N 共識**——N 是參與驗證者的數目；M 是所需的最少批准數目。當至少 M 個驗證者同意批次有效時，該批次即符合批准要求，但仍須遵從協議的接受及最終確定規則。
+
+**狀態承諾**——最終確定後，Committer 會將最終狀態根提交至 Abelian Chain。
+
+安全性取決於驗證者的獨立性、門檻設定、數據可用性，以及狀態接受與最終確定的規則。

@@ -5,11 +5,11 @@ draft: false
 
 # 後量子架構
 
-QDay 的後量子帳戶層將於**第 2 階段**推出，建基於 **ML-DSA-65**（Module Lattice-based Digital Signature Algorithm，模組格數碼簽名算法，已由 NIST 標準化為 FIPS 204）。目前（第 1 階段）帳戶仍使用 ECDSA，抗量子能力來自 Abelian 上的結算。
+QDay 的後量子帳戶層將於**第 2 階段**推出（QDay Aevum 測試網 2027 年第二季；主網 2027 年第四季），建基於 **ML-DSA-65**（Module Lattice-based Digital Signature Algorithm，模組格數碼簽名算法，已由 NIST 標準化為 FIPS 204）。目前（第 1 階段）帳戶仍使用 ECDSA，抗量子能力來自 Abelian 上的結算。
 
 **ML-DSA-65**——主要的後量子簽名方案。ML-DSA-65 建基於模組誤差學習（Module Learning With Errors，MLWE）困難性假設。它產生約 1.9 KB 的公鑰及約 3.3 KB 的簽名——比 ECDSA 大，但即使是執行 Shor 算法的量子電腦，在計算上也無法破解。
 
-**混合簽名**——在第 2 階段的過渡期間，QDay 將支援將 ML-DSA-65 簽名與標準 ECDSA 簽名結合的混合簽名。兩者都必須有效，交易才會被接受。這確保與既有工具向後兼容，同時加入抗量子能力。
+**混合簽名**——在第 2 階段的過渡期間，QDay 將支援將 ML-DSA-65 簽名與標準 ECDSA 簽名結合的混合簽名。兩者都必須有效，交易才會被接受。這確保與既有工具向後兼容，同時加入抗量子能力。混合後量子 AI 代理密鑰（為 AI 代理錢包提供 ECDSA + ML-DSA-65 雙重簽名）計劃於 2026 年第四季推出。
 
 **密鑰輪換**——在第 2 階段，密鑰可以在鏈上輪換，用戶無需轉移資金。輪換流程透過一個已簽署的更新，將舊公鑰連結至新公鑰，從而保留帳戶歷史。
 
