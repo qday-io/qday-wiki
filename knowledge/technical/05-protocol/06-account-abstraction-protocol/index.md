@@ -5,15 +5,15 @@ draft: false
 
 # Account Abstraction Protocol
 
-:::note[Planned — Q1 2027]
-ERC-4337 account abstraction launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::note[Live on Aevum testnet — mainnet Q1 2027]
+ERC-4337 account abstraction — agent wallets and session keys (a smart-contract policy engine with spending caps and time locks) and the stablecoin paymaster — is live on the QDay Aevum testnet (Phase 1.5 upgrade, 2026 Q3); mainnet deployment follows in Q1 2027. Contract addresses and endpoints will be published in the docs.
 :::
 
-QDay will implement **ERC-4337** account abstraction without requiring changes to the core EVM protocol.
+QDay implements **ERC-4337** account abstraction without requiring changes to the core EVM protocol.
 
 **UserOperation** — Instead of a standard Ethereum transaction, users construct a `UserOperation` struct containing: `sender` (Smart Account address), `nonce`, `initCode` (for account deployment), `callData`, `callGasLimit`, `verificationGasLimit`, `preVerificationGas`, `maxFeePerGas`, `maxPriorityFeePerGas`, `paymasterAndData`, and `signature`.
 
-**Bundler Mempool** — The Alto bundler will maintain an off-chain UserOperation mempool. Bundlers collect UserOperations, simulate execution to check validity and gas limits, and pack multiple UserOperations into a single `handleOps()` transaction.
+**Bundler Mempool** — The Alto bundler maintains an off-chain UserOperation mempool. Bundlers collect UserOperations, simulate execution to check validity and gas limits, and pack multiple UserOperations into a single `handleOps()` transaction.
 
 **EntryPoint Execution** — The `EntryPoint` contract performs two phases per UserOperation: (1) **Verification** — calls `validateUserOp()` on the Smart Account and (optionally) `validatePaymasterUserOp()` on the Paymaster; (2) **Execution** — calls the Smart Account's target function. Gas from the Paymaster deposit or the sender's deposited balance covers costs.
 

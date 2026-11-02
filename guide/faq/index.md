@@ -41,7 +41,7 @@ Full network parameters: [Chain parameters](/Knowledge/reference/chains).
 
 ### 1.1 What is QDay?
 
-QDay is a post-quantum, EVM-compatible network built for tomorrow. Designed for agents, payments and decentralized applications, QDay delivers sub-second settlement at scale. Designed to integrate a native stablecoin and the x402 standard (launching with QDay mainnet in Q1 2027), QDay aims to be the foundational blockchain for the agent-led economy.
+QDay is a post-quantum, EVM-compatible network built for tomorrow. Designed for agents, payments and decentralized applications, QDay delivers sub-second settlement at scale. Designed to integrate a native stablecoin and the x402 standard (the x402 facilitator and stablecoin paymaster are live on the QDay Aevum testnet; mainnet deployment of the payment network and native stablecoin is scheduled for Q1 2027), QDay aims to be the foundational blockchain for the agent-led economy.
 
 QDay is currently live on testnet (**QDay Aevum**), with the upgraded mainnet scheduled for Q1 2027.
 
@@ -63,7 +63,7 @@ Aevum — from the Latin root for "eternity" — is the name of QDay's new testn
 
 ### 1.6 How does QDay settle to Abelian?
 
-QDay bundles off-chain transaction batches into zero-knowledge validity proofs, verifies them on the DA layer, and commits each batch's status root to the Abelian L1. Rollup operators sign these state transitions with Abelian's native lattice-based keys, anchoring finality directly to L1. Once transactions are confirmed on Abelian, the ledger state becomes permanently immutable and resistant to quantum attacks.
+QDay is an EVM-compatible Layer 2 built with Polygon CDK and integrated with Abelian through the Abelian Plus Node. Each batch of QDay transactions is checked by multiple independent validators, which verify batch-data consistency and re-execute the state transition; a batch is finalized once an M-of-N threshold of validators agrees. The Committer then submits the finalized state root to the Abelian L1, whose lattice-based cryptography protects the committed state against quantum attacks.
 
 ### 1.7 What does quantum-resistant mean?
 
@@ -75,7 +75,7 @@ Many blockchains rely on public-key cryptography such as ECDSA. A sufficiently p
 
 ### 1.9 What is $QDAY?
 
-$QDAY is QDay's native token. It is the gas and governance token of the QDay ecosystem. See [Section 6](#6-qday-token--staking-termination).
+$QDAY is QDay's native token. It is the gas and governance token of the QDay ecosystem. Through paymaster gas abstraction, users and AI agents can also pay transaction fees in QDay's native stablecoin (USD8) instead of holding $QDAY. See [Section 6](#6-qday-token--staking-termination).
 
 ### 1.10 What is USD8?
 
@@ -137,11 +137,11 @@ No. The upgraded QDay works with established EVM wallets such as MetaMask, just 
 
 ### 2.7 Is there a new token?
 
-Yes. The upgraded QDay will have its own token, also named **$QDAY**. Existing QDAY tokens are now called **QDAY Points ($QDAYp)** and can be swapped 1:1 for the new $QDAY after the mainnet Token Generation Event (TGE).
+Yes. The upgraded QDay will have its own token, also named **$QDAY**. Existing QDAY tokens are now called **QDAY Points ($QDAYp)**. Legacy token/point holders ($QDAYp) are aligned 1:1 with the new QDay chain architecture via structured migration vaults.
 
 ### 2.8 What happens to my staking?
 
-The QDay staking program has ended. Rewards stopped on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. Unstaked tokens are returned as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY 1:1 at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion); QDAY ($QDAYp) can then be swapped 1:1 for the new $QDAY after mainnet launch. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
+The QDay staking program has ended. Rewards stopped on **15 October 2026, 12:00 (HKT)**, and you can unstake and claim your tokens and earned rewards until **31 December 2026, 12:00 (HKT)**. Unstaked tokens are returned as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY 1:1 at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion); QDAY ($QDAYp) holders are then aligned 1:1 with the new QDay chain architecture via structured migration vaults. See [6.4](#64-what-happens-to-my-staked-qday-and-rewards) for details.
 
 ### 2.9 What happens to WQDAY or WABEL?
 
@@ -158,7 +158,7 @@ However, Aevum is a separate network with a new chain ID, RPC and explorer — c
 
 ### 2.11 Are old dApps still valid?
 
-Old dApps continue to work on QDay Origin. On the new testnet, QDay Bridge and the Abelian Bridge (ABEL ⇄ WABEL, on [QDay Portal](https://portal.qday.io/en/abel-conversion)) already run on Aevum; QDay Swap will follow — it currently runs on QDay Origin mainnet only. Third-party dApps need to add the Aevum network and redeploy their contracts; they do not automatically follow the upgrade.
+Old dApps continue to work on QDay Origin. On the new testnet, QDay Bridge and the Abelian Bridge (ABEL ⇄ WABEL, on [QDay Portal](https://portal.qday.io/en/abel-conversion)) already run on Aevum; Q-Swap will follow — it currently runs on QDay Origin mainnet only. Third-party dApps need to add the Aevum network and redeploy their contracts; they do not automatically follow the upgrade.
 
 ---
 
@@ -196,7 +196,7 @@ The faucet is built into the docs: [Get testnet tokens](/guide/start/faucet). Co
 
 ### 3.7 How do I pay gas?
 
-Gas on Aevum is paid in native testnet QDAY (**tQDAY**), claimed from the faucet. Aevum uses an Ethereum-compatible EIP-1559 gas model (base fee + priority fee). Individual applications can charge fees in other tokens — for example, fees in the Agent Payment app are paid in USD8.
+Gas on Aevum is paid in native testnet QDAY (**tQDAY**), claimed from the faucet. Aevum uses an Ethereum-compatible EIP-1559 gas model (base fee + priority fee). Individual applications can charge fees in other tokens — for example, fees in the Agent Payment app are paid in USD8. Conceptually, QDay's paymaster gas abstraction lets users and AI agents pay transaction fees in the native stablecoin instead of holding $QDAY; the stablecoin paymaster is live on Aevum for ERC-4337 smart-contract wallets, while regular EOA wallets such as MetaMask still need tQDAY for gas.
 
 ### 3.8 Which tokens are available on Aevum?
 
@@ -281,23 +281,23 @@ The official QDay SDK will launch in Q1 2027. Please check back at launch time �
 
 ### 5.1 How do I test stablecoin payments?
 
-The testnet stablecoin **tUSD8** is already deployed on Aevum (see [3.8](#38-which-tokens-are-available-on-aevum)); **USD8** is the mainnet stablecoin. Stablecoin payment features will launch in Q1 2027. Please check back at launch time — all documentation, tools and examples will be published then, and you can start testing from there.
+The testnet stablecoin **tUSD8** is already deployed on Aevum (see [3.8](#38-which-tokens-are-available-on-aevum)); **USD8** is the mainnet stablecoin. The stablecoin paymaster is live on the QDay Aevum testnet (Phase 1.5 upgrade); mainnet deployment of the payment network and native stablecoin is scheduled for Q1 2027. Step-by-step documentation, contract addresses and endpoints will be published in the docs.
 
 ### 5.2 How do I test x402?
 
-This will launch in Q1 2027. Please check back at launch time — all documentation, tools and examples will be published then, and you can start testing from there.
+The x402 facilitator is live on the QDay Aevum testnet (Phase 1.5 upgrade); mainnet follows in Q1 2027. Step-by-step documentation and endpoints will be published in the docs.
 
 ### 5.3 How do I build an agent wallet?
 
-This will launch in Q1 2027. Please check back at launch time — all documentation, tools and examples will be published then, and you can start testing from there.
+Agent wallets and session keys — an ERC-4337 smart-contract policy engine with spending caps and time locks — are live on the QDay Aevum testnet; mainnet follows in Q1 2027. Step-by-step documentation and contract addresses will be published in the docs. The official SDK (`@qday-io/sdk`) is planned for Q1 2027 and is not yet on npm.
 
 ### 5.4 How do I register an agent?
 
-This will launch in Q1 2027. Please check back at launch time — all documentation, tools and examples will be published then, and you can start testing from there.
+On-chain agent identity (ERC-8004) is part of the Phase 1.5 Enhanced Payment Network, whose mainnet deployment is scheduled for Q1 2027. Documentation will be published in the docs when it is available.
 
 ### 5.5 Are you envisioning a protocol layer for autonomous micropayment channels, or a gas-abstraction model, for agent-to-agent transactions?
 
-A protocol layer plus autonomous micropayment channels — i.e., a dedicated, independent payment protocol and channels designed specifically for small-value, high-frequency, automated transactions between AI agents (similar to the Lightning Network approach).
+A protocol layer plus autonomous micropayment channels — i.e., a dedicated, independent payment protocol and channels designed specifically for small-value, high-frequency, automated transactions between AI agents (similar to the Lightning Network approach). Alongside this, paymaster gas abstraction lets agents pay transaction fees in QDay's native stablecoin (USD8) instead of holding $QDAY.
 
 ---
 
@@ -327,7 +327,7 @@ We chose a clean stop instead of a lower APY, because a smaller reward would sti
 
 ### 6.3 Does this mean something is wrong with QDay?
 
-No. This is a planned step in QDay's upgrade. There has been no security incident and no protocol failure. The upgraded QDay is live on the Aevum testnet, connected to Polygon's AggLayer, with mainnet scheduled for Q1 2027.
+No. This is a planned step in QDay's upgrade. There has been no security incident and no protocol failure. The upgraded QDay is live on the Aevum testnet, with mainnet scheduled for Q1 2027.
 
 ### 6.4 What happens to my staked QDAY and rewards?
 
@@ -342,7 +342,7 @@ Your staked tokens remain yours, and all rewards earned up to the cutoff are hon
 
 **How to withdraw:** on the QDay Staking page (QDay Origin mainnet), click **Unstake**, then **Claim**. That's it. Step-by-step guide: [QDAY Staking guide](/guide/handbook/user-guide/qday-staking).
 
-Unstaked tokens are returned to your wallet as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY at a 1:1 ratio at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion), and WABEL to ABEL at [WABEL Conversion](https://portal.qday.io/en/abel-conversion). QDAY ($QDAYp) can be swapped 1:1 for the new $QDAY after mainnet launch (see [2.7](#27-is-there-a-new-token)).
+Unstaked tokens are returned to your wallet as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY at a 1:1 ratio at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion), and WABEL to ABEL at [WABEL Conversion](https://portal.qday.io/en/abel-conversion). Legacy QDAY ($QDAYp) holders are aligned 1:1 with the new QDay chain architecture via structured migration vaults (see [2.7](#27-is-there-a-new-token)).
 
 :::danger[Stay safe]
 Only rely on official QDay channels (website, X and Telegram). The QDay team will never DM you first, ask for your seed phrase or private keys, or ask you to send tokens anywhere to "migrate" or "unlock" them.
@@ -372,9 +372,9 @@ Not in the sense of every account, transaction and smart contract natively using
 
 | Phase | Scope | Status |
 |---|---|---|
-| Phase 1 | Quantum-resistant ledger/settlement via Abelian-assisted ZK rollups; accounts remain ECDSA | Completed and live since Q4 2025 |
-| Phase 1.5 | Payment network: USD8, invoices, merchants, agent payments | In development — launching in Q1 2027 |
-| Phase 2 | Native quantum-resistant (ML-DSA) accounts and smart contracts, coexisting with legacy accounts | In development — live on Aevum testnet before Q1 2027 |
+| Phase 1 | Quantum-resistant ledger/settlement via Abelian-assisted rollups (multi-validator M-of-N batch verification; state roots committed to Abelian); accounts remain ECDSA | Completed and live since Q4 2025 |
+| Phase 1.5 | Payment network: USD8, x402, paymaster, agent wallets / session keys, agent payments | Live on the Aevum testnet (2026 Q3 upgrade); mainnet in Q1 2027 |
+| Phase 2 | Native quantum-resistant (ML-DSA) accounts and smart contracts, coexisting with legacy accounts | In development — Aevum testnet 2027 Q2; mainnet 2027 Q4 |
 
 See the [QDAY Roadmap](/guide/handbook/roadmap/qday-roadmap).
 
@@ -413,17 +413,17 @@ QDay will never DM you first, ask for your seed phrase, or run a "support" accou
 | **QDay Aevum** | The testnet for the upgraded QDay architecture (chain ID `44005`). The upgraded mainnet is scheduled for Q1 2027. |
 | **Abelian** | Quantum-resistant, privacy-focused Layer 1 that QDay settles to. |
 | **$QDAY** | Native gas and governance token of the upgraded QDay. |
-| **$QDAYp (QDAY Points)** | The new name for QDAY on the old QDay; swappable 1:1 for $QDAY after TGE. |
+| **$QDAYp (QDAY Points)** | The new name for QDAY on the old QDay; holders are aligned 1:1 with the new QDay chain via structured migration vaults. |
 | **tQDAY** | Native testnet QDAY on Aevum, claimed from the faucet; no real value. |
 | **USD8** | QDay's native post-quantum stablecoin, 1:1 USD-pegged and 100% reserve-backed. |
 | **tUSD8** | Testnet USD8 on QDay Aevum; no real value. |
 | **WQDAY** | Wrapped (ERC-20) QDAY, available on QDay Origin and QDay Aevum. |
-| **WABEL** | Wrapped ABEL on QDay, bridged from Abelian. |
+| **WABEL** | Wrapped ABEL: a QRC20 token on QDay, 1:1 pegged to ABEL on Abelian; minted and burned via the Abelian Bridge. |
 | **Phase 1 / 1.5 / 2** | Ledger-level quantum resistance → payment network → native quantum-resistant accounts and contracts. |
 | **Quantum-resistant** | Cryptography designed to remain secure against quantum-computer attacks. |
 | **Native post-quantum** | Accounts and contracts that themselves use post-quantum signatures (e.g. ML-DSA), not just the settlement layer. |
 | **ML-DSA** | NIST-standardized (FIPS 204) lattice-based post-quantum signature algorithm. |
-| **CDK** | Polygon Chain Development Kit, the ZK-rollup stack QDay builds on. |
+| **CDK** | Polygon Chain Development Kit, the modular L2 stack QDay builds on. |
 | **x402** | HTTP 402-based standard for paying for APIs/resources inside an HTTP request. |
 | **ERC-4337** | Account-abstraction standard: smart accounts, bundlers, paymasters, session keys. |
 | **ERC-8004** | On-chain AI-agent identity and reputation standard. |

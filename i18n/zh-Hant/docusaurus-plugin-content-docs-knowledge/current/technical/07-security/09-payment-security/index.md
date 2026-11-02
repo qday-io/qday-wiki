@@ -5,8 +5,8 @@ draft: false
 
 # 支付安全
 
-:::note[計劃中——2027 年第一季]
-支付層（包括 Agent Payment 及基於會話密鑰（Session Key）的訂閱）將於 2027 年第一季隨 QDay 主網推出，目前尚未上線。以下控制措施描述的是計劃中的安全模型。
+:::note[部分已於 Aevum 測試網上線]
+x402 facilitator、穩定幣 Paymaster 及會話密鑰（Session Key）支出限額已於 QDay Aevum 測試網上線；Enhanced Payment Network 及原生穩定幣的主網部署預定於 2027 年第一季進行。下文的 Payment Service、webhook 及訂閱控制措施描述的是計劃中的安全模型。
 :::
 
 **鏈上強制執行**——支付金額、收款方白名單與到期時間皆由鏈上的 Payment 合約強制執行。在付款方確認之後，Payment Service（鏈下 API）與商戶都無法更改支付條款。

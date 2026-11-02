@@ -26,7 +26,7 @@ const payments = new QDAYPayments({
 ```
 
 :::info[手續費代幣]
-一般網絡 Gas 以 QDAY 支付（測試網上為 tQDAY）。個別應用程式可能以其他代幣收取手續費——例如 Agent Payment 應用（將於 2027 年第一季隨 QDay 主網推出）將以 USD8 收取手續費。
+透過 Paymaster Gas 抽象，用戶及 AI 代理可以使用 QDay 的原生穩定幣（USD8）支付交易手續費，而無須持有 $QDAY；穩定幣 Paymaster 已於 QDay Aevum 測試網上線，供 ERC-4337 智能帳戶使用。一般 EOA 交易仍以原生代幣支付 Gas（測試網上為 tQDAY）。個別應用程式可能以其他代幣收取手續費——例如 Agent Payment 應用以 USD8 收取手續費。
 :::
 
 ## 發票（Invoice） {/* #invoice */}

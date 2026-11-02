@@ -9,14 +9,13 @@ draft: false
 |-----------|---------------|--------------|
 | 用戶 / 錢包 | MetaMask、SDK、RPC 客戶端 | 提交交易 |
 | QDAY Node | `cdk-erigon` | 排序器（Sequencer）——執行交易、產生 L2 區塊、維護狀態 |
-| Sequence Sender | `cdk-node` | 收集區塊、建立批次、提交至 `zkRollupManager` |
-| zkRollupManager | Solidity 合約（DA 層） | 接收批次、驗證 ZK 證明、最終確定狀態 |
-| Aggregator | `cdk-node` | 擷取批次資訊、協調 ZK Prover、提交證明 |
-| ZK Prover | QDAY 證明服務 | 為批次產生有效性證明 |
-| DA Node | `reth` + `lighthouse` | 數據可用性——託管 zkEVM 合約、儲存 Rollup 數據 |
-| Committer | `qday-anchor-relay` | 監聽 Rollup 事件，將狀態根同步至 Abelian Chain |
-| Abelian Chain | Abelian L1 | 儲存批次狀態根、Rollup 摘要及最終記錄 |
-| Record Contracts | DA 層上的 Solidity 合約 | 持久保存批次元數據、狀態根及提交結果 |
+| Sequence Sender | `cdk-node` | 收集區塊、建立批次，並提交至 Rollup 合約 |
+| Rollup 合約 | 在 Abelian Plus Node 的 EVM 環境中運行的 Solidity 合約 | 記錄批次資訊 |
+| 驗證者 | 多個獨立驗證者 | 驗證批次數據一致性及狀態轉換；透過 M-of-N 門檻達成一致 |
+| DA Node | `reth` + `lighthouse`（Abelian Plus Node） | 數據可用性——為 Rollup 合約提供 EVM 執行、共識客戶端 |
+| Committer | `qday-anchor-relay`（Abelian Plus Node） | 將最終狀態根提交至 Abelian Chain |
+| Abelian Node | Abelian Plus Node | 連接原生 Abelian 鏈並與之互動 |
+| Abelian Chain | Abelian L1（PoW） | 儲存已提交的 L2 狀態根 |
 
 **原始碼儲存庫：**
 

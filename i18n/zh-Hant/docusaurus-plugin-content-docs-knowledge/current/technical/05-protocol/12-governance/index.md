@@ -13,4 +13,4 @@ draft: false
 
 **時間鎖（Timelock）**——`RollupManager` 上所有特權操作都透過具有最小延遲的 `Timelock` 合約執行。這讓社群有時間審查並否決變更。
 
-**量子威脅暫停**——若偵測到可信的量子威脅，DAO 可投票暫停 rollup 執行。暫停由 `RollupManager` 合約強制執行。由於暫停本身受抗量子的 Abelian L1 簽名把關，擁有量子電腦的攻擊者無法強制解除 rollup 暫停，也無法偽造暫停撤銷。
+**量子威脅暫停**——若偵測到可信的量子威脅，DAO 可投票暫停 rollup 執行。每個 rollup 營運者均以 Abelian 帳戶運行 rollup，而 rollup 數據以 Abelian 的抗量子密鑰及算法簽名。擁有量子電腦的攻擊者無法偽造 rollup 營運者的簽名，因此在 rollup 暫停後無法繼續推進。暫停只適用於 rollup 營運者；QDay 上的智能合約呼叫（例如代幣發行方凍結地址）仍可正常運作。暫停期結束或 DAO 投票恢復後，執行即會恢復。

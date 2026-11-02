@@ -11,25 +11,20 @@ draft: false
 Infrastructure (Docker / K8s / PostgreSQL / Redis / Monitoring)
     │
     ▼
-① Abelian Plus Node (reth + lighthouse) — DA Node
+① Abelian Plus Node (reth + lighthouse — DA Node; Abelian Node)
     │
     ▼
-② zkEVM Contracts (RollupManager / Bridge / GlobalExitRoot / Verifier)
+② Rollup contracts (in the Abelian Plus Node's EVM environment)
     │
     ├─── ③ QDAY Node (cdk-erigon / Sequencer)
     │         │
     │         ▼
     │    ④ cdk-node (Sequence Sender)
     │
-    ├─── ⑤ zk Prover
-    │         │
-    │         ▼
-    │    ⑥ Aggregator
+    ├─── ⑤ Validators (batch verification, M-of-N)
     │
-    ├─── ⑦ Committer
-    │
-    └─── ⑧ Record Contracts
+    └─── ⑥ Committer (finalized state root → Abelian)
               │
               ▼
-         ⑨ External Services (RPC Gateway / Explorer / Indexer / Wallet)
+         ⑦ External Services (RPC Gateway / Explorer / Indexer / Wallet)
 ```

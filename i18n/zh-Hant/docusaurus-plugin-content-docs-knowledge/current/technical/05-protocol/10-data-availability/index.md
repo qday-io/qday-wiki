@@ -5,8 +5,8 @@ draft: false
 
 # 數據可用性
 
-**Abelian Plus Node**——QDay Aevum 的 DA 層是 Abelian Plus Node，運行 `reth`（以太坊執行客戶端）與 `lighthouse`（以太坊共識客戶端）。DA 節點承載 zkEVM 合約，並儲存所有 rollup 數據——批次、證明與狀態根。
+**Abelian Plus Node**——QDay Aevum 的 DA 節點基礎設施是 Abelian Plus Node，整合了 `reth`（為 Rollup 合約提供 EVM 執行）與 `lighthouse`（共識客戶端）。Rollup 合約在此 EVM 環境中運行並記錄批次資料。
 
-**DA 承諾**——每個提交至 `zkRollupManager` 的批次都包含一個 DA 承諾（批次數據的雜湊）。Aggregator 必須能從 DA 節點取得完整的批次數據以產生證明。
+**驗證所需數據**——驗證者需要批次記錄及對應的 L2 交易數據，以檢查批次數據一致性並重新執行狀態轉換。因此，數據可用性是 QDay 批次驗證所依賴的條件之一。
 
-**記錄合約**——DA 層上的鏈上合約儲存：批次元數據（批次編號、雜湊、時間戳記）、狀態根（證明後的狀態根），以及提交結果（Committer 寫入 Abelian 鏈的成功 / 失敗）。
+**狀態承諾**——批次最終確定後，Committer 會透過 Abelian Node 將最終狀態根提交至 Abelian 鏈。

@@ -5,8 +5,8 @@ draft: false
 
 # Data Availability
 
-**Abelian Plus Node** — The DA layer for QDay Aevum is the Abelian Plus Node, running `reth` (Ethereum execution client) and `lighthouse` (Ethereum consensus client). The DA Node hosts the zkEVM contracts and stores all rollup data — batches, proofs, and state roots.
+**Abelian Plus Node** — The DA Node infrastructure for QDay Aevum is the Abelian Plus Node, which integrates `reth` (EVM execution for the Rollup contracts) and `lighthouse` (consensus client). The Rollup contracts run in this EVM environment and record batch information.
 
-**DA Commitment** — Every batch submitted to `zkRollupManager` includes a DA commitment (hash of batch data). The Aggregator must be able to retrieve the full batch data from the DA Node to generate a proof.
+**Data for verification** — Validators need the batch records and the corresponding L2 transaction data to check batch data consistency and re-execute state transitions. Data availability is therefore one of the conditions QDay's batch verification depends on.
 
-**Record Contracts** — On-chain contracts on the DA layer store: Batch Metadata (batch number, hash, timestamp), Status Root (post-proof state root), and Commit Result (success/failure of the Committer's write to Abelian Chain).
+**State commitment** — Once a batch is finalized, the Committer submits the finalized state root to the Abelian Chain through the Abelian Node.

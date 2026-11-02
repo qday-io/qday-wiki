@@ -27,16 +27,16 @@ QDay 空投獎勵**活躍的 QDay 及 Abelian 社群成員**。資格及數量�
 
 為 QDay 的交易協議提供流動性，即可賺取部分交易手續費（以及該流動性池提供的任何額外挖礦獎勵）。這是你在賺取收益的同時，協助 QDay 市場保持流動性的方式。
 
-**QDay Swap 上的核心交易對：** QDAY/USD8、QDAY/WABEL 及 WABEL/USD8。
+**Q-Swap 上的核心交易對：** QDAY/USD8、QDAY/WABEL 及 WABEL/USD8。
 
 **如何參與**
 
-1. QDay Swap 運行於 **QDay Origin 主網（鏈 ID 44001）**——請將該網絡新增至你的錢包（參數見 [QDay Swap](/guide/handbook/user-guide/swap) 指南），並持有交易對中的兩種代幣（另加少量 QDAY 作 Gas）。
-2. 開啟 [QDay Swap](https://portal.qday.io/en/qday-swap) → **Liquidity Pools**（流動性池）。
+1. Q-Swap 運行於 **QDay Origin 主網（鏈 ID 44001）**——請將該網絡新增至你的錢包（參數見 [Q-Swap](/guide/handbook/user-guide/swap) 指南），並持有交易對中的兩種代幣（另加少量 QDAY 作 Gas）。
+2. 開啟 [Q-Swap](https://portal.qday.io/en/qday-swap) → **Liquidity Pools**（流動性池）。
 3. 在 **Pool Statistics**（池統計）中比較各個流動性池，然後點擊 **Add Liquidity**（新增流動性）：選擇交易對及手續費等級（通常預設為 0.30%），並存入兩種代幣。
 4. 在 MetaMask 中確認。你會收到 LP 份額。手續費會累積在流動性池中；你可隨時在 **My Positions**（我的倉位）移除流動性。
 
-完整截圖及步驟：[QDay Swap](/guide/handbook/user-guide/swap#liquidity-pools) 使用指南。
+完整截圖及步驟：[Q-Swap](/guide/handbook/user-guide/swap#liquidity-pools) 使用指南。
 
 :::tip[無常損失]
 LP 回報取決於交易量及價格變動。請先以小額開始，並在存入大額倉位前先查看流動性池的統計數據。

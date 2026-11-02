@@ -9,7 +9,7 @@ draft: false
 QDay SDK（`@qday-io/sdk`）與 CLI（`@qday-io/cli`）將於 2027 年第一季推出，目前尚未在 npm 上發佈。本頁的程式碼展示的是計劃中的 API。
 :::
 
-QDay 上的 ERC-4337 智能帳戶（Smart Account）*（計劃中）*。ERC-4337 EntryPoint 與 bundler 將於 2027 年第一季隨 QDay 主網推出，目前尚未部署於 QDay Aevum 測試網。UserOperation 會經過 **EntryPoint**；bundler 為 Alto。指南：[ERC-4337 開發](/Knowledge/technical/developer-guide/erc-4337-development)。協議：[帳戶抽象協議](/Knowledge/technical/protocol/account-abstraction-protocol)。
+QDay 上的 ERC-4337 智能帳戶（Smart Account）——代理錢包及會話密鑰（Session Key）（設有支出上限及時間鎖的智能合約策略引擎）以及穩定幣 Paymaster 已於 QDay Aevum 測試網上線；主網部署將於 2027 年第一季推出。UserOperation 會經過 **EntryPoint**；bundler 為 Alto。指南：[ERC-4337 開發](/Knowledge/technical/developer-guide/erc-4337-development)。協議：[帳戶抽象協議](/Knowledge/technical/protocol/account-abstraction-protocol)。
 
 ## SDK（`@qday-io/sdk/aa`） {/* #sdk-qday-iosdkaa */}
 
@@ -33,4 +33,4 @@ QDay 上的 ERC-4337 智能帳戶（Smart Account）*（計劃中）*。ERC-4337
 | `paymasterAndData` | Paymaster 地址 + 額外數據（自付時為空） |
 | `signature` | 帳戶對 UserOp 雜湊的簽名 |
 
-Bundler 範例 URL：`https://bundler.qday.io`。EntryPoint 地址：將於上線時公佈。
+Bundler 範例 URL：`https://bundler.qday.io`（主網主機名稱）。Aevum 測試網的 EntryPoint 地址及 bundler 端點將於文檔中公佈。

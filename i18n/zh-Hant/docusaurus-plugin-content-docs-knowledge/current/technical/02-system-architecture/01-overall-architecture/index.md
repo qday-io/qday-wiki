@@ -5,7 +5,11 @@ draft: false
 
 # 整體架構
 
-QDay Aevum 是一個模組化的 ZK Rollup 技術堆疊，疊加於 Abelian Layer 1 之上。系統在 Polygon CDK 架構的基礎上加入三項 QDAY 專屬組件：**Abelian Plus Node**（DA 層 + 記錄層）、**Committer**（L1 同步服務），以及 **Record Contracts**（位於 Abelian 上、儲存批次元數據的鏈上合約）。
+QDay Aevum 是一個以 Polygon CDK 構建的 EVM 兼容 Layer 2，並透過 **Abelian Plus Node** 與 Abelian Layer 1（PoW）整合。此架構將 L2 執行、批次驗證、驗證者共識及狀態承諾分開處理：
+
+- **以 CDK 為基礎的 L2 執行**——`cdk-erigon`（Sequencer）執行交易並產生 L2 區塊；`cdk-node`（Sequence Sender）將區塊打包成批次並提交至 Rollup 合約。
+- **Abelian Plus Node**——Reth（為 Rollup 合約提供 EVM 執行）、Lighthouse（共識客戶端）、**Committer**（將最終狀態根提交至 Abelian），以及 **Abelian Node**（連接至原生 Abelian 鏈）。Abelian 本身沒有智能合約，因此 Rollup 合約在 Abelian Plus Node 的 EVM 環境中運行。
+- **多驗證者批次驗證**——多個獨立驗證者檢查每個批次，並透過 M-of-N 門檻達成一致。
 
 ```
 ┌────────────────────────────────────────┐
@@ -14,39 +18,30 @@ QDay Aevum 是一個模組化的 ZK Rollup 技術堆疊，疊加於 Abelian Laye
 └──────────────────┬─────────────────────┘
                    │
                    ▼
-┌────────────────────────────────────────┐
-│         Abelian Plus Node              │
-│         reth + lighthouse              │
-│   (DA Node + Record Contracts)         │
-└──────────────────┬─────────────────────┘
-                   │
-                   ▼
-┌────────────────────────────────────────┐
-│         zkEVM Contracts                │
-│  RollupManager / Bridge / GlobalExitRoot│
-└──────────┬───────────────┬─────────────┘
-           │               │
-     ┌─────▼──────┐  ┌─────▼──────┐
-     │ cdk-erigon │  │ zk Prover  │
-     │ (Sequencer)│  │            │
-     └─────┬──────┘  └─────▲──────┘
-           │               │
-           ▼               │
-     ┌─────────────┐       │
-     │  cdk-node   │───────┘
-     │ Seq. Sender │
+     ┌─────────────┐
+     │ cdk-erigon  │  L2 execution (Sequencer)
      └─────┬───────┘
-           │
-           ▼
-     ┌─────────────┐       ┌─────────────────┐
-     │  Aggregator │──────►│ Record Contracts │
-     └─────┬───────┘       └─────────────────┘
-           │
+           │ L2 blocks
            ▼
      ┌─────────────┐
-     │  Committer  │
+     │  cdk-node   │  Sequence Sender
      └─────┬───────┘
-           │
+           │ batches
            ▼
-     Abelian Chain (L1)
+┌────────────────────────────────────────┐
+│         Abelian Plus Node              │
+│  reth + lighthouse (DA Node)           │
+│  Rollup contracts (batch records)      │
+│  Committer · Abelian Node              │
+└──────────┬─────────────────▲───────────┘
+           │ batch records   │ finalized
+           ▼                 │ state root
+┌────────────────────────────┴───────────┐
+│   Independent validators (M-of-N)      │
+│   batch data consistency +             │
+│   state transition verification        │
+└────────────────────────────────────────┘
+                   │
+                   ▼  Committer submits finalized state root
+            Abelian Chain (L1, PoW)
 ```

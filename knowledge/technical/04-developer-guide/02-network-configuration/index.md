@@ -23,7 +23,7 @@ QDay is a quantum-safe, EVM-compatible Layer 2. These docs target the public **Q
 :::
 
 :::info[Gas and fee tokens]
-Regular network gas is paid in QDAY (tQDAY on testnet). Individual apps may charge fees in a different token — for example, the Agent Payment app (launching with QDay mainnet in Q1 2027) will charge fees in USD8.
+Through paymaster gas abstraction, users and AI agents can pay transaction fees in QDay's native stablecoin (USD8) instead of holding $QDAY; the stablecoin paymaster is live on the QDay Aevum testnet for ERC-4337 smart accounts. Regular EOA transactions (MetaMask, Foundry, Hardhat) still pay gas in the native token — tQDAY on testnet, from the faucet. Individual apps may charge fees in a different token — for example, the Agent Payment app charges fees in USD8.
 :::
 
 Test tokens: get tQDAY from [faucet.qday.info](https://faucet.qday.info) or the [in-docs faucet](/guide/start/faucet).

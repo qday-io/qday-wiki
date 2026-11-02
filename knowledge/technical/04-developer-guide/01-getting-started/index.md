@@ -9,7 +9,7 @@ draft: false
 The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm. SDK snippets elsewhere in this guide show the planned API; the Quick Start below works today with Foundry alone.
 :::
 
-Build applications on QDay Aevum — from connecting your first wallet and deploying contracts today, to smart accounts and AI payment agents when they launch with QDay mainnet in Q1 2027.
+Build applications on QDay Aevum — from connecting your first wallet and deploying contracts, to ERC-4337 smart accounts, agent session keys and x402 payments, which are live on the Aevum testnet today. Mainnet deployment of the payment network and native stablecoin follows in Q1 2027.
 
 ## Start here
 

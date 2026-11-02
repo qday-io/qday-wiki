@@ -22,7 +22,7 @@ export default function Home(): ReactNode {
     {
       icon: '↔️',
       title: translate({id: 'home.card.migrate.title', message: 'I’m migrating'}),
-      body: translate({id: 'home.card.migrate.body', message: 'What happens to your QDAY when QDay mainnet launches: QDAYp → $QDAY at a 1:1 ratio.'}),
+      body: translate({id: 'home.card.migrate.body', message: 'What happens to your QDAY: legacy holders ($QDAYp) are aligned 1:1 with the new QDay chain architecture via structured migration vaults.'}),
       to: '/Knowledge/migration/overview',
       cta: translate({id: 'home.card.migrate.cta', message: 'Migration guide'}),
     },

@@ -14,7 +14,7 @@ import NextSteps from "@site/src/components/QDay/NextSteps";
 Abelian Bridge 運行於 **QDay Origin 主網**、**QDay Origin 測試網**及 **QDay Aevum 測試網**。
 :::
 
-WABEL 由 Abelian Bridge 智能合約鑄造及銷毀：ABEL → WABEL 跨鏈時會在 QDay 上鑄造 WABEL；WABEL → ABEL 跨鏈時則會銷毀 WABEL，並在 Abelian 上釋放 ABEL。
+WABEL 是 QDay 上的 QRC20 代幣，與 Abelian 上的 ABEL 按 1:1 錨定。鑄造 WABEL 時，ABEL 會在 Abelian 上鎖定，並在 QDay 上收到等量的 WABEL；銷毀 WABEL 時，WABEL 會在 QDay 上銷毀，並在 Abelian 上收到等量的 ABEL。鑄造及銷毀由一個經信任服務提供者（Trust Service Provider，TSP）認證的機構聯盟所營運的線上服務處理——你可透過 Abelian Bridge 使用該服務。
 
 支援的跨鏈方向：
 

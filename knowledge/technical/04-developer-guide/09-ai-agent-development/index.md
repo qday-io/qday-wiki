@@ -5,8 +5,8 @@ draft: false
 
 # AI Agent Development
 
-:::note[Planned — Q1 2027]
-The AI agent APIs, Agent Payment, session keys and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) launch with QDay mainnet in Q1 2027 and are not live today; the SDK is not yet published on npm and `https://mcp.qday.io` goes live at launch. Code on this page shows the planned API.
+:::note[Partly live on Aevum testnet]
+Agent wallets and session keys (an ERC-4337 smart-contract policy engine with spending caps and time locks) and the x402 facilitator are live on the QDay Aevum testnet; mainnet deployment follows in Q1 2027. The higher-level AI agent APIs (MCP, intent registry), the Agent Payment app and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) are planned for Q1 2027; the SDK is not yet published on npm and `https://mcp.qday.io` goes live at mainnet launch. Code on this page shows the planned API.
 :::
 
 ## Agent SDK
@@ -29,7 +29,7 @@ Agents will communicate with external AI models via MCP (Model Context Protocol)
 // Register a tool the agent can call
 agent.registerTool({
   name: "swap_tokens",
-  description: "Swap token A for token B on QDay Swap",
+  description: "Swap token A for token B on Q-Swap",
   inputSchema: { tokenIn, tokenOut, amountIn },
   execute: async ({ tokenIn, tokenOut, amountIn }) => {
     return await account.sendTransaction({
@@ -57,7 +57,7 @@ await walletAgent.start();
 
 ## DeFi Agent
 
-A DeFi Agent will interact with QDay Swap, QDay Lending *(planned)*, and other DeFi protocols:
+A DeFi Agent will interact with Q-Swap, QLEAP (QDay Lending Ecosystem And Protocol) *(planned)*, and other DeFi protocols:
 
 ```typescript
 const defiAgent = agent.createDeFiAgent({

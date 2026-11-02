@@ -5,8 +5,8 @@ draft: false
 
 # AI Ecosystem
 
-:::note[Planned — Q1 2027]
-The AI agent stack and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) launch with QDay mainnet in Q1 2027 and are not live today; the SDK is not yet published on npm.
+:::note[Partly live on Aevum testnet]
+Agent wallets and session keys (an ERC-4337 smart-contract policy engine with spending caps and time locks) and the x402 facilitator are live on the QDay Aevum testnet; mainnet deployment follows in Q1 2027. The rest of the AI agent stack (MCP servers, Intent Registry) and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) are planned for Q1 2027; the SDK is not yet published on npm.
 :::
 
 **Agent SDK** — `@qday-io/sdk/agent` will provide primitives for creating, deploying, and managing on-chain AI agents. Agents will operate through ERC-4337 Smart Accounts using session keys for authorization.

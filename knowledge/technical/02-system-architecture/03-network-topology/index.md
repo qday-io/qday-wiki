@@ -11,6 +11,6 @@ QDay Aevum operates across four logical layers:
 
 **L2 Execution Layer** — `cdk-erigon` acts as both the Sequencer and the full node. It maintains the EVM state, the transaction pool (TxPool), and produces L2 blocks.
 
-**DA / Settlement Layer** — The Abelian Plus Node provides data availability using `reth` (execution) and `lighthouse` (consensus). All zkEVM contracts — `PolygonZkEVMBridge`, `PolygonRollupManager`, `GlobalExitRoot`, and `Verifier` — are deployed here.
+**Abelian Plus Node / Verification Layer** — The Abelian Plus Node provides data availability using `reth` (EVM execution for Rollup contracts) and `lighthouse` (consensus client). The Rollup contracts, which record batch information, run in this EVM environment. Multiple independent validators verify each batch against these records and the L2 transaction data, and agree through an M-of-N threshold.
 
-**L1 Record Layer** — The Committer writes batch status roots and rollup summaries directly to the Abelian blockchain. This is the quantum-resistant anchor for all QDay Aevum state.
+**L1 Commitment Layer** — The Committer submits QDay's finalized state root to the Abelian blockchain through the Abelian Node. This anchors QDay Aevum's state to Abelian's quantum-resistant PoW chain. Abelian records the commitment; it does not itself re-verify every L2 transaction or enforce the validator threshold.

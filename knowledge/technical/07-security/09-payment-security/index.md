@@ -5,8 +5,8 @@ draft: false
 
 # Payment Security
 
-:::note[Planned — Q1 2027]
-The payment layer, including Agent Payment and session-key subscriptions, launches with QDay mainnet in Q1 2027 and is not live today. The controls below describe the planned security model.
+:::note[Partly live on Aevum testnet]
+The x402 facilitator, the stablecoin paymaster and session-key spending limits are live on the QDay Aevum testnet; mainnet deployment of the Enhanced Payment Network and native stablecoin is scheduled for Q1 2027. The Payment Service, webhook and subscription controls below describe the planned security model.
 :::
 
 **On-chain enforcement** — Payment amounts, recipient whitelists, and expiry are enforced by the Payment contract on-chain. Neither the Payment Service (off-chain API) nor the merchant can alter payment terms after the payer has committed.

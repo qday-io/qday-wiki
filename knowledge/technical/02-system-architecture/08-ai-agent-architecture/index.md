@@ -5,8 +5,8 @@ draft: false
 
 # AI Agent Architecture
 
-:::note[Planned — Q1 2027]
-The AI agent runtime launches with QDay mainnet in Q1 2027 and is not live today. This page describes the planned design.
+:::note[Partly live on Aevum testnet]
+Agent wallets and session keys (an ERC-4337 smart-contract policy engine with spending caps and time locks) and the x402 facilitator are live on the QDay Aevum testnet; mainnet deployment follows in Q1 2027. The agent runtime components described below (MCP, Intent Engine, tool calling, memory) are planned for Q1 2027 and are not live today.
 :::
 
 QDay will provide a native runtime environment for on-chain AI agents.

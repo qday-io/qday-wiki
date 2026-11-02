@@ -26,12 +26,12 @@ Only claim from links posted by official QDay accounts. A fake “airdrop” sit
 
 Provide liquidity to QDay’s trading protocols and earn a share of trading fees (and any extra mining rewards the pool offers). This is how you help the QDay market stay liquid while earning yield.
 
-**Core pairs on QDay Swap:** QDAY/USD8, QDAY/WABEL, and WABEL/USD8.
+**Core pairs on Q-Swap:** QDAY/USD8, QDAY/WABEL, and WABEL/USD8.
 
 **How to participate**
 
-1. QDay Swap runs on **QDay Origin mainnet (Chain ID 44001)** — add that network to your wallet (parameters in the [Swap guide](/guide/handbook/user-guide/swap)) and hold both tokens in the pair (plus a little QDAY for gas).
-2. Open [QDay Swap](https://portal.qday.io/en/qday-swap) → **Liquidity Pools**.
+1. Q-Swap runs on **QDay Origin mainnet (Chain ID 44001)** — add that network to your wallet (parameters in the [Swap guide](/guide/handbook/user-guide/swap)) and hold both tokens in the pair (plus a little QDAY for gas).
+2. Open [Q-Swap](https://portal.qday.io/en/qday-swap) → **Liquidity Pools**.
 3. Compare pools under **Pool Statistics**, then **Add Liquidity**: pick a pair, a fee tier (0.30% is the usual default), and deposit both tokens.
 4. Confirm in MetaMask. You receive an LP share. Fees accrue to the pool; you can remove liquidity from **My Positions** at any time.
 

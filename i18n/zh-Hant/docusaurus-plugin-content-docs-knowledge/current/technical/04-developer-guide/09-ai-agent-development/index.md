@@ -5,8 +5,8 @@ draft: false
 
 # AI 代理開發
 
-:::note[計劃中——2027 年第一季]
-AI 代理 API、Agent Payment、會話密鑰（Session Key）及 QDay SDK（`@qday-io/sdk`）/ CLI（`@qday-io/cli`）將於 2027 年第一季隨 QDay 主網推出，目前尚未上線；SDK 尚未在 npm 上發佈，`https://mcp.qday.io` 亦將於上線時啟用。本頁的程式碼展示的是計劃中的 API。
+:::note[部分已於 Aevum 測試網上線]
+代理錢包及會話密鑰（Session Key）（設有支出上限及時間鎖的 ERC-4337 智能合約策略引擎）以及 x402 facilitator 已於 QDay Aevum 測試網上線；主網部署將於 2027 年第一季推出。較高層次的 AI 代理 API（MCP、Intent Registry）、Agent Payment 應用及 QDay SDK（`@qday-io/sdk`）/ CLI（`@qday-io/cli`）計劃於 2027 年第一季推出；SDK 尚未在 npm 上發佈，`https://mcp.qday.io` 將於主網上線時啟用。本頁的程式碼展示的是計劃中的 API。
 :::
 
 ## Agent SDK {/* #agent-sdk */}
@@ -29,7 +29,7 @@ const agent = new QDAYAgent({
 // Register a tool the agent can call
 agent.registerTool({
   name: "swap_tokens",
-  description: "Swap token A for token B on QDay Swap",
+  description: "Swap token A for token B on Q-Swap",
   inputSchema: { tokenIn, tokenOut, amountIn },
   execute: async ({ tokenIn, tokenOut, amountIn }) => {
     return await account.sendTransaction({
@@ -57,7 +57,7 @@ await walletAgent.start();
 
 ## DeFi 代理 {/* #defi-agent */}
 
-DeFi 代理將與 QDay Swap、QDay Lending *（計劃中）* 及其他 DeFi 協議互動：
+DeFi 代理將與 Q-Swap、QLEAP（QDay Lending Ecosystem And Protocol） *（計劃中）* 及其他 DeFi 協議互動：
 
 ```typescript
 const defiAgent = agent.createDeFiAgent({

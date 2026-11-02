@@ -5,7 +5,7 @@ draft: false
 
 # JSON-RPC API
 
-QDay Aevum 節點（`cdk-erigon`）使用 **Ethereum JSON-RPC**。錢包、Foundry、Hardhat、ethers、viem 與 MetaMask 可直接沿用 `eth_` / `net_` / `web3_` 方法，無需修改。Polygon CDK 額外提供 **`zkevm_`** 命名空間，用於批次狀態、witness 與 Global Exit Root——這些是以太坊沒有對應項的部分。
+QDay Aevum 節點（`cdk-erigon`）使用 **Ethereum JSON-RPC**。錢包、Foundry、Hardhat、ethers、viem 與 MetaMask 可直接沿用 `eth_` / `net_` / `web3_` 方法，無需修改。`cdk-erigon` 亦繼承了 Polygon CDK 的 **`zkevm_`** 命名空間，用於批次狀態、witness 與 Global Exit Root——這些是以太坊沒有對應項的部分。
 
 範例使用 QDay Aevum 測試網（`https://rpc-test.qday.info`、`wss://rpc-test.qday.info`）。最新的 HTTP / WebSocket URL：[鏈參數](/Knowledge/reference/chains)。
 
@@ -104,19 +104,19 @@ curl -s https://rpc-test.qday.info \
 
 ## Polygon CDK zkEVM（`zkevm`） {/* #polygon-cdk-zkevm-zkevm */}
 
-這些方法**不存在**於以太坊。它們來自 Polygon CDK / `cdk-erigon`，用於描述 L2 批次、虛擬化、ZK 驗證與跨鏈橋 exit-root 樹。
+這些方法**不存在**於以太坊。它們來自 Polygon CDK / `cdk-erigon`，用於描述 L2 批次、區塊數據與跨鏈橋 exit-root 樹。`zkevm_` 前綴及狀態名稱沿用自上游 CDK；QDay 並不以 ZK 有效性證明作為其驗證機制（見[批次驗證協議](/Knowledge/technical/protocol/zk-proof-protocol)）。
 
 節點營運者可在 `http.api` 中加入 `zkevm` 以啟用此命名空間。公開端點可能只開放成本低廉的狀態查詢方法。
 
 ### 批次與最終確定性 {/* #batch-and-finality */}
 
-對應到[共識與結算](/Knowledge/technical/protocol/consensus-settlement)：已排序 → 已虛擬化（發佈至 DA / L1）→ 已驗證（ZK 證明已核驗）。
+CDK 節點所報告的批次狀態：已排序 → 已虛擬化 → 已驗證。有關 QDay 批次如何驗證及最終確定，請參閱[共識與結算](/Knowledge/technical/protocol/consensus-settlement)。
 
 | 方法 | 參數 | 說明 |
 |--------|--------|-------------|
 | `zkevm_batchNumber` | 無 | 最新已排序的批次編號 |
-| `zkevm_virtualBatchNumber` | 無 | 最新**已虛擬化**的批次（已發佈至 L1 / DA） |
-| `zkevm_verifiedBatchNumber` | 無 | 最新**已驗證**的批次（證明已在 `zkRollupManager` 上被接受） |
+| `zkevm_virtualBatchNumber` | 無 | 最新**已虛擬化**的批次（由 CDK 節點報告） |
+| `zkevm_verifiedBatchNumber` | 無 | 最新**已驗證**的批次（由 CDK 節點報告） |
 | `zkevm_batchNumberByBlockNumber` | `blockNumber` | 包含此 L2 區塊的批次 |
 | `zkevm_consolidatedBlockNumber` | 無 | 已驗證批次中的最高 L2 區塊 |
 | `zkevm_isBlockVirtualized` | `blockNumber` | 若該區塊所屬批次已虛擬化則為 `true` |
@@ -140,17 +140,17 @@ curl -s https://rpc-test.qday.info \
 | `zkevm_getNativeBlockHashesInRange` | `from`、`to` | 閉區間範圍內的原生區塊雜湊 |
 | `zkevm_getLatestDataStreamBlock` | 無 | 數據串流已發佈的最新區塊 |
 
-### Witness 與證明者（高負載） {/* #witness-and-prover-heavy */}
+### Witness（高負載） {/* #witness-heavy */}
 
-供 Aggregator / 證明者使用。預期會有大量數據返回與速率限制。
+供營運者節點使用的上游 CDK 方法。預期會有大量數據返回與速率限制。
 
 | 方法 | 參數 | 說明 |
 |--------|--------|-------------|
 | `zkevm_estimateCounters` | `transaction` | 估算交易的 ZK **計數器**（與 `eth_estimateGas` 不同） |
-| `zkevm_getWitness` | `blockNumber`（及選項） | 用於證明區塊的執行 witness |
+| `zkevm_getWitness` | `blockNumber`（及選項） | 區塊的執行 witness |
 | `zkevm_getBatchWitness` | `batchNumber` | 整個批次的 witness |
 | `zkevm_getBlockRangeWitness` | `from`、`to` | 涵蓋區塊範圍的 witness |
-| `zkevm_getProverInput` | 批次 / 區塊參數 | 證明者所使用的輸入數據 |
+| `zkevm_getProverInput` | 批次 / 區塊參數 | 上游 CDK 的 prover 輸入數據（僅限營運者） |
 
 ### Exit Root 與 rollup 合約 {/* #exit-roots-and-rollup-contracts */}
 
@@ -159,7 +159,7 @@ curl -s https://rpc-test.qday.info \
 | `zkevm_getLatestGlobalExitRoot` | 無 | 節點已知的最新 Global Exit Root |
 | `zkevm_getExitRootTable` | 無 | Exit-root 表（跨鏈橋訊息傳遞） |
 | `zkevm_getExitRootsByGER` | `ger` | 指定 GER 的 exit root |
-| `zkevm_getRollupAddress` | 無 | Rollup / zkEVM 合約地址 |
+| `zkevm_getRollupAddress` | 無 | Rollup 合約地址 |
 | `zkevm_getRollupManagerAddress` | 無 | `PolygonRollupManager` 地址 |
 
 ### 分叉與版本 {/* #forks-and-version */}
@@ -184,5 +184,5 @@ curl -s https://rpc-test.qday.info \
 
 - [網絡設定](/Knowledge/technical/developer-guide/network-configuration)——端點與 curl 檢查
 - [網絡協議](/Knowledge/technical/protocol/network-protocol)——DevP2P + JSON-RPC 介面
-- [ZK 證明協議](/Knowledge/technical/protocol/zk-proof-protocol)——批次 / witness / 證明者 / 驗證者
+- [批次驗證協議](/Knowledge/technical/protocol/zk-proof-protocol)——批次記錄、多驗證者驗證、M-of-N 共識
 - [鏈參數](/Knowledge/reference/chains)——鏈 ID 與 RPC URL

@@ -30,4 +30,4 @@ Until the gateway publishes a public spec, this table is the contract.
 | `subscription.renewed` | Period charge succeeded |
 | `stream.stopped` | Stream ended (deposit empty, cancelled, or expired) |
 
-Currency for the payment layer is **USD8** (6 decimals; **tUSD8** at `0x456569838f1d43009A91ebA4263147Afd7233483` on the QDay Aevum testnet) unless you pass another ERC-20. Network gas is paid in QDAY (tQDAY on testnet); individual apps may charge fees in a different token — the Agent Payment app (launching Q1 2027) will charge fees in USD8.
+Currency for the payment layer is **USD8** (6 decimals; **tUSD8** at `0x456569838f1d43009A91ebA4263147Afd7233483` on the QDay Aevum testnet) unless you pass another ERC-20. Through paymaster gas abstraction (the stablecoin paymaster is live on the QDay Aevum testnet), users and AI agents can pay transaction fees in USD8 instead of holding $QDAY; regular EOA transactions pay gas in the native token (tQDAY on testnet). Individual apps may charge fees in a different token — the Agent Payment app charges fees in USD8.

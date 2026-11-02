@@ -7,6 +7,6 @@ draft: false
 
 **EOA wallets** — Standard ECDSA wallets (MetaMask, hardware wallets) are fully supported in Phase 1. Users should follow standard Ethereum wallet security practices: hardware wallets for significant holdings, unique seed phrases stored offline.
 
-**Smart Account wallets** *(planned — launch with QDay mainnet in Q1 2027)* — ERC-4337 Smart Accounts will add security features not available to EOAs: multi-signature requirements, spending limits, session key expiry, and social recovery. Compromising a single EOA signer does not automatically compromise a Smart Account with a threshold-based ownership policy.
+**Smart Account wallets** *(live on the QDay Aevum testnet; mainnet in Q1 2027)* — ERC-4337 Smart Accounts add security features not available to EOAs: a smart-contract policy engine with spending caps and time locks for session keys, plus multi-signature requirements and social recovery. Compromising a single EOA signer does not automatically compromise a Smart Account with a threshold-based ownership policy.
 
-**Post-quantum wallets (Phase 2)** — In Phase 2, users can create ML-DSA-65 accounts that are not vulnerable to quantum attacks. A single BIP-39 mnemonic derives both an ECDSA account and an ML-DSA-65 account. Users should migrate holdings to the ML-DSA-65 account before Q-Day arrives.
+**Post-quantum wallets (Phase 2)** — In Phase 2 (Aevum testnet 2027 Q2; mainnet 2027 Q4), users can create ML-DSA-65 accounts that are not vulnerable to quantum attacks. A single BIP-39 mnemonic derives both an ECDSA account and an ML-DSA-65 account. Users should migrate holdings to the ML-DSA-65 account before Q-Day arrives.

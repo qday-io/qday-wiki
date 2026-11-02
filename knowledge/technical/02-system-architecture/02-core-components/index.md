@@ -9,14 +9,13 @@ draft: false
 |-----------|---------------|--------------|
 | User / Wallet | MetaMask, SDK, RPC client | Submit transactions |
 | QDAY Node | `cdk-erigon` | Sequencer — execute transactions, produce L2 blocks, maintain state |
-| Sequence Sender | `cdk-node` | Collect blocks, create batches, submit to `zkRollupManager` |
-| zkRollupManager | Solidity contract (DA Layer) | Accept batches, verify ZK proofs, finalize state |
-| Aggregator | `cdk-node` | Fetch batch info, coordinate ZK Prover, submit proofs |
-| zk Prover | QDAY prover service | Generate validity proofs for batches |
-| DA Node | `reth` + `lighthouse` | Data availability — host zkEVM contracts, store rollup data |
-| Committer | `qday-anchor-relay` | Listen to rollup events, sync status root to Abelian Chain |
-| Abelian Chain | Abelian L1 | Store batch status root, rollup summary, final records |
-| Record Contracts | Solidity on DA Layer | Persist batch metadata, status roots, commit results |
+| Sequence Sender | `cdk-node` | Collect blocks, create batches, submit them to the Rollup contracts |
+| Rollup contracts | Solidity contracts in the Abelian Plus Node's EVM environment | Record batch information |
+| Validators | Multiple independent validators | Verify batch data consistency and state transitions; agree via an M-of-N threshold |
+| DA Node | `reth` + `lighthouse` (Abelian Plus Node) | Data availability — EVM execution for Rollup contracts, consensus client |
+| Committer | `qday-anchor-relay` (Abelian Plus Node) | Submit the finalized state root to the Abelian Chain |
+| Abelian Node | Abelian Plus Node | Connect to and interact with the native Abelian chain |
+| Abelian Chain | Abelian L1 (PoW) | Store the committed L2 state root |
 
 **Source repositories:**
 

@@ -5,8 +5,8 @@ draft: false
 
 # ERC-4337 Development
 
-:::note[Planned — Q1 2027]
-ERC-4337 support (EntryPoint, Alto bundler, paymaster, session keys) and the QDay SDK (`@qday-io/sdk`) / CLI (`@qday-io/cli`) launch with QDay mainnet in Q1 2027 and are not live today. The EntryPoint and bundler are not yet deployed on QDay Aevum, and the SDK is not yet published on npm. Code on this page shows the planned API.
+:::note[Live on Aevum testnet — mainnet Q1 2027]
+ERC-4337 smart accounts — agent wallets and session keys (a smart-contract policy engine with spending caps and time locks) — and the stablecoin paymaster are live on the QDay Aevum testnet (Phase 1.5 upgrade, 2026 Q3); mainnet deployment follows in Q1 2027. Aevum contract addresses and endpoints will be published in the docs. The QDay SDK (`@qday-io/sdk`) and CLI (`@qday-io/cli`) launch in Q1 2027 and are not yet published on npm; SDK code on this page shows the planned API.
 :::
 
 ## EntryPoint
@@ -19,11 +19,11 @@ import "@account-abstraction/contracts/interfaces/IEntryPoint.sol";
 IEntryPoint constant ENTRY_POINT = IEntryPoint(ENTRY_POINT_ADDRESS);
 ```
 
-The EntryPoint address will be published at launch.
+The EntryPoint address will be published in the docs.
 
 ## Bundler
 
-QDay will run the [Alto](https://github.com/pimlicolabs/alto) bundler. Once live, you will send UserOperations to the bundler's RPC endpoint (`https://bundler.qday.io` goes live at launch):
+QDay runs the [Alto](https://github.com/pimlicolabs/alto) bundler. Send UserOperations to the bundler's RPC endpoint (`https://bundler.qday.io` is the mainnet hostname, live at mainnet launch; the Aevum testnet endpoint will be published in the docs):
 
 ```typescript
 import { createBundlerClient } from "permissionless";
@@ -41,7 +41,7 @@ const userOpHash = await bundler.sendUserOperation({
 
 ## Paymaster
 
-Deploy a Paymaster to sponsor gas for your users. The simplest pattern is a `VerifyingPaymaster` that signs off on eligible UserOperations:
+QDay's stablecoin paymaster (live on the Aevum testnet) provides gas abstraction, so users and AI agents can pay transaction fees in the native stablecoin (USD8) instead of holding $QDAY. You can also deploy your own Paymaster to sponsor gas for your users. The simplest pattern is a `VerifyingPaymaster` that signs off on eligible UserOperations:
 
 ```solidity
 import "@account-abstraction/contracts/core/BasePaymaster.sol";

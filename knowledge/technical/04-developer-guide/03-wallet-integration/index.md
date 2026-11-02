@@ -13,18 +13,18 @@ QDay Aevum supports two wallet types:
 
 **EOA Wallets** — Standard Ethereum externally-owned accounts (ECDSA). MetaMask, Frame, and any wallet that supports custom EVM chains work out of the box. Connect by adding the network from [Network Configuration](/Knowledge/technical/developer-guide/network-configuration).
 
-**Smart Account Wallets** *(planned — launch with QDay mainnet in Q1 2027)* — ERC-4337 Smart Accounts will provide gasless transactions, batched calls, and session key delegation. Smart accounts will be deployed on first use; the user's EOA acts as the owner/signer.
+**Smart Account Wallets** *(live on the QDay Aevum testnet; mainnet in Q1 2027)* — ERC-4337 Smart Accounts provide gas abstraction (the stablecoin paymaster lets fees be paid in USD8 instead of $QDAY), batched calls, and session key delegation with spending caps and time locks. Smart accounts are deployed on first use; the user's EOA acts as the owner/signer.
 
-The example below shows the planned API. The ERC-4337 EntryPoint and bundler (`bundler.qday.io`) launch with QDay mainnet in Q1 2027 and are not deployed on the QDay Aevum testnet, so this code will not run against Aevum today.
+The example below shows the planned SDK API (`@qday-io/sdk`, Q1 2027, not yet on npm). `https://bundler.qday.io` is the mainnet bundler hostname (live at mainnet launch); EntryPoint and bundler details for the Aevum testnet will be published in the docs.
 
 ```typescript
-// Planned — EntryPoint and bundler launch with QDay mainnet (Q1 2027); not deployed on Aevum.
+// Planned SDK API — @qday-io/sdk is not yet published on npm (Q1 2027).
 import { createSmartAccountClient } from "@qday-io/sdk/aa";
 
 const client = await createSmartAccountClient({
   signer: eoaWallet,
-  rpcUrl: "https://rpc-test.qday.info",   // QDay Aevum testnet (no EntryPoint / bundler yet)
-  bundlerUrl: "https://bundler.qday.io",  // live at QDay mainnet launch
+  rpcUrl: "https://rpc-test.qday.info",   // QDay Aevum testnet
+  bundlerUrl: "https://bundler.qday.io",  // mainnet hostname; Aevum bundler endpoint will be published in the docs
 });
 
 // Send a gasless transaction (Paymaster covers gas)

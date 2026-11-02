@@ -5,7 +5,7 @@ draft: false
 
 # JSON-RPC API
 
-QDay Aevum nodes (`cdk-erigon`) speak **Ethereum JSON-RPC**. Wallets, Foundry, Hardhat, ethers, viem, and MetaMask use the `eth_` / `net_` / `web3_` methods unchanged. Polygon CDK adds a **`zkevm_`** namespace for batch status, witnesses, and Global Exit Root — the parts that have no Ethereum equivalent.
+QDay Aevum nodes (`cdk-erigon`) speak **Ethereum JSON-RPC**. Wallets, Foundry, Hardhat, ethers, viem, and MetaMask use the `eth_` / `net_` / `web3_` methods unchanged. `cdk-erigon` also inherits the Polygon CDK **`zkevm_`** namespace for batch status, witnesses, and Global Exit Root — the parts that have no Ethereum equivalent.
 
 Examples use the QDay Aevum testnet (`https://rpc-test.qday.info`, `wss://rpc-test.qday.info`). Live HTTP / WebSocket URLs: [Chain parameters](/Knowledge/reference/chains).
 
@@ -104,19 +104,19 @@ On WebSocket (`wss://…`) you can use `eth_subscribe` / `eth_unsubscribe` (`new
 
 ## Polygon CDK zkEVM (`zkevm`)
 
-These methods are **not** on Ethereum. They come from Polygon CDK / `cdk-erigon` and describe L2 batches, virtualization, ZK verification, and the bridge exit-root tree.
+These methods are **not** on Ethereum. They come from Polygon CDK / `cdk-erigon` and describe L2 batches, block data, and the bridge exit-root tree. The `zkevm_` prefix and status names are inherited from upstream CDK; QDay does not use ZK validity proofs as its verification mechanism (see [Batch Verification Protocol](/Knowledge/technical/protocol/zk-proof-protocol)).
 
 Operator nodes enable the namespace with `http.api` including `zkevm`. Public endpoints may expose only the cheap status methods.
 
 ### Batch and finality
 
-Maps onto [Consensus & Settlement](/Knowledge/technical/protocol/consensus-settlement): sequenced → virtualized (posted to DA / L1) → verified (ZK proof checked).
+Batch status as reported by the CDK node: sequenced → virtualized → verified. For how QDay batches are verified and finalized, see [Consensus & Settlement](/Knowledge/technical/protocol/consensus-settlement).
 
 | Method | Params | Description |
 |--------|--------|-------------|
 | `zkevm_batchNumber` | — | Latest sequenced batch number |
-| `zkevm_virtualBatchNumber` | — | Latest **virtualized** batch (posted toward L1 / DA) |
-| `zkevm_verifiedBatchNumber` | — | Latest **verified** batch (proof accepted on `zkRollupManager`) |
+| `zkevm_virtualBatchNumber` | — | Latest **virtualized** batch (as reported by the CDK node) |
+| `zkevm_verifiedBatchNumber` | — | Latest **verified** batch (as reported by the CDK node) |
 | `zkevm_batchNumberByBlockNumber` | `blockNumber` | Batch that contains this L2 block |
 | `zkevm_consolidatedBlockNumber` | — | Highest L2 block in a verified batch |
 | `zkevm_isBlockVirtualized` | `blockNumber` | `true` if the block’s batch is virtualized |
@@ -140,17 +140,17 @@ curl -s https://rpc-test.qday.info \
 | `zkevm_getNativeBlockHashesInRange` | `from`, `to` | Native block hashes in an inclusive range |
 | `zkevm_getLatestDataStreamBlock` | — | Latest block the data-stream has published |
 
-### Witness and prover (heavy)
+### Witness (heavy)
 
-Used by the Aggregator / Prover. Expect large payloads and rate limits.
+Upstream CDK methods for operator nodes. Expect large payloads and rate limits.
 
 | Method | Params | Description |
 |--------|--------|-------------|
 | `zkevm_estimateCounters` | `transaction` | Estimate zk **counters** for a tx (not the same as `eth_estimateGas`) |
-| `zkevm_getWitness` | `blockNumber` (and options) | Execution witness for proving a block |
+| `zkevm_getWitness` | `blockNumber` (and options) | Execution witness for a block |
 | `zkevm_getBatchWitness` | `batchNumber` | Witness for a whole batch |
 | `zkevm_getBlockRangeWitness` | `from`, `to` | Witness covering a block range |
-| `zkevm_getProverInput` | batch / block args | Input blob the prover consumes |
+| `zkevm_getProverInput` | batch / block args | Upstream CDK prover input blob (operator-only) |
 
 ### Exit roots and rollup contracts
 
@@ -159,7 +159,7 @@ Used by the Aggregator / Prover. Expect large payloads and rate limits.
 | `zkevm_getLatestGlobalExitRoot` | — | Latest Global Exit Root known to the node |
 | `zkevm_getExitRootTable` | — | Exit-root table (bridge messaging) |
 | `zkevm_getExitRootsByGER` | `ger` | Exit roots for a given GER |
-| `zkevm_getRollupAddress` | — | Rollup / zkEVM contract address |
+| `zkevm_getRollupAddress` | — | Rollup contract address |
 | `zkevm_getRollupManagerAddress` | — | `PolygonRollupManager` address |
 
 ### Forks and version
@@ -184,5 +184,5 @@ Used by the Aggregator / Prover. Expect large payloads and rate limits.
 
 - [Network Configuration](/Knowledge/technical/developer-guide/network-configuration) — endpoints and curl check
 - [Network Protocol](/Knowledge/technical/protocol/network-protocol) — DevP2P + JSON-RPC surface
-- [ZK Proof Protocol](/Knowledge/technical/protocol/zk-proof-protocol) — batch / witness / prover / verifier
+- [Batch Verification Protocol](/Knowledge/technical/protocol/zk-proof-protocol) — batch records, multi-validator verification, M-of-N agreement
 - [Chain parameters](/Knowledge/reference/chains) — chain IDs and RPC URLs
