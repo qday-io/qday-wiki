@@ -12,6 +12,7 @@ sidebar_label: 社群
 
 - **Telegram：** [QDay Global 群組](https://web.telegram.org/k/#@qday_official_group)
 - **X：** [@QDayOfficial](https://x.com/QDayOfficial)
+- **Discord：** [QDay Discord](https://discord.gg/zVPxYZehM5)
 - **LinkedIn：** [QDay Network](https://www.linkedin.com/company/qday-network/)
 - **GitHub：** [github.com/qday-io](https://github.com/qday-io)
 
