@@ -174,7 +174,7 @@ const config: Config = {
             { label: 'Add Network', to: '/guide/start/add-network' },
           ],
         },
-        // Community icon buttons (GitHub / X / LinkedIn), styled in custom.css.
+        // Community icon buttons (GitHub / X / Discord / LinkedIn), styled in custom.css.
         {
           href: 'https://github.com/qday-io',
           position: 'right',
@@ -188,6 +188,13 @@ const config: Config = {
           className: 'header-icon-link header-x-link',
           'aria-label': 'X',
           title: 'X (@QDayOfficial)',
+        },
+        {
+          href: 'https://discord.gg/zVPxYZehM5',
+          position: 'right',
+          className: 'header-icon-link header-discord-link',
+          'aria-label': 'Discord',
+          title: 'Discord',
         },
         {
           href: 'https://www.linkedin.com/company/qday-network/',
@@ -213,6 +220,7 @@ const config: Config = {
         ]},
         { title: 'Community', items: [
           { label: 'X', href: 'https://x.com/QDayOfficial' },
+          { label: 'Discord', href: 'https://discord.gg/zVPxYZehM5' },
           { label: 'LinkedIn', href: 'https://www.linkedin.com/company/qday-network/' },
           { label: 'GitHub', href: 'https://github.com/qday-io' },
         ]},
