@@ -345,7 +345,7 @@ Your staked tokens remain yours, and all rewards earned up to the cutoff are hon
 Unstaked tokens are returned to your wallet as **WQDAY** (QDAY Staking) or **WABEL** (ABEL Staking). Convert WQDAY to QDAY at a 1:1 ratio at [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion), and WABEL to ABEL at [WABEL Conversion](https://portal.qday.io/en/abel-conversion). Legacy QDAY ($QDAYp) holders are aligned 1:1 with the new QDay chain architecture via structured migration vaults (see [2.7](#27-is-there-a-new-token)).
 
 :::danger[Stay safe]
-Only rely on official QDay channels (website, X, Telegram and [Discord](https://discord.gg/zVPxYZehM5)). The QDay team will never DM you first, ask for your seed phrase or private keys, or ask you to send tokens anywhere to "migrate" or "unlock" them.
+Only rely on official QDay channels (website, X, Telegram and [Discord](https://discord.gg/bYPhjmrSfK)). The QDay team will never DM you first, ask for your seed phrase or private keys, or ask you to send tokens anywhere to "migrate" or "unlock" them.
 :::
 
 ### 6.5 Will this raise the price? Will $QDAY become deflationary?
