@@ -345,7 +345,7 @@ AI 代理錢包及會話密鑰（Session Key）——一個具備支出上限及
 解除質押的代幣會以 **WQDAY**（QDAY 質押）或 **WABEL**（ABEL 質押）形式退回你的錢包。請在 [WQDAY Conversion](https://portal.qday.io/en/wqday-conversion) 將 WQDAY 按 1:1 比率兌換為 QDAY，並在 [WABEL Conversion](https://portal.qday.io/en/abel-conversion) 將 WABEL 兌換為 ABEL。舊有 QDAY（$QDAYp）持有人將透過結構化的遷移金庫按 1:1 對接新的 QDay 鏈架構（請參閱 [2.7](#27-is-there-a-new-token)）。
 
 :::danger[注意安全]
-只依賴官方 QDay 渠道（網站、X、Telegram 及 [Discord](https://discord.gg/zVPxYZehM5)）。QDay 團隊絕不會主動私訊你、索取你的助記詞或私鑰，或要求你將代幣發送到任何地方以進行「遷移」或「解鎖」。
+只依賴官方 QDay 渠道（網站、X、Telegram 及 [Discord](https://discord.gg/bYPhjmrSfK)）。QDay 團隊絕不會主動私訊你、索取你的助記詞或私鑰，或要求你將代幣發送到任何地方以進行「遷移」或「解鎖」。
 :::
 
 ### 6.5 這會推高價格嗎？$QDAY 會變成通縮嗎？ {/* #65-will-this-raise-the-price-will-qday-become-deflationary */}

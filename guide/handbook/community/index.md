@@ -11,7 +11,7 @@ Follow and join the official QDay channels.
 
 - **Telegram:** [QDay Global group](https://web.telegram.org/k/#@qday_official_group)
 - **X:** [@QDayOfficial](https://x.com/QDayOfficial)
-- **Discord:** [QDay Discord](https://discord.gg/zVPxYZehM5)
+- **Discord:** [QDay Discord](https://discord.gg/bYPhjmrSfK)
 - **LinkedIn:** [QDay Network](https://www.linkedin.com/company/qday-network/)
 - **GitHub:** [github.com/qday-io](https://github.com/qday-io)
 

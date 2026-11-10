@@ -190,7 +190,7 @@ const config: Config = {
           title: 'X (@QDayOfficial)',
         },
         {
-          href: 'https://discord.gg/zVPxYZehM5',
+          href: 'https://discord.gg/bYPhjmrSfK',
           position: 'right',
           className: 'header-icon-link header-discord-link',
           'aria-label': 'Discord',
@@ -220,7 +220,7 @@ const config: Config = {
         ]},
         { title: 'Community', items: [
           { label: 'X', href: 'https://x.com/QDayOfficial' },
-          { label: 'Discord', href: 'https://discord.gg/zVPxYZehM5' },
+          { label: 'Discord', href: 'https://discord.gg/bYPhjmrSfK' },
           { label: 'LinkedIn', href: 'https://www.linkedin.com/company/qday-network/' },
           { label: 'GitHub', href: 'https://github.com/qday-io' },
         ]},

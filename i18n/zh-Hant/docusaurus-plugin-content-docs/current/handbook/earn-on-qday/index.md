@@ -14,7 +14,7 @@ QDay 空投獎勵**活躍的 QDay 及 Abelian 社群成員**。資格及數量�
 
 **如何領取**
 
-1. 留意官方渠道的公告：[Telegram](https://web.telegram.org/k/#@qday_official_group)、[X (@QDayOfficial)](https://x.com/QDayOfficial)、[Discord](https://discord.gg/zVPxYZehM5) 及 [QDay Portal](https://portal.qday.io)。
+1. 留意官方渠道的公告：[Telegram](https://web.telegram.org/k/#@qday_official_group)、[X (@QDayOfficial)](https://x.com/QDayOfficial)、[Discord](https://discord.gg/bYPhjmrSfK) 及 [QDay Portal](https://portal.qday.io)。
 2. 活動開始時，前往這些渠道所連結的**官方空投入口**（經 [portal.qday.io](https://portal.qday.io) 進入——切勿透過陌生私訊或仿冒網址進入）。
 3. 連接你在 QDay / Abelian 上使用的同一個錢包（請參閱 [MetaMask](/guide/handbook/user-guide/metamask) 或 [Abelian 手機錢包](/guide/handbook/user-guide/abelian-mobile-wallet)）。
 4. 檢查資格、細閱條款，然後領取。在錢包中確認交易。Gas 以 QDAY 支付。
