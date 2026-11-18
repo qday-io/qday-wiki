@@ -129,6 +129,19 @@ Abelian Plus Node 結合 reth（為 Rollup 合約提供 EVM 執行）與 lightho
 
 基於 TypeScript 的 ERC-4337 bundler（計劃中——將於 2027 年第一季隨 QDay 主網推出），以及為跨鏈橋接操作高度優化的索引器。
 
+## EVM 版本與 Solidity 編譯器 {/* #evm-version-and-solidity-compiler */}
+
+請依鏈的 EVM 硬分叉選擇對應的 Solidity 編譯器與 EVM target。目前 QDay 版本支援 **Shanghai**。
+
+| 鏈的 EVM 版本 | 推薦 EVM Target | Solidity 編譯器選擇 |
+| --- | --- | --- |
+| London | `london` | Solidity 0.8.x |
+| Paris | `paris` | Solidity 0.8.x |
+| Shanghai | `shanghai` | Solidity ≥ 0.8.20 |
+| Cancun | `cancun` | Solidity ≥ 0.8.25 |
+| Prague | `prague` | Solidity ≥ 0.8.30 |
+| Osaka | `osaka` | Solidity ≥ 0.8.37 |
+
 ## 網絡路線圖 {/* #network-roadmap */}
 
 **第 1 階段：L1 輔助的抗量子 Rollup，兼容 EVM。**

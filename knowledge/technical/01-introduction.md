@@ -129,6 +129,19 @@ The Abelian Plus Node combines reth (EVM execution for Rollup contracts) and lig
 
 TypeScript-based ERC-4337 bundlers (planned — launch with QDay mainnet in Q1 2027) and highly optimized indexers for cross-chain bridging operations.
 
+## EVM Version and Solidity Compiler
+
+Match the Solidity compiler and EVM target to the chain's EVM hardfork. The current QDay release supports **Shanghai**.
+
+| Chain EVM version | Recommended EVM target | Solidity compiler |
+| --- | --- | --- |
+| London | `london` | Solidity 0.8.x |
+| Paris | `paris` | Solidity 0.8.x |
+| Shanghai | `shanghai` | Solidity ≥ 0.8.20 |
+| Cancun | `cancun` | Solidity ≥ 0.8.25 |
+| Prague | `prague` | Solidity ≥ 0.8.30 |
+| Osaka | `osaka` | Solidity ≥ 0.8.37 |
+
 ## Network Roadmap
 
 **Phase 1: L1-Assisted Quantum-Resistant Rollups with EVM Compatibility.**
